@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8455616D-52AB-4F20-B9A6-02AF254065B3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Qtech.AssetManagement.Bll</RootNamespace>
+    <AssemblyName>Qtech.AssetManagement.Bll</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AccumulatedDepreciationAccountManager.cs" />
+    <Compile Include="PurchaseOrderDetailManager.cs" />
+    <Compile Include="PurchaseOrderManager.cs" />
+    <Compile Include="PurchaseRequestDetailManager.cs" />
+    <Compile Include="PurchaseRequestManager.cs" />
+    <Compile Include="QuotationDetailManager.cs" />
+    <Compile Include="QuotationManager.cs" />
+    <Compile Include="SupplierManager.cs" />
+    <Compile Include="ProductManager.cs" />
+    <Compile Include="PersonnelManager.cs" />
+    <Compile Include="ChartOfAccountManager.cs" />
+    <Compile Include="AssetAccountManager.cs" />
+    <Compile Include="AuditManager.cs" />
+    <Compile Include="AveragingMethodManager.cs" />
+    <Compile Include="CompanyProfileManager.cs" />
+    <Compile Include="DepreciationExpenseAccountManager.cs" />
+    <Compile Include="DepreciationMethodManager.cs" />
+    <Compile Include="FixedAssetManager.cs" />
+    <Compile Include="FixedAssetSettingDateManager.cs" />
+    <Compile Include="FixedAssetSettingManager.cs" />
+    <Compile Include="FunctionalLocationManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PropertyComparer.cs" />
+    <Compile Include="SortableBindList.cs" />
+    <Compile Include="UserAccessManager.cs" />
+    <Compile Include="UsersManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Qtech.AssetManagement.Audit\Qtech.AssetManagement.Audit.csproj">
+      <Project>{fc11584d-5e40-4b02-941a-6976111c6c26}</Project>
+      <Name>Qtech.AssetManagement.Audit</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Qtech.AssetManagement.BusinessEntities\Qtech.AssetManagement.BusinessEntities.csproj">
+      <Project>{d70419b5-b394-420b-b919-c6b3d287ec17}</Project>
+      <Name>Qtech.AssetManagement.BusinessEntities</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Qtech.AssetManagement.Dal\Qtech.AssetManagement.Dal.csproj">
+      <Project>{afdea6ec-00a3-4566-bd3c-b7d66e823064}</Project>
+      <Name>Qtech.AssetManagement.Dal</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Qtech.AssetManagement.Validation\Qtech.AssetManagement.Validation.csproj">
+      <Project>{410b7096-fb43-4dd1-adc9-250d112a21e5}</Project>
+      <Name>Qtech.AssetManagement.Validation</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,94 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qtech.AssetManagement.Win", "Qtech.AssetManagement.Win\Qtech.AssetManagement.Win.csproj", "{6D194AC8-7CF6-49C8-9A41-7D5D64489E7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qtech.AssetManagement.Validation", "Qtech.AssetManagement.Validation\Qtech.AssetManagement.Validation.csproj", "{410B7096-FB43-4DD1-ADC9-250D112A21E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qtech.AssetManagement.BusinessEntities", "Qtech.AssetManagement.BusinessEntities\Qtech.AssetManagement.BusinessEntities.csproj", "{D70419B5-B394-420B-B919-C6B3D287EC17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qtech.AssetManagement.Audit", "Qtech.AssetManagement.Audit\Qtech.AssetManagement.Audit.csproj", "{FC11584D-5E40-4B02-941A-6976111C6C26}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qtech.AssetManagement.Dal", "Qtech.AssetManagement.Dal\Qtech.AssetManagement.Dal.csproj", "{AFDEA6EC-00A3-4566-BD3C-B7D66E823064}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qtech.AssetManagement.Bll", "Qtech.AssetManagement.Bll\Qtech.AssetManagement.Bll.csproj", "{8455616D-52AB-4F20-B9A6-02AF254065B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qtech.AssetManagement.Controls", "Qtech.AssetManagement.Controls\Qtech.AssetManagement.Controls.csproj", "{475363C4-856B-45D5-8518-E2C5941E32E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qtech.AssetManagement.Utilities", "Qtech.AssetManagement.Utilities\Qtech.AssetManagement.Utilities.csproj", "{E8939081-4037-4578-8C1F-FDC6D8561751}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qtech.AssetManagement.User", "Qtech.AssetManagement.User\Qtech.AssetManagement.User.csproj", "{E843FC49-336B-4F98-9501-9EF7EB6FFF83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qtech.AssetManagement.Setup", "Qtech.AssetManagement.Setup\Qtech.AssetManagement.Setup.csproj", "{823A3EA6-C0C6-4A7E-9A49-BE3528A967CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qtech.AssetManagement.FixedAsset", "Qtech.AssetManagement.FixedAsset\Qtech.AssetManagement.FixedAsset.csproj", "{11C73CF8-55B5-4C47-8C88-1CDA60928769}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qtech.AssetManagement.Maintenance", "Qtech.AssetManagement.Maintenance\Qtech.AssetManagement.Maintenance.csproj", "{D2667A4C-044F-44CC-9369-A24EB9E845F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qtech.AssetManagement.Purchasing", "Qtech.AssetManagement.Purchasing\Qtech.AssetManagement.Purchasing.csproj", "{5333B023-EA4C-49FC-891F-E1E82149CC6C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6D194AC8-7CF6-49C8-9A41-7D5D64489E7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D194AC8-7CF6-49C8-9A41-7D5D64489E7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D194AC8-7CF6-49C8-9A41-7D5D64489E7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D194AC8-7CF6-49C8-9A41-7D5D64489E7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{410B7096-FB43-4DD1-ADC9-250D112A21E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{410B7096-FB43-4DD1-ADC9-250D112A21E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{410B7096-FB43-4DD1-ADC9-250D112A21E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{410B7096-FB43-4DD1-ADC9-250D112A21E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D70419B5-B394-420B-B919-C6B3D287EC17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D70419B5-B394-420B-B919-C6B3D287EC17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D70419B5-B394-420B-B919-C6B3D287EC17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D70419B5-B394-420B-B919-C6B3D287EC17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC11584D-5E40-4B02-941A-6976111C6C26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC11584D-5E40-4B02-941A-6976111C6C26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC11584D-5E40-4B02-941A-6976111C6C26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC11584D-5E40-4B02-941A-6976111C6C26}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFDEA6EC-00A3-4566-BD3C-B7D66E823064}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFDEA6EC-00A3-4566-BD3C-B7D66E823064}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFDEA6EC-00A3-4566-BD3C-B7D66E823064}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFDEA6EC-00A3-4566-BD3C-B7D66E823064}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8455616D-52AB-4F20-B9A6-02AF254065B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8455616D-52AB-4F20-B9A6-02AF254065B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8455616D-52AB-4F20-B9A6-02AF254065B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8455616D-52AB-4F20-B9A6-02AF254065B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{475363C4-856B-45D5-8518-E2C5941E32E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{475363C4-856B-45D5-8518-E2C5941E32E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{475363C4-856B-45D5-8518-E2C5941E32E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{475363C4-856B-45D5-8518-E2C5941E32E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8939081-4037-4578-8C1F-FDC6D8561751}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8939081-4037-4578-8C1F-FDC6D8561751}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8939081-4037-4578-8C1F-FDC6D8561751}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8939081-4037-4578-8C1F-FDC6D8561751}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E843FC49-336B-4F98-9501-9EF7EB6FFF83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E843FC49-336B-4F98-9501-9EF7EB6FFF83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E843FC49-336B-4F98-9501-9EF7EB6FFF83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E843FC49-336B-4F98-9501-9EF7EB6FFF83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{823A3EA6-C0C6-4A7E-9A49-BE3528A967CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{823A3EA6-C0C6-4A7E-9A49-BE3528A967CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{823A3EA6-C0C6-4A7E-9A49-BE3528A967CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{823A3EA6-C0C6-4A7E-9A49-BE3528A967CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{11C73CF8-55B5-4C47-8C88-1CDA60928769}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{11C73CF8-55B5-4C47-8C88-1CDA60928769}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{11C73CF8-55B5-4C47-8C88-1CDA60928769}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{11C73CF8-55B5-4C47-8C88-1CDA60928769}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2667A4C-044F-44CC-9369-A24EB9E845F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2667A4C-044F-44CC-9369-A24EB9E845F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2667A4C-044F-44CC-9369-A24EB9E845F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2667A4C-044F-44CC-9369-A24EB9E845F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5333B023-EA4C-49FC-891F-E1E82149CC6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5333B023-EA4C-49FC-891F-E1E82149CC6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5333B023-EA4C-49FC-891F-E1E82149CC6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5333B023-EA4C-49FC-891F-E1E82149CC6C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
