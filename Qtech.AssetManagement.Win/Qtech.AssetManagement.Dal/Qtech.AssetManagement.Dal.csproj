@@ -49,6 +49,8 @@
     <Compile Include="PurchaseRequestDetailDB.cs" />
     <Compile Include="QuotationDB.cs" />
     <Compile Include="QuotationDetailDB.cs" />
+    <Compile Include="ReceivingDB.cs" />
+    <Compile Include="ReceivingDetailDB.cs" />
     <Compile Include="SupplierDB.cs" />
     <Compile Include="ProductDB.cs" />
     <Compile Include="PersonnelDB.cs" />

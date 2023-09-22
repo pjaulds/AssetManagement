@@ -47,6 +47,8 @@
     <Compile Include="PurchaseRequestDetailAudit.cs" />
     <Compile Include="QuotationAudit.cs" />
     <Compile Include="QuotationDetailAudit.cs" />
+    <Compile Include="ReceivingAudit.cs" />
+    <Compile Include="ReceivingDetailAudit.cs" />
     <Compile Include="SupplierAudit.cs" />
     <Compile Include="ProductAudit.cs" />
     <Compile Include="PersonnelAudit.cs" />

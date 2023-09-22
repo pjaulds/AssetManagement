@@ -48,6 +48,8 @@
     <Compile Include="PurchaseRequestManager.cs" />
     <Compile Include="QuotationDetailManager.cs" />
     <Compile Include="QuotationManager.cs" />
+    <Compile Include="ReceivingDetailManager.cs" />
+    <Compile Include="ReceivingManager.cs" />
     <Compile Include="SupplierManager.cs" />
     <Compile Include="ProductManager.cs" />
     <Compile Include="PersonnelManager.cs" />

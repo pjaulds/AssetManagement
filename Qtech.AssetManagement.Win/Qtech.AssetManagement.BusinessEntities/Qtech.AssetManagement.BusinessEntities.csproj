@@ -48,6 +48,8 @@
     <Compile Include="Collection\PurchaseRequestDetailCollection.cs" />
     <Compile Include="Collection\QuotationCollection.cs" />
     <Compile Include="Collection\QuotationDetailCollection.cs" />
+    <Compile Include="Collection\ReceivingCollection.cs" />
+    <Compile Include="Collection\ReceivingDetailCollection.cs" />
     <Compile Include="Collection\SupplierCollection.cs" />
     <Compile Include="Collection\ProductCollection.cs" />
     <Compile Include="Collection\PersonnelCollection.cs" />
@@ -57,12 +59,16 @@
     <Compile Include="PurchaseRequestDetail.cs" />
     <Compile Include="Quotation.cs" />
     <Compile Include="QuotationDetail.cs" />
+    <Compile Include="Receiving.cs" />
+    <Compile Include="ReceivingDetail.cs" />
     <Compile Include="SearchCriteria\PurchaseOrderCriteria.cs" />
     <Compile Include="SearchCriteria\PurchaseOrderDetailCriteria.cs" />
     <Compile Include="SearchCriteria\PurchaseRequestCriteria.cs" />
     <Compile Include="SearchCriteria\PurchaseRequestDetailCriteria.cs" />
     <Compile Include="SearchCriteria\QuotationCriteria.cs" />
     <Compile Include="SearchCriteria\QuotationDetailCriteria.cs" />
+    <Compile Include="SearchCriteria\ReceivingCriteria.cs" />
+    <Compile Include="SearchCriteria\ReceivingDetailCriteria.cs" />
     <Compile Include="SearchCriteria\SupplierCriteria.cs" />
     <Compile Include="Supplier.cs" />
     <Compile Include="Product.cs" />
