@@ -414,5 +414,38 @@ namespace Qtech.AssetManagement.Purchasing.PurchaseOrder
                 ItemsdataGridView.Rows.Remove(ItemsdataGridView.CurrentRow);
             }
         }
+
+        private void ItemsdataGridView_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            PurchaseOrderDetail item = (PurchaseOrderDetail)((DataGridView)sender).Rows[e.RowIndex].DataBoundItem;
+
+            string name = ((DataGridView)sender).Columns[e.ColumnIndex].Name;
+            if (name == "mQuantity")
+            {
+                decimal inputValue = e.FormattedValue.ToString() == string.Empty ? 0 : Convert.ToDecimal(e.FormattedValue);
+                if (inputValue != item.mQuantity)//editing qty
+                {
+                    //check if user is trying to over quantity vs quotation
+
+                    //existing po of this item
+                    PurchaseOrderDetailCriteria poDetailCriteria = new PurchaseOrderDetailCriteria();
+                    poDetailCriteria.mQuotationDetailId = item.mQuotationDetailId;
+
+                    decimal totalPoQuantity = inputValue;
+                    if (PurchaseOrderDetailManager.SelectCountForGetList(poDetailCriteria) > 0)
+                        totalPoQuantity += PurchaseOrderDetailManager.GetList(poDetailCriteria).Sum(x => x.mQuantity);
+
+                    //if editing existing PO deduct the old qty
+                    if (item.mId > 0) totalPoQuantity -= PurchaseOrderDetailManager.GetItem(item.mId).mQuantity;
+
+                    decimal quotationQty = QuotationDetailManager.GetItem(item.mQuotationDetailId).mQuantity;
+                    if (totalPoQuantity > quotationQty)
+                    {
+                        MessageBox.Show("Invalid quantity, will result in over PO.\nQuotation Qty:" + quotationQty.ToString() + "\nPO Qty: " + totalPoQuantity.ToString(), "Purchase Order", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                        e.Cancel = true;
+                    }
+                }
+            }
+        }
     }
 }
