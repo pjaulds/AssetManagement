@@ -54,6 +54,8 @@ namespace Qtech.AssetManagement.Dal
 
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@purchase_request_id", purchaseorderCriteria.mPurchaseRequestId);
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@quotation_id", purchaseorderCriteria.mQuotationId);
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@for_approval", purchaseorderCriteria.mForApproval);
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@for_receiving", purchaseorderCriteria.mForReceiving);
 
                 myCommand.Connection.Open();
                 using (DbDataReader myReader = myCommand.ExecuteReader())
@@ -97,6 +99,8 @@ namespace Qtech.AssetManagement.Dal
 
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@purchase_request_id", purchaseorderCriteria.mPurchaseRequestId);
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@quotation_id", purchaseorderCriteria.mQuotationId);
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@for_approval", purchaseorderCriteria.mForApproval);
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@for_receiving", purchaseorderCriteria.mForReceiving);
 
                 myCommand.Connection.Open();
                 myCommand.ExecuteNonQuery();

@@ -122,6 +122,8 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.ultraGrid1 = new Infragistics.Win.UltraWinGrid.UltraGrid();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.ForApprovalbutton = new System.Windows.Forms.Button();
+            this.ForQuotationbutton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.EnddateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.StartdateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -213,7 +215,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.panel8);
             this.splitContainer1.Panel2.Controls.Add(this.collapsePanelControl1);
             this.splitContainer1.Size = new System.Drawing.Size(1008, 461);
-            this.splitContainer1.SplitterDistance = 448;
+            this.splitContainer1.SplitterDistance = 770;
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 9;
             // 
@@ -329,7 +331,7 @@
             this.ultraGrid1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ultraGrid1.Location = new System.Drawing.Point(0, 62);
             this.ultraGrid1.Name = "ultraGrid1";
-            this.ultraGrid1.Size = new System.Drawing.Size(429, 395);
+            this.ultraGrid1.Size = new System.Drawing.Size(751, 395);
             this.ultraGrid1.TabIndex = 125;
             this.ultraGrid1.Text = "ultraGrid1";
             this.ultraGrid1.InitializeLayout += new Infragistics.Win.UltraWinGrid.InitializeLayoutEventHandler(this.ultraGrid1_InitializeLayout);
@@ -338,6 +340,8 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.ForApprovalbutton);
+            this.panel5.Controls.Add(this.ForQuotationbutton);
             this.panel5.Controls.Add(this.button1);
             this.panel5.Controls.Add(this.EnddateTimePicker);
             this.panel5.Controls.Add(this.StartdateTimePicker);
@@ -345,8 +349,36 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(429, 62);
+            this.panel5.Size = new System.Drawing.Size(751, 62);
             this.panel5.TabIndex = 181;
+            // 
+            // ForApprovalbutton
+            // 
+            this.ForApprovalbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(43)))), ((int)(((byte)(137)))));
+            this.ForApprovalbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ForApprovalbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForApprovalbutton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.ForApprovalbutton.Location = new System.Drawing.Point(428, 36);
+            this.ForApprovalbutton.Name = "ForApprovalbutton";
+            this.ForApprovalbutton.Size = new System.Drawing.Size(125, 23);
+            this.ForApprovalbutton.TabIndex = 178;
+            this.ForApprovalbutton.Text = "For Approval";
+            this.ForApprovalbutton.UseVisualStyleBackColor = false;
+            this.ForApprovalbutton.Click += new System.EventHandler(this.ForApprovalbutton_Click);
+            // 
+            // ForQuotationbutton
+            // 
+            this.ForQuotationbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(43)))), ((int)(((byte)(137)))));
+            this.ForQuotationbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ForQuotationbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForQuotationbutton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.ForQuotationbutton.Location = new System.Drawing.Point(559, 36);
+            this.ForQuotationbutton.Name = "ForQuotationbutton";
+            this.ForQuotationbutton.Size = new System.Drawing.Size(125, 23);
+            this.ForQuotationbutton.TabIndex = 177;
+            this.ForQuotationbutton.Text = "For Quotation";
+            this.ForQuotationbutton.UseVisualStyleBackColor = false;
+            this.ForQuotationbutton.Click += new System.EventHandler(this.ForQuotationbutton_Click);
             // 
             // button1
             // 
@@ -425,7 +457,7 @@
             // expandPanelControl1
             // 
             this.expandPanelControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.expandPanelControl1.Location = new System.Drawing.Point(429, 0);
+            this.expandPanelControl1.Location = new System.Drawing.Point(751, 0);
             this.expandPanelControl1.Name = "expandPanelControl1";
             this.expandPanelControl1.Size = new System.Drawing.Size(15, 457);
             this.expandPanelControl1.TabIndex = 126;
@@ -472,7 +504,7 @@
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ItemsdataGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.ItemsdataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ItemsdataGridView.Size = new System.Drawing.Size(540, 213);
+            this.ItemsdataGridView.Size = new System.Drawing.Size(218, 213);
             this.ItemsdataGridView.TabIndex = 181;
             this.ItemsdataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ItemsdataGridView_CellClick);
             // 
@@ -506,7 +538,7 @@
             this.RemarksultraTextEditor.Location = new System.Drawing.Point(15, 413);
             this.RemarksultraTextEditor.Name = "RemarksultraTextEditor";
             this.RemarksultraTextEditor.NullText = "Remarks";
-            this.RemarksultraTextEditor.Size = new System.Drawing.Size(540, 21);
+            this.RemarksultraTextEditor.Size = new System.Drawing.Size(218, 21);
             this.RemarksultraTextEditor.TabIndex = 180;
             // 
             // searchProductUserControl1
@@ -521,7 +553,7 @@
             0});
             this.searchProductUserControl1.mWithQuantity = true;
             this.searchProductUserControl1.Name = "searchProductUserControl1";
-            this.searchProductUserControl1.Size = new System.Drawing.Size(540, 25);
+            this.searchProductUserControl1.Size = new System.Drawing.Size(218, 25);
             this.searchProductUserControl1.TabIndex = 179;
             this.searchProductUserControl1._GetProduct += new System.EventHandler(this.searchProductControl1__GetProduct);
             this.searchProductUserControl1._SearchingProduct += new System.EventHandler(this.searchProductControl1__SearchingProduct);
@@ -537,7 +569,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(15, 20);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(540, 155);
+            this.panel1.Size = new System.Drawing.Size(218, 155);
             this.panel1.TabIndex = 0;
             // 
             // ApprovedBytextBox
@@ -637,7 +669,7 @@
             this.panel3.Controls.Add(this.TransactionNotextBox);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(198, 0);
+            this.panel3.Location = new System.Drawing.Point(-124, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(342, 155);
             this.panel3.TabIndex = 3;
@@ -1048,7 +1080,7 @@
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel11.Location = new System.Drawing.Point(15, 0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(540, 20);
+            this.panel11.Size = new System.Drawing.Size(218, 20);
             this.panel11.TabIndex = 176;
             // 
             // label18
@@ -1098,7 +1130,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel8.Location = new System.Drawing.Point(15, 434);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(540, 23);
+            this.panel8.Size = new System.Drawing.Size(218, 23);
             this.panel8.TabIndex = 174;
             // 
             // ApprovedBybutton
@@ -1161,6 +1193,7 @@
             this.Name = "Default";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "P.R.";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Default_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -1242,5 +1275,7 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button ForApprovalbutton;
+        private System.Windows.Forms.Button ForQuotationbutton;
     }
 }

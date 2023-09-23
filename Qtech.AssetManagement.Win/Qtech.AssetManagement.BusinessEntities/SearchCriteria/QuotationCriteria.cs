@@ -12,5 +12,6 @@ namespace Qtech.AssetManagement.BusinessEntities
         public DateTime mEndDate { get; set; }
 
         public bool mForPo { get; set; }
+        public bool mForApproval { get; set; }
     }
 }

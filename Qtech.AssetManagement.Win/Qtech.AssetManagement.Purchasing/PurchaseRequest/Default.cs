@@ -56,9 +56,23 @@ namespace Qtech.AssetManagement.Purchasing.PurchaseRequest
                 criteria.mStartDate = StartdateTimePicker.Value.Date;
                 criteria.mEndDate = EnddateTimePicker.Value.Date;
             }
-            criteria.mForQuotation = mForQuotation;
+
+            if(mForQuotation)
+            {
+                criteria = new PurchaseRequestCriteria();
+                criteria.mForQuotation = mForQuotation;
+            }
+            
             ultraGrid1.SetDataBinding(PurchaseRequestManager.GetList(criteria), null, true);
             ultraGrid1.Refresh();
+
+            criteria = new PurchaseRequestCriteria();
+            criteria.mForQuotation = true;
+            ForQuotationbutton.Text = "For Quotation: " + PurchaseRequestManager.SelectCountForGetList(criteria).ToString();
+
+            criteria = new PurchaseRequestCriteria();
+            criteria.mForApproval = true;
+            ForApprovalbutton.Text = "For Approval: " + PurchaseRequestManager.SelectCountForGetList(criteria).ToString();
         }
 
         private int SavePurchaseRequest()
@@ -425,6 +439,22 @@ namespace Qtech.AssetManagement.Purchasing.PurchaseRequest
 
                 ItemsdataGridView.Rows.Remove(ItemsdataGridView.CurrentRow);
             }
+        }
+
+        private void ForApprovalbutton_Click(object sender, EventArgs e)
+        {
+            PurchaseRequestCriteria criteria = new PurchaseRequestCriteria();
+            criteria.mForApproval = true;
+            ultraGrid1.SetDataBinding(PurchaseRequestManager.GetList(criteria), null, true);
+            ultraGrid1.Refresh();
+        }
+
+        private void ForQuotationbutton_Click(object sender, EventArgs e)
+        {
+            PurchaseRequestCriteria criteria = new PurchaseRequestCriteria();
+            criteria.mForQuotation = true;
+            ultraGrid1.SetDataBinding(PurchaseRequestManager.GetList(criteria), null, true);
+            ultraGrid1.Refresh();
         }
     }
 }

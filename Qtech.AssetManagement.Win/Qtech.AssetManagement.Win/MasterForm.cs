@@ -224,6 +224,17 @@ namespace Qtech.AssetManagement.Win
                     }
                     else purchaseOrderForm.Select();
                     break;
+                case "Receiving":
+                    if (!AllowToAccess((Int32)Modules.Receiving)) return;
+                    Purchasing.Receiving.Default receivingForm = null;
+                    if ((receivingForm = (Purchasing.Receiving.Default)IsFormAlreadyOpen(typeof(Purchasing.Receiving.Default))) == null)
+                    {
+                        Purchasing.Receiving.Default receivingFormChild = new Purchasing.Receiving.Default();
+                        receivingFormChild.MdiParent = this;
+                        receivingFormChild.Show();
+                    }
+                    else receivingForm.Select();
+                    break;
             }
         }
 

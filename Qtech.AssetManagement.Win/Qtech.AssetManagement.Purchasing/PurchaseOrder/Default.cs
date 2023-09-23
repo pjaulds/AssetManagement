@@ -22,6 +22,8 @@ namespace Qtech.AssetManagement.Purchasing.PurchaseOrder
             InitializeComponent();
         }
 
+        public bool mForReceiving { get; set; }
+        public BusinessEntities.PurchaseOrder mPurchaseOrder { get; set; }
         #region Private Variables
         bool allow_select;
         bool allow_insert;
@@ -55,8 +57,22 @@ namespace Qtech.AssetManagement.Purchasing.PurchaseOrder
                 criteria.mEndDate = EnddateTimePicker.Value.Date;
             }
 
+            if(mForReceiving)
+            {
+                criteria = new PurchaseOrderCriteria();
+                criteria.mForReceiving = true;
+            }
+
             ultraGrid1.SetDataBinding(PurchaseOrderManager.GetList(criteria), null, true);
             ultraGrid1.Refresh();
+
+            criteria = new PurchaseOrderCriteria();
+            criteria.mForReceiving = true;
+            ForReceivingbutton.Text = "For Receiving: " + PurchaseOrderManager.SelectCountForGetList(criteria).ToString();
+
+            criteria = new PurchaseOrderCriteria();
+            criteria.mForApproval = true;
+            ForApprovalbutton.Text = "For Approval: " + PurchaseOrderManager.SelectCountForGetList(criteria).ToString();
         }
 
         private int SavePurchaseOrder()
@@ -250,19 +266,18 @@ namespace Qtech.AssetManagement.Purchasing.PurchaseOrder
             if (e.Row.Index == -1)
                 return;
 
-            if (!allow_update)
+            BusinessEntities.PurchaseOrder item = PurchaseOrderManager.GetItem(_mId);
+
+            if (mForReceiving)
             {
-                MessageUtil.NotAllowedUpdateAccess();
+                mPurchaseOrder = item;
+                Close();
                 return;
             }
-
-            EndEditing();
-
-            BusinessEntities.PurchaseOrder item = PurchaseOrderManager.GetItem(_mId);
+            
+            EndEditing();            
             LoadFormControlsFromPurchaseOrder(item);
-
             ControlUtil.ExpandPanel(splitContainer1);
-
             PreparedByutraCombo.Focus();
         }
 
@@ -342,13 +357,13 @@ namespace Qtech.AssetManagement.Purchasing.PurchaseOrder
                 return;
             }
 
-            Quotation.Default prForm = new Quotation.Default();
-            prForm.mForPo = true;
-            prForm.FormClosing += PrForm_FormClosing;
-            prForm.ShowDialog();
+            Quotation.Default qForm = new Quotation.Default();
+            qForm.mForPo = true;
+            qForm.FormClosing += qForm_FormClosing;
+            qForm.ShowDialog();
         }
 
-        private void PrForm_FormClosing(object sender, FormClosingEventArgs e)
+        private void qForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             Quotation.Default prForm = (Quotation.Default)sender;
             if (prForm.mQuotation == null) return;
@@ -380,6 +395,8 @@ namespace Qtech.AssetManagement.Purchasing.PurchaseOrder
                 item.mQuotationDetailId = qItem.mId;
                 item.mProductName = qItem.mProductName;
                 item.mQuantity = quantity; //balance
+                item.mCost = qItem.mCost;
+                item.mTotalCost = qItem.mTotalCost;
                 items.Add(item);
             }
 
@@ -446,6 +463,22 @@ namespace Qtech.AssetManagement.Purchasing.PurchaseOrder
                     }
                 }
             }
+        }
+
+        private void ForApprovalbutton_Click(object sender, EventArgs e)
+        {
+            PurchaseOrderCriteria criteria = new PurchaseOrderCriteria();
+            criteria.mForApproval = true;
+            ultraGrid1.SetDataBinding(PurchaseOrderManager.GetList(criteria), null, true);
+            ultraGrid1.Refresh();
+        }
+
+        private void ForReceivingbutton_Click(object sender, EventArgs e)
+        {
+            PurchaseOrderCriteria criteria = new PurchaseOrderCriteria();
+            criteria.mForReceiving = true;
+            ultraGrid1.SetDataBinding(PurchaseOrderManager.GetList(criteria), null, true);
+            ultraGrid1.Refresh();
         }
     }
 }

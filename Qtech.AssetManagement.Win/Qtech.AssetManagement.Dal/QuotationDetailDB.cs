@@ -160,6 +160,8 @@ namespace Qtech.AssetManagement.Dal
             quotationdetail.mCost1 = myDataRecord.GetDecimal(myDataRecord.GetOrdinal("cost1"));
             quotationdetail.mCost2 = myDataRecord.GetDecimal(myDataRecord.GetOrdinal("cost2"));
             quotationdetail.mCost3 = myDataRecord.GetDecimal(myDataRecord.GetOrdinal("cost3"));
+            quotationdetail.mCost = myDataRecord.GetDecimal(myDataRecord.GetOrdinal("cost"));
+            quotationdetail.mTotalCost = myDataRecord.GetDecimal(myDataRecord.GetOrdinal("total_cost"));
             return quotationdetail;
         }
     }

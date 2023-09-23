@@ -91,6 +91,12 @@
       <DependentUpon>Default.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Receiving\Default.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Receiving\Default.Designer.cs">
+      <DependentUpon>Default.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Qtech.AssetManagement.Bll\Qtech.AssetManagement.Bll.csproj">
@@ -132,6 +138,9 @@
       <DependentUpon>Default.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PurchaseRequest\Default.resx">
+      <DependentUpon>Default.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Receiving\Default.resx">
       <DependentUpon>Default.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>

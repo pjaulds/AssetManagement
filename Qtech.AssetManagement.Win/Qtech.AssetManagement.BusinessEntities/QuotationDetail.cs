@@ -33,6 +33,15 @@ namespace Qtech.AssetManagement.BusinessEntities
 
         [Display(Name = "Cost 3")]
         public Decimal mCost3 { get; set; }
+
+        /// <summary>
+        /// winning cost
+        /// </summary>
+        [Display(Name = "Cost")]
+        public decimal mCost { get; set; }
+
+        [Display(Name = "Total Cost")]
+        public decimal mTotalCost { get; set; }
         #endregion
     }
 }

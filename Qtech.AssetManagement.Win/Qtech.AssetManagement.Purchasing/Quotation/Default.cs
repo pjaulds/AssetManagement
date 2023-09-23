@@ -57,8 +57,22 @@ namespace Qtech.AssetManagement.Purchasing.Quotation
                 criteria.mEndDate = EnddateTimePicker.Value.Date;
             }
 
+            if(mForPo)
+            {
+                criteria = new QuotationCriteria();
+                criteria.mForPo = true;
+            }
+
             ultraGrid1.SetDataBinding(QuotationManager.GetList(criteria), null, true);
             ultraGrid1.Refresh();
+
+            criteria = new QuotationCriteria();
+            criteria.mForPo = true;
+            ForPobutton.Text = "For P.O.: " + QuotationManager.SelectCountForGetList(criteria).ToString();
+            
+            criteria = new QuotationCriteria();
+            criteria.mForApproval = true;
+            ForApprovalbutton.Text = "For Approval: " + QuotationManager.SelectCountForGetList(criteria).ToString();
         }
 
         private int SaveQuotation()
@@ -122,6 +136,7 @@ namespace Qtech.AssetManagement.Purchasing.Quotation
         {
             Idlabel.Text = myQuotation.mId.ToString();
             dateTimePicker.Value = myQuotation.mDate;
+            TransactoinNotextBox.Text = myQuotation.mTransactionNo;
             PurchaseRequestIdlabel.Text = myQuotation.mPurchaseRequestId.ToString();
             PRNotextBox.Text = myQuotation.mPurchaseRequestNo;
 
@@ -432,6 +447,22 @@ namespace Qtech.AssetManagement.Purchasing.Quotation
 
                 ItemsdataGridView.Rows.Remove(ItemsdataGridView.CurrentRow);
             }
+        }
+
+        private void ForPobutton_Click(object sender, EventArgs e)
+        {
+            QuotationCriteria criteria = new QuotationCriteria();
+            criteria.mForPo = true;
+            ultraGrid1.SetDataBinding(QuotationManager.GetList(criteria), null, true);
+            ultraGrid1.Refresh();
+        }
+
+        private void ForApprovalbutton_Click(object sender, EventArgs e)
+        {
+            QuotationCriteria criteria = new QuotationCriteria();
+            criteria.mForApproval = true;
+            ultraGrid1.SetDataBinding(QuotationManager.GetList(criteria), null, true);
+            ultraGrid1.Refresh();
         }
     }
 }

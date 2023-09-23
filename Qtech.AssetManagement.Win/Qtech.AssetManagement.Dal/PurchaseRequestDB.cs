@@ -52,6 +52,7 @@ namespace Qtech.AssetManagement.Dal
                 if (purchaserequestCriteria.mEndDate != DateTime.MinValue)
                     Helpers.CreateParameter(myCommand, DbType.DateTime, "@end_date", purchaserequestCriteria.mEndDate);
 
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@for_approval", purchaserequestCriteria.mForApproval);
                 Helpers.CreateParameter(myCommand, DbType.Boolean, "@for_quotation", purchaserequestCriteria.mForQuotation);
 
                 myCommand.Connection.Open();
@@ -94,6 +95,7 @@ namespace Qtech.AssetManagement.Dal
                 if (purchaserequestCriteria.mEndDate != DateTime.MinValue)
                     Helpers.CreateParameter(myCommand, DbType.DateTime, "@end_date", purchaserequestCriteria.mEndDate);
 
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@for_approval", purchaserequestCriteria.mForApproval);
                 Helpers.CreateParameter(myCommand, DbType.Boolean, "@for_quotation", purchaserequestCriteria.mForQuotation);
 
                 myCommand.Connection.Open();
