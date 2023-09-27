@@ -7,18 +7,18 @@ using System.Data;
 
 namespace Qtech.AssetManagement.Dal
 {
-    public class ProductDB
+    public class UnitDB
     {
-        public static Product GetItem(int productId)
+        public static Unit GetItem(int unitId)
         {
-            Product product = null;
+            Unit unit = null;
 
             using (DbCommand myCommand = AppConfiguration.CreateCommand())
             {
                 myCommand.CommandType = CommandType.StoredProcedure;
-                myCommand.CommandText = "amQt_spProductSelectSingleItem";
+                myCommand.CommandText = "amQt_spUnitSelectSingleItem";
 
-                Helpers.CreateParameter(myCommand, DbType.Int32, "@id", productId);
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@id", unitId);
 
 
                 myCommand.Connection.Open();
@@ -26,7 +26,7 @@ namespace Qtech.AssetManagement.Dal
                 {
                     if (myReader.Read())
                     {
-                        product = FillDataRecord(myReader);
+                        unit = FillDataRecord(myReader);
 
                     }
                     myReader.Close();
@@ -34,32 +34,32 @@ namespace Qtech.AssetManagement.Dal
                 myCommand.Connection.Close();
             }
 
-            return product;
+            return unit;
         }
 
-        public static ProductCollection GetList(ProductCriteria productCriteria)
+        public static UnitCollection GetList(UnitCriteria unitCriteria)
         {
-            ProductCollection tempList = new ProductCollection();
+            UnitCollection tempList = new UnitCollection();
 
             using (DbCommand myCommand = AppConfiguration.CreateCommand())
             {
                 myCommand.CommandType = CommandType.StoredProcedure;
-                myCommand.CommandText = "amQt_spProductSearchList";
+                myCommand.CommandText = "amQt_spUnitSearchList";
 
-                Helpers.CreateParameter(myCommand, DbType.Int32, "@id", productCriteria.mId);
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@id", unitCriteria.mId);
 
-                if (!string.IsNullOrEmpty(productCriteria.mCode))
-                    Helpers.CreateParameter(myCommand, DbType.String, "@code", productCriteria.mCode);
+                if (!string.IsNullOrEmpty(unitCriteria.mCode))
+                    Helpers.CreateParameter(myCommand, DbType.String, "@code", unitCriteria.mCode);
 
-                if (!string.IsNullOrEmpty(productCriteria.mName))
-                    Helpers.CreateParameter(myCommand, DbType.String, "@name", productCriteria.mName);
+                if (!string.IsNullOrEmpty(unitCriteria.mName))
+                    Helpers.CreateParameter(myCommand, DbType.String, "@name", unitCriteria.mName);
 
                 myCommand.Connection.Open();
                 using (DbDataReader myReader = myCommand.ExecuteReader())
                 {
                     if (myReader.HasRows)
                     {
-                        tempList = new ProductCollection();
+                        tempList = new UnitCollection();
                         while (myReader.Read())
                         {
                             tempList.Add(FillDataRecord(myReader));
@@ -75,12 +75,12 @@ namespace Qtech.AssetManagement.Dal
             return tempList;
         }
 
-        public static int SelectCountForGetList(ProductCriteria productCriteria)
+        public static int SelectCountForGetList(UnitCriteria unitCriteria)
         {
             using (DbCommand myCommand = AppConfiguration.CreateCommand())
             {
                 myCommand.CommandType = CommandType.StoredProcedure;
-                myCommand.CommandText = "amQt_spProductSearchList";
+                myCommand.CommandText = "amQt_spUnitSearchList";
                 DbParameter idParam = myCommand.CreateParameter();
                 idParam.DbType = DbType.Int32;
                 idParam.Direction = ParameterDirection.InputOutput;
@@ -88,13 +88,13 @@ namespace Qtech.AssetManagement.Dal
                 idParam.Value = 0;
                 myCommand.Parameters.Add(idParam);
 
-                Helpers.CreateParameter(myCommand, DbType.Int32, "@id", productCriteria.mId);
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@id", unitCriteria.mId);
 
-                if (!string.IsNullOrEmpty(productCriteria.mCode))
-                    Helpers.CreateParameter(myCommand, DbType.String, "@code", productCriteria.mCode);
+                if (!string.IsNullOrEmpty(unitCriteria.mCode))
+                    Helpers.CreateParameter(myCommand, DbType.String, "@code", unitCriteria.mCode);
 
-                if (!string.IsNullOrEmpty(productCriteria.mName))
-                    Helpers.CreateParameter(myCommand, DbType.String, "@name", productCriteria.mName);
+                if (!string.IsNullOrEmpty(unitCriteria.mName))
+                    Helpers.CreateParameter(myCommand, DbType.String, "@name", unitCriteria.mName);
 
                 myCommand.Connection.Open();
                 myCommand.ExecuteNonQuery();
@@ -102,31 +102,30 @@ namespace Qtech.AssetManagement.Dal
                 return (int)myCommand.Parameters["@record_count"].Value;
             }
         }
-        public static int Save(Product myProduct)
+        public static int Save(Unit myUnit)
         {
-            if (!myProduct.Validate())
+            if (!myUnit.Validate())
             {
-                throw new InvalidSaveOperationException("Can't save a product in an Invalid state. Make sure that IsValid() returns true before you call Save().");
+                throw new InvalidSaveOperationException("Can't save a unit in an Invalid state. Make sure that IsValid() returns true before you call Save().");
             }
             int result = 0;
 
             using (DbCommand myCommand = AppConfiguration.CreateCommand())
             {
                 myCommand.CommandType = CommandType.StoredProcedure;
-                myCommand.CommandText = "amQt_spProductInsertUpdateSingleItem";
+                myCommand.CommandText = "amQt_spUnitInsertUpdateSingleItem";
 
-                Helpers.CreateParameter(myCommand, DbType.String, "@code", myProduct.mCode);
-                Helpers.CreateParameter(myCommand, DbType.String, "@name", myProduct.mName);
-                Helpers.CreateParameter(myCommand, DbType.Int32, "@unit_id", myProduct.mUnitId);
+                Helpers.CreateParameter(myCommand, DbType.String, "@code", myUnit.mCode);
+                Helpers.CreateParameter(myCommand, DbType.String, "@name", myUnit.mName);
 
-                Helpers.SetSaveParameters(myCommand, myProduct);
+                Helpers.SetSaveParameters(myCommand, myUnit);
 
                 myCommand.Connection.Open();
 
                 int numberOfRecordsAffected = myCommand.ExecuteNonQuery();
                 if (numberOfRecordsAffected == 0)
                 {
-                    throw new DBConcurrencyException("Can't update product as it has been updated by someone else");
+                    throw new DBConcurrencyException("Can't update unit as it has been updated by someone else");
                 }
 
                 result = Helpers.GetBusinessBaseId(myCommand);
@@ -144,7 +143,7 @@ namespace Qtech.AssetManagement.Dal
             int result = 0;
             using (DbCommand myCommand = AppConfiguration.CreateCommand())
             {
-                myCommand.CommandType = CommandType.StoredProcedure; myCommand.CommandText = "amQt_spProductDeleteSingleItem";
+                myCommand.CommandType = CommandType.StoredProcedure; myCommand.CommandText = "amQt_spUnitDeleteSingleItem";
 
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@id", id);
 
@@ -158,16 +157,14 @@ namespace Qtech.AssetManagement.Dal
             return result > 0;
         }
 
-        private static Product FillDataRecord(IDataRecord myDataRecord)
+        private static Unit FillDataRecord(IDataRecord myDataRecord)
         {
-            Product product = new Product();
+            Unit unit = new Unit();
 
-            product.mId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("id"));
-            product.mCode = myDataRecord.GetString(myDataRecord.GetOrdinal("code"));
-            product.mName = myDataRecord.GetString(myDataRecord.GetOrdinal("name"));
-            product.mUnitId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("unit_id"));
-            product.mUnitName = myDataRecord.GetString(myDataRecord.GetOrdinal("unit_name"));
-            return product;
+            unit.mId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("id"));
+            unit.mCode = myDataRecord.GetString(myDataRecord.GetOrdinal("code"));
+            unit.mName = myDataRecord.GetString(myDataRecord.GetOrdinal("name"));
+            return unit;
         }
     }
 }

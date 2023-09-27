@@ -392,6 +392,7 @@ namespace Qtech.AssetManagement.Purchasing.PurchaseRequest
             }
 
             PurchaseRequestDetail item = new PurchaseRequestDetail();
+            item.mUnitName = myProduct.mUnitName;
             item.mQuantity = quantity;
             item.mProductId = myProduct.mId;
             item.mProductName = myProduct.mName;

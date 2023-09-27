@@ -52,15 +52,10 @@
             Infragistics.Win.Appearance appearance13 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance14 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance15 = new Infragistics.Win.Appearance();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Default));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             Infragistics.Win.Appearance appearance16 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand2 = new Infragistics.Win.UltraWinGrid.UltraGridBand("Band 0", -1);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn1 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
@@ -76,9 +71,17 @@
             Infragistics.Win.Appearance appearance25 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance26 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance27 = new Infragistics.Win.Appearance();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Default));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.ultraGrid1 = new Infragistics.Win.UltraWinGrid.UltraGrid();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.ForApprovalbutton = new System.Windows.Forms.Button();
+            this.ForPobutton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.EnddateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.StartdateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -88,12 +91,6 @@
             this.label17 = new System.Windows.Forms.Label();
             this.expandPanelControl1 = new Qtech.AssetManagement.Controls.ExpandPanelControl();
             this.ItemsdataGridView = new System.Windows.Forms.DataGridView();
-            this.mDelete = new System.Windows.Forms.DataGridViewImageColumn();
-            this.mQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mCost1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mCost2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mCost3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RemarksultraTextEditor = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.panel1 = new System.Windows.Forms.Panel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -128,8 +125,13 @@
             this.Cancelbutton = new System.Windows.Forms.Button();
             this.Savebutton = new System.Windows.Forms.Button();
             this.collapsePanelControl1 = new Qtech.AssetManagement.Controls.CollapsePanelControl();
-            this.ForPobutton = new System.Windows.Forms.Button();
-            this.ForApprovalbutton = new System.Windows.Forms.Button();
+            this.mDelete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.mQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mUnitName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mCost1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mCost2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mCost3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -172,7 +174,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.panel8);
             this.splitContainer1.Panel2.Controls.Add(this.collapsePanelControl1);
             this.splitContainer1.Size = new System.Drawing.Size(1044, 486);
-            this.splitContainer1.SplitterDistance = 716;
+            this.splitContainer1.SplitterDistance = 317;
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 9;
             // 
@@ -312,7 +314,7 @@
             this.ultraGrid1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ultraGrid1.Location = new System.Drawing.Point(0, 62);
             this.ultraGrid1.Name = "ultraGrid1";
-            this.ultraGrid1.Size = new System.Drawing.Size(697, 420);
+            this.ultraGrid1.Size = new System.Drawing.Size(298, 420);
             this.ultraGrid1.TabIndex = 125;
             this.ultraGrid1.Text = "ultraGrid1";
             this.ultraGrid1.InitializeLayout += new Infragistics.Win.UltraWinGrid.InitializeLayoutEventHandler(this.ultraGrid1_InitializeLayout);
@@ -330,8 +332,36 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(697, 62);
+            this.panel5.Size = new System.Drawing.Size(298, 62);
             this.panel5.TabIndex = 181;
+            // 
+            // ForApprovalbutton
+            // 
+            this.ForApprovalbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(43)))), ((int)(((byte)(137)))));
+            this.ForApprovalbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ForApprovalbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForApprovalbutton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.ForApprovalbutton.Location = new System.Drawing.Point(428, 36);
+            this.ForApprovalbutton.Name = "ForApprovalbutton";
+            this.ForApprovalbutton.Size = new System.Drawing.Size(125, 23);
+            this.ForApprovalbutton.TabIndex = 176;
+            this.ForApprovalbutton.Text = "For Approval";
+            this.ForApprovalbutton.UseVisualStyleBackColor = false;
+            this.ForApprovalbutton.Click += new System.EventHandler(this.ForApprovalbutton_Click);
+            // 
+            // ForPobutton
+            // 
+            this.ForPobutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(43)))), ((int)(((byte)(137)))));
+            this.ForPobutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ForPobutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForPobutton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.ForPobutton.Location = new System.Drawing.Point(559, 36);
+            this.ForPobutton.Name = "ForPobutton";
+            this.ForPobutton.Size = new System.Drawing.Size(100, 23);
+            this.ForPobutton.TabIndex = 175;
+            this.ForPobutton.Text = "For PO";
+            this.ForPobutton.UseVisualStyleBackColor = false;
+            this.ForPobutton.Click += new System.EventHandler(this.ForPobutton_Click);
             // 
             // button1
             // 
@@ -410,7 +440,7 @@
             // expandPanelControl1
             // 
             this.expandPanelControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.expandPanelControl1.Location = new System.Drawing.Point(697, 0);
+            this.expandPanelControl1.Location = new System.Drawing.Point(298, 0);
             this.expandPanelControl1.Name = "expandPanelControl1";
             this.expandPanelControl1.Size = new System.Drawing.Size(15, 482);
             this.expandPanelControl1.TabIndex = 126;
@@ -420,23 +450,24 @@
             // 
             this.ItemsdataGridView.AllowUserToAddRows = false;
             this.ItemsdataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(212)))), ((int)(((byte)(240)))));
-            this.ItemsdataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(212)))), ((int)(((byte)(240)))));
+            this.ItemsdataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.ItemsdataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.ItemsdataGridView.BackgroundColor = System.Drawing.Color.White;
             this.ItemsdataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(198)))), ((int)(((byte)(237)))));
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ItemsdataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(198)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ItemsdataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.ItemsdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ItemsdataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.mDelete,
             this.mQuantity,
+            this.mUnitName,
             this.mProductName,
             this.mCost1,
             this.mCost2,
@@ -447,77 +478,22 @@
             this.ItemsdataGridView.Location = new System.Drawing.Point(15, 175);
             this.ItemsdataGridView.Name = "ItemsdataGridView";
             this.ItemsdataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(226)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle23.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle23.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle23.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle23.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle23.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ItemsdataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(226)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ItemsdataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.ItemsdataGridView.RowHeadersVisible = false;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(226)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ItemsdataGridView.RowsDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(226)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ItemsdataGridView.RowsDefaultCellStyle = dataGridViewCellStyle9;
             this.ItemsdataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ItemsdataGridView.Size = new System.Drawing.Size(308, 263);
+            this.ItemsdataGridView.Size = new System.Drawing.Size(707, 263);
             this.ItemsdataGridView.TabIndex = 181;
             this.ItemsdataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ItemsdataGridView_CellClick);
-            // 
-            // mDelete
-            // 
-            this.mDelete.HeaderText = "";
-            this.mDelete.Image = ((System.Drawing.Image)(resources.GetObject("mDelete.Image")));
-            this.mDelete.Name = "mDelete";
-            this.mDelete.Width = 25;
-            // 
-            // mQuantity
-            // 
-            this.mQuantity.DataPropertyName = "mQuantity";
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle19.Format = "N2";
-            this.mQuantity.DefaultCellStyle = dataGridViewCellStyle19;
-            this.mQuantity.HeaderText = "Quantity";
-            this.mQuantity.Name = "mQuantity";
-            this.mQuantity.ReadOnly = true;
-            // 
-            // mProductName
-            // 
-            this.mProductName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.mProductName.DataPropertyName = "mProductName";
-            this.mProductName.HeaderText = "Product";
-            this.mProductName.Name = "mProductName";
-            this.mProductName.ReadOnly = true;
-            // 
-            // mCost1
-            // 
-            this.mCost1.DataPropertyName = "mCost1";
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle20.Format = "N4";
-            this.mCost1.DefaultCellStyle = dataGridViewCellStyle20;
-            this.mCost1.HeaderText = "Cost 1";
-            this.mCost1.Name = "mCost1";
-            this.mCost1.Width = 125;
-            // 
-            // mCost2
-            // 
-            this.mCost2.DataPropertyName = "mCost2";
-            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle21.Format = "N4";
-            this.mCost2.DefaultCellStyle = dataGridViewCellStyle21;
-            this.mCost2.HeaderText = "Cost 2";
-            this.mCost2.Name = "mCost2";
-            this.mCost2.Width = 125;
-            // 
-            // mCost3
-            // 
-            this.mCost3.DataPropertyName = "mCost3";
-            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle22.Format = "N4";
-            this.mCost3.DefaultCellStyle = dataGridViewCellStyle22;
-            this.mCost3.HeaderText = "Cost 3";
-            this.mCost3.Name = "mCost3";
-            this.mCost3.Width = 125;
             // 
             // RemarksultraTextEditor
             // 
@@ -525,7 +501,7 @@
             this.RemarksultraTextEditor.Location = new System.Drawing.Point(15, 438);
             this.RemarksultraTextEditor.Name = "RemarksultraTextEditor";
             this.RemarksultraTextEditor.NullText = "Remarks";
-            this.RemarksultraTextEditor.Size = new System.Drawing.Size(308, 21);
+            this.RemarksultraTextEditor.Size = new System.Drawing.Size(707, 21);
             this.RemarksultraTextEditor.TabIndex = 180;
             // 
             // panel1
@@ -540,7 +516,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(15, 20);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(308, 155);
+            this.panel1.Size = new System.Drawing.Size(707, 155);
             this.panel1.TabIndex = 0;
             // 
             // linkLabel1
@@ -661,7 +637,7 @@
             this.panel3.Controls.Add(this.TransactoinNotextBox);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(-34, 0);
+            this.panel3.Location = new System.Drawing.Point(365, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(342, 155);
             this.panel3.TabIndex = 3;
@@ -874,7 +850,7 @@
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel11.Location = new System.Drawing.Point(15, 0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(308, 20);
+            this.panel11.Size = new System.Drawing.Size(707, 20);
             this.panel11.TabIndex = 176;
             // 
             // label18
@@ -924,7 +900,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel8.Location = new System.Drawing.Point(15, 459);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(308, 23);
+            this.panel8.Size = new System.Drawing.Size(707, 23);
             this.panel8.TabIndex = 174;
             // 
             // ApprovedBybutton
@@ -978,33 +954,69 @@
             this.collapsePanelControl1.TabIndex = 178;
             this.collapsePanelControl1._HidePanel += new System.EventHandler(this.collapsePanelControl1__HidePanel);
             // 
-            // ForPobutton
+            // mDelete
             // 
-            this.ForPobutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(43)))), ((int)(((byte)(137)))));
-            this.ForPobutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ForPobutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForPobutton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.ForPobutton.Location = new System.Drawing.Point(559, 36);
-            this.ForPobutton.Name = "ForPobutton";
-            this.ForPobutton.Size = new System.Drawing.Size(100, 23);
-            this.ForPobutton.TabIndex = 175;
-            this.ForPobutton.Text = "For PO";
-            this.ForPobutton.UseVisualStyleBackColor = false;
-            this.ForPobutton.Click += new System.EventHandler(this.ForPobutton_Click);
+            this.mDelete.HeaderText = "";
+            this.mDelete.Image = ((System.Drawing.Image)(resources.GetObject("mDelete.Image")));
+            this.mDelete.Name = "mDelete";
+            this.mDelete.Width = 25;
             // 
-            // ForApprovalbutton
+            // mQuantity
             // 
-            this.ForApprovalbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(43)))), ((int)(((byte)(137)))));
-            this.ForApprovalbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ForApprovalbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForApprovalbutton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.ForApprovalbutton.Location = new System.Drawing.Point(428, 36);
-            this.ForApprovalbutton.Name = "ForApprovalbutton";
-            this.ForApprovalbutton.Size = new System.Drawing.Size(125, 23);
-            this.ForApprovalbutton.TabIndex = 176;
-            this.ForApprovalbutton.Text = "For Approval";
-            this.ForApprovalbutton.UseVisualStyleBackColor = false;
-            this.ForApprovalbutton.Click += new System.EventHandler(this.ForApprovalbutton_Click);
+            this.mQuantity.DataPropertyName = "mQuantity";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "N2";
+            this.mQuantity.DefaultCellStyle = dataGridViewCellStyle3;
+            this.mQuantity.HeaderText = "Quantity";
+            this.mQuantity.Name = "mQuantity";
+            this.mQuantity.ReadOnly = true;
+            // 
+            // mUnitName
+            // 
+            this.mUnitName.DataPropertyName = "mUnitName";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.mUnitName.DefaultCellStyle = dataGridViewCellStyle4;
+            this.mUnitName.HeaderText = "Unit";
+            this.mUnitName.Name = "mUnitName";
+            this.mUnitName.ReadOnly = true;
+            // 
+            // mProductName
+            // 
+            this.mProductName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.mProductName.DataPropertyName = "mProductName";
+            this.mProductName.HeaderText = "Product";
+            this.mProductName.Name = "mProductName";
+            this.mProductName.ReadOnly = true;
+            // 
+            // mCost1
+            // 
+            this.mCost1.DataPropertyName = "mCost1";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "N4";
+            this.mCost1.DefaultCellStyle = dataGridViewCellStyle5;
+            this.mCost1.HeaderText = "Cost 1";
+            this.mCost1.Name = "mCost1";
+            this.mCost1.Width = 125;
+            // 
+            // mCost2
+            // 
+            this.mCost2.DataPropertyName = "mCost2";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.Format = "N4";
+            this.mCost2.DefaultCellStyle = dataGridViewCellStyle6;
+            this.mCost2.HeaderText = "Cost 2";
+            this.mCost2.Name = "mCost2";
+            this.mCost2.Width = 125;
+            // 
+            // mCost3
+            // 
+            this.mCost3.DataPropertyName = "mCost3";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.Format = "N4";
+            this.mCost3.DefaultCellStyle = dataGridViewCellStyle7;
+            this.mCost3.HeaderText = "Cost 3";
+            this.mCost3.Name = "mCost3";
+            this.mCost3.Width = 125;
             // 
             // Default
             // 
@@ -1091,13 +1103,14 @@
         private System.Windows.Forms.RadioButton Supplier2radioButton;
         private System.Windows.Forms.RadioButton Supplier1radioButton;
         private System.Windows.Forms.Label PurchaseRequestIdlabel;
+        private System.Windows.Forms.Button ForPobutton;
+        private System.Windows.Forms.Button ForApprovalbutton;
         private System.Windows.Forms.DataGridViewImageColumn mDelete;
         private System.Windows.Forms.DataGridViewTextBoxColumn mQuantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mUnitName;
         private System.Windows.Forms.DataGridViewTextBoxColumn mProductName;
         private System.Windows.Forms.DataGridViewTextBoxColumn mCost1;
         private System.Windows.Forms.DataGridViewTextBoxColumn mCost2;
         private System.Windows.Forms.DataGridViewTextBoxColumn mCost3;
-        private System.Windows.Forms.Button ForPobutton;
-        private System.Windows.Forms.Button ForApprovalbutton;
     }
 }

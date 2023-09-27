@@ -412,6 +412,7 @@ namespace Qtech.AssetManagement.Purchasing.Quotation
             {
                 QuotationDetail item = new QuotationDetail();
                 item.mPurchaseRequestDetailId = prItem.mId;
+                item.mUnitName = prItem.mUnitName;
                 item.mProductName = prItem.mProductName;
                 item.mQuantity = prItem.mQuantity;
                 items.Add(item);

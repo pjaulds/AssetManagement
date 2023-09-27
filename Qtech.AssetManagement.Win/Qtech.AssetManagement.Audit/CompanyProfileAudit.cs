@@ -35,7 +35,7 @@ namespace Qtech.AssetManagement.Audit
                 audit = new BusinessEntities.Audit();
                 LoadCommonData(ref audit, companyprofile);
                 audit.mField = "report_logo";
-                audit.mOldValue = companyprofileOld.mReportLogo.ToString();
+                audit.mOldValue = companyprofileOld.mReportLogo == null ? "" : companyprofileOld.mReportLogo.ToString();
                 audit.mNewValue = companyprofile.mReportLogo.ToString();
                 audit_collection.Add(audit);
             }

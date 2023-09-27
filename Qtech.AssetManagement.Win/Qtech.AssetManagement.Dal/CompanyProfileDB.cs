@@ -153,7 +153,10 @@ namespace Qtech.AssetManagement.Dal
             companyprofile.mId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("id"));
             companyprofile.mName = myDataRecord.GetString(myDataRecord.GetOrdinal("name"));
             companyprofile.mAddress = myDataRecord.GetString(myDataRecord.GetOrdinal("address"));
-            companyprofile.mReportLogo = (byte[]) myDataRecord.GetValue(myDataRecord.GetOrdinal("report_logo"));
+
+            if (myDataRecord["report_logo"] != DBNull.Value)
+                companyprofile.mReportLogo = (byte[])myDataRecord.GetValue(myDataRecord.GetOrdinal("report_logo"));
+
             companyprofile.mWidth = myDataRecord.GetInt32(myDataRecord.GetOrdinal("width"));
             companyprofile.mHeight = myDataRecord.GetInt32(myDataRecord.GetOrdinal("height"));
             return companyprofile;

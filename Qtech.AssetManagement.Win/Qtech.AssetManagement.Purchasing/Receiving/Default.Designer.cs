@@ -89,12 +89,13 @@
             Infragistics.Win.Appearance appearance41 = new Infragistics.Win.Appearance();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Default));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.ultraGrid1 = new Infragistics.Win.UltraWinGrid.UltraGrid();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -116,11 +117,6 @@
             this.PreparedByutraCombo = new Infragistics.Win.UltraWinGrid.UltraCombo();
             this.ApprovedBytextBox = new System.Windows.Forms.TextBox();
             this.ItemsdataGridView = new System.Windows.Forms.DataGridView();
-            this.mDelete = new System.Windows.Forms.DataGridViewImageColumn();
-            this.mQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mTotalCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.SupplierFaxNotextBox = new System.Windows.Forms.TextBox();
             this.SupplierTelNotextBox = new System.Windows.Forms.TextBox();
@@ -150,6 +146,12 @@
             this.Cancelbutton = new System.Windows.Forms.Button();
             this.Savebutton = new System.Windows.Forms.Button();
             this.collapsePanelControl1 = new Qtech.AssetManagement.Controls.CollapsePanelControl();
+            this.mDelete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.mQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mUnitName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mTotalCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -201,7 +203,6 @@
             // 
             // ultraGrid1
             // 
-            this.ultraGrid1.DataMember = null;
             appearance1.BackColor = System.Drawing.SystemColors.Window;
             appearance1.BorderColor = System.Drawing.SystemColors.InactiveCaption;
             this.ultraGrid1.DisplayLayout.Appearance = appearance1;
@@ -721,6 +722,7 @@
             this.ItemsdataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.mDelete,
             this.mQuantity,
+            this.mUnitName,
             this.mProductName,
             this.mCost,
             this.mTotalCost});
@@ -730,69 +732,23 @@
             this.ItemsdataGridView.Location = new System.Drawing.Point(15, 163);
             this.ItemsdataGridView.Name = "ItemsdataGridView";
             this.ItemsdataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(226)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ItemsdataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.ItemsdataGridView.RowHeadersVisible = false;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(226)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ItemsdataGridView.RowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ItemsdataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.ItemsdataGridView.RowHeadersVisible = false;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(226)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ItemsdataGridView.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.ItemsdataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ItemsdataGridView.Size = new System.Drawing.Size(811, 296);
             this.ItemsdataGridView.TabIndex = 181;
             this.ItemsdataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ItemsdataGridView_CellClick);
             this.ItemsdataGridView.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.ItemsdataGridView_CellValidating);
-            // 
-            // mDelete
-            // 
-            this.mDelete.HeaderText = "";
-            this.mDelete.Image = ((System.Drawing.Image)(resources.GetObject("mDelete.Image")));
-            this.mDelete.Name = "mDelete";
-            this.mDelete.Width = 25;
-            // 
-            // mQuantity
-            // 
-            this.mQuantity.DataPropertyName = "mQuantity";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.Format = "N2";
-            this.mQuantity.DefaultCellStyle = dataGridViewCellStyle3;
-            this.mQuantity.HeaderText = "Quantity";
-            this.mQuantity.Name = "mQuantity";
-            // 
-            // mProductName
-            // 
-            this.mProductName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.mProductName.DataPropertyName = "mProductName";
-            this.mProductName.HeaderText = "Product";
-            this.mProductName.Name = "mProductName";
-            this.mProductName.ReadOnly = true;
-            // 
-            // mCost
-            // 
-            this.mCost.DataPropertyName = "mCost";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle4.Format = "N4";
-            this.mCost.DefaultCellStyle = dataGridViewCellStyle4;
-            this.mCost.HeaderText = "Cost";
-            this.mCost.Name = "mCost";
-            this.mCost.ReadOnly = true;
-            this.mCost.Width = 125;
-            // 
-            // mTotalCost
-            // 
-            this.mTotalCost.DataPropertyName = "mTotalCost";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle5.Format = "N4";
-            this.mTotalCost.DefaultCellStyle = dataGridViewCellStyle5;
-            this.mTotalCost.HeaderText = "Total Cost";
-            this.mTotalCost.Name = "mTotalCost";
-            this.mTotalCost.ReadOnly = true;
-            this.mTotalCost.Width = 125;
             // 
             // panel1
             // 
@@ -1126,6 +1082,61 @@
             this.collapsePanelControl1.TabIndex = 178;
             this.collapsePanelControl1._HidePanel += new System.EventHandler(this.collapsePanelControl1__HidePanel);
             // 
+            // mDelete
+            // 
+            this.mDelete.HeaderText = "";
+            this.mDelete.Image = ((System.Drawing.Image)(resources.GetObject("mDelete.Image")));
+            this.mDelete.Name = "mDelete";
+            this.mDelete.Width = 25;
+            // 
+            // mQuantity
+            // 
+            this.mQuantity.DataPropertyName = "mQuantity";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "N2";
+            this.mQuantity.DefaultCellStyle = dataGridViewCellStyle3;
+            this.mQuantity.HeaderText = "Quantity";
+            this.mQuantity.Name = "mQuantity";
+            // 
+            // mUnitName
+            // 
+            this.mUnitName.DataPropertyName = "mUnitName";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.mUnitName.DefaultCellStyle = dataGridViewCellStyle4;
+            this.mUnitName.HeaderText = "Unit";
+            this.mUnitName.Name = "mUnitName";
+            this.mUnitName.ReadOnly = true;
+            // 
+            // mProductName
+            // 
+            this.mProductName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.mProductName.DataPropertyName = "mProductName";
+            this.mProductName.HeaderText = "Product";
+            this.mProductName.Name = "mProductName";
+            this.mProductName.ReadOnly = true;
+            // 
+            // mCost
+            // 
+            this.mCost.DataPropertyName = "mCost";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "N4";
+            this.mCost.DefaultCellStyle = dataGridViewCellStyle5;
+            this.mCost.HeaderText = "Cost";
+            this.mCost.Name = "mCost";
+            this.mCost.ReadOnly = true;
+            this.mCost.Width = 125;
+            // 
+            // mTotalCost
+            // 
+            this.mTotalCost.DataPropertyName = "mTotalCost";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.Format = "N4";
+            this.mTotalCost.DefaultCellStyle = dataGridViewCellStyle6;
+            this.mTotalCost.HeaderText = "Total Cost";
+            this.mTotalCost.Name = "mTotalCost";
+            this.mTotalCost.ReadOnly = true;
+            this.mTotalCost.Width = 125;
+            // 
             // Default
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1220,6 +1231,7 @@
         private Infragistics.Win.UltraWinGrid.UltraCombo CheckedByultraCombo;
         private System.Windows.Forms.DataGridViewImageColumn mDelete;
         private System.Windows.Forms.DataGridViewTextBoxColumn mQuantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mUnitName;
         private System.Windows.Forms.DataGridViewTextBoxColumn mProductName;
         private System.Windows.Forms.DataGridViewTextBoxColumn mCost;
         private System.Windows.Forms.DataGridViewTextBoxColumn mTotalCost;

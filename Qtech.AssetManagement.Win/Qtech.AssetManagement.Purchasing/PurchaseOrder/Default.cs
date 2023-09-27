@@ -193,6 +193,15 @@ namespace Qtech.AssetManagement.Purchasing.PurchaseOrder
 
         public int SaveRecords()
         {
+            if (int.Parse(Idlabel.Text) != 0)
+            {
+                if (!allow_update)
+                {
+                    MessageUtil.NotAllowedUpdateAccess();
+                    return 0;
+                }
+            }
+
             BrokenRulesCollection rules = new BrokenRulesCollection();
 
             //PurchaseOrderCriteria criteria = new PurchaseOrderCriteria();
@@ -393,6 +402,7 @@ namespace Qtech.AssetManagement.Purchasing.PurchaseOrder
 
                 PurchaseOrderDetail item = new PurchaseOrderDetail();
                 item.mQuotationDetailId = qItem.mId;
+                item.mUnitName = qItem.mUnitName;
                 item.mProductName = qItem.mProductName;
                 item.mQuantity = quantity; //balance
                 item.mCost = qItem.mCost;

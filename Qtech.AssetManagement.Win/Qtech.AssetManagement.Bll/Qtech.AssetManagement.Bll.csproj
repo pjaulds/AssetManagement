@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccumulatedDepreciationAccountManager.cs" />
+    <Compile Include="UnitManager.cs" />
     <Compile Include="PurchaseOrderDetailManager.cs" />
     <Compile Include="PurchaseOrderManager.cs" />
     <Compile Include="PurchaseRequestDetailManager.cs" />

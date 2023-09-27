@@ -26,6 +26,7 @@ namespace Qtech.AssetManagement.BusinessEntities
         amQt_PurchaseOrder = 19,
         amQt_PurchaseOrderDetail = 20,
         amQt_Receiving = 19,
-        amQt_ReceivingDetail = 20
+        amQt_ReceivingDetail = 20,
+        amQt_Unit = 21
     }
 }

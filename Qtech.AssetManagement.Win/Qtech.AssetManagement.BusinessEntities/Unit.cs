@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Qtech.AssetManagement.BusinessEntities
 {
-    public class Product : BusinessBase
+    public class Unit : BusinessBase
     {
         #region Public Properties
 
@@ -14,18 +14,14 @@ namespace Qtech.AssetManagement.BusinessEntities
         [Required]
         [StringLength(50, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 3)]
         [Display(Name = "Code")]
-        [NotNullOrEmpty(Message = "Please enter valid product code.")]
+        [NotNullOrEmpty(Message = "Please enter valid unit code.")]
         public String mCode { get; set; }
 
         [Required]
         [StringLength(50, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 3)]
         [Display(Name = "Name")]
-        [NotNullOrEmpty(Message = "Please enter valid product name/title.")]
+        [NotNullOrEmpty(Message = "Please enter valid unit name/title.")]
         public String mName { get; set; }
-
-        [Display(Name = "Unit")]
-        public int mUnitId { get; set; }
-        public string mUnitName { get; set; }
 
         #endregion
     }

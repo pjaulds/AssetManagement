@@ -13,9 +13,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Qtech.AssetManagement.Maintenance.Product
+namespace Qtech.AssetManagement.Maintenance.Unit
 {
-    public partial class Default : Form, ICRUD, IComboSelection
+    public partial class Default : Form, ICRUD
     {
         public Default()
         {
@@ -38,29 +38,29 @@ namespace Qtech.AssetManagement.Maintenance.Product
                 if (ultraGrid1.ActiveRow.Index == -1)
                     return 0;
                 else
-                    return ((BusinessEntities.Product)ultraGrid1.ActiveRow.ListObject).mId;
+                    return ((BusinessEntities.Unit)ultraGrid1.ActiveRow.ListObject).mId;
             }
         }
         #endregion
 
         #region Private Methods
-        private void LoadProduct()
+        private void LoadUnit()
         {
-            ultraGrid1.SetDataBinding(ProductManager.GetList(), null, true);
+            ultraGrid1.SetDataBinding(UnitManager.GetList(), null, true);
             ultraGrid1.Refresh();
         }
 
-        private int SaveProduct()
+        private int SaveUnit()
         {
-            BusinessEntities.Product item = new BusinessEntities.Product();
-            LoadProductFromFormControls(item);
+            BusinessEntities.Unit item = new BusinessEntities.Unit();
+            LoadUnitFromFormControls(item);
 
             //validate if all the rules of Status has been meet
             if (item.Validate())
             {
-                Int32 id = ProductManager.Save(item);
+                Int32 id = UnitManager.Save(item);
                 EndEditing();
-                LoadProduct();
+                LoadUnit();
 
                 return id;
 
@@ -74,22 +74,19 @@ namespace Qtech.AssetManagement.Maintenance.Product
             }
         }
 
-        private void LoadProductFromFormControls(BusinessEntities.Product myUser)
+        private void LoadUnitFromFormControls(BusinessEntities.Unit myUser)
         {
             myUser.mId = int.Parse(Idlabel.Text);
             myUser.mCode = CodetextBox.Text;
             myUser.mName = NametextBox.Text;
-            myUser.mUnitId = ControlUtil.UltraComboReturnValue(UnitutraCombo);
-            myUser.mUnitName = UnitutraCombo.Text;
             myUser.mUserId = SessionUtil.mUser.mId;
         }
 
-        private void LoadFormControlsFromUser(BusinessEntities.Product myProduct)
+        private void LoadFormControlsFromUser(BusinessEntities.Unit myUnit)
         {
-            Idlabel.Text = myProduct.mId.ToString();
-            CodetextBox.Text = myProduct.mCode;
-            NametextBox.Text = myProduct.mName;
-            UnitutraCombo.Value = myProduct.mUnitId;
+            Idlabel.Text = myUnit.mId.ToString();
+            CodetextBox.Text = myUnit.mCode;
+            NametextBox.Text = myUnit.mName;
         }
 
         private void EndEditing()
@@ -119,27 +116,18 @@ namespace Qtech.AssetManagement.Maintenance.Product
 
         public int SaveRecords()
         {
-            if (int.Parse(Idlabel.Text) != 0)
-            {
-                if (!allow_update)
-                {
-                    MessageUtil.NotAllowedUpdateAccess();
-                    return 0;
-                }
-            }
-
             BrokenRulesCollection rules = new BrokenRulesCollection();
 
-            ProductCriteria criteria = new ProductCriteria();
+            UnitCriteria criteria = new UnitCriteria();
             criteria.mId = int.Parse(Idlabel.Text);
             criteria.mName = NametextBox.Text;
-            if (ProductManager.SelectCountForGetList(criteria) > 0)
+            if (UnitManager.SelectCountForGetList(criteria) > 0)
                 rules.Add(new BrokenRule("", "Name already exists."));
 
-            criteria = new ProductCriteria();
+            criteria = new UnitCriteria();
             criteria.mId = int.Parse(Idlabel.Text);
             criteria.mCode = CodetextBox.Text;
-            if (ProductManager.SelectCountForGetList(criteria) > 0)
+            if (UnitManager.SelectCountForGetList(criteria) > 0)
                 rules.Add(new BrokenRule("", "Code already exists."));
 
             if (rules.Count > 0)
@@ -150,7 +138,7 @@ namespace Qtech.AssetManagement.Maintenance.Product
 
                 return 0;
             }
-            return SaveProduct();
+            return SaveUnit();
         }
 
         public void CancelTransaction()
@@ -169,12 +157,12 @@ namespace Qtech.AssetManagement.Maintenance.Product
 
             if (MessageUtil.AskDelete())
             {
-                BusinessEntities.Product item = ProductManager.GetItem(_mId);
+                BusinessEntities.Unit item = UnitManager.GetItem(_mId);
                 item.mUserId = SessionUtil.mUser.mId;
 
-                ProductManager.Delete(item);
+                UnitManager.Delete(item);
 
-                LoadProduct();
+                LoadUnit();
 
             }
         }
@@ -200,8 +188,14 @@ namespace Qtech.AssetManagement.Maintenance.Product
         {
             if (e.Row.Index == -1)
                 return;
-            
-            BusinessEntities.Product item = ProductManager.GetItem(_mId);
+
+            if (!allow_update)
+            {
+                MessageUtil.NotAllowedUpdateAccess();
+                return;
+            }
+
+            BusinessEntities.Unit item = UnitManager.GetItem(_mId);
             LoadFormControlsFromUser(item);
 
             ControlUtil.ExpandPanel(splitContainer1);
@@ -236,18 +230,18 @@ namespace Qtech.AssetManagement.Maintenance.Product
         {
             SessionUtil.UserValidate(ref allow_select, ref allow_insert,
                 ref allow_update, ref allow_delete, ref allow_print,
-                (int)Modules.Product);
+                (int)Modules.Unit);
 
             EndEditing();
 
             ThemeUtil.Controls(splitContainer1.Panel2);
             ControlUtil.TextBoxEnterLeaveEventHandler(splitContainer1.Panel2);
-            LoadProduct();
+            LoadUnit();
         }
 
         private void Savebutton_Click(object sender, EventArgs e)
         {
-            SaveProduct();
+            SaveUnit();
         }
 
         private void Cancelbutton_Click(object sender, EventArgs e)
@@ -255,9 +249,5 @@ namespace Qtech.AssetManagement.Maintenance.Product
             CancelTransaction();
         }
 
-        public void RefreshAllSelection()
-        {
-            UltraComboUtil.Unit(UnitutraCombo);
-        }
     }
 }

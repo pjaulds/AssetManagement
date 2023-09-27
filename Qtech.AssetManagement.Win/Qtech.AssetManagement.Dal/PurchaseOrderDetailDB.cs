@@ -156,6 +156,7 @@ namespace Qtech.AssetManagement.Dal
             purchaseorderdetail.mPurchaseOrderId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("purchase_order_id"));
             purchaseorderdetail.mQuotationDetailId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("quotation_detail_id"));
             purchaseorderdetail.mQuantity = myDataRecord.GetDecimal(myDataRecord.GetOrdinal("quantity"));
+            purchaseorderdetail.mUnitName = myDataRecord.GetString(myDataRecord.GetOrdinal("unit_name"));
             purchaseorderdetail.mProductName = myDataRecord.GetString(myDataRecord.GetOrdinal("product_name"));
             purchaseorderdetail.mCost = myDataRecord.GetDecimal(myDataRecord.GetOrdinal("cost"));
             purchaseorderdetail.mTotalCost = myDataRecord.GetDecimal(myDataRecord.GetOrdinal("total_cost"));

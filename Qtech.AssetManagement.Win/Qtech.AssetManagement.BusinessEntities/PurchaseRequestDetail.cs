@@ -28,6 +28,9 @@ namespace Qtech.AssetManagement.BusinessEntities
         [Display(Name = "Cost")]
         public Decimal mCost { get; set; }
 
+        [Display(Name = "Unit")]
+        public string mUnitName { get; set; }
+
         #endregion
     }
 }

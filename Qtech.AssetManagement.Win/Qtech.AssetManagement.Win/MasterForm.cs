@@ -235,6 +235,28 @@ namespace Qtech.AssetManagement.Win
                     }
                     else receivingForm.Select();
                     break;
+                case "Unit":
+                    if (!AllowToAccess((Int32)Modules.Unit)) return;
+                    Maintenance.Unit.Default unitForm = null;
+                    if ((unitForm = (Maintenance.Unit.Default)IsFormAlreadyOpen(typeof(Maintenance.Unit.Default))) == null)
+                    {
+                        Maintenance.Unit.Default unitFormChild = new Maintenance.Unit.Default();
+                        unitFormChild.MdiParent = this;
+                        unitFormChild.Show();
+                    }
+                    else unitForm.Select();
+                    break;
+                case "CompanyProfile":
+                    if (!AllowToAccess((Int32)Modules.CompanyProfile)) return;
+                    Maintenance.CompanyProfile.Default companyProfileForm = null;
+                    if ((companyProfileForm = (Maintenance.CompanyProfile.Default)IsFormAlreadyOpen(typeof(Maintenance.CompanyProfile.Default))) == null)
+                    {
+                        Maintenance.CompanyProfile.Default companyProfileFormChild = new Maintenance.CompanyProfile.Default();
+                        companyProfileFormChild.MdiParent = this;
+                        companyProfileFormChild.Show();
+                    }
+                    else companyProfileForm.Select();
+                    break;
             }
         }
 

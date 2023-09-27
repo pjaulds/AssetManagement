@@ -19,6 +19,7 @@
         PurchaseRequest = 15,
         Quotation = 16,
         PurchaseOrder = 17,
-        Receiving = 18
+        Receiving = 18,
+        Unit = 19
     }
 }

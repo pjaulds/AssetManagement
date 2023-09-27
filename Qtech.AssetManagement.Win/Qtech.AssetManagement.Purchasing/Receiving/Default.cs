@@ -251,13 +251,7 @@ namespace Qtech.AssetManagement.Purchasing.Receiving
         {
             if (e.Row.Index == -1)
                 return;
-
-            if (!allow_update)
-            {
-                MessageUtil.NotAllowedUpdateAccess();
-                return;
-            }
-
+            
             EndEditing();
 
             BusinessEntities.Receiving item = ReceivingManager.GetItem(_mId);
@@ -380,6 +374,7 @@ namespace Qtech.AssetManagement.Purchasing.Receiving
 
                 ReceivingDetail item = new ReceivingDetail();
                 item.mPurchaseOrderDetailId = poItem.mId;
+                item.mUnitName = poItem.mUnitName;
                 item.mProductName = poItem.mProductName;
                 item.mQuantity = quantity; //balance
                 item.mCost = poItem.mCost;
