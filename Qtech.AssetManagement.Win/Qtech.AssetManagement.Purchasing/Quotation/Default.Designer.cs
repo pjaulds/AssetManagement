@@ -56,6 +56,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Default));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             Infragistics.Win.Appearance appearance16 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand2 = new Infragistics.Win.UltraWinGrid.UltraGridBand("Band 0", -1);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn1 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
@@ -71,12 +77,6 @@
             Infragistics.Win.Appearance appearance25 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance26 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance27 = new Infragistics.Win.Appearance();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Default));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.ultraGrid1 = new Infragistics.Win.UltraWinGrid.UltraGrid();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -91,6 +91,13 @@
             this.label17 = new System.Windows.Forms.Label();
             this.expandPanelControl1 = new Qtech.AssetManagement.Controls.ExpandPanelControl();
             this.ItemsdataGridView = new System.Windows.Forms.DataGridView();
+            this.mDelete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.mQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mUnitName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mCost1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mCost2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mCost3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RemarksultraTextEditor = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.panel1 = new System.Windows.Forms.Panel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
@@ -125,13 +132,6 @@
             this.Cancelbutton = new System.Windows.Forms.Button();
             this.Savebutton = new System.Windows.Forms.Button();
             this.collapsePanelControl1 = new Qtech.AssetManagement.Controls.CollapsePanelControl();
-            this.mDelete = new System.Windows.Forms.DataGridViewImageColumn();
-            this.mQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mUnitName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mCost1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mCost2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mCost3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -494,6 +494,70 @@
             this.ItemsdataGridView.Size = new System.Drawing.Size(707, 263);
             this.ItemsdataGridView.TabIndex = 181;
             this.ItemsdataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ItemsdataGridView_CellClick);
+            // 
+            // mDelete
+            // 
+            this.mDelete.HeaderText = "";
+            this.mDelete.Image = ((System.Drawing.Image)(resources.GetObject("mDelete.Image")));
+            this.mDelete.Name = "mDelete";
+            this.mDelete.Width = 25;
+            // 
+            // mQuantity
+            // 
+            this.mQuantity.DataPropertyName = "mQuantity";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "N2";
+            this.mQuantity.DefaultCellStyle = dataGridViewCellStyle3;
+            this.mQuantity.HeaderText = "Quantity";
+            this.mQuantity.Name = "mQuantity";
+            this.mQuantity.ReadOnly = true;
+            // 
+            // mUnitName
+            // 
+            this.mUnitName.DataPropertyName = "mUnitName";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.mUnitName.DefaultCellStyle = dataGridViewCellStyle4;
+            this.mUnitName.HeaderText = "Unit";
+            this.mUnitName.Name = "mUnitName";
+            this.mUnitName.ReadOnly = true;
+            // 
+            // mProductName
+            // 
+            this.mProductName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.mProductName.DataPropertyName = "mProductName";
+            this.mProductName.HeaderText = "Product";
+            this.mProductName.Name = "mProductName";
+            this.mProductName.ReadOnly = true;
+            // 
+            // mCost1
+            // 
+            this.mCost1.DataPropertyName = "mCost1";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "N4";
+            this.mCost1.DefaultCellStyle = dataGridViewCellStyle5;
+            this.mCost1.HeaderText = "Cost 1";
+            this.mCost1.Name = "mCost1";
+            this.mCost1.Width = 125;
+            // 
+            // mCost2
+            // 
+            this.mCost2.DataPropertyName = "mCost2";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.Format = "N4";
+            this.mCost2.DefaultCellStyle = dataGridViewCellStyle6;
+            this.mCost2.HeaderText = "Cost 2";
+            this.mCost2.Name = "mCost2";
+            this.mCost2.Width = 125;
+            // 
+            // mCost3
+            // 
+            this.mCost3.DataPropertyName = "mCost3";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.Format = "N4";
+            this.mCost3.DefaultCellStyle = dataGridViewCellStyle7;
+            this.mCost3.HeaderText = "Cost 3";
+            this.mCost3.Name = "mCost3";
+            this.mCost3.Width = 125;
             // 
             // RemarksultraTextEditor
             // 
@@ -953,70 +1017,6 @@
             this.collapsePanelControl1.Size = new System.Drawing.Size(15, 482);
             this.collapsePanelControl1.TabIndex = 178;
             this.collapsePanelControl1._HidePanel += new System.EventHandler(this.collapsePanelControl1__HidePanel);
-            // 
-            // mDelete
-            // 
-            this.mDelete.HeaderText = "";
-            this.mDelete.Image = ((System.Drawing.Image)(resources.GetObject("mDelete.Image")));
-            this.mDelete.Name = "mDelete";
-            this.mDelete.Width = 25;
-            // 
-            // mQuantity
-            // 
-            this.mQuantity.DataPropertyName = "mQuantity";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.Format = "N2";
-            this.mQuantity.DefaultCellStyle = dataGridViewCellStyle3;
-            this.mQuantity.HeaderText = "Quantity";
-            this.mQuantity.Name = "mQuantity";
-            this.mQuantity.ReadOnly = true;
-            // 
-            // mUnitName
-            // 
-            this.mUnitName.DataPropertyName = "mUnitName";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.mUnitName.DefaultCellStyle = dataGridViewCellStyle4;
-            this.mUnitName.HeaderText = "Unit";
-            this.mUnitName.Name = "mUnitName";
-            this.mUnitName.ReadOnly = true;
-            // 
-            // mProductName
-            // 
-            this.mProductName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.mProductName.DataPropertyName = "mProductName";
-            this.mProductName.HeaderText = "Product";
-            this.mProductName.Name = "mProductName";
-            this.mProductName.ReadOnly = true;
-            // 
-            // mCost1
-            // 
-            this.mCost1.DataPropertyName = "mCost1";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle5.Format = "N4";
-            this.mCost1.DefaultCellStyle = dataGridViewCellStyle5;
-            this.mCost1.HeaderText = "Cost 1";
-            this.mCost1.Name = "mCost1";
-            this.mCost1.Width = 125;
-            // 
-            // mCost2
-            // 
-            this.mCost2.DataPropertyName = "mCost2";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle6.Format = "N4";
-            this.mCost2.DefaultCellStyle = dataGridViewCellStyle6;
-            this.mCost2.HeaderText = "Cost 2";
-            this.mCost2.Name = "mCost2";
-            this.mCost2.Width = 125;
-            // 
-            // mCost3
-            // 
-            this.mCost3.DataPropertyName = "mCost3";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle7.Format = "N4";
-            this.mCost3.DefaultCellStyle = dataGridViewCellStyle7;
-            this.mCost3.HeaderText = "Cost 3";
-            this.mCost3.Name = "mCost3";
-            this.mCost3.Width = 125;
             // 
             // Default
             // 

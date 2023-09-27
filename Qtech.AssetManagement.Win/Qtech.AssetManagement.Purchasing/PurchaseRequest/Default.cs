@@ -267,6 +267,10 @@ namespace Qtech.AssetManagement.Purchasing.PurchaseRequest
                 MessageUtil.NotAllowedPrintAccess();
                 return;
             }
+
+            Viewer viewer = new Viewer();
+            viewer.mId = _mId;
+            viewer.ShowDialog();
         }
 
         #endregion

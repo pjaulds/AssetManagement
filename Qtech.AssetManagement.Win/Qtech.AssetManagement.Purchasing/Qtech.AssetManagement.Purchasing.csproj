@@ -55,9 +55,12 @@
       <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2012.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.v12.1.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -67,6 +70,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Fields.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Fields.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -77,6 +85,12 @@
     </Compile>
     <Compile Include="PurchaseOrder\Default.Designer.cs">
       <DependentUpon>Default.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseRequest\Viewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PurchaseRequest\Viewer.Designer.cs">
+      <DependentUpon>Viewer.cs</DependentUpon>
     </Compile>
     <Compile Include="Quotation\Default.cs">
       <SubType>Form</SubType>
@@ -134,6 +148,10 @@
     <EmbeddedResource Include="PurchaseOrder\Default.resx">
       <DependentUpon>Default.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PurchaseRequest\PurchaseRequestRpt.rdlc" />
+    <EmbeddedResource Include="PurchaseRequest\Viewer.resx">
+      <DependentUpon>Viewer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Quotation\Default.resx">
       <DependentUpon>Default.cs</DependentUpon>
     </EmbeddedResource>
@@ -143,6 +161,19 @@
     <EmbeddedResource Include="Receiving\Default.resx">
       <DependentUpon>Default.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Fields.xsc">
+      <DependentUpon>Fields.xsd</DependentUpon>
+    </None>
+    <None Include="Fields.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Fields.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Fields.xss">
+      <DependentUpon>Fields.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
