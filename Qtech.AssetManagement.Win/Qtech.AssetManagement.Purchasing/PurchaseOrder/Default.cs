@@ -68,7 +68,7 @@ namespace Qtech.AssetManagement.Purchasing.PurchaseOrder
 
             criteria = new PurchaseOrderCriteria();
             criteria.mForReceiving = true;
-            ForReceivingbutton.Text = "For Receiving: " + PurchaseOrderManager.SelectCountForGetList(criteria).ToString();
+            ForApvbutton.Text = "For Receiving: " + PurchaseOrderManager.SelectCountForGetList(criteria).ToString();
 
             criteria = new PurchaseOrderCriteria();
             criteria.mForApproval = true;
@@ -376,6 +376,12 @@ namespace Qtech.AssetManagement.Purchasing.PurchaseOrder
         {
             Quotation.Default prForm = (Quotation.Default)sender;
             if (prForm.mQuotation == null) return;
+
+            if (prForm.mQuotation.mApprovedById == 0)
+            {
+                MessageBox.Show("Selected record is not yet approved.", "Quotation", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
 
             BusinessEntities.Quotation q = prForm.mQuotation;
 

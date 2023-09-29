@@ -105,6 +105,18 @@
       <DependentUpon>Default.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quotation\Viewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quotation\Viewer.Designer.cs">
+      <DependentUpon>Viewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseVoucer\Default.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PurchaseVoucer\Default.Designer.cs">
+      <DependentUpon>Default.cs</DependentUpon>
+    </Compile>
     <Compile Include="Receiving\Default.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +168,13 @@
       <DependentUpon>Default.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PurchaseRequest\Default.resx">
+      <DependentUpon>Default.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quotation\QuotationRpt.rdlc" />
+    <EmbeddedResource Include="Quotation\Viewer.resx">
+      <DependentUpon>Viewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PurchaseVoucer\Default.resx">
       <DependentUpon>Default.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Receiving\Default.resx">

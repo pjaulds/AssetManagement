@@ -45,6 +45,7 @@
             this.productToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.supplierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.unitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.companyProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.setupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fixedAssetSettingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
@@ -54,6 +55,7 @@
             this.depreciationMethodToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.averagingMethodToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chartOfAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modeOfPaymentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fixedAssetManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fixedAssetProcurementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.assetIndentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,7 +66,7 @@
             this.functionalLocationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ultraTabbedMdiManager1 = new Infragistics.Win.UltraWinTabbedMdi.UltraTabbedMdiManager(this.components);
             this.BackgroundpictureBox = new System.Windows.Forms.PictureBox();
-            this.companyProfileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.purchaseVoucherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ultraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BackgroundpictureBox)).BeginInit();
@@ -194,6 +196,14 @@
             this.unitToolStripMenuItem.Text = "5. Unit";
             this.unitToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
+            // companyProfileToolStripMenuItem
+            // 
+            this.companyProfileToolStripMenuItem.Name = "companyProfileToolStripMenuItem";
+            this.companyProfileToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.companyProfileToolStripMenuItem.Tag = "CompanyProfile";
+            this.companyProfileToolStripMenuItem.Text = "6. Company Profile";
+            this.companyProfileToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
+            // 
             // setupToolStripMenuItem
             // 
             this.setupToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -204,7 +214,8 @@
             this.depreciationExpenseAccountToolStripMenuItem,
             this.depreciationMethodToolStripMenuItem,
             this.averagingMethodToolStripMenuItem,
-            this.chartOfAccountToolStripMenuItem});
+            this.chartOfAccountToolStripMenuItem,
+            this.modeOfPaymentToolStripMenuItem});
             this.setupToolStripMenuItem.Name = "setupToolStripMenuItem";
             this.setupToolStripMenuItem.Size = new System.Drawing.Size(49, 20);
             this.setupToolStripMenuItem.Text = "Setup";
@@ -270,6 +281,14 @@
             this.chartOfAccountToolStripMenuItem.Text = "7. Chart Of Account";
             this.chartOfAccountToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
+            // modeOfPaymentToolStripMenuItem
+            // 
+            this.modeOfPaymentToolStripMenuItem.Name = "modeOfPaymentToolStripMenuItem";
+            this.modeOfPaymentToolStripMenuItem.Size = new System.Drawing.Size(275, 22);
+            this.modeOfPaymentToolStripMenuItem.Tag = "PaymentMode";
+            this.modeOfPaymentToolStripMenuItem.Text = "8. Mode Of Payment";
+            this.modeOfPaymentToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
+            // 
             // fixedAssetManagementToolStripMenuItem
             // 
             this.fixedAssetManagementToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -286,7 +305,8 @@
             this.assetIndentToolStripMenuItem,
             this.quotationToolStripMenuItem,
             this.purchaseOrderToolStripMenuItem,
-            this.goodReceivedNoteReceivingToolStripMenuItem});
+            this.goodReceivedNoteReceivingToolStripMenuItem,
+            this.purchaseVoucherToolStripMenuItem});
             this.fixedAssetProcurementToolStripMenuItem.Name = "fixedAssetProcurementToolStripMenuItem";
             this.fixedAssetProcurementToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
             this.fixedAssetProcurementToolStripMenuItem.Text = "Fixed Asset Procurement";
@@ -372,13 +392,13 @@
             this.BackgroundpictureBox.TabStop = false;
             this.BackgroundpictureBox.Visible = false;
             // 
-            // companyProfileToolStripMenuItem
+            // purchaseVoucherToolStripMenuItem
             // 
-            this.companyProfileToolStripMenuItem.Name = "companyProfileToolStripMenuItem";
-            this.companyProfileToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
-            this.companyProfileToolStripMenuItem.Tag = "CompanyProfile";
-            this.companyProfileToolStripMenuItem.Text = "6. Company Profile";
-            this.companyProfileToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
+            this.purchaseVoucherToolStripMenuItem.Name = "purchaseVoucherToolStripMenuItem";
+            this.purchaseVoucherToolStripMenuItem.Size = new System.Drawing.Size(256, 22);
+            this.purchaseVoucherToolStripMenuItem.Tag = "PurchaseVoucher";
+            this.purchaseVoucherToolStripMenuItem.Text = "5. Purchase Voucher";
+            this.purchaseVoucherToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // MasterForm
             // 
@@ -439,6 +459,8 @@
         private System.Windows.Forms.ToolStripMenuItem goodReceivedNoteReceivingToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem unitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem companyProfileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modeOfPaymentToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem purchaseVoucherToolStripMenuItem;
     }
 }
 

@@ -101,5 +101,14 @@ namespace Qtech.AssetManagement.Utilities
             myUltraCombo.SetDataBinding(UnitManager.GetList(), null, true);
             myUltraCombo.Refresh();
         }
+
+        public static void PaymentMode(UltraCombo myUltraCombo)
+        {
+            myUltraCombo.ValueMember = "mId";
+            myUltraCombo.DisplayMember = "mName";
+
+            myUltraCombo.SetDataBinding(PaymentModeManager.GetList(), null, true);
+            myUltraCombo.Refresh();
+        }
     }
 }

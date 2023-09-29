@@ -32,6 +32,18 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="QuotationFields" msprop:Generator_TableClassName="QuotationFieldsDataTable" msprop:Generator_TableVarName="tableQuotationFields" msprop:Generator_TablePropName="QuotationFields" msprop:Generator_RowDeletingName="QuotationFieldsRowDeleting" msprop:Generator_RowChangingName="QuotationFieldsRowChanging" msprop:Generator_RowEvHandlerName="QuotationFieldsRowChangeEventHandler" msprop:Generator_RowDeletedName="QuotationFieldsRowDeleted" msprop:Generator_UserTableName="QuotationFields" msprop:Generator_RowChangedName="QuotationFieldsRowChanged" msprop:Generator_RowEvArgName="QuotationFieldsRowChangeEvent" msprop:Generator_RowClassName="QuotationFieldsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="mQuantity" msprop:Generator_ColumnVarNameInTable="columnmQuantity" msprop:Generator_ColumnPropNameInRow="mQuantity" msprop:Generator_ColumnPropNameInTable="mQuantityColumn" msprop:Generator_UserColumnName="mQuantity" type="xs:decimal" minOccurs="0" />
+              <xs:element name="mUnitName" msprop:Generator_ColumnVarNameInTable="columnmUnitName" msprop:Generator_ColumnPropNameInRow="mUnitName" msprop:Generator_ColumnPropNameInTable="mUnitNameColumn" msprop:Generator_UserColumnName="mUnitName" type="xs:string" minOccurs="0" />
+              <xs:element name="mProductName" msprop:Generator_ColumnVarNameInTable="columnmProductName" msprop:Generator_ColumnPropNameInRow="mProductName" msprop:Generator_ColumnPropNameInTable="mProductNameColumn" msprop:Generator_UserColumnName="mProductName" type="xs:string" minOccurs="0" />
+              <xs:element name="mCost1" msprop:Generator_ColumnVarNameInTable="columnmCost1" msprop:Generator_ColumnPropNameInRow="mCost1" msprop:Generator_ColumnPropNameInTable="mCost1Column" msprop:Generator_UserColumnName="mCost1" type="xs:decimal" minOccurs="0" />
+              <xs:element name="mCost2" msprop:Generator_ColumnVarNameInTable="columnmCost2" msprop:Generator_ColumnPropNameInRow="mCost2" msprop:Generator_ColumnPropNameInTable="mCost2Column" msprop:Generator_UserColumnName="mCost2" type="xs:decimal" minOccurs="0" />
+              <xs:element name="mCost3" msprop:Generator_ColumnVarNameInTable="columnmCost3" msprop:Generator_ColumnPropNameInRow="mCost3" msprop:Generator_ColumnPropNameInTable="mCost3Column" msprop:Generator_UserColumnName="mCost3" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
   </xs:element>

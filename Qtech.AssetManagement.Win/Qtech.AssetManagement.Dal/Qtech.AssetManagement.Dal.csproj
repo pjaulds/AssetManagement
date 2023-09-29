@@ -43,6 +43,8 @@
   <ItemGroup>
     <Compile Include="AccumulatedDepreciationAccountDB.cs" />
     <Compile Include="AppConfiguration.cs" />
+    <Compile Include="PaymentModeDB.cs" />
+    <Compile Include="PurchaseVoucherDB.cs" />
     <Compile Include="UnitDB.cs" />
     <Compile Include="PurchaseOrderDB.cs" />
     <Compile Include="PurchaseOrderDetailDB.cs" />

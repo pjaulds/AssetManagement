@@ -54,6 +54,8 @@ namespace Qtech.AssetManagement.Dal
 
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@quotation_id", receivingCriteria.mQuotationId);
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@purchase_order_id", receivingCriteria.mPurchaseOrderId);
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@for_approval", receivingCriteria.mForApproval);
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@for_purchase_voucher", receivingCriteria.mForPurchaseVoucher);
 
                 myCommand.Connection.Open();
                 using (DbDataReader myReader = myCommand.ExecuteReader())
@@ -97,6 +99,8 @@ namespace Qtech.AssetManagement.Dal
                 
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@quotation_id", receivingCriteria.mQuotationId);
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@purchase_order_id", receivingCriteria.mPurchaseOrderId);
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@for_approval", receivingCriteria.mForApproval);
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@for_purchase_voucher", receivingCriteria.mForPurchaseVoucher);
 
                 myCommand.Connection.Open();
                 myCommand.ExecuteNonQuery();
@@ -121,6 +125,9 @@ namespace Qtech.AssetManagement.Dal
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@prepared_by_id", myReceiving.mPreparedById);
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@checked_by_id", myReceiving.mCheckedById);
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@approved_by_id", myReceiving.mApprovedById);
+                Helpers.CreateParameter(myCommand, DbType.String, "@invoice_no", myReceiving.mInvoiceNo);
+                Helpers.CreateParameter(myCommand, DbType.String, "@dr_no", myReceiving.mDrNo);
+                Helpers.CreateParameter(myCommand, DbType.Decimal, "@amount", myReceiving.mAmount);
                 Helpers.CreateParameter(myCommand, DbType.String, "@remarks", myReceiving.mRemarks);
 
                 Helpers.SetSaveParameters(myCommand, myReceiving);
@@ -177,12 +184,17 @@ namespace Qtech.AssetManagement.Dal
             receiving.mCheckedById = myDataRecord.GetInt32(myDataRecord.GetOrdinal("checked_by_id"));
             receiving.mApprovedByName = myDataRecord.GetString(myDataRecord.GetOrdinal("approved_by_name"));
             receiving.mApprovedById = myDataRecord.GetInt32(myDataRecord.GetOrdinal("approved_by_id"));
+            receiving.mInvoiceNo = myDataRecord.GetString(myDataRecord.GetOrdinal("invoice_no"));
+            receiving.mDrNo = myDataRecord.GetString(myDataRecord.GetOrdinal("dr_no"));
+            receiving.mAmount = myDataRecord.GetDecimal(myDataRecord.GetOrdinal("amount"));
             receiving.mRemarks = myDataRecord.GetString(myDataRecord.GetOrdinal("remarks"));
 
             receiving.mTransactionNo = myDataRecord.GetString(myDataRecord.GetOrdinal("receiving_no"));
             receiving.mPurchaseOrderNo = myDataRecord.GetString(myDataRecord.GetOrdinal("purchase_order_no"));
             receiving.mQuotationtNo = myDataRecord.GetString(myDataRecord.GetOrdinal("quotation_no"));
             receiving.mPurchaseRequestNo = myDataRecord.GetString(myDataRecord.GetOrdinal("purchase_request_no"));
+            receiving.mSupplierId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("supplier_id"));
+            receiving.mSupplierName = myDataRecord.GetString(myDataRecord.GetOrdinal("supplier_name"));
             return receiving;
         }
     }

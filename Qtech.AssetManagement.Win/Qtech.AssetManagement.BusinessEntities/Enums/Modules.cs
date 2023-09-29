@@ -20,6 +20,8 @@
         Quotation = 16,
         PurchaseOrder = 17,
         Receiving = 18,
-        Unit = 19
+        Unit = 19,
+        PaymentMode = 20,
+        PurchaseVoucher = 21
     }
 }

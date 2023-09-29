@@ -279,6 +279,10 @@ namespace Qtech.AssetManagement.Purchasing.Quotation
                 MessageUtil.NotAllowedPrintAccess();
                 return;
             }
+
+            Viewer viewer = new Viewer();
+            viewer.mId = _mId;
+            viewer.ShowDialog();
         }
 
         #endregion
@@ -395,6 +399,12 @@ namespace Qtech.AssetManagement.Purchasing.Quotation
         {
             PurchaseRequest.Default prForm = (PurchaseRequest.Default)sender;
             if (prForm.mPurchaseRequest == null) return;
+
+            if (prForm.mPurchaseRequest.mApprovedById == 0)
+            {
+                MessageBox.Show("Selected record is not yet approved.", "Purchase Request", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
 
             BusinessEntities.PurchaseRequest pr = prForm.mPurchaseRequest;
 

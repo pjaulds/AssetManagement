@@ -22,6 +22,8 @@ namespace Qtech.AssetManagement.Purchasing.Receiving
             InitializeComponent();
         }
 
+        public bool mForPurchaseVoucher { get; set; }
+        public BusinessEntities.Receiving mReceiving { get; set; }
         #region Private Variables
         bool allow_select;
         bool allow_insert;
@@ -55,8 +57,22 @@ namespace Qtech.AssetManagement.Purchasing.Receiving
                 criteria.mEndDate = EnddateTimePicker.Value.Date;
             }
 
+            if(mForPurchaseVoucher)
+            {
+                criteria = new ReceivingCriteria();
+                criteria.mForPurchaseVoucher = true;
+            }
+
             ultraGrid1.SetDataBinding(ReceivingManager.GetList(criteria), null, true);
             ultraGrid1.Refresh();
+            
+            criteria = new ReceivingCriteria();
+            criteria.mForPurchaseVoucher = true;
+            ForApvbutton.Text = "For APV: " + ReceivingManager.SelectCountForGetList(criteria).ToString();
+
+            criteria = new ReceivingCriteria();
+            criteria.mForApproval = true;
+            ForApprovalbutton.Text = "For Approval: " + ReceivingManager.SelectCountForGetList(criteria).ToString();
         }
 
         private int SaveReceiving()
@@ -92,9 +108,11 @@ namespace Qtech.AssetManagement.Purchasing.Receiving
             myReceiving.mPreparedByName = PreparedByutraCombo.Text;
             myReceiving.mCheckedById = ControlUtil.UltraComboReturnValue(CheckedByultraCombo);
             myReceiving.mCheckedByName = CheckedByultraCombo.Text;
-
             myReceiving.mApprovedById = int.Parse(ApprovedBylabel.Text);
             myReceiving.mApprovedByName = ApprovedBytextBox.Text;
+            myReceiving.mInvoiceNo = InvoiceNotextBox.Text;
+            myReceiving.mDrNo = DRNotextBox.Text;
+            myReceiving.mRemarks = RemarksultraTextEditor.Text;
             myReceiving.mUserId = SessionUtil.mUser.mId;
 
             LoadReceivingDetailFromFormControls(myReceiving);
@@ -118,9 +136,11 @@ namespace Qtech.AssetManagement.Purchasing.Receiving
             PurchaseOrderNotextBox.Text = myReceiving.mPurchaseOrderNo;
             PreparedByutraCombo.Value = myReceiving.mPreparedById;
             CheckedByultraCombo.Value = myReceiving.mCheckedById;
-
             ApprovedBylabel.Text = myReceiving.mApprovedById.ToString();
             ApprovedBytextBox.Text = myReceiving.mApprovedByName;
+            InvoiceNotextBox.Text = myReceiving.mInvoiceNo;
+            DRNotextBox.Text = myReceiving.mDrNo;
+            RemarksultraTextEditor.Text = myReceiving.mRemarks;
 
             LoadFormControlsFromReceivingDetail(myReceiving);
         }
@@ -252,13 +272,18 @@ namespace Qtech.AssetManagement.Purchasing.Receiving
             if (e.Row.Index == -1)
                 return;
             
-            EndEditing();
-
             BusinessEntities.Receiving item = ReceivingManager.GetItem(_mId);
+
+            if (mForPurchaseVoucher)
+            {
+                mReceiving = item;
+                Close();
+                return;
+            }
+
+            EndEditing();
             LoadFormControlsFromReceiving(item);
-
             ControlUtil.ExpandPanel(splitContainer1);
-
             PreparedByutraCombo.Focus();
         }
 
@@ -348,6 +373,12 @@ namespace Qtech.AssetManagement.Purchasing.Receiving
         {
             PurchaseOrder.Default poForm = (PurchaseOrder.Default)sender;
             if (poForm.mPurchaseOrder == null) return;
+
+            if (poForm.mPurchaseOrder.mApprovedById == 0)
+            {
+                MessageBox.Show("Selected record is not yet approved.", "Purchase Order", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
 
             BusinessEntities.PurchaseOrder po = poForm.mPurchaseOrder;
 
@@ -445,6 +476,22 @@ namespace Qtech.AssetManagement.Purchasing.Receiving
                     }
                 }
             }
+        }
+
+        private void ForApprovalbutton_Click(object sender, EventArgs e)
+        {
+            ReceivingCriteria criteria = new ReceivingCriteria();
+            criteria.mForApproval = true;
+            ultraGrid1.SetDataBinding(ReceivingManager.GetList(criteria), null, true);
+            ultraGrid1.Refresh();
+        }
+
+        private void ForApvbutton_Click(object sender, EventArgs e)
+        {
+            ReceivingCriteria criteria = new ReceivingCriteria();
+            criteria.mForPurchaseVoucher = true;
+            ultraGrid1.SetDataBinding(ReceivingManager.GetList(criteria), null, true);
+            ultraGrid1.Refresh();
         }
     }
 }

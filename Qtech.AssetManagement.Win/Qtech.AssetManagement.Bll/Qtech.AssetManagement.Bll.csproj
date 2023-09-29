@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccumulatedDepreciationAccountManager.cs" />
+    <Compile Include="PaymentModeManager.cs" />
+    <Compile Include="PurchaseVoucherManager.cs" />
     <Compile Include="UnitManager.cs" />
     <Compile Include="PurchaseOrderDetailManager.cs" />
     <Compile Include="PurchaseOrderManager.cs" />

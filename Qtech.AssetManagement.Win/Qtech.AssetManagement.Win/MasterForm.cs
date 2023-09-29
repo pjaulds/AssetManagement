@@ -235,6 +235,17 @@ namespace Qtech.AssetManagement.Win
                     }
                     else receivingForm.Select();
                     break;
+                case "PurchaseVoucher":
+                    if (!AllowToAccess((Int32)Modules.PurchaseVoucher)) return;
+                    Purchasing.PurchaseVoucher.Default purchaseVoucherForm = null;
+                    if ((purchaseVoucherForm = (Purchasing.PurchaseVoucher.Default)IsFormAlreadyOpen(typeof(Purchasing.PurchaseVoucher.Default))) == null)
+                    {
+                        Purchasing.PurchaseVoucher.Default purchaseVoucherFormChild = new Purchasing.PurchaseVoucher.Default();
+                        purchaseVoucherFormChild.MdiParent = this;
+                        purchaseVoucherFormChild.Show();
+                    }
+                    else purchaseVoucherForm.Select();
+                    break;
                 case "Unit":
                     if (!AllowToAccess((Int32)Modules.Unit)) return;
                     Maintenance.Unit.Default unitForm = null;
@@ -256,6 +267,17 @@ namespace Qtech.AssetManagement.Win
                         companyProfileFormChild.Show();
                     }
                     else companyProfileForm.Select();
+                    break;
+                case "PaymentMode":
+                    if (!AllowToAccess((Int32)Modules.PaymentMode)) return;
+                    Setup.PaymentMode.Default paymentModeForm = null;
+                    if ((paymentModeForm = (Setup.PaymentMode.Default)IsFormAlreadyOpen(typeof(Setup.PaymentMode.Default))) == null)
+                    {
+                        Setup.PaymentMode.Default paymentModeFormChild = new Setup.PaymentMode.Default();
+                        paymentModeFormChild.MdiParent = this;
+                        paymentModeFormChild.Show();
+                    }
+                    else paymentModeForm.Select();
                     break;
             }
         }

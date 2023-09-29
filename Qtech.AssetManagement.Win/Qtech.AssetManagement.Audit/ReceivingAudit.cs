@@ -60,6 +60,37 @@ namespace Qtech.AssetManagement.Audit
                 audit_collection.Add(audit);
             }
 
+            if (receiving.mInvoiceNo != receivingOld.mInvoiceNo)
+            {
+                audit = new BusinessEntities.Audit();
+                LoadCommonData(ref audit, receiving);
+                audit.mField = "Invoice No";
+                audit.mOldValue = receivingOld.mInvoiceNo.ToString();
+                audit.mNewValue = receiving.mInvoiceNo.ToString();
+                audit_collection.Add(audit);
+            }
+
+            if (receiving.mDrNo != receivingOld.mDrNo)
+            {
+                audit = new BusinessEntities.Audit();
+                LoadCommonData(ref audit, receiving);
+                audit.mField = "Dr No";
+                audit.mOldValue = receivingOld.mDrNo.ToString();
+                audit.mNewValue = receiving.mDrNo.ToString();
+                audit_collection.Add(audit);
+            }
+
+            if (receiving.mAmount != receivingOld.mAmount)
+            {
+                audit = new BusinessEntities.Audit();
+                LoadCommonData(ref audit, receiving);
+                audit.mField = "Amount";
+                audit.mOldValue = receivingOld.mAmount.ToString();
+                audit.mNewValue = receiving.mAmount.ToString();
+                audit_collection.Add(audit);
+            }
+
+
             if (receiving.mRemarks != receivingOld.mRemarks)
             {
                 audit = new BusinessEntities.Audit();

@@ -54,6 +54,9 @@ namespace Qtech.AssetManagement.Bll
                 if (myReceiving.mId != 0)
                     AuditUpdate(myReceiving);
 
+                if (myReceiving.mReceivingDetailCollection != null)
+                    myReceiving.mAmount = myReceiving.mReceivingDetailCollection.Sum(x => x.mCost * x.mQuantity);
+
                 int id = ReceivingDB.Save(myReceiving);
 
                 if (myReceiving.mReceivingDetailCollection != null)
