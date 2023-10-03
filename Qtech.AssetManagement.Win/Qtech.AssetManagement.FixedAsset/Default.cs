@@ -78,10 +78,11 @@ namespace Qtech.AssetManagement.FixedAsset
         private void LoadFixedAssetFromFormControls(BusinessEntities.FixedAsset myFixedAsset)
         {
             myFixedAsset.mId = int.Parse(Idlabel.Text);
-            myFixedAsset.mCode = CodetextBox.Text;
-            myFixedAsset.mName = NametextBox.Text;
-            myFixedAsset.mTypeId = ControlUtil.UltraComboReturnValue(TypeutraCombo);
-            myFixedAsset.mTypeName = TypeutraCombo.Text;
+            myFixedAsset.mAssetNo = AssetNotextBox.Text;
+            myFixedAsset.mProductId = int.Parse(ProductIdlabel.Text);
+            myFixedAsset.mReceivingDetailId = int.Parse(ReceivingDetailIdlabel.Text);
+            myFixedAsset.mAssetTypeId = ControlUtil.UltraComboReturnValue(AssetTypeutraCombo);
+            myFixedAsset.mAssetTypeName = AssetTypeutraCombo.Text;
             myFixedAsset.mFunctionalLocationId = ControlUtil.UltraComboReturnValue(FunctionalLocationultraCombo);
             myFixedAsset.mFunctionalLocationName = FunctionalLocationultraCombo.Text;
             myFixedAsset.mDescription = DescriptiontextBox.Text;
@@ -106,9 +107,10 @@ namespace Qtech.AssetManagement.FixedAsset
         private void LoadFormControlsFromUser(BusinessEntities.FixedAsset myFixedAsset)
         {
             Idlabel.Text = myFixedAsset.mId.ToString();
-            CodetextBox.Text = myFixedAsset.mCode;
-            NametextBox.Text = myFixedAsset.mName;
-            TypeutraCombo.Value = myFixedAsset.mTypeId;
+            AssetNotextBox.Text = myFixedAsset.mAssetNo;
+            ProductIdlabel.Text = myFixedAsset.mProductId.ToString();
+            ReceivingDetailIdlabel.Text = myFixedAsset.mReceivingDetailId.ToString();
+            AssetTypeutraCombo.Value = myFixedAsset.mAssetTypeId;
             FunctionalLocationultraCombo.Value = myFixedAsset.mFunctionalLocationId;
             DescriptiontextBox.Text = myFixedAsset.mDescription;
             PurchasedateTimePicker.Value = myFixedAsset.mPurchaseDate;
@@ -124,6 +126,22 @@ namespace Qtech.AssetManagement.FixedAsset
             DraftcheckBox.Checked = myFixedAsset.mIsDraft;
             RegisteredcheckBox.Checked = myFixedAsset.mIsRegistered;
             DisposedcheckBox.Checked = myFixedAsset.mIsDisposed;
+        }
+
+        public void LoadFormControlsFromReceivingDetail(ReceivingDetail myReceivingDetail)
+        {
+            PurchaseOrderDetail pd = PurchaseOrderDetailManager.GetItem(myReceivingDetail.mPurchaseOrderDetailId);
+            QuotationDetail qd = QuotationDetailManager.GetItem(pd.mQuotationDetailId);
+            PurchaseRequestDetail prd = PurchaseRequestDetailManager.GetItem(qd.mPurchaseRequestDetailId);
+
+            ReceivingDetailIdlabel.Text = myReceivingDetail.mId.ToString();
+            ProductIdlabel.Text = prd.mProductId.ToString();
+            ProductNametextBox.Text = myReceivingDetail.mProductName;
+
+            PurchaseOrder po = PurchaseOrderManager.GetItem(pd.mPurchaseOrderId);
+            Receiving r = ReceivingManager.GetItem(myReceivingDetail.mReceivingId);
+            PurchasedateTimePicker.Value = po.mDate;
+            PurchasePricetextBox.Text = qd.mCost.ToString("N");
         }
 
         private void EndEditing()
@@ -147,26 +165,15 @@ namespace Qtech.AssetManagement.FixedAsset
             EndEditing();
             ControlUtil.ExpandPanel(splitContainer1);
 
-            NametextBox.Focus();
-            DraftcheckBox.Checked = true;
+            ProductNametextBox.Focus();
+            DraftcheckBox.Checked = !allow_delete;
+            RegisteredcheckBox.Checked = allow_delete;
         }
 
         public int SaveRecords()
         {
             BrokenRulesCollection rules = new BrokenRulesCollection();
-
-            FixedAssetCriteria criteria = new FixedAssetCriteria();
-            criteria.mId = int.Parse(Idlabel.Text);
-            criteria.mName = NametextBox.Text;
-            if (FixedAssetManager.SelectCountForGetList(criteria) > 0)
-                rules.Add(new BrokenRule("", "Account title already exists."));
-
-            criteria = new FixedAssetCriteria();
-            criteria.mId = int.Parse(Idlabel.Text);
-            criteria.mCode = CodetextBox.Text;
-            if (FixedAssetManager.SelectCountForGetList(criteria) > 0)
-                rules.Add(new BrokenRule("", "Account code already exists."));
-
+            
             decimal purchasePrice = 0;
             if (!decimal.TryParse(PurchasePricetextBox.Text, out purchasePrice))
                 rules.Add(new BrokenRule("", "Invalid purchase price."));
@@ -244,7 +251,7 @@ namespace Qtech.AssetManagement.FixedAsset
             LoadFormControlsFromUser(item);
 
             ControlUtil.ExpandPanel(splitContainer1);
-            NametextBox.Focus();
+            ProductNametextBox.Focus();
         }
 
         private void ultraGrid1_BeforeRowsDeleted(object sender, Infragistics.Win.UltraWinGrid.BeforeRowsDeletedEventArgs e)
@@ -282,6 +289,9 @@ namespace Qtech.AssetManagement.FixedAsset
             ThemeUtil.Controls(splitContainer1.Panel2);
             ControlUtil.TextBoxEnterLeaveEventHandler(splitContainer1.Panel2);
             LoadFixedAsset();
+
+            Savebutton.Text = allow_delete ? "Register" : "Save As Draft";
+            
         }
 
         private void Savebutton_Click(object sender, EventArgs e)
@@ -296,7 +306,7 @@ namespace Qtech.AssetManagement.FixedAsset
 
         public void RefreshAllSelection()
         {
-            UltraComboUtil.AssetType(TypeutraCombo);
+            UltraComboUtil.AssetType(AssetTypeutraCombo);
             UltraComboUtil.FunctionalLocation(FunctionalLocationultraCombo);
             UltraComboUtil.DepreciationMethod(DepreciationMethodultraCombo);
             UltraComboUtil.AveragingMethod(AveragingMehodultraCombo);
@@ -324,5 +334,68 @@ namespace Qtech.AssetManagement.FixedAsset
                 frm.ShowDialog();
             }
         }
+
+        private void BeginningBalanceradioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Idlabel.Text == "0") DescriptiontextBox.Text = "Beginning Balance";
+        }
+
+        private void NewPurchaseradioButton_CheckedChanged(object sender, EventArgs e)
+        {
+            if (Idlabel.Text == "0") DescriptiontextBox.Text = "New Purchase";
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (Idlabel.Text == "0")
+            {
+                SearchProductForm browseProductForm = new SearchProductForm();
+                browseProductForm.FormClosing += BrowseProductForm_FormClosing;
+                browseProductForm.ShowDialog();
+            }
+        }
+
+        private void BrowseProductForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            SearchProductForm browseProductForm = (SearchProductForm)sender;
+            if (browseProductForm.mProduct == null) return;
+
+            Product product = browseProductForm.mProduct;
+            ProductIdlabel.Text = product.mId.ToString();
+            ProductNametextBox.Text = product.mName;
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (Idlabel.Text == "0")
+            {
+                Purchasing.PurchaseVoucher.Default apvForm = new Purchasing.PurchaseVoucher.Default();
+                apvForm.mForFixedAsset = true;
+                apvForm.FormClosing += ApvForm_FormClosing;
+                apvForm.ShowDialog();
+            }
+        }
+
+        private void ApvForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Purchasing.PurchaseVoucher.Default apvForm = (Purchasing.PurchaseVoucher.Default)sender;
+            if (apvForm.mPurchaseVoucher == null) return;
+
+            ReceivingDetailCriteria criteria = new ReceivingDetailCriteria();
+            criteria.mReceivingId = apvForm.mPurchaseVoucher.mReceivingId;
+            criteria.mForFixedAsset = true;
+
+            //if remaining for fa encoding is 1
+            //or mostly the reccord from pr to receiving is always 1
+            if (ReceivingDetailManager.SelectCountForGetList(criteria) == 1)
+                LoadFormControlsFromReceivingDetail(ReceivingDetailManager.GetList(criteria).First());
+            else
+            {
+                //browse items from receiving detail
+            }
+
+        }
+
+       
     }
 }

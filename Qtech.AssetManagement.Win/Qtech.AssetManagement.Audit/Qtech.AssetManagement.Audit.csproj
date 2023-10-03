@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccumulatedDepreciationAccountAudit.cs" />
+    <Compile Include="AssetTypeAudit.cs" />
     <Compile Include="PaymentModeAudit.cs" />
     <Compile Include="PurchaseVoucherAudit.cs" />
     <Compile Include="UnitAudit.cs" />

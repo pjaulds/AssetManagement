@@ -10,5 +10,7 @@ namespace Qtech.AssetManagement.BusinessEntities
     {
         public DateTime mStartDate { get; set; }
         public DateTime mEndDate { get; set; }
+
+        public bool mForFixedAsset { get; set; }
     }
 }

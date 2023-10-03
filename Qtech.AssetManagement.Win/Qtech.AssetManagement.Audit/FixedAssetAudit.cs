@@ -10,33 +10,23 @@ namespace Qtech.AssetManagement.Audit
             AuditCollection audit_collection = new AuditCollection();
             BusinessEntities.Audit audit = new BusinessEntities.Audit();
 
-            if (fixedasset.mCode != fixedassetOld.mCode)
+            if (fixedasset.mAssetNo != fixedassetOld.mAssetNo)
             {
                 audit = new BusinessEntities.Audit();
                 LoadCommonData(ref audit, fixedasset);
-                audit.mField = "Code";
-                audit.mOldValue = fixedassetOld.mCode.ToString();
-                audit.mNewValue = fixedasset.mCode.ToString();
+                audit.mField = "Asset No";
+                audit.mOldValue = fixedassetOld.mAssetNo.ToString();
+                audit.mNewValue = fixedasset.mAssetNo.ToString();
                 audit_collection.Add(audit);
             }
 
-            if (fixedasset.mName != fixedassetOld.mName)
+            if (fixedasset.mAssetTypeId != fixedassetOld.mAssetTypeId)
             {
                 audit = new BusinessEntities.Audit();
                 LoadCommonData(ref audit, fixedasset);
-                audit.mField = "Name";
-                audit.mOldValue = fixedassetOld.mName.ToString();
-                audit.mNewValue = fixedasset.mName.ToString();
-                audit_collection.Add(audit);
-            }
-
-            if (fixedasset.mTypeId != fixedassetOld.mTypeId)
-            {
-                audit = new BusinessEntities.Audit();
-                LoadCommonData(ref audit, fixedasset);
-                audit.mField = "Type ";
-                audit.mOldValue = fixedassetOld.mTypeName.ToString();
-                audit.mNewValue = fixedasset.mTypeName.ToString();
+                audit.mField = "Asset Type ";
+                audit.mOldValue = fixedassetOld.mAssetTypeName.ToString();
+                audit.mNewValue = fixedasset.mAssetTypeName.ToString();
                 audit_collection.Add(audit);
             }
 

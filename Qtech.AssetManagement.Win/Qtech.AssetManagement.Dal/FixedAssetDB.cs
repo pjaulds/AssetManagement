@@ -46,14 +46,6 @@ namespace Qtech.AssetManagement.Dal
                 myCommand.CommandType = CommandType.StoredProcedure;
                 myCommand.CommandText = "amQt_spFixedAssetSearchList";
 
-                Helpers.CreateParameter(myCommand, DbType.Int32, "@id", fixedassetCriteria.mId);
-
-                if (!string.IsNullOrEmpty(fixedassetCriteria.mCode))
-                    Helpers.CreateParameter(myCommand, DbType.String, "@code", fixedassetCriteria.mCode);
-
-                if (!string.IsNullOrEmpty(fixedassetCriteria.mName))
-                    Helpers.CreateParameter(myCommand, DbType.String, "@name", fixedassetCriteria.mName);
-
                 myCommand.Connection.Open();
                 using (DbDataReader myReader = myCommand.ExecuteReader())
                 {
@@ -88,14 +80,6 @@ namespace Qtech.AssetManagement.Dal
                 idParam.Value = 0;
                 myCommand.Parameters.Add(idParam);
 
-                Helpers.CreateParameter(myCommand, DbType.Int32, "@id", fixedassetCriteria.mId);
-
-                if (!string.IsNullOrEmpty(fixedassetCriteria.mCode))
-                    Helpers.CreateParameter(myCommand, DbType.String, "@code", fixedassetCriteria.mCode);
-
-                if (!string.IsNullOrEmpty(fixedassetCriteria.mName))
-                    Helpers.CreateParameter(myCommand, DbType.String, "@name", fixedassetCriteria.mName);
-
                 myCommand.Connection.Open();
                 myCommand.ExecuteNonQuery();
                 myCommand.Connection.Close();
@@ -115,9 +99,10 @@ namespace Qtech.AssetManagement.Dal
                 myCommand.CommandType = CommandType.StoredProcedure;
                 myCommand.CommandText = "amQt_spFixedAssetInsertUpdateSingleItem";
 
-                Helpers.CreateParameter(myCommand, DbType.String, "@code", myFixedAsset.mCode);
-                Helpers.CreateParameter(myCommand, DbType.String, "@name", myFixedAsset.mName);
-                Helpers.CreateParameter(myCommand, DbType.Int32, "@type_id", myFixedAsset.mTypeId);
+                Helpers.CreateParameter(myCommand, DbType.String, "@asset_no", myFixedAsset.mAssetNo);
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@product_id", myFixedAsset.mProductId);
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@receiving_detail_id", myFixedAsset.mReceivingDetailId);
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@asset_type_id", myFixedAsset.mAssetTypeId);
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@functional_location_id", myFixedAsset.mFunctionalLocationId);
                 Helpers.CreateParameter(myCommand, DbType.String, "@description", myFixedAsset.mDescription);
                 if (myFixedAsset.mPurchaseDate != DateTime.MinValue)
@@ -181,10 +166,13 @@ namespace Qtech.AssetManagement.Dal
             FixedAsset fixedasset = new FixedAsset();
 
             fixedasset.mId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("id"));
-            fixedasset.mCode = myDataRecord.GetString(myDataRecord.GetOrdinal("code"));
-            fixedasset.mName = myDataRecord.GetString(myDataRecord.GetOrdinal("name"));
-            fixedasset.mTypeName = myDataRecord.GetString(myDataRecord.GetOrdinal("type_name"));
-            fixedasset.mTypeId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("type_id"));
+            fixedasset.mAssetNo = myDataRecord.GetString(myDataRecord.GetOrdinal("asset_no"));
+            fixedasset.mProductId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("product_id"));
+            fixedasset.mProductCode = myDataRecord.GetString(myDataRecord.GetOrdinal("product_code"));
+            fixedasset.mProductName = myDataRecord.GetString(myDataRecord.GetOrdinal("product_name"));
+            fixedasset.mReceivingDetailId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("receiving_detail_id"));
+            fixedasset.mAssetTypeName = myDataRecord.GetString(myDataRecord.GetOrdinal("asset_type_name"));
+            fixedasset.mAssetTypeId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("asset_type_id"));
             fixedasset.mFunctionalLocationName = myDataRecord.GetString(myDataRecord.GetOrdinal("functional_location_name"));
             fixedasset.mFunctionalLocationId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("functional_location_id"));
             fixedasset.mDescription = myDataRecord.GetString(myDataRecord.GetOrdinal("description"));

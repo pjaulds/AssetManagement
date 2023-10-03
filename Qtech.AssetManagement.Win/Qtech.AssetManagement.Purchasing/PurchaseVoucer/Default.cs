@@ -22,6 +22,9 @@ namespace Qtech.AssetManagement.Purchasing.PurchaseVoucher
             InitializeComponent();
         }
 
+        public bool mForFixedAsset { get; set; }
+        public BusinessEntities.PurchaseVoucher mPurchaseVoucher { get; set; }
+
         #region Private Variables
         bool allow_select;
         bool allow_insert;
@@ -51,6 +54,12 @@ namespace Qtech.AssetManagement.Purchasing.PurchaseVoucher
             {
                 criteria.mStartDate = StartdateTimePicker.Value.Date;
                 criteria.mEndDate = EnddateTimePicker.Value.Date;
+            }
+
+            if(mForFixedAsset)
+            {
+                criteria = new PurchaseVoucherCriteria();
+                criteria.mForFixedAsset = true;
             }
 
             ultraGrid1.SetDataBinding(PurchaseVoucherManager.GetList(criteria), null, true);
@@ -235,14 +244,20 @@ namespace Qtech.AssetManagement.Purchasing.PurchaseVoucher
         {
             if (e.Row.Index == -1)
                 return;
-            
-            EndEditing();
 
             BusinessEntities.PurchaseVoucher item = PurchaseVoucherManager.GetItem(_mId);
+
+
+            if (mForFixedAsset)
+            {
+                mPurchaseVoucher = item;
+                Close();
+                return;
+            }
+
+            EndEditing();
             LoadFormControlsFromPurchaseVoucher(item);
-
             ControlUtil.ExpandPanel(splitContainer1);
-
             PreparedByutraCombo.Focus();
         }
 

@@ -102,6 +102,11 @@
       <Name>Qtech.AssetManagement.Controls</Name>
       <Private>False</Private>
     </ProjectReference>
+    <ProjectReference Include="..\Qtech.AssetManagement.Purchasing\Qtech.AssetManagement.Purchasing.csproj">
+      <Project>{5333b023-ea4c-49fc-891f-e1e82149cc6c}</Project>
+      <Name>Qtech.AssetManagement.Purchasing</Name>
+      <Private>False</Private>
+    </ProjectReference>
     <ProjectReference Include="..\Qtech.AssetManagement.Utilities\Qtech.AssetManagement.Utilities.csproj">
       <Project>{e8939081-4037-4578-8c1f-fdc6d8561751}</Project>
       <Name>Qtech.AssetManagement.Utilities</Name>

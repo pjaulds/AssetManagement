@@ -48,6 +48,7 @@ namespace Qtech.AssetManagement.Dal
 
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@receiving_id", receivingdetailCriteria.mReceivingId);
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@purchase_order_detail_id", receivingdetailCriteria.mPurchaseOrderDetailId);
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@for_fixed_asset", receivingdetailCriteria.mForFixedAsset);
 
                 myCommand.Connection.Open();
                 using (DbDataReader myReader = myCommand.ExecuteReader())
@@ -85,6 +86,7 @@ namespace Qtech.AssetManagement.Dal
 
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@receiving_id", receivingdetailCriteria.mReceivingId);
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@purchase_order_detail_id", receivingdetailCriteria.mPurchaseOrderDetailId);
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@for_fixed_asset", receivingdetailCriteria.mForFixedAsset);
 
                 myCommand.Connection.Open();
                 myCommand.ExecuteNonQuery();

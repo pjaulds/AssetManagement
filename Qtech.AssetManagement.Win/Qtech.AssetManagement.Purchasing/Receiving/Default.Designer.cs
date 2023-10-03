@@ -105,6 +105,8 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.ultraGrid1 = new Infragistics.Win.UltraWinGrid.UltraGrid();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.ForApprovalbutton = new System.Windows.Forms.Button();
+            this.ForApvbutton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.EnddateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.StartdateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -112,6 +114,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.expandPanelControl1 = new Qtech.AssetManagement.Controls.ExpandPanelControl();
             this.RemarksultraTextEditor = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
@@ -159,9 +162,6 @@
             this.ApprovedBybutton = new System.Windows.Forms.Button();
             this.Cancelbutton = new System.Windows.Forms.Button();
             this.Savebutton = new System.Windows.Forms.Button();
-            this.ForApprovalbutton = new System.Windows.Forms.Button();
-            this.ForApvbutton = new System.Windows.Forms.Button();
-            this.expandPanelControl1 = new Qtech.AssetManagement.Controls.ExpandPanelControl();
             this.collapsePanelControl1 = new Qtech.AssetManagement.Controls.CollapsePanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -424,6 +424,34 @@
             this.panel5.Size = new System.Drawing.Size(201, 62);
             this.panel5.TabIndex = 181;
             // 
+            // ForApprovalbutton
+            // 
+            this.ForApprovalbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(43)))), ((int)(((byte)(137)))));
+            this.ForApprovalbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ForApprovalbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForApprovalbutton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.ForApprovalbutton.Location = new System.Drawing.Point(428, 36);
+            this.ForApprovalbutton.Name = "ForApprovalbutton";
+            this.ForApprovalbutton.Size = new System.Drawing.Size(125, 23);
+            this.ForApprovalbutton.TabIndex = 182;
+            this.ForApprovalbutton.Text = "For Approval";
+            this.ForApprovalbutton.UseVisualStyleBackColor = false;
+            this.ForApprovalbutton.Click += new System.EventHandler(this.ForApprovalbutton_Click);
+            // 
+            // ForApvbutton
+            // 
+            this.ForApvbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(43)))), ((int)(((byte)(137)))));
+            this.ForApvbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ForApvbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForApvbutton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.ForApvbutton.Location = new System.Drawing.Point(559, 36);
+            this.ForApvbutton.Name = "ForApvbutton";
+            this.ForApvbutton.Size = new System.Drawing.Size(125, 23);
+            this.ForApvbutton.TabIndex = 181;
+            this.ForApvbutton.Text = "For APV";
+            this.ForApvbutton.UseVisualStyleBackColor = false;
+            this.ForApvbutton.Click += new System.EventHandler(this.ForApvbutton_Click);
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(43)))), ((int)(((byte)(137)))));
@@ -497,6 +525,15 @@
             this.label17.Size = new System.Drawing.Size(57, 13);
             this.label17.TabIndex = 4;
             this.label17.Text = "Start Date";
+            // 
+            // expandPanelControl1
+            // 
+            this.expandPanelControl1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.expandPanelControl1.Location = new System.Drawing.Point(201, 0);
+            this.expandPanelControl1.Name = "expandPanelControl1";
+            this.expandPanelControl1.Size = new System.Drawing.Size(15, 482);
+            this.expandPanelControl1.TabIndex = 126;
+            this.expandPanelControl1._ExpandPanel += new System.EventHandler(this.expandPanelControl1__ExpandPanel);
             // 
             // RemarksultraTextEditor
             // 
@@ -1188,43 +1225,6 @@
             this.Savebutton.Text = "&Save";
             this.Savebutton.UseVisualStyleBackColor = false;
             this.Savebutton.Click += new System.EventHandler(this.Savebutton_Click);
-            // 
-            // ForApprovalbutton
-            // 
-            this.ForApprovalbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(43)))), ((int)(((byte)(137)))));
-            this.ForApprovalbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ForApprovalbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForApprovalbutton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.ForApprovalbutton.Location = new System.Drawing.Point(428, 36);
-            this.ForApprovalbutton.Name = "ForApprovalbutton";
-            this.ForApprovalbutton.Size = new System.Drawing.Size(125, 23);
-            this.ForApprovalbutton.TabIndex = 182;
-            this.ForApprovalbutton.Text = "For Approval";
-            this.ForApprovalbutton.UseVisualStyleBackColor = false;
-            this.ForApprovalbutton.Click += new System.EventHandler(this.ForApprovalbutton_Click);
-            // 
-            // ForApvbutton
-            // 
-            this.ForApvbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(43)))), ((int)(((byte)(137)))));
-            this.ForApvbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ForApvbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForApvbutton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.ForApvbutton.Location = new System.Drawing.Point(559, 36);
-            this.ForApvbutton.Name = "ForApvbutton";
-            this.ForApvbutton.Size = new System.Drawing.Size(125, 23);
-            this.ForApvbutton.TabIndex = 181;
-            this.ForApvbutton.Text = "For APV";
-            this.ForApvbutton.UseVisualStyleBackColor = false;
-            this.ForApvbutton.Click += new System.EventHandler(this.ForApvbutton_Click);
-            // 
-            // expandPanelControl1
-            // 
-            this.expandPanelControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.expandPanelControl1.Location = new System.Drawing.Point(201, 0);
-            this.expandPanelControl1.Name = "expandPanelControl1";
-            this.expandPanelControl1.Size = new System.Drawing.Size(15, 482);
-            this.expandPanelControl1.TabIndex = 126;
-            this.expandPanelControl1._ExpandPanel += new System.EventHandler(this.expandPanelControl1__ExpandPanel);
             // 
             // collapsePanelControl1
             // 

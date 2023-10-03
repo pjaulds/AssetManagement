@@ -115,6 +115,12 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.expandPanelControl1 = new Qtech.AssetManagement.Controls.ExpandPanelControl();
+            this.DifferencetextBox = new System.Windows.Forms.TextBox();
+            this.CredittextBox = new System.Windows.Forms.TextBox();
+            this.DebittextBox = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
             this.CheckedByultraCombo = new Infragistics.Win.UltraWinGrid.UltraCombo();
@@ -155,12 +161,6 @@
             this.Cancelbutton = new System.Windows.Forms.Button();
             this.Savebutton = new System.Windows.Forms.Button();
             this.collapsePanelControl1 = new Qtech.AssetManagement.Controls.CollapsePanelControl();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.DebittextBox = new System.Windows.Forms.TextBox();
-            this.CredittextBox = new System.Windows.Forms.TextBox();
-            this.DifferencetextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -215,7 +215,6 @@
             // 
             // ultraGrid1
             // 
-            this.ultraGrid1.DataMember = null;
             appearance1.BackColor = System.Drawing.SystemColors.Window;
             appearance1.BorderColor = System.Drawing.SystemColors.InactiveCaption;
             this.ultraGrid1.DisplayLayout.Appearance = appearance1;
@@ -488,6 +487,66 @@
             this.expandPanelControl1.Size = new System.Drawing.Size(15, 482);
             this.expandPanelControl1.TabIndex = 126;
             this.expandPanelControl1._ExpandPanel += new System.EventHandler(this.expandPanelControl1__ExpandPanel);
+            // 
+            // DifferencetextBox
+            // 
+            this.DifferencetextBox.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold);
+            this.DifferencetextBox.Location = new System.Drawing.Point(146, 319);
+            this.DifferencetextBox.Name = "DifferencetextBox";
+            this.DifferencetextBox.ReadOnly = true;
+            this.DifferencetextBox.Size = new System.Drawing.Size(225, 30);
+            this.DifferencetextBox.TabIndex = 186;
+            this.DifferencetextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // CredittextBox
+            // 
+            this.CredittextBox.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold);
+            this.CredittextBox.Location = new System.Drawing.Point(146, 283);
+            this.CredittextBox.Name = "CredittextBox";
+            this.CredittextBox.ReadOnly = true;
+            this.CredittextBox.Size = new System.Drawing.Size(225, 30);
+            this.CredittextBox.TabIndex = 185;
+            this.CredittextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // DebittextBox
+            // 
+            this.DebittextBox.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold);
+            this.DebittextBox.Location = new System.Drawing.Point(146, 247);
+            this.DebittextBox.Name = "DebittextBox";
+            this.DebittextBox.ReadOnly = true;
+            this.DebittextBox.Size = new System.Drawing.Size(225, 30);
+            this.DebittextBox.TabIndex = 11;
+            this.DebittextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(21, 322);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(107, 23);
+            this.label20.TabIndex = 184;
+            this.label20.Text = "Difference";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(21, 286);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(68, 23);
+            this.label19.TabIndex = 183;
+            this.label19.Text = "Credit";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(21, 250);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(61, 23);
+            this.label8.TabIndex = 29;
+            this.label8.Text = "Debit";
             // 
             // panel7
             // 
@@ -1143,66 +1202,6 @@
             this.collapsePanelControl1.Size = new System.Drawing.Size(15, 482);
             this.collapsePanelControl1.TabIndex = 178;
             this.collapsePanelControl1._HidePanel += new System.EventHandler(this.collapsePanelControl1__HidePanel);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(21, 250);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(61, 23);
-            this.label8.TabIndex = 29;
-            this.label8.Text = "Debit";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(21, 286);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(68, 23);
-            this.label19.TabIndex = 183;
-            this.label19.Text = "Credit";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(21, 322);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(107, 23);
-            this.label20.TabIndex = 184;
-            this.label20.Text = "Difference";
-            // 
-            // DebittextBox
-            // 
-            this.DebittextBox.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold);
-            this.DebittextBox.Location = new System.Drawing.Point(146, 247);
-            this.DebittextBox.Name = "DebittextBox";
-            this.DebittextBox.ReadOnly = true;
-            this.DebittextBox.Size = new System.Drawing.Size(225, 30);
-            this.DebittextBox.TabIndex = 11;
-            this.DebittextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // CredittextBox
-            // 
-            this.CredittextBox.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold);
-            this.CredittextBox.Location = new System.Drawing.Point(146, 283);
-            this.CredittextBox.Name = "CredittextBox";
-            this.CredittextBox.ReadOnly = true;
-            this.CredittextBox.Size = new System.Drawing.Size(225, 30);
-            this.CredittextBox.TabIndex = 185;
-            this.CredittextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // DifferencetextBox
-            // 
-            this.DifferencetextBox.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Bold);
-            this.DifferencetextBox.Location = new System.Drawing.Point(146, 319);
-            this.DifferencetextBox.Name = "DifferencetextBox";
-            this.DifferencetextBox.ReadOnly = true;
-            this.DifferencetextBox.Size = new System.Drawing.Size(225, 30);
-            this.DifferencetextBox.TabIndex = 186;
-            this.DifferencetextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Default
             // 

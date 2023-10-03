@@ -62,11 +62,12 @@
             this.quotationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.purchaseOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.goodReceivedNoteReceivingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.purchaseVoucherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fixedAssetsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.functionalLocationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ultraTabbedMdiManager1 = new Infragistics.Win.UltraWinTabbedMdi.UltraTabbedMdiManager(this.components);
             this.BackgroundpictureBox = new System.Windows.Forms.PictureBox();
-            this.purchaseVoucherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.assetTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ultraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BackgroundpictureBox)).BeginInit();
@@ -209,6 +210,7 @@
             this.setupToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fixedAssetSettingToolStripMenuItem,
             this.toolStripMenuItem1,
+            this.assetTypeToolStripMenuItem,
             this.assetAccountToolStripMenuItem,
             this.accumulatedDepreciationAccountToolStripMenuItem,
             this.depreciationExpenseAccountToolStripMenuItem,
@@ -238,7 +240,7 @@
             this.assetAccountToolStripMenuItem.Name = "assetAccountToolStripMenuItem";
             this.assetAccountToolStripMenuItem.Size = new System.Drawing.Size(275, 22);
             this.assetAccountToolStripMenuItem.Tag = "AssetAccount";
-            this.assetAccountToolStripMenuItem.Text = "2. Asset Account";
+            this.assetAccountToolStripMenuItem.Text = "3. Asset Account";
             this.assetAccountToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // accumulatedDepreciationAccountToolStripMenuItem
@@ -246,7 +248,7 @@
             this.accumulatedDepreciationAccountToolStripMenuItem.Name = "accumulatedDepreciationAccountToolStripMenuItem";
             this.accumulatedDepreciationAccountToolStripMenuItem.Size = new System.Drawing.Size(275, 22);
             this.accumulatedDepreciationAccountToolStripMenuItem.Tag = "AccumulatedDepreciationAccount";
-            this.accumulatedDepreciationAccountToolStripMenuItem.Text = "3. Accumulated Depreciation Account";
+            this.accumulatedDepreciationAccountToolStripMenuItem.Text = "4. Accumulated Depreciation Account";
             this.accumulatedDepreciationAccountToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // depreciationExpenseAccountToolStripMenuItem
@@ -254,7 +256,7 @@
             this.depreciationExpenseAccountToolStripMenuItem.Name = "depreciationExpenseAccountToolStripMenuItem";
             this.depreciationExpenseAccountToolStripMenuItem.Size = new System.Drawing.Size(275, 22);
             this.depreciationExpenseAccountToolStripMenuItem.Tag = "DepreciationExpenseAccount";
-            this.depreciationExpenseAccountToolStripMenuItem.Text = "4. Depreciation Expense Account";
+            this.depreciationExpenseAccountToolStripMenuItem.Text = "5. Depreciation Expense Account";
             this.depreciationExpenseAccountToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // depreciationMethodToolStripMenuItem
@@ -262,7 +264,7 @@
             this.depreciationMethodToolStripMenuItem.Name = "depreciationMethodToolStripMenuItem";
             this.depreciationMethodToolStripMenuItem.Size = new System.Drawing.Size(275, 22);
             this.depreciationMethodToolStripMenuItem.Tag = "DepreciationMethod";
-            this.depreciationMethodToolStripMenuItem.Text = "5. Depreciation Method";
+            this.depreciationMethodToolStripMenuItem.Text = "6. Depreciation Method";
             this.depreciationMethodToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // averagingMethodToolStripMenuItem
@@ -270,7 +272,7 @@
             this.averagingMethodToolStripMenuItem.Name = "averagingMethodToolStripMenuItem";
             this.averagingMethodToolStripMenuItem.Size = new System.Drawing.Size(275, 22);
             this.averagingMethodToolStripMenuItem.Tag = "AveragingMethod";
-            this.averagingMethodToolStripMenuItem.Text = "6. Averaging Method";
+            this.averagingMethodToolStripMenuItem.Text = "7. Averaging Method";
             this.averagingMethodToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // chartOfAccountToolStripMenuItem
@@ -278,7 +280,7 @@
             this.chartOfAccountToolStripMenuItem.Name = "chartOfAccountToolStripMenuItem";
             this.chartOfAccountToolStripMenuItem.Size = new System.Drawing.Size(275, 22);
             this.chartOfAccountToolStripMenuItem.Tag = "ChartOfAccount";
-            this.chartOfAccountToolStripMenuItem.Text = "7. Chart Of Account";
+            this.chartOfAccountToolStripMenuItem.Text = "8. Chart Of Account";
             this.chartOfAccountToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // modeOfPaymentToolStripMenuItem
@@ -286,7 +288,7 @@
             this.modeOfPaymentToolStripMenuItem.Name = "modeOfPaymentToolStripMenuItem";
             this.modeOfPaymentToolStripMenuItem.Size = new System.Drawing.Size(275, 22);
             this.modeOfPaymentToolStripMenuItem.Tag = "PaymentMode";
-            this.modeOfPaymentToolStripMenuItem.Text = "8. Mode Of Payment";
+            this.modeOfPaymentToolStripMenuItem.Text = "9. Mode Of Payment";
             this.modeOfPaymentToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // fixedAssetManagementToolStripMenuItem
@@ -343,6 +345,14 @@
             this.goodReceivedNoteReceivingToolStripMenuItem.Text = "4. Good Received Note (Receiving)";
             this.goodReceivedNoteReceivingToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
+            // purchaseVoucherToolStripMenuItem
+            // 
+            this.purchaseVoucherToolStripMenuItem.Name = "purchaseVoucherToolStripMenuItem";
+            this.purchaseVoucherToolStripMenuItem.Size = new System.Drawing.Size(256, 22);
+            this.purchaseVoucherToolStripMenuItem.Tag = "PurchaseVoucher";
+            this.purchaseVoucherToolStripMenuItem.Text = "5. Purchase Voucher";
+            this.purchaseVoucherToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
+            // 
             // fixedAssetsToolStripMenuItem
             // 
             this.fixedAssetsToolStripMenuItem.Name = "fixedAssetsToolStripMenuItem";
@@ -392,13 +402,13 @@
             this.BackgroundpictureBox.TabStop = false;
             this.BackgroundpictureBox.Visible = false;
             // 
-            // purchaseVoucherToolStripMenuItem
+            // assetTypeToolStripMenuItem
             // 
-            this.purchaseVoucherToolStripMenuItem.Name = "purchaseVoucherToolStripMenuItem";
-            this.purchaseVoucherToolStripMenuItem.Size = new System.Drawing.Size(256, 22);
-            this.purchaseVoucherToolStripMenuItem.Tag = "PurchaseVoucher";
-            this.purchaseVoucherToolStripMenuItem.Text = "5. Purchase Voucher";
-            this.purchaseVoucherToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
+            this.assetTypeToolStripMenuItem.Name = "assetTypeToolStripMenuItem";
+            this.assetTypeToolStripMenuItem.Size = new System.Drawing.Size(275, 22);
+            this.assetTypeToolStripMenuItem.Tag = "AssetType";
+            this.assetTypeToolStripMenuItem.Text = "2. Asset Type";
+            this.assetTypeToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // MasterForm
             // 
@@ -461,6 +471,7 @@
         private System.Windows.Forms.ToolStripMenuItem companyProfileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modeOfPaymentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem purchaseVoucherToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem assetTypeToolStripMenuItem;
     }
 }
 

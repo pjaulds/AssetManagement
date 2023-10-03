@@ -52,6 +52,8 @@ namespace Qtech.AssetManagement.Dal
                 if (purchasevoucherCriteria.mEndDate != DateTime.MinValue)
                     Helpers.CreateParameter(myCommand, DbType.DateTime, "@end_date", purchasevoucherCriteria.mEndDate);
 
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@for_fixed_asset", purchasevoucherCriteria.mForFixedAsset);
+
                 myCommand.Connection.Open();
                 using (DbDataReader myReader = myCommand.ExecuteReader())
                 {
@@ -91,6 +93,8 @@ namespace Qtech.AssetManagement.Dal
 
                 if (purchasevoucherCriteria.mEndDate != DateTime.MinValue)
                     Helpers.CreateParameter(myCommand, DbType.DateTime, "@end_date", purchasevoucherCriteria.mEndDate);
+
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@for_fixed_asset", purchasevoucherCriteria.mForFixedAsset);
 
                 myCommand.Connection.Open();
                 myCommand.ExecuteNonQuery();

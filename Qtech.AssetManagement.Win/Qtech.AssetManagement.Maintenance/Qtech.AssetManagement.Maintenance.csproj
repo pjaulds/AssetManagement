@@ -67,6 +67,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AssetType\Default.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssetType\Default.Designer.cs">
+      <DependentUpon>Default.cs</DependentUpon>
+    </Compile>
     <Compile Include="CompanyProfile\Default.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AssetType\Default.resx">
+      <DependentUpon>Default.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CompanyProfile\Default.resx">
       <DependentUpon>Default.cs</DependentUpon>
     </EmbeddedResource>

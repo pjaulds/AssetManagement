@@ -6,8 +6,7 @@ using System.Threading.Tasks;
 
 namespace Qtech.AssetManagement.BusinessEntities
 {
-    public class ReceivingDetailCriteria : ReceivingDetail
+    public class AssetTypeCriteria : AssetType
     {
-        public bool mForFixedAsset { get; set; }
     }
 }

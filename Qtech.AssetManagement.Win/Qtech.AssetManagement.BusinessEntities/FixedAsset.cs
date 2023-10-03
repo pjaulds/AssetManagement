@@ -11,22 +11,27 @@ namespace Qtech.AssetManagement.BusinessEntities
 
         public override Int32 mId { get; set; }
 
+        [Display(Name = "Date Filed")]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:D}")]
+        public DateTime mDateFiled { get; set; }
+
         [Required]
         [StringLength(50, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 3)]
         [Display(Name = "Code/Number")]
         [NotNullOrEmpty(Message = "Please enter asset code/number.")]
-        public String mCode { get; set; }
+        public String mAssetNo { get; set; }
+        
+        [NotEqualTo(Message = "Please select item", mValue = "0")]
+        public Int32 mProductId { get; set; }
+        public String mProductCode { get; set; }
+        public String mProductName { get; set; }
 
-        [Required]
-        [StringLength(50, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 3)]
-        [Display(Name = "Functional Name")]
-        [NotNullOrEmpty(Message = "Please enter asset name.")]
-        public String mName { get; set; }
+        public Int32 mReceivingDetailId { get; set; }
 
         [Display(Name = "Asset Type")]
         [NotEqualTo(Message = "Please select asset type", mValue = "0")]
-        public Int32 mTypeId { get; set; }
-        public String mTypeName { get; set; }
+        public Int32 mAssetTypeId { get; set; }
+        public String mAssetTypeName { get; set; }
 
         [Display(Name = "Functional Location")]
         [NotEqualTo(Message = "Please select functional location", mValue = "0")]

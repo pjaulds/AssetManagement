@@ -279,6 +279,17 @@ namespace Qtech.AssetManagement.Win
                     }
                     else paymentModeForm.Select();
                     break;
+                case "AssetType":
+                    if (!AllowToAccess((Int32)Modules.AssetType)) return;
+                    Maintenance.AssetType.Default assetTypeForm = null;
+                    if ((assetTypeForm = (Maintenance.AssetType.Default)IsFormAlreadyOpen(typeof(Maintenance.AssetType.Default))) == null)
+                    {
+                        Maintenance.AssetType.Default assetTypeFormChild = new Maintenance.AssetType.Default();
+                        assetTypeFormChild.MdiParent = this;
+                        assetTypeFormChild.Show();
+                    }
+                    else assetTypeForm.Select();
+                    break;
             }
         }
 

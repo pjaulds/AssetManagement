@@ -11,11 +11,10 @@ namespace Qtech.AssetManagement.BusinessEntities
 
         public override Int32 mId { get; set; }
 
-        [Required]
-        [StringLength(50, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 3)]
         [Display(Name = "Asset Type")]
-        [NotNullOrEmpty(Message = "Please enter valid asset type.")]
-        public String mAssetType { get; set; }
+        [NotEqualTo(Message = "Please select asset type", mValue = "0")]
+        public Int32 mAssetTypeId { get; set; }
+        public String mAssetTypeName { get; set; }
 
         [Display(Name = "Asset Account")]
         [NotEqualTo(Message = "Please select asset account", mValue = "0")]

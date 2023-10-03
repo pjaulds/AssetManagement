@@ -13,9 +13,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Qtech.AssetManagement.Setup.FixedAssetSetting
+namespace Qtech.AssetManagement.Maintenance.AssetType
 {
-    public partial class Default : Form, ICRUD, IComboSelection
+    public partial class Default : Form, ICRUD
     {
         public Default()
         {
@@ -38,29 +38,29 @@ namespace Qtech.AssetManagement.Setup.FixedAssetSetting
                 if (ultraGrid1.ActiveRow.Index == -1)
                     return 0;
                 else
-                    return ((BusinessEntities.FixedAssetSetting)ultraGrid1.ActiveRow.ListObject).mId;
+                    return ((BusinessEntities.AssetType)ultraGrid1.ActiveRow.ListObject).mId;
             }
         }
         #endregion
 
         #region Private Methods
-        private void LoadFixedAssetSetting()
+        private void LoadAssetType()
         {
-            ultraGrid1.SetDataBinding(FixedAssetSettingManager.GetList(), null, true);
+            ultraGrid1.SetDataBinding(AssetTypeManager.GetList(), null, true);
             ultraGrid1.Refresh();
         }
 
-        private int SaveFixedAssetSetting()
+        private int SaveAssetType()
         {
-            BusinessEntities.FixedAssetSetting item = new BusinessEntities.FixedAssetSetting();
-            LoadFixedAssetSettingFromFormControls(item);
+            BusinessEntities.AssetType item = new BusinessEntities.AssetType();
+            LoadAssetTypeFromFormControls(item);
 
             //validate if all the rules of Status has been meet
             if (item.Validate())
             {
-                Int32 id = FixedAssetSettingManager.Save(item);
+                Int32 id = AssetTypeManager.Save(item);
                 EndEditing();
-                LoadFixedAssetSetting();
+                LoadAssetType();
 
                 return id;
 
@@ -74,41 +74,19 @@ namespace Qtech.AssetManagement.Setup.FixedAssetSetting
             }
         }
 
-        private void LoadFixedAssetSettingFromFormControls(BusinessEntities.FixedAssetSetting myUser)
+        private void LoadAssetTypeFromFormControls(BusinessEntities.AssetType myUser)
         {
             myUser.mId = int.Parse(Idlabel.Text);
-            myUser.mAssetTypeId = ControlUtil.UltraComboReturnValue(AssetTypeutraCombo);
-            myUser.mAssetTypeName = AssetTypeutraCombo.Text;
-
-            myUser.mAssetAccountId = ControlUtil.UltraComboReturnValue(AssetAccountultraCombo);
-            myUser.mAssetAccountName = AssetAccountultraCombo.Text;
-
-            myUser.mAccumulatedDepreciationAccountId = ControlUtil.UltraComboReturnValue(AccumulatedDepreciationAccountultraCombo);
-            myUser.mAccumulatedDepreciationAccountName = AccumulatedDepreciationAccountultraCombo.Text;
-
-            myUser.mDepreciationExpenseAccountId = ControlUtil.UltraComboReturnValue(DepreciationExpenseAccountultraCombo);
-            myUser.mDepreciationExpenseAccountName = DepreciationExpenseAccountultraCombo.Text;
-
-            myUser.mDepreciationMethodId = ControlUtil.UltraComboReturnValue(DepreciationMethodultraCombo);
-            myUser.mDepreciationMethodName = DepreciationMethodultraCombo.Text;
-
-            myUser.mAveragingMethodId = ControlUtil.UltraComboReturnValue(AveragingMethodultraCombo);
-            myUser.mAveragingMethodName = AveragingMethodultraCombo.Text;
-
-            myUser.mUsefulLifeYears = ControlUtil.TextBoxDecimal(UsefulLifeYearstextBox);
+            myUser.mCode = CodetextBox.Text;
+            myUser.mName = NametextBox.Text;
             myUser.mUserId = SessionUtil.mUser.mId;
         }
 
-        private void LoadFormControlsFromUser(BusinessEntities.FixedAssetSetting myFixedAssetSetting)
+        private void LoadFormControlsFromUser(BusinessEntities.AssetType myAssetType)
         {
-            Idlabel.Text = myFixedAssetSetting.mId.ToString();
-            AssetTypeutraCombo.Value = myFixedAssetSetting.mAssetTypeId;
-            AssetAccountultraCombo.Value = myFixedAssetSetting.mAssetAccountId;
-            AccumulatedDepreciationAccountultraCombo.Value = myFixedAssetSetting.mAccumulatedDepreciationAccountId;
-            DepreciationExpenseAccountultraCombo.Value = myFixedAssetSetting.mDepreciationExpenseAccountId;
-            DepreciationMethodultraCombo.Value = myFixedAssetSetting.mDepreciationMethodId;
-            AveragingMethodultraCombo.Value = myFixedAssetSetting.mAveragingMethodId;
-            UsefulLifeYearstextBox.Text = myFixedAssetSetting.mUsefulLifeYears.ToString();
+            Idlabel.Text = myAssetType.mId.ToString();
+            CodetextBox.Text = myAssetType.mCode;
+            NametextBox.Text = myAssetType.mName;
         }
 
         private void EndEditing()
@@ -132,13 +110,35 @@ namespace Qtech.AssetManagement.Setup.FixedAssetSetting
             EndEditing();
             ControlUtil.ExpandPanel(splitContainer1);
 
-            AssetTypeutraCombo.Focus();
+            CodetextBox.Focus();
 
         }
 
         public int SaveRecords()
-        {           
-            return SaveFixedAssetSetting();
+        {
+            BrokenRulesCollection rules = new BrokenRulesCollection();
+
+            AssetTypeCriteria criteria = new AssetTypeCriteria();
+            criteria.mId = int.Parse(Idlabel.Text);
+            criteria.mName = NametextBox.Text;
+            if (AssetTypeManager.SelectCountForGetList(criteria) > 0)
+                rules.Add(new BrokenRule("", "Account title already exists."));
+
+            criteria = new AssetTypeCriteria();
+            criteria.mId = int.Parse(Idlabel.Text);
+            criteria.mCode = CodetextBox.Text;
+            if (AssetTypeManager.SelectCountForGetList(criteria) > 0)
+                rules.Add(new BrokenRule("", "Account code already exists."));
+
+            if (rules.Count > 0)
+            {
+                ValidationListForm validationForm = new ValidationListForm();
+                validationForm.mBrokenRules = rules;
+                validationForm.ShowDialog();
+
+                return 0;
+            }
+            return SaveAssetType();
         }
 
         public void CancelTransaction()
@@ -157,12 +157,12 @@ namespace Qtech.AssetManagement.Setup.FixedAssetSetting
 
             if (MessageUtil.AskDelete())
             {
-                BusinessEntities.FixedAssetSetting item = FixedAssetSettingManager.GetItem(_mId);
+                BusinessEntities.AssetType item = AssetTypeManager.GetItem(_mId);
                 item.mUserId = SessionUtil.mUser.mId;
 
-                FixedAssetSettingManager.Delete(item);
+                AssetTypeManager.Delete(item);
 
-                LoadFixedAssetSetting();
+                LoadAssetType();
 
             }
         }
@@ -195,11 +195,11 @@ namespace Qtech.AssetManagement.Setup.FixedAssetSetting
                 return;
             }
 
-            BusinessEntities.FixedAssetSetting item = FixedAssetSettingManager.GetItem(_mId);
+            BusinessEntities.AssetType item = AssetTypeManager.GetItem(_mId);
             LoadFormControlsFromUser(item);
 
             ControlUtil.ExpandPanel(splitContainer1);
-            AssetTypeutraCombo.Focus();
+            CodetextBox.Focus();
         }
 
         private void ultraGrid1_BeforeRowsDeleted(object sender, Infragistics.Win.UltraWinGrid.BeforeRowsDeletedEventArgs e)
@@ -230,18 +230,18 @@ namespace Qtech.AssetManagement.Setup.FixedAssetSetting
         {
             SessionUtil.UserValidate(ref allow_select, ref allow_insert,
                 ref allow_update, ref allow_delete, ref allow_print,
-                (int)Modules.FixedAssetSetting);
+                (int)Modules.AssetType);
 
             EndEditing();
 
             ThemeUtil.Controls(splitContainer1.Panel2);
             ControlUtil.TextBoxEnterLeaveEventHandler(splitContainer1.Panel2);
-            LoadFixedAssetSetting();
+            LoadAssetType();
         }
 
         private void Savebutton_Click(object sender, EventArgs e)
         {
-            SaveFixedAssetSetting();
+            SaveAssetType();
         }
 
         private void Cancelbutton_Click(object sender, EventArgs e)
@@ -249,25 +249,5 @@ namespace Qtech.AssetManagement.Setup.FixedAssetSetting
             CancelTransaction();
         }
 
-        public void RefreshAllSelection()
-        {
-            UltraComboUtil.AssetType(AssetTypeutraCombo);
-            UltraComboUtil.AssetAccount(AssetAccountultraCombo);
-            UltraComboUtil.AccumulatedDepreciationAccount(AccumulatedDepreciationAccountultraCombo);
-            UltraComboUtil.DepreciationExpenseAccount(DepreciationExpenseAccountultraCombo);
-            UltraComboUtil.DepreciationMethod(DepreciationMethodultraCombo);
-            UltraComboUtil.AveragingMethod(AveragingMethodultraCombo);
-        }
-
-        private void FixedAssetSettingdateTimePicker_ValueChanged(object sender, EventArgs e)
-        {
-            FixedAssetSettingDate date;
-            if (FixedAssetSettingDateManager.SelectCountForGetList(new FixedAssetSettingDateCriteria()) == 0) date = new FixedAssetSettingDate();
-            else date = FixedAssetSettingDateManager.GetList().First();
-
-            date.mDate = FixedAssetSettingdateTimePicker.Value.Date;
-            date.mUserId = SessionUtil.mUser.mId;
-            FixedAssetSettingDateManager.Save(date);
-        }
     }
 }

@@ -22,6 +22,7 @@
         Receiving = 18,
         Unit = 19,
         PaymentMode = 20,
-        PurchaseVoucher = 21
+        PurchaseVoucher = 21,
+        AssetType = 22
     }
 }

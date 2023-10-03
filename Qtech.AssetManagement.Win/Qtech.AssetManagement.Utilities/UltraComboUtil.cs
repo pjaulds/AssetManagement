@@ -12,6 +12,16 @@ namespace Qtech.AssetManagement.Utilities
     public static class UltraComboUtil
     {
 
+        public static void AssetType(UltraCombo myUltraCombo)
+        {
+            myUltraCombo.ValueMember = "mId";
+            myUltraCombo.DisplayMember = "mName";
+
+            myUltraCombo.SetDataBinding(AssetTypeManager.GetList(), null, true);
+            myUltraCombo.Refresh();
+        }
+
+
         public static void AssetAccount(UltraCombo myUltraCombo)
         {
             myUltraCombo.ValueMember = "mId";
@@ -65,16 +75,7 @@ namespace Qtech.AssetManagement.Utilities
             myUltraCombo.SetDataBinding(FunctionalLocationManager.GetList(), null, true);
             myUltraCombo.Refresh();
         }
-
-        public static void AssetType(UltraCombo myUltraCombo)
-        {
-            myUltraCombo.ValueMember = "mId";
-            myUltraCombo.DisplayMember = "mAssetType";
-
-            myUltraCombo.SetDataBinding(FixedAssetSettingManager.GetList(), null, true);
-            myUltraCombo.Refresh();
-        }
-
+        
         public static void Personnel(UltraCombo myUltraCombo)
         {
             myUltraCombo.ValueMember = "mId";

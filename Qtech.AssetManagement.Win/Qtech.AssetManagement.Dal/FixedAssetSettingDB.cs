@@ -101,7 +101,7 @@ namespace Qtech.AssetManagement.Dal
                 myCommand.CommandType = CommandType.StoredProcedure;
                 myCommand.CommandText = "amQt_spFixedAssetSettingInsertUpdateSingleItem";
 
-                Helpers.CreateParameter(myCommand, DbType.String, "@asset_type", myFixedAssetSetting.mAssetType);
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@asset_type_id", myFixedAssetSetting.mAssetTypeId);
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@asset_account_id", myFixedAssetSetting.mAssetAccountId);
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@accumulated_depreciation_account_id", myFixedAssetSetting.mAccumulatedDepreciationAccountId);
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@depreciation_expense_account_id", myFixedAssetSetting.mDepreciationExpenseAccountId);
@@ -153,7 +153,8 @@ namespace Qtech.AssetManagement.Dal
             FixedAssetSetting fixedassetsetting = new FixedAssetSetting();
 
             fixedassetsetting.mId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("id"));
-            fixedassetsetting.mAssetType = myDataRecord.GetString(myDataRecord.GetOrdinal("asset_type"));
+            fixedassetsetting.mAssetTypeId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("asset_type_id"));
+            fixedassetsetting.mAssetTypeName = myDataRecord.GetString(myDataRecord.GetOrdinal("asset_type_name"));
 
             fixedassetsetting.mAssetAccountCode = myDataRecord.GetString(myDataRecord.GetOrdinal("asset_account_code"));
             fixedassetsetting.mAssetAccountName = myDataRecord.GetString(myDataRecord.GetOrdinal("asset_account_name"));

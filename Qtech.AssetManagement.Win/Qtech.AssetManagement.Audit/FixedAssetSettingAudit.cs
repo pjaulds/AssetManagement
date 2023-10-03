@@ -10,13 +10,13 @@ namespace Qtech.AssetManagement.Audit
             AuditCollection audit_collection = new AuditCollection();
             BusinessEntities.Audit audit = new BusinessEntities.Audit();
 
-            if (fixedassetsetting.mAssetType != fixedassetsettingOld.mAssetType)
+            if (fixedassetsetting.mAssetTypeId != fixedassetsettingOld.mAssetTypeId)
             {
                 audit = new BusinessEntities.Audit();
                 LoadCommonData(ref audit, fixedassetsetting);
                 audit.mField = "Asset Type";
-                audit.mOldValue = fixedassetsettingOld.mAssetType.ToString();
-                audit.mNewValue = fixedassetsetting.mAssetType.ToString();
+                audit.mOldValue = fixedassetsettingOld.mAssetTypeName.ToString();
+                audit.mNewValue = fixedassetsetting.mAssetTypeName.ToString();
                 audit_collection.Add(audit);
             }
 

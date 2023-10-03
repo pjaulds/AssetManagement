@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccumulatedDepreciationAccount.cs" />
+    <Compile Include="AssetType.cs" />
+    <Compile Include="Collection\AssetTypeCollection.cs" />
     <Compile Include="Collection\PaymentMode.cs" />
     <Compile Include="Collection\PurchaseVoucherCollection.cs" />
     <Compile Include="Collection\Unit.cs" />
@@ -57,6 +59,7 @@
     <Compile Include="Collection\ProductCollection.cs" />
     <Compile Include="Collection\PersonnelCollection.cs" />
     <Compile Include="PurchaseVoucher.cs" />
+    <Compile Include="SearchCriteria\AssetTypeCriteria.cs" />
     <Compile Include="SearchCriteria\PaymentModeCriteria.cs" />
     <Compile Include="SearchCriteria\PurchaseVoucherCriteria.cs" />
     <Compile Include="SearchCriteria\UnitCriteria.cs" />

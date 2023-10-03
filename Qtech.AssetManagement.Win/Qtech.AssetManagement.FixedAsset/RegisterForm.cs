@@ -25,10 +25,8 @@ namespace Qtech.AssetManagement.FixedAsset
         private void LoadFormControlsFromFixedAsset()
         {
             BusinessEntities.FixedAsset fa = FixedAssetManager.GetItem(mId);
-
-            CodetextBox.Text = fa.mCode;
-            NametextBox.Text = fa.mName;
-            TypetextBox.Text = fa.mTypeName;
+            
+            TypetextBox.Text = fa.mAssetTypeName;
 
             LoadFormControlsFromAssetType(fa);
 
@@ -45,7 +43,8 @@ namespace Qtech.AssetManagement.FixedAsset
 
         private void LoadFormControlsFromAssetType(BusinessEntities.FixedAsset fa)
         {
-            FixedAssetSetting item = FixedAssetSettingManager.GetItem(fa.mTypeId);
+            FixedAssetSetting item = FixedAssetSettingManager.GetList().Where(x => x.mAssetTypeId == fa.mAssetTypeId).First();
+            
             AssetAccounttextBox.Text = item.mAssetAccountCode + " - " + item.mAssetAccountName;
             AccumulatedDepreciationAccounttextBox.Text = item.mAccumulatedDepreciationAccountCode + " - " + item.mAccumulatedDepreciationAccountName;
             DepreciationExpenseAccounttextBox.Text = item.mDepreciationExpenseAccountCode + " - " + item.mDepreciationExpenseAccountName;
