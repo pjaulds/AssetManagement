@@ -25,20 +25,22 @@ namespace Qtech.AssetManagement.FixedAsset
         private void LoadFormControlsFromFixedAsset()
         {
             BusinessEntities.FixedAsset fa = FixedAssetManager.GetItem(mId);
-            
+
+            NametextBox.Text = fa.mProductName;
+            AssetNotextBox.Text = fa.mAssetNo;
             TypetextBox.Text = fa.mAssetTypeName;
+            FunctionalLocationtextBox.Text = fa.mFunctionalLocationName;
 
             LoadFormControlsFromAssetType(fa);
 
             WarrantyExpirytextBox.Text = fa.mWarrantyExpiry.ToString("D");
             SerialNotextBox.Text = fa.mSerialNo;
-            DescriptiontextBox.Text = fa.mDescription;
-            DepreciationStartDatelabel.Text = fa.mDepreciationStartDate.ToString("D");
-            DepreciationMethodlabel.Text = fa.mDepreciationMethodName;
-            AveragingMethodlabel.Text = fa.mAveragingMethodName;
-            PurchasePricelabel.Text = fa.mPurchasePrice.ToString("N");
-            PurchaseDatelabel.Text = fa.mPurchaseDate.ToString("D");
-            ResidualValuelabel.Text = fa.mResidualValue.ToString();
+            ModeltextBox.Text = fa.mModel;
+            PurchaseDatetextBox.Text = fa.mPurchaseDate.ToString("D");
+            PurchaseCosttextBox.Text = fa.mPurchasePrice.ToString("N");
+            ResidualValuetextBox.Text = fa.mResidualValue.ToString("N");
+            UsefulLifetextBox.Text = fa.mUsefulLifeYears.ToString();
+      
         }
 
         private void LoadFormControlsFromAssetType(BusinessEntities.FixedAsset fa)
@@ -82,6 +84,21 @@ namespace Qtech.AssetManagement.FixedAsset
 
             MessageBox.Show("Asset save as registered successfully.", "Fixed Asset", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Close();
+        }
+
+        private void Depreciatebutton_Click(object sender, EventArgs e)
+        {
+            RunDepreciationForm dep = new RunDepreciationForm();
+            dep.mFaId = mId;
+            dep.FormClosing += Dep_FormClosing;
+            dep.ShowDialog();
+        }
+
+        private void Dep_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            RunDepreciationForm dep = (RunDepreciationForm)sender;
+
+            //if (dep.mMonth == 0) return;//no selected month
         }
     }
 }

@@ -172,6 +172,15 @@ namespace Qtech.AssetManagement.FixedAsset
 
         public int SaveRecords()
         {
+            if (int.Parse(Idlabel.Text) != 0)
+            {
+                if (!allow_update)
+                {
+                    MessageUtil.NotAllowedUpdateAccess();
+                    return 0;
+                }
+            }
+
             BrokenRulesCollection rules = new BrokenRulesCollection();
             
             decimal purchasePrice = 0;
@@ -241,12 +250,7 @@ namespace Qtech.AssetManagement.FixedAsset
             if (e.Row.Index == -1)
                 return;
 
-            if (!allow_update)
-            {
-                MessageUtil.NotAllowedUpdateAccess();
-                return;
-            }
-
+          
             BusinessEntities.FixedAsset item = FixedAssetManager.GetItem(_mId);
             LoadFormControlsFromUser(item);
 
@@ -326,7 +330,7 @@ namespace Qtech.AssetManagement.FixedAsset
             UltraGridCell cell = (UltraGridCell)cell_element.GetContext(typeof(UltraGridCell));
             if (cell == null) return;
 
-            if (cell.Column.Key == "mName")
+            if (cell.Column.Key == "mProductName")
             {
                 BusinessEntities.FixedAsset item = (BusinessEntities.FixedAsset)cell.Row.ListObject;
                 RegisterForm frm = new RegisterForm();

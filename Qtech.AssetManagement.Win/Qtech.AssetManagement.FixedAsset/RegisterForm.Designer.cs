@@ -36,7 +36,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.NametextBox = new System.Windows.Forms.TextBox();
-            this.CodetextBox = new System.Windows.Forms.TextBox();
+            this.AssetNotextBox = new System.Windows.Forms.TextBox();
             this.AssetAccounttextBox = new System.Windows.Forms.TextBox();
             this.TypetextBox = new System.Windows.Forms.TextBox();
             this.SerialNotextBox = new System.Windows.Forms.TextBox();
@@ -48,26 +48,23 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.DescriptiontextBox = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.Cancelbutton = new System.Windows.Forms.Button();
             this.Savebutton = new System.Windows.Forms.Button();
-            this.DepreciationMethodlabel = new System.Windows.Forms.Label();
-            this.AveragingMethodlabel = new System.Windows.Forms.Label();
-            this.Factorlabel = new System.Windows.Forms.Label();
-            this.PurchasePricelabel = new System.Windows.Forms.Label();
-            this.PurchaseDatelabel = new System.Windows.Forms.Label();
-            this.ResidualValuelabel = new System.Windows.Forms.Label();
-            this.DepreciationStartDatelabel = new System.Windows.Forms.Label();
+            this.FunctionalLocationtextBox = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.ModeltextBox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.UsefulLifetextBox = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.ResidualValuetextBox = new System.Windows.Forms.TextBox();
+            this.PurchaseCosttextBox = new System.Windows.Forms.TextBox();
+            this.PurchaseDatetextBox = new System.Windows.Forms.TextBox();
+            this.Depreciatebutton = new System.Windows.Forms.Button();
+            this.Disposebutton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel8.SuspendLayout();
@@ -151,21 +148,21 @@
             this.NametextBox.Size = new System.Drawing.Size(250, 21);
             this.NametextBox.TabIndex = 11;
             // 
-            // CodetextBox
+            // AssetNotextBox
             // 
-            this.CodetextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CodetextBox.Location = new System.Drawing.Point(227, 116);
-            this.CodetextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.CodetextBox.MaxLength = 150;
-            this.CodetextBox.Name = "CodetextBox";
-            this.CodetextBox.ReadOnly = true;
-            this.CodetextBox.Size = new System.Drawing.Size(250, 21);
-            this.CodetextBox.TabIndex = 12;
+            this.AssetNotextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AssetNotextBox.Location = new System.Drawing.Point(227, 116);
+            this.AssetNotextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.AssetNotextBox.MaxLength = 150;
+            this.AssetNotextBox.Name = "AssetNotextBox";
+            this.AssetNotextBox.ReadOnly = true;
+            this.AssetNotextBox.Size = new System.Drawing.Size(250, 21);
+            this.AssetNotextBox.TabIndex = 12;
             // 
             // AssetAccounttextBox
             // 
             this.AssetAccounttextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AssetAccounttextBox.Location = new System.Drawing.Point(227, 170);
+            this.AssetAccounttextBox.Location = new System.Drawing.Point(227, 197);
             this.AssetAccounttextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.AssetAccounttextBox.MaxLength = 150;
             this.AssetAccounttextBox.Name = "AssetAccounttextBox";
@@ -187,7 +184,7 @@
             // SerialNotextBox
             // 
             this.SerialNotextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SerialNotextBox.Location = new System.Drawing.Point(227, 278);
+            this.SerialNotextBox.Location = new System.Drawing.Point(227, 305);
             this.SerialNotextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.SerialNotextBox.MaxLength = 150;
             this.SerialNotextBox.Name = "SerialNotextBox";
@@ -198,7 +195,7 @@
             // WarrantyExpirytextBox
             // 
             this.WarrantyExpirytextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WarrantyExpirytextBox.Location = new System.Drawing.Point(227, 251);
+            this.WarrantyExpirytextBox.Location = new System.Drawing.Point(227, 278);
             this.WarrantyExpirytextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.WarrantyExpirytextBox.MaxLength = 150;
             this.WarrantyExpirytextBox.Name = "WarrantyExpirytextBox";
@@ -209,7 +206,7 @@
             // DepreciationExpenseAccounttextBox
             // 
             this.DepreciationExpenseAccounttextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DepreciationExpenseAccounttextBox.Location = new System.Drawing.Point(227, 224);
+            this.DepreciationExpenseAccounttextBox.Location = new System.Drawing.Point(227, 251);
             this.DepreciationExpenseAccounttextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.DepreciationExpenseAccounttextBox.MaxLength = 150;
             this.DepreciationExpenseAccounttextBox.Name = "DepreciationExpenseAccounttextBox";
@@ -220,7 +217,7 @@
             // AccumulatedDepreciationAccounttextBox
             // 
             this.AccumulatedDepreciationAccounttextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AccumulatedDepreciationAccounttextBox.Location = new System.Drawing.Point(227, 197);
+            this.AccumulatedDepreciationAccounttextBox.Location = new System.Drawing.Point(227, 224);
             this.AccumulatedDepreciationAccounttextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.AccumulatedDepreciationAccounttextBox.MaxLength = 150;
             this.AccumulatedDepreciationAccounttextBox.Name = "AccumulatedDepreciationAccounttextBox";
@@ -232,7 +229,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(4, 200);
+            this.label3.Location = new System.Drawing.Point(4, 227);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(208, 13);
@@ -243,7 +240,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(4, 227);
+            this.label8.Location = new System.Drawing.Point(4, 254);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(181, 13);
@@ -254,7 +251,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(4, 173);
+            this.label9.Location = new System.Drawing.Point(4, 200);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(88, 13);
@@ -265,7 +262,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(4, 254);
+            this.label6.Location = new System.Drawing.Point(4, 281);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(99, 13);
@@ -276,130 +273,19 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(4, 281);
+            this.label10.Location = new System.Drawing.Point(4, 308);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(56, 13);
             this.label10.TabIndex = 23;
             this.label10.Text = "Serial No";
             // 
-            // DescriptiontextBox
-            // 
-            this.DescriptiontextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DescriptiontextBox.Location = new System.Drawing.Point(227, 305);
-            this.DescriptiontextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.DescriptiontextBox.MaxLength = 150;
-            this.DescriptiontextBox.Multiline = true;
-            this.DescriptiontextBox.Name = "DescriptiontextBox";
-            this.DescriptiontextBox.ReadOnly = true;
-            this.DescriptiontextBox.Size = new System.Drawing.Size(250, 75);
-            this.DescriptiontextBox.TabIndex = 24;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(4, 308);
-            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 13);
-            this.label7.TabIndex = 25;
-            this.label7.Text = "Description";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Tahoma", 10.25F);
-            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
-            this.label11.Location = new System.Drawing.Point(497, 59);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(88, 17);
-            this.label11.TabIndex = 2;
-            this.label11.Text = "BOOK VALUE";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(498, 92);
-            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(141, 13);
-            this.label12.TabIndex = 26;
-            this.label12.Text = "Depreciation Start Date";
-            // 
-            // label13
-            // 
-            this.label13.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(498, 116);
-            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(200, 18);
-            this.label13.TabIndex = 27;
-            this.label13.Text = "Depreciation Method";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label14
-            // 
-            this.label14.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(498, 170);
-            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(200, 18);
-            this.label14.TabIndex = 28;
-            this.label14.Text = "Purchase Cost";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label15
-            // 
-            this.label15.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(702, 116);
-            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(200, 18);
-            this.label15.TabIndex = 29;
-            this.label15.Text = "Averaging Method";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label16
-            // 
-            this.label16.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(702, 170);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(200, 18);
-            this.label16.TabIndex = 30;
-            this.label16.Text = "Purchase Date";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label17
-            // 
-            this.label17.Font = new System.Drawing.Font("Tahoma", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label17.Location = new System.Drawing.Point(906, 116);
-            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(200, 18);
-            this.label17.TabIndex = 31;
-            this.label17.Text = "Factor";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label18
-            // 
-            this.label18.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(906, 170);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(200, 18);
-            this.label18.TabIndex = 32;
-            this.label18.Text = "Residual Value";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // panel8
             // 
             this.panel8.Controls.Add(this.Cancelbutton);
             this.panel8.Controls.Add(this.Savebutton);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel8.Location = new System.Drawing.Point(0, 392);
+            this.panel8.Location = new System.Drawing.Point(0, 528);
             this.panel8.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(1116, 23);
@@ -435,106 +321,188 @@
             this.Savebutton.UseVisualStyleBackColor = false;
             this.Savebutton.Click += new System.EventHandler(this.Savebutton_Click);
             // 
-            // DepreciationMethodlabel
+            // FunctionalLocationtextBox
             // 
-            this.DepreciationMethodlabel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DepreciationMethodlabel.Location = new System.Drawing.Point(498, 143);
-            this.DepreciationMethodlabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.DepreciationMethodlabel.Name = "DepreciationMethodlabel";
-            this.DepreciationMethodlabel.Size = new System.Drawing.Size(200, 18);
-            this.DepreciationMethodlabel.TabIndex = 176;
-            this.DepreciationMethodlabel.Text = "Depreciation Method";
-            this.DepreciationMethodlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.FunctionalLocationtextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FunctionalLocationtextBox.Location = new System.Drawing.Point(227, 170);
+            this.FunctionalLocationtextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.FunctionalLocationtextBox.MaxLength = 150;
+            this.FunctionalLocationtextBox.Name = "FunctionalLocationtextBox";
+            this.FunctionalLocationtextBox.ReadOnly = true;
+            this.FunctionalLocationtextBox.Size = new System.Drawing.Size(250, 21);
+            this.FunctionalLocationtextBox.TabIndex = 177;
             // 
-            // AveragingMethodlabel
+            // label11
             // 
-            this.AveragingMethodlabel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AveragingMethodlabel.Location = new System.Drawing.Point(702, 143);
-            this.AveragingMethodlabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.AveragingMethodlabel.Name = "AveragingMethodlabel";
-            this.AveragingMethodlabel.Size = new System.Drawing.Size(200, 18);
-            this.AveragingMethodlabel.TabIndex = 177;
-            this.AveragingMethodlabel.Text = "Depreciation Method";
-            this.AveragingMethodlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(3, 173);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(116, 13);
+            this.label11.TabIndex = 176;
+            this.label11.Text = "Functional Location";
             // 
-            // Factorlabel
+            // label12
             // 
-            this.Factorlabel.Font = new System.Drawing.Font("Bahnschrift Light Condensed", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Factorlabel.Location = new System.Drawing.Point(906, 143);
-            this.Factorlabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Factorlabel.Name = "Factorlabel";
-            this.Factorlabel.Size = new System.Drawing.Size(200, 18);
-            this.Factorlabel.TabIndex = 178;
-            this.Factorlabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(4, 335);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(41, 13);
+            this.label12.TabIndex = 179;
+            this.label12.Text = "Model";
             // 
-            // PurchasePricelabel
+            // ModeltextBox
             // 
-            this.PurchasePricelabel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PurchasePricelabel.Location = new System.Drawing.Point(498, 197);
-            this.PurchasePricelabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.PurchasePricelabel.Name = "PurchasePricelabel";
-            this.PurchasePricelabel.Size = new System.Drawing.Size(200, 18);
-            this.PurchasePricelabel.TabIndex = 179;
-            this.PurchasePricelabel.Text = "Depreciation Method";
-            this.PurchasePricelabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ModeltextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModeltextBox.Location = new System.Drawing.Point(227, 332);
+            this.ModeltextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ModeltextBox.MaxLength = 150;
+            this.ModeltextBox.Name = "ModeltextBox";
+            this.ModeltextBox.ReadOnly = true;
+            this.ModeltextBox.Size = new System.Drawing.Size(250, 21);
+            this.ModeltextBox.TabIndex = 178;
             // 
-            // PurchaseDatelabel
+            // label7
             // 
-            this.PurchaseDatelabel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.PurchaseDatelabel.Location = new System.Drawing.Point(702, 197);
-            this.PurchaseDatelabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.PurchaseDatelabel.Name = "PurchaseDatelabel";
-            this.PurchaseDatelabel.Size = new System.Drawing.Size(200, 18);
-            this.PurchaseDatelabel.TabIndex = 180;
-            this.PurchaseDatelabel.Text = "Depreciation Method";
-            this.PurchaseDatelabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(4, 443);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(72, 13);
+            this.label7.TabIndex = 187;
+            this.label7.Text = "Usefule Life";
             // 
-            // ResidualValuelabel
+            // UsefulLifetextBox
             // 
-            this.ResidualValuelabel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResidualValuelabel.Location = new System.Drawing.Point(906, 197);
-            this.ResidualValuelabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.ResidualValuelabel.Name = "ResidualValuelabel";
-            this.ResidualValuelabel.Size = new System.Drawing.Size(200, 18);
-            this.ResidualValuelabel.TabIndex = 181;
-            this.ResidualValuelabel.Text = "Depreciation Method";
-            this.ResidualValuelabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.UsefulLifetextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsefulLifetextBox.Location = new System.Drawing.Point(227, 440);
+            this.UsefulLifetextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.UsefulLifetextBox.MaxLength = 150;
+            this.UsefulLifetextBox.Name = "UsefulLifetextBox";
+            this.UsefulLifetextBox.ReadOnly = true;
+            this.UsefulLifetextBox.Size = new System.Drawing.Size(250, 21);
+            this.UsefulLifetextBox.TabIndex = 186;
             // 
-            // DepreciationStartDatelabel
+            // label13
             // 
-            this.DepreciationStartDatelabel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DepreciationStartDatelabel.Location = new System.Drawing.Point(643, 89);
-            this.DepreciationStartDatelabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.DepreciationStartDatelabel.Name = "DepreciationStartDatelabel";
-            this.DepreciationStartDatelabel.Size = new System.Drawing.Size(200, 18);
-            this.DepreciationStartDatelabel.TabIndex = 182;
-            this.DepreciationStartDatelabel.Text = "Depreciation Method";
-            this.DepreciationStartDatelabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(4, 416);
+            this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(89, 13);
+            this.label13.TabIndex = 185;
+            this.label13.Text = "Residual Value";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(4, 389);
+            this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(87, 13);
+            this.label14.TabIndex = 184;
+            this.label14.Text = "Purchase Cost";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(4, 362);
+            this.label15.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(89, 13);
+            this.label15.TabIndex = 183;
+            this.label15.Text = "Purchase Date";
+            // 
+            // ResidualValuetextBox
+            // 
+            this.ResidualValuetextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResidualValuetextBox.Location = new System.Drawing.Point(227, 413);
+            this.ResidualValuetextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.ResidualValuetextBox.MaxLength = 150;
+            this.ResidualValuetextBox.Name = "ResidualValuetextBox";
+            this.ResidualValuetextBox.ReadOnly = true;
+            this.ResidualValuetextBox.Size = new System.Drawing.Size(250, 21);
+            this.ResidualValuetextBox.TabIndex = 182;
+            // 
+            // PurchaseCosttextBox
+            // 
+            this.PurchaseCosttextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PurchaseCosttextBox.Location = new System.Drawing.Point(227, 386);
+            this.PurchaseCosttextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.PurchaseCosttextBox.MaxLength = 150;
+            this.PurchaseCosttextBox.Name = "PurchaseCosttextBox";
+            this.PurchaseCosttextBox.ReadOnly = true;
+            this.PurchaseCosttextBox.Size = new System.Drawing.Size(250, 21);
+            this.PurchaseCosttextBox.TabIndex = 181;
+            // 
+            // PurchaseDatetextBox
+            // 
+            this.PurchaseDatetextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PurchaseDatetextBox.Location = new System.Drawing.Point(227, 359);
+            this.PurchaseDatetextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.PurchaseDatetextBox.MaxLength = 150;
+            this.PurchaseDatetextBox.Name = "PurchaseDatetextBox";
+            this.PurchaseDatetextBox.ReadOnly = true;
+            this.PurchaseDatetextBox.Size = new System.Drawing.Size(250, 21);
+            this.PurchaseDatetextBox.TabIndex = 180;
+            // 
+            // Depreciatebutton
+            // 
+            this.Depreciatebutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(43)))), ((int)(((byte)(137)))));
+            this.Depreciatebutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Depreciatebutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Depreciatebutton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.Depreciatebutton.Location = new System.Drawing.Point(947, 51);
+            this.Depreciatebutton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Depreciatebutton.Name = "Depreciatebutton";
+            this.Depreciatebutton.Size = new System.Drawing.Size(77, 23);
+            this.Depreciatebutton.TabIndex = 188;
+            this.Depreciatebutton.Text = "Depreciate";
+            this.Depreciatebutton.UseVisualStyleBackColor = false;
+            this.Depreciatebutton.Click += new System.EventHandler(this.Depreciatebutton_Click);
+            // 
+            // Disposebutton
+            // 
+            this.Disposebutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(43)))), ((int)(((byte)(137)))));
+            this.Disposebutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Disposebutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Disposebutton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.Disposebutton.Location = new System.Drawing.Point(1028, 51);
+            this.Disposebutton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Disposebutton.Name = "Disposebutton";
+            this.Disposebutton.Size = new System.Drawing.Size(77, 23);
+            this.Disposebutton.TabIndex = 189;
+            this.Disposebutton.Text = "Dispose";
+            this.Disposebutton.UseVisualStyleBackColor = false;
             // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1116, 415);
-            this.Controls.Add(this.DepreciationStartDatelabel);
-            this.Controls.Add(this.ResidualValuelabel);
-            this.Controls.Add(this.PurchaseDatelabel);
-            this.Controls.Add(this.PurchasePricelabel);
-            this.Controls.Add(this.Factorlabel);
-            this.Controls.Add(this.AveragingMethodlabel);
-            this.Controls.Add(this.DepreciationMethodlabel);
-            this.Controls.Add(this.panel8);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.label15);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label11);
+            this.ClientSize = new System.Drawing.Size(1116, 551);
+            this.Controls.Add(this.Disposebutton);
+            this.Controls.Add(this.Depreciatebutton);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.DescriptiontextBox);
+            this.Controls.Add(this.UsefulLifetextBox);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label14);
+            this.Controls.Add(this.label15);
+            this.Controls.Add(this.ResidualValuetextBox);
+            this.Controls.Add(this.PurchaseCosttextBox);
+            this.Controls.Add(this.PurchaseDatetextBox);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.ModeltextBox);
+            this.Controls.Add(this.FunctionalLocationtextBox);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.panel8);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
@@ -546,7 +514,7 @@
             this.Controls.Add(this.AccumulatedDepreciationAccounttextBox);
             this.Controls.Add(this.AssetAccounttextBox);
             this.Controls.Add(this.TypetextBox);
-            this.Controls.Add(this.CodetextBox);
+            this.Controls.Add(this.AssetNotextBox);
             this.Controls.Add(this.NametextBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
@@ -578,7 +546,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox NametextBox;
-        private System.Windows.Forms.TextBox CodetextBox;
+        private System.Windows.Forms.TextBox AssetNotextBox;
         private System.Windows.Forms.TextBox AssetAccounttextBox;
         private System.Windows.Forms.TextBox TypetextBox;
         private System.Windows.Forms.TextBox SerialNotextBox;
@@ -590,25 +558,22 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox DescriptiontextBox;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button Cancelbutton;
         private System.Windows.Forms.Button Savebutton;
-        private System.Windows.Forms.Label DepreciationMethodlabel;
-        private System.Windows.Forms.Label AveragingMethodlabel;
-        private System.Windows.Forms.Label Factorlabel;
-        private System.Windows.Forms.Label PurchasePricelabel;
-        private System.Windows.Forms.Label PurchaseDatelabel;
-        private System.Windows.Forms.Label ResidualValuelabel;
-        private System.Windows.Forms.Label DepreciationStartDatelabel;
+        private System.Windows.Forms.TextBox FunctionalLocationtextBox;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox ModeltextBox;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox UsefulLifetextBox;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox ResidualValuetextBox;
+        private System.Windows.Forms.TextBox PurchaseCosttextBox;
+        private System.Windows.Forms.TextBox PurchaseDatetextBox;
+        private System.Windows.Forms.Button Depreciatebutton;
+        private System.Windows.Forms.Button Disposebutton;
     }
 }

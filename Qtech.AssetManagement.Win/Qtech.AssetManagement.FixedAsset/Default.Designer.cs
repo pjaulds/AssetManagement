@@ -226,7 +226,6 @@
             // 
             // ultraGrid1
             // 
-            this.ultraGrid1.DataMember = null;
             appearance1.BackColor = System.Drawing.SystemColors.Window;
             appearance1.BorderColor = System.Drawing.SystemColors.InactiveCaption;
             this.ultraGrid1.DisplayLayout.Appearance = appearance1;
@@ -1009,7 +1008,6 @@
             // 
             // AssetTypeutraCombo
             // 
-            this.AssetTypeutraCombo.DataMember = null;
             appearance52.BackColor = System.Drawing.SystemColors.Window;
             appearance52.BorderColor = System.Drawing.SystemColors.InactiveCaption;
             this.AssetTypeutraCombo.DisplayLayout.Appearance = appearance52;
