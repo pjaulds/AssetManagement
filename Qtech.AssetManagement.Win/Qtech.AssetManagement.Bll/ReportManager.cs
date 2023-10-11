@@ -15,5 +15,10 @@ namespace Qtech.AssetManagement.Bll
         {
             return ReportDB.DepreciationStraightLineFullMonth(reportCriteria);
         }
+
+        public static DataTable DepreciationScheduleStraightLineFullMonthMonthly(ReportCriteria reportCriteria)
+        {
+            return ReportDB.DepreciationScheduleStraightLineFullMonthMonthly(reportCriteria);
+        }
     }
 }

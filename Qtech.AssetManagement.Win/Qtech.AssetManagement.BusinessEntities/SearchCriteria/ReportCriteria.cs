@@ -8,10 +8,12 @@ namespace Qtech.AssetManagement.BusinessEntities
 {
     public class ReportCriteria
     {
+        public int mId { get; set; }
         public DateTime mPurchaseDate { get; set; }
         public decimal mPurchaseCost { get; set; }
         public decimal mResidualValue { get; set; }
         public int mUsefulLifeYears { get; set; }
         public short mYear { get; set; }
+        
     }
 }
