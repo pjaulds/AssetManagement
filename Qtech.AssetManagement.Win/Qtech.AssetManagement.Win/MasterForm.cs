@@ -290,6 +290,17 @@ namespace Qtech.AssetManagement.Win
                     }
                     else assetTypeForm.Select();
                     break;
+                case "DepreciationSchedule":
+                    if (!AllowToAccess((Int32)Modules.DepreciationSchedule)) return;
+                    DepreciationSchedule.Default depreciationScheduleForm = null;
+                    if ((depreciationScheduleForm = (DepreciationSchedule.Default)IsFormAlreadyOpen(typeof(DepreciationSchedule.Default))) == null)
+                    {
+                        DepreciationSchedule.Default depreciationScheduleFormChild = new DepreciationSchedule.Default();
+                        depreciationScheduleFormChild.MdiParent = this;
+                        depreciationScheduleFormChild.Show();
+                    }
+                    else depreciationScheduleForm.Select();
+                    break;
             }
         }
 

@@ -252,9 +252,9 @@ namespace Qtech.AssetManagement.Setup.FixedAssetSetting
         public void RefreshAllSelection()
         {
             UltraComboUtil.AssetType(AssetTypeutraCombo);
-            UltraComboUtil.AssetAccount(AssetAccountultraCombo);
-            UltraComboUtil.AccumulatedDepreciationAccount(AccumulatedDepreciationAccountultraCombo);
-            UltraComboUtil.DepreciationExpenseAccount(DepreciationExpenseAccountultraCombo);
+            UltraComboUtil.ChartOfAccount(AssetAccountultraCombo);
+            UltraComboUtil.ChartOfAccount(AccumulatedDepreciationAccountultraCombo);
+            UltraComboUtil.ChartOfAccount(DepreciationExpenseAccountultraCombo);
             UltraComboUtil.DepreciationMethod(DepreciationMethodultraCombo);
             UltraComboUtil.AveragingMethod(AveragingMethodultraCombo);
         }

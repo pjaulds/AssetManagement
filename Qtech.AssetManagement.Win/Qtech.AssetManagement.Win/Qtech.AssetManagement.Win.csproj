@@ -152,6 +152,10 @@
       <Project>{afdea6ec-00a3-4566-bd3c-b7d66e823064}</Project>
       <Name>Qtech.AssetManagement.Dal</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Qtech.AssetManagement.DepreciationSchedule\Qtech.AssetManagement.DepreciationSchedule.csproj">
+      <Project>{13796678-420e-4a98-ae05-ab54d4596969}</Project>
+      <Name>Qtech.AssetManagement.DepreciationSchedule</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Qtech.AssetManagement.FixedAsset\Qtech.AssetManagement.FixedAsset.csproj">
       <Project>{11c73cf8-55b5-4c47-8c88-1cda60928769}</Project>
       <Name>Qtech.AssetManagement.FixedAsset</Name>

@@ -21,6 +21,15 @@ namespace Qtech.AssetManagement.Utilities
             myUltraCombo.Refresh();
         }
 
+        public static void ChartOfAccount(UltraCombo myUltraCombo)
+        {
+            myUltraCombo.ValueMember = "mId";
+            myUltraCombo.DisplayMember = "mName";
+
+            myUltraCombo.SetDataBinding(ChartOfAccountManager.GetList(), null, true);
+            myUltraCombo.Refresh();
+        }
+
 
         public static void AssetAccount(UltraCombo myUltraCombo)
         {

@@ -106,6 +106,12 @@ namespace Qtech.AssetManagement.Dal
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@fixed_asset_id", myDepreciationJournal.mFixedAssetId);
                 Helpers.CreateParameter(myCommand, DbType.Int16, "@year", myDepreciationJournal.mYear);
                 Helpers.CreateParameter(myCommand, DbType.Byte, "@month", myDepreciationJournal.mMonth);
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@depreciation_expense_account_id", myDepreciationJournal.mDepreciationExpenseAccountId);
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@depreciation_expense_account_debit_credit", myDepreciationJournal.mDepreciationExpenseAccountDebitCredit);
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@accumulated_depreciation_account_id", myDepreciationJournal.mAccumulatedDepreciationAccountId);
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@accumulated_depreciation_account_debit_credit", myDepreciationJournal.mAccumulatedDepreciationAccountDebitCredit);
+                Helpers.CreateParameter(myCommand, DbType.Decimal, "@amount", myDepreciationJournal.mAmount);
+                Helpers.CreateParameter(myCommand, DbType.String, "@description", myDepreciationJournal.mDescription);
 
                 Helpers.SetSaveParameters(myCommand, myDepreciationJournal);
 
@@ -154,6 +160,15 @@ namespace Qtech.AssetManagement.Dal
             depreciationjournal.mFixedAssetId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("fixed_asset_id"));
             depreciationjournal.mYear = myDataRecord.GetInt16(myDataRecord.GetOrdinal("year"));
             depreciationjournal.mMonth = myDataRecord.GetByte(myDataRecord.GetOrdinal("month"));
+            depreciationjournal.mDepreciationExpenseAccountName = myDataRecord.GetString(myDataRecord.GetOrdinal("depreciation_expense_account_name"));
+            depreciationjournal.mDepreciationExpenseAccountId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("depreciation_expense_account_id"));
+            depreciationjournal.mDepreciationExpenseAccountDebitCredit = myDataRecord.GetBoolean(myDataRecord.GetOrdinal("depreciation_expense_account_debit_credit"));
+            depreciationjournal.mAccumulatedDepreciationAccountName = myDataRecord.GetString(myDataRecord.GetOrdinal("accumulated_depreciation_account_name"));
+            depreciationjournal.mAccumulatedDepreciationAccountId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("accumulated_depreciation_account_id"));
+            depreciationjournal.mAccumulatedDepreciationAccountDebitCredit = myDataRecord.GetBoolean(myDataRecord.GetOrdinal("accumulated_depreciation_account_debit_credit"));
+            depreciationjournal.mAmount = myDataRecord.GetDecimal(myDataRecord.GetOrdinal("amount"));
+            depreciationjournal.mDescription = myDataRecord.GetString(myDataRecord.GetOrdinal("description"));
+
             return depreciationjournal;
         }
     }

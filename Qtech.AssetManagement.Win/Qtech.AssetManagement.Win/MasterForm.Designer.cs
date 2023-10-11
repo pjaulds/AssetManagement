@@ -49,9 +49,7 @@
             this.setupToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fixedAssetSettingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
-            this.assetAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.accumulatedDepreciationAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.depreciationExpenseAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.assetTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.depreciationMethodToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.averagingMethodToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chartOfAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -67,7 +65,7 @@
             this.functionalLocationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ultraTabbedMdiManager1 = new Infragistics.Win.UltraWinTabbedMdi.UltraTabbedMdiManager(this.components);
             this.BackgroundpictureBox = new System.Windows.Forms.PictureBox();
-            this.assetTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.depreciationScheduleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ultraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BackgroundpictureBox)).BeginInit();
@@ -79,7 +77,8 @@
             this.fileMenu,
             this.maintenanceToolStripMenuItem,
             this.setupToolStripMenuItem,
-            this.fixedAssetManagementToolStripMenuItem});
+            this.fixedAssetManagementToolStripMenuItem,
+            this.depreciationScheduleToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(673, 24);
@@ -211,9 +210,6 @@
             this.fixedAssetSettingToolStripMenuItem,
             this.toolStripMenuItem1,
             this.assetTypeToolStripMenuItem,
-            this.assetAccountToolStripMenuItem,
-            this.accumulatedDepreciationAccountToolStripMenuItem,
-            this.depreciationExpenseAccountToolStripMenuItem,
             this.depreciationMethodToolStripMenuItem,
             this.averagingMethodToolStripMenuItem,
             this.chartOfAccountToolStripMenuItem,
@@ -225,7 +221,7 @@
             // fixedAssetSettingToolStripMenuItem
             // 
             this.fixedAssetSettingToolStripMenuItem.Name = "fixedAssetSettingToolStripMenuItem";
-            this.fixedAssetSettingToolStripMenuItem.Size = new System.Drawing.Size(275, 22);
+            this.fixedAssetSettingToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.fixedAssetSettingToolStripMenuItem.Tag = "FixedAssetSetting";
             this.fixedAssetSettingToolStripMenuItem.Text = "1. Fixed Asset Setting";
             this.fixedAssetSettingToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
@@ -233,62 +229,46 @@
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(272, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(195, 6);
             // 
-            // assetAccountToolStripMenuItem
+            // assetTypeToolStripMenuItem
             // 
-            this.assetAccountToolStripMenuItem.Name = "assetAccountToolStripMenuItem";
-            this.assetAccountToolStripMenuItem.Size = new System.Drawing.Size(275, 22);
-            this.assetAccountToolStripMenuItem.Tag = "AssetAccount";
-            this.assetAccountToolStripMenuItem.Text = "3. Asset Account";
-            this.assetAccountToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
-            // 
-            // accumulatedDepreciationAccountToolStripMenuItem
-            // 
-            this.accumulatedDepreciationAccountToolStripMenuItem.Name = "accumulatedDepreciationAccountToolStripMenuItem";
-            this.accumulatedDepreciationAccountToolStripMenuItem.Size = new System.Drawing.Size(275, 22);
-            this.accumulatedDepreciationAccountToolStripMenuItem.Tag = "AccumulatedDepreciationAccount";
-            this.accumulatedDepreciationAccountToolStripMenuItem.Text = "4. Accumulated Depreciation Account";
-            this.accumulatedDepreciationAccountToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
-            // 
-            // depreciationExpenseAccountToolStripMenuItem
-            // 
-            this.depreciationExpenseAccountToolStripMenuItem.Name = "depreciationExpenseAccountToolStripMenuItem";
-            this.depreciationExpenseAccountToolStripMenuItem.Size = new System.Drawing.Size(275, 22);
-            this.depreciationExpenseAccountToolStripMenuItem.Tag = "DepreciationExpenseAccount";
-            this.depreciationExpenseAccountToolStripMenuItem.Text = "5. Depreciation Expense Account";
-            this.depreciationExpenseAccountToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
+            this.assetTypeToolStripMenuItem.Name = "assetTypeToolStripMenuItem";
+            this.assetTypeToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.assetTypeToolStripMenuItem.Tag = "AssetType";
+            this.assetTypeToolStripMenuItem.Text = "2. Asset Type";
+            this.assetTypeToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // depreciationMethodToolStripMenuItem
             // 
             this.depreciationMethodToolStripMenuItem.Name = "depreciationMethodToolStripMenuItem";
-            this.depreciationMethodToolStripMenuItem.Size = new System.Drawing.Size(275, 22);
+            this.depreciationMethodToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.depreciationMethodToolStripMenuItem.Tag = "DepreciationMethod";
-            this.depreciationMethodToolStripMenuItem.Text = "6. Depreciation Method";
+            this.depreciationMethodToolStripMenuItem.Text = "3. Depreciation Method";
             this.depreciationMethodToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // averagingMethodToolStripMenuItem
             // 
             this.averagingMethodToolStripMenuItem.Name = "averagingMethodToolStripMenuItem";
-            this.averagingMethodToolStripMenuItem.Size = new System.Drawing.Size(275, 22);
+            this.averagingMethodToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.averagingMethodToolStripMenuItem.Tag = "AveragingMethod";
-            this.averagingMethodToolStripMenuItem.Text = "7. Averaging Method";
+            this.averagingMethodToolStripMenuItem.Text = "4. Averaging Method";
             this.averagingMethodToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // chartOfAccountToolStripMenuItem
             // 
             this.chartOfAccountToolStripMenuItem.Name = "chartOfAccountToolStripMenuItem";
-            this.chartOfAccountToolStripMenuItem.Size = new System.Drawing.Size(275, 22);
+            this.chartOfAccountToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.chartOfAccountToolStripMenuItem.Tag = "ChartOfAccount";
-            this.chartOfAccountToolStripMenuItem.Text = "8. Chart Of Account";
+            this.chartOfAccountToolStripMenuItem.Text = "5. Chart Of Account";
             this.chartOfAccountToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // modeOfPaymentToolStripMenuItem
             // 
             this.modeOfPaymentToolStripMenuItem.Name = "modeOfPaymentToolStripMenuItem";
-            this.modeOfPaymentToolStripMenuItem.Size = new System.Drawing.Size(275, 22);
+            this.modeOfPaymentToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.modeOfPaymentToolStripMenuItem.Tag = "PaymentMode";
-            this.modeOfPaymentToolStripMenuItem.Text = "9. Mode Of Payment";
+            this.modeOfPaymentToolStripMenuItem.Text = "6. Mode Of Payment";
             this.modeOfPaymentToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // fixedAssetManagementToolStripMenuItem
@@ -402,13 +382,13 @@
             this.BackgroundpictureBox.TabStop = false;
             this.BackgroundpictureBox.Visible = false;
             // 
-            // assetTypeToolStripMenuItem
+            // depreciationScheduleToolStripMenuItem
             // 
-            this.assetTypeToolStripMenuItem.Name = "assetTypeToolStripMenuItem";
-            this.assetTypeToolStripMenuItem.Size = new System.Drawing.Size(275, 22);
-            this.assetTypeToolStripMenuItem.Tag = "AssetType";
-            this.assetTypeToolStripMenuItem.Text = "2. Asset Type";
-            this.assetTypeToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
+            this.depreciationScheduleToolStripMenuItem.Name = "depreciationScheduleToolStripMenuItem";
+            this.depreciationScheduleToolStripMenuItem.Size = new System.Drawing.Size(137, 20);
+            this.depreciationScheduleToolStripMenuItem.Tag = "DepreciationSchedule";
+            this.depreciationScheduleToolStripMenuItem.Text = "Depreciation Schedule";
+            this.depreciationScheduleToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // MasterForm
             // 
@@ -450,9 +430,6 @@
         private System.Windows.Forms.ToolStripMenuItem setupToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fixedAssetSettingToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem assetAccountToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem accumulatedDepreciationAccountToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem depreciationExpenseAccountToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem depreciationMethodToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem averagingMethodToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fixedAssetManagementToolStripMenuItem;
@@ -472,6 +449,7 @@
         private System.Windows.Forms.ToolStripMenuItem modeOfPaymentToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem purchaseVoucherToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem assetTypeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem depreciationScheduleToolStripMenuItem;
     }
 }
 

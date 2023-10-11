@@ -46,6 +46,7 @@
     <Compile Include="DepreciationJournalManager.cs" />
     <Compile Include="PaymentModeManager.cs" />
     <Compile Include="PurchaseVoucherManager.cs" />
+    <Compile Include="ReportManager.cs" />
     <Compile Include="UnitManager.cs" />
     <Compile Include="PurchaseOrderDetailManager.cs" />
     <Compile Include="PurchaseOrderManager.cs" />

@@ -47,6 +47,7 @@
     <Compile Include="DepreciationJournalDB.cs" />
     <Compile Include="PaymentModeDB.cs" />
     <Compile Include="PurchaseVoucherDB.cs" />
+    <Compile Include="ReportDB.cs" />
     <Compile Include="UnitDB.cs" />
     <Compile Include="PurchaseOrderDB.cs" />
     <Compile Include="PurchaseOrderDetailDB.cs" />

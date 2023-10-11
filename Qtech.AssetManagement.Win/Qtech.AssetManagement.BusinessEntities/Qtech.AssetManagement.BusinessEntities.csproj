@@ -60,11 +60,14 @@
     <Compile Include="Collection\ProductCollection.cs" />
     <Compile Include="Collection\PersonnelCollection.cs" />
     <Compile Include="DepreciationJournal.cs" />
+    <Compile Include="Enums\AveragingMethodEnum.cs" />
+    <Compile Include="Enums\DepreciationMethodEnum.cs" />
     <Compile Include="PurchaseVoucher.cs" />
     <Compile Include="SearchCriteria\AssetTypeCriteria.cs" />
     <Compile Include="SearchCriteria\DepreciationJournalCriteria.cs" />
     <Compile Include="SearchCriteria\PaymentModeCriteria.cs" />
     <Compile Include="SearchCriteria\PurchaseVoucherCriteria.cs" />
+    <Compile Include="SearchCriteria\ReportCriteria.cs" />
     <Compile Include="SearchCriteria\UnitCriteria.cs" />
     <Compile Include="PaymentMode.cs" />
     <Compile Include="Unit.cs" />

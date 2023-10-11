@@ -30,6 +30,66 @@ namespace Qtech.AssetManagement.Audit
                 audit_collection.Add(audit);
             }
 
+            if (depreciationjournal.mDepreciationExpenseAccountId != depreciationjournalOld.mDepreciationExpenseAccountId)
+            {
+                audit = new BusinessEntities.Audit();
+                LoadCommonData(ref audit, depreciationjournal);
+                audit.mField = "Depreciation Expense Account ";
+                audit.mOldValue = depreciationjournalOld.mDepreciationExpenseAccountName.ToString();
+                audit.mNewValue = depreciationjournal.mDepreciationExpenseAccountName.ToString();
+                audit_collection.Add(audit);
+            }
+
+            if (depreciationjournal.mDepreciationExpenseAccountDebitCredit != depreciationjournalOld.mDepreciationExpenseAccountDebitCredit)
+            {
+                audit = new BusinessEntities.Audit();
+                LoadCommonData(ref audit, depreciationjournal);
+                audit.mField = "Depreciation Expense Account Debit Credit";
+                audit.mOldValue = depreciationjournalOld.mDepreciationExpenseAccountDebitCredit.ToString();
+                audit.mNewValue = depreciationjournal.mDepreciationExpenseAccountDebitCredit.ToString();
+                audit_collection.Add(audit);
+            }
+
+            if (depreciationjournal.mAccumulatedDepreciationAccountId != depreciationjournalOld.mAccumulatedDepreciationAccountId)
+            {
+                audit = new BusinessEntities.Audit();
+                LoadCommonData(ref audit, depreciationjournal);
+                audit.mField = "Accumulated Depreciation Account ";
+                audit.mOldValue = depreciationjournalOld.mAccumulatedDepreciationAccountName.ToString();
+                audit.mNewValue = depreciationjournal.mAccumulatedDepreciationAccountName.ToString();
+                audit_collection.Add(audit);
+            }
+
+            if (depreciationjournal.mAccumulatedDepreciationAccountDebitCredit != depreciationjournalOld.mAccumulatedDepreciationAccountDebitCredit)
+            {
+                audit = new BusinessEntities.Audit();
+                LoadCommonData(ref audit, depreciationjournal);
+                audit.mField = "Accumulated Depreciation Account Debit Credit";
+                audit.mOldValue = depreciationjournalOld.mAccumulatedDepreciationAccountDebitCredit.ToString();
+                audit.mNewValue = depreciationjournal.mAccumulatedDepreciationAccountDebitCredit.ToString();
+                audit_collection.Add(audit);
+            }
+
+            if (depreciationjournal.mAmount != depreciationjournalOld.mAmount)
+            {
+                audit = new BusinessEntities.Audit();
+                LoadCommonData(ref audit, depreciationjournal);
+                audit.mField = "Amount";
+                audit.mOldValue = depreciationjournalOld.mAmount.ToString();
+                audit.mNewValue = depreciationjournal.mAmount.ToString();
+                audit_collection.Add(audit);
+            }
+
+            if (depreciationjournal.mDescription != depreciationjournalOld.mDescription)
+            {
+                audit = new BusinessEntities.Audit();
+                LoadCommonData(ref audit, depreciationjournal);
+                audit.mField = "Description";
+                audit.mOldValue = depreciationjournalOld.mDescription.ToString();
+                audit.mNewValue = depreciationjournal.mDescription.ToString();
+                audit_collection.Add(audit);
+            }
+
             return audit_collection;
         }
 

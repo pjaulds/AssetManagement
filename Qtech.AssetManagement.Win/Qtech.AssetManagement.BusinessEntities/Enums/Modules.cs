@@ -23,6 +23,7 @@
         Unit = 19,
         PaymentMode = 20,
         PurchaseVoucher = 21,
-        AssetType = 22
+        AssetType = 22,
+        DepreciationSchedule = 23
     }
 }
