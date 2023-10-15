@@ -178,10 +178,11 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Start Year</Value>
+                    <Value>=First(Fields!StartDate.Value, "Fields")</Value>
                     <Style>
                       <FontFamily>tahoma</FontFamily>
                       <FontWeight>Bold</FontWeight>
+                      <Format>dd/MMM/yy</Format>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -213,10 +214,11 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>End Year</Value>
+                    <Value>=First(Fields!EndDate.Value, "Fields")</Value>
                     <Style>
                       <FontFamily>tahoma</FontFamily>
                       <FontWeight>Bold</FontWeight>
+                      <Format>dd/MMM/yy</Format>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -2602,6 +2604,14 @@
         <Field Name="BookValueEnd">
           <DataField>BookValueEnd</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="StartDate">
+          <DataField>StartDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+        <Field Name="EndDate">
+          <DataField>EndDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>

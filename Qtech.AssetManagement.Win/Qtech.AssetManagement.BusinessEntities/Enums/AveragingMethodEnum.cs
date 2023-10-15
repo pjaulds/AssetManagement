@@ -2,6 +2,7 @@
 {
     public enum AveragingMethodEnum
     {
-        FullMonth = 1
+        FullMonth = 1,
+        ActualDays = 2
     }
 }

@@ -77,6 +77,17 @@
       <DependentUpon>Default.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StraightLineFullMonthAnnually\Fields.Designer.cs">
+      <DependentUpon>Fields.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="StraightLineFullMonthAnnually\Viewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StraightLineFullMonthAnnually\Viewer.Designer.cs">
+      <DependentUpon>Viewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="StraightLineFullMonthMonthly\Fields.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -127,6 +138,10 @@
       <DependentUpon>Default.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="StraightLineFullMonthAnnually\StraightLineFullMonthAnnuallyRpt.rdlc" />
+    <EmbeddedResource Include="StraightLineFullMonthAnnually\Viewer.resx">
+      <DependentUpon>Viewer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StraightLineFullMonthMonthly\StraightLineFullMonthMonthlyRpt.rdlc" />
     <EmbeddedResource Include="StraightLineFullMonthMonthly\Viewer.resx">
       <DependentUpon>Viewer.cs</DependentUpon>
@@ -136,6 +151,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="StraightLineFullMonthAnnually\Fields.xsc">
+      <DependentUpon>Fields.xsd</DependentUpon>
+    </None>
+    <None Include="StraightLineFullMonthAnnually\Fields.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Fields.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="StraightLineFullMonthAnnually\Fields.xss">
+      <DependentUpon>Fields.xsd</DependentUpon>
+    </None>
     <None Include="StraightLineFullMonthMonthly\Fields.xsc">
       <DependentUpon>Fields.xsd</DependentUpon>
     </None>

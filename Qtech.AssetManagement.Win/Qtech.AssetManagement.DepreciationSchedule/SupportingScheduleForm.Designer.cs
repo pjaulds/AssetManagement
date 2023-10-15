@@ -333,9 +333,9 @@
             this.AnnualyradioButton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AnnualyradioButton.Location = new System.Drawing.Point(214, 149);
             this.AnnualyradioButton.Name = "AnnualyradioButton";
-            this.AnnualyradioButton.Size = new System.Drawing.Size(64, 17);
+            this.AnnualyradioButton.Size = new System.Drawing.Size(66, 17);
             this.AnnualyradioButton.TabIndex = 4;
-            this.AnnualyradioButton.Text = "Annualy";
+            this.AnnualyradioButton.Text = "Annually";
             this.AnnualyradioButton.UseVisualStyleBackColor = true;
             // 
             // label2

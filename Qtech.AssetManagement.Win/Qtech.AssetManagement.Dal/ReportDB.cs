@@ -51,5 +51,24 @@ namespace Qtech.AssetManagement.Dal
             }
             return dt;
         }
+
+        public static DataTable DepreciationScheduleStraightLineFullMonthAnnually(ReportCriteria reportCriteria)
+        {
+            DataTable dt = new DataTable();
+            using (DbCommand myCommand = AppConfiguration.CreateCommand())
+            {
+                myCommand.CommandType = CommandType.StoredProcedure;
+                myCommand.CommandText = "amQt_spReportDepreciationScheduleStraightLineFullMonthAnnually";
+
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@id", reportCriteria.mId);
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@year", reportCriteria.mYear);
+
+                myCommand.Connection.Open();
+                dt.Load(myCommand.ExecuteReader());
+                myCommand.Connection.Close();
+
+            }
+            return dt;
+        }
     }
 }
