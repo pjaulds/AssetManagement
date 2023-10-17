@@ -25,5 +25,15 @@ namespace Qtech.AssetManagement.Bll
         {
             return ReportDB.DepreciationScheduleStraightLineFullMonthAnnually(reportCriteria);
         }
+
+        public static DataTable DepreciationScheduleStraightLineActualDaysMonthly(ReportCriteria reportCriteria)
+        {
+            return ReportDB.DepreciationScheduleStraightLineActualDaysMonthly(reportCriteria);
+        }
+
+        public static DataTable DepreciationScheduleStraightLineActualDaysAnnually(ReportCriteria reportCriteria)
+        {
+            return ReportDB.DepreciationScheduleStraightLineActualDaysAnnually(reportCriteria);
+        }
     }
 }

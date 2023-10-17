@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace Qtech.AssetManagement.DepreciationSchedule.StraightLineFullMonthAnnually {
+namespace Qtech.AssetManagement.DepreciationSchedule.StraightLineActualDaysMonthly {
     
     
     /// <summary>
@@ -293,6 +293,30 @@ namespace Qtech.AssetManagement.DepreciationSchedule.StraightLineFullMonthAnnual
             
             private global::System.Data.DataColumn columnResidualValue;
             
+            private global::System.Data.DataColumn columnJan;
+            
+            private global::System.Data.DataColumn columnFeb;
+            
+            private global::System.Data.DataColumn columnMar;
+            
+            private global::System.Data.DataColumn columnApr;
+            
+            private global::System.Data.DataColumn columnMay;
+            
+            private global::System.Data.DataColumn columnJun;
+            
+            private global::System.Data.DataColumn columnJul;
+            
+            private global::System.Data.DataColumn columnAug;
+            
+            private global::System.Data.DataColumn columnSep;
+            
+            private global::System.Data.DataColumn columnOct;
+            
+            private global::System.Data.DataColumn columnNov;
+            
+            private global::System.Data.DataColumn columnDec;
+            
             private global::System.Data.DataColumn columnBeginning;
             
             private global::System.Data.DataColumn columnDepreciationExpense;
@@ -304,8 +328,6 @@ namespace Qtech.AssetManagement.DepreciationSchedule.StraightLineFullMonthAnnual
             private global::System.Data.DataColumn columnStartDate;
             
             private global::System.Data.DataColumn columnEndDate;
-            
-            private global::System.Data.DataColumn columnYear;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -398,6 +420,102 @@ namespace Qtech.AssetManagement.DepreciationSchedule.StraightLineFullMonthAnnual
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn JanColumn {
+                get {
+                    return this.columnJan;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn FebColumn {
+                get {
+                    return this.columnFeb;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MarColumn {
+                get {
+                    return this.columnMar;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn AprColumn {
+                get {
+                    return this.columnApr;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MayColumn {
+                get {
+                    return this.columnMay;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn JunColumn {
+                get {
+                    return this.columnJun;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn JulColumn {
+                get {
+                    return this.columnJul;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn AugColumn {
+                get {
+                    return this.columnAug;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SepColumn {
+                get {
+                    return this.columnSep;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn OctColumn {
+                get {
+                    return this.columnOct;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NovColumn {
+                get {
+                    return this.columnNov;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DecColumn {
+                get {
+                    return this.columnDec;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn BeginningColumn {
                 get {
                     return this.columnBeginning;
@@ -446,14 +564,6 @@ namespace Qtech.AssetManagement.DepreciationSchedule.StraightLineFullMonthAnnual
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn YearColumn {
-                get {
-                    return this.columnYear;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -489,7 +599,32 @@ namespace Qtech.AssetManagement.DepreciationSchedule.StraightLineFullMonthAnnual
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public FieldsRow AddFieldsRow(string AssetNo, string AssetName, string UsefulLifeYears, System.DateTime PurchaseDate, System.DateTime EndDepreciationDate, decimal PurchaseCost, decimal ResidualValue, decimal Beginning, decimal DepreciationExpense, decimal Ending, decimal BookValueEnd, System.DateTime StartDate, System.DateTime EndDate, int Year) {
+            public FieldsRow AddFieldsRow(
+                        string AssetNo, 
+                        string AssetName, 
+                        string UsefulLifeYears, 
+                        System.DateTime PurchaseDate, 
+                        System.DateTime EndDepreciationDate, 
+                        decimal PurchaseCost, 
+                        decimal ResidualValue, 
+                        decimal Jan, 
+                        decimal Feb, 
+                        decimal Mar, 
+                        decimal Apr, 
+                        decimal May, 
+                        decimal Jun, 
+                        decimal Jul, 
+                        decimal Aug, 
+                        decimal Sep, 
+                        decimal Oct, 
+                        decimal Nov, 
+                        decimal Dec, 
+                        decimal Beginning, 
+                        decimal DepreciationExpense, 
+                        decimal Ending, 
+                        decimal BookValueEnd, 
+                        System.DateTime StartDate, 
+                        System.DateTime EndDate) {
                 FieldsRow rowFieldsRow = ((FieldsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         AssetNo,
@@ -499,13 +634,24 @@ namespace Qtech.AssetManagement.DepreciationSchedule.StraightLineFullMonthAnnual
                         EndDepreciationDate,
                         PurchaseCost,
                         ResidualValue,
+                        Jan,
+                        Feb,
+                        Mar,
+                        Apr,
+                        May,
+                        Jun,
+                        Jul,
+                        Aug,
+                        Sep,
+                        Oct,
+                        Nov,
+                        Dec,
                         Beginning,
                         DepreciationExpense,
                         Ending,
                         BookValueEnd,
                         StartDate,
-                        EndDate,
-                        Year};
+                        EndDate};
                 rowFieldsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFieldsRow);
                 return rowFieldsRow;
@@ -535,13 +681,24 @@ namespace Qtech.AssetManagement.DepreciationSchedule.StraightLineFullMonthAnnual
                 this.columnEndDepreciationDate = base.Columns["EndDepreciationDate"];
                 this.columnPurchaseCost = base.Columns["PurchaseCost"];
                 this.columnResidualValue = base.Columns["ResidualValue"];
+                this.columnJan = base.Columns["Jan"];
+                this.columnFeb = base.Columns["Feb"];
+                this.columnMar = base.Columns["Mar"];
+                this.columnApr = base.Columns["Apr"];
+                this.columnMay = base.Columns["May"];
+                this.columnJun = base.Columns["Jun"];
+                this.columnJul = base.Columns["Jul"];
+                this.columnAug = base.Columns["Aug"];
+                this.columnSep = base.Columns["Sep"];
+                this.columnOct = base.Columns["Oct"];
+                this.columnNov = base.Columns["Nov"];
+                this.columnDec = base.Columns["Dec"];
                 this.columnBeginning = base.Columns["Beginning"];
                 this.columnDepreciationExpense = base.Columns["DepreciationExpense"];
                 this.columnEnding = base.Columns["Ending"];
                 this.columnBookValueEnd = base.Columns["BookValueEnd"];
                 this.columnStartDate = base.Columns["StartDate"];
                 this.columnEndDate = base.Columns["EndDate"];
-                this.columnYear = base.Columns["Year"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -561,6 +718,30 @@ namespace Qtech.AssetManagement.DepreciationSchedule.StraightLineFullMonthAnnual
                 base.Columns.Add(this.columnPurchaseCost);
                 this.columnResidualValue = new global::System.Data.DataColumn("ResidualValue", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnResidualValue);
+                this.columnJan = new global::System.Data.DataColumn("Jan", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnJan);
+                this.columnFeb = new global::System.Data.DataColumn("Feb", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFeb);
+                this.columnMar = new global::System.Data.DataColumn("Mar", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMar);
+                this.columnApr = new global::System.Data.DataColumn("Apr", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnApr);
+                this.columnMay = new global::System.Data.DataColumn("May", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMay);
+                this.columnJun = new global::System.Data.DataColumn("Jun", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnJun);
+                this.columnJul = new global::System.Data.DataColumn("Jul", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnJul);
+                this.columnAug = new global::System.Data.DataColumn("Aug", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnAug);
+                this.columnSep = new global::System.Data.DataColumn("Sep", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSep);
+                this.columnOct = new global::System.Data.DataColumn("Oct", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOct);
+                this.columnNov = new global::System.Data.DataColumn("Nov", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNov);
+                this.columnDec = new global::System.Data.DataColumn("Dec", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDec);
                 this.columnBeginning = new global::System.Data.DataColumn("Beginning", typeof(decimal), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnBeginning);
                 this.columnDepreciationExpense = new global::System.Data.DataColumn("DepreciationExpense", typeof(decimal), null, global::System.Data.MappingType.Element);
@@ -573,8 +754,6 @@ namespace Qtech.AssetManagement.DepreciationSchedule.StraightLineFullMonthAnnual
                 base.Columns.Add(this.columnStartDate);
                 this.columnEndDate = new global::System.Data.DataColumn("EndDate", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEndDate);
-                this.columnYear = new global::System.Data.DataColumn("Year", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnYear);
                 this.ExtendedProperties.Add("Generator_TablePropName", "_Fields");
                 this.ExtendedProperties.Add("Generator_UserTableName", "Fields");
             }
@@ -831,6 +1010,198 @@ namespace Qtech.AssetManagement.DepreciationSchedule.StraightLineFullMonthAnnual
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal Jan {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableFields.JanColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Jan\' in table \'Fields\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFields.JanColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal Feb {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableFields.FebColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Feb\' in table \'Fields\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFields.FebColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal Mar {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableFields.MarColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Mar\' in table \'Fields\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFields.MarColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal Apr {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableFields.AprColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Apr\' in table \'Fields\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFields.AprColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal May {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableFields.MayColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'May\' in table \'Fields\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFields.MayColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal Jun {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableFields.JunColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Jun\' in table \'Fields\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFields.JunColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal Jul {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableFields.JulColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Jul\' in table \'Fields\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFields.JulColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal Aug {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableFields.AugColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Aug\' in table \'Fields\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFields.AugColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal Sep {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableFields.SepColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Sep\' in table \'Fields\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFields.SepColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal Oct {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableFields.OctColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Oct\' in table \'Fields\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFields.OctColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal Nov {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableFields.NovColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Nov\' in table \'Fields\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFields.NovColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public decimal Dec {
+                get {
+                    try {
+                        return ((decimal)(this[this.tableFields.DecColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Dec\' in table \'Fields\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFields.DecColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public decimal Beginning {
                 get {
                     try {
@@ -927,22 +1298,6 @@ namespace Qtech.AssetManagement.DepreciationSchedule.StraightLineFullMonthAnnual
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Year {
-                get {
-                    try {
-                        return ((int)(this[this.tableFields.YearColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'Year\' in table \'Fields\' is DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableFields.YearColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsAssetNoNull() {
                 return this.IsNull(this.tableFields.AssetNoColumn);
             }
@@ -1027,6 +1382,150 @@ namespace Qtech.AssetManagement.DepreciationSchedule.StraightLineFullMonthAnnual
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsJanNull() {
+                return this.IsNull(this.tableFields.JanColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetJanNull() {
+                this[this.tableFields.JanColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFebNull() {
+                return this.IsNull(this.tableFields.FebColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFebNull() {
+                this[this.tableFields.FebColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsMarNull() {
+                return this.IsNull(this.tableFields.MarColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetMarNull() {
+                this[this.tableFields.MarColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsAprNull() {
+                return this.IsNull(this.tableFields.AprColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetAprNull() {
+                this[this.tableFields.AprColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsMayNull() {
+                return this.IsNull(this.tableFields.MayColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetMayNull() {
+                this[this.tableFields.MayColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsJunNull() {
+                return this.IsNull(this.tableFields.JunColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetJunNull() {
+                this[this.tableFields.JunColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsJulNull() {
+                return this.IsNull(this.tableFields.JulColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetJulNull() {
+                this[this.tableFields.JulColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsAugNull() {
+                return this.IsNull(this.tableFields.AugColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetAugNull() {
+                this[this.tableFields.AugColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSepNull() {
+                return this.IsNull(this.tableFields.SepColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSepNull() {
+                this[this.tableFields.SepColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsOctNull() {
+                return this.IsNull(this.tableFields.OctColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetOctNull() {
+                this[this.tableFields.OctColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsNovNull() {
+                return this.IsNull(this.tableFields.NovColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetNovNull() {
+                this[this.tableFields.NovColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDecNull() {
+                return this.IsNull(this.tableFields.DecColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDecNull() {
+                this[this.tableFields.DecColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsBeginningNull() {
                 return this.IsNull(this.tableFields.BeginningColumn);
             }
@@ -1095,18 +1594,6 @@ namespace Qtech.AssetManagement.DepreciationSchedule.StraightLineFullMonthAnnual
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetEndDateNull() {
                 this[this.tableFields.EndDateColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsYearNull() {
-                return this.IsNull(this.tableFields.YearColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetYearNull() {
-                this[this.tableFields.YearColumn] = global::System.Convert.DBNull;
             }
         }
         

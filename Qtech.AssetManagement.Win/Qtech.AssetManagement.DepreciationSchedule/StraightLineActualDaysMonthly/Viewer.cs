@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Qtech.AssetManagement.DepreciationSchedule.StraightLineFullMonthAnnually
+namespace Qtech.AssetManagement.DepreciationSchedule.StraightLineActualDaysMonthly
 {
     public partial class Viewer : Form
     {
@@ -29,7 +29,7 @@ namespace Qtech.AssetManagement.DepreciationSchedule.StraightLineFullMonthAnnual
 
         public short mYear { get; set; }
 
-        ReportParameter[] myReportParameter = new ReportParameter[1];
+        ReportParameter[] myReportParameter = new ReportParameter[4];
         private void CreateParameter(int index, string name, string value)
         {
             myReportParameter[index] = new ReportParameter();
@@ -43,11 +43,29 @@ namespace Qtech.AssetManagement.DepreciationSchedule.StraightLineFullMonthAnnual
             criteria.mId = mId;
             criteria.mAssetTypeId = mAssetTypeId;
             criteria.mYear = mYear;
-            ReportDataSource rds = new ReportDataSource("Fields", ReportManager.DepreciationScheduleStraightLineFullMonthAnnually(criteria));
+            
+            ReportDataSource rds = new ReportDataSource("Fields", ReportManager.DepreciationScheduleStraightLineActualDaysMonthly(criteria));
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.DataSources.Add(rds);
 
             CreateParameter(0, "Year", mYear.ToString());
+            CreateParameter(1, "Year2", mYear.ToString().Substring(2, 2));
+
+            FixedAsset fa = FixedAssetManager.GetItem(mId);
+            CreateParameter(2, "AssetType", fa == null ? AssetTypeManager.GetItem(mAssetTypeId).mName : fa.mAssetTypeName);
+
+            try
+            {
+                if (mAssetTypeId > 0)
+                    CreateParameter(3, "AccountCode", "");
+                else
+                {
+                    FixedAssetSetting faType = FixedAssetSettingManager.GetList().Where(x => x.mAssetTypeId == fa.mAssetTypeId).First();
+                    CreateParameter(3, "AccountCode", faType.mAssetAccountCode);
+                }
+            }
+            catch { CreateParameter(3, "AccountCode", ""); }
+
             
 
             reportViewer1.LocalReport.SetParameters(myReportParameter);

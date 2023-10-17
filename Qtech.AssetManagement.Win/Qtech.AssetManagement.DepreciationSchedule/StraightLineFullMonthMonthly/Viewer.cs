@@ -20,7 +20,13 @@ namespace Qtech.AssetManagement.DepreciationSchedule.StraightLineFullMonthMonthl
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Fixed Asset Id
+        /// </summary>
         public int mId { get; set; }
+
+        public int mAssetTypeId { get; set; }
+
         public short mYear { get; set; }
 
         ReportParameter[] myReportParameter = new ReportParameter[4];
@@ -35,7 +41,9 @@ namespace Qtech.AssetManagement.DepreciationSchedule.StraightLineFullMonthMonthl
         {
             ReportCriteria criteria = new ReportCriteria();
             criteria.mId = mId;
+            criteria.mAssetTypeId = mAssetTypeId;
             criteria.mYear = mYear;
+            
             ReportDataSource rds = new ReportDataSource("Fields", ReportManager.DepreciationScheduleStraightLineFullMonthMonthly(criteria));
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.DataSources.Add(rds);
@@ -44,12 +52,17 @@ namespace Qtech.AssetManagement.DepreciationSchedule.StraightLineFullMonthMonthl
             CreateParameter(1, "Year2", mYear.ToString().Substring(2, 2));
 
             FixedAsset fa = FixedAssetManager.GetItem(mId);
-            CreateParameter(2, "AssetType", fa.mAssetTypeName);
+            CreateParameter(2, "AssetType", fa == null ? AssetTypeManager.GetItem(mAssetTypeId).mName : fa.mAssetTypeName);
 
             try
             {
-                FixedAssetSetting faType = FixedAssetSettingManager.GetList().Where(x => x.mAssetTypeId == fa.mAssetTypeId).First();
-                CreateParameter(3, "AccountCode", faType.mAssetAccountCode);
+                if (mAssetTypeId > 0)
+                    CreateParameter(3, "AccountCode", "");
+                else
+                {
+                    FixedAssetSetting faType = FixedAssetSettingManager.GetList().Where(x => x.mAssetTypeId == fa.mAssetTypeId).First();
+                    CreateParameter(3, "AccountCode", faType.mAssetAccountCode);
+                }
             }
             catch { CreateParameter(3, "AccountCode", ""); }
 

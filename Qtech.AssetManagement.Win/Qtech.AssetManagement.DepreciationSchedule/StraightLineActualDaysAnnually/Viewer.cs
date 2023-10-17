@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Qtech.AssetManagement.DepreciationSchedule.StraightLineFullMonthAnnually
+namespace Qtech.AssetManagement.DepreciationSchedule.StraightLineActualDaysAnnually
 {
     public partial class Viewer : Form
     {
@@ -29,7 +29,7 @@ namespace Qtech.AssetManagement.DepreciationSchedule.StraightLineFullMonthAnnual
 
         public short mYear { get; set; }
 
-        ReportParameter[] myReportParameter = new ReportParameter[1];
+        ReportParameter[] myReportParameter = new ReportParameter[2];
         private void CreateParameter(int index, string name, string value)
         {
             myReportParameter[index] = new ReportParameter();
@@ -43,12 +43,13 @@ namespace Qtech.AssetManagement.DepreciationSchedule.StraightLineFullMonthAnnual
             criteria.mId = mId;
             criteria.mAssetTypeId = mAssetTypeId;
             criteria.mYear = mYear;
-            ReportDataSource rds = new ReportDataSource("Fields", ReportManager.DepreciationScheduleStraightLineFullMonthAnnually(criteria));
+            ReportDataSource rds = new ReportDataSource("Fields", ReportManager.DepreciationScheduleStraightLineActualDaysAnnually(criteria));
             reportViewer1.LocalReport.DataSources.Clear();
             reportViewer1.LocalReport.DataSources.Add(rds);
 
             CreateParameter(0, "Year", mYear.ToString());
-            
+            CreateParameter(1, "AssetType", mAssetTypeId == 0 ? "" : AssetTypeManager.GetItem(mAssetTypeId).mName);
+
 
             reportViewer1.LocalReport.SetParameters(myReportParameter);
             reportViewer1.SetDisplayMode(DisplayMode.Normal);

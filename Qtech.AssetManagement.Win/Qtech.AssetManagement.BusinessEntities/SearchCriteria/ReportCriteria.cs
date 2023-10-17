@@ -14,6 +14,7 @@ namespace Qtech.AssetManagement.BusinessEntities
         public decimal mResidualValue { get; set; }
         public int mUsefulLifeYears { get; set; }
         public short mYear { get; set; }
+        public int mAssetTypeId { get; set; }
         
     }
 }

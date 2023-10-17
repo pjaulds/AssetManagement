@@ -290,7 +290,7 @@ namespace Qtech.AssetManagement.DepreciationSchedule
 
             EndEditing();
 
-            ThemeUtil.Controls(splitContainer1.Panel2);
+            ThemeUtil.Controls(this);
             ControlUtil.TextBoxEnterLeaveEventHandler(splitContainer1.Panel2);
             LoadFixedAsset();
 
@@ -400,6 +400,10 @@ namespace Qtech.AssetManagement.DepreciationSchedule
 
         }
 
-       
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SupportingScheduleAllForm supSchedForm = new SupportingScheduleAllForm();
+            supSchedForm.ShowDialog();
+        }
     }
 }

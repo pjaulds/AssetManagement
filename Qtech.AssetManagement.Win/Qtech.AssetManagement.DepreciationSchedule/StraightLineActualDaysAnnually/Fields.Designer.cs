@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace Qtech.AssetManagement.DepreciationSchedule.StraightLineFullMonthAnnually {
+namespace Qtech.AssetManagement.DepreciationSchedule.StraightLineActualDaysAnnually {
     
     
     /// <summary>
@@ -307,6 +307,8 @@ namespace Qtech.AssetManagement.DepreciationSchedule.StraightLineFullMonthAnnual
             
             private global::System.Data.DataColumn columnYear;
             
+            private global::System.Data.DataColumn columnYear2;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public FieldsDataTable() {
@@ -454,6 +456,14 @@ namespace Qtech.AssetManagement.DepreciationSchedule.StraightLineFullMonthAnnual
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn Year2Column {
+                get {
+                    return this.columnYear2;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -489,7 +499,7 @@ namespace Qtech.AssetManagement.DepreciationSchedule.StraightLineFullMonthAnnual
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public FieldsRow AddFieldsRow(string AssetNo, string AssetName, string UsefulLifeYears, System.DateTime PurchaseDate, System.DateTime EndDepreciationDate, decimal PurchaseCost, decimal ResidualValue, decimal Beginning, decimal DepreciationExpense, decimal Ending, decimal BookValueEnd, System.DateTime StartDate, System.DateTime EndDate, int Year) {
+            public FieldsRow AddFieldsRow(string AssetNo, string AssetName, string UsefulLifeYears, System.DateTime PurchaseDate, System.DateTime EndDepreciationDate, decimal PurchaseCost, decimal ResidualValue, decimal Beginning, decimal DepreciationExpense, decimal Ending, decimal BookValueEnd, System.DateTime StartDate, System.DateTime EndDate, int Year, string Year2) {
                 FieldsRow rowFieldsRow = ((FieldsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         AssetNo,
@@ -505,7 +515,8 @@ namespace Qtech.AssetManagement.DepreciationSchedule.StraightLineFullMonthAnnual
                         BookValueEnd,
                         StartDate,
                         EndDate,
-                        Year};
+                        Year,
+                        Year2};
                 rowFieldsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFieldsRow);
                 return rowFieldsRow;
@@ -542,6 +553,7 @@ namespace Qtech.AssetManagement.DepreciationSchedule.StraightLineFullMonthAnnual
                 this.columnStartDate = base.Columns["StartDate"];
                 this.columnEndDate = base.Columns["EndDate"];
                 this.columnYear = base.Columns["Year"];
+                this.columnYear2 = base.Columns["Year2"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -575,6 +587,8 @@ namespace Qtech.AssetManagement.DepreciationSchedule.StraightLineFullMonthAnnual
                 base.Columns.Add(this.columnEndDate);
                 this.columnYear = new global::System.Data.DataColumn("Year", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnYear);
+                this.columnYear2 = new global::System.Data.DataColumn("Year2", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnYear2);
                 this.ExtendedProperties.Add("Generator_TablePropName", "_Fields");
                 this.ExtendedProperties.Add("Generator_UserTableName", "Fields");
             }
@@ -943,6 +957,22 @@ namespace Qtech.AssetManagement.DepreciationSchedule.StraightLineFullMonthAnnual
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Year2 {
+                get {
+                    try {
+                        return ((string)(this[this.tableFields.Year2Column]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Year2\' in table \'Fields\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableFields.Year2Column] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsAssetNoNull() {
                 return this.IsNull(this.tableFields.AssetNoColumn);
             }
@@ -1107,6 +1137,18 @@ namespace Qtech.AssetManagement.DepreciationSchedule.StraightLineFullMonthAnnual
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetYearNull() {
                 this[this.tableFields.YearColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsYear2Null() {
+                return this.IsNull(this.tableFields.Year2Column);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetYear2Null() {
+                this[this.tableFields.Year2Column] = global::System.Convert.DBNull;
             }
         }
         
