@@ -40,7 +40,7 @@ namespace Qtech.AssetManagement.FixedAsset
             PurchaseCosttextBox.Text = fa.mPurchasePrice.ToString("N");
             ResidualValuetextBox.Text = fa.mResidualValue.ToString("N");
             UsefulLifetextBox.Text = fa.mUsefulLifeYears.ToString();
-      
+      //some comments
         }
 
         private void LoadFormControlsFromAssetType(BusinessEntities.FixedAsset fa)
