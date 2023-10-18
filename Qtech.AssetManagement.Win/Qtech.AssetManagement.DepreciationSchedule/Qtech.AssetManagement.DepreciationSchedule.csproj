@@ -110,6 +110,17 @@
     <Compile Include="StraightLineActualDaysMonthly\Viewer.Designer.cs">
       <DependentUpon>Viewer.cs</DependentUpon>
     </Compile>
+    <Compile Include="SYDFullMonthMonthly\Fields.Designer.cs">
+      <DependentUpon>Fields.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SYDFullMonthMonthly\Viewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SYDFullMonthMonthly\Viewer.Designer.cs">
+      <DependentUpon>Viewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="StraightLineFullMonthMonthly\Fields.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -178,6 +189,10 @@
     <EmbeddedResource Include="StraightLineActualDaysMonthly\Viewer.resx">
       <DependentUpon>Viewer.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SYDFullMonthMonthly\SYDFullMonthMonthlyRpt.rdlc" />
+    <EmbeddedResource Include="SYDFullMonthMonthly\Viewer.resx">
+      <DependentUpon>Viewer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StraightLineFullMonthMonthly\StraightLineFullMonthMonthlyRpt.rdlc" />
     <EmbeddedResource Include="StraightLineFullMonthMonthly\Viewer.resx">
       <DependentUpon>Viewer.cs</DependentUpon>
@@ -221,6 +236,17 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="StraightLineActualDaysMonthly\Fields.xss">
+      <DependentUpon>Fields.xsd</DependentUpon>
+    </None>
+    <None Include="SYDFullMonthMonthly\Fields.xsc">
+      <DependentUpon>Fields.xsd</DependentUpon>
+    </None>
+    <None Include="SYDFullMonthMonthly\Fields.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Fields.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SYDFullMonthMonthly\Fields.xss">
       <DependentUpon>Fields.xsd</DependentUpon>
     </None>
     <None Include="StraightLineFullMonthMonthly\Fields.xsc">

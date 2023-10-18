@@ -11,6 +11,8 @@ namespace Qtech.AssetManagement.Dal
 {
     public class ReportDB
     {
+
+        #region Straight Line
         public static DataTable DepreciationStraightLineFullMonth(ReportCriteria reportCriteria)
         {
             DataTable dt= new DataTable();
@@ -112,5 +114,29 @@ namespace Qtech.AssetManagement.Dal
             }
             return dt;
         }
+
+        #endregion
+
+        #region SYD
+        public static DataTable DepreciationScheduleSYDFullMonthMonthly(ReportCriteria reportCriteria)
+        {
+            DataTable dt = new DataTable();
+            using (DbCommand myCommand = AppConfiguration.CreateCommand())
+            {
+                myCommand.CommandType = CommandType.StoredProcedure;
+                myCommand.CommandText = "amQt_spReportDepreciationScheduleSYDFullMonthMonthly";
+
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@id", reportCriteria.mId);
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@asset_type_id", reportCriteria.mAssetTypeId);
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@year", reportCriteria.mYear);
+
+                myCommand.Connection.Open();
+                dt.Load(myCommand.ExecuteReader());
+                myCommand.Connection.Close();
+
+            }
+            return dt;
+        }
+        #endregion
     }
 }

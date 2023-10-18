@@ -11,6 +11,7 @@ namespace Qtech.AssetManagement.Bll
 {
     public class ReportManager
     {
+        #region Straight Line
         public static DataTable DepreciationStraightLineFullMonth(ReportCriteria reportCriteria)
         {
             return ReportDB.DepreciationStraightLineFullMonth(reportCriteria);
@@ -35,5 +36,14 @@ namespace Qtech.AssetManagement.Bll
         {
             return ReportDB.DepreciationScheduleStraightLineActualDaysAnnually(reportCriteria);
         }
+
+        #endregion
+
+        #region SYD
+        public static DataTable DepreciationScheduleSYDFullMonthMonthly(ReportCriteria reportCriteria)
+        {
+            return ReportDB.DepreciationScheduleSYDFullMonthMonthly(reportCriteria);
+        }
+        #endregion
     }
 }

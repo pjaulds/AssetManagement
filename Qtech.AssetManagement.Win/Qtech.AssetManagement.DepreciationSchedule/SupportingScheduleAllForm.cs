@@ -98,6 +98,17 @@ namespace Qtech.AssetManagement.DepreciationSchedule
 
                 }
             }
+
+            if (depMethodId == (int)DepreciationMethodEnum.SYD)
+            {
+                if (avgMethodId == (int)AveragingMethodEnum.FullMonth)
+                {
+                    SYDFullMonthMonthly.Viewer viewer = new SYDFullMonthMonthly.Viewer();
+                    viewer.mAssetTypeId = assetTypeId;
+                    viewer.mYear = Convert.ToInt16(YearnumericUpDown.Value);
+                    viewer.ShowDialog();
+                }
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

@@ -26,19 +26,20 @@ namespace Qtech.AssetManagement.DepreciationSchedule
         {
             FixedAsset fa = FixedAssetManager.GetItem(mFaId);
             AssetTypetextBox.Text = fa.mAssetTypeName;
-
+            DepreciationMethodultraCombo.Value = fa.mDepreciationMethodId;
+            AveragingMethodultraCombo.Value = fa.mAveragingMethodId;
             LoadFormControlsFromAssetType(fa);
         }
 
         private void LoadFormControlsFromAssetType(BusinessEntities.FixedAsset fa)
         {
-            try
-            {
-                FixedAssetSetting item = FixedAssetSettingManager.GetList().Where(x => x.mAssetTypeId == fa.mAssetTypeId).First();
-                DepreciationMethodultraCombo.Value = item.mDepreciationMethodId;
-                AveragingMethodultraCombo.Value = item.mAveragingMethodId;
-            }
-            catch { }
+            //try
+            //{
+            //    FixedAssetSetting item = FixedAssetSettingManager.GetList().Where(x => x.mAssetTypeId == fa.mAssetTypeId).First();
+            //    DepreciationMethodultraCombo.Value = item.mDepreciationMethodId;
+            //    AveragingMethodultraCombo.Value = item.mAveragingMethodId;
+            //}
+            //catch { }
         }
 
         private void SupportingScheduleForm_KeyDown(object sender, KeyEventArgs e)
@@ -112,6 +113,28 @@ namespace Qtech.AssetManagement.DepreciationSchedule
 
                 }
 
+            }
+
+            if (depMethodId == (int)DepreciationMethodEnum.SYD)
+            {
+                if (avgMethodId == (int)AveragingMethodEnum.FullMonth)
+                {
+                    if (MonthlyradioButton.Checked)
+                    {
+                        SYDFullMonthMonthly.Viewer viewer = new SYDFullMonthMonthly.Viewer();
+                        viewer.mId = mFaId;
+                        viewer.mYear = Convert.ToInt16(YearnumericUpDown.Value);
+                        viewer.ShowDialog();
+                    }
+                    //else//annual
+                    //{
+                    //    StraightLineFullMonthAnnually.Viewer viewer = new StraightLineFullMonthAnnually.Viewer();
+                    //    viewer.mId = mFaId;
+                    //    viewer.mYear = Convert.ToInt16(YearnumericUpDown.Value);
+                    //    viewer.ShowDialog();
+                    //}
+
+                }
             }
         }
 

@@ -2,6 +2,7 @@
 {
     public enum DepreciationMethodEnum
     {
-        StraightLine = 1
+        StraightLine = 1,
+        SYD = 2
     }
 }
