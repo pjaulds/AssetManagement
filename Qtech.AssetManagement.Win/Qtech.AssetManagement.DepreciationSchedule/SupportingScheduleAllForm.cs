@@ -103,12 +103,41 @@ namespace Qtech.AssetManagement.DepreciationSchedule
             {
                 if (avgMethodId == (int)AveragingMethodEnum.FullMonth)
                 {
-                    SYDFullMonthMonthly.Viewer viewer = new SYDFullMonthMonthly.Viewer();
-                    viewer.mAssetTypeId = assetTypeId;
-                    viewer.mYear = Convert.ToInt16(YearnumericUpDown.Value);
-                    viewer.ShowDialog();
+                    if (MonthlyradioButton.Checked)
+                    {
+                        SYDFullMonthMonthly.Viewer viewer = new SYDFullMonthMonthly.Viewer();
+                        viewer.mAssetTypeId = assetTypeId;
+                        viewer.mYear = Convert.ToInt16(YearnumericUpDown.Value);
+                        viewer.ShowDialog();
+                    }
+                    else //annually
+                    {
+                        SYDFullMonthAnnually.Viewer viewer = new SYDFullMonthAnnually.Viewer();
+                        viewer.mAssetTypeId = assetTypeId;
+                        viewer.mYear = Convert.ToInt16(YearnumericUpDown.Value);
+                        viewer.ShowDialog();
+                    }
+                }
+
+                if (avgMethodId == (int)AveragingMethodEnum.ActualDays)
+                {
+                    if (MonthlyradioButton.Checked)
+                    {
+                        SYDActualDaysMonthly.Viewer viewer = new SYDActualDaysMonthly.Viewer();
+                        viewer.mAssetTypeId = assetTypeId;
+                        viewer.mYear = Convert.ToInt16(YearnumericUpDown.Value);
+                        viewer.ShowDialog();
+                    }
+                    else //annually
+                    {
+                        SYDActualDaysAnnually.Viewer viewer = new SYDActualDaysAnnually.Viewer();
+                        viewer.mAssetTypeId = assetTypeId;
+                        viewer.mYear = Convert.ToInt16(YearnumericUpDown.Value);
+                        viewer.ShowDialog();
+                    }
                 }
             }
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

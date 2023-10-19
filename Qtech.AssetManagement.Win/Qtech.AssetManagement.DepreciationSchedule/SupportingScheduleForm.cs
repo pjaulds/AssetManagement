@@ -126,14 +126,32 @@ namespace Qtech.AssetManagement.DepreciationSchedule
                         viewer.mYear = Convert.ToInt16(YearnumericUpDown.Value);
                         viewer.ShowDialog();
                     }
-                    //else//annual
-                    //{
-                    //    StraightLineFullMonthAnnually.Viewer viewer = new StraightLineFullMonthAnnually.Viewer();
-                    //    viewer.mId = mFaId;
-                    //    viewer.mYear = Convert.ToInt16(YearnumericUpDown.Value);
-                    //    viewer.ShowDialog();
-                    //}
+                    else//annual
+                    {
+                        SYDFullMonthAnnually.Viewer viewer = new SYDFullMonthAnnually.Viewer();
+                        viewer.mId = mFaId;
+                        viewer.mYear = Convert.ToInt16(YearnumericUpDown.Value);
+                        viewer.ShowDialog();
+                    }
 
+                }
+
+                if (avgMethodId == (int)AveragingMethodEnum.ActualDays)
+                {
+                    if (MonthlyradioButton.Checked)
+                    {
+                        SYDActualDaysMonthly.Viewer viewer = new SYDActualDaysMonthly.Viewer();
+                        viewer.mId = mFaId;
+                        viewer.mYear = Convert.ToInt16(YearnumericUpDown.Value);
+                        viewer.ShowDialog();
+                    }
+                    else //annual
+                    {
+                        SYDActualDaysAnnually.Viewer viewer = new SYDActualDaysAnnually.Viewer();
+                        viewer.mId = mFaId;
+                        viewer.mYear = Convert.ToInt16(YearnumericUpDown.Value);
+                        viewer.ShowDialog();
+                    }
                 }
             }
         }

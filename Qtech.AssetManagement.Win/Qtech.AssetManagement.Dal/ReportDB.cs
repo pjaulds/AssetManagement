@@ -137,6 +137,66 @@ namespace Qtech.AssetManagement.Dal
             }
             return dt;
         }
+
+        public static DataTable DepreciationScheduleSYDFullMonthAnnually(ReportCriteria reportCriteria)
+        {
+            DataTable dt = new DataTable();
+            using (DbCommand myCommand = AppConfiguration.CreateCommand())
+            {
+                myCommand.CommandType = CommandType.StoredProcedure;
+                myCommand.CommandText = "amQt_spReportDepreciationScheduleSYDFullMonthAnnually";
+
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@id", reportCriteria.mId);
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@asset_type_id", reportCriteria.mAssetTypeId);
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@year", reportCriteria.mYear);
+
+                myCommand.Connection.Open();
+                dt.Load(myCommand.ExecuteReader());
+                myCommand.Connection.Close();
+
+            }
+            return dt;
+        }
+
+        public static DataTable DepreciationScheduleSYDActualDaysMonthly(ReportCriteria reportCriteria)
+        {
+            DataTable dt = new DataTable();
+            using (DbCommand myCommand = AppConfiguration.CreateCommand())
+            {
+                myCommand.CommandType = CommandType.StoredProcedure;
+                myCommand.CommandText = "amQt_spReportDepreciationScheduleSYDActualDaysMonthly";
+
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@id", reportCriteria.mId);
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@asset_type_id", reportCriteria.mAssetTypeId);
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@year", reportCriteria.mYear);
+
+                myCommand.Connection.Open();
+                dt.Load(myCommand.ExecuteReader());
+                myCommand.Connection.Close();
+
+            }
+            return dt;
+        }
+
+        public static DataTable DepreciationScheduleSYDActualDaysAnnually(ReportCriteria reportCriteria)
+        {
+            DataTable dt = new DataTable();
+            using (DbCommand myCommand = AppConfiguration.CreateCommand())
+            {
+                myCommand.CommandType = CommandType.StoredProcedure;
+                myCommand.CommandText = "amQt_spReportDepreciationScheduleSYDActualDaysAnnually";
+
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@id", reportCriteria.mId);
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@asset_type_id", reportCriteria.mAssetTypeId);
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@year", reportCriteria.mYear);
+
+                myCommand.Connection.Open();
+                dt.Load(myCommand.ExecuteReader());
+                myCommand.Connection.Close();
+
+            }
+            return dt;
+        }
         #endregion
     }
 }

@@ -77,6 +77,28 @@
       <DependentUpon>Default.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SYDFullMonthAnnually\Fields.Designer.cs">
+      <DependentUpon>Fields.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SYDFullMonthAnnually\Viewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SYDFullMonthAnnually\Viewer.Designer.cs">
+      <DependentUpon>Viewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SYDActualDaysAnnually\Fields.Designer.cs">
+      <DependentUpon>Fields.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SYDActualDaysAnnually\Viewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SYDActualDaysAnnually\Viewer.Designer.cs">
+      <DependentUpon>Viewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="StraightLineActualDaysAnnually\Fields.Designer.cs">
       <DependentUpon>Fields.xsd</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -108,6 +130,17 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="StraightLineActualDaysMonthly\Viewer.Designer.cs">
+      <DependentUpon>Viewer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SYDActualDaysMonthly\Fields.Designer.cs">
+      <DependentUpon>Fields.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="SYDActualDaysMonthly\Viewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SYDActualDaysMonthly\Viewer.Designer.cs">
       <DependentUpon>Viewer.cs</DependentUpon>
     </Compile>
     <Compile Include="SYDFullMonthMonthly\Fields.Designer.cs">
@@ -177,6 +210,14 @@
       <DependentUpon>Default.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="SYDFullMonthAnnually\SYDFullMonthAnnuallyRpt.rdlc" />
+    <EmbeddedResource Include="SYDFullMonthAnnually\Viewer.resx">
+      <DependentUpon>Viewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SYDActualDaysAnnually\SYDActualDaysAnnuallyRpt.rdlc" />
+    <EmbeddedResource Include="SYDActualDaysAnnually\Viewer.resx">
+      <DependentUpon>Viewer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StraightLineActualDaysAnnually\StraightLineActualDaysAnnuallyRpt.rdlc" />
     <EmbeddedResource Include="StraightLineActualDaysAnnually\Viewer.resx">
       <DependentUpon>Viewer.cs</DependentUpon>
@@ -187,6 +228,10 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StraightLineActualDaysMonthly\StraightLineActualDaysMonthlyRpt.rdlc" />
     <EmbeddedResource Include="StraightLineActualDaysMonthly\Viewer.resx">
+      <DependentUpon>Viewer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SYDActualDaysMonthly\SYDActualDaysMonthlyRpt.rdlc" />
+    <EmbeddedResource Include="SYDActualDaysMonthly\Viewer.resx">
       <DependentUpon>Viewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SYDFullMonthMonthly\SYDFullMonthMonthlyRpt.rdlc" />
@@ -205,6 +250,28 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="SYDFullMonthAnnually\Fields.xsc">
+      <DependentUpon>Fields.xsd</DependentUpon>
+    </None>
+    <None Include="SYDFullMonthAnnually\Fields.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Fields.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SYDFullMonthAnnually\Fields.xss">
+      <DependentUpon>Fields.xsd</DependentUpon>
+    </None>
+    <None Include="SYDActualDaysAnnually\Fields.xsc">
+      <DependentUpon>Fields.xsd</DependentUpon>
+    </None>
+    <None Include="SYDActualDaysAnnually\Fields.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Fields.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SYDActualDaysAnnually\Fields.xss">
+      <DependentUpon>Fields.xsd</DependentUpon>
+    </None>
     <None Include="StraightLineActualDaysAnnually\Fields.xsc">
       <DependentUpon>Fields.xsd</DependentUpon>
     </None>
@@ -236,6 +303,17 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="StraightLineActualDaysMonthly\Fields.xss">
+      <DependentUpon>Fields.xsd</DependentUpon>
+    </None>
+    <None Include="SYDActualDaysMonthly\Fields.xsc">
+      <DependentUpon>Fields.xsd</DependentUpon>
+    </None>
+    <None Include="SYDActualDaysMonthly\Fields.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Fields.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SYDActualDaysMonthly\Fields.xss">
       <DependentUpon>Fields.xsd</DependentUpon>
     </None>
     <None Include="SYDFullMonthMonthly\Fields.xsc">
