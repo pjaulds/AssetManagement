@@ -47,6 +47,8 @@ namespace Qtech.AssetManagement.Dal
                 myCommand.CommandText = "amQt_spDepreciationJournalSearchList";
 
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@fixed_asset_id", depreciationjournalCriteria.mFixedAssetId);
+                Helpers.CreateParameter(myCommand, DbType.Int16, "@year", depreciationjournalCriteria.mYear);
+                Helpers.CreateParameter(myCommand, DbType.Byte, "@month", depreciationjournalCriteria.mMonth);
 
                 myCommand.Connection.Open();
                 using (DbDataReader myReader = myCommand.ExecuteReader())
@@ -83,6 +85,8 @@ namespace Qtech.AssetManagement.Dal
                 myCommand.Parameters.Add(idParam);
 
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@fixed_asset_id", depreciationjournalCriteria.mFixedAssetId);
+                Helpers.CreateParameter(myCommand, DbType.Int16, "@year", depreciationjournalCriteria.mYear);
+                Helpers.CreateParameter(myCommand, DbType.Byte, "@month", depreciationjournalCriteria.mMonth);
 
                 myCommand.Connection.Open();
                 myCommand.ExecuteNonQuery();

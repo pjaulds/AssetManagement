@@ -877,7 +877,7 @@
             this.linkLabel2.Location = new System.Drawing.Point(87, 31);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(82, 13);
-            this.linkLabel2.TabIndex = 7;
+            this.linkLabel2.TabIndex = 3;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Browse Product";
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
@@ -888,7 +888,7 @@
             this.linkLabel1.Location = new System.Drawing.Point(6, 31);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(64, 13);
-            this.linkLabel1.TabIndex = 6;
+            this.linkLabel1.TabIndex = 2;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Browse APV";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
@@ -899,7 +899,7 @@
             this.NewPurchaseradioButton.Location = new System.Drawing.Point(123, 10);
             this.NewPurchaseradioButton.Name = "NewPurchaseradioButton";
             this.NewPurchaseradioButton.Size = new System.Drawing.Size(93, 17);
-            this.NewPurchaseradioButton.TabIndex = 5;
+            this.NewPurchaseradioButton.TabIndex = 1;
             this.NewPurchaseradioButton.TabStop = true;
             this.NewPurchaseradioButton.Text = "New Purchase";
             this.NewPurchaseradioButton.UseVisualStyleBackColor = true;
@@ -911,7 +911,7 @@
             this.BeginningBalanceradioButton.Location = new System.Drawing.Point(6, 11);
             this.BeginningBalanceradioButton.Name = "BeginningBalanceradioButton";
             this.BeginningBalanceradioButton.Size = new System.Drawing.Size(111, 17);
-            this.BeginningBalanceradioButton.TabIndex = 4;
+            this.BeginningBalanceradioButton.TabIndex = 0;
             this.BeginningBalanceradioButton.TabStop = true;
             this.BeginningBalanceradioButton.Text = "Beginning Balance";
             this.BeginningBalanceradioButton.UseVisualStyleBackColor = true;
@@ -925,7 +925,7 @@
             this.DescriptiontextBox.Multiline = true;
             this.DescriptiontextBox.Name = "DescriptiontextBox";
             this.DescriptiontextBox.Size = new System.Drawing.Size(252, 71);
-            this.DescriptiontextBox.TabIndex = 3;
+            this.DescriptiontextBox.TabIndex = 7;
             // 
             // FunctionalLocationultraCombo
             // 
@@ -1004,7 +1004,7 @@
             this.FunctionalLocationultraCombo.Location = new System.Drawing.Point(6, 103);
             this.FunctionalLocationultraCombo.Name = "FunctionalLocationultraCombo";
             this.FunctionalLocationultraCombo.Size = new System.Drawing.Size(250, 23);
-            this.FunctionalLocationultraCombo.TabIndex = 2;
+            this.FunctionalLocationultraCombo.TabIndex = 6;
             // 
             // AssetTypeutraCombo
             // 
@@ -1078,7 +1078,7 @@
             this.AssetTypeutraCombo.Location = new System.Drawing.Point(6, 74);
             this.AssetTypeutraCombo.Name = "AssetTypeutraCombo";
             this.AssetTypeutraCombo.Size = new System.Drawing.Size(250, 23);
-            this.AssetTypeutraCombo.TabIndex = 1;
+            this.AssetTypeutraCombo.TabIndex = 5;
             // 
             // ProductNametextBox
             // 
@@ -1087,7 +1087,7 @@
             this.ProductNametextBox.MaxLength = 150;
             this.ProductNametextBox.Name = "ProductNametextBox";
             this.ProductNametextBox.Size = new System.Drawing.Size(250, 21);
-            this.ProductNametextBox.TabIndex = 0;
+            this.ProductNametextBox.TabIndex = 4;
             // 
             // panel2
             // 

@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,6 +21,9 @@ namespace Qtech.AssetManagement.FixedAsset
             InitializeComponent();
         }
 
+        /// <summary>
+        /// fixed asset id
+        /// </summary>
         public int mId { get; set; }
         public byte mMonth { get; set; }
         public short mYear { get; set; }
@@ -95,18 +99,71 @@ namespace Qtech.AssetManagement.FixedAsset
             AccumulatedDepreciationAccountTitlelabel.Text = item.mAccumulatedDepreciationAccountName;
 
             ReportCriteria criteria = new ReportCriteria();
-            criteria.mPurchaseDate = fa.mPurchaseDate;
-            criteria.mPurchaseCost = fa.mPurchasePrice;
-            criteria.mResidualValue = fa.mResidualValue;
-            criteria.mUsefulLifeYears = fa.mUsefulLifeYears;
+            criteria.mId = mId;
             criteria.mYear = mYear;
+            decimal amount = 0;
+            if (fa.mDepreciationMethodId == (int)DepreciationMethodEnum.StraightLine)
+            {
+                if(fa.mAveragingMethodId == (int)AveragingMethodEnum.FullMonth)
+                {                    
+                    DataTable dt = ReportManager.DepreciationScheduleStraightLineFullMonthMonthly(criteria);
+                    if (dt.Rows.Count > 0)
+                    {
+                        string monthName = new DateTime(2010, mMonth, 1).ToString("MMM", CultureInfo.InvariantCulture); //get month name base on number
+                        
+                        if (!dt.Rows[0].IsNull(monthName))
+                            amount = (decimal)dt.Rows[0][monthName];
+                        else
+                            MessageBox.Show("Depreciation journal with selected period does not exists.", "Depreciation Journal", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
 
-            DataTable dt = ReportManager.DepreciationStraightLineFullMonth(criteria);
-            if (dt.Rows.Count == 0) return;
+                }
+            }
 
-            DataRow row = dt.Rows[0];
-            DepreciationExpenseAmountlabel.Text = (((decimal)row["depreciation_expense"]) / 12).ToString("N");
-            AccumulatedDepreciationAmountlabel.Text = DepreciationExpenseAmountlabel.Text;
+            if (fa.mDepreciationMethodId == (int)DepreciationMethodEnum.SYD)
+            {
+                if (fa.mAveragingMethodId == (int)AveragingMethodEnum.FullMonth)
+                {
+                    DataTable dt = ReportManager.DepreciationScheduleSYDFullMonthMonthly(criteria);
+                    if (dt.Rows.Count > 0)
+                    {
+                        string monthName = new DateTime(2010, mMonth, 1).ToString("MMM", CultureInfo.InvariantCulture); //get month name base on number
+
+                        if (!dt.Rows[0].IsNull(monthName))
+                            amount = (decimal)(double)dt.Rows[0][monthName];
+                        else
+                            MessageBox.Show("Depreciation journal with selected period does not exists.", "Depreciation Journal", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    }
+
+                }
+            }
+
+            DepreciationExpenseAmountlabel.Text = amount.ToString("N");
+            AccumulatedDepreciationAmountlabel.Text = amount.ToString("N");
+
+
+            //criteria.mPurchaseDate = fa.mPurchaseDate;
+            //criteria.mPurchaseCost = fa.mPurchasePrice;
+            //criteria.mResidualValue = fa.mResidualValue;
+            //criteria.mUsefulLifeYears = fa.mUsefulLifeYears;
+            //criteria.mYear = mYear;
+
+            //DataTable dt = ReportManager.DepreciationStraightLineFullMonth(criteria);
+            //if (dt.Rows.Count == 0) return;
+
+            //DataRow row = dt.Rows[0];
+            //DepreciationExpenseAmountlabel.Text = (((decimal)row["depreciation_expense"]) / 12).ToString("N");
+            //AccumulatedDepreciationAmountlabel.Text = DepreciationExpenseAmountlabel.Text;
+        }
+
+        private bool IsDepreciationJournalExists()
+        {
+            DepreciationJournalCriteria criteria = new DepreciationJournalCriteria();
+            criteria.mFixedAssetId = mId;
+            criteria.mYear = mYear;
+            criteria.mMonth = mMonth;
+
+            return DepreciationJournalManager.SelectCountForGetList(criteria) > 0;
         }
 
         private void DepreciationJournalForm_KeyDown(object sender, KeyEventArgs e)
@@ -132,6 +189,12 @@ namespace Qtech.AssetManagement.FixedAsset
 
         private void Savebutton_Click(object sender, EventArgs e)
         {
+            if(IsDepreciationJournalExists())
+            {
+                MessageBox.Show("Depreciation journal with same month and year was already exists.", "Depreciation Journal", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
             if (SaveDepreciationJournal() > 0)
             {
                 MessageBox.Show("Depreciation journal save successfully.", "Depreciation Journal", MessageBoxButtons.OK, MessageBoxIcon.Information);
