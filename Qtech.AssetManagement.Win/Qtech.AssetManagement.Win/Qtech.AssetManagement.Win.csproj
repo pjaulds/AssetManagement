@@ -168,6 +168,10 @@
       <Project>{5333b023-ea4c-49fc-891f-e1e82149cc6c}</Project>
       <Name>Qtech.AssetManagement.Purchasing</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Qtech.AssetManagement.RepairAndMaintenance\Qtech.AssetManagement.RepairAndMaintenance.csproj">
+      <Project>{9553a99f-eef4-4b07-80f0-8f6c821e44c4}</Project>
+      <Name>Qtech.AssetManagement.RepairAndMaintenance</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Qtech.AssetManagement.Setup\Qtech.AssetManagement.Setup.csproj">
       <Project>{823a3ea6-c0c6-4a7e-9a49-be3528a967ce}</Project>
       <Name>Qtech.AssetManagement.Setup</Name>

@@ -23,6 +23,7 @@ namespace Qtech.AssetManagement.Purchasing.PurchaseOrder
         }
 
         public bool mForReceiving { get; set; }
+        
         public BusinessEntities.PurchaseOrder mPurchaseOrder { get; set; }
         #region Private Variables
         bool allow_select;

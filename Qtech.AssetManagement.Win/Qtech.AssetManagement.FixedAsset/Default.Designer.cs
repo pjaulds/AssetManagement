@@ -1289,6 +1289,7 @@
             this.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.Name = "Default";
             this.Text = "Fixed Asset";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Default_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);

@@ -15,6 +15,8 @@ namespace Qtech.AssetManagement.BusinessEntities
         public int mUsefulLifeYears { get; set; }
         public short mYear { get; set; }
         public int mAssetTypeId { get; set; }
+
+        public string mTableName { get; set; }
         
     }
 }

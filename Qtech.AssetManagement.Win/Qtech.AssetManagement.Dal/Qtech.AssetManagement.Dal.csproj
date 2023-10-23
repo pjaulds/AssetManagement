@@ -43,6 +43,14 @@
   <ItemGroup>
     <Compile Include="AccumulatedDepreciationAccountDB.cs" />
     <Compile Include="AppConfiguration.cs" />
+    <Compile Include="MaintenanceJobTypeDB.cs" />
+    <Compile Include="WorkOrderTypeDB.cs" />
+    <Compile Include="HelpersDB.cs" />
+    <Compile Include="FaultAreaDB.cs" />
+    <Compile Include="FaultSymptomsDB.cs" />
+    <Compile Include="MaintenanceRequestDB.cs" />
+    <Compile Include="ServiceLevelDB.cs" />
+    <Compile Include="MaintenanceRequestTypeDB.cs" />
     <Compile Include="AssetTypeDB.cs" />
     <Compile Include="DepreciationJournalDB.cs" />
     <Compile Include="PaymentModeDB.cs" />

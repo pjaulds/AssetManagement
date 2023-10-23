@@ -301,6 +301,72 @@ namespace Qtech.AssetManagement.Win
                     }
                     else depreciationScheduleForm.Select();
                     break;
+                case "MaintenanceRequestType":
+                    if (!AllowToAccess((Int32)Modules.MaintenanceRequestType)) return;
+                    RepairAndMaintenance.MaintenanceRequestType.Default maintenanceRequestTypeForm = null;
+                    if ((maintenanceRequestTypeForm = (RepairAndMaintenance.MaintenanceRequestType.Default)IsFormAlreadyOpen(typeof(RepairAndMaintenance.MaintenanceRequestType.Default))) == null)
+                    {
+                        RepairAndMaintenance.MaintenanceRequestType.Default maintenanceRequestTypeFormChild = new RepairAndMaintenance.MaintenanceRequestType.Default();
+                        maintenanceRequestTypeFormChild.MdiParent = this;
+                        maintenanceRequestTypeFormChild.Show();
+                    }
+                    else maintenanceRequestTypeForm.Select();
+                    break;
+                case "ServiceLevel":
+                    if (!AllowToAccess((Int32)Modules.ServiceLevel)) return;
+                    RepairAndMaintenance.ServiceLevel.Default serviceLevelForm = null;
+                    if ((serviceLevelForm = (RepairAndMaintenance.ServiceLevel.Default)IsFormAlreadyOpen(typeof(RepairAndMaintenance.ServiceLevel.Default))) == null)
+                    {
+                        RepairAndMaintenance.ServiceLevel.Default serviceLevelFormChild = new RepairAndMaintenance.ServiceLevel.Default();
+                        serviceLevelFormChild.MdiParent = this;
+                        serviceLevelFormChild.Show();
+                    }
+                    else serviceLevelForm.Select();
+                    break;
+                case "FaultSymptoms":
+                    if (!AllowToAccess((Int32)Modules.FaultSymptoms)) return;
+                    RepairAndMaintenance.FaultSymptoms.Default faultSymptomsForm = null;
+                    if ((faultSymptomsForm = (RepairAndMaintenance.FaultSymptoms.Default)IsFormAlreadyOpen(typeof(RepairAndMaintenance.FaultSymptoms.Default))) == null)
+                    {
+                        RepairAndMaintenance.FaultSymptoms.Default faultSymptomsFormChild = new RepairAndMaintenance.FaultSymptoms.Default();
+                        faultSymptomsFormChild.MdiParent = this;
+                        faultSymptomsFormChild.Show();
+                    }
+                    else faultSymptomsForm.Select();
+                    break;
+                case "FaultArea":
+                    if (!AllowToAccess((Int32)Modules.FaultArea)) return;
+                    RepairAndMaintenance.FaultArea.Default faultAreaForm = null;
+                    if ((faultAreaForm = (RepairAndMaintenance.FaultArea.Default)IsFormAlreadyOpen(typeof(RepairAndMaintenance.FaultArea.Default))) == null)
+                    {
+                        RepairAndMaintenance.FaultArea.Default faultAreaFormChild = new RepairAndMaintenance.FaultArea.Default();
+                        faultAreaFormChild.MdiParent = this;
+                        faultAreaFormChild.Show();
+                    }
+                    else faultAreaForm.Select();
+                    break;
+                case "MaintenanceRequest":
+                    if (!AllowToAccess((Int32)Modules.MaintenanceRequest)) return;
+                    RepairAndMaintenance.MaintenanceRequest.Default maintenanceRequestForm = null;
+                    if ((maintenanceRequestForm = (RepairAndMaintenance.MaintenanceRequest.Default)IsFormAlreadyOpen(typeof(RepairAndMaintenance.MaintenanceRequest.Default))) == null)
+                    {
+                        RepairAndMaintenance.MaintenanceRequest.Default maintenanceRequestFormChild = new RepairAndMaintenance.MaintenanceRequest.Default();
+                        maintenanceRequestFormChild.MdiParent = this;
+                        maintenanceRequestFormChild.Show();
+                    }
+                    else maintenanceRequestForm.Select();
+                    break;
+                case "WorkOrderType":
+                    if (!AllowToAccess((Int32)Modules.WorkOrderType)) return;
+                    RepairAndMaintenance.WorkOrderType.Default workOrderTypeForm = null;
+                    if ((workOrderTypeForm = (RepairAndMaintenance.WorkOrderType.Default)IsFormAlreadyOpen(typeof(RepairAndMaintenance.WorkOrderType.Default))) == null)
+                    {
+                        RepairAndMaintenance.WorkOrderType.Default workOrderTypeFormChild = new RepairAndMaintenance.WorkOrderType.Default();
+                        workOrderTypeFormChild.MdiParent = this;
+                        workOrderTypeFormChild.Show();
+                    }
+                    else workOrderTypeForm.Select();
+                    break;
             }
         }
 

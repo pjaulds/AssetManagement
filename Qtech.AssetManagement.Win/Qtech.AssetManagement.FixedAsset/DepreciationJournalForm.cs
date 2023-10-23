@@ -134,7 +134,6 @@ namespace Qtech.AssetManagement.FixedAsset
                         else
                             MessageBox.Show("Depreciation journal with selected period does not exists.", "Depreciation Journal", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
-
                 }
             }
 

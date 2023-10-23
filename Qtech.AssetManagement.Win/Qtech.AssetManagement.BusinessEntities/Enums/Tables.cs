@@ -32,6 +32,13 @@ namespace Qtech.AssetManagement.BusinessEntities
         amQt_PurchaseVoucher = 23,
         amQt_AssetType = 24,
         amQt_DepreciationJournal = 25,
-        amQt_DepreciationJournalDetail = 26
+        amQt_DepreciationJournalDetail = 26,
+        amQt_MaintenanceRequestType = 27,
+        amQt_ServiceLevel = 28,
+        amQt_FaultSymptoms = 29,
+        amQt_FaultArea = 30,
+        amQt_MaintenanceRequest = 31,
+        amQt_WorkOrderType = 32,
+        amQt_MaintenanceJobType = 33
     }
 }

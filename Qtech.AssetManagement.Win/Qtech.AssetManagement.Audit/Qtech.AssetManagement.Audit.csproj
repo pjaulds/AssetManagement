@@ -41,6 +41,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccumulatedDepreciationAccountAudit.cs" />
+    <Compile Include="MaintenanceJobTypeAudit.cs" />
+    <Compile Include="WorkOrderTypeAudit.cs" />
+    <Compile Include="FaultAreaAudit.cs" />
+    <Compile Include="FaultSymptomsAudit.cs" />
+    <Compile Include="MaintenanceRequestAudit.cs" />
+    <Compile Include="ServiceLevelAudit.cs" />
+    <Compile Include="MaintenanceRequestTypeAudit.cs" />
     <Compile Include="AssetTypeAudit.cs" />
     <Compile Include="DepreciationJournalAudit.cs" />
     <Compile Include="PaymentModeAudit.cs" />

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -63,9 +62,18 @@
             this.purchaseVoucherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fixedAssetsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.functionalLocationsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ultraTabbedMdiManager1 = new Infragistics.Win.UltraWinTabbedMdi.UltraTabbedMdiManager(this.components);
-            this.BackgroundpictureBox = new System.Windows.Forms.PictureBox();
             this.depreciationScheduleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.repairMaintenanceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.requestTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.serviceLevelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.faultSymptomsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.faultAreaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
+            this.maintenanceRequestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
+            this.ultraTabbedMdiManager1 = new Infragistics.Win.UltraWinTabbedMdi.UltraTabbedMdiManager();
+            this.BackgroundpictureBox = new System.Windows.Forms.PictureBox();
+            this.workOrderTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ultraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BackgroundpictureBox)).BeginInit();
@@ -78,7 +86,8 @@
             this.maintenanceToolStripMenuItem,
             this.setupToolStripMenuItem,
             this.fixedAssetManagementToolStripMenuItem,
-            this.depreciationScheduleToolStripMenuItem});
+            this.depreciationScheduleToolStripMenuItem,
+            this.repairMaintenanceToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(673, 24);
@@ -349,6 +358,79 @@
             this.functionalLocationsToolStripMenuItem.Text = "Functional Locations";
             this.functionalLocationsToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
+            // depreciationScheduleToolStripMenuItem
+            // 
+            this.depreciationScheduleToolStripMenuItem.Name = "depreciationScheduleToolStripMenuItem";
+            this.depreciationScheduleToolStripMenuItem.Size = new System.Drawing.Size(137, 20);
+            this.depreciationScheduleToolStripMenuItem.Tag = "DepreciationSchedule";
+            this.depreciationScheduleToolStripMenuItem.Text = "Depreciation Schedule";
+            this.depreciationScheduleToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
+            // 
+            // repairMaintenanceToolStripMenuItem
+            // 
+            this.repairMaintenanceToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.requestTypeToolStripMenuItem,
+            this.serviceLevelToolStripMenuItem,
+            this.faultSymptomsToolStripMenuItem,
+            this.faultAreaToolStripMenuItem,
+            this.toolStripMenuItem2,
+            this.maintenanceRequestToolStripMenuItem,
+            this.toolStripMenuItem3,
+            this.workOrderTypeToolStripMenuItem});
+            this.repairMaintenanceToolStripMenuItem.Name = "repairMaintenanceToolStripMenuItem";
+            this.repairMaintenanceToolStripMenuItem.Size = new System.Drawing.Size(137, 20);
+            this.repairMaintenanceToolStripMenuItem.Text = "Repair && Maintenance";
+            // 
+            // requestTypeToolStripMenuItem
+            // 
+            this.requestTypeToolStripMenuItem.Name = "requestTypeToolStripMenuItem";
+            this.requestTypeToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.requestTypeToolStripMenuItem.Tag = "MaintenanceRequestType";
+            this.requestTypeToolStripMenuItem.Text = "1. Request Type";
+            this.requestTypeToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
+            // 
+            // serviceLevelToolStripMenuItem
+            // 
+            this.serviceLevelToolStripMenuItem.Name = "serviceLevelToolStripMenuItem";
+            this.serviceLevelToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.serviceLevelToolStripMenuItem.Tag = "ServiceLevel";
+            this.serviceLevelToolStripMenuItem.Text = "2. Service Level";
+            this.serviceLevelToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
+            // 
+            // faultSymptomsToolStripMenuItem
+            // 
+            this.faultSymptomsToolStripMenuItem.Name = "faultSymptomsToolStripMenuItem";
+            this.faultSymptomsToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.faultSymptomsToolStripMenuItem.Tag = "FaultSymptoms";
+            this.faultSymptomsToolStripMenuItem.Text = "3. Fault Symptoms";
+            this.faultSymptomsToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
+            // 
+            // faultAreaToolStripMenuItem
+            // 
+            this.faultAreaToolStripMenuItem.Name = "faultAreaToolStripMenuItem";
+            this.faultAreaToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.faultAreaToolStripMenuItem.Tag = "FaultArea";
+            this.faultAreaToolStripMenuItem.Text = "4. Fault Area";
+            this.faultAreaToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(197, 6);
+            // 
+            // maintenanceRequestToolStripMenuItem
+            // 
+            this.maintenanceRequestToolStripMenuItem.Name = "maintenanceRequestToolStripMenuItem";
+            this.maintenanceRequestToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.maintenanceRequestToolStripMenuItem.Tag = "MaintenanceRequest";
+            this.maintenanceRequestToolStripMenuItem.Text = "5. Maintenance Request";
+            this.maintenanceRequestToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(197, 6);
+            // 
             // ultraTabbedMdiManager1
             // 
             appearance1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
@@ -382,13 +464,13 @@
             this.BackgroundpictureBox.TabStop = false;
             this.BackgroundpictureBox.Visible = false;
             // 
-            // depreciationScheduleToolStripMenuItem
+            // workOrderTypeToolStripMenuItem
             // 
-            this.depreciationScheduleToolStripMenuItem.Name = "depreciationScheduleToolStripMenuItem";
-            this.depreciationScheduleToolStripMenuItem.Size = new System.Drawing.Size(137, 20);
-            this.depreciationScheduleToolStripMenuItem.Tag = "DepreciationSchedule";
-            this.depreciationScheduleToolStripMenuItem.Text = "Depreciation Schedule";
-            this.depreciationScheduleToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
+            this.workOrderTypeToolStripMenuItem.Name = "workOrderTypeToolStripMenuItem";
+            this.workOrderTypeToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.workOrderTypeToolStripMenuItem.Tag = "WorkOrderType";
+            this.workOrderTypeToolStripMenuItem.Text = "6. Work Order Type";
+            this.workOrderTypeToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // MasterForm
             // 
@@ -450,6 +532,15 @@
         private System.Windows.Forms.ToolStripMenuItem purchaseVoucherToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem assetTypeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem depreciationScheduleToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem repairMaintenanceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem requestTypeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem serviceLevelToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem faultSymptomsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem faultAreaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem maintenanceRequestToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem workOrderTypeToolStripMenuItem;
     }
 }
 

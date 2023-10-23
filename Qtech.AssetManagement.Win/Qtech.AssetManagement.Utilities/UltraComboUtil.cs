@@ -120,5 +120,41 @@ namespace Qtech.AssetManagement.Utilities
             myUltraCombo.SetDataBinding(PaymentModeManager.GetList(), null, true);
             myUltraCombo.Refresh();
         }
+
+        public static void MaintenanceRequestType(UltraCombo myUltraCombo)
+        {
+            myUltraCombo.ValueMember = "mId";
+            myUltraCombo.DisplayMember = "mName";
+
+            myUltraCombo.SetDataBinding(MaintenanceRequestTypeManager.GetList(), null, true);
+            myUltraCombo.Refresh();
+        }
+
+        public static void ServiceLevel(UltraCombo myUltraCombo)
+        {
+            myUltraCombo.ValueMember = "mId";
+            myUltraCombo.DisplayMember = "mName";
+
+            myUltraCombo.SetDataBinding(ServiceLevelManager.GetList(), null, true);
+            myUltraCombo.Refresh();
+        }
+
+        public static void FaultSymptoms(UltraCombo myUltraCombo)
+        {
+            myUltraCombo.ValueMember = "mId";
+            myUltraCombo.DisplayMember = "mName";
+
+            myUltraCombo.SetDataBinding(FaultSymptomsManager.GetList(), null, true);
+            myUltraCombo.Refresh();
+        }
+
+        public static void FaultArea(UltraCombo myUltraCombo)
+        {
+            myUltraCombo.ValueMember = "mId";
+            myUltraCombo.DisplayMember = "mName";
+
+            myUltraCombo.SetDataBinding(FaultAreaManager.GetList(), null, true);
+            myUltraCombo.Refresh();
+        }
     }
 }

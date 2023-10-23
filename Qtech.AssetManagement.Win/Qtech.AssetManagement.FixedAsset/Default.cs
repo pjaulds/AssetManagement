@@ -23,6 +23,9 @@ namespace Qtech.AssetManagement.FixedAsset
             InitializeComponent();
         }
 
+        public bool mFromBrowse { get; set; }
+        public BusinessEntities.FixedAsset mFixedAsset { get; set; }
+
         #region Private Variables
         bool allow_select;
         bool allow_insert;
@@ -252,8 +255,15 @@ namespace Qtech.AssetManagement.FixedAsset
 
           
             BusinessEntities.FixedAsset item = FixedAssetManager.GetItem(_mId);
-            LoadFormControlsFromUser(item);
 
+            if(mFromBrowse)
+            {
+                mFixedAsset = item;
+                Close();
+                return;
+            }
+
+            LoadFormControlsFromUser(item);
             ControlUtil.ExpandPanel(splitContainer1);
             ProductNametextBox.Focus();
         }

@@ -42,6 +42,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccumulatedDepreciationAccount.cs" />
+    <Compile Include="Collection\MaintenanceJobTypeCollection.cs" />
+    <Compile Include="MaintenanceJobType.cs" />
+    <Compile Include="Collection\WorkOrderTypeCollection.cs" />
+    <Compile Include="SearchCriteria\MaintenanceJobTypeCriteria.cs" />
+    <Compile Include="SearchCriteria\WorkOrderTypeCriteria.cs" />
+    <Compile Include="WorkOrderType.cs" />
+    <Compile Include="Collection\FaultAreaCollection.cs" />
+    <Compile Include="Collection\MaintenanceRequestCollection.cs" />
+    <Compile Include="FaultArea.cs" />
+    <Compile Include="Collection\FaultSymptomsCollection.cs" />
+    <Compile Include="FaultSymptoms.cs" />
+    <Compile Include="Collection\ServiceLevelCollection.cs" />
+    <Compile Include="MaintenanceRequest.cs" />
+    <Compile Include="SearchCriteria\FaultAreaCriteria.cs" />
+    <Compile Include="SearchCriteria\FaultSymptomsCriteria.cs" />
+    <Compile Include="SearchCriteria\MaintenanceRequestCriteria.cs" />
+    <Compile Include="SearchCriteria\ServiceLevelCriteria.cs" />
+    <Compile Include="ServiceLevel.cs" />
+    <Compile Include="Collection\MaintenanceRequestTypeCollection.cs" />
+    <Compile Include="MaintenanceRequestType.cs" />
     <Compile Include="AssetType.cs" />
     <Compile Include="Collection\AssetTypeCollection.cs" />
     <Compile Include="Collection\DepreciationJournalCollection.cs" />
@@ -63,6 +83,7 @@
     <Compile Include="Enums\AveragingMethodEnum.cs" />
     <Compile Include="Enums\DepreciationMethodEnum.cs" />
     <Compile Include="PurchaseVoucher.cs" />
+    <Compile Include="SearchCriteria\MaintenanceRequestTypeCriteria.cs" />
     <Compile Include="SearchCriteria\AssetTypeCriteria.cs" />
     <Compile Include="SearchCriteria\DepreciationJournalCriteria.cs" />
     <Compile Include="SearchCriteria\PaymentModeCriteria.cs" />

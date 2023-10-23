@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qtech.AssetManagement.Purch
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qtech.AssetManagement.DepreciationSchedule", "Qtech.AssetManagement.DepreciationSchedule\Qtech.AssetManagement.DepreciationSchedule.csproj", "{13796678-420E-4A98-AE05-AB54D4596969}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qtech.AssetManagement.RepairAndMaintenance", "Qtech.AssetManagement.RepairAndMaintenance\Qtech.AssetManagement.RepairAndMaintenance.csproj", "{9553A99F-EEF4-4B07-80F0-8F6C821E44C4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{13796678-420E-4A98-AE05-AB54D4596969}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13796678-420E-4A98-AE05-AB54D4596969}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13796678-420E-4A98-AE05-AB54D4596969}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9553A99F-EEF4-4B07-80F0-8F6C821E44C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9553A99F-EEF4-4B07-80F0-8F6C821E44C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9553A99F-EEF4-4B07-80F0-8F6C821E44C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9553A99F-EEF4-4B07-80F0-8F6C821E44C4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

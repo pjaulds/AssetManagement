@@ -24,6 +24,13 @@
         PaymentMode = 20,
         PurchaseVoucher = 21,
         AssetType = 22,
-        DepreciationSchedule = 23
+        DepreciationSchedule = 23,
+        MaintenanceRequestType = 24,
+        ServiceLevel = 25,
+        FaultSymptoms = 26,
+        FaultArea = 27,
+        MaintenanceRequest = 28,
+        WorkOrderType = 29,
+        MaintenanceJobType = 30
     }
 }
