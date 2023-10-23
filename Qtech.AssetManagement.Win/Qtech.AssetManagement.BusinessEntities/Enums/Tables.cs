@@ -39,6 +39,9 @@ namespace Qtech.AssetManagement.BusinessEntities
         amQt_FaultArea = 30,
         amQt_MaintenanceRequest = 31,
         amQt_WorkOrderType = 32,
-        amQt_MaintenanceJobType = 33
+        amQt_MaintenanceJobType = 33,
+        amQt_MaintenanceJobTypeVariant = 34,
+        amQt_Trade = 35,
+        amQt_WorkOrder = 36
     }
 }

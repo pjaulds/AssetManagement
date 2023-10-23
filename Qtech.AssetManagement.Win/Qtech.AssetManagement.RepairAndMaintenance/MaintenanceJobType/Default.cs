@@ -28,6 +28,8 @@ namespace Qtech.AssetManagement.RepairAndMaintenance.MaintenanceJobType
         bool allow_update;
         bool allow_delete;
         bool allow_print;
+
+        MaintenanceJobTypeVariantCollection deleted_items;
         #endregion
 
         #region Private Members
@@ -74,12 +76,27 @@ namespace Qtech.AssetManagement.RepairAndMaintenance.MaintenanceJobType
             }
         }
 
-        private void LoadMaintenanceJobTypeFromFormControls(BusinessEntities.MaintenanceJobType myUser)
+        private void LoadMaintenanceJobTypeFromFormControls(BusinessEntities.MaintenanceJobType myMaintenanceJobType)
         {
-            myUser.mId = int.Parse(Idlabel.Text);
-            myUser.mCode = CodetextBox.Text;
-            myUser.mName = NametextBox.Text;
-            myUser.mUserId = SessionUtil.mUser.mId;
+            myMaintenanceJobType.mId = int.Parse(Idlabel.Text);
+            myMaintenanceJobType.mCode = CodetextBox.Text;
+            myMaintenanceJobType.mName = NametextBox.Text;
+            myMaintenanceJobType.mUserId = SessionUtil.mUser.mId;
+
+            LoadMaintenanceJobTypeVariantFromFormControls(myMaintenanceJobType);
+            myMaintenanceJobType.mDeletedMaintenanceJobTypeVariantCollection = deleted_items;
+        }
+
+        private void LoadMaintenanceJobTypeVariantFromFormControls(BusinessEntities.MaintenanceJobType myMaintenanceJobType)
+        {
+            MaintenanceJobTypeVariantCollection items = new MaintenanceJobTypeVariantCollection();
+            foreach(DataGridViewRow row in ItemsdataGridView.Rows)
+            {
+                if (row.IsNewRow) continue;
+
+                items.Add((MaintenanceJobTypeVariant)row.DataBoundItem);
+            }
+            myMaintenanceJobType.mMaintenanceJobTypeVariantCollection = items;
         }
 
         private void LoadFormControlsFromMaintenanceJobType(BusinessEntities.MaintenanceJobType myMaintenanceJobType)
@@ -87,13 +104,29 @@ namespace Qtech.AssetManagement.RepairAndMaintenance.MaintenanceJobType
             Idlabel.Text = myMaintenanceJobType.mId.ToString();
             CodetextBox.Text = myMaintenanceJobType.mCode;
             NametextBox.Text = myMaintenanceJobType.mName;
+
+            LoadFormControlsFromMaintenanceJobTypeVariant(myMaintenanceJobType);
+        }
+
+        private void LoadFormControlsFromMaintenanceJobTypeVariant(BusinessEntities.MaintenanceJobType myMaintenanceJobType)
+        {
+            MaintenanceJobTypeVariantCriteria criteria = new MaintenanceJobTypeVariantCriteria();
+            criteria.mMaintenanceJobTypeId = myMaintenanceJobType.mId;
+
+            ItemsdataGridView.AutoGenerateColumns = false;
+            ItemsdataGridView.DataSource = new SortableBindingList<MaintenanceJobTypeVariant>(MaintenanceJobTypeVariantManager.GetList(criteria));
+            ItemsdataGridView.Refresh();
         }
 
         private void EndEditing()
         {
             ControlUtil.ClearConent(splitContainer1.Panel2);
             ControlUtil.HidePanel(splitContainer1);
-            Idlabel.Text = "0";
+            deleted_items = null;
+
+            ItemsdataGridView.AutoGenerateColumns = false;
+            ItemsdataGridView.DataSource = new SortableBindingList<MaintenanceJobTypeVariant>();
+            ItemsdataGridView.Refresh();
         }
         #endregion
 
@@ -122,13 +155,13 @@ namespace Qtech.AssetManagement.RepairAndMaintenance.MaintenanceJobType
             criteria.mId = int.Parse(Idlabel.Text);
             criteria.mName = NametextBox.Text;
             if (MaintenanceJobTypeManager.SelectCountForGetList(criteria) > 0)
-                rules.Add(new BrokenRule("", "Maintenance job type code already exists."));
+                rules.Add(new BrokenRule("", "Maintenance job type name already exists."));
 
             criteria = new MaintenanceJobTypeCriteria();
             criteria.mId = int.Parse(Idlabel.Text);
             criteria.mCode = CodetextBox.Text;
             if (MaintenanceJobTypeManager.SelectCountForGetList(criteria) > 0)
-                rules.Add(new BrokenRule("", "Maintenance job type name already exists."));
+                rules.Add(new BrokenRule("", "Maintenance job type code already exists."));
 
             if (rules.Count > 0)
             {
@@ -249,5 +282,75 @@ namespace Qtech.AssetManagement.RepairAndMaintenance.MaintenanceJobType
             CancelTransaction();
         }
 
+        private void ItemsdataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == -1) return;
+            if (ItemsdataGridView.CurrentRow.IsNewRow) return;
+
+            string colName = ItemsdataGridView.Columns[e.ColumnIndex].Name;
+            MaintenanceJobTypeVariant item = (MaintenanceJobTypeVariant)ItemsdataGridView.CurrentRow.DataBoundItem;
+
+            if (colName == "mDelete")
+            {
+                if (item.mId > 0)
+                {
+                    if (!allow_delete)
+                    {
+                        MessageUtil.NotAllowedDeleteAccess();
+                        return;
+                    }
+                }
+
+                if (deleted_items == null)
+                    deleted_items = new  MaintenanceJobTypeVariantCollection();
+
+                deleted_items.Add(item);
+
+                ItemsdataGridView.Rows.Remove(ItemsdataGridView.CurrentRow);
+            }
+        }
+
+        private void ItemsdataGridView_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            try
+            {
+                MaintenanceJobTypeVariant item = (MaintenanceJobTypeVariant)((DataGridView)sender).Rows[e.RowIndex].DataBoundItem;
+                if (item == null) return;
+
+                string name = ((DataGridView)sender).Columns[e.ColumnIndex].Name;
+                if (name == "mCode")
+                {
+                    string inputValue = e.FormattedValue.ToString();
+                    if (inputValue != item.mCode)//code
+                    {
+                        MaintenanceJobTypeVariantCriteria criteria = new MaintenanceJobTypeVariantCriteria();
+                        criteria.mId = item.mId;
+                        criteria.mCode = inputValue;
+                        if (MaintenanceJobTypeVariantManager.SelectCountForGetList(criteria) > 0)
+                        {
+                            MessageBox.Show("Maintenance job type variant code already exists.", "Job Type Variant", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            e.Cancel = true;
+                        }
+                    }
+                }
+
+                if (name == "mName")
+                {
+                    string inputValue = e.FormattedValue.ToString();
+                    if (inputValue != item.mName)
+                    {
+                        MaintenanceJobTypeVariantCriteria criteria = new MaintenanceJobTypeVariantCriteria();
+                        criteria.mId = item.mId;
+                        criteria.mName = inputValue;
+                        if (MaintenanceJobTypeVariantManager.SelectCountForGetList(criteria) > 0)
+                        {
+                            MessageBox.Show("Maintenance job type variant name already exists.", "Job Type Variant", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                            e.Cancel = true;
+                        }
+                    }
+                }
+            }
+            catch { }
+        }
     }
 }

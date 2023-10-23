@@ -56,6 +56,25 @@ namespace Qtech.AssetManagement.Bll
 
                 int id = MaintenanceJobTypeDB.Save(myMaintenanceJobType);
 
+                if (myMaintenanceJobType.mMaintenanceJobTypeVariantCollection != null)
+                {
+                    foreach (MaintenanceJobTypeVariant item in myMaintenanceJobType.mMaintenanceJobTypeVariantCollection)
+                    {
+                        item.mMaintenanceJobTypeId = id;
+                        item.mUserId = myMaintenanceJobType.mUserId;
+                        MaintenanceJobTypeVariantManager.Save(item);
+                    }
+                }
+
+                if (myMaintenanceJobType.mDeletedMaintenanceJobTypeVariantCollection != null)
+                {
+                    foreach (MaintenanceJobTypeVariant item in myMaintenanceJobType.mDeletedMaintenanceJobTypeVariantCollection)
+                    {
+                        item.mUserId = myMaintenanceJobType.mUserId;
+                        MaintenanceJobTypeVariantManager.Delete(item);
+                    }
+                }
+
                 if (myMaintenanceJobType.mId == 0)
                     AuditInsert(myMaintenanceJobType, id);
 

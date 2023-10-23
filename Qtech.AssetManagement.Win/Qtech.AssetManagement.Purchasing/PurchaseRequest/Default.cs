@@ -461,5 +461,10 @@ namespace Qtech.AssetManagement.Purchasing.PurchaseRequest
             ultraGrid1.SetDataBinding(PurchaseRequestManager.GetList(criteria), null, true);
             ultraGrid1.Refresh();
         }
+
+        private void ItemsdataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+
+        }
     }
 }

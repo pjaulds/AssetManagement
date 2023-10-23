@@ -42,11 +42,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccumulatedDepreciationAccount.cs" />
+    <Compile Include="Collection\TradeCollection.cs" />
+    <Compile Include="Collection\WorkOrderCollection.cs" />
+    <Compile Include="SearchCriteria\TradeCriteria.cs" />
+    <Compile Include="SearchCriteria\WorkOrderCriteria.cs" />
+    <Compile Include="Trade.cs" />
+    <Compile Include="Collection\MaintenanceJobTypeVariantCollection.cs" />
+    <Compile Include="MaintenanceJobTypeVariant.cs" />
     <Compile Include="Collection\MaintenanceJobTypeCollection.cs" />
     <Compile Include="MaintenanceJobType.cs" />
     <Compile Include="Collection\WorkOrderTypeCollection.cs" />
+    <Compile Include="SearchCriteria\MaintenanceJobTypeVariant.cs" />
     <Compile Include="SearchCriteria\MaintenanceJobTypeCriteria.cs" />
     <Compile Include="SearchCriteria\WorkOrderTypeCriteria.cs" />
+    <Compile Include="WorkOrder.cs" />
     <Compile Include="WorkOrderType.cs" />
     <Compile Include="Collection\FaultAreaCollection.cs" />
     <Compile Include="Collection\MaintenanceRequestCollection.cs" />

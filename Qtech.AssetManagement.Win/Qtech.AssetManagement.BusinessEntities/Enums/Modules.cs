@@ -31,6 +31,8 @@
         FaultArea = 27,
         MaintenanceRequest = 28,
         WorkOrderType = 29,
-        MaintenanceJobType = 30
+        MaintenanceJobType = 30,
+        Trade = 31,
+        WorkOrder = 32
     }
 }

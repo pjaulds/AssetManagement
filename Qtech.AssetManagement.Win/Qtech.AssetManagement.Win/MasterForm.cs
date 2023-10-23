@@ -367,6 +367,28 @@ namespace Qtech.AssetManagement.Win
                     }
                     else workOrderTypeForm.Select();
                     break;
+                case "MaintenanceJobType":
+                    if (!AllowToAccess((Int32)Modules.MaintenanceJobType)) return;
+                    RepairAndMaintenance.MaintenanceJobType.Default maintenanceJobTypeForm = null;
+                    if ((maintenanceJobTypeForm = (RepairAndMaintenance.MaintenanceJobType.Default)IsFormAlreadyOpen(typeof(RepairAndMaintenance.MaintenanceJobType.Default))) == null)
+                    {
+                        RepairAndMaintenance.MaintenanceJobType.Default maintenanceJobTypeFormChild = new RepairAndMaintenance.MaintenanceJobType.Default();
+                        maintenanceJobTypeFormChild.MdiParent = this;
+                        maintenanceJobTypeFormChild.Show();
+                    }
+                    else maintenanceJobTypeForm.Select();
+                    break;
+                case "Trade":
+                    if (!AllowToAccess((Int32)Modules.Trade)) return;
+                    RepairAndMaintenance.Trade.Default tradeForm = null;
+                    if ((tradeForm = (RepairAndMaintenance.Trade.Default)IsFormAlreadyOpen(typeof(RepairAndMaintenance.Trade.Default))) == null)
+                    {
+                        RepairAndMaintenance.Trade.Default tradeFormChild = new RepairAndMaintenance.Trade.Default();
+                        tradeFormChild.MdiParent = this;
+                        tradeFormChild.Show();
+                    }
+                    else tradeForm.Select();
+                    break;
             }
         }
 

@@ -31,17 +31,17 @@
             Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand1 = new Infragistics.Win.UltraWinGrid.UltraGridBand("Band 0", -1);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn1 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn11 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mTransactionNo");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn2 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mTransactionNo");
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn12 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mDate");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn3 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mDate");
             Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn13 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mRequestedBy");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn14 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mDateRequired");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn4 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mRequestedBy");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn5 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mDateRequired");
             Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn16 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mSupplier1Name");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn17 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mSupplier2Name");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn18 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mSupplier3Name");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn19 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mRemarks");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn6 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mSupplier1Name");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn7 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mSupplier2Name");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn8 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mSupplier3Name");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn9 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mRemarks");
             Infragistics.Win.Appearance appearance5 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance6 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance7 = new Infragistics.Win.Appearance();
@@ -62,8 +62,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             Infragistics.Win.Appearance appearance16 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand2 = new Infragistics.Win.UltraWinGrid.UltraGridBand("Band 0", -1);
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn20 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn21 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mName");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn10 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn11 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mName");
             Infragistics.Win.Appearance appearance17 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance18 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance19 = new Infragistics.Win.Appearance();
@@ -77,8 +77,8 @@
             Infragistics.Win.Appearance appearance27 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance28 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand3 = new Infragistics.Win.UltraWinGrid.UltraGridBand("Band 0", -1);
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn6 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn7 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mName");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn12 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn13 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mName");
             Infragistics.Win.Appearance appearance29 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance30 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance31 = new Infragistics.Win.Appearance();
@@ -92,8 +92,8 @@
             Infragistics.Win.Appearance appearance39 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance40 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand4 = new Infragistics.Win.UltraWinGrid.UltraGridBand("Band 0", -1);
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn24 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn25 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mName");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn14 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn15 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mName");
             Infragistics.Win.Appearance appearance41 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance42 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance43 = new Infragistics.Win.Appearance();
@@ -107,8 +107,8 @@
             Infragistics.Win.Appearance appearance51 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance52 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand5 = new Infragistics.Win.UltraWinGrid.UltraGridBand("Band 0", -1);
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn22 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn23 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mName");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn16 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn17 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mName");
             Infragistics.Win.Appearance appearance53 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance54 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance55 = new Infragistics.Win.Appearance();
@@ -132,14 +132,12 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.expandPanelControl1 = new Qtech.AssetManagement.Controls.ExpandPanelControl();
             this.ItemsdataGridView = new System.Windows.Forms.DataGridView();
             this.mDelete = new System.Windows.Forms.DataGridViewImageColumn();
             this.mQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mUnitName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RemarksultraTextEditor = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
-            this.searchProductUserControl1 = new Qtech.AssetManagement.Controls.SearchProductUserControl();
             this.panel1 = new System.Windows.Forms.Panel();
             this.ApprovedBytextBox = new System.Windows.Forms.TextBox();
             this.RequestedByutraCombo = new Infragistics.Win.UltraWinGrid.UltraCombo();
@@ -170,6 +168,8 @@
             this.ApprovedBybutton = new System.Windows.Forms.Button();
             this.Cancelbutton = new System.Windows.Forms.Button();
             this.Savebutton = new System.Windows.Forms.Button();
+            this.expandPanelControl1 = new Qtech.AssetManagement.Controls.ExpandPanelControl();
+            this.searchProductUserControl1 = new Qtech.AssetManagement.Controls.SearchProductUserControl();
             this.collapsePanelControl1 = new Qtech.AssetManagement.Controls.CollapsePanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -231,46 +231,46 @@
             ultraGridColumn1.Header.VisiblePosition = 0;
             ultraGridColumn1.Hidden = true;
             appearance2.TextHAlignAsString = "Center";
-            ultraGridColumn11.CellAppearance = appearance2;
-            ultraGridColumn11.Header.Caption = "Transaction No.";
-            ultraGridColumn11.Header.VisiblePosition = 1;
-            ultraGridColumn11.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(150, 23);
+            ultraGridColumn2.CellAppearance = appearance2;
+            ultraGridColumn2.Header.Caption = "Transaction No.";
+            ultraGridColumn2.Header.VisiblePosition = 1;
+            ultraGridColumn2.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(150, 23);
             appearance3.TextHAlignAsString = "Right";
-            ultraGridColumn12.CellAppearance = appearance3;
-            ultraGridColumn12.Format = "D";
-            ultraGridColumn12.Header.Caption = "Date Requested";
-            ultraGridColumn12.Header.VisiblePosition = 2;
-            ultraGridColumn12.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(175, 0);
-            ultraGridColumn13.Header.Caption = "Requested By";
-            ultraGridColumn13.Header.VisiblePosition = 3;
-            ultraGridColumn13.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(200, 0);
+            ultraGridColumn3.CellAppearance = appearance3;
+            ultraGridColumn3.Format = "D";
+            ultraGridColumn3.Header.Caption = "Date Requested";
+            ultraGridColumn3.Header.VisiblePosition = 2;
+            ultraGridColumn3.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(175, 0);
+            ultraGridColumn4.Header.Caption = "Requested By";
+            ultraGridColumn4.Header.VisiblePosition = 3;
+            ultraGridColumn4.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(200, 0);
             appearance4.TextHAlignAsString = "Right";
-            ultraGridColumn14.CellAppearance = appearance4;
-            ultraGridColumn14.Format = "D";
-            ultraGridColumn14.Header.Caption = "Date Required";
-            ultraGridColumn14.Header.VisiblePosition = 4;
-            ultraGridColumn14.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(175, 0);
-            ultraGridColumn16.Header.Caption = "Supplier 1";
-            ultraGridColumn16.Header.VisiblePosition = 5;
-            ultraGridColumn16.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(200, 0);
-            ultraGridColumn17.Header.Caption = "Supplier 2";
-            ultraGridColumn17.Header.VisiblePosition = 6;
-            ultraGridColumn17.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(200, 0);
-            ultraGridColumn18.Header.Caption = "Supplier 3";
-            ultraGridColumn18.Header.VisiblePosition = 7;
-            ultraGridColumn18.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(200, 0);
-            ultraGridColumn19.Header.Caption = "Remarks";
-            ultraGridColumn19.Header.VisiblePosition = 8;
+            ultraGridColumn5.CellAppearance = appearance4;
+            ultraGridColumn5.Format = "D";
+            ultraGridColumn5.Header.Caption = "Date Required";
+            ultraGridColumn5.Header.VisiblePosition = 4;
+            ultraGridColumn5.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(175, 0);
+            ultraGridColumn6.Header.Caption = "Supplier 1";
+            ultraGridColumn6.Header.VisiblePosition = 5;
+            ultraGridColumn6.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(200, 0);
+            ultraGridColumn7.Header.Caption = "Supplier 2";
+            ultraGridColumn7.Header.VisiblePosition = 6;
+            ultraGridColumn7.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(200, 0);
+            ultraGridColumn8.Header.Caption = "Supplier 3";
+            ultraGridColumn8.Header.VisiblePosition = 7;
+            ultraGridColumn8.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(200, 0);
+            ultraGridColumn9.Header.Caption = "Remarks";
+            ultraGridColumn9.Header.VisiblePosition = 8;
             ultraGridBand1.Columns.AddRange(new object[] {
             ultraGridColumn1,
-            ultraGridColumn11,
-            ultraGridColumn12,
-            ultraGridColumn13,
-            ultraGridColumn14,
-            ultraGridColumn16,
-            ultraGridColumn17,
-            ultraGridColumn18,
-            ultraGridColumn19});
+            ultraGridColumn2,
+            ultraGridColumn3,
+            ultraGridColumn4,
+            ultraGridColumn5,
+            ultraGridColumn6,
+            ultraGridColumn7,
+            ultraGridColumn8,
+            ultraGridColumn9});
             ultraGridBand1.RowLayoutStyle = Infragistics.Win.UltraWinGrid.RowLayoutStyle.ColumnLayout;
             this.ultraGrid1.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
             this.ultraGrid1.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
@@ -456,15 +456,6 @@
             this.label17.TabIndex = 4;
             this.label17.Text = "Start Date";
             // 
-            // expandPanelControl1
-            // 
-            this.expandPanelControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.expandPanelControl1.Location = new System.Drawing.Point(352, 0);
-            this.expandPanelControl1.Name = "expandPanelControl1";
-            this.expandPanelControl1.Size = new System.Drawing.Size(15, 457);
-            this.expandPanelControl1.TabIndex = 126;
-            this.expandPanelControl1._ExpandPanel += new System.EventHandler(this.expandPanelControl1__ExpandPanel);
-            // 
             // ItemsdataGridView
             // 
             this.ItemsdataGridView.AllowUserToAddRows = false;
@@ -510,6 +501,7 @@
             this.ItemsdataGridView.Size = new System.Drawing.Size(617, 213);
             this.ItemsdataGridView.TabIndex = 181;
             this.ItemsdataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ItemsdataGridView_CellClick);
+            this.ItemsdataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.ItemsdataGridView_DataError);
             // 
             // mDelete
             // 
@@ -553,23 +545,6 @@
             this.RemarksultraTextEditor.Size = new System.Drawing.Size(617, 21);
             this.RemarksultraTextEditor.TabIndex = 180;
             // 
-            // searchProductUserControl1
-            // 
-            this.searchProductUserControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.searchProductUserControl1.Location = new System.Drawing.Point(15, 175);
-            this.searchProductUserControl1.mProduct = null;
-            this.searchProductUserControl1.mQuantity = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.searchProductUserControl1.mWithQuantity = true;
-            this.searchProductUserControl1.Name = "searchProductUserControl1";
-            this.searchProductUserControl1.Size = new System.Drawing.Size(617, 25);
-            this.searchProductUserControl1.TabIndex = 179;
-            this.searchProductUserControl1._GetProduct += new System.EventHandler(this.searchProductControl1__GetProduct);
-            this.searchProductUserControl1._SearchingProduct += new System.EventHandler(this.searchProductControl1__SearchingProduct);
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.ApprovedBytextBox);
@@ -599,20 +574,20 @@
             appearance16.BackColor = System.Drawing.SystemColors.Window;
             appearance16.BorderColor = System.Drawing.SystemColors.InactiveCaption;
             this.RequestedByutraCombo.DisplayLayout.Appearance = appearance16;
-            ultraGridColumn20.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
-            ultraGridColumn20.Header.VisiblePosition = 0;
-            ultraGridColumn20.Hidden = true;
-            ultraGridColumn21.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
-            ultraGridColumn21.Header.Caption = "Name";
-            ultraGridColumn21.Header.VisiblePosition = 1;
-            ultraGridColumn21.RowLayoutColumnInfo.OriginX = 2;
-            ultraGridColumn21.RowLayoutColumnInfo.OriginY = 0;
-            ultraGridColumn21.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 23);
-            ultraGridColumn21.RowLayoutColumnInfo.SpanX = 6;
-            ultraGridColumn21.RowLayoutColumnInfo.SpanY = 2;
+            ultraGridColumn10.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
+            ultraGridColumn10.Header.VisiblePosition = 0;
+            ultraGridColumn10.Hidden = true;
+            ultraGridColumn11.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
+            ultraGridColumn11.Header.Caption = "Name";
+            ultraGridColumn11.Header.VisiblePosition = 1;
+            ultraGridColumn11.RowLayoutColumnInfo.OriginX = 2;
+            ultraGridColumn11.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn11.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 23);
+            ultraGridColumn11.RowLayoutColumnInfo.SpanX = 6;
+            ultraGridColumn11.RowLayoutColumnInfo.SpanY = 2;
             ultraGridBand2.Columns.AddRange(new object[] {
-            ultraGridColumn20,
-            ultraGridColumn21});
+            ultraGridColumn10,
+            ultraGridColumn11});
             ultraGridBand2.RowLayoutStyle = Infragistics.Win.UltraWinGrid.RowLayoutStyle.ColumnLayout;
             this.RequestedByutraCombo.DisplayLayout.BandsSerializer.Add(ultraGridBand2);
             this.RequestedByutraCombo.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
@@ -692,20 +667,20 @@
             appearance28.BackColor = System.Drawing.SystemColors.Window;
             appearance28.BorderColor = System.Drawing.SystemColors.InactiveCaption;
             this.Supplier3ultraCombo.DisplayLayout.Appearance = appearance28;
-            ultraGridColumn6.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
-            ultraGridColumn6.Header.VisiblePosition = 0;
-            ultraGridColumn6.Hidden = true;
-            ultraGridColumn7.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
-            ultraGridColumn7.Header.Caption = "Name";
-            ultraGridColumn7.Header.VisiblePosition = 1;
-            ultraGridColumn7.RowLayoutColumnInfo.OriginX = 2;
-            ultraGridColumn7.RowLayoutColumnInfo.OriginY = 0;
-            ultraGridColumn7.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 23);
-            ultraGridColumn7.RowLayoutColumnInfo.SpanX = 6;
-            ultraGridColumn7.RowLayoutColumnInfo.SpanY = 2;
+            ultraGridColumn12.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
+            ultraGridColumn12.Header.VisiblePosition = 0;
+            ultraGridColumn12.Hidden = true;
+            ultraGridColumn13.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
+            ultraGridColumn13.Header.Caption = "Name";
+            ultraGridColumn13.Header.VisiblePosition = 1;
+            ultraGridColumn13.RowLayoutColumnInfo.OriginX = 2;
+            ultraGridColumn13.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn13.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 23);
+            ultraGridColumn13.RowLayoutColumnInfo.SpanX = 6;
+            ultraGridColumn13.RowLayoutColumnInfo.SpanY = 2;
             ultraGridBand3.Columns.AddRange(new object[] {
-            ultraGridColumn6,
-            ultraGridColumn7});
+            ultraGridColumn12,
+            ultraGridColumn13});
             ultraGridBand3.RowLayoutStyle = Infragistics.Win.UltraWinGrid.RowLayoutStyle.ColumnLayout;
             this.Supplier3ultraCombo.DisplayLayout.BandsSerializer.Add(ultraGridBand3);
             this.Supplier3ultraCombo.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
@@ -771,20 +746,20 @@
             appearance40.BackColor = System.Drawing.SystemColors.Window;
             appearance40.BorderColor = System.Drawing.SystemColors.InactiveCaption;
             this.Supplier2ultraCombo.DisplayLayout.Appearance = appearance40;
-            ultraGridColumn24.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
-            ultraGridColumn24.Header.VisiblePosition = 0;
-            ultraGridColumn24.Hidden = true;
-            ultraGridColumn25.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
-            ultraGridColumn25.Header.Caption = "Name";
-            ultraGridColumn25.Header.VisiblePosition = 1;
-            ultraGridColumn25.RowLayoutColumnInfo.OriginX = 2;
-            ultraGridColumn25.RowLayoutColumnInfo.OriginY = 0;
-            ultraGridColumn25.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 23);
-            ultraGridColumn25.RowLayoutColumnInfo.SpanX = 6;
-            ultraGridColumn25.RowLayoutColumnInfo.SpanY = 2;
+            ultraGridColumn14.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
+            ultraGridColumn14.Header.VisiblePosition = 0;
+            ultraGridColumn14.Hidden = true;
+            ultraGridColumn15.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
+            ultraGridColumn15.Header.Caption = "Name";
+            ultraGridColumn15.Header.VisiblePosition = 1;
+            ultraGridColumn15.RowLayoutColumnInfo.OriginX = 2;
+            ultraGridColumn15.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn15.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 23);
+            ultraGridColumn15.RowLayoutColumnInfo.SpanX = 6;
+            ultraGridColumn15.RowLayoutColumnInfo.SpanY = 2;
             ultraGridBand4.Columns.AddRange(new object[] {
-            ultraGridColumn24,
-            ultraGridColumn25});
+            ultraGridColumn14,
+            ultraGridColumn15});
             ultraGridBand4.RowLayoutStyle = Infragistics.Win.UltraWinGrid.RowLayoutStyle.ColumnLayout;
             this.Supplier2ultraCombo.DisplayLayout.BandsSerializer.Add(ultraGridBand4);
             this.Supplier2ultraCombo.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
@@ -850,20 +825,20 @@
             appearance52.BackColor = System.Drawing.SystemColors.Window;
             appearance52.BorderColor = System.Drawing.SystemColors.InactiveCaption;
             this.Supplier1ultraCombo.DisplayLayout.Appearance = appearance52;
-            ultraGridColumn22.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
-            ultraGridColumn22.Header.VisiblePosition = 0;
-            ultraGridColumn22.Hidden = true;
-            ultraGridColumn23.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
-            ultraGridColumn23.Header.Caption = "Name";
-            ultraGridColumn23.Header.VisiblePosition = 1;
-            ultraGridColumn23.RowLayoutColumnInfo.OriginX = 2;
-            ultraGridColumn23.RowLayoutColumnInfo.OriginY = 0;
-            ultraGridColumn23.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 23);
-            ultraGridColumn23.RowLayoutColumnInfo.SpanX = 6;
-            ultraGridColumn23.RowLayoutColumnInfo.SpanY = 2;
+            ultraGridColumn16.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
+            ultraGridColumn16.Header.VisiblePosition = 0;
+            ultraGridColumn16.Hidden = true;
+            ultraGridColumn17.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
+            ultraGridColumn17.Header.Caption = "Name";
+            ultraGridColumn17.Header.VisiblePosition = 1;
+            ultraGridColumn17.RowLayoutColumnInfo.OriginX = 2;
+            ultraGridColumn17.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn17.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 23);
+            ultraGridColumn17.RowLayoutColumnInfo.SpanX = 6;
+            ultraGridColumn17.RowLayoutColumnInfo.SpanY = 2;
             ultraGridBand5.Columns.AddRange(new object[] {
-            ultraGridColumn22,
-            ultraGridColumn23});
+            ultraGridColumn16,
+            ultraGridColumn17});
             ultraGridBand5.RowLayoutStyle = Infragistics.Win.UltraWinGrid.RowLayoutStyle.ColumnLayout;
             this.Supplier1ultraCombo.DisplayLayout.BandsSerializer.Add(ultraGridBand5);
             this.Supplier1ultraCombo.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
@@ -1186,6 +1161,32 @@
             this.Savebutton.Text = "&Save";
             this.Savebutton.UseVisualStyleBackColor = false;
             this.Savebutton.Click += new System.EventHandler(this.Savebutton_Click);
+            // 
+            // expandPanelControl1
+            // 
+            this.expandPanelControl1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.expandPanelControl1.Location = new System.Drawing.Point(352, 0);
+            this.expandPanelControl1.Name = "expandPanelControl1";
+            this.expandPanelControl1.Size = new System.Drawing.Size(15, 457);
+            this.expandPanelControl1.TabIndex = 126;
+            this.expandPanelControl1._ExpandPanel += new System.EventHandler(this.expandPanelControl1__ExpandPanel);
+            // 
+            // searchProductUserControl1
+            // 
+            this.searchProductUserControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.searchProductUserControl1.Location = new System.Drawing.Point(15, 175);
+            this.searchProductUserControl1.mProduct = null;
+            this.searchProductUserControl1.mQuantity = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.searchProductUserControl1.mWithQuantity = true;
+            this.searchProductUserControl1.Name = "searchProductUserControl1";
+            this.searchProductUserControl1.Size = new System.Drawing.Size(617, 25);
+            this.searchProductUserControl1.TabIndex = 179;
+            this.searchProductUserControl1._GetProduct += new System.EventHandler(this.searchProductControl1__GetProduct);
+            this.searchProductUserControl1._SearchingProduct += new System.EventHandler(this.searchProductControl1__SearchingProduct);
             // 
             // collapsePanelControl1
             // 

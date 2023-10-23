@@ -78,6 +78,12 @@
     <Compile Include="FaultArea\Default.Designer.cs">
       <DependentUpon>Default.cs</DependentUpon>
     </Compile>
+    <Compile Include="Trade\Default.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Trade\Default.Designer.cs">
+      <DependentUpon>Default.cs</DependentUpon>
+    </Compile>
     <Compile Include="MaintenanceRequest\Default.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,9 @@
       <DependentUpon>Default.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FaultArea\Default.resx">
+      <DependentUpon>Default.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Trade\Default.resx">
       <DependentUpon>Default.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MaintenanceRequest\Default.resx">
