@@ -221,7 +221,7 @@ namespace Qtech.AssetManagement.Maintenance.CompanyProfile
 
             EndEditing();
 
-            ThemeUtil.Controls(splitContainer1.Panel2);
+            ThemeUtil.Controls(this);
             //ControlUtil.TextBoxEnterLeaveNoKeyDownEventHandler(splitContainer1.Panel2);
             LoadCompanyProfile();
         }

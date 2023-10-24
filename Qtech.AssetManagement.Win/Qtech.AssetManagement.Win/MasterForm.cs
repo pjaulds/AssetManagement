@@ -389,6 +389,17 @@ namespace Qtech.AssetManagement.Win
                     }
                     else tradeForm.Select();
                     break;
+                case "WorkOrder":
+                    if (!AllowToAccess((Int32)Modules.WorkOrder)) return;
+                    RepairAndMaintenance.WorkOrder.Default workOrderForm = null;
+                    if ((workOrderForm = (RepairAndMaintenance.WorkOrder.Default)IsFormAlreadyOpen(typeof(RepairAndMaintenance.WorkOrder.Default))) == null)
+                    {
+                        RepairAndMaintenance.WorkOrder.Default workOrderFormChild = new RepairAndMaintenance.WorkOrder.Default();
+                        workOrderFormChild.MdiParent = this;
+                        workOrderFormChild.Show();
+                    }
+                    else workOrderForm.Select();
+                    break;
             }
         }
 

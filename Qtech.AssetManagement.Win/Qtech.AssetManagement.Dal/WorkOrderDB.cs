@@ -114,7 +114,6 @@ namespace Qtech.AssetManagement.Dal
                     Helpers.CreateParameter(myCommand, DbType.DateTime, "@expected_start_date", myWorkOrder.mExpectedStartDate);
                 if (myWorkOrder.mExpectedEndDate != DateTime.MinValue)
                     Helpers.CreateParameter(myCommand, DbType.DateTime, "@expected_end_date", myWorkOrder.mExpectedEndDate);
-                Helpers.CreateParameter(myCommand, DbType.Int32, "@number", myWorkOrder.mNumber);
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@maintenance_request_id", myWorkOrder.mMaintenanceRequestId);
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@work_order_type_id", myWorkOrder.mWorkOrderTypeId);
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@maintenance_job_type_variant_id", myWorkOrder.mMaintenanceJobTypeVariantId);
@@ -173,9 +172,7 @@ namespace Qtech.AssetManagement.Dal
             workorder.mMaintenanceRequestId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("maintenance_request_id"));
             workorder.mWorkOrderTypeName = myDataRecord.GetString(myDataRecord.GetOrdinal("work_order_type_name"));
             workorder.mWorkOrderTypeId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("work_order_type_id"));
-            workorder.mMaintenanceJobTypeVariantName = myDataRecord.GetString(myDataRecord.GetOrdinal("maintenance_job_type_variant_name"));
             workorder.mMaintenanceJobTypeVariantId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("maintenance_job_type_variant_id"));
-            workorder.mTradeName = myDataRecord.GetString(myDataRecord.GetOrdinal("trade_name"));
             workorder.mTradeId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("trade_id"));
 
             workorder.mDate = myDataRecord.GetDateTime(myDataRecord.GetOrdinal("date"));

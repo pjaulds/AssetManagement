@@ -300,7 +300,7 @@ namespace Qtech.AssetManagement.FixedAsset
 
             EndEditing();
 
-            ThemeUtil.Controls(splitContainer1.Panel2);
+            ThemeUtil.Controls(this);
             ControlUtil.TextBoxEnterLeaveEventHandler(splitContainer1.Panel2);
             LoadFixedAsset();
 

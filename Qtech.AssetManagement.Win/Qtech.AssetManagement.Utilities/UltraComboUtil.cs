@@ -156,5 +156,41 @@ namespace Qtech.AssetManagement.Utilities
             myUltraCombo.SetDataBinding(FaultAreaManager.GetList(), null, true);
             myUltraCombo.Refresh();
         }
+
+        public static void WorkOrderType(UltraCombo myUltraCombo)
+        {
+            myUltraCombo.ValueMember = "mId";
+            myUltraCombo.DisplayMember = "mName";
+
+            myUltraCombo.SetDataBinding(WorkOrderTypeManager.GetList(), null, true);
+            myUltraCombo.Refresh();
+        }
+
+        public static void MaintenanceJobType(UltraCombo myUltraCombo)
+        {
+            myUltraCombo.ValueMember = "mId";
+            myUltraCombo.DisplayMember = "mName";
+
+            myUltraCombo.SetDataBinding(MaintenanceJobTypeManager.GetList(), null, true);
+            myUltraCombo.Refresh();
+        }
+
+        public static void MaintenanceJobTypeVariant(UltraCombo myUltraCombo, MaintenanceJobTypeVariantCriteria myMaintenanceJobTypeVariantCriteria)
+        {
+            myUltraCombo.ValueMember = "mId";
+            myUltraCombo.DisplayMember = "mName";
+
+            myUltraCombo.SetDataBinding(MaintenanceJobTypeVariantManager.GetList(myMaintenanceJobTypeVariantCriteria), null, true);
+            myUltraCombo.Refresh();
+        }
+
+        public static void Trade(UltraCombo myUltraCombo)
+        {
+            myUltraCombo.ValueMember = "mId";
+            myUltraCombo.DisplayMember = "mName";
+
+            myUltraCombo.SetDataBinding(TradeManager.GetList(), null, true);
+            myUltraCombo.Refresh();
+        }
     }
 }

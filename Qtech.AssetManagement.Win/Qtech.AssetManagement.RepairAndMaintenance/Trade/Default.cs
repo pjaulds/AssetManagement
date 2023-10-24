@@ -233,7 +233,7 @@ namespace Qtech.AssetManagement.RepairAndMaintenance.Trade
 
             EndEditing();
 
-            ThemeUtil.Controls(splitContainer1.Panel2);
+            ThemeUtil.Controls(this);
             ControlUtil.TextBoxEnterLeaveEventHandler(splitContainer1.Panel2);
             LoadTrade();
         }

@@ -251,7 +251,7 @@ namespace Qtech.AssetManagement.Setup.FunctionalLocation
 
             EndEditing();
 
-            ThemeUtil.Controls(splitContainer1.Panel2);
+            ThemeUtil.Controls(this);
             ControlUtil.TextBoxEnterLeaveEventHandler(splitContainer1.Panel2);
             LoadFunctionalLocation();
         }

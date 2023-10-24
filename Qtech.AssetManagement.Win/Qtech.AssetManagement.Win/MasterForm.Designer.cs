@@ -74,9 +74,11 @@
             this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripSeparator();
             this.workOrderTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.maintenanceJobTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tradeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ultraTabbedMdiManager1 = new Infragistics.Win.UltraWinTabbedMdi.UltraTabbedMdiManager(this.components);
             this.BackgroundpictureBox = new System.Windows.Forms.PictureBox();
-            this.tradeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripSeparator();
+            this.workOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ultraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BackgroundpictureBox)).BeginInit();
@@ -381,7 +383,9 @@
             this.toolStripMenuItem3,
             this.workOrderTypeToolStripMenuItem,
             this.maintenanceJobTypeToolStripMenuItem,
-            this.tradeToolStripMenuItem});
+            this.tradeToolStripMenuItem,
+            this.toolStripMenuItem4,
+            this.workOrderToolStripMenuItem});
             this.repairMaintenanceToolStripMenuItem.Name = "repairMaintenanceToolStripMenuItem";
             this.repairMaintenanceToolStripMenuItem.Size = new System.Drawing.Size(137, 20);
             this.repairMaintenanceToolStripMenuItem.Text = "Repair && Maintenance";
@@ -452,6 +456,14 @@
             this.maintenanceJobTypeToolStripMenuItem.Text = "7. Maintenance Job Type";
             this.maintenanceJobTypeToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
+            // tradeToolStripMenuItem
+            // 
+            this.tradeToolStripMenuItem.Name = "tradeToolStripMenuItem";
+            this.tradeToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.tradeToolStripMenuItem.Tag = "Trade";
+            this.tradeToolStripMenuItem.Text = "8. Trade";
+            this.tradeToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
+            // 
             // ultraTabbedMdiManager1
             // 
             appearance1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
@@ -485,13 +497,18 @@
             this.BackgroundpictureBox.TabStop = false;
             this.BackgroundpictureBox.Visible = false;
             // 
-            // tradeToolStripMenuItem
+            // toolStripMenuItem4
             // 
-            this.tradeToolStripMenuItem.Name = "tradeToolStripMenuItem";
-            this.tradeToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.tradeToolStripMenuItem.Tag = "Trade";
-            this.tradeToolStripMenuItem.Text = "8. Trade";
-            this.tradeToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(200, 6);
+            // 
+            // workOrderToolStripMenuItem
+            // 
+            this.workOrderToolStripMenuItem.Name = "workOrderToolStripMenuItem";
+            this.workOrderToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.workOrderToolStripMenuItem.Tag = "WorkOrder";
+            this.workOrderToolStripMenuItem.Text = "9. Work Order";
+            this.workOrderToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // MasterForm
             // 
@@ -564,6 +581,8 @@
         private System.Windows.Forms.ToolStripMenuItem workOrderTypeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem maintenanceJobTypeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tradeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem workOrderToolStripMenuItem;
     }
 }
 

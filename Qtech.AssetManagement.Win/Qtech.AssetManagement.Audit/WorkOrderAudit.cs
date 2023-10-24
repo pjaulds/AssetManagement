@@ -29,16 +29,7 @@ namespace Qtech.AssetManagement.Audit
                 audit.mNewValue = workorder.mExpectedEndDate.ToString();
                 audit_collection.Add(audit);
             }
-
-            if (workorder.mNumber != workorderOld.mNumber)
-            {
-                audit = new BusinessEntities.Audit();
-                LoadCommonData(ref audit, workorder);
-                audit.mField = "Number";
-                audit.mOldValue = workorderOld.mNumber.ToString();
-                audit.mNewValue = workorder.mNumber.ToString();
-                audit_collection.Add(audit);
-            }
+            
 
             if (workorder.mMaintenanceRequestId != workorderOld.mMaintenanceRequestId)
             {

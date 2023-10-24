@@ -237,7 +237,7 @@ namespace Qtech.AssetManagement.Setup.PaymentMode
 
             EndEditing();
 
-            ThemeUtil.Controls(splitContainer1.Panel2);
+            ThemeUtil.Controls(this);
             ControlUtil.TextBoxEnterLeaveEventHandler(splitContainer1.Panel2);
             LoadPaymentMode();
         }

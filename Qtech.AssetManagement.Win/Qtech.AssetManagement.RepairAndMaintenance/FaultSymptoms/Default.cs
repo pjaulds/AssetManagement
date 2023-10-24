@@ -234,7 +234,7 @@ namespace Qtech.AssetManagement.RepairAndMaintenance.FaultSymptoms
 
             EndEditing();
 
-            ThemeUtil.Controls(splitContainer1.Panel2);
+            ThemeUtil.Controls(this);
             ControlUtil.TextBoxEnterLeaveEventHandler(splitContainer1.Panel2);
             LoadFaultSymptoms();
         }
