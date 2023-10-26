@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -75,10 +74,12 @@
             this.workOrderTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.maintenanceJobTypeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tradeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ultraTabbedMdiManager1 = new Infragistics.Win.UltraWinTabbedMdi.UltraTabbedMdiManager(this.components);
-            this.BackgroundpictureBox = new System.Windows.Forms.PictureBox();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripSeparator();
             this.workOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ultraTabbedMdiManager1 = new Infragistics.Win.UltraWinTabbedMdi.UltraTabbedMdiManager();
+            this.BackgroundpictureBox = new System.Windows.Forms.PictureBox();
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripSeparator();
+            this.expenseCategoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ultraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BackgroundpictureBox)).BeginInit();
@@ -385,7 +386,9 @@
             this.maintenanceJobTypeToolStripMenuItem,
             this.tradeToolStripMenuItem,
             this.toolStripMenuItem4,
-            this.workOrderToolStripMenuItem});
+            this.workOrderToolStripMenuItem,
+            this.toolStripMenuItem5,
+            this.expenseCategoryToolStripMenuItem});
             this.repairMaintenanceToolStripMenuItem.Name = "repairMaintenanceToolStripMenuItem";
             this.repairMaintenanceToolStripMenuItem.Size = new System.Drawing.Size(137, 20);
             this.repairMaintenanceToolStripMenuItem.Text = "Repair && Maintenance";
@@ -464,6 +467,19 @@
             this.tradeToolStripMenuItem.Text = "8. Trade";
             this.tradeToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(200, 6);
+            // 
+            // workOrderToolStripMenuItem
+            // 
+            this.workOrderToolStripMenuItem.Name = "workOrderToolStripMenuItem";
+            this.workOrderToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.workOrderToolStripMenuItem.Tag = "WorkOrder";
+            this.workOrderToolStripMenuItem.Text = "9. Work Order";
+            this.workOrderToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
+            // 
             // ultraTabbedMdiManager1
             // 
             appearance1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
@@ -497,18 +513,18 @@
             this.BackgroundpictureBox.TabStop = false;
             this.BackgroundpictureBox.Visible = false;
             // 
-            // toolStripMenuItem4
+            // toolStripMenuItem5
             // 
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(200, 6);
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(200, 6);
             // 
-            // workOrderToolStripMenuItem
+            // expenseCategoryToolStripMenuItem
             // 
-            this.workOrderToolStripMenuItem.Name = "workOrderToolStripMenuItem";
-            this.workOrderToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.workOrderToolStripMenuItem.Tag = "WorkOrder";
-            this.workOrderToolStripMenuItem.Text = "9. Work Order";
-            this.workOrderToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
+            this.expenseCategoryToolStripMenuItem.Name = "expenseCategoryToolStripMenuItem";
+            this.expenseCategoryToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.expenseCategoryToolStripMenuItem.Tag = "ExpenseCategory";
+            this.expenseCategoryToolStripMenuItem.Text = "10. Expense Category";
+            this.expenseCategoryToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // MasterForm
             // 
@@ -583,6 +599,8 @@
         private System.Windows.Forms.ToolStripMenuItem tradeToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem workOrderToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem5;
+        private System.Windows.Forms.ToolStripMenuItem expenseCategoryToolStripMenuItem;
     }
 }
 

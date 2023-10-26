@@ -400,6 +400,17 @@ namespace Qtech.AssetManagement.Win
                     }
                     else workOrderForm.Select();
                     break;
+                case "ExpenseCategory":
+                    if (!AllowToAccess((Int32)Modules.ExpenseCategory)) return;
+                    RepairAndMaintenance.ExpenseCategory.Default expenseCategoryForm = null;
+                    if ((expenseCategoryForm = (RepairAndMaintenance.ExpenseCategory.Default)IsFormAlreadyOpen(typeof(RepairAndMaintenance.ExpenseCategory.Default))) == null)
+                    {
+                        RepairAndMaintenance.ExpenseCategory.Default expenseCategoryFormChild = new RepairAndMaintenance.ExpenseCategory.Default();
+                        expenseCategoryFormChild.MdiParent = this;
+                        expenseCategoryFormChild.Show();
+                    }
+                    else expenseCategoryForm.Select();
+                    break;
             }
         }
 

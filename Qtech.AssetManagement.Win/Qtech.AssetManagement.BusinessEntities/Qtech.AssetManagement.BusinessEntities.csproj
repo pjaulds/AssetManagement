@@ -42,8 +42,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccumulatedDepreciationAccount.cs" />
+    <Compile Include="Collection\ExpenseCategoryCollection.cs" />
+    <Compile Include="ExpenseCategory.cs" />
     <Compile Include="Collection\TradeCollection.cs" />
     <Compile Include="Collection\WorkOrderCollection.cs" />
+    <Compile Include="SearchCriteria\ExpenseCategory.cs" />
     <Compile Include="SearchCriteria\TradeCriteria.cs" />
     <Compile Include="SearchCriteria\WorkOrderCriteria.cs" />
     <Compile Include="Trade.cs" />

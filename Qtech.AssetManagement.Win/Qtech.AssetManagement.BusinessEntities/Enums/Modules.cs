@@ -33,6 +33,7 @@
         WorkOrderType = 29,
         MaintenanceJobType = 30,
         Trade = 31,
-        WorkOrder = 32
+        WorkOrder = 32,
+        ExpenseCategory = 33
     }
 }
