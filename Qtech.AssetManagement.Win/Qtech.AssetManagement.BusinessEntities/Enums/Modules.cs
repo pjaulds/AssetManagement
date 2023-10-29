@@ -34,6 +34,7 @@
         MaintenanceJobType = 30,
         Trade = 31,
         WorkOrder = 32,
-        ExpenseCategory = 33
+        ExpenseCategory = 33,
+        WorkOrderHours = 34
     }
 }

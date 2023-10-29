@@ -43,6 +43,7 @@ namespace Qtech.AssetManagement.BusinessEntities
         amQt_MaintenanceJobTypeVariant = 34,
         amQt_Trade = 35,
         amQt_WorkOrder = 36,
-        amQt_ExpenseCategory = 37
+        amQt_ExpenseCategory = 37,
+        amQt_WorkOrderHours = 38
     }
 }

@@ -127,6 +127,12 @@
     <Compile Include="WorkOrderType\Default.Designer.cs">
       <DependentUpon>Default.cs</DependentUpon>
     </Compile>
+    <Compile Include="WorkOrder\HoursUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WorkOrder\HoursUserControl.Designer.cs">
+      <DependentUpon>HoursUserControl.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Qtech.AssetManagement.Bll\Qtech.AssetManagement.Bll.csproj">
@@ -190,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WorkOrderType\Default.resx">
       <DependentUpon>Default.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WorkOrder\HoursUserControl.resx">
+      <DependentUpon>HoursUserControl.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

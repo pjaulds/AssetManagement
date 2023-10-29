@@ -48,6 +48,7 @@
     <Compile Include="MaintenanceJobTypeVariantDB.cs" />
     <Compile Include="MaintenanceJobTypeDB.cs" />
     <Compile Include="WorkOrderDB.cs" />
+    <Compile Include="WorkOrderHoursDB.cs" />
     <Compile Include="WorkOrderTypeDB.cs" />
     <Compile Include="HelpersDB.cs" />
     <Compile Include="FaultAreaDB.cs" />

@@ -46,6 +46,7 @@
     <Compile Include="TradeManager.cs" />
     <Compile Include="MaintenanceJobTypeVariantManager.cs" />
     <Compile Include="MaintenanceJobTypeManager.cs" />
+    <Compile Include="WorkOrderHoursManager.cs" />
     <Compile Include="WorkOrderManager.cs" />
     <Compile Include="WorkOrderTypeManager.cs" />
     <Compile Include="HelpersManager.cs" />

@@ -132,12 +132,14 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.expandPanelControl1 = new Qtech.AssetManagement.Controls.ExpandPanelControl();
             this.ItemsdataGridView = new System.Windows.Forms.DataGridView();
             this.mDelete = new System.Windows.Forms.DataGridViewImageColumn();
             this.mQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mUnitName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RemarksultraTextEditor = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
+            this.searchProductUserControl1 = new Qtech.AssetManagement.Controls.SearchProductUserControl();
             this.panel1 = new System.Windows.Forms.Panel();
             this.ApprovedBytextBox = new System.Windows.Forms.TextBox();
             this.RequestedByutraCombo = new Infragistics.Win.UltraWinGrid.UltraCombo();
@@ -168,8 +170,6 @@
             this.ApprovedBybutton = new System.Windows.Forms.Button();
             this.Cancelbutton = new System.Windows.Forms.Button();
             this.Savebutton = new System.Windows.Forms.Button();
-            this.expandPanelControl1 = new Qtech.AssetManagement.Controls.ExpandPanelControl();
-            this.searchProductUserControl1 = new Qtech.AssetManagement.Controls.SearchProductUserControl();
             this.collapsePanelControl1 = new Qtech.AssetManagement.Controls.CollapsePanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -456,6 +456,15 @@
             this.label17.TabIndex = 4;
             this.label17.Text = "Start Date";
             // 
+            // expandPanelControl1
+            // 
+            this.expandPanelControl1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.expandPanelControl1.Location = new System.Drawing.Point(352, 0);
+            this.expandPanelControl1.Name = "expandPanelControl1";
+            this.expandPanelControl1.Size = new System.Drawing.Size(15, 457);
+            this.expandPanelControl1.TabIndex = 126;
+            this.expandPanelControl1._ExpandPanel += new System.EventHandler(this.expandPanelControl1__ExpandPanel);
+            // 
             // ItemsdataGridView
             // 
             this.ItemsdataGridView.AllowUserToAddRows = false;
@@ -544,6 +553,23 @@
             this.RemarksultraTextEditor.NullText = "Remarks";
             this.RemarksultraTextEditor.Size = new System.Drawing.Size(617, 21);
             this.RemarksultraTextEditor.TabIndex = 180;
+            // 
+            // searchProductUserControl1
+            // 
+            this.searchProductUserControl1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.searchProductUserControl1.Location = new System.Drawing.Point(15, 175);
+            this.searchProductUserControl1.mProduct = null;
+            this.searchProductUserControl1.mQuantity = new decimal(new int[] {
+            0,
+            0,
+            0,
+            0});
+            this.searchProductUserControl1.mWithQuantity = true;
+            this.searchProductUserControl1.Name = "searchProductUserControl1";
+            this.searchProductUserControl1.Size = new System.Drawing.Size(617, 25);
+            this.searchProductUserControl1.TabIndex = 179;
+            this.searchProductUserControl1._GetProduct += new System.EventHandler(this.searchProductControl1__GetProduct);
+            this.searchProductUserControl1._SearchingProduct += new System.EventHandler(this.searchProductControl1__SearchingProduct);
             // 
             // panel1
             // 
@@ -1161,32 +1187,6 @@
             this.Savebutton.Text = "&Save";
             this.Savebutton.UseVisualStyleBackColor = false;
             this.Savebutton.Click += new System.EventHandler(this.Savebutton_Click);
-            // 
-            // expandPanelControl1
-            // 
-            this.expandPanelControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.expandPanelControl1.Location = new System.Drawing.Point(352, 0);
-            this.expandPanelControl1.Name = "expandPanelControl1";
-            this.expandPanelControl1.Size = new System.Drawing.Size(15, 457);
-            this.expandPanelControl1.TabIndex = 126;
-            this.expandPanelControl1._ExpandPanel += new System.EventHandler(this.expandPanelControl1__ExpandPanel);
-            // 
-            // searchProductUserControl1
-            // 
-            this.searchProductUserControl1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.searchProductUserControl1.Location = new System.Drawing.Point(15, 175);
-            this.searchProductUserControl1.mProduct = null;
-            this.searchProductUserControl1.mQuantity = new decimal(new int[] {
-            0,
-            0,
-            0,
-            0});
-            this.searchProductUserControl1.mWithQuantity = true;
-            this.searchProductUserControl1.Name = "searchProductUserControl1";
-            this.searchProductUserControl1.Size = new System.Drawing.Size(617, 25);
-            this.searchProductUserControl1.TabIndex = 179;
-            this.searchProductUserControl1._GetProduct += new System.EventHandler(this.searchProductControl1__GetProduct);
-            this.searchProductUserControl1._SearchingProduct += new System.EventHandler(this.searchProductControl1__SearchingProduct);
             // 
             // collapsePanelControl1
             // 

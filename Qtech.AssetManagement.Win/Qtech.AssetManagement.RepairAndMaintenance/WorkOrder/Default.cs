@@ -96,6 +96,9 @@ namespace Qtech.AssetManagement.RepairAndMaintenance.WorkOrder
             myWorkOrder.mTradeId = ControlUtil.UltraComboReturnValue(TradeultraCombo);
             myWorkOrder.mTradeName = TradeultraCombo.Text;
             myWorkOrder.mUserId = SessionUtil.mUser.mId;
+
+            myWorkOrder.mWorkOrderHoursCollection = hoursUserControl1.LoadWorkOrderHoursFromFormControls();
+            myWorkOrder.mDeletedWorkOrderHoursCollection = hoursUserControl1.deleted_items;
         }
 
         private void LoadFormControlsFromWorkOrder(BusinessEntities.WorkOrder myWorkOrder)
@@ -108,6 +111,9 @@ namespace Qtech.AssetManagement.RepairAndMaintenance.WorkOrder
             MaintenanceJobTypeultraCombo.Value = MaintenanceJobTypeVariantManager.GetItem(myWorkOrder.mMaintenanceJobTypeVariantId).mMaintenanceJobTypeId;
             MaintenanceJobTypeVariantultraCombo.Value = myWorkOrder.mMaintenanceJobTypeVariantId;
             TradeultraCombo.Value = myWorkOrder.mTradeId;
+
+            hoursUserControl1.mWorkOrderId = myWorkOrder.mId;
+            hoursUserControl1.LoadFormControlsFromWorkOrderHours();
 
             LoadFormControlsFromMaintenanceRequest(MaintenanceRequestManager.GetItem(myWorkOrder.mMaintenanceRequestId));
         }
@@ -127,6 +133,8 @@ namespace Qtech.AssetManagement.RepairAndMaintenance.WorkOrder
         {
             ControlUtil.ClearConent(splitContainer1.Panel2);
             ControlUtil.HidePanel(splitContainer1);
+
+            hoursUserControl1.EndEditing();
         }
         #endregion
 
@@ -250,6 +258,7 @@ namespace Qtech.AssetManagement.RepairAndMaintenance.WorkOrder
             ThemeUtil.Controls(this);
             ControlUtil.TextBoxEnterLeaveEventHandler(splitContainer1.Panel2);
             LoadWorkOrder();
+            hoursUserControl1.allow_delete = allow_delete;
         }
 
         private void Savebutton_Click(object sender, EventArgs e)
@@ -267,6 +276,7 @@ namespace Qtech.AssetManagement.RepairAndMaintenance.WorkOrder
             UltraComboUtil.WorkOrderType(WorkOrderTypeutraCombo);
             UltraComboUtil.MaintenanceJobType(MaintenanceJobTypeultraCombo);
             UltraComboUtil.Trade(TradeultraCombo);
+            hoursUserControl1.LoadExpenseCategory();
         }
 
         private void MaintenanceJobTypeultraCombo_RowSelected(object sender, RowSelectedEventArgs e)

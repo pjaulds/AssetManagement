@@ -65,6 +65,8 @@ namespace Qtech.AssetManagement.BusinessEntities
         [Display(Name = "Active")]
         public Boolean mActive { get; set; }
 
+        public WorkOrderHoursCollection mWorkOrderHoursCollection { get; set; }
+        public WorkOrderHoursCollection mDeletedWorkOrderHoursCollection { get; set; }
         #endregion
     }
 }

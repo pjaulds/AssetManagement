@@ -56,6 +56,25 @@ namespace Qtech.AssetManagement.Bll
 
                 int id = WorkOrderDB.Save(myWorkOrder);
 
+                if (myWorkOrder.mWorkOrderHoursCollection != null)
+                {
+                    foreach (WorkOrderHours item in myWorkOrder.mWorkOrderHoursCollection)
+                    {
+                        item.mWorkOrderId = id;
+                        item.mUserId = myWorkOrder.mUserId;
+                        WorkOrderHoursManager.Save(item);
+                    }
+                }
+
+                if (myWorkOrder.mDeletedWorkOrderHoursCollection != null)
+                {
+                    foreach (WorkOrderHours item in myWorkOrder.mDeletedWorkOrderHoursCollection)
+                    {
+                        item.mUserId = myWorkOrder.mUserId;
+                        WorkOrderHoursManager.Delete(item);
+                    }
+                }
+
                 if (myWorkOrder.mId == 0)
                     AuditInsert(myWorkOrder, id);
 
