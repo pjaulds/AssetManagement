@@ -411,6 +411,17 @@ namespace Qtech.AssetManagement.Win
                     }
                     else expenseCategoryForm.Select();
                     break;
+                case "Currency":
+                    if (!AllowToAccess((Int32)Modules.Currency)) return;
+                    Maintenance.Currency.Default currencyForm = null;
+                    if ((currencyForm = (Maintenance.Currency.Default)IsFormAlreadyOpen(typeof(Maintenance.Currency.Default))) == null)
+                    {
+                        Maintenance.Currency.Default currencyFormChild = new Maintenance.Currency.Default();
+                        currencyFormChild.MdiParent = this;
+                        currencyFormChild.Show();
+                    }
+                    else currencyForm.Select();
+                    break;
             }
         }
 

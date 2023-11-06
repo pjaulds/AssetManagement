@@ -129,6 +129,7 @@
             this.Controls.Add(this.ItemsdataGridView);
             this.Name = "HoursUserControl";
             this.Size = new System.Drawing.Size(916, 235);
+            this.Load += new System.EventHandler(this.HoursUserControl_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ItemsdataGridView)).EndInit();
             this.ResumeLayout(false);
 

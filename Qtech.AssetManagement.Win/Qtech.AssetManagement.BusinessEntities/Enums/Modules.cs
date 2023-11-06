@@ -35,6 +35,6 @@
         Trade = 31,
         WorkOrder = 32,
         ExpenseCategory = 33,
-        WorkOrderHours = 34
+        Currency = 34
     }
 }

@@ -44,6 +44,7 @@ namespace Qtech.AssetManagement.BusinessEntities
         amQt_Trade = 35,
         amQt_WorkOrder = 36,
         amQt_ExpenseCategory = 37,
-        amQt_WorkOrderHours = 38
+        amQt_WorkOrderHours = 38,
+        amQt_Currency = 39
     }
 }

@@ -97,5 +97,10 @@ namespace Qtech.AssetManagement.RepairAndMaintenance.WorkOrder
                 ItemsdataGridView.Rows.Remove(ItemsdataGridView.CurrentRow);
             }
         }
+
+        private void HoursUserControl_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

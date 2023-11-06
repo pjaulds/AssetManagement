@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
@@ -76,10 +77,11 @@
             this.tradeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripSeparator();
             this.workOrderToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ultraTabbedMdiManager1 = new Infragistics.Win.UltraWinTabbedMdi.UltraTabbedMdiManager();
-            this.BackgroundpictureBox = new System.Windows.Forms.PictureBox();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripSeparator();
             this.expenseCategoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ultraTabbedMdiManager1 = new Infragistics.Win.UltraWinTabbedMdi.UltraTabbedMdiManager(this.components);
+            this.BackgroundpictureBox = new System.Windows.Forms.PictureBox();
+            this.currencyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ultraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BackgroundpictureBox)).BeginInit();
@@ -166,7 +168,8 @@
             this.productToolStripMenuItem,
             this.supplierToolStripMenuItem,
             this.unitToolStripMenuItem,
-            this.companyProfileToolStripMenuItem});
+            this.companyProfileToolStripMenuItem,
+            this.currencyToolStripMenuItem});
             this.maintenanceToolStripMenuItem.Name = "maintenanceToolStripMenuItem";
             this.maintenanceToolStripMenuItem.Size = new System.Drawing.Size(88, 20);
             this.maintenanceToolStripMenuItem.Text = "Maintenance";
@@ -480,6 +483,19 @@
             this.workOrderToolStripMenuItem.Text = "9. Work Order";
             this.workOrderToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
+            // toolStripMenuItem5
+            // 
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(200, 6);
+            // 
+            // expenseCategoryToolStripMenuItem
+            // 
+            this.expenseCategoryToolStripMenuItem.Name = "expenseCategoryToolStripMenuItem";
+            this.expenseCategoryToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
+            this.expenseCategoryToolStripMenuItem.Tag = "ExpenseCategory";
+            this.expenseCategoryToolStripMenuItem.Text = "10. Expense Category";
+            this.expenseCategoryToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
+            // 
             // ultraTabbedMdiManager1
             // 
             appearance1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
@@ -513,18 +529,13 @@
             this.BackgroundpictureBox.TabStop = false;
             this.BackgroundpictureBox.Visible = false;
             // 
-            // toolStripMenuItem5
+            // currencyToolStripMenuItem
             // 
-            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(200, 6);
-            // 
-            // expenseCategoryToolStripMenuItem
-            // 
-            this.expenseCategoryToolStripMenuItem.Name = "expenseCategoryToolStripMenuItem";
-            this.expenseCategoryToolStripMenuItem.Size = new System.Drawing.Size(203, 22);
-            this.expenseCategoryToolStripMenuItem.Tag = "ExpenseCategory";
-            this.expenseCategoryToolStripMenuItem.Text = "10. Expense Category";
-            this.expenseCategoryToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
+            this.currencyToolStripMenuItem.Name = "currencyToolStripMenuItem";
+            this.currencyToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.currencyToolStripMenuItem.Tag = "Currency";
+            this.currencyToolStripMenuItem.Text = "7. Currency";
+            this.currencyToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // MasterForm
             // 
@@ -601,6 +612,7 @@
         private System.Windows.Forms.ToolStripMenuItem workOrderToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem5;
         private System.Windows.Forms.ToolStripMenuItem expenseCategoryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem currencyToolStripMenuItem;
     }
 }
 
