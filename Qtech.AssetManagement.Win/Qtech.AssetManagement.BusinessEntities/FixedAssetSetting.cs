@@ -16,11 +16,18 @@ namespace Qtech.AssetManagement.BusinessEntities
         public Int32 mAssetTypeId { get; set; }
         public String mAssetTypeName { get; set; }
 
+        [Display(Name = "Asset Class")]
+        [NotEqualTo(Message = "Please select asset class", mValue = "0")]
+        public Int32 mAssetClassId { get; set; }
+        public String mAssetClassCode { get; set; }
+        public String mAssetClassName { get; set; }
+
         [Display(Name = "Asset Account")]
         [NotEqualTo(Message = "Please select asset account", mValue = "0")]
-        public Int32 mAssetAccountId { get; set; }
-        public String mAssetAccountCode { get; set; }
-        public String mAssetAccountName { get; set; }
+        public Int32 mChartOfAccountId { get; set; }
+        public String mChartOfAccountCode { get; set; }
+        public String mChartOfAccountName { get; set; }
+
 
         [Display(Name = "Accumulated Depreciation Account")]
         [NotEqualTo(Message = "Please select accumulated depreciation account", mValue = "0")]

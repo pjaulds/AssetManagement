@@ -61,7 +61,7 @@ namespace Qtech.AssetManagement.DepreciationSchedule.SYDActualDaysMonthly
                 else
                 {
                     FixedAssetSetting faType = FixedAssetSettingManager.GetList().Where(x => x.mAssetTypeId == fa.mAssetTypeId).First();
-                    CreateParameter(3, "AccountCode", faType.mAssetAccountCode);
+                    CreateParameter(3, "AccountCode", faType.mChartOfAccountCode);
                 }
             }
             catch { CreateParameter(3, "AccountCode", ""); }

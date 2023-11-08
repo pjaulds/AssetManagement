@@ -80,8 +80,11 @@ namespace Qtech.AssetManagement.Setup.FixedAssetSetting
             myUser.mAssetTypeId = ControlUtil.UltraComboReturnValue(AssetTypeutraCombo);
             myUser.mAssetTypeName = AssetTypeutraCombo.Text;
 
-            myUser.mAssetAccountId = ControlUtil.UltraComboReturnValue(AssetAccountultraCombo);
-            myUser.mAssetAccountName = AssetAccountultraCombo.Text;
+            myUser.mAssetClassId = ControlUtil.UltraComboReturnValue(AssetClassultraCombo);
+            myUser.mAssetClassName = AssetClassultraCombo.Text;
+
+            myUser.mChartOfAccountId = ControlUtil.UltraComboReturnValue(AssetAccountultraCombo);
+            myUser.mChartOfAccountName = AssetAccountultraCombo.Text;
 
             myUser.mAccumulatedDepreciationAccountId = ControlUtil.UltraComboReturnValue(AccumulatedDepreciationAccountultraCombo);
             myUser.mAccumulatedDepreciationAccountName = AccumulatedDepreciationAccountultraCombo.Text;
@@ -103,7 +106,8 @@ namespace Qtech.AssetManagement.Setup.FixedAssetSetting
         {
             Idlabel.Text = myFixedAssetSetting.mId.ToString();
             AssetTypeutraCombo.Value = myFixedAssetSetting.mAssetTypeId;
-            AssetAccountultraCombo.Value = myFixedAssetSetting.mAssetAccountId;
+            AssetClassultraCombo.Value = myFixedAssetSetting.mAssetClassId;
+            AssetAccountultraCombo.Value = myFixedAssetSetting.mChartOfAccountId;
             AccumulatedDepreciationAccountultraCombo.Value = myFixedAssetSetting.mAccumulatedDepreciationAccountId;
             DepreciationExpenseAccountultraCombo.Value = myFixedAssetSetting.mDepreciationExpenseAccountId;
             DepreciationMethodultraCombo.Value = myFixedAssetSetting.mDepreciationMethodId;
@@ -257,6 +261,7 @@ namespace Qtech.AssetManagement.Setup.FixedAssetSetting
             UltraComboUtil.ChartOfAccount(DepreciationExpenseAccountultraCombo);
             UltraComboUtil.DepreciationMethod(DepreciationMethodultraCombo);
             UltraComboUtil.AveragingMethod(AveragingMethodultraCombo);
+            UltraComboUtil.AssetClass(AssetClassultraCombo);
         }
 
         private void FixedAssetSettingdateTimePicker_ValueChanged(object sender, EventArgs e)

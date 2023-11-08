@@ -92,8 +92,8 @@ namespace Qtech.AssetManagement.FixedAsset
         {
             FixedAssetSetting item = FixedAssetSettingManager.GetList().Where(x => x.mAssetTypeId == fa.mAssetTypeId).First();
 
-            DepreciationExpenseAccountCodelabel.Text = item.mAssetAccountCode; 
-            DepreciationExpenseAccountTitlelabel.Text = item.mAssetAccountName;
+            DepreciationExpenseAccountCodelabel.Text = item.mChartOfAccountCode; 
+            DepreciationExpenseAccountTitlelabel.Text = item.mChartOfAccountName;
 
             AccumulatedDepreciationAccountCodelabel.Text = item.mAccumulatedDepreciationAccountCode;
             AccumulatedDepreciationAccountTitlelabel.Text = item.mAccumulatedDepreciationAccountName;

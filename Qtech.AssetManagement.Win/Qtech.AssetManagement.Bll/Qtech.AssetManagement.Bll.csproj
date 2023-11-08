@@ -42,6 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccumulatedDepreciationAccountManager.cs" />
+    <Compile Include="AccountTypeManager.cs" />
+    <Compile Include="AccountClassificationManager.cs" />
+    <Compile Include="AccountGroupManager.cs" />
+    <Compile Include="AssetClassManager.cs" />
+    <Compile Include="AssetCategoryManager.cs" />
+    <Compile Include="PaymentTermsManager.cs" />
     <Compile Include="CurrencyManager.cs" />
     <Compile Include="ExpenseCategoryManager.cs" />
     <Compile Include="TradeManager.cs" />

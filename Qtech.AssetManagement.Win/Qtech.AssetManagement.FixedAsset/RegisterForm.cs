@@ -47,7 +47,7 @@ namespace Qtech.AssetManagement.FixedAsset
         {
             FixedAssetSetting item = FixedAssetSettingManager.GetList().Where(x => x.mAssetTypeId == fa.mAssetTypeId).First();
             
-            AssetAccounttextBox.Text = item.mAssetAccountCode + " - " + item.mAssetAccountName;
+            AssetAccounttextBox.Text = item.mChartOfAccountCode + " - " + item.mChartOfAccountName;
             AccumulatedDepreciationAccounttextBox.Text = item.mAccumulatedDepreciationAccountCode + " - " + item.mAccumulatedDepreciationAccountName;
             DepreciationExpenseAccounttextBox.Text = item.mDepreciationExpenseAccountCode + " - " + item.mDepreciationExpenseAccountName;
         }

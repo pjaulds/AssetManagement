@@ -35,6 +35,12 @@
         Trade = 31,
         WorkOrder = 32,
         ExpenseCategory = 33,
-        Currency = 34
+        Currency = 34,
+        PaymentTerms = 35,
+        AssetCategory = 36,
+        AssetClass = 37,
+        AccountType = 38,
+        AccountClassification= 39,
+        AccountGroup = 40
     }
 }

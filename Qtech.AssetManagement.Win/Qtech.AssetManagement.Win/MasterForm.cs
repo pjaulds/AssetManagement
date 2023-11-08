@@ -422,6 +422,72 @@ namespace Qtech.AssetManagement.Win
                     }
                     else currencyForm.Select();
                     break;
+                case "PaymentTerms":
+                    if (!AllowToAccess((Int32)Modules.PaymentTerms)) return;
+                    Maintenance.PaymentTerms.Default paymentTermsForm = null;
+                    if ((paymentTermsForm = (Maintenance.PaymentTerms.Default)IsFormAlreadyOpen(typeof(Maintenance.PaymentTerms.Default))) == null)
+                    {
+                        Maintenance.PaymentTerms.Default paymentTermsFormChild = new Maintenance.PaymentTerms.Default();
+                        paymentTermsFormChild.MdiParent = this;
+                        paymentTermsFormChild.Show();
+                    }
+                    else paymentTermsForm.Select();
+                    break;
+                case "AssetCategory":
+                    if (!AllowToAccess((Int32)Modules.AssetCategory)) return;
+                    Maintenance.AssetCategory.Default assetCategoryForm = null;
+                    if ((assetCategoryForm = (Maintenance.AssetCategory.Default)IsFormAlreadyOpen(typeof(Maintenance.AssetCategory.Default))) == null)
+                    {
+                        Maintenance.AssetCategory.Default assetCategoryFormChild = new Maintenance.AssetCategory.Default();
+                        assetCategoryFormChild.MdiParent = this;
+                        assetCategoryFormChild.Show();
+                    }
+                    else assetCategoryForm.Select();
+                    break;
+                case "AssetClass":
+                    if (!AllowToAccess((Int32)Modules.AssetClass)) return;
+                    Maintenance.AssetClass.Default assetClassForm = null;
+                    if ((assetClassForm = (Maintenance.AssetClass.Default)IsFormAlreadyOpen(typeof(Maintenance.AssetClass.Default))) == null)
+                    {
+                        Maintenance.AssetClass.Default assetClassFormChild = new Maintenance.AssetClass.Default();
+                        assetClassFormChild.MdiParent = this;
+                        assetClassFormChild.Show();
+                    }
+                    else assetClassForm.Select();
+                    break;
+                case "AccountType":
+                    if (!AllowToAccess((Int32)Modules.AccountType)) return;
+                    Maintenance.AccountType.Default accountTypeForm = null;
+                    if ((accountTypeForm = (Maintenance.AccountType.Default)IsFormAlreadyOpen(typeof(Maintenance.AccountType.Default))) == null)
+                    {
+                        Maintenance.AccountType.Default accountTypeFormChild = new Maintenance.AccountType.Default();
+                        accountTypeFormChild.MdiParent = this;
+                        accountTypeFormChild.Show();
+                    }
+                    else accountTypeForm.Select();
+                    break;
+                case "AccountClassification":
+                    if (!AllowToAccess((Int32)Modules.AccountClassification)) return;
+                    Maintenance.AccountClassification.Default accountClassificationForm = null;
+                    if ((accountClassificationForm = (Maintenance.AccountClassification.Default)IsFormAlreadyOpen(typeof(Maintenance.AccountClassification.Default))) == null)
+                    {
+                        Maintenance.AccountClassification.Default accountClassificationFormChild = new Maintenance.AccountClassification.Default();
+                        accountClassificationFormChild.MdiParent = this;
+                        accountClassificationFormChild.Show();
+                    }
+                    else accountClassificationForm.Select();
+                    break;
+                case "AccountGroup":
+                    if (!AllowToAccess((Int32)Modules.AccountGroup)) return;
+                    Maintenance.AccountGroup.Default accountGroupForm = null;
+                    if ((accountGroupForm = (Maintenance.AccountGroup.Default)IsFormAlreadyOpen(typeof(Maintenance.AccountGroup.Default))) == null)
+                    {
+                        Maintenance.AccountGroup.Default accountGroupFormChild = new Maintenance.AccountGroup.Default();
+                        accountGroupFormChild.MdiParent = this;
+                        accountGroupFormChild.Show();
+                    }
+                    else accountGroupForm.Select();
+                    break;
             }
         }
 

@@ -43,6 +43,12 @@
   <ItemGroup>
     <Compile Include="AccumulatedDepreciationAccountDB.cs" />
     <Compile Include="AppConfiguration.cs" />
+    <Compile Include="AccountTypeDB.cs" />
+    <Compile Include="AccountClassificationDB.cs" />
+    <Compile Include="AccountGroupDB.cs" />
+    <Compile Include="AssetClassDB.cs" />
+    <Compile Include="AssetCategoryDB.cs" />
+    <Compile Include="PaymentTermsDB.cs" />
     <Compile Include="CurrencyDB.cs" />
     <Compile Include="ExpenseCategoryDB.cs" />
     <Compile Include="TradeDB.cs" />

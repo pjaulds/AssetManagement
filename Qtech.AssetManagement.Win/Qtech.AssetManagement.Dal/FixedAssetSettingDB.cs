@@ -102,7 +102,8 @@ namespace Qtech.AssetManagement.Dal
                 myCommand.CommandText = "amQt_spFixedAssetSettingInsertUpdateSingleItem";
 
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@asset_type_id", myFixedAssetSetting.mAssetTypeId);
-                Helpers.CreateParameter(myCommand, DbType.Int32, "@asset_account_id", myFixedAssetSetting.mAssetAccountId);
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@asset_class_id", myFixedAssetSetting.mAssetClassId);
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@chart_of_account_id", myFixedAssetSetting.mChartOfAccountId);
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@accumulated_depreciation_account_id", myFixedAssetSetting.mAccumulatedDepreciationAccountId);
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@depreciation_expense_account_id", myFixedAssetSetting.mDepreciationExpenseAccountId);
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@depreciation_method_id", myFixedAssetSetting.mDepreciationMethodId);
@@ -156,9 +157,13 @@ namespace Qtech.AssetManagement.Dal
             fixedassetsetting.mAssetTypeId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("asset_type_id"));
             fixedassetsetting.mAssetTypeName = myDataRecord.GetString(myDataRecord.GetOrdinal("asset_type_name"));
 
-            fixedassetsetting.mAssetAccountCode = myDataRecord.GetString(myDataRecord.GetOrdinal("asset_account_code"));
-            fixedassetsetting.mAssetAccountName = myDataRecord.GetString(myDataRecord.GetOrdinal("asset_account_name"));
-            fixedassetsetting.mAssetAccountId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("asset_account_id"));
+            fixedassetsetting.mAssetClassId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("asset_class_id"));
+            fixedassetsetting.mAssetClassCode = myDataRecord.GetString(myDataRecord.GetOrdinal("asset_class_code"));
+            fixedassetsetting.mAssetClassName = myDataRecord.GetString(myDataRecord.GetOrdinal("asset_class_name"));
+
+            fixedassetsetting.mChartOfAccountCode = myDataRecord.GetString(myDataRecord.GetOrdinal("chart_of_account_code"));
+            fixedassetsetting.mChartOfAccountName = myDataRecord.GetString(myDataRecord.GetOrdinal("chart_of_account_name"));
+            fixedassetsetting.mChartOfAccountId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("chart_of_account_id"));
 
             fixedassetsetting.mAccumulatedDepreciationAccountCode = myDataRecord.GetString(myDataRecord.GetOrdinal("accumulated_depreciation_account_code"));
             fixedassetsetting.mAccumulatedDepreciationAccountName = myDataRecord.GetString(myDataRecord.GetOrdinal("accumulated_depreciation_account_name"));

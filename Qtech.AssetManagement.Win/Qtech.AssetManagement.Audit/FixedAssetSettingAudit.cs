@@ -20,13 +20,23 @@ namespace Qtech.AssetManagement.Audit
                 audit_collection.Add(audit);
             }
 
-            if (fixedassetsetting.mAssetAccountId != fixedassetsettingOld.mAssetAccountId)
+            if (fixedassetsetting.mAssetClassId != fixedassetsettingOld.mAssetClassId)
             {
                 audit = new BusinessEntities.Audit();
                 LoadCommonData(ref audit, fixedassetsetting);
-                audit.mField = "Asset Account ";
-                audit.mOldValue = fixedassetsettingOld.mAssetAccountName.ToString();
-                audit.mNewValue = fixedassetsetting.mAssetAccountName.ToString();
+                audit.mField = "Asset Class ";
+                audit.mOldValue = fixedassetsettingOld.mAssetClassName.ToString();
+                audit.mNewValue = fixedassetsetting.mAssetClassName.ToString();
+                audit_collection.Add(audit);
+            }
+
+            if (fixedassetsetting.mChartOfAccountId != fixedassetsettingOld.mChartOfAccountId)
+            {
+                audit = new BusinessEntities.Audit();
+                LoadCommonData(ref audit, fixedassetsetting);
+                audit.mField = "Chart Of Account ";
+                audit.mOldValue = fixedassetsettingOld.mChartOfAccountName.ToString();
+                audit.mNewValue = fixedassetsetting.mChartOfAccountName.ToString();
                 audit_collection.Add(audit);
             }
 

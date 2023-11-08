@@ -45,6 +45,12 @@ namespace Qtech.AssetManagement.BusinessEntities
         amQt_WorkOrder = 36,
         amQt_ExpenseCategory = 37,
         amQt_WorkOrderHours = 38,
-        amQt_Currency = 39
+        amQt_Currency = 39,
+        amQt_PaymentTerms = 40,
+        amQt_AssetCategory = 41,
+        amQt_AssetClass = 42,
+        amQt_AccountType = 41,
+        amQt_AccountClassification = 42,
+        amQt_AccountGroup = 43
     }
 }

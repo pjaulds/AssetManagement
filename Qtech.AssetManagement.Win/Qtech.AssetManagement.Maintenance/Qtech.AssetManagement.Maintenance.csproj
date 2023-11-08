@@ -67,6 +67,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountType\Default.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountType\Default.Designer.cs">
+      <DependentUpon>Default.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountClassification\Default.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountClassification\Default.Designer.cs">
+      <DependentUpon>Default.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AccountGroup\Default.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccountGroup\Default.Designer.cs">
+      <DependentUpon>Default.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetClass\Default.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssetClass\Default.Designer.cs">
+      <DependentUpon>Default.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AssetCategory\Default.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssetCategory\Default.Designer.cs">
+      <DependentUpon>Default.cs</DependentUpon>
+    </Compile>
     <Compile Include="Currency\Default.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,6 +113,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CompanyProfile\Default.Designer.cs">
+      <DependentUpon>Default.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentTerms\Default.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentTerms\Default.Designer.cs">
       <DependentUpon>Default.cs</DependentUpon>
     </Compile>
     <Compile Include="Unit\Default.cs">
@@ -139,6 +175,21 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AccountType\Default.resx">
+      <DependentUpon>Default.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountClassification\Default.resx">
+      <DependentUpon>Default.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccountGroup\Default.resx">
+      <DependentUpon>Default.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetClass\Default.resx">
+      <DependentUpon>Default.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AssetCategory\Default.resx">
+      <DependentUpon>Default.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Currency\Default.resx">
       <DependentUpon>Default.cs</DependentUpon>
     </EmbeddedResource>
@@ -146,6 +197,9 @@
       <DependentUpon>Default.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CompanyProfile\Default.resx">
+      <DependentUpon>Default.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentTerms\Default.resx">
       <DependentUpon>Default.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Unit\Default.resx">

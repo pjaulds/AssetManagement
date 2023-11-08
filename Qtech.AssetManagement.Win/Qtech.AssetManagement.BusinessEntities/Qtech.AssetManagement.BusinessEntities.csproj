@@ -42,6 +42,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccumulatedDepreciationAccount.cs" />
+    <Compile Include="AccountType.cs" />
+    <Compile Include="AccountClassification.cs" />
+    <Compile Include="AccountGroup.cs" />
+    <Compile Include="AssetClass.cs" />
+    <Compile Include="AssetCategory.cs" />
+    <Compile Include="Collection\AccountCategoryCollection.cs" />
+    <Compile Include="Collection\AccountClassificationCollection.cs" />
+    <Compile Include="Collection\AccountGroupCollection.cs" />
+    <Compile Include="Collection\AssetClassCollection.cs" />
+    <Compile Include="Collection\AssetCategoryCollection.cs" />
+    <Compile Include="Collection\PaymentTermsCollection.cs" />
+    <Compile Include="PaymentTerms.cs" />
     <Compile Include="Collection\CurrencyCollection.cs" />
     <Compile Include="Currency.cs" />
     <Compile Include="Collection\ExpenseCategoryCollection.cs" />
@@ -49,6 +61,12 @@
     <Compile Include="ExpenseCategory.cs" />
     <Compile Include="Collection\TradeCollection.cs" />
     <Compile Include="Collection\WorkOrderCollection.cs" />
+    <Compile Include="SearchCriteria\AccountTypeCriteria.cs" />
+    <Compile Include="SearchCriteria\AccountClassificationCriteria.cs" />
+    <Compile Include="SearchCriteria\AccountGroup.cs" />
+    <Compile Include="SearchCriteria\AssetClassCriteria.cs" />
+    <Compile Include="SearchCriteria\AssetCategoryCriteria.cs" />
+    <Compile Include="SearchCriteria\PaymentTermsCriteria.cs" />
     <Compile Include="SearchCriteria\CurrencyCriteria.cs" />
     <Compile Include="SearchCriteria\ExpenseCategory.cs" />
     <Compile Include="SearchCriteria\TradeCriteria.cs" />
