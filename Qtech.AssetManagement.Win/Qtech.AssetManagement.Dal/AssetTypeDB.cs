@@ -117,6 +117,7 @@ namespace Qtech.AssetManagement.Dal
 
                 Helpers.CreateParameter(myCommand, DbType.String, "@code", myAssetType.mCode);
                 Helpers.CreateParameter(myCommand, DbType.String, "@name", myAssetType.mName);
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@post", myAssetType.mPost);
 
                 Helpers.SetSaveParameters(myCommand, myAssetType);
 
@@ -164,6 +165,7 @@ namespace Qtech.AssetManagement.Dal
             assetType.mId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("id"));
             assetType.mCode = myDataRecord.GetString(myDataRecord.GetOrdinal("code"));
             assetType.mName = myDataRecord.GetString(myDataRecord.GetOrdinal("name"));
+            assetType.mPost = myDataRecord.GetBoolean(myDataRecord.GetOrdinal("post"));
             return assetType;
         }
     }

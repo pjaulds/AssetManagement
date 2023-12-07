@@ -115,8 +115,15 @@ namespace Qtech.AssetManagement.Dal
                 myCommand.CommandType = CommandType.StoredProcedure;
                 myCommand.CommandText = "amQt_spChartOfAccountInsertUpdateSingleItem";
 
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@account_type_id", myChartOfAccount.mAccountTypeId);
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@account_group_id", myChartOfAccount.mAccountGroupId);
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@account_classification_id", myChartOfAccount.mAccountClassificationId);
                 Helpers.CreateParameter(myCommand, DbType.String, "@code", myChartOfAccount.mCode);
                 Helpers.CreateParameter(myCommand, DbType.String, "@name", myChartOfAccount.mName);
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@chart_of_account_main_id", myChartOfAccount.mChartOfAccountMainId);
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@chart_of_account_close_id", myChartOfAccount.mChartOfAccountCloseId);
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@payable_sales", myChartOfAccount.mPayableSales);
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@debit_credit", myChartOfAccount.mDebitCredit);
 
                 Helpers.SetSaveParameters(myCommand, myChartOfAccount);
 
@@ -159,12 +166,25 @@ namespace Qtech.AssetManagement.Dal
 
         private static ChartOfAccount FillDataRecord(IDataRecord myDataRecord)
         {
-            ChartOfAccount chartOfAccount = new ChartOfAccount();
+            ChartOfAccount chartofaccount = new ChartOfAccount();
 
-            chartOfAccount.mId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("id"));
-            chartOfAccount.mCode = myDataRecord.GetString(myDataRecord.GetOrdinal("code"));
-            chartOfAccount.mName = myDataRecord.GetString(myDataRecord.GetOrdinal("name"));
-            return chartOfAccount;
+            chartofaccount.mId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("id"));
+            chartofaccount.mAccountTypeName = myDataRecord.GetString(myDataRecord.GetOrdinal("account_type_name"));
+            chartofaccount.mAccountTypeId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("account_type_id"));
+            chartofaccount.mAccountGroupName = myDataRecord.GetString(myDataRecord.GetOrdinal("account_group_name"));
+            chartofaccount.mAccountGroupId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("account_group_id"));
+            chartofaccount.mAccountClassificationName = myDataRecord.GetString(myDataRecord.GetOrdinal("account_classification_name"));
+            chartofaccount.mAccountClassificationId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("account_classification_id"));
+            chartofaccount.mCode = myDataRecord.GetString(myDataRecord.GetOrdinal("code"));
+            chartofaccount.mName = myDataRecord.GetString(myDataRecord.GetOrdinal("name"));
+            chartofaccount.mChartOfAccountMainName = myDataRecord.GetString(myDataRecord.GetOrdinal("chart_of_account_main_name"));
+            chartofaccount.mChartOfAccountMainId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("chart_of_account_main_id"));
+            chartofaccount.mChartOfAccountCloseName = myDataRecord.GetString(myDataRecord.GetOrdinal("chart_of_account_close_name"));
+            chartofaccount.mChartOfAccountCloseId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("chart_of_account_close_id"));
+            chartofaccount.mPayableSales = myDataRecord.GetBoolean(myDataRecord.GetOrdinal("payable_sales"));
+            chartofaccount.mDebitCredit = myDataRecord.GetBoolean(myDataRecord.GetOrdinal("debit_credit"));
+            
+            return chartofaccount;
         }
     }
 }

@@ -115,9 +115,12 @@ namespace Qtech.AssetManagement.Dal
                 myCommand.CommandType = CommandType.StoredProcedure;
                 myCommand.CommandText = "amQt_spProductInsertUpdateSingleItem";
 
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@asset_type_id", myProduct.mAssetTypeId);
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@asset_class_id", myProduct.mAssetClassId);
                 Helpers.CreateParameter(myCommand, DbType.String, "@code", myProduct.mCode);
                 Helpers.CreateParameter(myCommand, DbType.String, "@name", myProduct.mName);
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@unit_id", myProduct.mUnitId);
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@post", myProduct.mPost);
 
                 Helpers.SetSaveParameters(myCommand, myProduct);
 
@@ -163,10 +166,15 @@ namespace Qtech.AssetManagement.Dal
             Product product = new Product();
 
             product.mId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("id"));
+            product.mAssetTypeName = myDataRecord.GetString(myDataRecord.GetOrdinal("asset_type_name"));
+            product.mAssetTypeId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("asset_type_id"));
+            product.mAssetClassName = myDataRecord.GetString(myDataRecord.GetOrdinal("asset_class_name"));
+            product.mAssetClassId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("asset_class_id"));
             product.mCode = myDataRecord.GetString(myDataRecord.GetOrdinal("code"));
             product.mName = myDataRecord.GetString(myDataRecord.GetOrdinal("name"));
             product.mUnitId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("unit_id"));
             product.mUnitName = myDataRecord.GetString(myDataRecord.GetOrdinal("unit_name"));
+            product.mPost = myDataRecord.GetBoolean(myDataRecord.GetOrdinal("post"));
             return product;
         }
     }

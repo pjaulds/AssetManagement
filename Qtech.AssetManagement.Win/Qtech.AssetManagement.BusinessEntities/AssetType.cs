@@ -23,6 +23,8 @@ namespace Qtech.AssetManagement.BusinessEntities
         [NotNullOrEmpty(Message = "Please enter valid asset type name/title.")]
         public String mName { get; set; }
 
+        [Display(Name = "Post")]
+        public bool mPost { get; set; }
         #endregion
     }
 }

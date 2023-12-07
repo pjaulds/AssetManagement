@@ -172,6 +172,7 @@ namespace Qtech.AssetManagement.Dal
             purchasevoucher.mReceivingNo = myDataRecord.GetString(myDataRecord.GetOrdinal("receiving_no"));
             purchasevoucher.mReceivingId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("receiving_id"));
             purchasevoucher.mPaymentModeId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("payment_mode_id"));
+            purchasevoucher.mPaymentModeName = myDataRecord.GetString(myDataRecord.GetOrdinal("payment_mode_name"));
             purchasevoucher.mPreparedByName = myDataRecord.GetString(myDataRecord.GetOrdinal("prepared_by_name"));
             purchasevoucher.mPreparedById = myDataRecord.GetInt32(myDataRecord.GetOrdinal("prepared_by_id"));
             purchasevoucher.mCheckedByName = myDataRecord.GetString(myDataRecord.GetOrdinal("checked_by_name"));

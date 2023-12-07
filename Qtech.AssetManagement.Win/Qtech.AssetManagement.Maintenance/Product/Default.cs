@@ -74,22 +74,30 @@ namespace Qtech.AssetManagement.Maintenance.Product
             }
         }
 
-        private void LoadProductFromFormControls(BusinessEntities.Product myUser)
+        private void LoadProductFromFormControls(BusinessEntities.Product myProduct)
         {
-            myUser.mId = int.Parse(Idlabel.Text);
-            myUser.mCode = CodetextBox.Text;
-            myUser.mName = NametextBox.Text;
-            myUser.mUnitId = ControlUtil.UltraComboReturnValue(UnitutraCombo);
-            myUser.mUnitName = UnitutraCombo.Text;
-            myUser.mUserId = SessionUtil.mUser.mId;
+            myProduct.mId = int.Parse(Idlabel.Text);
+            myProduct.mAssetTypeId = ControlUtil.UltraComboReturnValue(AssetTypeultraCombo);
+            myProduct.mAssetTypeName = AssetTypeultraCombo.Text;
+            myProduct.mAssetClassId = ControlUtil.UltraComboReturnValue(AssetClassultraCombo);
+            myProduct.mAssetClassName = AssetClassultraCombo.Text;
+            myProduct.mCode = CodetextBox.Text;
+            myProduct.mName = NametextBox.Text;
+            myProduct.mUnitId = ControlUtil.UltraComboReturnValue(UnitutraCombo);
+            myProduct.mUnitName = UnitutraCombo.Text;
+            myProduct.mPost = PostcheckBox.Checked;
+            myProduct.mUserId = SessionUtil.mUser.mId;
         }
 
         private void LoadFormControlsFromUser(BusinessEntities.Product myProduct)
         {
             Idlabel.Text = myProduct.mId.ToString();
+            AssetTypeultraCombo.Value = myProduct.mAssetTypeId;
+            AssetClassultraCombo.Value = myProduct.mAssetClassId;
             CodetextBox.Text = myProduct.mCode;
             NametextBox.Text = myProduct.mName;
             UnitutraCombo.Value = myProduct.mUnitId;
+            PostcheckBox.Checked = myProduct.mPost;
         }
 
         private void EndEditing()
@@ -257,6 +265,8 @@ namespace Qtech.AssetManagement.Maintenance.Product
 
         public void RefreshAllSelection()
         {
+            UltraComboUtil.AssetType(AssetTypeultraCombo);
+            UltraComboUtil.AssetClass(AssetClassultraCombo);
             UltraComboUtil.Unit(UnitutraCombo);
         }
     }

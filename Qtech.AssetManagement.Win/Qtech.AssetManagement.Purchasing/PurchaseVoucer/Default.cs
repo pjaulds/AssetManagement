@@ -95,6 +95,7 @@ namespace Qtech.AssetManagement.Purchasing.PurchaseVoucher
             myPurchaseVoucher.mId = int.Parse(Idlabel.Text);
             myPurchaseVoucher.mReceivingId = int.Parse(ReceivingIdIdlabel.Text);
             myPurchaseVoucher.mPaymentModeId = ControlUtil.UltraComboReturnValue(PaymentModeultraCombo);
+            myPurchaseVoucher.mPaymentModeName = PaymentModeultraCombo.Text;
             myPurchaseVoucher.mPreparedById = ControlUtil.UltraComboReturnValue(PreparedByutraCombo);
             myPurchaseVoucher.mPreparedByName = PreparedByutraCombo.Text;
             myPurchaseVoucher.mCheckedById = ControlUtil.UltraComboReturnValue(CheckedByultraCombo);
@@ -313,7 +314,7 @@ namespace Qtech.AssetManagement.Purchasing.PurchaseVoucher
         {
             UltraComboUtil.Personnel(PreparedByutraCombo);
             UltraComboUtil.Personnel(CheckedByultraCombo);
-            UltraComboUtil.PaymentMode(PaymentModeultraCombo);
+            UltraComboUtil.ChartOfAccount(PaymentModeultraCombo);
         }
 
         

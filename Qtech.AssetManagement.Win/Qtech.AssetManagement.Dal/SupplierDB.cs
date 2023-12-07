@@ -117,6 +117,15 @@ namespace Qtech.AssetManagement.Dal
 
                 Helpers.CreateParameter(myCommand, DbType.String, "@code", mySupplier.mCode);
                 Helpers.CreateParameter(myCommand, DbType.String, "@name", mySupplier.mName);
+                Helpers.CreateParameter(myCommand, DbType.String, "@address", string.IsNullOrEmpty(mySupplier.mAddress) ? "" : mySupplier.mAddress);
+                Helpers.CreateParameter(myCommand, DbType.String, "@tin", string.IsNullOrEmpty(mySupplier.mTin) ? "" : mySupplier.mTin);
+                Helpers.CreateParameter(myCommand, DbType.String, "@contact_no", string.IsNullOrEmpty(mySupplier.mContactNo) ? "" : mySupplier.mContactNo);
+                Helpers.CreateParameter(myCommand, DbType.String, "@email", string.IsNullOrEmpty(mySupplier.mEmail) ? "" : mySupplier.mEmail);
+                Helpers.CreateParameter(myCommand, DbType.String, "@sales_person", string.IsNullOrEmpty(mySupplier.mSalesPerson) ? "" : mySupplier.mSalesPerson);
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@vat_registered", mySupplier.mVatRegistered);
+                Helpers.CreateParameter(myCommand, DbType.Decimal, "@vat_rate", mySupplier.mVatRate);
+                Helpers.CreateParameter(myCommand, DbType.Decimal, "@witholding_tax", mySupplier.mWitholdingTax);
+                Helpers.CreateParameter(myCommand, DbType.String, "@business_style", string.IsNullOrEmpty(mySupplier.mBusinessStyle) ? "" : mySupplier.mBusinessStyle);
 
                 Helpers.SetSaveParameters(myCommand, mySupplier);
 
@@ -164,6 +173,15 @@ namespace Qtech.AssetManagement.Dal
             supplier.mId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("id"));
             supplier.mCode = myDataRecord.GetString(myDataRecord.GetOrdinal("code"));
             supplier.mName = myDataRecord.GetString(myDataRecord.GetOrdinal("name"));
+            supplier.mAddress = myDataRecord.GetString(myDataRecord.GetOrdinal("address"));
+            supplier.mTin = myDataRecord.GetString(myDataRecord.GetOrdinal("tin"));
+            supplier.mContactNo = myDataRecord.GetString(myDataRecord.GetOrdinal("contact_no"));
+            supplier.mEmail = myDataRecord.GetString(myDataRecord.GetOrdinal("email"));
+            supplier.mSalesPerson = myDataRecord.GetString(myDataRecord.GetOrdinal("sales_person"));
+            supplier.mVatRegistered = myDataRecord.GetBoolean(myDataRecord.GetOrdinal("vat_registered"));
+            supplier.mVatRate = myDataRecord.GetDecimal(myDataRecord.GetOrdinal("vat_rate"));
+            supplier.mWitholdingTax = myDataRecord.GetDecimal(myDataRecord.GetOrdinal("witholding_tax"));
+            supplier.mBusinessStyle = myDataRecord.GetString(myDataRecord.GetOrdinal("business_style"));
             return supplier;
         }
     }

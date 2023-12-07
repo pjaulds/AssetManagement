@@ -10,6 +10,26 @@ namespace Qtech.AssetManagement.Audit
             AuditCollection audit_collection = new AuditCollection();
             BusinessEntities.Audit audit = new BusinessEntities.Audit();
 
+            if (product.mAssetTypeId != productOld.mAssetTypeId)
+            {
+                audit = new BusinessEntities.Audit();
+                LoadCommonData(ref audit, product);
+                audit.mField = "Asset Type ";
+                audit.mOldValue = productOld.mAssetTypeName.ToString();
+                audit.mNewValue = product.mAssetTypeName.ToString();
+                audit_collection.Add(audit);
+            }
+
+            if (product.mAssetClassId != productOld.mAssetClassId)
+            {
+                audit = new BusinessEntities.Audit();
+                LoadCommonData(ref audit, product);
+                audit.mField = "Asset Class ";
+                audit.mOldValue = productOld.mAssetClassName.ToString();
+                audit.mNewValue = product.mAssetClassName.ToString();
+                audit_collection.Add(audit);
+            }
+
             if (product.mCode != productOld.mCode)
             {
                 audit = new BusinessEntities.Audit();
@@ -37,6 +57,16 @@ namespace Qtech.AssetManagement.Audit
                 audit.mField = "Unit";
                 audit.mOldValue = productOld.mUnitName.ToString();
                 audit.mNewValue = product.mUnitName.ToString();
+                audit_collection.Add(audit);
+            }
+
+            if (product.mPost != productOld.mPost)
+            {
+                audit = new BusinessEntities.Audit();
+                LoadCommonData(ref audit, product);
+                audit.mField = "Post";
+                audit.mOldValue = productOld.mPost.ToString();
+                audit.mNewValue = product.mPost.ToString();
                 audit_collection.Add(audit);
             }
 

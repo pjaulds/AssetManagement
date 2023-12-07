@@ -34,17 +34,34 @@
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn2 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mCode");
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn3 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mName");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn4 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mAddress");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn5 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mTin");
             Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn6 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mContactNo");
             Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn7 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mEmail");
             Infragistics.Win.Appearance appearance5 = new Infragistics.Win.Appearance();
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn8 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mSalesPerson");
             Infragistics.Win.Appearance appearance6 = new Infragistics.Win.Appearance();
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn9 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mVatRegistered");
             Infragistics.Win.Appearance appearance7 = new Infragistics.Win.Appearance();
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn10 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mVatRate");
             Infragistics.Win.Appearance appearance8 = new Infragistics.Win.Appearance();
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn11 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mWitholdingTax");
             Infragistics.Win.Appearance appearance9 = new Infragistics.Win.Appearance();
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn12 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mBusinessStyle");
             Infragistics.Win.Appearance appearance10 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance11 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance12 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance13 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance14 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance15 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance16 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance17 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance18 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance19 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance20 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance21 = new Infragistics.Win.Appearance();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.ultraGrid1 = new Infragistics.Win.UltraWinGrid.UltraGrid();
             this.expandPanelControl1 = new Qtech.AssetManagement.Controls.ExpandPanelControl();
@@ -62,6 +79,23 @@
             this.Cancelbutton = new System.Windows.Forms.Button();
             this.Savebutton = new System.Windows.Forms.Button();
             this.collapsePanelControl1 = new Qtech.AssetManagement.Controls.CollapsePanelControl();
+            this.TintextBox = new System.Windows.Forms.TextBox();
+            this.AddresstextBox = new System.Windows.Forms.TextBox();
+            this.EmailtextBox = new System.Windows.Forms.TextBox();
+            this.ContactNotextBox = new System.Windows.Forms.TextBox();
+            this.SalesPersontextBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.VatRegisteredcheckBox = new System.Windows.Forms.CheckBox();
+            this.BusinessStyletextBox = new System.Windows.Forms.TextBox();
+            this.WitholdingTaxtextBox = new System.Windows.Forms.TextBox();
+            this.VatRatetextBox = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -100,6 +134,7 @@
             // 
             // ultraGrid1
             // 
+            this.ultraGrid1.DataMember = null;
             appearance1.BackColor = System.Drawing.SystemColors.Window;
             appearance1.BorderColor = System.Drawing.SystemColors.InactiveCaption;
             this.ultraGrid1.DisplayLayout.Appearance = appearance1;
@@ -117,65 +152,117 @@
             ultraGridColumn3.Header.Caption = "Title";
             ultraGridColumn3.Header.VisiblePosition = 2;
             ultraGridColumn3.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(350, 0);
+            ultraGridColumn4.Header.Caption = "Address";
+            ultraGridColumn4.Header.VisiblePosition = 3;
+            ultraGridColumn4.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 0);
+            appearance3.TextHAlignAsString = "Center";
+            ultraGridColumn5.CellAppearance = appearance3;
+            ultraGridColumn5.Header.Caption = "TIN";
+            ultraGridColumn5.Header.VisiblePosition = 4;
+            ultraGridColumn5.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(150, 0);
+            appearance4.TextHAlignAsString = "Center";
+            ultraGridColumn6.CellAppearance = appearance4;
+            ultraGridColumn6.Header.Caption = "Contact No";
+            ultraGridColumn6.Header.VisiblePosition = 5;
+            ultraGridColumn6.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(150, 0);
+            appearance5.TextHAlignAsString = "Center";
+            ultraGridColumn7.CellAppearance = appearance5;
+            ultraGridColumn7.Header.Caption = "Email";
+            ultraGridColumn7.Header.VisiblePosition = 6;
+            ultraGridColumn7.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(150, 0);
+            appearance6.TextHAlignAsString = "Center";
+            ultraGridColumn8.CellAppearance = appearance6;
+            ultraGridColumn8.Header.Caption = "Sales Person";
+            ultraGridColumn8.Header.VisiblePosition = 7;
+            ultraGridColumn8.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(150, 0);
+            appearance7.TextHAlignAsString = "Center";
+            ultraGridColumn9.CellAppearance = appearance7;
+            ultraGridColumn9.Header.Caption = "VAT Registered";
+            ultraGridColumn9.Header.VisiblePosition = 8;
+            ultraGridColumn9.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(150, 0);
+            appearance8.TextHAlignAsString = "Center";
+            ultraGridColumn10.CellAppearance = appearance8;
+            ultraGridColumn10.Header.Caption = "VAT Rate";
+            ultraGridColumn10.Header.VisiblePosition = 9;
+            ultraGridColumn10.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(150, 0);
+            appearance9.TextHAlignAsString = "Center";
+            ultraGridColumn11.CellAppearance = appearance9;
+            ultraGridColumn11.Header.Caption = "Witholding Tax";
+            ultraGridColumn11.Header.VisiblePosition = 10;
+            ultraGridColumn11.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(150, 0);
+            appearance10.TextHAlignAsString = "Center";
+            ultraGridColumn12.CellAppearance = appearance10;
+            ultraGridColumn12.Header.Caption = "Business Style";
+            ultraGridColumn12.Header.VisiblePosition = 11;
+            ultraGridColumn12.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(150, 0);
             ultraGridBand1.Columns.AddRange(new object[] {
             ultraGridColumn1,
             ultraGridColumn2,
-            ultraGridColumn3});
+            ultraGridColumn3,
+            ultraGridColumn4,
+            ultraGridColumn5,
+            ultraGridColumn6,
+            ultraGridColumn7,
+            ultraGridColumn8,
+            ultraGridColumn9,
+            ultraGridColumn10,
+            ultraGridColumn11,
+            ultraGridColumn12});
             ultraGridBand1.RowLayoutStyle = Infragistics.Win.UltraWinGrid.RowLayoutStyle.ColumnLayout;
             this.ultraGrid1.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
             this.ultraGrid1.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
             this.ultraGrid1.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.False;
-            appearance3.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            appearance3.BackColor2 = System.Drawing.SystemColors.ControlDark;
-            appearance3.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
-            appearance3.BorderColor = System.Drawing.SystemColors.Window;
-            this.ultraGrid1.DisplayLayout.GroupByBox.Appearance = appearance3;
-            appearance4.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.ultraGrid1.DisplayLayout.GroupByBox.BandLabelAppearance = appearance4;
+            appearance11.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            appearance11.BackColor2 = System.Drawing.SystemColors.ControlDark;
+            appearance11.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
+            appearance11.BorderColor = System.Drawing.SystemColors.Window;
+            this.ultraGrid1.DisplayLayout.GroupByBox.Appearance = appearance11;
+            appearance12.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.ultraGrid1.DisplayLayout.GroupByBox.BandLabelAppearance = appearance12;
             this.ultraGrid1.DisplayLayout.GroupByBox.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
             this.ultraGrid1.DisplayLayout.GroupByBox.Hidden = true;
-            appearance5.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            appearance5.BackColor2 = System.Drawing.SystemColors.Control;
-            appearance5.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
-            appearance5.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.ultraGrid1.DisplayLayout.GroupByBox.PromptAppearance = appearance5;
+            appearance13.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            appearance13.BackColor2 = System.Drawing.SystemColors.Control;
+            appearance13.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
+            appearance13.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.ultraGrid1.DisplayLayout.GroupByBox.PromptAppearance = appearance13;
             this.ultraGrid1.DisplayLayout.MaxColScrollRegions = 1;
             this.ultraGrid1.DisplayLayout.MaxRowScrollRegions = 1;
-            appearance6.BackColor = System.Drawing.SystemColors.Window;
-            appearance6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.ultraGrid1.DisplayLayout.Override.ActiveCellAppearance = appearance6;
-            appearance7.BackColor = System.Drawing.SystemColors.Highlight;
-            appearance7.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.ultraGrid1.DisplayLayout.Override.ActiveRowAppearance = appearance7;
+            appearance14.BackColor = System.Drawing.SystemColors.Window;
+            appearance14.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.ultraGrid1.DisplayLayout.Override.ActiveCellAppearance = appearance14;
+            appearance15.BackColor = System.Drawing.SystemColors.Highlight;
+            appearance15.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.ultraGrid1.DisplayLayout.Override.ActiveRowAppearance = appearance15;
             this.ultraGrid1.DisplayLayout.Override.AllowRowFiltering = Infragistics.Win.DefaultableBoolean.True;
             this.ultraGrid1.DisplayLayout.Override.BorderStyleCell = Infragistics.Win.UIElementBorderStyle.Dotted;
             this.ultraGrid1.DisplayLayout.Override.BorderStyleRow = Infragistics.Win.UIElementBorderStyle.Dotted;
-            appearance8.BackColor = System.Drawing.SystemColors.Window;
-            this.ultraGrid1.DisplayLayout.Override.CardAreaAppearance = appearance8;
-            appearance9.BorderColor = System.Drawing.Color.Silver;
-            appearance9.TextTrimming = Infragistics.Win.TextTrimming.EllipsisCharacter;
-            this.ultraGrid1.DisplayLayout.Override.CellAppearance = appearance9;
+            appearance16.BackColor = System.Drawing.SystemColors.Window;
+            this.ultraGrid1.DisplayLayout.Override.CardAreaAppearance = appearance16;
+            appearance17.BorderColor = System.Drawing.Color.Silver;
+            appearance17.TextTrimming = Infragistics.Win.TextTrimming.EllipsisCharacter;
+            this.ultraGrid1.DisplayLayout.Override.CellAppearance = appearance17;
             this.ultraGrid1.DisplayLayout.Override.CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.EditAndSelectText;
             this.ultraGrid1.DisplayLayout.Override.CellPadding = 0;
             this.ultraGrid1.DisplayLayout.Override.ExpansionIndicator = Infragistics.Win.UltraWinGrid.ShowExpansionIndicator.Never;
             this.ultraGrid1.DisplayLayout.Override.FilterOperatorDefaultValue = Infragistics.Win.UltraWinGrid.FilterOperatorDefaultValue.Contains;
             this.ultraGrid1.DisplayLayout.Override.FilterUIType = Infragistics.Win.UltraWinGrid.FilterUIType.FilterRow;
-            appearance10.BackColor = System.Drawing.SystemColors.Control;
-            appearance10.BackColor2 = System.Drawing.SystemColors.ControlDark;
-            appearance10.BackGradientAlignment = Infragistics.Win.GradientAlignment.Element;
-            appearance10.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
-            appearance10.BorderColor = System.Drawing.SystemColors.Window;
-            this.ultraGrid1.DisplayLayout.Override.GroupByRowAppearance = appearance10;
-            appearance11.TextHAlignAsString = "Left";
-            this.ultraGrid1.DisplayLayout.Override.HeaderAppearance = appearance11;
+            appearance18.BackColor = System.Drawing.SystemColors.Control;
+            appearance18.BackColor2 = System.Drawing.SystemColors.ControlDark;
+            appearance18.BackGradientAlignment = Infragistics.Win.GradientAlignment.Element;
+            appearance18.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
+            appearance18.BorderColor = System.Drawing.SystemColors.Window;
+            this.ultraGrid1.DisplayLayout.Override.GroupByRowAppearance = appearance18;
+            appearance19.TextHAlignAsString = "Left";
+            this.ultraGrid1.DisplayLayout.Override.HeaderAppearance = appearance19;
             this.ultraGrid1.DisplayLayout.Override.HeaderClickAction = Infragistics.Win.UltraWinGrid.HeaderClickAction.SortMulti;
             this.ultraGrid1.DisplayLayout.Override.HeaderStyle = Infragistics.Win.HeaderStyle.WindowsXPCommand;
-            appearance12.BackColor = System.Drawing.SystemColors.Window;
-            appearance12.BorderColor = System.Drawing.Color.Silver;
-            this.ultraGrid1.DisplayLayout.Override.RowAppearance = appearance12;
+            appearance20.BackColor = System.Drawing.SystemColors.Window;
+            appearance20.BorderColor = System.Drawing.Color.Silver;
+            this.ultraGrid1.DisplayLayout.Override.RowAppearance = appearance20;
             this.ultraGrid1.DisplayLayout.Override.RowSelectors = Infragistics.Win.DefaultableBoolean.False;
-            appearance13.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ultraGrid1.DisplayLayout.Override.TemplateAddRowAppearance = appearance13;
+            appearance21.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.ultraGrid1.DisplayLayout.Override.TemplateAddRowAppearance = appearance21;
             this.ultraGrid1.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill;
             this.ultraGrid1.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
             this.ultraGrid1.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy;
@@ -201,6 +288,15 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.BusinessStyletextBox);
+            this.panel1.Controls.Add(this.WitholdingTaxtextBox);
+            this.panel1.Controls.Add(this.VatRatetextBox);
+            this.panel1.Controls.Add(this.VatRegisteredcheckBox);
+            this.panel1.Controls.Add(this.SalesPersontextBox);
+            this.panel1.Controls.Add(this.EmailtextBox);
+            this.panel1.Controls.Add(this.ContactNotextBox);
+            this.panel1.Controls.Add(this.TintextBox);
+            this.panel1.Controls.Add(this.AddresstextBox);
             this.panel1.Controls.Add(this.NametextBox);
             this.panel1.Controls.Add(this.CodetextBox);
             this.panel1.Controls.Add(this.panel2);
@@ -231,6 +327,14 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
@@ -358,6 +462,170 @@
             this.collapsePanelControl1.TabIndex = 178;
             this.collapsePanelControl1._HidePanel += new System.EventHandler(this.collapsePanelControl1__HidePanel);
             // 
+            // TintextBox
+            // 
+            this.TintextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TintextBox.Location = new System.Drawing.Point(119, 142);
+            this.TintextBox.MaxLength = 150;
+            this.TintextBox.Name = "TintextBox";
+            this.TintextBox.Size = new System.Drawing.Size(250, 21);
+            this.TintextBox.TabIndex = 12;
+            // 
+            // AddresstextBox
+            // 
+            this.AddresstextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddresstextBox.Location = new System.Drawing.Point(119, 61);
+            this.AddresstextBox.MaxLength = 50;
+            this.AddresstextBox.Multiline = true;
+            this.AddresstextBox.Name = "AddresstextBox";
+            this.AddresstextBox.Size = new System.Drawing.Size(250, 75);
+            this.AddresstextBox.TabIndex = 11;
+            // 
+            // EmailtextBox
+            // 
+            this.EmailtextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailtextBox.Location = new System.Drawing.Point(119, 196);
+            this.EmailtextBox.MaxLength = 150;
+            this.EmailtextBox.Name = "EmailtextBox";
+            this.EmailtextBox.Size = new System.Drawing.Size(250, 21);
+            this.EmailtextBox.TabIndex = 14;
+            // 
+            // ContactNotextBox
+            // 
+            this.ContactNotextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ContactNotextBox.Location = new System.Drawing.Point(119, 169);
+            this.ContactNotextBox.MaxLength = 50;
+            this.ContactNotextBox.Name = "ContactNotextBox";
+            this.ContactNotextBox.Size = new System.Drawing.Size(250, 21);
+            this.ContactNotextBox.TabIndex = 13;
+            // 
+            // SalesPersontextBox
+            // 
+            this.SalesPersontextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SalesPersontextBox.Location = new System.Drawing.Point(119, 223);
+            this.SalesPersontextBox.MaxLength = 150;
+            this.SalesPersontextBox.Name = "SalesPersontextBox";
+            this.SalesPersontextBox.Size = new System.Drawing.Size(250, 21);
+            this.SalesPersontextBox.TabIndex = 15;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(7, 64);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Address";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(7, 145);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(24, 13);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "TIN";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(7, 172);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(65, 13);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Contact No.";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(7, 199);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(31, 13);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Email";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(7, 226);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(68, 13);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Sales Person";
+            // 
+            // VatRegisteredcheckBox
+            // 
+            this.VatRegisteredcheckBox.AutoSize = true;
+            this.VatRegisteredcheckBox.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.VatRegisteredcheckBox.Location = new System.Drawing.Point(119, 250);
+            this.VatRegisteredcheckBox.Name = "VatRegisteredcheckBox";
+            this.VatRegisteredcheckBox.Size = new System.Drawing.Size(100, 17);
+            this.VatRegisteredcheckBox.TabIndex = 16;
+            this.VatRegisteredcheckBox.Text = "VAT Registered";
+            this.VatRegisteredcheckBox.UseVisualStyleBackColor = true;
+            // 
+            // BusinessStyletextBox
+            // 
+            this.BusinessStyletextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BusinessStyletextBox.Location = new System.Drawing.Point(119, 327);
+            this.BusinessStyletextBox.MaxLength = 150;
+            this.BusinessStyletextBox.Name = "BusinessStyletextBox";
+            this.BusinessStyletextBox.Size = new System.Drawing.Size(250, 21);
+            this.BusinessStyletextBox.TabIndex = 19;
+            // 
+            // WitholdingTaxtextBox
+            // 
+            this.WitholdingTaxtextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WitholdingTaxtextBox.Location = new System.Drawing.Point(119, 300);
+            this.WitholdingTaxtextBox.MaxLength = 150;
+            this.WitholdingTaxtextBox.Name = "WitholdingTaxtextBox";
+            this.WitholdingTaxtextBox.Size = new System.Drawing.Size(250, 21);
+            this.WitholdingTaxtextBox.TabIndex = 18;
+            // 
+            // VatRatetextBox
+            // 
+            this.VatRatetextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VatRatetextBox.Location = new System.Drawing.Point(119, 273);
+            this.VatRatetextBox.MaxLength = 50;
+            this.VatRatetextBox.Name = "VatRatetextBox";
+            this.VatRatetextBox.Size = new System.Drawing.Size(250, 21);
+            this.VatRatetextBox.TabIndex = 17;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(7, 276);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(52, 13);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "VAT Rate";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(7, 303);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(78, 13);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "Witholding Tax";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(7, 330);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(75, 13);
+            this.label11.TabIndex = 11;
+            this.label11.Text = "Business Style";
+            // 
             // Default
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -402,5 +670,22 @@
         private System.Windows.Forms.Button Cancelbutton;
         private System.Windows.Forms.TextBox NametextBox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox SalesPersontextBox;
+        private System.Windows.Forms.TextBox EmailtextBox;
+        private System.Windows.Forms.TextBox ContactNotextBox;
+        private System.Windows.Forms.TextBox TintextBox;
+        private System.Windows.Forms.TextBox AddresstextBox;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox BusinessStyletextBox;
+        private System.Windows.Forms.TextBox WitholdingTaxtextBox;
+        private System.Windows.Forms.TextBox VatRatetextBox;
+        private System.Windows.Forms.CheckBox VatRegisteredcheckBox;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
     }
 }

@@ -74,12 +74,13 @@ namespace Qtech.AssetManagement.Maintenance.AssetType
             }
         }
 
-        private void LoadAssetTypeFromFormControls(BusinessEntities.AssetType myUser)
+        private void LoadAssetTypeFromFormControls(BusinessEntities.AssetType myAssetType)
         {
-            myUser.mId = int.Parse(Idlabel.Text);
-            myUser.mCode = CodetextBox.Text;
-            myUser.mName = NametextBox.Text;
-            myUser.mUserId = SessionUtil.mUser.mId;
+            myAssetType.mId = int.Parse(Idlabel.Text);
+            myAssetType.mCode = CodetextBox.Text;
+            myAssetType.mName = NametextBox.Text;
+            myAssetType.mPost = PostcheckBox.Checked;
+            myAssetType.mUserId = SessionUtil.mUser.mId;
         }
 
         private void LoadFormControlsFromUser(BusinessEntities.AssetType myAssetType)
@@ -87,6 +88,7 @@ namespace Qtech.AssetManagement.Maintenance.AssetType
             Idlabel.Text = myAssetType.mId.ToString();
             CodetextBox.Text = myAssetType.mCode;
             NametextBox.Text = myAssetType.mName;
+            PostcheckBox.Checked = myAssetType.mPost;
         }
 
         private void EndEditing()

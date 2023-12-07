@@ -23,6 +23,33 @@ namespace Qtech.AssetManagement.BusinessEntities
         [NotNullOrEmpty(Message = "Please enter valid supplier name/title.")]
         public String mName { get; set; }
 
+        [Display(Name = "Address")]
+        public String mAddress { get; set; }
+
+        [Display(Name = "TIN")]
+        public String mTin { get; set; }
+
+        [Display(Name = "Contact No.")]
+        public String mContactNo { get; set; }
+
+        [Display(Name = "Email")]
+        public String mEmail { get; set; }
+
+        [Display(Name = "Sales Person")]
+        public String mSalesPerson { get; set; }
+
+        [Display(Name = "Vat Registered")]
+        public Boolean mVatRegistered { get; set; }
+
+        [Display(Name = "Vat Rate")]
+        public Decimal mVatRate { get; set; }
+
+        [Display(Name = "Witholding Tax")]
+        public Decimal mWitholdingTax { get; set; }
+
+        [Display(Name = "Business Style")]
+        public String mBusinessStyle { get; set; }
+
         #endregion
     }
 }

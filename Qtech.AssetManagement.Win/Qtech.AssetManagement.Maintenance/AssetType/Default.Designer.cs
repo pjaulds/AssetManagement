@@ -34,6 +34,7 @@
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn2 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mCode");
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn3 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mName");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn4 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mPost");
             Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance5 = new Infragistics.Win.Appearance();
@@ -49,6 +50,7 @@
             this.ultraGrid1 = new Infragistics.Win.UltraWinGrid.UltraGrid();
             this.expandPanelControl1 = new Qtech.AssetManagement.Controls.ExpandPanelControl();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.PostcheckBox = new System.Windows.Forms.CheckBox();
             this.NametextBox = new System.Windows.Forms.TextBox();
             this.CodetextBox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -117,10 +119,13 @@
             ultraGridColumn3.Header.Caption = "Title";
             ultraGridColumn3.Header.VisiblePosition = 2;
             ultraGridColumn3.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(350, 0);
+            ultraGridColumn4.Header.Caption = "Post";
+            ultraGridColumn4.Header.VisiblePosition = 3;
             ultraGridBand1.Columns.AddRange(new object[] {
             ultraGridColumn1,
             ultraGridColumn2,
-            ultraGridColumn3});
+            ultraGridColumn3,
+            ultraGridColumn4});
             ultraGridBand1.RowLayoutStyle = Infragistics.Win.UltraWinGrid.RowLayoutStyle.ColumnLayout;
             this.ultraGrid1.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
             this.ultraGrid1.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
@@ -201,6 +206,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.PostcheckBox);
             this.panel1.Controls.Add(this.NametextBox);
             this.panel1.Controls.Add(this.CodetextBox);
             this.panel1.Controls.Add(this.panel2);
@@ -209,6 +215,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(377, 439);
             this.panel1.TabIndex = 177;
+            // 
+            // PostcheckBox
+            // 
+            this.PostcheckBox.AutoSize = true;
+            this.PostcheckBox.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.PostcheckBox.Location = new System.Drawing.Point(119, 61);
+            this.PostcheckBox.Name = "PostcheckBox";
+            this.PostcheckBox.Size = new System.Drawing.Size(47, 17);
+            this.PostcheckBox.TabIndex = 12;
+            this.PostcheckBox.Text = "Post";
+            this.PostcheckBox.UseVisualStyleBackColor = true;
             // 
             // NametextBox
             // 
@@ -402,5 +419,6 @@
         private System.Windows.Forms.Button Cancelbutton;
         private System.Windows.Forms.TextBox NametextBox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox PostcheckBox;
     }
 }

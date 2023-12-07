@@ -27,7 +27,7 @@
     <ProductName>Asset Management System</ProductName>
     <PublisherName>Qtech</PublisherName>
     <SuiteName>Qtech</SuiteName>
-    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationRevision>4</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -129,7 +129,9 @@
     <None Include="Qtech.AssetManagement.Win_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Qtech.AssetManagement.Audit\Qtech.AssetManagement.Audit.csproj">

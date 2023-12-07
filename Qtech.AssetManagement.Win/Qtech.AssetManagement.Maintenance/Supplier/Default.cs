@@ -74,12 +74,21 @@ namespace Qtech.AssetManagement.Maintenance.Supplier
             }
         }
 
-        private void LoadSupplierFromFormControls(BusinessEntities.Supplier myUser)
+        private void LoadSupplierFromFormControls(BusinessEntities.Supplier mySupplier)
         {
-            myUser.mId = int.Parse(Idlabel.Text);
-            myUser.mCode = CodetextBox.Text;
-            myUser.mName = NametextBox.Text;
-            myUser.mUserId = SessionUtil.mUser.mId;
+            mySupplier.mId = int.Parse(Idlabel.Text);
+            mySupplier.mCode = CodetextBox.Text;
+            mySupplier.mName = NametextBox.Text;
+            mySupplier.mAddress = AddresstextBox.Text;
+            mySupplier.mTin = TintextBox.Text;
+            mySupplier.mContactNo = ContactNotextBox.Text;
+            mySupplier.mEmail = EmailtextBox.Text;
+            mySupplier.mSalesPerson = SalesPersontextBox.Text;
+            mySupplier.mVatRegistered = VatRegisteredcheckBox.Checked;
+            mySupplier.mVatRate = ControlUtil.TextBoxDecimal(VatRatetextBox);
+            mySupplier.mWitholdingTax = ControlUtil.TextBoxDecimal(WitholdingTaxtextBox);
+            mySupplier.mBusinessStyle = BusinessStyletextBox.Text;
+            mySupplier.mUserId = SessionUtil.mUser.mId;
         }
 
         private void LoadFormControlsFromUser(BusinessEntities.Supplier mySupplier)
@@ -87,6 +96,15 @@ namespace Qtech.AssetManagement.Maintenance.Supplier
             Idlabel.Text = mySupplier.mId.ToString();
             CodetextBox.Text = mySupplier.mCode;
             NametextBox.Text = mySupplier.mName;
+            AddresstextBox.Text = mySupplier.mAddress;
+            TintextBox.Text = mySupplier.mTin;
+            ContactNotextBox.Text = mySupplier.mContactNo;
+            EmailtextBox.Text = mySupplier.mEmail;
+            SalesPersontextBox.Text = mySupplier.mSalesPerson;
+            VatRegisteredcheckBox.Checked = mySupplier.mVatRegistered;
+            VatRatetextBox.Text = mySupplier.mVatRate.ToString();
+            WitholdingTaxtextBox.Text = mySupplier.mWitholdingTax.ToString();
+            BusinessStyletextBox.Text = mySupplier.mBusinessStyle;
         }
 
         private void EndEditing()
