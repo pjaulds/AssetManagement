@@ -25,6 +25,8 @@ namespace Qtech.AssetManagement.FixedAsset
 
         public bool mFromBrowse { get; set; }
         public BusinessEntities.FixedAsset mFixedAsset { get; set; }
+        public bool mIsDraft { get; set; }
+        public bool mIsRegistered { get; set; }
 
         #region Private Variables
         bool allow_select;
@@ -48,9 +50,12 @@ namespace Qtech.AssetManagement.FixedAsset
         #endregion
 
         #region Private Methods
-        private void LoadFixedAsset()
+        public void LoadFixedAsset()
         {
-            ultraGrid1.SetDataBinding(FixedAssetManager.GetList(), null, true);
+            FixedAssetCriteria criteria = new FixedAssetCriteria();
+            criteria.mIsDraft = mIsDraft;
+            criteria.mIsRegistered = mIsRegistered;
+            ultraGrid1.SetDataBinding(FixedAssetManager.GetList(criteria), null, true);
             ultraGrid1.Refresh();
         }
 
@@ -171,6 +176,8 @@ namespace Qtech.AssetManagement.FixedAsset
             ProductNametextBox.Focus();
             DraftcheckBox.Checked = !allow_delete;
             RegisteredcheckBox.Checked = allow_delete;
+
+            DraftcheckBox.Checked = true;
         }
 
         public int SaveRecords()
@@ -304,7 +311,7 @@ namespace Qtech.AssetManagement.FixedAsset
             ControlUtil.TextBoxEnterLeaveEventHandler(splitContainer1.Panel2);
             LoadFixedAsset();
 
-            Savebutton.Text = allow_delete ? "Register" : "Save As Draft";
+            //Savebutton.Text = allow_delete ? "Register" : "Save As Draft";
             
         }
 

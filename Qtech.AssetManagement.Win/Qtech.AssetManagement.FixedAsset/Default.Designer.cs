@@ -372,6 +372,7 @@
             this.DisposedcheckBox.TabIndex = 182;
             this.DisposedcheckBox.Text = "Disposed";
             this.DisposedcheckBox.UseVisualStyleBackColor = true;
+            this.DisposedcheckBox.Visible = false;
             // 
             // RegisteredcheckBox
             // 
@@ -384,6 +385,7 @@
             this.RegisteredcheckBox.TabIndex = 181;
             this.RegisteredcheckBox.Text = "Registered";
             this.RegisteredcheckBox.UseVisualStyleBackColor = true;
+            this.RegisteredcheckBox.Visible = false;
             // 
             // DraftcheckBox
             // 
@@ -396,6 +398,7 @@
             this.DraftcheckBox.TabIndex = 180;
             this.DraftcheckBox.Text = "Draft";
             this.DraftcheckBox.UseVisualStyleBackColor = true;
+            this.DraftcheckBox.Visible = false;
             // 
             // panel6
             // 

@@ -112,6 +112,8 @@ namespace Qtech.AssetManagement.Purchasing.PurchaseRequest
             myPurchaseRequest.mSupplier3Id = ControlUtil.UltraComboReturnValue(Supplier3ultraCombo);
             myPurchaseRequest.mSupplier3Name = Supplier3ultraCombo.Text;
             myPurchaseRequest.mRemarks = RemarksultraTextEditor.Text;
+            myPurchaseRequest.mCheckedById = int.Parse(CheckedByIdlabel.Text);
+            myPurchaseRequest.mCheckedByName = CheckedBytextBox.Text;
             myPurchaseRequest.mApprovedById = int.Parse(ApprovedBylabel.Text);
             myPurchaseRequest.mApprovedByName = ApprovedBytextBox.Text;
             myPurchaseRequest.mUserId = SessionUtil.mUser.mId;
@@ -139,6 +141,8 @@ namespace Qtech.AssetManagement.Purchasing.PurchaseRequest
             Supplier2ultraCombo.Value = myPurchaseRequest.mSupplier2Id;
             Supplier3ultraCombo.Value = myPurchaseRequest.mSupplier3Id;
             RemarksultraTextEditor.Text = myPurchaseRequest.mRemarks;
+            CheckedByIdlabel.Text = myPurchaseRequest.mCheckedById.ToString();
+            CheckedBytextBox.Text = myPurchaseRequest.mCheckedByName;
             ApprovedBylabel.Text = myPurchaseRequest.mApprovedById.ToString();
             ApprovedBytextBox.Text = myPurchaseRequest.mApprovedByName;
 
@@ -159,8 +163,6 @@ namespace Qtech.AssetManagement.Purchasing.PurchaseRequest
         {
             ControlUtil.ClearConent(splitContainer1.Panel2);
             ControlUtil.HidePanel(splitContainer1);
-            Idlabel.Text = "0";
-            ApprovedBylabel.Text = "0";
 
             ItemsdataGridView.AutoGenerateColumns = false;
             ItemsdataGridView.DataSource = new SortableBindingList<PurchaseRequestDetail>();
@@ -184,6 +186,7 @@ namespace Qtech.AssetManagement.Purchasing.PurchaseRequest
             ControlUtil.ExpandPanel(splitContainer1);
 
             RequestedByutraCombo.Focus();
+            RequestedByutraCombo.Value = SessionUtil.mUser.mPersonnelId;
         }
 
         public int SaveRecords()
@@ -337,7 +340,6 @@ namespace Qtech.AssetManagement.Purchasing.PurchaseRequest
             ThemeUtil.Controls(this);
             ControlUtil.TextBoxEnterLeaveEventHandler(splitContainer1.Panel2);
             LoadPurchaseRequest();
-            ApprovedBybutton.Enabled = allow_delete;
         }
 
         private void Savebutton_Click(object sender, EventArgs e)
@@ -400,18 +402,13 @@ namespace Qtech.AssetManagement.Purchasing.PurchaseRequest
             item.mQuantity = quantity;
             item.mProductId = myProduct.mId;
             item.mProductName = myProduct.mName;
+            item.mRemarks = string.Empty;
             items.Add(item);
             quantity = 0;
 
             ItemsdataGridView.AutoGenerateColumns = false;
             ItemsdataGridView.DataSource = items;
             ItemsdataGridView.Refresh();
-        }
-
-        private void ApprovedBybutton_Click(object sender, EventArgs e)
-        {
-            ApprovedBylabel.Text = SessionUtil.mUser.mId.ToString();
-            ApprovedBytextBox.Text = PersonnelManager.GetItem(SessionUtil.mUser.mPersonnelId).mName;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -465,6 +462,68 @@ namespace Qtech.AssetManagement.Purchasing.PurchaseRequest
         private void ItemsdataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
         {
 
+        }
+
+        private void CheckedBybutton_Click(object sender, EventArgs e)
+        {
+            if(!allow_delete)
+            {
+                User.LogInForm logIn = new User.LogInForm();
+                logIn.mForOverride = true;
+                logIn.FormClosing += LogIn_FormClosing;
+                logIn.ShowDialog();
+            }
+            else
+            {
+                CheckedByIdlabel.Text = SessionUtil.mUser.mId.ToString();
+                CheckedBytextBox.Text = PersonnelManager.GetItem(SessionUtil.mUser.mPersonnelId).mName;
+            }
+        }
+
+        private void LogIn_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            User.LogInForm logIn = (User.LogInForm)sender;
+            if (logIn.mUser == null) return;
+
+            if(!SessionUtil.UserAllowCheckedBy(logIn.mUser, (int)Modules.PurchaseRequest))
+            {
+                MessageBox.Show("You are not allowed to override transaction (checked by).", "Purchase Request", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            CheckedByIdlabel.Text = logIn.mUser.mId.ToString();
+            CheckedBytextBox.Text = PersonnelManager.GetItem(logIn.mUser.mPersonnelId).mName;
+        }
+
+        private void ApprovedBybutton_Click(object sender, EventArgs e)
+        {
+            if (!allow_delete)
+            {
+                User.LogInForm logIn = new User.LogInForm();
+                logIn.mForOverride = true;
+                logIn.FormClosing += LogInApproval_FormClosing;
+                logIn.ShowDialog();
+            }
+            else
+            {
+                ApprovedBylabel.Text = SessionUtil.mUser.mId.ToString();
+                ApprovedBytextBox.Text = PersonnelManager.GetItem(SessionUtil.mUser.mPersonnelId).mName;
+            }
+        }
+
+        private void LogInApproval_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            User.LogInForm logIn = (User.LogInForm)sender;
+            if (logIn.mUser == null) return;
+
+            if (!SessionUtil.UserAllowApprove(logIn.mUser, (int)Modules.PurchaseRequest))
+            {
+                MessageBox.Show("You are not allowed to override transaction (approval).", "Purchase Request", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            
+            ApprovedBylabel.Text = logIn.mUser.mId.ToString();
+            ApprovedBytextBox.Text = PersonnelManager.GetItem(logIn.mUser.mPersonnelId).mName;
         }
     }
 }

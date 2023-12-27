@@ -77,6 +77,7 @@ namespace Qtech.AssetManagement.FixedAsset
         {
             BusinessEntities.FixedAsset fa = FixedAssetManager.GetItem(mId);
 
+            fa.mIsDraft = false;
             fa.mIsRegistered = true;
             fa.mUserId = SessionUtil.mUser.mId;
 

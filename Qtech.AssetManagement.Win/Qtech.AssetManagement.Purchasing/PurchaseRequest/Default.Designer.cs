@@ -30,18 +30,20 @@
         {
             Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand1 = new Infragistics.Win.UltraWinGrid.UltraGridBand("Band 0", -1);
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn1 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn2 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mTransactionNo");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn20 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn21 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mTransactionNo");
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn3 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mDate");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn22 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mDate");
             Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn4 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mRequestedBy");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn5 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mDateRequired");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn23 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mRequestedBy");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn24 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mDateRequired");
             Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn6 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mSupplier1Name");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn7 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mSupplier2Name");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn8 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mSupplier3Name");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn9 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mRemarks");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn25 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mSupplier1Name");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn26 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mSupplier2Name");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn27 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mSupplier3Name");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn28 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mRemarks");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn29 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mCheckedByName");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn30 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mApprovedByName");
             Infragistics.Win.Appearance appearance5 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance6 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance7 = new Infragistics.Win.Appearance();
@@ -138,9 +140,11 @@
             this.mQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mUnitName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mRemarks = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RemarksultraTextEditor = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.searchProductUserControl1 = new Qtech.AssetManagement.Controls.SearchProductUserControl();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.CheckedBytextBox = new System.Windows.Forms.TextBox();
             this.ApprovedBytextBox = new System.Windows.Forms.TextBox();
             this.RequestedByutraCombo = new Infragistics.Win.UltraWinGrid.UltraCombo();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -157,6 +161,8 @@
             this.DateRequireddateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.CheckedByIdlabel = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.ApprovedBylabel = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -167,6 +173,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Idlabel = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.CheckedBybutton = new System.Windows.Forms.Button();
             this.ApprovedBybutton = new System.Windows.Forms.Button();
             this.Cancelbutton = new System.Windows.Forms.Button();
             this.Savebutton = new System.Windows.Forms.Button();
@@ -216,8 +223,8 @@
             this.splitContainer1.Panel2.Controls.Add(this.panel11);
             this.splitContainer1.Panel2.Controls.Add(this.panel8);
             this.splitContainer1.Panel2.Controls.Add(this.collapsePanelControl1);
-            this.splitContainer1.Size = new System.Drawing.Size(1008, 461);
-            this.splitContainer1.SplitterDistance = 371;
+            this.splitContainer1.Size = new System.Drawing.Size(1151, 461);
+            this.splitContainer1.SplitterDistance = 423;
             this.splitContainer1.SplitterWidth = 1;
             this.splitContainer1.TabIndex = 9;
             // 
@@ -227,50 +234,98 @@
             appearance1.BorderColor = System.Drawing.SystemColors.InactiveCaption;
             this.ultraGrid1.DisplayLayout.Appearance = appearance1;
             this.ultraGrid1.DisplayLayout.AutoFitStyle = Infragistics.Win.UltraWinGrid.AutoFitStyle.ExtendLastColumn;
-            ultraGridColumn1.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
-            ultraGridColumn1.Header.VisiblePosition = 0;
-            ultraGridColumn1.Hidden = true;
+            ultraGridColumn20.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
+            ultraGridColumn20.Header.VisiblePosition = 0;
+            ultraGridColumn20.Hidden = true;
             appearance2.TextHAlignAsString = "Center";
-            ultraGridColumn2.CellAppearance = appearance2;
-            ultraGridColumn2.Header.Caption = "Transaction No.";
-            ultraGridColumn2.Header.VisiblePosition = 1;
-            ultraGridColumn2.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(150, 23);
+            ultraGridColumn21.CellAppearance = appearance2;
+            ultraGridColumn21.Header.Caption = "Transaction No.";
+            ultraGridColumn21.Header.VisiblePosition = 1;
+            ultraGridColumn21.RowLayoutColumnInfo.OriginX = 0;
+            ultraGridColumn21.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn21.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(150, 23);
+            ultraGridColumn21.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn21.RowLayoutColumnInfo.SpanY = 2;
             appearance3.TextHAlignAsString = "Right";
-            ultraGridColumn3.CellAppearance = appearance3;
-            ultraGridColumn3.Format = "D";
-            ultraGridColumn3.Header.Caption = "Date Requested";
-            ultraGridColumn3.Header.VisiblePosition = 2;
-            ultraGridColumn3.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(175, 0);
-            ultraGridColumn4.Header.Caption = "Requested By";
-            ultraGridColumn4.Header.VisiblePosition = 3;
-            ultraGridColumn4.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(200, 0);
+            ultraGridColumn22.CellAppearance = appearance3;
+            ultraGridColumn22.Format = "D";
+            ultraGridColumn22.Header.Caption = "Date Requested";
+            ultraGridColumn22.Header.VisiblePosition = 2;
+            ultraGridColumn22.RowLayoutColumnInfo.OriginX = 2;
+            ultraGridColumn22.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn22.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(175, 0);
+            ultraGridColumn22.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn22.RowLayoutColumnInfo.SpanY = 2;
+            ultraGridColumn23.Header.Caption = "Requested By";
+            ultraGridColumn23.Header.VisiblePosition = 3;
+            ultraGridColumn23.RowLayoutColumnInfo.OriginX = 4;
+            ultraGridColumn23.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn23.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(200, 0);
+            ultraGridColumn23.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn23.RowLayoutColumnInfo.SpanY = 2;
             appearance4.TextHAlignAsString = "Right";
-            ultraGridColumn5.CellAppearance = appearance4;
-            ultraGridColumn5.Format = "D";
-            ultraGridColumn5.Header.Caption = "Date Required";
-            ultraGridColumn5.Header.VisiblePosition = 4;
-            ultraGridColumn5.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(175, 0);
-            ultraGridColumn6.Header.Caption = "Supplier 1";
-            ultraGridColumn6.Header.VisiblePosition = 5;
-            ultraGridColumn6.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(200, 0);
-            ultraGridColumn7.Header.Caption = "Supplier 2";
-            ultraGridColumn7.Header.VisiblePosition = 6;
-            ultraGridColumn7.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(200, 0);
-            ultraGridColumn8.Header.Caption = "Supplier 3";
-            ultraGridColumn8.Header.VisiblePosition = 7;
-            ultraGridColumn8.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(200, 0);
-            ultraGridColumn9.Header.Caption = "Remarks";
-            ultraGridColumn9.Header.VisiblePosition = 8;
+            ultraGridColumn24.CellAppearance = appearance4;
+            ultraGridColumn24.Format = "D";
+            ultraGridColumn24.Header.Caption = "Date Required";
+            ultraGridColumn24.Header.VisiblePosition = 4;
+            ultraGridColumn24.RowLayoutColumnInfo.OriginX = 6;
+            ultraGridColumn24.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn24.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(175, 0);
+            ultraGridColumn24.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn24.RowLayoutColumnInfo.SpanY = 2;
+            ultraGridColumn25.Header.Caption = "Supplier 1";
+            ultraGridColumn25.Header.VisiblePosition = 5;
+            ultraGridColumn25.RowLayoutColumnInfo.OriginX = 8;
+            ultraGridColumn25.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn25.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(200, 0);
+            ultraGridColumn25.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn25.RowLayoutColumnInfo.SpanY = 2;
+            ultraGridColumn26.Header.Caption = "Supplier 2";
+            ultraGridColumn26.Header.VisiblePosition = 6;
+            ultraGridColumn26.RowLayoutColumnInfo.OriginX = 10;
+            ultraGridColumn26.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn26.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(200, 0);
+            ultraGridColumn26.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn26.RowLayoutColumnInfo.SpanY = 2;
+            ultraGridColumn27.Header.Caption = "Supplier 3";
+            ultraGridColumn27.Header.VisiblePosition = 7;
+            ultraGridColumn27.RowLayoutColumnInfo.OriginX = 12;
+            ultraGridColumn27.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn27.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(200, 0);
+            ultraGridColumn27.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn27.RowLayoutColumnInfo.SpanY = 2;
+            ultraGridColumn28.Header.Caption = "Remarks";
+            ultraGridColumn28.Header.VisiblePosition = 8;
+            ultraGridColumn28.RowLayoutColumnInfo.OriginX = 18;
+            ultraGridColumn28.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn28.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn28.RowLayoutColumnInfo.SpanY = 2;
+            ultraGridColumn29.Header.Caption = "Checked By";
+            ultraGridColumn29.Header.VisiblePosition = 9;
+            ultraGridColumn29.RowLayoutColumnInfo.OriginX = 14;
+            ultraGridColumn29.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn29.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(200, 0);
+            ultraGridColumn29.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn29.RowLayoutColumnInfo.SpanY = 2;
+            ultraGridColumn30.Header.Caption = "Approved By";
+            ultraGridColumn30.Header.VisiblePosition = 10;
+            ultraGridColumn30.RowLayoutColumnInfo.OriginX = 16;
+            ultraGridColumn30.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn30.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(200, 0);
+            ultraGridColumn30.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn30.RowLayoutColumnInfo.SpanY = 2;
             ultraGridBand1.Columns.AddRange(new object[] {
-            ultraGridColumn1,
-            ultraGridColumn2,
-            ultraGridColumn3,
-            ultraGridColumn4,
-            ultraGridColumn5,
-            ultraGridColumn6,
-            ultraGridColumn7,
-            ultraGridColumn8,
-            ultraGridColumn9});
+            ultraGridColumn20,
+            ultraGridColumn21,
+            ultraGridColumn22,
+            ultraGridColumn23,
+            ultraGridColumn24,
+            ultraGridColumn25,
+            ultraGridColumn26,
+            ultraGridColumn27,
+            ultraGridColumn28,
+            ultraGridColumn29,
+            ultraGridColumn30});
             ultraGridBand1.RowLayoutStyle = Infragistics.Win.UltraWinGrid.RowLayoutStyle.ColumnLayout;
             this.ultraGrid1.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
             this.ultraGrid1.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
@@ -333,7 +388,7 @@
             this.ultraGrid1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ultraGrid1.Location = new System.Drawing.Point(0, 62);
             this.ultraGrid1.Name = "ultraGrid1";
-            this.ultraGrid1.Size = new System.Drawing.Size(352, 395);
+            this.ultraGrid1.Size = new System.Drawing.Size(404, 395);
             this.ultraGrid1.TabIndex = 125;
             this.ultraGrid1.Text = "ultraGrid1";
             this.ultraGrid1.InitializeLayout += new Infragistics.Win.UltraWinGrid.InitializeLayoutEventHandler(this.ultraGrid1_InitializeLayout);
@@ -351,7 +406,7 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(352, 62);
+            this.panel5.Size = new System.Drawing.Size(404, 62);
             this.panel5.TabIndex = 181;
             // 
             // ForApprovalbutton
@@ -377,7 +432,7 @@
             this.ForQuotationbutton.Location = new System.Drawing.Point(559, 36);
             this.ForQuotationbutton.Name = "ForQuotationbutton";
             this.ForQuotationbutton.Size = new System.Drawing.Size(125, 23);
-            this.ForQuotationbutton.TabIndex = 177;
+            this.ForQuotationbutton.TabIndex = 0;
             this.ForQuotationbutton.Text = "For Quotation";
             this.ForQuotationbutton.UseVisualStyleBackColor = false;
             this.ForQuotationbutton.Click += new System.EventHandler(this.ForQuotationbutton_Click);
@@ -459,7 +514,7 @@
             // expandPanelControl1
             // 
             this.expandPanelControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.expandPanelControl1.Location = new System.Drawing.Point(352, 0);
+            this.expandPanelControl1.Location = new System.Drawing.Point(404, 0);
             this.expandPanelControl1.Name = "expandPanelControl1";
             this.expandPanelControl1.Size = new System.Drawing.Size(15, 457);
             this.expandPanelControl1.TabIndex = 126;
@@ -487,7 +542,8 @@
             this.mDelete,
             this.mQuantity,
             this.mUnitName,
-            this.mProductName});
+            this.mProductName,
+            this.mRemarks});
             this.ItemsdataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ItemsdataGridView.EnableHeadersVisualStyles = false;
             this.ItemsdataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(226)))), ((int)(((byte)(243)))));
@@ -507,7 +563,7 @@
             dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ItemsdataGridView.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.ItemsdataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ItemsdataGridView.Size = new System.Drawing.Size(617, 213);
+            this.ItemsdataGridView.Size = new System.Drawing.Size(708, 213);
             this.ItemsdataGridView.TabIndex = 181;
             this.ItemsdataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ItemsdataGridView_CellClick);
             this.ItemsdataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.ItemsdataGridView_DataError);
@@ -539,11 +595,19 @@
             // 
             // mProductName
             // 
-            this.mProductName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.mProductName.DataPropertyName = "mProductName";
-            this.mProductName.HeaderText = "Product";
+            this.mProductName.HeaderText = "Fixed Asset";
+            this.mProductName.MinimumWidth = 150;
             this.mProductName.Name = "mProductName";
             this.mProductName.ReadOnly = true;
+            this.mProductName.Width = 300;
+            // 
+            // mRemarks
+            // 
+            this.mRemarks.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.mRemarks.DataPropertyName = "mRemarks";
+            this.mRemarks.HeaderText = "Remarks";
+            this.mRemarks.Name = "mRemarks";
             // 
             // RemarksultraTextEditor
             // 
@@ -551,7 +615,7 @@
             this.RemarksultraTextEditor.Location = new System.Drawing.Point(15, 413);
             this.RemarksultraTextEditor.Name = "RemarksultraTextEditor";
             this.RemarksultraTextEditor.NullText = "Remarks";
-            this.RemarksultraTextEditor.Size = new System.Drawing.Size(617, 21);
+            this.RemarksultraTextEditor.Size = new System.Drawing.Size(708, 21);
             this.RemarksultraTextEditor.TabIndex = 180;
             // 
             // searchProductUserControl1
@@ -566,13 +630,14 @@
             0});
             this.searchProductUserControl1.mWithQuantity = true;
             this.searchProductUserControl1.Name = "searchProductUserControl1";
-            this.searchProductUserControl1.Size = new System.Drawing.Size(617, 25);
+            this.searchProductUserControl1.Size = new System.Drawing.Size(708, 25);
             this.searchProductUserControl1.TabIndex = 179;
             this.searchProductUserControl1._GetProduct += new System.EventHandler(this.searchProductControl1__GetProduct);
             this.searchProductUserControl1._SearchingProduct += new System.EventHandler(this.searchProductControl1__SearchingProduct);
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.CheckedBytextBox);
             this.panel1.Controls.Add(this.ApprovedBytextBox);
             this.panel1.Controls.Add(this.RequestedByutraCombo);
             this.panel1.Controls.Add(this.panel3);
@@ -582,17 +647,27 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(15, 20);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(617, 155);
+            this.panel1.Size = new System.Drawing.Size(708, 155);
             this.panel1.TabIndex = 0;
+            // 
+            // CheckedBytextBox
+            // 
+            this.CheckedBytextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.CheckedBytextBox.Location = new System.Drawing.Point(106, 95);
+            this.CheckedBytextBox.Name = "CheckedBytextBox";
+            this.CheckedBytextBox.ReadOnly = true;
+            this.CheckedBytextBox.Size = new System.Drawing.Size(225, 21);
+            this.CheckedBytextBox.TabIndex = 2;
+            this.CheckedBytextBox.TabStop = false;
             // 
             // ApprovedBytextBox
             // 
             this.ApprovedBytextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.ApprovedBytextBox.Location = new System.Drawing.Point(106, 95);
+            this.ApprovedBytextBox.Location = new System.Drawing.Point(106, 122);
             this.ApprovedBytextBox.Name = "ApprovedBytextBox";
             this.ApprovedBytextBox.ReadOnly = true;
             this.ApprovedBytextBox.Size = new System.Drawing.Size(225, 21);
-            this.ApprovedBytextBox.TabIndex = 4;
+            this.ApprovedBytextBox.TabIndex = 3;
             this.ApprovedBytextBox.TabStop = false;
             // 
             // RequestedByutraCombo
@@ -672,7 +747,7 @@
             this.RequestedByutraCombo.Location = new System.Drawing.Point(106, 40);
             this.RequestedByutraCombo.Name = "RequestedByutraCombo";
             this.RequestedByutraCombo.Size = new System.Drawing.Size(225, 23);
-            this.RequestedByutraCombo.TabIndex = 1;
+            this.RequestedByutraCombo.TabIndex = 0;
             // 
             // panel3
             // 
@@ -682,10 +757,10 @@
             this.panel3.Controls.Add(this.TransactionNotextBox);
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(275, 0);
+            this.panel3.Location = new System.Drawing.Point(366, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(342, 155);
-            this.panel3.TabIndex = 3;
+            this.panel3.TabIndex = 4;
             this.panel3.TabStop = true;
             // 
             // Supplier3ultraCombo
@@ -1005,7 +1080,7 @@
             this.DateRequireddateTimePicker.Location = new System.Drawing.Point(106, 68);
             this.DateRequireddateTimePicker.Name = "DateRequireddateTimePicker";
             this.DateRequireddateTimePicker.Size = new System.Drawing.Size(225, 21);
-            this.DateRequireddateTimePicker.TabIndex = 2;
+            this.DateRequireddateTimePicker.TabIndex = 1;
             // 
             // dateTimePicker
             // 
@@ -1019,6 +1094,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel2.Controls.Add(this.CheckedByIdlabel);
+            this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.ApprovedBylabel);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label9);
@@ -1030,16 +1107,39 @@
             this.panel2.Size = new System.Drawing.Size(100, 155);
             this.panel2.TabIndex = 0;
             // 
+            // CheckedByIdlabel
+            // 
+            this.CheckedByIdlabel.AutoSize = true;
+            this.CheckedByIdlabel.BackColor = System.Drawing.Color.Transparent;
+            this.CheckedByIdlabel.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckedByIdlabel.Location = new System.Drawing.Point(81, 98);
+            this.CheckedByIdlabel.Name = "CheckedByIdlabel";
+            this.CheckedByIdlabel.Size = new System.Drawing.Size(15, 13);
+            this.CheckedByIdlabel.TabIndex = 27;
+            this.CheckedByIdlabel.Tag = "id";
+            this.CheckedByIdlabel.Text = "0";
+            this.CheckedByIdlabel.Visible = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(6, 98);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(63, 13);
+            this.label12.TabIndex = 26;
+            this.label12.Text = "Checked By";
+            // 
             // ApprovedBylabel
             // 
             this.ApprovedBylabel.AutoSize = true;
             this.ApprovedBylabel.BackColor = System.Drawing.Color.Transparent;
             this.ApprovedBylabel.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ApprovedBylabel.Location = new System.Drawing.Point(81, 98);
+            this.ApprovedBylabel.Location = new System.Drawing.Point(81, 125);
             this.ApprovedBylabel.Name = "ApprovedBylabel";
             this.ApprovedBylabel.Size = new System.Drawing.Size(15, 13);
             this.ApprovedBylabel.TabIndex = 25;
-            this.ApprovedBylabel.Tag = "0";
+            this.ApprovedBylabel.Tag = "id";
             this.ApprovedBylabel.Text = "0";
             this.ApprovedBylabel.Visible = false;
             // 
@@ -1047,7 +1147,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(6, 98);
+            this.label10.Location = new System.Drawing.Point(6, 125);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(69, 13);
             this.label10.TabIndex = 5;
@@ -1093,7 +1193,7 @@
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel11.Location = new System.Drawing.Point(15, 0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(617, 20);
+            this.panel11.Size = new System.Drawing.Size(708, 20);
             this.panel11.TabIndex = 176;
             // 
             // label18
@@ -1137,14 +1237,29 @@
             // 
             // panel8
             // 
+            this.panel8.Controls.Add(this.CheckedBybutton);
             this.panel8.Controls.Add(this.ApprovedBybutton);
             this.panel8.Controls.Add(this.Cancelbutton);
             this.panel8.Controls.Add(this.Savebutton);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel8.Location = new System.Drawing.Point(15, 434);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(617, 23);
+            this.panel8.Size = new System.Drawing.Size(708, 23);
             this.panel8.TabIndex = 174;
+            // 
+            // CheckedBybutton
+            // 
+            this.CheckedBybutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(43)))), ((int)(((byte)(137)))));
+            this.CheckedBybutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CheckedBybutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckedBybutton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.CheckedBybutton.Location = new System.Drawing.Point(152, 0);
+            this.CheckedBybutton.Name = "CheckedBybutton";
+            this.CheckedBybutton.Size = new System.Drawing.Size(77, 23);
+            this.CheckedBybutton.TabIndex = 18;
+            this.CheckedBybutton.Text = "Checked By";
+            this.CheckedBybutton.UseVisualStyleBackColor = false;
+            this.CheckedBybutton.Click += new System.EventHandler(this.CheckedBybutton_Click);
             // 
             // ApprovedBybutton
             // 
@@ -1152,7 +1267,7 @@
             this.ApprovedBybutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ApprovedBybutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ApprovedBybutton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.ApprovedBybutton.Location = new System.Drawing.Point(152, 0);
+            this.ApprovedBybutton.Location = new System.Drawing.Point(228, 0);
             this.ApprovedBybutton.Name = "ApprovedBybutton";
             this.ApprovedBybutton.Size = new System.Drawing.Size(77, 23);
             this.ApprovedBybutton.TabIndex = 17;
@@ -1201,7 +1316,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1008, 461);
+            this.ClientSize = new System.Drawing.Size(1151, 461);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Default";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1287,9 +1402,14 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button ForApprovalbutton;
         private System.Windows.Forms.Button ForQuotationbutton;
+        private System.Windows.Forms.TextBox CheckedBytextBox;
+        private System.Windows.Forms.Label CheckedByIdlabel;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button CheckedBybutton;
         private System.Windows.Forms.DataGridViewImageColumn mDelete;
         private System.Windows.Forms.DataGridViewTextBoxColumn mQuantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn mUnitName;
         private System.Windows.Forms.DataGridViewTextBoxColumn mProductName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mRemarks;
     }
 }

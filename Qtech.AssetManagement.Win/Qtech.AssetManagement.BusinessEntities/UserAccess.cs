@@ -17,6 +17,9 @@ namespace Qtech.AssetManagement.BusinessEntities
         public Boolean mUpdate { get; set; }
         public Boolean mDelete { get; set; }
         public Boolean mPrint { get; set; }
+        public Boolean mNoted { get; set; }
+        public Boolean mChecked { get; set; }
+        public Boolean mApprove { get; set; }
 
         public string mModuleGroup { get; set; }
         #endregion

@@ -80,6 +80,37 @@ namespace Qtech.AssetManagement.Audit
                 audit_collection.Add(audit);
             }
 
+            if (useraccess.mNoted != useraccessOld.mNoted)
+            {
+                audit = new BusinessEntities.Audit();
+                LoadCommonData(ref audit, useraccess);
+                audit.mField = "Noted";
+                audit.mOldValue = useraccessOld.mNoted.ToString();
+                audit.mNewValue = useraccess.mNoted.ToString();
+                audit_collection.Add(audit);
+            }
+
+            if (useraccess.mChecked != useraccessOld.mChecked)
+            {
+                audit = new BusinessEntities.Audit();
+                LoadCommonData(ref audit, useraccess);
+                audit.mField = "Checked";
+                audit.mOldValue = useraccessOld.mChecked.ToString();
+                audit.mNewValue = useraccess.mChecked.ToString();
+                audit_collection.Add(audit);
+            }
+
+            if (useraccess.mApprove != useraccessOld.mApprove)
+            {
+                audit = new BusinessEntities.Audit();
+                LoadCommonData(ref audit, useraccess);
+                audit.mField = "Approve";
+                audit.mOldValue = useraccessOld.mApprove.ToString();
+                audit.mNewValue = useraccess.mApprove.ToString();
+                audit_collection.Add(audit);
+            }
+
+
             return audit_collection;
         }
 

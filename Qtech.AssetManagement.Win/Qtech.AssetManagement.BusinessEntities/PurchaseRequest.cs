@@ -39,6 +39,10 @@ namespace Qtech.AssetManagement.BusinessEntities
         public Int32 mSupplier3Id { get; set; }
         public String mSupplier3Name { get; set; }
 
+        [Display(Name = "Checked By")]
+        public Int32 mCheckedById { get; set; }
+        public String mCheckedByName { get; set; }
+
         [Display(Name = "Approved By")]
         public Int32 mApprovedById { get; set; }
         public String mApprovedByName { get; set; }

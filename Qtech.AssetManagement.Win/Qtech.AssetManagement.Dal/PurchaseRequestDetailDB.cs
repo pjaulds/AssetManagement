@@ -107,6 +107,7 @@ namespace Qtech.AssetManagement.Dal
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@product_id", myPurchaseRequestDetail.mProductId);
                 Helpers.CreateParameter(myCommand, DbType.Decimal, "@quantity", myPurchaseRequestDetail.mQuantity);
                 Helpers.CreateParameter(myCommand, DbType.Decimal, "@cost", myPurchaseRequestDetail.mCost);
+                Helpers.CreateParameter(myCommand, DbType.String, "@remarks", myPurchaseRequestDetail.mRemarks);
 
                 Helpers.SetSaveParameters(myCommand, myPurchaseRequestDetail);
 
@@ -158,6 +159,7 @@ namespace Qtech.AssetManagement.Dal
             purchaserequestdetail.mProductId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("product_id"));
             purchaserequestdetail.mQuantity = myDataRecord.GetDecimal(myDataRecord.GetOrdinal("quantity"));
             purchaserequestdetail.mCost = myDataRecord.GetDecimal(myDataRecord.GetOrdinal("cost"));
+            purchaserequestdetail.mRemarks = myDataRecord.GetString(myDataRecord.GetOrdinal("remarks"));
             return purchaserequestdetail;
         }
     }

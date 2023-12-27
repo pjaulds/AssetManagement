@@ -28,6 +28,45 @@ namespace Qtech.AssetManagement.Utilities
             allowDelete = access.mDelete;
             allowPrint = access.mPrint;
         }
+
+        public static bool UserAllowNotedBy(Users user, short moduleId)
+        {
+
+            UserAccessCriteria criteria = new UserAccessCriteria();
+            criteria.mUserId = user.mId;
+            criteria.mModuleId = moduleId;
+
+            if (UserAccessManager.SelectCountForGetList(criteria) == 0) return false;
+
+            UserAccess access = UserAccessManager.GetList(criteria).First();
+            return access.mNoted;
+        }
+
+        public static bool UserAllowCheckedBy(Users user, short moduleId)
+        {
+
+            UserAccessCriteria criteria = new UserAccessCriteria();
+            criteria.mUserId = user.mId;
+            criteria.mModuleId = moduleId;
+
+            if (UserAccessManager.SelectCountForGetList(criteria) == 0) return false;
+
+            UserAccess access = UserAccessManager.GetList(criteria).First();            
+            return access.mChecked;
+        }
+
+        public static bool UserAllowApprove(Users user, short moduleId)
+        {
+
+            UserAccessCriteria criteria = new UserAccessCriteria();
+            criteria.mUserId = user.mId;
+            criteria.mModuleId = moduleId;
+
+            if (UserAccessManager.SelectCountForGetList(criteria) == 0) return false;
+
+            UserAccess access = UserAccessManager.GetList(criteria).First();
+            return access.mApprove;
+        }
     }
 
     public static class StringExtensions

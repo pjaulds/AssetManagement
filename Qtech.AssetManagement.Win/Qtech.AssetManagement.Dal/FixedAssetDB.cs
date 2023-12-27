@@ -46,6 +46,9 @@ namespace Qtech.AssetManagement.Dal
                 myCommand.CommandType = CommandType.StoredProcedure;
                 myCommand.CommandText = "amQt_spFixedAssetSearchList";
 
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@is_draft", fixedassetCriteria.mIsDraft);
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@is_registered", fixedassetCriteria.mIsRegistered);
+
                 myCommand.Connection.Open();
                 using (DbDataReader myReader = myCommand.ExecuteReader())
                 {

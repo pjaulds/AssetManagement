@@ -50,6 +50,16 @@ namespace Qtech.AssetManagement.Audit
                 audit_collection.Add(audit);
             }
 
+            if (purchaserequestdetail.mRemarks != purchaserequestdetailOld.mRemarks)
+            {
+                audit = new BusinessEntities.Audit();
+                LoadCommonData(ref audit, purchaserequestdetail);
+                audit.mField = "Remarks";
+                audit.mOldValue = purchaserequestdetailOld.mRemarks.ToString();
+                audit.mNewValue = purchaserequestdetail.mRemarks.ToString();
+                audit_collection.Add(audit);
+            }
+
             return audit_collection;
         }
 

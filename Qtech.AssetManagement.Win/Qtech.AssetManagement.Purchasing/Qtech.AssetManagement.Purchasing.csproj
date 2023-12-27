@@ -140,6 +140,11 @@
       <Name>Qtech.AssetManagement.Controls</Name>
       <Private>False</Private>
     </ProjectReference>
+    <ProjectReference Include="..\Qtech.AssetManagement.User\Qtech.AssetManagement.User.csproj">
+      <Project>{e843fc49-336b-4f98-9501-9ef7eb6fff83}</Project>
+      <Name>Qtech.AssetManagement.User</Name>
+      <Private>False</Private>
+    </ProjectReference>
     <ProjectReference Include="..\Qtech.AssetManagement.Utilities\Qtech.AssetManagement.Utilities.csproj">
       <Project>{e8939081-4037-4578-8c1f-fdc6d8561751}</Project>
       <Name>Qtech.AssetManagement.Utilities</Name>

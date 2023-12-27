@@ -112,6 +112,9 @@ namespace Qtech.AssetManagement.Dal
                 Helpers.CreateParameter(myCommand, DbType.Boolean, "@update", myUserAccess.mUpdate);
                 Helpers.CreateParameter(myCommand, DbType.Boolean, "@delete", myUserAccess.mDelete);
                 Helpers.CreateParameter(myCommand, DbType.Boolean, "@print", myUserAccess.mPrint);
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@noted", myUserAccess.mNoted);
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@checked", myUserAccess.mChecked);
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@approve", myUserAccess.mApprove);
 
                 Helpers.SetSaveParameters(myCommand, myUserAccess);
 
@@ -165,6 +168,9 @@ namespace Qtech.AssetManagement.Dal
             useraccess.mUpdate = myDataRecord.GetBoolean(myDataRecord.GetOrdinal("update"));
             useraccess.mDelete = myDataRecord.GetBoolean(myDataRecord.GetOrdinal("delete"));
             useraccess.mPrint = myDataRecord.GetBoolean(myDataRecord.GetOrdinal("print"));
+            useraccess.mNoted = myDataRecord.GetBoolean(myDataRecord.GetOrdinal("noted"));
+            useraccess.mChecked = myDataRecord.GetBoolean(myDataRecord.GetOrdinal("checked"));
+            useraccess.mApprove = myDataRecord.GetBoolean(myDataRecord.GetOrdinal("approve"));
 
             useraccess.mModuleGroup = myDataRecord.GetString(myDataRecord.GetOrdinal("module_group"));
             return useraccess;

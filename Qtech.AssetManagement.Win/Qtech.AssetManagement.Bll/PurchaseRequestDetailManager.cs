@@ -50,6 +50,7 @@ namespace Qtech.AssetManagement.Bll
             using (TransactionScope myTransactionScope = new TransactionScope(TransactionScopeOption.Suppress))
             {
 
+                myPurchaseRequestDetail.mRemarks = string.IsNullOrEmpty(myPurchaseRequestDetail.mRemarks) ? string.Empty : myPurchaseRequestDetail.mRemarks;
 
                 if (myPurchaseRequestDetail.mId != 0)
                     AuditUpdate(myPurchaseRequestDetail);

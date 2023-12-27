@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MasterForm));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileMenu = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,6 +50,9 @@
             this.fixedAssetItemsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fixedAssetClassesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fixedAssetTypesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripSeparator();
+            this.draftToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.registeredToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
             this.depreciationMethodToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.averagingMethodToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -84,9 +88,9 @@
             this.expenseCategoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ultraTabbedMdiManager1 = new Infragistics.Win.UltraWinTabbedMdi.UltraTabbedMdiManager(this.components);
             this.BackgroundpictureBox = new System.Windows.Forms.PictureBox();
-            this.assetIndentToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.purchaseRequestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quotationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.purchaseVoucherToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ultraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BackgroundpictureBox)).BeginInit();
@@ -230,7 +234,10 @@
             this.fixedAssetToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fixedAssetItemsToolStripMenuItem,
             this.fixedAssetClassesToolStripMenuItem,
-            this.fixedAssetTypesToolStripMenuItem});
+            this.fixedAssetTypesToolStripMenuItem,
+            this.toolStripMenuItem6,
+            this.draftToolStripMenuItem,
+            this.registeredToolStripMenuItem});
             this.fixedAssetToolStripMenuItem.Name = "fixedAssetToolStripMenuItem";
             this.fixedAssetToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.fixedAssetToolStripMenuItem.Text = "2. Fixed Asset";
@@ -258,6 +265,27 @@
             this.fixedAssetTypesToolStripMenuItem.Tag = "AssetType";
             this.fixedAssetTypesToolStripMenuItem.Text = "3. Fixed Asset Types";
             this.fixedAssetTypesToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem6
+            // 
+            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(183, 6);
+            // 
+            // draftToolStripMenuItem
+            // 
+            this.draftToolStripMenuItem.Name = "draftToolStripMenuItem";
+            this.draftToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.draftToolStripMenuItem.Tag = "FixedAsset";
+            this.draftToolStripMenuItem.Text = "4. Draft";
+            this.draftToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
+            // 
+            // registeredToolStripMenuItem
+            // 
+            this.registeredToolStripMenuItem.Name = "registeredToolStripMenuItem";
+            this.registeredToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.registeredToolStripMenuItem.Tag = "FixedAssetRegistered";
+            this.registeredToolStripMenuItem.Text = "5. Registered";
+            this.registeredToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -367,7 +395,8 @@
             // fixedAssetManagementToolStripMenuItem
             // 
             this.fixedAssetManagementToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fixedAssetProcurementToolStripMenuItem});
+            this.fixedAssetProcurementToolStripMenuItem,
+            this.purchaseVoucherToolStripMenuItem});
             this.fixedAssetManagementToolStripMenuItem.Name = "fixedAssetManagementToolStripMenuItem";
             this.fixedAssetManagementToolStripMenuItem.Size = new System.Drawing.Size(152, 20);
             this.fixedAssetManagementToolStripMenuItem.Text = "Fixed Asset Management";
@@ -375,27 +404,28 @@
             // fixedAssetProcurementToolStripMenuItem
             // 
             this.fixedAssetProcurementToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.assetIndentToolStripMenuItem1,
+            this.purchaseRequestToolStripMenuItem,
+            this.quotationToolStripMenuItem,
             this.purchaseOrderToolStripMenuItem,
             this.goodReceivedNoteReceivingToolStripMenuItem});
             this.fixedAssetProcurementToolStripMenuItem.Name = "fixedAssetProcurementToolStripMenuItem";
-            this.fixedAssetProcurementToolStripMenuItem.Size = new System.Drawing.Size(205, 22);
-            this.fixedAssetProcurementToolStripMenuItem.Text = "Fixed Asset Procurement";
+            this.fixedAssetProcurementToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.fixedAssetProcurementToolStripMenuItem.Text = "1. Fixed Asset Procurement";
             // 
             // purchaseOrderToolStripMenuItem
             // 
             this.purchaseOrderToolStripMenuItem.Name = "purchaseOrderToolStripMenuItem";
-            this.purchaseOrderToolStripMenuItem.Size = new System.Drawing.Size(256, 22);
+            this.purchaseOrderToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.purchaseOrderToolStripMenuItem.Tag = "PurchaseOrder";
-            this.purchaseOrderToolStripMenuItem.Text = "2. Asset Purchase Order";
+            this.purchaseOrderToolStripMenuItem.Text = "3. Purchase Order";
             this.purchaseOrderToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // goodReceivedNoteReceivingToolStripMenuItem
             // 
             this.goodReceivedNoteReceivingToolStripMenuItem.Name = "goodReceivedNoteReceivingToolStripMenuItem";
-            this.goodReceivedNoteReceivingToolStripMenuItem.Size = new System.Drawing.Size(256, 22);
+            this.goodReceivedNoteReceivingToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.goodReceivedNoteReceivingToolStripMenuItem.Tag = "Receiving";
-            this.goodReceivedNoteReceivingToolStripMenuItem.Text = "3. Good Received Note (Receiving)";
+            this.goodReceivedNoteReceivingToolStripMenuItem.Text = "4. Good Received Note";
             this.goodReceivedNoteReceivingToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // depreciationScheduleToolStripMenuItem
@@ -560,19 +590,10 @@
             this.BackgroundpictureBox.TabStop = false;
             this.BackgroundpictureBox.Visible = false;
             // 
-            // assetIndentToolStripMenuItem1
-            // 
-            this.assetIndentToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.purchaseRequestToolStripMenuItem,
-            this.quotationToolStripMenuItem});
-            this.assetIndentToolStripMenuItem1.Name = "assetIndentToolStripMenuItem1";
-            this.assetIndentToolStripMenuItem1.Size = new System.Drawing.Size(256, 22);
-            this.assetIndentToolStripMenuItem1.Text = "1. Asset Indent";
-            // 
             // purchaseRequestToolStripMenuItem
             // 
             this.purchaseRequestToolStripMenuItem.Name = "purchaseRequestToolStripMenuItem";
-            this.purchaseRequestToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.purchaseRequestToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.purchaseRequestToolStripMenuItem.Tag = "PurchaseRequest";
             this.purchaseRequestToolStripMenuItem.Text = "1. Purchase Request";
             this.purchaseRequestToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
@@ -580,10 +601,18 @@
             // quotationToolStripMenuItem
             // 
             this.quotationToolStripMenuItem.Name = "quotationToolStripMenuItem";
-            this.quotationToolStripMenuItem.Size = new System.Drawing.Size(179, 22);
+            this.quotationToolStripMenuItem.Size = new System.Drawing.Size(194, 22);
             this.quotationToolStripMenuItem.Tag = "Quotation";
             this.quotationToolStripMenuItem.Text = "2. Quotation";
             this.quotationToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
+            // 
+            // purchaseVoucherToolStripMenuItem
+            // 
+            this.purchaseVoucherToolStripMenuItem.Name = "purchaseVoucherToolStripMenuItem";
+            this.purchaseVoucherToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.purchaseVoucherToolStripMenuItem.Tag = "Purchase Voucher";
+            this.purchaseVoucherToolStripMenuItem.Text = "2. Purchase Voucher";
+            this.purchaseVoucherToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // MasterForm
             // 
@@ -593,9 +622,10 @@
             this.ClientSize = new System.Drawing.Size(1129, 433);
             this.Controls.Add(this.BackgroundpictureBox);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Name = "MasterForm";
-            this.Text = "ASSET MANAGEMENT SYSTEM";
+            this.Text = "QTECH FIXED ASSET MANAGEMENT v1.0";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MasterForm_FormClosing);
             this.Load += new System.EventHandler(this.MasterForm_Load);
@@ -663,9 +693,12 @@
         private System.Windows.Forms.ToolStripMenuItem accountClassificationsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem accountGroupToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem functionalLocationToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem assetIndentToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem6;
+        private System.Windows.Forms.ToolStripMenuItem draftToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem registeredToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem purchaseRequestToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem quotationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem purchaseVoucherToolStripMenuItem;
     }
 }
 

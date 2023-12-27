@@ -56,6 +56,9 @@
             Infragistics.Win.Appearance appearance18 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn7 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mPrint");
             Infragistics.Win.Appearance appearance19 = new Infragistics.Win.Appearance();
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn10 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mNoted");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn11 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mChecked");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn12 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mApprove");
             Infragistics.Win.Appearance appearance20 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance21 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance22 = new Infragistics.Win.Appearance();
@@ -277,13 +280,22 @@
             ultraGridColumn7.Header.Appearance = appearance19;
             ultraGridColumn7.Header.Caption = "Print";
             ultraGridColumn7.Header.VisiblePosition = 5;
+            ultraGridColumn10.Header.Caption = "Noted";
+            ultraGridColumn10.Header.VisiblePosition = 6;
+            ultraGridColumn11.Header.Caption = "Checked";
+            ultraGridColumn11.Header.VisiblePosition = 7;
+            ultraGridColumn12.Header.Caption = "Approve";
+            ultraGridColumn12.Header.VisiblePosition = 8;
             ultraGridBand2.Columns.AddRange(new object[] {
             ultraGridColumn2,
             ultraGridColumn3,
             ultraGridColumn4,
             ultraGridColumn5,
             ultraGridColumn6,
-            ultraGridColumn7});
+            ultraGridColumn7,
+            ultraGridColumn10,
+            ultraGridColumn11,
+            ultraGridColumn12});
             ultraGridBand2.RowLayoutStyle = Infragistics.Win.UltraWinGrid.RowLayoutStyle.ColumnLayout;
             this.AccessultraGrid.DisplayLayout.BandsSerializer.Add(ultraGridBand2);
             this.AccessultraGrid.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
@@ -524,7 +536,7 @@
             // 
             // panel11
             // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(92)))), ((int)(((byte)(46)))), ((int)(((byte)(148)))));
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
             this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel11.Controls.Add(this.label18);
             this.panel11.Controls.Add(this.label3);

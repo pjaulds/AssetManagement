@@ -20,6 +20,11 @@ namespace Qtech.AssetManagement.User
             InitializeComponent();
         }
 
+        /// <summary>
+        /// override transactions for approval or checked by
+        /// </summary>
+        public bool mForOverride { get; set; }
+        public BusinessEntities.Users mUser { get; set; }
         private void LogInForm_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Escape) Close();
@@ -53,7 +58,10 @@ namespace Qtech.AssetManagement.User
 
                 if (SaltHashManager.CompareHashValue(PasswordtextBox.Text, UserNametextBox.Text, OldHASHValue, SALT))
                 {
-                    SessionUtil.mUser = user;
+                    if (!mForOverride)
+                        SessionUtil.mUser = user;
+
+                    mUser = user;
                     Close();
                 }
                 else

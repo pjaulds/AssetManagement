@@ -31,6 +31,8 @@ namespace Qtech.AssetManagement.BusinessEntities
         [Display(Name = "Unit")]
         public string mUnitName { get; set; }
 
+        [Display(Name = "Remarks")]
+        public string mRemarks { get; set; }
         #endregion
     }
 }

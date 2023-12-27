@@ -70,6 +70,16 @@ namespace Qtech.AssetManagement.Audit
                 audit_collection.Add(audit);
             }
 
+            if (purchaserequest.mCheckedById != purchaserequestOld.mCheckedById)
+            {
+                audit = new BusinessEntities.Audit();
+                LoadCommonData(ref audit, purchaserequest);
+                audit.mField = "Checked By";
+                audit.mOldValue = purchaserequestOld.mCheckedByName.ToString();
+                audit.mNewValue = purchaserequest.mCheckedByName.ToString();
+                audit_collection.Add(audit);
+            }
+
             if (purchaserequest.mApprovedById != purchaserequestOld.mApprovedById)
             {
                 audit = new BusinessEntities.Audit();

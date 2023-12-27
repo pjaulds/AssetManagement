@@ -294,7 +294,7 @@ namespace Qtech.AssetManagement.DepreciationSchedule
             ControlUtil.TextBoxEnterLeaveEventHandler(splitContainer1.Panel2);
             LoadFixedAsset();
 
-            Savebutton.Text = allow_delete ? "Register" : "Save As Draft";
+            //Savebutton.Text = allow_delete ? "Register" : "Save As Draft";
             
         }
 

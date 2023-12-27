@@ -143,9 +143,34 @@ namespace Qtech.AssetManagement.Win
                     {
                         FixedAsset.Default fixedAssetFormChild = new FixedAsset.Default();
                         fixedAssetFormChild.MdiParent = this;
+                        fixedAssetFormChild.mIsDraft = true;
                         fixedAssetFormChild.Show();
                     }
-                    else fixedAssetForm.Select();
+                    else
+                    {
+                        fixedAssetForm.mIsDraft = true;
+                        fixedAssetForm.mIsRegistered = false;
+                        fixedAssetForm.LoadFixedAsset();
+                        fixedAssetForm.Select();
+                    }
+                    break;
+                case "FixedAssetRegistered":
+                    if (!AllowToAccess((Int32)Modules.FixedAsset)) return;
+                    FixedAsset.Default fixedAssetRegisteredForm = null;
+                    if ((fixedAssetRegisteredForm = (FixedAsset.Default)IsFormAlreadyOpen(typeof(FixedAsset.Default))) == null)
+                    {
+                        FixedAsset.Default fixedAssetRegisteredFormChild = new FixedAsset.Default();
+                        fixedAssetRegisteredFormChild.MdiParent = this;
+                        fixedAssetRegisteredFormChild.mIsRegistered = true;
+                        fixedAssetRegisteredFormChild.Show();
+                    }
+                    else
+                    {
+                        fixedAssetRegisteredForm.mIsDraft = false;
+                        fixedAssetRegisteredForm.mIsRegistered = true;
+                        fixedAssetRegisteredForm.LoadFixedAsset();
+                        fixedAssetRegisteredForm.Select();
+                    }
                     break;
                 case "ChartOfAccount":
                     if (!AllowToAccess((Int32)Modules.ChartOfAccount)) return;

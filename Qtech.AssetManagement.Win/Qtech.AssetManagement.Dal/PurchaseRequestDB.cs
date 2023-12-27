@@ -125,6 +125,7 @@ namespace Qtech.AssetManagement.Dal
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@supplier_2_id", myPurchaseRequest.mSupplier2Id);
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@supplier_3_id", myPurchaseRequest.mSupplier3Id);
                 Helpers.CreateParameter(myCommand, DbType.String, "@remarks", myPurchaseRequest.mRemarks);
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@checked_by_id", myPurchaseRequest.mCheckedById);
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@approved_by_id", myPurchaseRequest.mApprovedById);
 
                 Helpers.SetSaveParameters(myCommand, myPurchaseRequest);
@@ -187,7 +188,9 @@ namespace Qtech.AssetManagement.Dal
             purchaserequest.mRemarks = myDataRecord.GetString(myDataRecord.GetOrdinal("remarks"));
             purchaserequest.mApprovedByName = myDataRecord.GetString(myDataRecord.GetOrdinal("approved_by_name"));
             purchaserequest.mApprovedById = myDataRecord.GetInt32(myDataRecord.GetOrdinal("approved_by_id"));
-            
+            purchaserequest.mCheckedByName = myDataRecord.GetString(myDataRecord.GetOrdinal("checked_by_name"));
+            purchaserequest.mCheckedById = myDataRecord.GetInt32(myDataRecord.GetOrdinal("checked_by_id"));
+
             purchaserequest.mTransactionNo = myDataRecord.GetString(myDataRecord.GetOrdinal("purchase_request_no"));
             return purchaserequest;
         }
