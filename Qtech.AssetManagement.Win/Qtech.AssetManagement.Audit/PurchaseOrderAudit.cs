@@ -80,6 +80,16 @@ namespace Qtech.AssetManagement.Audit
                 audit_collection.Add(audit);
             }
 
+            if (purchaseorder.mCurrencyId != purchaseorderOld.mCurrencyId)
+            {
+                audit = new BusinessEntities.Audit();
+                LoadCommonData(ref audit, purchaseorder);
+                audit.mField = "Currency";
+                audit.mOldValue = purchaseorderOld.mCurrencyName.ToString();
+                audit.mNewValue = purchaseorder.mCurrencyName.ToString();
+                audit_collection.Add(audit);
+            }
+
             return audit_collection;
         }
 

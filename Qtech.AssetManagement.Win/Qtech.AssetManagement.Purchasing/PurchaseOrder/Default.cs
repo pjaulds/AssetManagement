@@ -108,10 +108,12 @@ namespace Qtech.AssetManagement.Purchasing.PurchaseOrder
             myPurchaseOrder.mTerms = TermstextBox.Text;
             myPurchaseOrder.mPreparedById = ControlUtil.UltraComboReturnValue(PreparedByutraCombo);
             myPurchaseOrder.mPreparedByName = PreparedByutraCombo.Text;
-            myPurchaseOrder.mNotedById = ControlUtil.UltraComboReturnValue(NotedByultraCombo);
-            myPurchaseOrder.mNotedByName = NotedByultraCombo.Text;
+            myPurchaseOrder.mNotedById = int.Parse(NotedByIdlabel.Text);
+            myPurchaseOrder.mNotedByName = NotedBytextBox.Text;
             myPurchaseOrder.mRevised = RevisedcheckBox.Checked;
             myPurchaseOrder.mCancelled = CancelledcheckBox.Checked;
+            myPurchaseOrder.mCurrencyId = ControlUtil.UltraComboReturnValue(CurrencyultraCombo);
+            myPurchaseOrder.mCurrencyName = CurrencyultraCombo.Text;
 
             myPurchaseOrder.mApprovedById = int.Parse(ApprovedBylabel.Text);
             myPurchaseOrder.mApprovedByName = ApprovedBytextBox.Text;
@@ -140,9 +142,11 @@ namespace Qtech.AssetManagement.Purchasing.PurchaseOrder
                 DateOfDeliverydateTimePicker.Value = myPurchaseOrder.mDateOfDelivery;
             TermstextBox.Text = myPurchaseOrder.mTerms;
             PreparedByutraCombo.Value = myPurchaseOrder.mPreparedById;
-            NotedByultraCombo.Value = myPurchaseOrder.mNotedById;
+            NotedByIdlabel.Text = myPurchaseOrder.mNotedById.ToString();
+            NotedBytextBox.Text = myPurchaseOrder.mNotedByName;
             RevisedcheckBox.Checked = myPurchaseOrder.mRevised;
             CancelledcheckBox.Checked = myPurchaseOrder.mCancelled;
+            CurrencyultraCombo.Value = myPurchaseOrder.mCurrencyId;
 
             ApprovedBylabel.Text = myPurchaseOrder.mApprovedById.ToString();
             ApprovedBytextBox.Text = myPurchaseOrder.mApprovedByName;
@@ -164,9 +168,6 @@ namespace Qtech.AssetManagement.Purchasing.PurchaseOrder
         {
             ControlUtil.ClearConent(splitContainer1.Panel2);
             ControlUtil.HidePanel(splitContainer1);
-            Idlabel.Text = "0";
-            ApprovedBylabel.Text = "0";
-            QuotationIdtIdlabel.Text = "0";
 
             ItemsdataGridView.AutoGenerateColumns = false;
             ItemsdataGridView.DataSource = new SortableBindingList<PurchaseOrderDetail>();
@@ -326,7 +327,6 @@ namespace Qtech.AssetManagement.Purchasing.PurchaseOrder
             ThemeUtil.Controls(this);
             ControlUtil.TextBoxEnterLeaveEventHandler(splitContainer1.Panel2);
             LoadPurchaseOrder();
-            ApprovedBybutton.Enabled = allow_delete;
         }
 
         private void Savebutton_Click(object sender, EventArgs e)
@@ -342,14 +342,39 @@ namespace Qtech.AssetManagement.Purchasing.PurchaseOrder
         public void RefreshAllSelection()
         {
             UltraComboUtil.Personnel(PreparedByutraCombo);
-            UltraComboUtil.Personnel(NotedByultraCombo);
+            UltraComboUtil.Currency(CurrencyultraCombo);
         }
 
         
         private void ApprovedBybutton_Click(object sender, EventArgs e)
         {
-            ApprovedBylabel.Text = SessionUtil.mUser.mId.ToString();
-            ApprovedBytextBox.Text = PersonnelManager.GetItem(SessionUtil.mUser.mPersonnelId).mName;
+            if (!allow_delete) //not admin
+            {
+                User.LogInForm logIn = new User.LogInForm();
+                logIn.mForOverride = true;
+                logIn.FormClosing += LogInApproval_FormClosing;
+                logIn.ShowDialog();
+            }
+            else
+            {
+                ApprovedBylabel.Text = SessionUtil.mUser.mId.ToString();
+                ApprovedBytextBox.Text = PersonnelManager.GetItem(SessionUtil.mUser.mPersonnelId).mName;
+            }
+        }
+
+        private void LogInApproval_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            User.LogInForm logIn = (User.LogInForm)sender;
+            if (logIn.mUser == null) return;
+
+            if (!SessionUtil.UserAllowApprove(logIn.mUser, (int)Modules.PurchaseOrder))
+            {
+                MessageBox.Show("You are not allowed to override transaction (approval).", "Purchase Order", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            ApprovedBylabel.Text = logIn.mUser.mId.ToString();
+            ApprovedBytextBox.Text = PersonnelManager.GetItem(logIn.mUser.mPersonnelId).mName;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -496,6 +521,37 @@ namespace Qtech.AssetManagement.Purchasing.PurchaseOrder
             criteria.mForReceiving = true;
             ultraGrid1.SetDataBinding(PurchaseOrderManager.GetList(criteria), null, true);
             ultraGrid1.Refresh();
+        }
+
+        private void Notedbutton_Click(object sender, EventArgs e)
+        {
+            if (!allow_delete) //not admin
+            {
+                User.LogInForm logIn = new User.LogInForm();
+                logIn.mForOverride = true;
+                logIn.FormClosing += LogIn_FormClosing;
+                logIn.ShowDialog();
+            }
+            else
+            {
+                NotedByIdlabel.Text = SessionUtil.mUser.mPersonnelId.ToString();
+                NotedBytextBox.Text = PersonnelManager.GetItem(SessionUtil.mUser.mPersonnelId).mName;
+            }
+        }
+
+        private void LogIn_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            User.LogInForm logIn = (User.LogInForm)sender;
+            if (logIn.mUser == null) return;
+
+            if (!SessionUtil.UserAllowNotedBy(logIn.mUser, (int)Modules.PurchaseOrder))
+            {
+                MessageBox.Show("You are not allowed to override transaction (checked by).", "Purchase Order", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            NotedByIdlabel.Text = logIn.mUser.mPersonnelId.ToString();
+            NotedBytextBox.Text = PersonnelManager.GetItem(logIn.mUser.mPersonnelId).mName;
         }
     }
 }

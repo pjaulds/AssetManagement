@@ -57,6 +57,9 @@ namespace Qtech.AssetManagement.BusinessEntities
         [Display(Name = "Cancelled")]
         public Boolean mCancelled { get; set; }
 
+        public int mCurrencyId { get; set; }
+        public string mCurrencyName { get; set; }
+
         public PurchaseOrderDetailCollection mPurchaseOrderDetailCollection { get; set; }
         public PurchaseOrderDetailCollection mDeletedPurchaseOrderDetailCollection { get; set; }
         #endregion

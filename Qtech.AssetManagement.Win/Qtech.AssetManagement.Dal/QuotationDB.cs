@@ -121,6 +121,7 @@ namespace Qtech.AssetManagement.Dal
                 
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@purchase_request_id", myQuotation.mPurchaseRequestId);
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@prepared_by_id", myQuotation.mPreparedById);
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@checked_by_id", myQuotation.mCheckedById);
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@approved_by_id", myQuotation.mApprovedById);
                 Helpers.CreateParameter(myCommand, DbType.Byte, "@supplier_no", myQuotation.mSupplierNo);
 
@@ -175,6 +176,8 @@ namespace Qtech.AssetManagement.Dal
             quotation.mPurchaseRequestId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("purchase_request_id"));
             quotation.mPreparedByName = myDataRecord.GetString(myDataRecord.GetOrdinal("prepared_by_name"));
             quotation.mPreparedById = myDataRecord.GetInt32(myDataRecord.GetOrdinal("prepared_by_id"));
+            quotation.mCheckedByName = myDataRecord.GetString(myDataRecord.GetOrdinal("checked_by_name"));
+            quotation.mCheckedById = myDataRecord.GetInt32(myDataRecord.GetOrdinal("checked_by_id"));
             quotation.mApprovedByName = myDataRecord.GetString(myDataRecord.GetOrdinal("approved_by_name"));
             quotation.mApprovedById = myDataRecord.GetInt32(myDataRecord.GetOrdinal("approved_by_id"));
             quotation.mSupplierNo = myDataRecord.GetByte(myDataRecord.GetOrdinal("supplier_no"));

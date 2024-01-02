@@ -466,7 +466,7 @@ namespace Qtech.AssetManagement.Purchasing.PurchaseRequest
 
         private void CheckedBybutton_Click(object sender, EventArgs e)
         {
-            if(!allow_delete)
+            if(!allow_delete) //not admin
             {
                 User.LogInForm logIn = new User.LogInForm();
                 logIn.mForOverride = true;
@@ -497,7 +497,7 @@ namespace Qtech.AssetManagement.Purchasing.PurchaseRequest
 
         private void ApprovedBybutton_Click(object sender, EventArgs e)
         {
-            if (!allow_delete)
+            if (!allow_delete) //not admin
             {
                 User.LogInForm logIn = new User.LogInForm();
                 logIn.mForOverride = true;

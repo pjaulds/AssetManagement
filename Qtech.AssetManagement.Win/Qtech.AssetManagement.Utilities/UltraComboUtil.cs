@@ -229,5 +229,14 @@ namespace Qtech.AssetManagement.Utilities
             myUltraCombo.SetDataBinding(AccountClassificationManager.GetList(), null, true);
             myUltraCombo.Refresh();
         }
+
+        public static void Currency(UltraCombo myUltraCombo)
+        {
+            myUltraCombo.ValueMember = "mId";
+            myUltraCombo.DisplayMember = "mName";
+
+            myUltraCombo.SetDataBinding(CurrencyManager.GetList(), null, true);
+            myUltraCombo.Refresh();
+        }
     }
 }

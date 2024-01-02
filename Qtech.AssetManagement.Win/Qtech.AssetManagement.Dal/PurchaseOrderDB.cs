@@ -130,6 +130,7 @@ namespace Qtech.AssetManagement.Dal
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@approved_by_id", myPurchaseOrder.mApprovedById);
                 Helpers.CreateParameter(myCommand, DbType.Boolean, "@revised", myPurchaseOrder.mRevised);
                 Helpers.CreateParameter(myCommand, DbType.Boolean, "@cancelled", myPurchaseOrder.mCancelled);
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@currency_id", myPurchaseOrder.mCurrencyId);
 
                 Helpers.SetSaveParameters(myCommand, myPurchaseOrder);
 
@@ -192,6 +193,8 @@ namespace Qtech.AssetManagement.Dal
             purchaseorder.mNotedById = myDataRecord.GetInt32(myDataRecord.GetOrdinal("noted_by_id"));
             purchaseorder.mApprovedByName = myDataRecord.GetString(myDataRecord.GetOrdinal("approved_by_name"));
             purchaseorder.mApprovedById = myDataRecord.GetInt32(myDataRecord.GetOrdinal("approved_by_id"));
+            purchaseorder.mCurrencyName = myDataRecord.GetString(myDataRecord.GetOrdinal("currency_name"));
+            purchaseorder.mCurrencyId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("currency_id"));
             purchaseorder.mRevised = myDataRecord.GetBoolean(myDataRecord.GetOrdinal("revised"));
             purchaseorder.mCancelled = myDataRecord.GetBoolean(myDataRecord.GetOrdinal("cancelled"));
             

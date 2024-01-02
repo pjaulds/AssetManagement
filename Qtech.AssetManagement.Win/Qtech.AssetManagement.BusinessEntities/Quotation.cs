@@ -28,6 +28,10 @@ namespace Qtech.AssetManagement.BusinessEntities
         public Int32 mPreparedById { get; set; }
         public String mPreparedByName { get; set; }
 
+        [Display(Name = "Checked By")]
+        public Int32 mCheckedById { get; set; }
+        public String mCheckedByName { get; set; }
+
         [Display(Name = "Approved By")]
         public Int32 mApprovedById { get; set; }
         public String mApprovedByName { get; set; }

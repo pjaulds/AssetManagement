@@ -41,6 +41,7 @@
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn10 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mSupplier3Name");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn15 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mPurchaseRequestNo");
             Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn21 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mCheckedByName");
             Infragistics.Win.Appearance appearance5 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance6 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance7 = new Infragistics.Win.Appearance();
@@ -64,8 +65,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             Infragistics.Win.Appearance appearance16 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand2 = new Infragistics.Win.UltraWinGrid.UltraGridBand("Band 0", -1);
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn1 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn2 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mName");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn19 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn20 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mName");
             Infragistics.Win.Appearance appearance17 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance18 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance19 = new Infragistics.Win.Appearance();
@@ -89,7 +90,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.expandPanelControl1 = new Qtech.AssetManagement.Controls.ExpandPanelControl();
             this.ItemsdataGridView = new System.Windows.Forms.DataGridView();
             this.mDelete = new System.Windows.Forms.DataGridViewImageColumn();
             this.mQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -131,6 +131,11 @@
             this.ApprovedBybutton = new System.Windows.Forms.Button();
             this.Cancelbutton = new System.Windows.Forms.Button();
             this.Savebutton = new System.Windows.Forms.Button();
+            this.CheckedBytextBox = new System.Windows.Forms.TextBox();
+            this.CheckedByIdlabel = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.CheckedBybutton = new System.Windows.Forms.Button();
+            this.expandPanelControl1 = new Qtech.AssetManagement.Controls.ExpandPanelControl();
             this.collapsePanelControl1 = new Qtech.AssetManagement.Controls.CollapsePanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -180,6 +185,7 @@
             // 
             // ultraGrid1
             // 
+            this.ultraGrid1.DataMember = null;
             appearance1.BackColor = System.Drawing.SystemColors.Window;
             appearance1.BorderColor = System.Drawing.SystemColors.InactiveCaption;
             this.ultraGrid1.DisplayLayout.Appearance = appearance1;
@@ -208,28 +214,28 @@
             ultraGridColumn6.RowLayoutColumnInfo.SpanY = 2;
             ultraGridColumn7.Header.Caption = "Prepared By";
             ultraGridColumn7.Header.VisiblePosition = 3;
-            ultraGridColumn7.RowLayoutColumnInfo.OriginX = 6;
+            ultraGridColumn7.RowLayoutColumnInfo.OriginX = 8;
             ultraGridColumn7.RowLayoutColumnInfo.OriginY = 0;
             ultraGridColumn7.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(175, 0);
             ultraGridColumn7.RowLayoutColumnInfo.SpanX = 2;
             ultraGridColumn7.RowLayoutColumnInfo.SpanY = 2;
             ultraGridColumn8.Header.Caption = "Supplier 1";
             ultraGridColumn8.Header.VisiblePosition = 4;
-            ultraGridColumn8.RowLayoutColumnInfo.OriginX = 8;
+            ultraGridColumn8.RowLayoutColumnInfo.OriginX = 10;
             ultraGridColumn8.RowLayoutColumnInfo.OriginY = 0;
             ultraGridColumn8.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(200, 0);
             ultraGridColumn8.RowLayoutColumnInfo.SpanX = 2;
             ultraGridColumn8.RowLayoutColumnInfo.SpanY = 2;
             ultraGridColumn9.Header.Caption = "Supplier 2";
             ultraGridColumn9.Header.VisiblePosition = 5;
-            ultraGridColumn9.RowLayoutColumnInfo.OriginX = 10;
+            ultraGridColumn9.RowLayoutColumnInfo.OriginX = 12;
             ultraGridColumn9.RowLayoutColumnInfo.OriginY = 0;
             ultraGridColumn9.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(200, 0);
             ultraGridColumn9.RowLayoutColumnInfo.SpanX = 2;
             ultraGridColumn9.RowLayoutColumnInfo.SpanY = 2;
             ultraGridColumn10.Header.Caption = "Supplier 3";
             ultraGridColumn10.Header.VisiblePosition = 6;
-            ultraGridColumn10.RowLayoutColumnInfo.OriginX = 12;
+            ultraGridColumn10.RowLayoutColumnInfo.OriginX = 14;
             ultraGridColumn10.RowLayoutColumnInfo.OriginY = 0;
             ultraGridColumn10.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(200, 0);
             ultraGridColumn10.RowLayoutColumnInfo.SpanX = 2;
@@ -243,6 +249,13 @@
             ultraGridColumn15.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(150, 0);
             ultraGridColumn15.RowLayoutColumnInfo.SpanX = 2;
             ultraGridColumn15.RowLayoutColumnInfo.SpanY = 2;
+            ultraGridColumn21.Header.Caption = "Checked By";
+            ultraGridColumn21.Header.VisiblePosition = 8;
+            ultraGridColumn21.RowLayoutColumnInfo.OriginX = 6;
+            ultraGridColumn21.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn21.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(200, 0);
+            ultraGridColumn21.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn21.RowLayoutColumnInfo.SpanY = 2;
             ultraGridBand1.Columns.AddRange(new object[] {
             ultraGridColumn4,
             ultraGridColumn5,
@@ -251,7 +264,8 @@
             ultraGridColumn8,
             ultraGridColumn9,
             ultraGridColumn10,
-            ultraGridColumn15});
+            ultraGridColumn15,
+            ultraGridColumn21});
             ultraGridBand1.RowLayoutStyle = Infragistics.Win.UltraWinGrid.RowLayoutStyle.ColumnLayout;
             this.ultraGrid1.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
             this.ultraGrid1.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
@@ -437,15 +451,6 @@
             this.label17.TabIndex = 4;
             this.label17.Text = "Start Date";
             // 
-            // expandPanelControl1
-            // 
-            this.expandPanelControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.expandPanelControl1.Location = new System.Drawing.Point(298, 0);
-            this.expandPanelControl1.Name = "expandPanelControl1";
-            this.expandPanelControl1.Size = new System.Drawing.Size(15, 482);
-            this.expandPanelControl1.TabIndex = 126;
-            this.expandPanelControl1._ExpandPanel += new System.EventHandler(this.expandPanelControl1__ExpandPanel);
-            // 
             // ItemsdataGridView
             // 
             this.ItemsdataGridView.AllowUserToAddRows = false;
@@ -570,6 +575,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.CheckedBytextBox);
             this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.PRNotextBox);
             this.panel1.Controls.Add(this.ApprovedBytextBox);
@@ -607,7 +613,7 @@
             // ApprovedBytextBox
             // 
             this.ApprovedBytextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.ApprovedBytextBox.Location = new System.Drawing.Point(106, 95);
+            this.ApprovedBytextBox.Location = new System.Drawing.Point(106, 122);
             this.ApprovedBytextBox.Name = "ApprovedBytextBox";
             this.ApprovedBytextBox.ReadOnly = true;
             this.ApprovedBytextBox.Size = new System.Drawing.Size(225, 21);
@@ -619,20 +625,20 @@
             appearance16.BackColor = System.Drawing.SystemColors.Window;
             appearance16.BorderColor = System.Drawing.SystemColors.InactiveCaption;
             this.PreparedByutraCombo.DisplayLayout.Appearance = appearance16;
-            ultraGridColumn1.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
-            ultraGridColumn1.Header.VisiblePosition = 0;
-            ultraGridColumn1.Hidden = true;
-            ultraGridColumn2.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
-            ultraGridColumn2.Header.Caption = "Name";
-            ultraGridColumn2.Header.VisiblePosition = 1;
-            ultraGridColumn2.RowLayoutColumnInfo.OriginX = 2;
-            ultraGridColumn2.RowLayoutColumnInfo.OriginY = 0;
-            ultraGridColumn2.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 23);
-            ultraGridColumn2.RowLayoutColumnInfo.SpanX = 6;
-            ultraGridColumn2.RowLayoutColumnInfo.SpanY = 2;
+            ultraGridColumn19.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
+            ultraGridColumn19.Header.VisiblePosition = 0;
+            ultraGridColumn19.Hidden = true;
+            ultraGridColumn20.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
+            ultraGridColumn20.Header.Caption = "Name";
+            ultraGridColumn20.Header.VisiblePosition = 1;
+            ultraGridColumn20.RowLayoutColumnInfo.OriginX = 2;
+            ultraGridColumn20.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn20.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 23);
+            ultraGridColumn20.RowLayoutColumnInfo.SpanX = 6;
+            ultraGridColumn20.RowLayoutColumnInfo.SpanY = 2;
             ultraGridBand2.Columns.AddRange(new object[] {
-            ultraGridColumn1,
-            ultraGridColumn2});
+            ultraGridColumn19,
+            ultraGridColumn20});
             ultraGridBand2.RowLayoutStyle = Infragistics.Win.UltraWinGrid.RowLayoutStyle.ColumnLayout;
             this.PreparedByutraCombo.DisplayLayout.BandsSerializer.Add(ultraGridBand2);
             this.PreparedByutraCombo.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
@@ -826,7 +832,9 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel2.Controls.Add(this.CheckedByIdlabel);
             this.panel2.Controls.Add(this.PurchaseRequestIdlabel);
+            this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.ApprovedBylabel);
             this.panel2.Controls.Add(this.label10);
             this.panel2.Controls.Add(this.label1);
@@ -847,7 +855,7 @@
             this.PurchaseRequestIdlabel.Name = "PurchaseRequestIdlabel";
             this.PurchaseRequestIdlabel.Size = new System.Drawing.Size(15, 13);
             this.PurchaseRequestIdlabel.TabIndex = 26;
-            this.PurchaseRequestIdlabel.Tag = "0";
+            this.PurchaseRequestIdlabel.Tag = "id";
             this.PurchaseRequestIdlabel.Text = "0";
             this.PurchaseRequestIdlabel.Visible = false;
             // 
@@ -856,11 +864,11 @@
             this.ApprovedBylabel.AutoSize = true;
             this.ApprovedBylabel.BackColor = System.Drawing.Color.Transparent;
             this.ApprovedBylabel.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ApprovedBylabel.Location = new System.Drawing.Point(81, 98);
+            this.ApprovedBylabel.Location = new System.Drawing.Point(81, 125);
             this.ApprovedBylabel.Name = "ApprovedBylabel";
             this.ApprovedBylabel.Size = new System.Drawing.Size(15, 13);
             this.ApprovedBylabel.TabIndex = 25;
-            this.ApprovedBylabel.Tag = "0";
+            this.ApprovedBylabel.Tag = "id";
             this.ApprovedBylabel.Text = "0";
             this.ApprovedBylabel.Visible = false;
             // 
@@ -868,7 +876,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(6, 98);
+            this.label10.Location = new System.Drawing.Point(6, 125);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(69, 13);
             this.label10.TabIndex = 5;
@@ -958,6 +966,7 @@
             // 
             // panel8
             // 
+            this.panel8.Controls.Add(this.CheckedBybutton);
             this.panel8.Controls.Add(this.ApprovedBybutton);
             this.panel8.Controls.Add(this.Cancelbutton);
             this.panel8.Controls.Add(this.Savebutton);
@@ -973,7 +982,7 @@
             this.ApprovedBybutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ApprovedBybutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ApprovedBybutton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.ApprovedBybutton.Location = new System.Drawing.Point(152, 0);
+            this.ApprovedBybutton.Location = new System.Drawing.Point(228, 0);
             this.ApprovedBybutton.Name = "ApprovedBybutton";
             this.ApprovedBybutton.Size = new System.Drawing.Size(77, 23);
             this.ApprovedBybutton.TabIndex = 17;
@@ -1008,6 +1017,62 @@
             this.Savebutton.Text = "&Save";
             this.Savebutton.UseVisualStyleBackColor = false;
             this.Savebutton.Click += new System.EventHandler(this.Savebutton_Click);
+            // 
+            // CheckedBytextBox
+            // 
+            this.CheckedBytextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.CheckedBytextBox.Location = new System.Drawing.Point(106, 95);
+            this.CheckedBytextBox.Name = "CheckedBytextBox";
+            this.CheckedBytextBox.ReadOnly = true;
+            this.CheckedBytextBox.Size = new System.Drawing.Size(225, 21);
+            this.CheckedBytextBox.TabIndex = 28;
+            this.CheckedBytextBox.TabStop = false;
+            // 
+            // CheckedByIdlabel
+            // 
+            this.CheckedByIdlabel.AutoSize = true;
+            this.CheckedByIdlabel.BackColor = System.Drawing.Color.Transparent;
+            this.CheckedByIdlabel.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckedByIdlabel.Location = new System.Drawing.Point(81, 98);
+            this.CheckedByIdlabel.Name = "CheckedByIdlabel";
+            this.CheckedByIdlabel.Size = new System.Drawing.Size(15, 13);
+            this.CheckedByIdlabel.TabIndex = 30;
+            this.CheckedByIdlabel.Tag = "id";
+            this.CheckedByIdlabel.Text = "0";
+            this.CheckedByIdlabel.Visible = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(6, 98);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(63, 13);
+            this.label12.TabIndex = 29;
+            this.label12.Text = "Checked By";
+            // 
+            // CheckedBybutton
+            // 
+            this.CheckedBybutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(43)))), ((int)(((byte)(137)))));
+            this.CheckedBybutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CheckedBybutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckedBybutton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.CheckedBybutton.Location = new System.Drawing.Point(152, 0);
+            this.CheckedBybutton.Name = "CheckedBybutton";
+            this.CheckedBybutton.Size = new System.Drawing.Size(77, 23);
+            this.CheckedBybutton.TabIndex = 19;
+            this.CheckedBybutton.Text = "Checked By";
+            this.CheckedBybutton.UseVisualStyleBackColor = false;
+            this.CheckedBybutton.Click += new System.EventHandler(this.CheckedBybutton_Click);
+            // 
+            // expandPanelControl1
+            // 
+            this.expandPanelControl1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.expandPanelControl1.Location = new System.Drawing.Point(298, 0);
+            this.expandPanelControl1.Name = "expandPanelControl1";
+            this.expandPanelControl1.Size = new System.Drawing.Size(15, 482);
+            this.expandPanelControl1.TabIndex = 126;
+            this.expandPanelControl1._ExpandPanel += new System.EventHandler(this.expandPanelControl1__ExpandPanel);
             // 
             // collapsePanelControl1
             // 
@@ -1112,5 +1177,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn mCost1;
         private System.Windows.Forms.DataGridViewTextBoxColumn mCost2;
         private System.Windows.Forms.DataGridViewTextBoxColumn mCost3;
+        private System.Windows.Forms.TextBox CheckedBytextBox;
+        private System.Windows.Forms.Label CheckedByIdlabel;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button CheckedBybutton;
     }
 }

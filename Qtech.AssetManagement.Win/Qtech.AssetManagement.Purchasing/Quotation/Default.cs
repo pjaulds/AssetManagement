@@ -116,6 +116,8 @@ namespace Qtech.AssetManagement.Purchasing.Quotation
             if (Supplier3radioButton.Checked)
                 myQuotation.mSupplierNo = 3;
 
+            myQuotation.mCheckedById = int.Parse(CheckedByIdlabel.Text);
+            myQuotation.mCheckedByName = CheckedBytextBox.Text;
             myQuotation.mApprovedById = int.Parse(ApprovedBylabel.Text);
             myQuotation.mApprovedByName = ApprovedBytextBox.Text;
             myQuotation.mUserId = SessionUtil.mUser.mId;
@@ -150,8 +152,14 @@ namespace Qtech.AssetManagement.Purchasing.Quotation
             Supplier2textBox.Text = myQuotation.mSupplier2Name;
             Supplier3textBox.Text = myQuotation.mSupplier3Name;
 
+            CheckedByIdlabel.Text = myQuotation.mCheckedById.ToString();
+            CheckedBytextBox.Text = myQuotation.mCheckedByName;
+
             ApprovedBylabel.Text = myQuotation.mApprovedById.ToString();
             ApprovedBytextBox.Text = myQuotation.mApprovedByName;
+
+            if (!allow_delete && myQuotation.mApprovedById > 0)
+                ItemsdataGridView.ReadOnly = true;//not allow to edit anymore, only admin can update approved quoations.
 
             LoadFormControlsFromQuotationDetail(myQuotation);
         }
@@ -170,15 +178,13 @@ namespace Qtech.AssetManagement.Purchasing.Quotation
         {
             ControlUtil.ClearConent(splitContainer1.Panel2);
             ControlUtil.HidePanel(splitContainer1);
-            Idlabel.Text = "0";
-            ApprovedBylabel.Text = "0";
-            PurchaseRequestIdlabel.Text = "0";
 
             ItemsdataGridView.AutoGenerateColumns = false;
             ItemsdataGridView.DataSource = new SortableBindingList<QuotationDetail>();
             ItemsdataGridView.Refresh();
-
+            ItemsdataGridView.ReadOnly = false;
             deleted_items = null;
+
         }
         #endregion
 
@@ -196,6 +202,9 @@ namespace Qtech.AssetManagement.Purchasing.Quotation
             ControlUtil.ExpandPanel(splitContainer1);
 
             PreparedByutraCombo.Focus();
+            PreparedByutraCombo.Value = SessionUtil.mUser.mPersonnelId;
+
+            linkLabel1_LinkClicked(this, new LinkLabelLinkClickedEventArgs(linkLabel1.Links[0]));
         }
 
         public int SaveRecords()
@@ -307,6 +316,7 @@ namespace Qtech.AssetManagement.Purchasing.Quotation
                 return;
             }
 
+            EndEditing();
             LoadFormControlsFromQuotation(item);
 
             ControlUtil.ExpandPanel(splitContainer1);
@@ -349,7 +359,6 @@ namespace Qtech.AssetManagement.Purchasing.Quotation
             ThemeUtil.Controls(this);
             ControlUtil.TextBoxEnterLeaveEventHandler(splitContainer1.Panel2);
             LoadQuotation();
-            ApprovedBybutton.Enabled = allow_delete;
         }
 
         private void Savebutton_Click(object sender, EventArgs e)
@@ -370,8 +379,33 @@ namespace Qtech.AssetManagement.Purchasing.Quotation
         
         private void ApprovedBybutton_Click(object sender, EventArgs e)
         {
-            ApprovedBylabel.Text = SessionUtil.mUser.mId.ToString();
-            ApprovedBytextBox.Text = PersonnelManager.GetItem(SessionUtil.mUser.mPersonnelId).mName;
+            if (!allow_delete) //not admin
+            {
+                User.LogInForm logIn = new User.LogInForm();
+                logIn.mForOverride = true;
+                logIn.FormClosing += LogInApproval_FormClosing;
+                logIn.ShowDialog();
+            }
+            else
+            {
+                ApprovedBylabel.Text = SessionUtil.mUser.mId.ToString();
+                ApprovedBytextBox.Text = PersonnelManager.GetItem(SessionUtil.mUser.mPersonnelId).mName;
+            }
+        }
+
+        private void LogInApproval_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            User.LogInForm logIn = (User.LogInForm)sender;
+            if (logIn.mUser == null) return;
+
+            if (!SessionUtil.UserAllowApprove(logIn.mUser, (int)Modules.Quotation))
+            {
+                MessageBox.Show("You are not allowed to override transaction (approval).", "Quotation", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            ApprovedBylabel.Text = logIn.mUser.mId.ToString();
+            ApprovedBytextBox.Text = PersonnelManager.GetItem(logIn.mUser.mPersonnelId).mName;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -475,5 +509,37 @@ namespace Qtech.AssetManagement.Purchasing.Quotation
             ultraGrid1.SetDataBinding(QuotationManager.GetList(criteria), null, true);
             ultraGrid1.Refresh();
         }
+
+        private void CheckedBybutton_Click(object sender, EventArgs e)
+        {
+            if (!allow_delete) //not admin
+            {
+                User.LogInForm logIn = new User.LogInForm();
+                logIn.mForOverride = true;
+                logIn.FormClosing += LogIn_FormClosing;
+                logIn.ShowDialog();
+            }
+            else
+            {
+                CheckedByIdlabel.Text = SessionUtil.mUser.mId.ToString();
+                CheckedBytextBox.Text = PersonnelManager.GetItem(SessionUtil.mUser.mPersonnelId).mName;
+            }
+        }
+
+        private void LogIn_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            User.LogInForm logIn = (User.LogInForm)sender;
+            if (logIn.mUser == null) return;
+
+            if (!SessionUtil.UserAllowCheckedBy(logIn.mUser, (int)Modules.Quotation))
+            {
+                MessageBox.Show("You are not allowed to override transaction (checked by).", "Quotation", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            CheckedByIdlabel.Text = logIn.mUser.mId.ToString();
+            CheckedBytextBox.Text = PersonnelManager.GetItem(logIn.mUser.mPersonnelId).mName;
+        }
+
     }
 }
