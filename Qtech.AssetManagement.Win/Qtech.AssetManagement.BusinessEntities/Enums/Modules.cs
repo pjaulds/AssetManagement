@@ -41,6 +41,7 @@
         AssetClass = 37,
         AccountType = 38,
         AccountClassification= 39,
-        AccountGroup = 40
+        AccountGroup = 40,
+        CapitalizedCost = 41
     }
 }

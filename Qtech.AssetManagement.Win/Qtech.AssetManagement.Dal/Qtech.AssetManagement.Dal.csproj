@@ -48,6 +48,7 @@
     <Compile Include="AccountGroupDB.cs" />
     <Compile Include="AssetClassDB.cs" />
     <Compile Include="AssetCategoryDB.cs" />
+    <Compile Include="CapitalizedCostDB.cs" />
     <Compile Include="PaymentTermsDB.cs" />
     <Compile Include="CurrencyDB.cs" />
     <Compile Include="ExpenseCategoryDB.cs" />

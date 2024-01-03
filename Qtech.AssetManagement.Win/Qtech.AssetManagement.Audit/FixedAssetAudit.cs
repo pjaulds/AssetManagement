@@ -40,6 +40,16 @@ namespace Qtech.AssetManagement.Audit
                 audit_collection.Add(audit);
             }
 
+            if (fixedasset.mPersonnelId != fixedassetOld.mPersonnelId)
+            {
+                audit = new BusinessEntities.Audit();
+                LoadCommonData(ref audit, fixedasset);
+                audit.mField = "Personnel";
+                audit.mOldValue = fixedassetOld.mPersonnelName.ToString();
+                audit.mNewValue = fixedasset.mPersonnelName.ToString();
+                audit_collection.Add(audit);
+            }
+
             if (fixedasset.mDescription != fixedassetOld.mDescription)
             {
                 audit = new BusinessEntities.Audit();
@@ -127,6 +137,16 @@ namespace Qtech.AssetManagement.Audit
                 audit.mField = "Averaging Method ";
                 audit.mOldValue = fixedassetOld.mAveragingMethodName.ToString();
                 audit.mNewValue = fixedasset.mAveragingMethodName.ToString();
+                audit_collection.Add(audit);
+            }
+
+            if (fixedasset.mAccumulatedDepreciation != fixedassetOld.mAccumulatedDepreciation)
+            {
+                audit = new BusinessEntities.Audit();
+                LoadCommonData(ref audit, fixedasset);
+                audit.mField = "Accumulated Depreciation";
+                audit.mOldValue = fixedassetOld.mAccumulatedDepreciation.ToString();
+                audit.mNewValue = fixedasset.mAccumulatedDepreciation.ToString();
                 audit_collection.Add(audit);
             }
 

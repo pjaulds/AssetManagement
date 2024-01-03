@@ -97,6 +97,12 @@
     <Compile Include="AssetCategory\Default.Designer.cs">
       <DependentUpon>Default.cs</DependentUpon>
     </Compile>
+    <Compile Include="CapitalizedCost\Default.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapitalizedCost\Default.Designer.cs">
+      <DependentUpon>Default.cs</DependentUpon>
+    </Compile>
     <Compile Include="Currency\Default.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -188,6 +194,9 @@
       <DependentUpon>Default.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AssetCategory\Default.resx">
+      <DependentUpon>Default.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapitalizedCost\Default.resx">
       <DependentUpon>Default.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Currency\Default.resx">

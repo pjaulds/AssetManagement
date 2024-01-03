@@ -57,12 +57,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Default));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             Infragistics.Win.Appearance appearance16 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand2 = new Infragistics.Win.UltraWinGrid.UltraGridBand("Band 0", -1);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn19 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
@@ -78,6 +72,12 @@
             Infragistics.Win.Appearance appearance25 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance26 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance27 = new Infragistics.Win.Appearance();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Default));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.ultraGrid1 = new Infragistics.Win.UltraWinGrid.UltraGrid();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -90,16 +90,11 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.expandPanelControl1 = new Qtech.AssetManagement.Controls.ExpandPanelControl();
             this.ItemsdataGridView = new System.Windows.Forms.DataGridView();
-            this.mDelete = new System.Windows.Forms.DataGridViewImageColumn();
-            this.mQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mUnitName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mCost1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mCost2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mCost3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RemarksultraTextEditor = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.CheckedBytextBox = new System.Windows.Forms.TextBox();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.PRNotextBox = new System.Windows.Forms.TextBox();
             this.ApprovedBytextBox = new System.Windows.Forms.TextBox();
@@ -117,7 +112,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.CheckedByIdlabel = new System.Windows.Forms.Label();
             this.PurchaseRequestIdlabel = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.ApprovedBylabel = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -128,15 +125,18 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Idlabel = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.CheckedBybutton = new System.Windows.Forms.Button();
             this.ApprovedBybutton = new System.Windows.Forms.Button();
             this.Cancelbutton = new System.Windows.Forms.Button();
             this.Savebutton = new System.Windows.Forms.Button();
-            this.CheckedBytextBox = new System.Windows.Forms.TextBox();
-            this.CheckedByIdlabel = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.CheckedBybutton = new System.Windows.Forms.Button();
-            this.expandPanelControl1 = new Qtech.AssetManagement.Controls.ExpandPanelControl();
             this.collapsePanelControl1 = new Qtech.AssetManagement.Controls.CollapsePanelControl();
+            this.mDelete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.mQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mUnitName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mCost1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mCost2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mCost3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -185,7 +185,6 @@
             // 
             // ultraGrid1
             // 
-            this.ultraGrid1.DataMember = null;
             appearance1.BackColor = System.Drawing.SystemColors.Window;
             appearance1.BorderColor = System.Drawing.SystemColors.InactiveCaption;
             this.ultraGrid1.DisplayLayout.Appearance = appearance1;
@@ -451,6 +450,15 @@
             this.label17.TabIndex = 4;
             this.label17.Text = "Start Date";
             // 
+            // expandPanelControl1
+            // 
+            this.expandPanelControl1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.expandPanelControl1.Location = new System.Drawing.Point(298, 0);
+            this.expandPanelControl1.Name = "expandPanelControl1";
+            this.expandPanelControl1.Size = new System.Drawing.Size(15, 482);
+            this.expandPanelControl1.TabIndex = 126;
+            this.expandPanelControl1._ExpandPanel += new System.EventHandler(this.expandPanelControl1__ExpandPanel);
+            // 
             // ItemsdataGridView
             // 
             this.ItemsdataGridView.AllowUserToAddRows = false;
@@ -500,70 +508,6 @@
             this.ItemsdataGridView.TabIndex = 181;
             this.ItemsdataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ItemsdataGridView_CellClick);
             // 
-            // mDelete
-            // 
-            this.mDelete.HeaderText = "";
-            this.mDelete.Image = ((System.Drawing.Image)(resources.GetObject("mDelete.Image")));
-            this.mDelete.Name = "mDelete";
-            this.mDelete.Width = 25;
-            // 
-            // mQuantity
-            // 
-            this.mQuantity.DataPropertyName = "mQuantity";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.Format = "N2";
-            this.mQuantity.DefaultCellStyle = dataGridViewCellStyle3;
-            this.mQuantity.HeaderText = "Quantity";
-            this.mQuantity.Name = "mQuantity";
-            this.mQuantity.ReadOnly = true;
-            // 
-            // mUnitName
-            // 
-            this.mUnitName.DataPropertyName = "mUnitName";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.mUnitName.DefaultCellStyle = dataGridViewCellStyle4;
-            this.mUnitName.HeaderText = "Unit";
-            this.mUnitName.Name = "mUnitName";
-            this.mUnitName.ReadOnly = true;
-            // 
-            // mProductName
-            // 
-            this.mProductName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.mProductName.DataPropertyName = "mProductName";
-            this.mProductName.HeaderText = "Product";
-            this.mProductName.Name = "mProductName";
-            this.mProductName.ReadOnly = true;
-            // 
-            // mCost1
-            // 
-            this.mCost1.DataPropertyName = "mCost1";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle5.Format = "N4";
-            this.mCost1.DefaultCellStyle = dataGridViewCellStyle5;
-            this.mCost1.HeaderText = "Cost 1";
-            this.mCost1.Name = "mCost1";
-            this.mCost1.Width = 125;
-            // 
-            // mCost2
-            // 
-            this.mCost2.DataPropertyName = "mCost2";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle6.Format = "N4";
-            this.mCost2.DefaultCellStyle = dataGridViewCellStyle6;
-            this.mCost2.HeaderText = "Cost 2";
-            this.mCost2.Name = "mCost2";
-            this.mCost2.Width = 125;
-            // 
-            // mCost3
-            // 
-            this.mCost3.DataPropertyName = "mCost3";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle7.Format = "N4";
-            this.mCost3.DefaultCellStyle = dataGridViewCellStyle7;
-            this.mCost3.HeaderText = "Cost 3";
-            this.mCost3.Name = "mCost3";
-            this.mCost3.Width = 125;
-            // 
             // RemarksultraTextEditor
             // 
             this.RemarksultraTextEditor.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -588,6 +532,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(707, 155);
             this.panel1.TabIndex = 0;
+            // 
+            // CheckedBytextBox
+            // 
+            this.CheckedBytextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.CheckedBytextBox.Location = new System.Drawing.Point(106, 95);
+            this.CheckedBytextBox.Name = "CheckedBytextBox";
+            this.CheckedBytextBox.ReadOnly = true;
+            this.CheckedBytextBox.Size = new System.Drawing.Size(225, 21);
+            this.CheckedBytextBox.TabIndex = 28;
+            this.CheckedBytextBox.TabStop = false;
             // 
             // linkLabel1
             // 
@@ -846,6 +800,19 @@
             this.panel2.Size = new System.Drawing.Size(100, 155);
             this.panel2.TabIndex = 0;
             // 
+            // CheckedByIdlabel
+            // 
+            this.CheckedByIdlabel.AutoSize = true;
+            this.CheckedByIdlabel.BackColor = System.Drawing.Color.Transparent;
+            this.CheckedByIdlabel.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckedByIdlabel.Location = new System.Drawing.Point(81, 98);
+            this.CheckedByIdlabel.Name = "CheckedByIdlabel";
+            this.CheckedByIdlabel.Size = new System.Drawing.Size(15, 13);
+            this.CheckedByIdlabel.TabIndex = 30;
+            this.CheckedByIdlabel.Tag = "id";
+            this.CheckedByIdlabel.Text = "0";
+            this.CheckedByIdlabel.Visible = false;
+            // 
             // PurchaseRequestIdlabel
             // 
             this.PurchaseRequestIdlabel.AutoSize = true;
@@ -858,6 +825,16 @@
             this.PurchaseRequestIdlabel.Tag = "id";
             this.PurchaseRequestIdlabel.Text = "0";
             this.PurchaseRequestIdlabel.Visible = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(6, 98);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(63, 13);
+            this.label12.TabIndex = 29;
+            this.label12.Text = "Checked By";
             // 
             // ApprovedBylabel
             // 
@@ -976,6 +953,20 @@
             this.panel8.Size = new System.Drawing.Size(707, 23);
             this.panel8.TabIndex = 174;
             // 
+            // CheckedBybutton
+            // 
+            this.CheckedBybutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(43)))), ((int)(((byte)(137)))));
+            this.CheckedBybutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CheckedBybutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckedBybutton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.CheckedBybutton.Location = new System.Drawing.Point(152, 0);
+            this.CheckedBybutton.Name = "CheckedBybutton";
+            this.CheckedBybutton.Size = new System.Drawing.Size(77, 23);
+            this.CheckedBybutton.TabIndex = 19;
+            this.CheckedBybutton.Text = "Checked By";
+            this.CheckedBybutton.UseVisualStyleBackColor = false;
+            this.CheckedBybutton.Click += new System.EventHandler(this.CheckedBybutton_Click);
+            // 
             // ApprovedBybutton
             // 
             this.ApprovedBybutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(43)))), ((int)(((byte)(137)))));
@@ -1018,62 +1009,6 @@
             this.Savebutton.UseVisualStyleBackColor = false;
             this.Savebutton.Click += new System.EventHandler(this.Savebutton_Click);
             // 
-            // CheckedBytextBox
-            // 
-            this.CheckedBytextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.CheckedBytextBox.Location = new System.Drawing.Point(106, 95);
-            this.CheckedBytextBox.Name = "CheckedBytextBox";
-            this.CheckedBytextBox.ReadOnly = true;
-            this.CheckedBytextBox.Size = new System.Drawing.Size(225, 21);
-            this.CheckedBytextBox.TabIndex = 28;
-            this.CheckedBytextBox.TabStop = false;
-            // 
-            // CheckedByIdlabel
-            // 
-            this.CheckedByIdlabel.AutoSize = true;
-            this.CheckedByIdlabel.BackColor = System.Drawing.Color.Transparent;
-            this.CheckedByIdlabel.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CheckedByIdlabel.Location = new System.Drawing.Point(81, 98);
-            this.CheckedByIdlabel.Name = "CheckedByIdlabel";
-            this.CheckedByIdlabel.Size = new System.Drawing.Size(15, 13);
-            this.CheckedByIdlabel.TabIndex = 30;
-            this.CheckedByIdlabel.Tag = "id";
-            this.CheckedByIdlabel.Text = "0";
-            this.CheckedByIdlabel.Visible = false;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(6, 98);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(63, 13);
-            this.label12.TabIndex = 29;
-            this.label12.Text = "Checked By";
-            // 
-            // CheckedBybutton
-            // 
-            this.CheckedBybutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(43)))), ((int)(((byte)(137)))));
-            this.CheckedBybutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CheckedBybutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CheckedBybutton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.CheckedBybutton.Location = new System.Drawing.Point(152, 0);
-            this.CheckedBybutton.Name = "CheckedBybutton";
-            this.CheckedBybutton.Size = new System.Drawing.Size(77, 23);
-            this.CheckedBybutton.TabIndex = 19;
-            this.CheckedBybutton.Text = "Checked By";
-            this.CheckedBybutton.UseVisualStyleBackColor = false;
-            this.CheckedBybutton.Click += new System.EventHandler(this.CheckedBybutton_Click);
-            // 
-            // expandPanelControl1
-            // 
-            this.expandPanelControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.expandPanelControl1.Location = new System.Drawing.Point(298, 0);
-            this.expandPanelControl1.Name = "expandPanelControl1";
-            this.expandPanelControl1.Size = new System.Drawing.Size(15, 482);
-            this.expandPanelControl1.TabIndex = 126;
-            this.expandPanelControl1._ExpandPanel += new System.EventHandler(this.expandPanelControl1__ExpandPanel);
-            // 
             // collapsePanelControl1
             // 
             this.collapsePanelControl1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -1082,6 +1017,70 @@
             this.collapsePanelControl1.Size = new System.Drawing.Size(15, 482);
             this.collapsePanelControl1.TabIndex = 178;
             this.collapsePanelControl1._HidePanel += new System.EventHandler(this.collapsePanelControl1__HidePanel);
+            // 
+            // mDelete
+            // 
+            this.mDelete.HeaderText = "";
+            this.mDelete.Image = ((System.Drawing.Image)(resources.GetObject("mDelete.Image")));
+            this.mDelete.Name = "mDelete";
+            this.mDelete.Width = 25;
+            // 
+            // mQuantity
+            // 
+            this.mQuantity.DataPropertyName = "mQuantity";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "N2";
+            this.mQuantity.DefaultCellStyle = dataGridViewCellStyle3;
+            this.mQuantity.HeaderText = "Quantity";
+            this.mQuantity.Name = "mQuantity";
+            this.mQuantity.ReadOnly = true;
+            // 
+            // mUnitName
+            // 
+            this.mUnitName.DataPropertyName = "mUnitName";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.mUnitName.DefaultCellStyle = dataGridViewCellStyle4;
+            this.mUnitName.HeaderText = "Unit";
+            this.mUnitName.Name = "mUnitName";
+            this.mUnitName.ReadOnly = true;
+            // 
+            // mProductName
+            // 
+            this.mProductName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.mProductName.DataPropertyName = "mProductName";
+            this.mProductName.HeaderText = "Fixed Asset";
+            this.mProductName.Name = "mProductName";
+            this.mProductName.ReadOnly = true;
+            // 
+            // mCost1
+            // 
+            this.mCost1.DataPropertyName = "mCost1";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "N4";
+            this.mCost1.DefaultCellStyle = dataGridViewCellStyle5;
+            this.mCost1.HeaderText = "Cost 1";
+            this.mCost1.Name = "mCost1";
+            this.mCost1.Width = 125;
+            // 
+            // mCost2
+            // 
+            this.mCost2.DataPropertyName = "mCost2";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.Format = "N4";
+            this.mCost2.DefaultCellStyle = dataGridViewCellStyle6;
+            this.mCost2.HeaderText = "Cost 2";
+            this.mCost2.Name = "mCost2";
+            this.mCost2.Width = 125;
+            // 
+            // mCost3
+            // 
+            this.mCost3.DataPropertyName = "mCost3";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.Format = "N4";
+            this.mCost3.DefaultCellStyle = dataGridViewCellStyle7;
+            this.mCost3.HeaderText = "Cost 3";
+            this.mCost3.Name = "mCost3";
+            this.mCost3.Width = 125;
             // 
             // Default
             // 
@@ -1170,6 +1169,10 @@
         private System.Windows.Forms.Label PurchaseRequestIdlabel;
         private System.Windows.Forms.Button ForPobutton;
         private System.Windows.Forms.Button ForApprovalbutton;
+        private System.Windows.Forms.TextBox CheckedBytextBox;
+        private System.Windows.Forms.Label CheckedByIdlabel;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Button CheckedBybutton;
         private System.Windows.Forms.DataGridViewImageColumn mDelete;
         private System.Windows.Forms.DataGridViewTextBoxColumn mQuantity;
         private System.Windows.Forms.DataGridViewTextBoxColumn mUnitName;
@@ -1177,9 +1180,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn mCost1;
         private System.Windows.Forms.DataGridViewTextBoxColumn mCost2;
         private System.Windows.Forms.DataGridViewTextBoxColumn mCost3;
-        private System.Windows.Forms.TextBox CheckedBytextBox;
-        private System.Windows.Forms.Label CheckedByIdlabel;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button CheckedBybutton;
     }
 }

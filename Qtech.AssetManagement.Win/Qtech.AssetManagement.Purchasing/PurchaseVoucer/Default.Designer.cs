@@ -1111,10 +1111,10 @@
             this.label18.ForeColor = System.Drawing.Color.White;
             this.label18.Location = new System.Drawing.Point(0, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(155, 13);
+            this.label18.Size = new System.Drawing.Size(143, 13);
             this.label18.TabIndex = 24;
             this.label18.Tag = "";
-            this.label18.Text = "Purchase Voucher Info";
+            this.label18.Text = "Journal Voucher Info";
             // 
             // label3
             // 
@@ -1210,7 +1210,7 @@
             this.ClientSize = new System.Drawing.Size(1044, 486);
             this.Controls.Add(this.splitContainer1);
             this.Name = "Default";
-            this.Text = "Purchase Voucher";
+            this.Text = "Journal Voucher";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Default_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);

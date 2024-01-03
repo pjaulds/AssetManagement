@@ -47,6 +47,7 @@
     <Compile Include="AccountGroupManager.cs" />
     <Compile Include="AssetClassManager.cs" />
     <Compile Include="AssetCategoryManager.cs" />
+    <Compile Include="CapitalizedCostManager.cs" />
     <Compile Include="PaymentTermsManager.cs" />
     <Compile Include="CurrencyManager.cs" />
     <Compile Include="ExpenseCategoryManager.cs" />

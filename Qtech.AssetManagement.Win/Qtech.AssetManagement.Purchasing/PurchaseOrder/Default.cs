@@ -191,6 +191,7 @@ namespace Qtech.AssetManagement.Purchasing.PurchaseOrder
             ControlUtil.ExpandPanel(splitContainer1);
 
             PreparedByutraCombo.Focus();
+            linkLabel1_LinkClicked(this, new LinkLabelLinkClickedEventArgs(linkLabel1.Links[0]));
         }
 
         public int SaveRecords()

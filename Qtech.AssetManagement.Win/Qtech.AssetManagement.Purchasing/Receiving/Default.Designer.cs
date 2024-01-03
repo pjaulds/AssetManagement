@@ -65,8 +65,8 @@
             Infragistics.Win.Appearance appearance20 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance21 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand2 = new Infragistics.Win.UltraWinGrid.UltraGridBand("Band 0", -1);
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn1 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn2 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mName");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn3 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn11 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mName");
             Infragistics.Win.Appearance appearance22 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance23 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance24 = new Infragistics.Win.Appearance();
@@ -78,21 +78,6 @@
             Infragistics.Win.Appearance appearance30 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance31 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance32 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance33 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand3 = new Infragistics.Win.UltraWinGrid.UltraGridBand("Band 0", -1);
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn3 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn11 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mName");
-            Infragistics.Win.Appearance appearance34 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance35 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance36 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance37 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance38 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance39 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance40 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance41 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance42 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance43 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance44 = new Infragistics.Win.Appearance();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -118,19 +103,12 @@
             this.RemarksultraTextEditor = new Infragistics.Win.UltraWinEditors.UltraTextEditor();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label15 = new System.Windows.Forms.Label();
-            this.CheckedByultraCombo = new Infragistics.Win.UltraWinGrid.UltraCombo();
             this.ApprovedBylabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.PreparedByutraCombo = new Infragistics.Win.UltraWinGrid.UltraCombo();
             this.ApprovedBytextBox = new System.Windows.Forms.TextBox();
             this.ItemsdataGridView = new System.Windows.Forms.DataGridView();
-            this.mDelete = new System.Windows.Forms.DataGridViewImageColumn();
-            this.mQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mUnitName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mTotalCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
             this.SupplierFaxNotextBox = new System.Windows.Forms.TextBox();
             this.SupplierTelNotextBox = new System.Windows.Forms.TextBox();
@@ -163,6 +141,15 @@
             this.Cancelbutton = new System.Windows.Forms.Button();
             this.Savebutton = new System.Windows.Forms.Button();
             this.collapsePanelControl1 = new Qtech.AssetManagement.Controls.CollapsePanelControl();
+            this.CheckedByIdlabel = new System.Windows.Forms.Label();
+            this.CheckedBytextBox = new System.Windows.Forms.TextBox();
+            this.CheckedBybutton = new System.Windows.Forms.Button();
+            this.mDelete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.mQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mUnitName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mProductName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mTotalCost = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -172,7 +159,6 @@
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RemarksultraTextEditor)).BeginInit();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CheckedByultraCombo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PreparedByutraCombo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemsdataGridView)).BeginInit();
             this.panel1.SuspendLayout();
@@ -546,8 +532,9 @@
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.CheckedByIdlabel);
+            this.panel7.Controls.Add(this.CheckedBytextBox);
             this.panel7.Controls.Add(this.label15);
-            this.panel7.Controls.Add(this.CheckedByultraCombo);
             this.panel7.Controls.Add(this.ApprovedBylabel);
             this.panel7.Controls.Add(this.label1);
             this.panel7.Controls.Add(this.label10);
@@ -569,85 +556,6 @@
             this.label15.TabIndex = 5;
             this.label15.Text = "Checked By";
             // 
-            // CheckedByultraCombo
-            // 
-            appearance21.BackColor = System.Drawing.SystemColors.Window;
-            appearance21.BorderColor = System.Drawing.SystemColors.InactiveCaption;
-            this.CheckedByultraCombo.DisplayLayout.Appearance = appearance21;
-            ultraGridColumn1.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
-            ultraGridColumn1.Header.VisiblePosition = 0;
-            ultraGridColumn1.Hidden = true;
-            ultraGridColumn2.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
-            ultraGridColumn2.Header.Caption = "Name";
-            ultraGridColumn2.Header.VisiblePosition = 1;
-            ultraGridColumn2.RowLayoutColumnInfo.OriginX = 2;
-            ultraGridColumn2.RowLayoutColumnInfo.OriginY = 0;
-            ultraGridColumn2.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 23);
-            ultraGridColumn2.RowLayoutColumnInfo.SpanX = 6;
-            ultraGridColumn2.RowLayoutColumnInfo.SpanY = 2;
-            ultraGridBand2.Columns.AddRange(new object[] {
-            ultraGridColumn1,
-            ultraGridColumn2});
-            ultraGridBand2.RowLayoutStyle = Infragistics.Win.UltraWinGrid.RowLayoutStyle.ColumnLayout;
-            this.CheckedByultraCombo.DisplayLayout.BandsSerializer.Add(ultraGridBand2);
-            this.CheckedByultraCombo.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
-            this.CheckedByultraCombo.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.False;
-            appearance22.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            appearance22.BackColor2 = System.Drawing.SystemColors.ControlDark;
-            appearance22.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
-            appearance22.BorderColor = System.Drawing.SystemColors.Window;
-            this.CheckedByultraCombo.DisplayLayout.GroupByBox.Appearance = appearance22;
-            appearance23.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.CheckedByultraCombo.DisplayLayout.GroupByBox.BandLabelAppearance = appearance23;
-            this.CheckedByultraCombo.DisplayLayout.GroupByBox.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
-            appearance24.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            appearance24.BackColor2 = System.Drawing.SystemColors.Control;
-            appearance24.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
-            appearance24.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.CheckedByultraCombo.DisplayLayout.GroupByBox.PromptAppearance = appearance24;
-            this.CheckedByultraCombo.DisplayLayout.MaxColScrollRegions = 1;
-            this.CheckedByultraCombo.DisplayLayout.MaxRowScrollRegions = 1;
-            appearance25.BackColor = System.Drawing.SystemColors.Window;
-            appearance25.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.CheckedByultraCombo.DisplayLayout.Override.ActiveCellAppearance = appearance25;
-            appearance26.BackColor = System.Drawing.SystemColors.Highlight;
-            appearance26.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.CheckedByultraCombo.DisplayLayout.Override.ActiveRowAppearance = appearance26;
-            this.CheckedByultraCombo.DisplayLayout.Override.AllowRowFiltering = Infragistics.Win.DefaultableBoolean.True;
-            this.CheckedByultraCombo.DisplayLayout.Override.BorderStyleCell = Infragistics.Win.UIElementBorderStyle.Dotted;
-            this.CheckedByultraCombo.DisplayLayout.Override.BorderStyleRow = Infragistics.Win.UIElementBorderStyle.Dotted;
-            appearance27.BackColor = System.Drawing.SystemColors.Window;
-            this.CheckedByultraCombo.DisplayLayout.Override.CardAreaAppearance = appearance27;
-            appearance28.BorderColor = System.Drawing.Color.Silver;
-            appearance28.TextTrimming = Infragistics.Win.TextTrimming.EllipsisCharacter;
-            this.CheckedByultraCombo.DisplayLayout.Override.CellAppearance = appearance28;
-            this.CheckedByultraCombo.DisplayLayout.Override.CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.EditAndSelectText;
-            this.CheckedByultraCombo.DisplayLayout.Override.CellPadding = 0;
-            appearance29.BackColor = System.Drawing.SystemColors.Control;
-            appearance29.BackColor2 = System.Drawing.SystemColors.ControlDark;
-            appearance29.BackGradientAlignment = Infragistics.Win.GradientAlignment.Element;
-            appearance29.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
-            appearance29.BorderColor = System.Drawing.SystemColors.Window;
-            this.CheckedByultraCombo.DisplayLayout.Override.GroupByRowAppearance = appearance29;
-            appearance30.TextHAlignAsString = "Left";
-            this.CheckedByultraCombo.DisplayLayout.Override.HeaderAppearance = appearance30;
-            this.CheckedByultraCombo.DisplayLayout.Override.HeaderClickAction = Infragistics.Win.UltraWinGrid.HeaderClickAction.SortMulti;
-            this.CheckedByultraCombo.DisplayLayout.Override.HeaderStyle = Infragistics.Win.HeaderStyle.WindowsXPCommand;
-            appearance31.BackColor = System.Drawing.SystemColors.Window;
-            appearance31.BorderColor = System.Drawing.Color.Silver;
-            this.CheckedByultraCombo.DisplayLayout.Override.RowAppearance = appearance31;
-            this.CheckedByultraCombo.DisplayLayout.Override.RowSelectors = Infragistics.Win.DefaultableBoolean.False;
-            appearance32.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.CheckedByultraCombo.DisplayLayout.Override.TemplateAddRowAppearance = appearance32;
-            this.CheckedByultraCombo.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill;
-            this.CheckedByultraCombo.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
-            this.CheckedByultraCombo.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy;
-            this.CheckedByultraCombo.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CheckedByultraCombo.Location = new System.Drawing.Point(275, 29);
-            this.CheckedByultraCombo.Name = "CheckedByultraCombo";
-            this.CheckedByultraCombo.Size = new System.Drawing.Size(225, 23);
-            this.CheckedByultraCombo.TabIndex = 4;
-            // 
             // ApprovedBylabel
             // 
             this.ApprovedBylabel.AutoSize = true;
@@ -657,7 +565,7 @@
             this.ApprovedBylabel.Name = "ApprovedBylabel";
             this.ApprovedBylabel.Size = new System.Drawing.Size(15, 13);
             this.ApprovedBylabel.TabIndex = 25;
-            this.ApprovedBylabel.Tag = "0";
+            this.ApprovedBylabel.Tag = "id";
             this.ApprovedBylabel.Text = "0";
             this.ApprovedBylabel.Visible = false;
             // 
@@ -683,9 +591,9 @@
             // 
             // PreparedByutraCombo
             // 
-            appearance33.BackColor = System.Drawing.SystemColors.Window;
-            appearance33.BorderColor = System.Drawing.SystemColors.InactiveCaption;
-            this.PreparedByutraCombo.DisplayLayout.Appearance = appearance33;
+            appearance21.BackColor = System.Drawing.SystemColors.Window;
+            appearance21.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            this.PreparedByutraCombo.DisplayLayout.Appearance = appearance21;
             ultraGridColumn3.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
             ultraGridColumn3.Header.VisiblePosition = 0;
             ultraGridColumn3.Hidden = true;
@@ -697,60 +605,60 @@
             ultraGridColumn11.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 23);
             ultraGridColumn11.RowLayoutColumnInfo.SpanX = 6;
             ultraGridColumn11.RowLayoutColumnInfo.SpanY = 2;
-            ultraGridBand3.Columns.AddRange(new object[] {
+            ultraGridBand2.Columns.AddRange(new object[] {
             ultraGridColumn3,
             ultraGridColumn11});
-            ultraGridBand3.RowLayoutStyle = Infragistics.Win.UltraWinGrid.RowLayoutStyle.ColumnLayout;
-            this.PreparedByutraCombo.DisplayLayout.BandsSerializer.Add(ultraGridBand3);
+            ultraGridBand2.RowLayoutStyle = Infragistics.Win.UltraWinGrid.RowLayoutStyle.ColumnLayout;
+            this.PreparedByutraCombo.DisplayLayout.BandsSerializer.Add(ultraGridBand2);
             this.PreparedByutraCombo.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
             this.PreparedByutraCombo.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.False;
-            appearance34.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            appearance34.BackColor2 = System.Drawing.SystemColors.ControlDark;
-            appearance34.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
-            appearance34.BorderColor = System.Drawing.SystemColors.Window;
-            this.PreparedByutraCombo.DisplayLayout.GroupByBox.Appearance = appearance34;
-            appearance35.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.PreparedByutraCombo.DisplayLayout.GroupByBox.BandLabelAppearance = appearance35;
+            appearance22.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            appearance22.BackColor2 = System.Drawing.SystemColors.ControlDark;
+            appearance22.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
+            appearance22.BorderColor = System.Drawing.SystemColors.Window;
+            this.PreparedByutraCombo.DisplayLayout.GroupByBox.Appearance = appearance22;
+            appearance23.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.PreparedByutraCombo.DisplayLayout.GroupByBox.BandLabelAppearance = appearance23;
             this.PreparedByutraCombo.DisplayLayout.GroupByBox.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
-            appearance36.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            appearance36.BackColor2 = System.Drawing.SystemColors.Control;
-            appearance36.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
-            appearance36.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.PreparedByutraCombo.DisplayLayout.GroupByBox.PromptAppearance = appearance36;
+            appearance24.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            appearance24.BackColor2 = System.Drawing.SystemColors.Control;
+            appearance24.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
+            appearance24.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.PreparedByutraCombo.DisplayLayout.GroupByBox.PromptAppearance = appearance24;
             this.PreparedByutraCombo.DisplayLayout.MaxColScrollRegions = 1;
             this.PreparedByutraCombo.DisplayLayout.MaxRowScrollRegions = 1;
-            appearance37.BackColor = System.Drawing.SystemColors.Window;
-            appearance37.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.PreparedByutraCombo.DisplayLayout.Override.ActiveCellAppearance = appearance37;
-            appearance38.BackColor = System.Drawing.SystemColors.Highlight;
-            appearance38.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.PreparedByutraCombo.DisplayLayout.Override.ActiveRowAppearance = appearance38;
+            appearance25.BackColor = System.Drawing.SystemColors.Window;
+            appearance25.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.PreparedByutraCombo.DisplayLayout.Override.ActiveCellAppearance = appearance25;
+            appearance26.BackColor = System.Drawing.SystemColors.Highlight;
+            appearance26.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.PreparedByutraCombo.DisplayLayout.Override.ActiveRowAppearance = appearance26;
             this.PreparedByutraCombo.DisplayLayout.Override.AllowRowFiltering = Infragistics.Win.DefaultableBoolean.True;
             this.PreparedByutraCombo.DisplayLayout.Override.BorderStyleCell = Infragistics.Win.UIElementBorderStyle.Dotted;
             this.PreparedByutraCombo.DisplayLayout.Override.BorderStyleRow = Infragistics.Win.UIElementBorderStyle.Dotted;
-            appearance39.BackColor = System.Drawing.SystemColors.Window;
-            this.PreparedByutraCombo.DisplayLayout.Override.CardAreaAppearance = appearance39;
-            appearance40.BorderColor = System.Drawing.Color.Silver;
-            appearance40.TextTrimming = Infragistics.Win.TextTrimming.EllipsisCharacter;
-            this.PreparedByutraCombo.DisplayLayout.Override.CellAppearance = appearance40;
+            appearance27.BackColor = System.Drawing.SystemColors.Window;
+            this.PreparedByutraCombo.DisplayLayout.Override.CardAreaAppearance = appearance27;
+            appearance28.BorderColor = System.Drawing.Color.Silver;
+            appearance28.TextTrimming = Infragistics.Win.TextTrimming.EllipsisCharacter;
+            this.PreparedByutraCombo.DisplayLayout.Override.CellAppearance = appearance28;
             this.PreparedByutraCombo.DisplayLayout.Override.CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.EditAndSelectText;
             this.PreparedByutraCombo.DisplayLayout.Override.CellPadding = 0;
-            appearance41.BackColor = System.Drawing.SystemColors.Control;
-            appearance41.BackColor2 = System.Drawing.SystemColors.ControlDark;
-            appearance41.BackGradientAlignment = Infragistics.Win.GradientAlignment.Element;
-            appearance41.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
-            appearance41.BorderColor = System.Drawing.SystemColors.Window;
-            this.PreparedByutraCombo.DisplayLayout.Override.GroupByRowAppearance = appearance41;
-            appearance42.TextHAlignAsString = "Left";
-            this.PreparedByutraCombo.DisplayLayout.Override.HeaderAppearance = appearance42;
+            appearance29.BackColor = System.Drawing.SystemColors.Control;
+            appearance29.BackColor2 = System.Drawing.SystemColors.ControlDark;
+            appearance29.BackGradientAlignment = Infragistics.Win.GradientAlignment.Element;
+            appearance29.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
+            appearance29.BorderColor = System.Drawing.SystemColors.Window;
+            this.PreparedByutraCombo.DisplayLayout.Override.GroupByRowAppearance = appearance29;
+            appearance30.TextHAlignAsString = "Left";
+            this.PreparedByutraCombo.DisplayLayout.Override.HeaderAppearance = appearance30;
             this.PreparedByutraCombo.DisplayLayout.Override.HeaderClickAction = Infragistics.Win.UltraWinGrid.HeaderClickAction.SortMulti;
             this.PreparedByutraCombo.DisplayLayout.Override.HeaderStyle = Infragistics.Win.HeaderStyle.WindowsXPCommand;
-            appearance43.BackColor = System.Drawing.SystemColors.Window;
-            appearance43.BorderColor = System.Drawing.Color.Silver;
-            this.PreparedByutraCombo.DisplayLayout.Override.RowAppearance = appearance43;
+            appearance31.BackColor = System.Drawing.SystemColors.Window;
+            appearance31.BorderColor = System.Drawing.Color.Silver;
+            this.PreparedByutraCombo.DisplayLayout.Override.RowAppearance = appearance31;
             this.PreparedByutraCombo.DisplayLayout.Override.RowSelectors = Infragistics.Win.DefaultableBoolean.False;
-            appearance44.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.PreparedByutraCombo.DisplayLayout.Override.TemplateAddRowAppearance = appearance44;
+            appearance32.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.PreparedByutraCombo.DisplayLayout.Override.TemplateAddRowAppearance = appearance32;
             this.PreparedByutraCombo.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill;
             this.PreparedByutraCombo.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
             this.PreparedByutraCombo.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy;
@@ -818,61 +726,6 @@
             this.ItemsdataGridView.TabIndex = 181;
             this.ItemsdataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ItemsdataGridView_CellClick);
             this.ItemsdataGridView.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.ItemsdataGridView_CellValidating);
-            // 
-            // mDelete
-            // 
-            this.mDelete.HeaderText = "";
-            this.mDelete.Image = ((System.Drawing.Image)(resources.GetObject("mDelete.Image")));
-            this.mDelete.Name = "mDelete";
-            this.mDelete.Width = 25;
-            // 
-            // mQuantity
-            // 
-            this.mQuantity.DataPropertyName = "mQuantity";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle3.Format = "N2";
-            this.mQuantity.DefaultCellStyle = dataGridViewCellStyle3;
-            this.mQuantity.HeaderText = "Quantity";
-            this.mQuantity.Name = "mQuantity";
-            // 
-            // mUnitName
-            // 
-            this.mUnitName.DataPropertyName = "mUnitName";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.mUnitName.DefaultCellStyle = dataGridViewCellStyle4;
-            this.mUnitName.HeaderText = "Unit";
-            this.mUnitName.Name = "mUnitName";
-            this.mUnitName.ReadOnly = true;
-            // 
-            // mProductName
-            // 
-            this.mProductName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.mProductName.DataPropertyName = "mProductName";
-            this.mProductName.HeaderText = "Product";
-            this.mProductName.Name = "mProductName";
-            this.mProductName.ReadOnly = true;
-            // 
-            // mCost
-            // 
-            this.mCost.DataPropertyName = "mCost";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle5.Format = "N4";
-            this.mCost.DefaultCellStyle = dataGridViewCellStyle5;
-            this.mCost.HeaderText = "Cost";
-            this.mCost.Name = "mCost";
-            this.mCost.ReadOnly = true;
-            this.mCost.Width = 125;
-            // 
-            // mTotalCost
-            // 
-            this.mTotalCost.DataPropertyName = "mTotalCost";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle6.Format = "N4";
-            this.mTotalCost.DefaultCellStyle = dataGridViewCellStyle6;
-            this.mTotalCost.HeaderText = "Total Cost";
-            this.mTotalCost.Name = "mTotalCost";
-            this.mTotalCost.ReadOnly = true;
-            this.mTotalCost.Width = 125;
             // 
             // panel1
             // 
@@ -1107,7 +960,7 @@
             this.PurchaseOrderIdtIdlabel.Name = "PurchaseOrderIdtIdlabel";
             this.PurchaseOrderIdtIdlabel.Size = new System.Drawing.Size(15, 13);
             this.PurchaseOrderIdtIdlabel.TabIndex = 26;
-            this.PurchaseOrderIdtIdlabel.Tag = "0";
+            this.PurchaseOrderIdtIdlabel.Tag = "id";
             this.PurchaseOrderIdtIdlabel.Text = "0";
             this.PurchaseOrderIdtIdlabel.Visible = false;
             // 
@@ -1175,6 +1028,7 @@
             // 
             // panel8
             // 
+            this.panel8.Controls.Add(this.CheckedBybutton);
             this.panel8.Controls.Add(this.ApprovedBybutton);
             this.panel8.Controls.Add(this.Cancelbutton);
             this.panel8.Controls.Add(this.Savebutton);
@@ -1190,7 +1044,7 @@
             this.ApprovedBybutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ApprovedBybutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ApprovedBybutton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.ApprovedBybutton.Location = new System.Drawing.Point(152, 0);
+            this.ApprovedBybutton.Location = new System.Drawing.Point(228, 0);
             this.ApprovedBybutton.Name = "ApprovedBybutton";
             this.ApprovedBybutton.Size = new System.Drawing.Size(77, 23);
             this.ApprovedBybutton.TabIndex = 17;
@@ -1235,6 +1089,98 @@
             this.collapsePanelControl1.TabIndex = 178;
             this.collapsePanelControl1._HidePanel += new System.EventHandler(this.collapsePanelControl1__HidePanel);
             // 
+            // CheckedByIdlabel
+            // 
+            this.CheckedByIdlabel.AutoSize = true;
+            this.CheckedByIdlabel.BackColor = System.Drawing.Color.Transparent;
+            this.CheckedByIdlabel.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckedByIdlabel.Location = new System.Drawing.Point(341, 15);
+            this.CheckedByIdlabel.Name = "CheckedByIdlabel";
+            this.CheckedByIdlabel.Size = new System.Drawing.Size(15, 13);
+            this.CheckedByIdlabel.TabIndex = 29;
+            this.CheckedByIdlabel.Tag = "id";
+            this.CheckedByIdlabel.Text = "0";
+            this.CheckedByIdlabel.Visible = false;
+            // 
+            // CheckedBytextBox
+            // 
+            this.CheckedBytextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.CheckedBytextBox.Location = new System.Drawing.Point(275, 31);
+            this.CheckedBytextBox.Name = "CheckedBytextBox";
+            this.CheckedBytextBox.ReadOnly = true;
+            this.CheckedBytextBox.Size = new System.Drawing.Size(225, 21);
+            this.CheckedBytextBox.TabIndex = 28;
+            this.CheckedBytextBox.TabStop = false;
+            // 
+            // CheckedBybutton
+            // 
+            this.CheckedBybutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(43)))), ((int)(((byte)(137)))));
+            this.CheckedBybutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CheckedBybutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckedBybutton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.CheckedBybutton.Location = new System.Drawing.Point(152, 0);
+            this.CheckedBybutton.Name = "CheckedBybutton";
+            this.CheckedBybutton.Size = new System.Drawing.Size(77, 23);
+            this.CheckedBybutton.TabIndex = 19;
+            this.CheckedBybutton.Text = "Checked By";
+            this.CheckedBybutton.UseVisualStyleBackColor = false;
+            this.CheckedBybutton.Click += new System.EventHandler(this.CheckedBybutton_Click);
+            // 
+            // mDelete
+            // 
+            this.mDelete.HeaderText = "";
+            this.mDelete.Image = ((System.Drawing.Image)(resources.GetObject("mDelete.Image")));
+            this.mDelete.Name = "mDelete";
+            this.mDelete.Width = 25;
+            // 
+            // mQuantity
+            // 
+            this.mQuantity.DataPropertyName = "mQuantity";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "N2";
+            this.mQuantity.DefaultCellStyle = dataGridViewCellStyle3;
+            this.mQuantity.HeaderText = "Quantity";
+            this.mQuantity.Name = "mQuantity";
+            // 
+            // mUnitName
+            // 
+            this.mUnitName.DataPropertyName = "mUnitName";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.mUnitName.DefaultCellStyle = dataGridViewCellStyle4;
+            this.mUnitName.HeaderText = "Unit";
+            this.mUnitName.Name = "mUnitName";
+            this.mUnitName.ReadOnly = true;
+            // 
+            // mProductName
+            // 
+            this.mProductName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.mProductName.DataPropertyName = "mProductName";
+            this.mProductName.HeaderText = "Fixed Asset";
+            this.mProductName.Name = "mProductName";
+            this.mProductName.ReadOnly = true;
+            // 
+            // mCost
+            // 
+            this.mCost.DataPropertyName = "mCost";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle5.Format = "N4";
+            this.mCost.DefaultCellStyle = dataGridViewCellStyle5;
+            this.mCost.HeaderText = "Cost";
+            this.mCost.Name = "mCost";
+            this.mCost.ReadOnly = true;
+            this.mCost.Width = 125;
+            // 
+            // mTotalCost
+            // 
+            this.mTotalCost.DataPropertyName = "mTotalCost";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.Format = "N4";
+            this.mTotalCost.DefaultCellStyle = dataGridViewCellStyle6;
+            this.mTotalCost.HeaderText = "Total Cost";
+            this.mTotalCost.Name = "mTotalCost";
+            this.mTotalCost.ReadOnly = true;
+            this.mTotalCost.Width = 125;
+            // 
             // Default
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1257,7 +1203,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.RemarksultraTextEditor)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CheckedByultraCombo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PreparedByutraCombo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemsdataGridView)).EndInit();
             this.panel1.ResumeLayout(false);
@@ -1325,18 +1270,20 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label15;
-        private Infragistics.Win.UltraWinGrid.UltraCombo CheckedByultraCombo;
-        private System.Windows.Forms.DataGridViewImageColumn mDelete;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mQuantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mUnitName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mProductName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mCost;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mTotalCost;
         private System.Windows.Forms.TextBox DRNotextBox;
         private System.Windows.Forms.TextBox InvoiceNotextBox;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Button ForApprovalbutton;
         private System.Windows.Forms.Button ForApvbutton;
+        private System.Windows.Forms.Label CheckedByIdlabel;
+        private System.Windows.Forms.TextBox CheckedBytextBox;
+        private System.Windows.Forms.Button CheckedBybutton;
+        private System.Windows.Forms.DataGridViewImageColumn mDelete;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mQuantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mUnitName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mProductName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mCost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mTotalCost;
     }
 }

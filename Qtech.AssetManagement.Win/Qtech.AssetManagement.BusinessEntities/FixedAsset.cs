@@ -38,6 +38,10 @@ namespace Qtech.AssetManagement.BusinessEntities
         public Int32 mFunctionalLocationId { get; set; }
         public String mFunctionalLocationName { get; set; }
 
+        [Display(Name = "Personnel")]
+        public Int32 mPersonnelId { get; set; }
+        public String mPersonnelName { get; set; }
+
         [Display(Name = "Description")]
         public String mDescription { get; set; }
 
@@ -69,6 +73,9 @@ namespace Qtech.AssetManagement.BusinessEntities
         [Display(Name = "Averaging Method")]
         public Int32 mAveragingMethodId { get; set; }
         public String mAveragingMethodName { get; set; }
+
+        [Display(Name = "Accumulaged Depreciation")]
+        public decimal mAccumulatedDepreciation { get; set; }
 
         [Display(Name = "Residual Value")]
         public Decimal mResidualValue { get; set; }

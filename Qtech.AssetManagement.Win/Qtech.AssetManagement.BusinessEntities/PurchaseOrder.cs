@@ -43,7 +43,6 @@ namespace Qtech.AssetManagement.BusinessEntities
         public String mPreparedByName { get; set; }
 
         [Display(Name = "Noted By")]
-        [NotEqualTo(Message = "Please select noted by", mValue = "0")]
         public Int32 mNotedById { get; set; }
         public String mNotedByName { get; set; }
 

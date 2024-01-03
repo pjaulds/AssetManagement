@@ -31,7 +31,6 @@ namespace Qtech.AssetManagement.BusinessEntities
         public String mPreparedByName { get; set; }
 
         [Display(Name = "Checked By")]
-        [NotEqualTo(Message = "Please select checked by", mValue = "0")]
         public Int32 mCheckedById { get; set; }
         public String mCheckedByName { get; set; }
 

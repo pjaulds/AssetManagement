@@ -107,6 +107,7 @@ namespace Qtech.AssetManagement.Dal
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@receiving_detail_id", myFixedAsset.mReceivingDetailId);
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@asset_type_id", myFixedAsset.mAssetTypeId);
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@functional_location_id", myFixedAsset.mFunctionalLocationId);
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@personnel_id", myFixedAsset.mPersonnelId);
                 Helpers.CreateParameter(myCommand, DbType.String, "@description", myFixedAsset.mDescription);
                 if (myFixedAsset.mPurchaseDate != DateTime.MinValue)
                     Helpers.CreateParameter(myCommand, DbType.DateTime, "@purchase_date", myFixedAsset.mPurchaseDate);
@@ -119,6 +120,7 @@ namespace Qtech.AssetManagement.Dal
                     Helpers.CreateParameter(myCommand, DbType.DateTime, "@depreciation_start_date", myFixedAsset.mDepreciationStartDate);
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@depreciation_method_id", myFixedAsset.mDepreciationMethodId);
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@averaging_method_id", myFixedAsset.mAveragingMethodId);
+                Helpers.CreateParameter(myCommand, DbType.Decimal, "@accumulated_depreciation", myFixedAsset.mAccumulatedDepreciation);
                 Helpers.CreateParameter(myCommand, DbType.Decimal, "@residual_value", myFixedAsset.mResidualValue);
                 Helpers.CreateParameter(myCommand, DbType.Int16, "@useful_life_years", myFixedAsset.mUsefulLifeYears);
                 Helpers.CreateParameter(myCommand, DbType.Boolean, "@is_draft", myFixedAsset.mIsDraft);
@@ -178,6 +180,8 @@ namespace Qtech.AssetManagement.Dal
             fixedasset.mAssetTypeId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("asset_type_id"));
             fixedasset.mFunctionalLocationName = myDataRecord.GetString(myDataRecord.GetOrdinal("functional_location_name"));
             fixedasset.mFunctionalLocationId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("functional_location_id"));
+            fixedasset.mPersonnelName = myDataRecord.GetString(myDataRecord.GetOrdinal("personnel_name"));
+            fixedasset.mPersonnelId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("personnel_id"));
             fixedasset.mDescription = myDataRecord.GetString(myDataRecord.GetOrdinal("description"));
             if (myDataRecord["purchase_date"] != DBNull.Value)
                 fixedasset.mPurchaseDate = myDataRecord.GetDateTime(myDataRecord.GetOrdinal("purchase_date"));
@@ -192,6 +196,7 @@ namespace Qtech.AssetManagement.Dal
             fixedasset.mDepreciationMethodId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("depreciation_method_id"));
             fixedasset.mAveragingMethodName = myDataRecord.GetString(myDataRecord.GetOrdinal("averaging_method_name"));
             fixedasset.mAveragingMethodId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("averaging_method_id"));
+            fixedasset.mAccumulatedDepreciation = myDataRecord.GetDecimal(myDataRecord.GetOrdinal("accumulated_depreciation"));
             fixedasset.mResidualValue = myDataRecord.GetDecimal(myDataRecord.GetOrdinal("residual_value"));
             fixedasset.mUsefulLifeYears = myDataRecord.GetInt16(myDataRecord.GetOrdinal("useful_life_years"));
             fixedasset.mIsDraft = myDataRecord.GetBoolean(myDataRecord.GetOrdinal("is_draft"));

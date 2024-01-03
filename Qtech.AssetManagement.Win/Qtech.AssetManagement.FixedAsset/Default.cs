@@ -93,6 +93,8 @@ namespace Qtech.AssetManagement.FixedAsset
             myFixedAsset.mAssetTypeName = AssetTypeutraCombo.Text;
             myFixedAsset.mFunctionalLocationId = ControlUtil.UltraComboReturnValue(FunctionalLocationultraCombo);
             myFixedAsset.mFunctionalLocationName = FunctionalLocationultraCombo.Text;
+            myFixedAsset.mPersonnelId = ControlUtil.UltraComboReturnValue(PersonnelultraCombo);
+            myFixedAsset.mPersonnelName = PersonnelultraCombo.Text;
             myFixedAsset.mDescription = DescriptiontextBox.Text;
             myFixedAsset.mPurchaseDate = PurchasedateTimePicker.Value.Date;
             myFixedAsset.mPurchasePrice = ControlUtil.TextBoxDecimal(PurchasePricetextBox);
@@ -104,6 +106,7 @@ namespace Qtech.AssetManagement.FixedAsset
             myFixedAsset.mDepreciationMethodName = DepreciationMethodultraCombo.Text;
             myFixedAsset.mAveragingMethodId = ControlUtil.UltraComboReturnValue(AveragingMehodultraCombo);
             myFixedAsset.mAveragingMethodName = AveragingMehodultraCombo.Text;
+            myFixedAsset.mAccumulatedDepreciation = ControlUtil.TextBoxDecimal(AccumulatedDepreciationtextBox);
             myFixedAsset.mResidualValue = ControlUtil.TextBoxDecimal(ResidualValuetextBox);
             myFixedAsset.mUsefulLifeYears = ControlUtil.TextBoxShort(UsefulLifetextBox);
             myFixedAsset.mIsDraft = DraftcheckBox.Checked;
@@ -120,6 +123,7 @@ namespace Qtech.AssetManagement.FixedAsset
             ReceivingDetailIdlabel.Text = myFixedAsset.mReceivingDetailId.ToString();
             AssetTypeutraCombo.Value = myFixedAsset.mAssetTypeId;
             FunctionalLocationultraCombo.Value = myFixedAsset.mFunctionalLocationId;
+            PersonnelultraCombo.Value = myFixedAsset.mPersonnelId;
             DescriptiontextBox.Text = myFixedAsset.mDescription;
             PurchasedateTimePicker.Value = myFixedAsset.mPurchaseDate;
             PurchasePricetextBox.Text = myFixedAsset.mPurchasePrice.ToString();
@@ -129,6 +133,7 @@ namespace Qtech.AssetManagement.FixedAsset
             DepreciationStartdateTimePicker.Value = myFixedAsset.mDepreciationStartDate;
             DepreciationMethodultraCombo.Value = myFixedAsset.mDepreciationMethodId;
             AveragingMehodultraCombo.Value = myFixedAsset.mAveragingMethodId;
+            AccumulatedDepreciationtextBox.Text = myFixedAsset.mAccumulatedDepreciation.ToString();
             ResidualValuetextBox.Text = myFixedAsset.mResidualValue.ToString();
             UsefulLifetextBox.Text = myFixedAsset.mUsefulLifeYears.ToString();
             DraftcheckBox.Checked = myFixedAsset.mIsDraft;
@@ -177,7 +182,8 @@ namespace Qtech.AssetManagement.FixedAsset
             DraftcheckBox.Checked = !allow_delete;
             RegisteredcheckBox.Checked = allow_delete;
 
-            DraftcheckBox.Checked = true;
+            DraftcheckBox.Checked = !allow_delete;
+            RegisteredcheckBox.Checked = allow_delete;
         }
 
         public int SaveRecords()
@@ -311,7 +317,7 @@ namespace Qtech.AssetManagement.FixedAsset
             ControlUtil.TextBoxEnterLeaveEventHandler(splitContainer1.Panel2);
             LoadFixedAsset();
 
-            //Savebutton.Text = allow_delete ? "Register" : "Save As Draft";
+            Savebutton.Text = allow_delete ? "Register" : "Save As Draft";
             
         }
 
@@ -331,7 +337,7 @@ namespace Qtech.AssetManagement.FixedAsset
             UltraComboUtil.FunctionalLocation(FunctionalLocationultraCombo);
             UltraComboUtil.DepreciationMethod(DepreciationMethodultraCombo);
             UltraComboUtil.AveragingMethod(AveragingMehodultraCombo);
-
+            UltraComboUtil.Personnel(PersonnelultraCombo);
         }
 
         private void ultraGrid1_MouseDown(object sender, MouseEventArgs e)
@@ -359,6 +365,7 @@ namespace Qtech.AssetManagement.FixedAsset
         private void BeginningBalanceradioButton_CheckedChanged(object sender, EventArgs e)
         {
             if (Idlabel.Text == "0") DescriptiontextBox.Text = "Beginning Balance";
+            AccumulatedDepreciationtextBox.Enabled = BeginningBalanceradioButton.Checked;
         }
 
         private void NewPurchaseradioButton_CheckedChanged(object sender, EventArgs e)

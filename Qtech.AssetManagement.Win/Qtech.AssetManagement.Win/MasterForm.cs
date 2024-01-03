@@ -513,6 +513,17 @@ namespace Qtech.AssetManagement.Win
                     }
                     else accountGroupForm.Select();
                     break;
+                case "CapitalizedCost":
+                    if (!AllowToAccess((Int32)Modules.CapitalizedCost)) return;
+                    Maintenance.CapitalizedCost.Default capitalizedCostForm = null;
+                    if ((capitalizedCostForm = (Maintenance.CapitalizedCost.Default)IsFormAlreadyOpen(typeof(Maintenance.CapitalizedCost.Default))) == null)
+                    {
+                        Maintenance.CapitalizedCost.Default capitalizedCostFormChild = new Maintenance.CapitalizedCost.Default();
+                        capitalizedCostFormChild.MdiParent = this;
+                        capitalizedCostFormChild.Show();
+                    }
+                    else capitalizedCostForm.Select();
+                    break;
             }
         }
 
