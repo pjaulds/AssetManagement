@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -65,9 +70,17 @@
             this.PurchaseDatetextBox = new System.Windows.Forms.TextBox();
             this.Depreciatebutton = new System.Windows.Forms.Button();
             this.Disposebutton = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ItemsdataGridView = new System.Windows.Forms.DataGridView();
+            this.mDelete = new System.Windows.Forms.DataGridViewImageColumn();
+            this.mCapitalizedCost = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.mAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.mIsJournalized = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel8.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ItemsdataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -96,7 +109,7 @@
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(1087, 11);
+            this.pictureBox1.Location = new System.Drawing.Point(1080, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(24, 24);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -482,12 +495,98 @@
             this.Disposebutton.Text = "Dispose";
             this.Disposebutton.UseVisualStyleBackColor = false;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.ItemsdataGridView);
+            this.groupBox1.Location = new System.Drawing.Point(493, 89);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(612, 372);
+            this.groupBox1.TabIndex = 190;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Capitalized Cost";
+            // 
+            // ItemsdataGridView
+            // 
+            this.ItemsdataGridView.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(212)))), ((int)(((byte)(240)))));
+            this.ItemsdataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.ItemsdataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.ItemsdataGridView.BackgroundColor = System.Drawing.Color.White;
+            this.ItemsdataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(198)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ItemsdataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.ItemsdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ItemsdataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.mDelete,
+            this.mCapitalizedCost,
+            this.mAmount,
+            this.mIsJournalized});
+            this.ItemsdataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ItemsdataGridView.EnableHeadersVisualStyles = false;
+            this.ItemsdataGridView.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(226)))), ((int)(((byte)(243)))));
+            this.ItemsdataGridView.Location = new System.Drawing.Point(3, 16);
+            this.ItemsdataGridView.Name = "ItemsdataGridView";
+            this.ItemsdataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(226)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ItemsdataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.ItemsdataGridView.RowHeadersVisible = false;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(226)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ItemsdataGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.ItemsdataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ItemsdataGridView.Size = new System.Drawing.Size(606, 353);
+            this.ItemsdataGridView.TabIndex = 182;
+            this.ItemsdataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ItemsdataGridView_CellClick);
+            this.ItemsdataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.ItemsdataGridView_DataError);
+            // 
+            // mDelete
+            // 
+            this.mDelete.HeaderText = "";
+            this.mDelete.Image = ((System.Drawing.Image)(resources.GetObject("mDelete.Image")));
+            this.mDelete.Name = "mDelete";
+            this.mDelete.Width = 25;
+            // 
+            // mCapitalizedCost
+            // 
+            this.mCapitalizedCost.DataPropertyName = "mCapitalizedCostId";
+            this.mCapitalizedCost.HeaderText = "Capitalized Cost";
+            this.mCapitalizedCost.Name = "mCapitalizedCost";
+            this.mCapitalizedCost.Width = 250;
+            // 
+            // mAmount
+            // 
+            this.mAmount.DataPropertyName = "mAmount";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "N2";
+            this.mAmount.DefaultCellStyle = dataGridViewCellStyle3;
+            this.mAmount.HeaderText = "Amount";
+            this.mAmount.Name = "mAmount";
+            // 
+            // mIsJournalized
+            // 
+            this.mIsJournalized.DataPropertyName = "mIsJournalized";
+            this.mIsJournalized.HeaderText = "Journalized";
+            this.mIsJournalized.Name = "mIsJournalized";
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1116, 551);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Disposebutton);
             this.Controls.Add(this.Depreciatebutton);
             this.Controls.Add(this.label7);
@@ -532,6 +631,8 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel8.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.ItemsdataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -575,5 +676,11 @@
         private System.Windows.Forms.TextBox PurchaseDatetextBox;
         private System.Windows.Forms.Button Depreciatebutton;
         private System.Windows.Forms.Button Disposebutton;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataGridView ItemsdataGridView;
+        private System.Windows.Forms.DataGridViewImageColumn mDelete;
+        private System.Windows.Forms.DataGridViewComboBoxColumn mCapitalizedCost;
+        private System.Windows.Forms.DataGridViewTextBoxColumn mAmount;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn mIsJournalized;
     }
 }

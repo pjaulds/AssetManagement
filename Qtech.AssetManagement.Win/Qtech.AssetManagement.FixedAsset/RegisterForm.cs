@@ -20,7 +20,37 @@ namespace Qtech.AssetManagement.FixedAsset
             InitializeComponent();
         }
 
+        private FixedAssetCapitalizedCostCollection deleted_items = null;
+
         public int mId { get; set; }
+
+        private void SaveFixedAsset()
+        {
+            BusinessEntities.FixedAsset fa = FixedAssetManager.GetItem(mId);
+
+            fa.mIsDraft = false;
+            fa.mIsRegistered = true;
+            fa.mUserId = SessionUtil.mUser.mId;
+            LoadFixedAssetCapitalizedCostFromFormControls(fa);
+            fa.mDeletedFixedAssetCapitalizedCostCollection = deleted_items;
+
+            FixedAssetManager.Save(fa);
+
+            MessageBox.Show("Asset save as registered successfully.", "Fixed Asset", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            Close();
+        }
+
+        private void LoadFixedAssetCapitalizedCostFromFormControls(BusinessEntities.FixedAsset myFixedAsset)
+        {
+            FixedAssetCapitalizedCostCollection items = new FixedAssetCapitalizedCostCollection();
+            foreach(DataGridViewRow row in ItemsdataGridView.Rows)
+            {
+                if (row.IsNewRow) continue;
+
+                items.Add((FixedAssetCapitalizedCost)row.DataBoundItem);
+            }
+            myFixedAsset.mFixedAssetCapitalizedCostCollection = items;
+        }
 
         private void LoadFormControlsFromFixedAsset()
         {
@@ -41,6 +71,16 @@ namespace Qtech.AssetManagement.FixedAsset
             ResidualValuetextBox.Text = fa.mResidualValue.ToString("N");
             UsefulLifetextBox.Text = fa.mUsefulLifeYears.ToString();
       //some comments
+        }
+
+        private void LoadFormControlsFromFixedAssetCapitalizedCost()
+        {
+            FixedAssetCapitalizedCostCriteria criteria = new FixedAssetCapitalizedCostCriteria();
+            criteria.mFixedAssetId = mId;
+
+            ItemsdataGridView.AutoGenerateColumns = false;
+            ItemsdataGridView.DataSource = new SortableBindingList<FixedAssetCapitalizedCost>(FixedAssetCapitalizedCostManager.GetList(criteria));
+            ItemsdataGridView.Refresh();
         }
 
         private void LoadFormControlsFromAssetType(BusinessEntities.FixedAsset fa)
@@ -66,6 +106,12 @@ namespace Qtech.AssetManagement.FixedAsset
         {
             ThemeUtil.Controls(this);
             LoadFormControlsFromFixedAsset();
+            LoadFormControlsFromFixedAssetCapitalizedCost();
+
+            DataGridViewComboBoxColumn comboColumn = (DataGridViewComboBoxColumn)(ItemsdataGridView.Columns["mCapitalizedCost"]);
+            comboColumn.DataSource = CapitalizedCostManager.GetList();
+            comboColumn.DisplayMember = "mName";
+            comboColumn.ValueMember = "mId";
         }
 
         private void Cancelbutton_Click(object sender, EventArgs e)
@@ -75,16 +121,7 @@ namespace Qtech.AssetManagement.FixedAsset
 
         private void Savebutton_Click(object sender, EventArgs e)
         {
-            BusinessEntities.FixedAsset fa = FixedAssetManager.GetItem(mId);
-
-            fa.mIsDraft = false;
-            fa.mIsRegistered = true;
-            fa.mUserId = SessionUtil.mUser.mId;
-
-            FixedAssetManager.Save(fa);
-
-            MessageBox.Show("Asset save as registered successfully.", "Fixed Asset", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            Close();
+            SaveFixedAsset();
         }
 
         private void Depreciatebutton_Click(object sender, EventArgs e)
@@ -100,6 +137,30 @@ namespace Qtech.AssetManagement.FixedAsset
             RunDepreciationForm dep = (RunDepreciationForm)sender;
 
             //if (dep.mMonth == 0) return;//no selected month
+        }
+
+        private void ItemsdataGridView_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
+
+        }
+
+        private void ItemsdataGridView_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == -1) return;
+            if (e.RowIndex == ItemsdataGridView.Rows.Count - 1) return;//new row
+
+            string colName = ItemsdataGridView.Columns[e.ColumnIndex].Name;
+            FixedAssetCapitalizedCost item = (FixedAssetCapitalizedCost)ItemsdataGridView.CurrentRow.DataBoundItem;
+
+            if (colName == "mDelete")
+            {               
+                if (deleted_items == null)
+                    deleted_items = new  FixedAssetCapitalizedCostCollection();
+
+                deleted_items.Add(item);
+
+                ItemsdataGridView.Rows.Remove(ItemsdataGridView.CurrentRow);
+            }
         }
     }
 }

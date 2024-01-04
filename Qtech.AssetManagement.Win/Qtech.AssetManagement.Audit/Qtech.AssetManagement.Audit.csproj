@@ -47,6 +47,7 @@
     <Compile Include="AssetClassAudit.cs" />
     <Compile Include="AssetCategoryAudit.cs" />
     <Compile Include="CapitalizedCostAudit.cs" />
+    <Compile Include="FixedAssetCapitalizedCostAudit.cs" />
     <Compile Include="PaymentTermsAudit.cs" />
     <Compile Include="CurrencyAudit.cs" />
     <Compile Include="ExpenseCategoryAudit.cs" />

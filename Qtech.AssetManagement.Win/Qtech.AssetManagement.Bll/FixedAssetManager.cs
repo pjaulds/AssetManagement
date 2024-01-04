@@ -56,6 +56,25 @@ namespace Qtech.AssetManagement.Bll
 
                 int id = FixedAssetDB.Save(myFixedAsset);
 
+                if (myFixedAsset.mFixedAssetCapitalizedCostCollection != null)
+                {
+                    foreach (FixedAssetCapitalizedCost item in myFixedAsset.mFixedAssetCapitalizedCostCollection)
+                    {
+                        item.mFixedAssetId = id;
+                        item.mUserId = myFixedAsset.mUserId;
+                        FixedAssetCapitalizedCostManager.Save(item);
+                    }
+                }
+
+                if (myFixedAsset.mDeletedFixedAssetCapitalizedCostCollection != null)
+                {
+                    foreach (FixedAssetCapitalizedCost item in myFixedAsset.mDeletedFixedAssetCapitalizedCostCollection)
+                    {
+                        item.mUserId = myFixedAsset.mUserId;
+                        FixedAssetCapitalizedCostManager.Delete(item);
+                    }
+                }
+
                 if (myFixedAsset.mId == 0)
                     AuditInsert(myFixedAsset, id);
 

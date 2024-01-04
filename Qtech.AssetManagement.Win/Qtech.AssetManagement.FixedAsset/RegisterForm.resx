@@ -132,4 +132,24 @@
         GO2Y8iRFp+Vv0Wr9ADMHPDkeTamDAAAAAElFTkSuQmCC
 </value>
   </data>
+  <metadata name="mDelete.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="mDelete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
+        wwAADsMBx2+oZAAAAHJJREFUOE9jwAaM7f3/Y8NQacIAm2YQhkpjAmyKicFQ7VQwgCrAyN4/gRQM1YYA
+        2JyID0O1IQBMwsjObz+ID7IFSUMDWI2d33yYGIiPAmASowYMBgOAiu6DNAANWg8TAxkKFTsPE4NqQwCY
+        BLEYoouBAQCibv68C3a64gAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <metadata name="mCapitalizedCost.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="mAmount.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="mIsJournalized.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>
