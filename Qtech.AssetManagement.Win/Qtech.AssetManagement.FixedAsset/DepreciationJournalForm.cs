@@ -27,6 +27,8 @@ namespace Qtech.AssetManagement.FixedAsset
         public int mId { get; set; }
         public byte mMonth { get; set; }
         public short mYear { get; set; }
+        public int mDepreciationMethodId { get; set; }
+        public int mAveragingMethodId { get; set; }
 
         private int SaveDepreciationJournal()
         {
@@ -102,9 +104,9 @@ namespace Qtech.AssetManagement.FixedAsset
             criteria.mId = mId;
             criteria.mYear = mYear;
             decimal amount = 0;
-            if (fa.mDepreciationMethodId == (int)DepreciationMethodEnum.StraightLine)
+            if (mDepreciationMethodId == (int)DepreciationMethodEnum.StraightLine)
             {
-                if(fa.mAveragingMethodId == (int)AveragingMethodEnum.FullMonth)
+                if(mAveragingMethodId == (int)AveragingMethodEnum.FullMonth)
                 {                    
                     DataTable dt = ReportManager.DepreciationScheduleStraightLineFullMonthMonthly(criteria);
                     if (dt.Rows.Count > 0)
@@ -120,9 +122,9 @@ namespace Qtech.AssetManagement.FixedAsset
                 }
             }
 
-            if (fa.mDepreciationMethodId == (int)DepreciationMethodEnum.SYD)
+            if (mDepreciationMethodId == (int)DepreciationMethodEnum.SYD)
             {
-                if (fa.mAveragingMethodId == (int)AveragingMethodEnum.FullMonth)
+                if (mAveragingMethodId == (int)AveragingMethodEnum.FullMonth)
                 {
                     DataTable dt = ReportManager.DepreciationScheduleSYDFullMonthMonthly(criteria);
                     if (dt.Rows.Count > 0)

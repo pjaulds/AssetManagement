@@ -38,6 +38,11 @@ namespace Qtech.AssetManagement.FixedAsset
             ThemeUtil.Controls(this);
             BusinessEntities.FixedAsset fa = FixedAssetManager.GetItem(mFaId);
             NametextBox.Text = fa.mAssetNo + " " + fa.mProductName;
+
+            UltraComboUtil.DepreciationMethod(DepreciationMethodultraCombo);
+            UltraComboUtil.AveragingMethod(AveragingMehodultraCombo);
+            DepreciationMethodultraCombo.Value = fa.mDepreciationMethodId;
+            AveragingMehodultraCombo.Value = fa.mAveragingMethodId;
         }
 
         private void Savebutton_Click(object sender, EventArgs e)
@@ -52,6 +57,8 @@ namespace Qtech.AssetManagement.FixedAsset
             dep.mId = mFaId;
             dep.mMonth = (byte)(MonthcomboBox.SelectedIndex + 1);
             dep.mYear  = (short)YearnumericUpDown.Value;
+            dep.mDepreciationMethodId = ControlUtil.UltraComboReturnValue(DepreciationMethodultraCombo);
+            dep.mAveragingMethodId = ControlUtil.UltraComboReturnValue(AveragingMehodultraCombo);
             dep.ShowDialog();
 
             Close();
