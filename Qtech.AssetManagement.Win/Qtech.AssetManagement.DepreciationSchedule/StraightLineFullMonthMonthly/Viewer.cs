@@ -28,6 +28,7 @@ namespace Qtech.AssetManagement.DepreciationSchedule.StraightLineFullMonthMonthl
         public int mAssetTypeId { get; set; }
 
         public short mYear { get; set; }
+        public DateTime mEndDateCriteria { get; set; }
 
         ReportParameter[] myReportParameter = new ReportParameter[4];
         private void CreateParameter(int index, string name, string value)
@@ -43,6 +44,7 @@ namespace Qtech.AssetManagement.DepreciationSchedule.StraightLineFullMonthMonthl
             criteria.mId = mId;
             criteria.mAssetTypeId = mAssetTypeId;
             criteria.mYear = mYear;
+            criteria.mEndDate = mEndDateCriteria;
             
             ReportDataSource rds = new ReportDataSource("Fields", ReportManager.DepreciationScheduleStraightLineFullMonthMonthly(criteria));
             reportViewer1.LocalReport.DataSources.Clear();

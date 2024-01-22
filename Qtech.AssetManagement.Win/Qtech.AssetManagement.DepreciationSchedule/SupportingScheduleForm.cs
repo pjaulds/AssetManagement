@@ -54,6 +54,7 @@ namespace Qtech.AssetManagement.DepreciationSchedule
             UltraComboUtil.AveragingMethod(AveragingMethodultraCombo);
 
             LoadFormControlsFromFixedAsset();
+            EndMonthdateTimePicker.Value = new DateTime(Convert.ToInt32(YearnumericUpDown.Value), EndMonthdateTimePicker.Value.Month, EndMonthdateTimePicker.Value.Day);
         }
 
         private void Savebutton_Click(object sender, EventArgs e)
@@ -82,6 +83,7 @@ namespace Qtech.AssetManagement.DepreciationSchedule
                         StraightLineFullMonthMonthly.Viewer viewer = new StraightLineFullMonthMonthly.Viewer();
                         viewer.mId = mFaId;
                         viewer.mYear = Convert.ToInt16(YearnumericUpDown.Value);
+                        viewer.mEndDateCriteria = EndMonthdateTimePicker.Value.Date;
                         viewer.ShowDialog();
                     }
                     else//annual
@@ -159,6 +161,11 @@ namespace Qtech.AssetManagement.DepreciationSchedule
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void YearnumericUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            EndMonthdateTimePicker.Value = new DateTime(Convert.ToInt32(YearnumericUpDown.Value), EndMonthdateTimePicker.Value.Month, EndMonthdateTimePicker.Value.Day);
         }
     }
 }

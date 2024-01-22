@@ -53,6 +53,7 @@ namespace Qtech.AssetManagement.BusinessEntities
         amQt_AccountClassification = 42,
         amQt_AccountGroup = 43,
         amQt_CapitalizedCost = 44,
-        amQt_FixedAssetCapitalizedCost = 45
+        amQt_FixedAssetCapitalizedCost = 45,
+        amQt_Disposal = 46
     }
 }

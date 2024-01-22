@@ -88,6 +88,8 @@ namespace Qtech.AssetManagement.FixedAsset
             AveragingMethodtextBox.Text = fa.mAveragingMethodName;
 
             LoadFormControlsFromAssetType(fa);
+
+            DepreciationExpensecheckBox_CheckedChanged(this, new EventArgs());
         }
 
         private void LoadFormControlsFromAssetType(BusinessEntities.FixedAsset fa)
@@ -190,7 +192,15 @@ namespace Qtech.AssetManagement.FixedAsset
 
         private void Savebutton_Click(object sender, EventArgs e)
         {
-            if(IsDepreciationJournalExists())
+            decimal difference = 0;
+            decimal.TryParse(Differencelabel.Text, out difference);
+            if (difference != 0)
+            {
+                MessageBox.Show("Depreciation journal has difference cannot continue.", "Depreciation Journal", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            if (IsDepreciationJournalExists())
             {
                 MessageBox.Show("Depreciation journal with same month and year was already exists.", "Depreciation Journal", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
@@ -201,6 +211,30 @@ namespace Qtech.AssetManagement.FixedAsset
                 MessageBox.Show("Depreciation journal save successfully.", "Depreciation Journal", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
             }
+        }
+
+        private void DepreciationExpensecheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            decimal debit = 0;
+            decimal credit = 0;
+            if (DepreciationExpensecheckBox.Checked)
+                decimal.TryParse(DepreciationExpenseAmountlabel.Text, out debit);
+            else
+                decimal.TryParse(DepreciationExpenseAmountlabel.Text, out credit);
+
+            decimal debit2 = 0;
+            decimal credit2 = 0;
+            if (AccumulatedDepreciationcheckBox.Checked)
+                decimal.TryParse(AccumulatedDepreciationAmountlabel.Text, out debit2);
+            else
+                decimal.TryParse(AccumulatedDepreciationAmountlabel.Text, out credit2);
+
+            Debitlabel.Text = (debit + debit2).ToString("N");
+            Creditlabel.Text = (credit + credit2).ToString("N");
+
+            decimal difference = (debit + debit2) - (credit + credit2);
+            Differencelabel.Text = difference.ToString("N");
+            Differencelabel.ForeColor = difference == 0 ? Color.Black : Color.Red;
         }
     }
 }

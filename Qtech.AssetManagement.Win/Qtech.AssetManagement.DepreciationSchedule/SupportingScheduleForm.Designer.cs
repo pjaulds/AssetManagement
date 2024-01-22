@@ -74,6 +74,8 @@
             this.Savebutton = new System.Windows.Forms.Button();
             this.YearnumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
+            this.EndMonthdateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AveragingMethodultraCombo)).BeginInit();
@@ -355,11 +357,11 @@
             this.Savebutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Savebutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Savebutton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.Savebutton.Location = new System.Drawing.Point(320, 198);
+            this.Savebutton.Location = new System.Drawing.Point(320, 225);
             this.Savebutton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Savebutton.Name = "Savebutton";
             this.Savebutton.Size = new System.Drawing.Size(75, 23);
-            this.Savebutton.TabIndex = 6;
+            this.Savebutton.TabIndex = 7;
             this.Savebutton.Text = "View";
             this.Savebutton.UseVisualStyleBackColor = false;
             this.Savebutton.Click += new System.EventHandler(this.Savebutton_Click);
@@ -385,6 +387,7 @@
             0,
             0,
             0});
+            this.YearnumericUpDown.ValueChanged += new System.EventHandler(this.YearnumericUpDown_ValueChanged);
             // 
             // label3
             // 
@@ -397,12 +400,35 @@
             this.label3.TabIndex = 23;
             this.label3.Text = "Year";
             // 
+            // EndMonthdateTimePicker
+            // 
+            this.EndMonthdateTimePicker.CustomFormat = "MMMM";
+            this.EndMonthdateTimePicker.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.EndMonthdateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.EndMonthdateTimePicker.Location = new System.Drawing.Point(145, 198);
+            this.EndMonthdateTimePicker.Name = "EndMonthdateTimePicker";
+            this.EndMonthdateTimePicker.Size = new System.Drawing.Size(250, 21);
+            this.EndMonthdateTimePicker.TabIndex = 6;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(11, 203);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(66, 13);
+            this.label5.TabIndex = 25;
+            this.label5.Text = "End Month";
+            // 
             // SupportingScheduleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(405, 231);
+            this.ClientSize = new System.Drawing.Size(405, 257);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.EndMonthdateTimePicker);
             this.Controls.Add(this.YearnumericUpDown);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.Savebutton);
@@ -452,5 +478,7 @@
         private System.Windows.Forms.Button Savebutton;
         private System.Windows.Forms.NumericUpDown YearnumericUpDown;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker EndMonthdateTimePicker;
+        private System.Windows.Forms.Label label5;
     }
 }

@@ -48,6 +48,7 @@
     <Compile Include="AssetClassManager.cs" />
     <Compile Include="AssetCategoryManager.cs" />
     <Compile Include="CapitalizedCostManager.cs" />
+    <Compile Include="DisposalManager.cs" />
     <Compile Include="FixedAssetCapitalizedCostManager.cs" />
     <Compile Include="PaymentTermsManager.cs" />
     <Compile Include="CurrencyManager.cs" />

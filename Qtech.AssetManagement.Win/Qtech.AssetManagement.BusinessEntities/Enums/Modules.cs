@@ -42,6 +42,7 @@
         AccountType = 38,
         AccountClassification= 39,
         AccountGroup = 40,
-        CapitalizedCost = 41
+        CapitalizedCost = 41,
+        Disposal = 42
     }
 }

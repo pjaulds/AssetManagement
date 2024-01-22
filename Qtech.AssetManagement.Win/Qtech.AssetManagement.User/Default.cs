@@ -284,6 +284,9 @@ namespace Qtech.AssetManagement.User
                 row.Cells["mUpdate"].Value = check;
                 row.Cells["mDelete"].Value = check;
                 row.Cells["mPrint"].Value = check;
+                row.Cells["mNoted"].Value = check;
+                row.Cells["mChecked"].Value = check;
+                row.Cells["mApprove"].Value = check;
             }
         }
     }

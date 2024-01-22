@@ -162,5 +162,13 @@ namespace Qtech.AssetManagement.FixedAsset
                 ItemsdataGridView.Rows.Remove(ItemsdataGridView.CurrentRow);
             }
         }
+
+        private void Disposebutton_Click(object sender, EventArgs e)
+        {
+            DisposalForm dispose = new DisposalForm();
+            dispose.mFixedAssetId = mId;
+            dispose.mFixedAssetName = NametextBox.Text;
+            dispose.ShowDialog();
+        }
     }
 }

@@ -89,7 +89,7 @@ namespace Qtech.AssetManagement.Bll
                 {
                     foreach(UserAccess item in myUsers.mUserAccessCollection)
                     {
-                        item.mUserId = myUsers.mId;
+                        item.mUserId = id;
                         UserAccessManager.Save(item);
                     }
                 }

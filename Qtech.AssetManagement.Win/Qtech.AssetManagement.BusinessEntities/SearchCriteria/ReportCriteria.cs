@@ -16,6 +16,8 @@ namespace Qtech.AssetManagement.BusinessEntities
         public short mYear { get; set; }
         public int mAssetTypeId { get; set; }
 
+        public DateTime mEndDate { get; set; }
+
         public string mTableName { get; set; }
         
     }

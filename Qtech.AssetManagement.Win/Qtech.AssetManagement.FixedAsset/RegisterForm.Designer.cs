@@ -76,6 +76,7 @@
             this.mCapitalizedCost = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.mAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mIsJournalized = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel8.SuspendLayout();
@@ -298,7 +299,7 @@
             this.panel8.Controls.Add(this.Cancelbutton);
             this.panel8.Controls.Add(this.Savebutton);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel8.Location = new System.Drawing.Point(0, 528);
+            this.panel8.Location = new System.Drawing.Point(0, 526);
             this.panel8.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(1116, 23);
@@ -494,6 +495,7 @@
             this.Disposebutton.TabIndex = 189;
             this.Disposebutton.Text = "Dispose";
             this.Disposebutton.UseVisualStyleBackColor = false;
+            this.Disposebutton.Click += new System.EventHandler(this.Disposebutton_Click);
             // 
             // groupBox1
             // 
@@ -580,12 +582,23 @@
             this.mIsJournalized.HeaderText = "Journalized";
             this.mIsJournalized.Name = "mIsJournalized";
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.Black;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(0, 549);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1116, 2);
+            this.panel3.TabIndex = 256;
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1116, 551);
+            this.Controls.Add(this.panel8);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Disposebutton);
             this.Controls.Add(this.Depreciatebutton);
@@ -601,7 +614,6 @@
             this.Controls.Add(this.ModeltextBox);
             this.Controls.Add(this.FunctionalLocationtextBox);
             this.Controls.Add(this.label11);
-            this.Controls.Add(this.panel8);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
@@ -682,5 +694,6 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn mCapitalizedCost;
         private System.Windows.Forms.DataGridViewTextBoxColumn mAmount;
         private System.Windows.Forms.DataGridViewCheckBoxColumn mIsJournalized;
+        private System.Windows.Forms.Panel panel3;
     }
 }

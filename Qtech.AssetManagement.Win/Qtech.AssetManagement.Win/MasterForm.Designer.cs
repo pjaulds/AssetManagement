@@ -66,6 +66,7 @@
             this.unitToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.functionalLocationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.currencyToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.capitalizedCostToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fixedAssetManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fixedAssetProcurementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.purchaseRequestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -91,7 +92,6 @@
             this.expenseCategoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ultraTabbedMdiManager1 = new Infragistics.Win.UltraWinTabbedMdi.UltraTabbedMdiManager(this.components);
             this.BackgroundpictureBox = new System.Windows.Forms.PictureBox();
-            this.capitalizedCostToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ultraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BackgroundpictureBox)).BeginInit();
@@ -247,46 +247,46 @@
             // fixedAssetItemsToolStripMenuItem
             // 
             this.fixedAssetItemsToolStripMenuItem.Name = "fixedAssetItemsToolStripMenuItem";
-            this.fixedAssetItemsToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.fixedAssetItemsToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.fixedAssetItemsToolStripMenuItem.Tag = "Product";
-            this.fixedAssetItemsToolStripMenuItem.Text = "1. Fixed Asset Items";
+            this.fixedAssetItemsToolStripMenuItem.Text = "2.1. Fixed Asset Items";
             this.fixedAssetItemsToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // fixedAssetClassesToolStripMenuItem
             // 
             this.fixedAssetClassesToolStripMenuItem.Name = "fixedAssetClassesToolStripMenuItem";
-            this.fixedAssetClassesToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.fixedAssetClassesToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.fixedAssetClassesToolStripMenuItem.Tag = "AssetClass";
-            this.fixedAssetClassesToolStripMenuItem.Text = "2. Fixed Asset Classes";
+            this.fixedAssetClassesToolStripMenuItem.Text = "2.2. Fixed Asset Classes";
             this.fixedAssetClassesToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // fixedAssetTypesToolStripMenuItem
             // 
             this.fixedAssetTypesToolStripMenuItem.Name = "fixedAssetTypesToolStripMenuItem";
-            this.fixedAssetTypesToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.fixedAssetTypesToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.fixedAssetTypesToolStripMenuItem.Tag = "AssetType";
-            this.fixedAssetTypesToolStripMenuItem.Text = "3. Fixed Asset Types";
+            this.fixedAssetTypesToolStripMenuItem.Text = "2.3. Fixed Asset Types";
             this.fixedAssetTypesToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // toolStripMenuItem6
             // 
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(183, 6);
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(192, 6);
             // 
             // draftToolStripMenuItem
             // 
             this.draftToolStripMenuItem.Name = "draftToolStripMenuItem";
-            this.draftToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.draftToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.draftToolStripMenuItem.Tag = "FixedAsset";
-            this.draftToolStripMenuItem.Text = "4. Draft";
+            this.draftToolStripMenuItem.Text = "2.4. Draft";
             this.draftToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // registeredToolStripMenuItem
             // 
             this.registeredToolStripMenuItem.Name = "registeredToolStripMenuItem";
-            this.registeredToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.registeredToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
             this.registeredToolStripMenuItem.Tag = "FixedAssetRegistered";
-            this.registeredToolStripMenuItem.Text = "5. Registered";
+            this.registeredToolStripMenuItem.Text = "2.5. Registered";
             this.registeredToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
@@ -325,33 +325,33 @@
             // chartOfAccountsToolStripMenuItem
             // 
             this.chartOfAccountsToolStripMenuItem.Name = "chartOfAccountsToolStripMenuItem";
-            this.chartOfAccountsToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.chartOfAccountsToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.chartOfAccountsToolStripMenuItem.Tag = "ChartOfAccount";
-            this.chartOfAccountsToolStripMenuItem.Text = "1. Chart Of Accounts";
+            this.chartOfAccountsToolStripMenuItem.Text = "5.1. Chart Of Accounts";
             this.chartOfAccountsToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // accountTypeToolStripMenuItem
             // 
             this.accountTypeToolStripMenuItem.Name = "accountTypeToolStripMenuItem";
-            this.accountTypeToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.accountTypeToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.accountTypeToolStripMenuItem.Tag = "AccountType";
-            this.accountTypeToolStripMenuItem.Text = "2. Account Type";
+            this.accountTypeToolStripMenuItem.Text = "5.2. Account Type";
             this.accountTypeToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // accountClassificationsToolStripMenuItem
             // 
             this.accountClassificationsToolStripMenuItem.Name = "accountClassificationsToolStripMenuItem";
-            this.accountClassificationsToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.accountClassificationsToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.accountClassificationsToolStripMenuItem.Tag = "AccountClassification";
-            this.accountClassificationsToolStripMenuItem.Text = "3. Account Classifications";
+            this.accountClassificationsToolStripMenuItem.Text = "5.3. Account Classifications";
             this.accountClassificationsToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // accountGroupToolStripMenuItem
             // 
             this.accountGroupToolStripMenuItem.Name = "accountGroupToolStripMenuItem";
-            this.accountGroupToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.accountGroupToolStripMenuItem.Size = new System.Drawing.Size(218, 22);
             this.accountGroupToolStripMenuItem.Tag = "AccountGroup";
-            this.accountGroupToolStripMenuItem.Text = "4. Account Group";
+            this.accountGroupToolStripMenuItem.Text = "5.4. Account Group";
             this.accountGroupToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // paymentTermsToolStripMenuItem1
@@ -393,6 +393,14 @@
             this.currencyToolStripMenuItem1.Tag = "Currency";
             this.currencyToolStripMenuItem1.Text = "10. Currency";
             this.currencyToolStripMenuItem1.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
+            // 
+            // capitalizedCostToolStripMenuItem
+            // 
+            this.capitalizedCostToolStripMenuItem.Name = "capitalizedCostToolStripMenuItem";
+            this.capitalizedCostToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
+            this.capitalizedCostToolStripMenuItem.Tag = "CapitalizedCost";
+            this.capitalizedCostToolStripMenuItem.Text = "11. Capitalized Cost";
+            this.capitalizedCostToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // fixedAssetManagementToolStripMenuItem
             // 
@@ -615,14 +623,6 @@
             this.BackgroundpictureBox.TabIndex = 4;
             this.BackgroundpictureBox.TabStop = false;
             this.BackgroundpictureBox.Visible = false;
-            // 
-            // capitalizedCostToolStripMenuItem
-            // 
-            this.capitalizedCostToolStripMenuItem.Name = "capitalizedCostToolStripMenuItem";
-            this.capitalizedCostToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
-            this.capitalizedCostToolStripMenuItem.Tag = "CapitalizedCost";
-            this.capitalizedCostToolStripMenuItem.Text = "11. Capitalized Cost";
-            this.capitalizedCostToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // MasterForm
             // 

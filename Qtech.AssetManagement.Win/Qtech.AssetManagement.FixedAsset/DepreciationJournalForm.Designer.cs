@@ -68,6 +68,15 @@
             this.label12 = new System.Windows.Forms.Label();
             this.Savebutton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.Differencelabel = new System.Windows.Forms.Label();
+            this.Creditlabel = new System.Windows.Forms.Label();
+            this.Debitlabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -290,9 +299,9 @@
             this.label6.Location = new System.Drawing.Point(422, 60);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(124, 13);
+            this.label6.Size = new System.Drawing.Size(157, 13);
             this.label6.TabIndex = 198;
-            this.label6.Text = "Depreciation Journal";
+            this.label6.Text = "Depreciation Journal Entry";
             // 
             // panel2
             // 
@@ -374,6 +383,7 @@
             this.DepreciationExpensecheckBox.Size = new System.Drawing.Size(15, 14);
             this.DepreciationExpensecheckBox.TabIndex = 201;
             this.DepreciationExpensecheckBox.UseVisualStyleBackColor = true;
+            this.DepreciationExpensecheckBox.CheckedChanged += new System.EventHandler(this.DepreciationExpensecheckBox_CheckedChanged);
             // 
             // DepreciationExpenseAccountTitlelabel
             // 
@@ -426,6 +436,7 @@
             this.AccumulatedDepreciationcheckBox.Size = new System.Drawing.Size(15, 14);
             this.AccumulatedDepreciationcheckBox.TabIndex = 205;
             this.AccumulatedDepreciationcheckBox.UseVisualStyleBackColor = true;
+            this.AccumulatedDepreciationcheckBox.CheckedChanged += new System.EventHandler(this.DepreciationExpensecheckBox_CheckedChanged);
             // 
             // AccumulatedDepreciationAmountlabel
             // 
@@ -484,10 +495,10 @@
             this.Savebutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Savebutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Savebutton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.Savebutton.Location = new System.Drawing.Point(11, 310);
+            this.Savebutton.Location = new System.Drawing.Point(425, 310);
             this.Savebutton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Savebutton.Name = "Savebutton";
-            this.Savebutton.Size = new System.Drawing.Size(75, 23);
+            this.Savebutton.Size = new System.Drawing.Size(510, 23);
             this.Savebutton.TabIndex = 212;
             this.Savebutton.Text = "Save / Post";
             this.Savebutton.UseVisualStyleBackColor = false;
@@ -499,7 +510,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.Location = new System.Drawing.Point(90, 310);
+            this.button1.Location = new System.Drawing.Point(939, 310);
             this.button1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
@@ -508,12 +519,120 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label16
+            // 
+            this.label16.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(422, 253);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(144, 13);
+            this.label16.TabIndex = 214;
+            this.label16.Text = "Debit";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label17
+            // 
+            this.label17.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(422, 271);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(144, 13);
+            this.label17.TabIndex = 215;
+            this.label17.Text = "Credit";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label18
+            // 
+            this.label18.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(422, 290);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(144, 13);
+            this.label18.TabIndex = 216;
+            this.label18.Text = "Difference";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label19
+            // 
+            this.label19.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(570, 290);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(69, 13);
+            this.label19.TabIndex = 219;
+            this.label19.Text = "₱";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label20
+            // 
+            this.label20.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(570, 271);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(69, 13);
+            this.label20.TabIndex = 218;
+            this.label20.Text = "₱";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label21
+            // 
+            this.label21.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(570, 253);
+            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(69, 13);
+            this.label21.TabIndex = 217;
+            this.label21.Text = "₱";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // Differencelabel
+            // 
+            this.Differencelabel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Differencelabel.Location = new System.Drawing.Point(606, 290);
+            this.Differencelabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Differencelabel.Name = "Differencelabel";
+            this.Differencelabel.Size = new System.Drawing.Size(144, 13);
+            this.Differencelabel.TabIndex = 222;
+            this.Differencelabel.Text = "-";
+            this.Differencelabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // Creditlabel
+            // 
+            this.Creditlabel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Creditlabel.Location = new System.Drawing.Point(606, 271);
+            this.Creditlabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Creditlabel.Name = "Creditlabel";
+            this.Creditlabel.Size = new System.Drawing.Size(144, 13);
+            this.Creditlabel.TabIndex = 221;
+            this.Creditlabel.Text = "0.00";
+            this.Creditlabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // Debitlabel
+            // 
+            this.Debitlabel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Debitlabel.Location = new System.Drawing.Point(606, 253);
+            this.Debitlabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Debitlabel.Name = "Debitlabel";
+            this.Debitlabel.Size = new System.Drawing.Size(144, 13);
+            this.Debitlabel.TabIndex = 220;
+            this.Debitlabel.Text = "0.00";
+            this.Debitlabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // DepreciationJournalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1024, 345);
+            this.Controls.Add(this.Differencelabel);
+            this.Controls.Add(this.Creditlabel);
+            this.Controls.Add(this.Debitlabel);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.label21);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label16);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.Savebutton);
             this.Controls.Add(this.label12);
@@ -606,5 +725,14 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button Savebutton;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label Differencelabel;
+        private System.Windows.Forms.Label Creditlabel;
+        private System.Windows.Forms.Label Debitlabel;
     }
 }
