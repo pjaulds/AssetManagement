@@ -133,6 +133,9 @@ namespace Qtech.AssetManagement.Dal
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@asset_type_id", reportCriteria.mAssetTypeId);
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@year", reportCriteria.mYear);
 
+                if (reportCriteria.mEndDate != DateTime.MinValue)
+                    Helpers.CreateParameter(myCommand, DbType.DateTime, "@end_date_criteria", reportCriteria.mEndDate);
+
                 myCommand.Connection.Open();
                 dt.Load(myCommand.ExecuteReader());
                 myCommand.Connection.Close();

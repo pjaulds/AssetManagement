@@ -126,6 +126,7 @@ namespace Qtech.AssetManagement.DepreciationSchedule
                         SYDFullMonthMonthly.Viewer viewer = new SYDFullMonthMonthly.Viewer();
                         viewer.mId = mFaId;
                         viewer.mYear = Convert.ToInt16(YearnumericUpDown.Value);
+                        viewer.mEndDateCriteria = EndMonthdateTimePicker.Value.Date;
                         viewer.ShowDialog();
                     }
                     else//annual

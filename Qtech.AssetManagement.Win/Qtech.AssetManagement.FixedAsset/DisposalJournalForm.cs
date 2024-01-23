@@ -79,20 +79,28 @@ namespace Qtech.AssetManagement.FixedAsset
 
         private void LoadDepreciationFromFormControls(BusinessEntities.FixedAsset fa)
         {
-            if(fa.mDepreciationMethodId == (int)DepreciationMethodEnum.StraightLine)
-            {
-                if (fa.mAveragingMethodId == (int)AveragingMethodEnum.FullMonth)
-                {
-                    ReportCriteria criteria = new ReportCriteria();
-                    DateTime dateEnd = Convert.ToDateTime(DateDisposedtextBox.Text);
-                    criteria.mId = fa.mId;
-                    criteria.mYear = (short)dateEnd.Year;
-                    criteria.mEndDate = new DateTime(dateEnd.Year, dateEnd.Month, 1).AddDays(-1);
-
-                    AccumulatedDepreciationAccounttextBox.Text = Convert.ToDecimal(ReportManager.DepreciationScheduleStraightLineFullMonthMonthly(criteria).Rows[0]["Ending"]).ToString("N");
-                }
+            DataTable dt= new DataTable();
+            ReportCriteria criteria = new ReportCriteria();
+            if (fa.mAveragingMethodId == (int)AveragingMethodEnum.FullMonth)
+            {   
+                DateTime dateEnd = Convert.ToDateTime(DateDisposedtextBox.Text);
+                criteria.mId = fa.mId;
+                criteria.mYear = (short)dateEnd.Year;
+                criteria.mEndDate = new DateTime(dateEnd.Year, dateEnd.Month, 1).AddDays(-1);
             }
 
+            if (fa.mDepreciationMethodId == (int)DepreciationMethodEnum.StraightLine)
+                dt = ReportManager.DepreciationScheduleStraightLineFullMonthMonthly(criteria);
+            else if (fa.mDepreciationMethodId == (int)DepreciationMethodEnum.SYD)
+                dt = ReportManager.DepreciationScheduleSYDFullMonthMonthly(criteria);
+
+            if (dt.Rows.Count == 0)
+            {
+                MessageBox.Show("No records found.", "", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            AccumulatedDepreciationAccounttextBox.Text = Convert.ToDecimal(dt.Rows[0]["Ending"]).ToString("N");
             AccumulatedDepreciationAmountlabel.Text = AccumulatedDepreciationAccounttextBox.Text;
             
             decimal cost = Convert.ToDecimal(CosttextBox.Text);
@@ -101,6 +109,23 @@ namespace Qtech.AssetManagement.FixedAsset
             decimal gainLoss = salesProceeds - (cost - depreciation);
             GainLossDisposaltextBox.Text = gainLoss.ToString("N");
             GainLossAmountlabel.Text = GainLossDisposaltextBox.Text;
+
+            decimal debit1;
+            decimal.TryParse(CashAmountlabel.Text, out debit1);
+            decimal debit2;
+            decimal.TryParse(AccumulatedDepreciationAmountlabel.Text, out debit2);
+
+            decimal credit1;
+            decimal.TryParse(AssetAmountlabel.Text, out credit1);
+            decimal credit2;
+            decimal.TryParse(GainLossAmountlabel.Text, out credit2);
+
+            Debitlabel.Text = (debit1 + debit2).ToString("N");
+            Creditlabel.Text = (credit1 + credit2).ToString("N");
+
+            decimal difference = (debit1 + debit2) - (credit1 + credit2);
+            Differencelabel.Text = difference.ToString("N");
+            Differencelabel.ForeColor = difference != 0 ? Color.Red : Color.Black;
         }
 
         private void DisposalJournalForm_KeyDown(object sender, KeyEventArgs e)

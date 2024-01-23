@@ -29,6 +29,8 @@ namespace Qtech.AssetManagement.DepreciationSchedule.SYDFullMonthMonthly
 
         public short mYear { get; set; }
 
+        public DateTime mEndDateCriteria { get; set; }
+
         ReportParameter[] myReportParameter = new ReportParameter[4];
         private void CreateParameter(int index, string name, string value)
         {
@@ -43,6 +45,7 @@ namespace Qtech.AssetManagement.DepreciationSchedule.SYDFullMonthMonthly
             criteria.mId = mId;
             criteria.mAssetTypeId = mAssetTypeId;
             criteria.mYear = mYear;
+            criteria.mEndDate = mEndDateCriteria;
             
             ReportDataSource rds = new ReportDataSource("Fields", ReportManager.DepreciationScheduleSYDFullMonthMonthly(criteria));
             reportViewer1.LocalReport.DataSources.Clear();

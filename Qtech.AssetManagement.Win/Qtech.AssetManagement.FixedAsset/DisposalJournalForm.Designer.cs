@@ -232,6 +232,7 @@
             this.GainLossDisposaltextBox.ReadOnly = true;
             this.GainLossDisposaltextBox.Size = new System.Drawing.Size(250, 21);
             this.GainLossDisposaltextBox.TabIndex = 25;
+            this.GainLossDisposaltextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // SalesProceeds2textBox
             // 
@@ -243,6 +244,7 @@
             this.SalesProceeds2textBox.ReadOnly = true;
             this.SalesProceeds2textBox.Size = new System.Drawing.Size(250, 21);
             this.SalesProceeds2textBox.TabIndex = 24;
+            this.SalesProceeds2textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // AccumulatedDepreciationAccounttextBox
             // 
@@ -254,6 +256,7 @@
             this.AccumulatedDepreciationAccounttextBox.ReadOnly = true;
             this.AccumulatedDepreciationAccounttextBox.Size = new System.Drawing.Size(250, 21);
             this.AccumulatedDepreciationAccounttextBox.TabIndex = 23;
+            this.AccumulatedDepreciationAccounttextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // CosttextBox
             // 
@@ -265,6 +268,7 @@
             this.CosttextBox.ReadOnly = true;
             this.CosttextBox.Size = new System.Drawing.Size(250, 21);
             this.CosttextBox.TabIndex = 22;
+            this.CosttextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // label7
             // 
@@ -496,6 +500,9 @@
             // AccumulatedDepreciationcheckBox
             // 
             this.AccumulatedDepreciationcheckBox.AutoSize = true;
+            this.AccumulatedDepreciationcheckBox.Checked = true;
+            this.AccumulatedDepreciationcheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.AccumulatedDepreciationcheckBox.Enabled = false;
             this.AccumulatedDepreciationcheckBox.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.AccumulatedDepreciationcheckBox.Location = new System.Drawing.Point(919, 141);
             this.AccumulatedDepreciationcheckBox.Name = "AccumulatedDepreciationcheckBox";
@@ -538,6 +545,9 @@
             // DepreciationExpensecheckBox
             // 
             this.DepreciationExpensecheckBox.AutoSize = true;
+            this.DepreciationExpensecheckBox.Checked = true;
+            this.DepreciationExpensecheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.DepreciationExpensecheckBox.Enabled = false;
             this.DepreciationExpensecheckBox.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.DepreciationExpensecheckBox.Location = new System.Drawing.Point(919, 121);
             this.DepreciationExpensecheckBox.Name = "DepreciationExpensecheckBox";
@@ -640,6 +650,7 @@
             // GainLosscheckBox
             // 
             this.GainLosscheckBox.AutoSize = true;
+            this.GainLosscheckBox.Enabled = false;
             this.GainLosscheckBox.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.GainLosscheckBox.Location = new System.Drawing.Point(919, 181);
             this.GainLosscheckBox.Name = "GainLosscheckBox";
@@ -682,6 +693,7 @@
             // AssetcheckBox
             // 
             this.AssetcheckBox.AutoSize = true;
+            this.AssetcheckBox.Enabled = false;
             this.AssetcheckBox.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.AssetcheckBox.Location = new System.Drawing.Point(919, 161);
             this.AssetcheckBox.Name = "AssetcheckBox";
