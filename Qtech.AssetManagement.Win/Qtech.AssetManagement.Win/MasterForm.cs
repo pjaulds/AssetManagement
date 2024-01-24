@@ -524,6 +524,17 @@ namespace Qtech.AssetManagement.Win
                     }
                     else capitalizedCostForm.Select();
                     break;
+                case "Disposed":
+                    if (!AllowToAccess((Int32)Modules.Disposal)) return;
+                    FixedAsset.DisposedForm disposedForm = null;
+                    if ((disposedForm = (FixedAsset.DisposedForm)IsFormAlreadyOpen(typeof(FixedAsset.DisposedForm))) == null)
+                    {
+                        FixedAsset.DisposedForm disposedFormChild = new FixedAsset.DisposedForm();
+                        disposedFormChild.MdiParent = this;
+                        disposedFormChild.Show();
+                    }
+                    else disposedForm.Select();
+                    break;
             }
         }
 
@@ -556,14 +567,16 @@ namespace Qtech.AssetManagement.Win
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ICRUD frm_activeform = (ICRUD)this.ActiveMdiChild;
-            frm_activeform.SaveRecords();
+            ICRUD myChildForm = this.ActiveMdiChild as ICRUD;
+            if (myChildForm != null)
+                myChildForm.SaveRecords();
         }
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ICRUD frmActiveform = (ICRUD)this.ActiveMdiChild;
-            frmActiveform.NewRecord();
+            ICRUD myChildForm = this.ActiveMdiChild as ICRUD;
+            if (myChildForm != null)
+                myChildForm.NewRecord();
         }
 
         private void MasterForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -576,8 +589,9 @@ namespace Qtech.AssetManagement.Win
 
         private void printToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ICRUD frmActiveform = (ICRUD)this.ActiveMdiChild;
-            frmActiveform.PrintRecords();
+            ICRUD myChildForm = this.ActiveMdiChild as ICRUD;
+            if (myChildForm != null)
+                myChildForm.PrintRecords();
         }
 
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)

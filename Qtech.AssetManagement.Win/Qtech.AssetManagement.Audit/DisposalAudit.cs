@@ -40,6 +40,16 @@ namespace Qtech.AssetManagement.Audit
                 audit_collection.Add(audit);
             }
 
+            if (disposal.mGainLosses != disposalOld.mGainLosses)
+            {
+                audit = new BusinessEntities.Audit();
+                LoadCommonData(ref audit, disposal);
+                audit.mField = "Gain Loss";
+                audit.mOldValue = disposalOld.mGainLosses.ToString();
+                audit.mNewValue = disposal.mGainLosses.ToString();
+                audit_collection.Add(audit);
+            }
+
             if (disposal.mCashAccountId != disposalOld.mCashAccountId)
             {
                 audit = new BusinessEntities.Audit();
@@ -57,16 +67,6 @@ namespace Qtech.AssetManagement.Audit
                 audit.mField = "Gain Loss Account ";
                 audit.mOldValue = disposalOld.mGainLossAccountName.ToString();
                 audit.mNewValue = disposal.mGainLossAccountName.ToString();
-                audit_collection.Add(audit);
-            }
-
-            if (disposal.mDate != disposalOld.mDate)
-            {
-                audit = new BusinessEntities.Audit();
-                LoadCommonData(ref audit, disposal);
-                audit.mField = "Date";
-                audit.mOldValue = disposalOld.mDate.ToString();
-                audit.mNewValue = disposal.mDate.ToString();
                 audit_collection.Add(audit);
             }
 

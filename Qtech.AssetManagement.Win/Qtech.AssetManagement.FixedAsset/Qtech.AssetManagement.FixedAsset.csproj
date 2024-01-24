@@ -91,6 +91,12 @@
     <Compile Include="DisposalJournalForm.Designer.cs">
       <DependentUpon>DisposalJournalForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="DisposedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisposedForm.Designer.cs">
+      <DependentUpon>DisposedForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -154,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DisposalJournalForm.resx">
       <DependentUpon>DisposalJournalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisposedForm.resx">
+      <DependentUpon>DisposedForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">

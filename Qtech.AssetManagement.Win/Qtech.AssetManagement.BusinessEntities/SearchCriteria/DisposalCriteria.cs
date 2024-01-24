@@ -8,5 +8,7 @@ namespace Qtech.AssetManagement.BusinessEntities
 {
     public class DisposalCriteria : Disposal
     {
+        public DateTime mStartDate { get; set; }
+        public DateTime mEndDate { get; set; }
     }
 }

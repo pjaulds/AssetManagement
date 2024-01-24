@@ -42,9 +42,9 @@ namespace Qtech.AssetManagement.FixedAsset
             myDisposal.mFixedAssetId = mFixedAssetId;
             myDisposal.mDateDisposed = Convert.ToDateTime(DateDisposedtextBox.Text);
             myDisposal.mSalesProceeds = ControlUtil.TextBoxDecimal(SalesProceedstextBox);
+            myDisposal.mGainLosses = ControlUtil.TextBoxDecimal(GainLossDisposaltextBox);
             myDisposal.mCashAccountId = mCashAccountId;
             myDisposal.mGainLossAccountId = mGainLossAccountId;
-            myDisposal.mDate = DateTime.Now.Date;
             myDisposal.mUserId = SessionUtil.mUser.mId;
         }
 
@@ -152,6 +152,20 @@ namespace Qtech.AssetManagement.FixedAsset
         private void Savebutton_Click(object sender, EventArgs e)
         {
             //check if exists
+            decimal difference = 0;
+            if(!decimal.TryParse(Differencelabel.Text, out difference))
+            {
+                MessageBox.Show("Invalid input detected.\nDifference cannot be read as valid number.", "Dispose", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            if (difference != 0)
+            {
+                MessageBox.Show("Invalid input detected.\nDifference must be zero.", "Dispose", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+
             DisposalCriteria criteria = new DisposalCriteria();
             criteria.mFixedAssetId = mFixedAssetId;
             if(DisposalManager.SelectCountForGetList(criteria)>0)

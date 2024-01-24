@@ -48,6 +48,12 @@ namespace Qtech.AssetManagement.Dal
 
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@fixed_asset_id", disposalCriteria.mFixedAssetId);
 
+                if (disposalCriteria.mStartDate != DateTime.MinValue)
+                    Helpers.CreateParameter(myCommand, DbType.DateTime, "@start_date", disposalCriteria.mStartDate);
+
+                if (disposalCriteria.mEndDate != DateTime.MinValue)
+                    Helpers.CreateParameter(myCommand, DbType.DateTime, "@end_date", disposalCriteria.mEndDate);
+
                 myCommand.Connection.Open();
                 using (DbDataReader myReader = myCommand.ExecuteReader())
                 {
@@ -107,10 +113,9 @@ namespace Qtech.AssetManagement.Dal
                 if (myDisposal.mDateDisposed != DateTime.MinValue)
                     Helpers.CreateParameter(myCommand, DbType.DateTime, "@date_disposed", myDisposal.mDateDisposed);
                 Helpers.CreateParameter(myCommand, DbType.Decimal, "@sales_proceeds", myDisposal.mSalesProceeds);
+                Helpers.CreateParameter(myCommand, DbType.Decimal, "@gain_losses", myDisposal.mGainLosses);
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@cash_account_id", myDisposal.mCashAccountId);
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@gain_loss_account_id", myDisposal.mGainLossAccountId);
-                if (myDisposal.mDate != DateTime.MinValue)
-                    Helpers.CreateParameter(myCommand, DbType.DateTime, "@date", myDisposal.mDate);
 
                 Helpers.SetSaveParameters(myCommand, myDisposal);
 
@@ -161,12 +166,15 @@ namespace Qtech.AssetManagement.Dal
             if (myDataRecord["date_disposed"] != DBNull.Value)
                 disposal.mDateDisposed = myDataRecord.GetDateTime(myDataRecord.GetOrdinal("date_disposed"));
             disposal.mSalesProceeds = myDataRecord.GetDecimal(myDataRecord.GetOrdinal("sales_proceeds"));
+            disposal.mGainLosses = myDataRecord.GetDecimal(myDataRecord.GetOrdinal("gain_losses"));
             disposal.mCashAccountName = myDataRecord.GetString(myDataRecord.GetOrdinal("cash_account_name"));
             disposal.mCashAccountId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("cash_account_id"));
             disposal.mGainLossAccountName = myDataRecord.GetString(myDataRecord.GetOrdinal("gain_loss_account_name"));
             disposal.mGainLossAccountId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("gain_loss_account_id"));
-            if (myDataRecord["date"] != DBNull.Value)
-                disposal.mDate = myDataRecord.GetDateTime(myDataRecord.GetOrdinal("date"));
+            
+            disposal.mAssetTypeName = myDataRecord.GetString(myDataRecord.GetOrdinal("asset_type_name"));
+            disposal.mAssetNo = myDataRecord.GetString(myDataRecord.GetOrdinal("asset_no"));
+            disposal.mPurchaseDate = myDataRecord.GetDateTime(myDataRecord.GetOrdinal("purchase_date"));
             return disposal;
         }
     }

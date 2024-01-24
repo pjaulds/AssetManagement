@@ -404,7 +404,6 @@
             // 
             this.EndMonthdateTimePicker.CustomFormat = "MMMM";
             this.EndMonthdateTimePicker.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.EndMonthdateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.EndMonthdateTimePicker.Location = new System.Drawing.Point(145, 198);
             this.EndMonthdateTimePicker.Name = "EndMonthdateTimePicker";
             this.EndMonthdateTimePicker.Size = new System.Drawing.Size(250, 21);
@@ -417,9 +416,9 @@
             this.label5.Location = new System.Drawing.Point(11, 203);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 13);
+            this.label5.Size = new System.Drawing.Size(57, 13);
             this.label5.TabIndex = 25;
-            this.label5.Text = "End Month";
+            this.label5.Text = "End Date";
             // 
             // SupportingScheduleForm
             // 

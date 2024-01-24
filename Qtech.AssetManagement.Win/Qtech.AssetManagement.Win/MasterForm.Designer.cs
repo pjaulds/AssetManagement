@@ -92,6 +92,7 @@
             this.expenseCategoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ultraTabbedMdiManager1 = new Infragistics.Win.UltraWinTabbedMdi.UltraTabbedMdiManager(this.components);
             this.BackgroundpictureBox = new System.Windows.Forms.PictureBox();
+            this.disposedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ultraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BackgroundpictureBox)).BeginInit();
@@ -239,7 +240,8 @@
             this.fixedAssetTypesToolStripMenuItem,
             this.toolStripMenuItem6,
             this.draftToolStripMenuItem,
-            this.registeredToolStripMenuItem});
+            this.registeredToolStripMenuItem,
+            this.disposedToolStripMenuItem});
             this.fixedAssetToolStripMenuItem.Name = "fixedAssetToolStripMenuItem";
             this.fixedAssetToolStripMenuItem.Size = new System.Drawing.Size(198, 22);
             this.fixedAssetToolStripMenuItem.Text = "2. Fixed Asset";
@@ -624,6 +626,14 @@
             this.BackgroundpictureBox.TabStop = false;
             this.BackgroundpictureBox.Visible = false;
             // 
+            // disposedToolStripMenuItem
+            // 
+            this.disposedToolStripMenuItem.Name = "disposedToolStripMenuItem";
+            this.disposedToolStripMenuItem.Size = new System.Drawing.Size(195, 22);
+            this.disposedToolStripMenuItem.Tag = "Disposed";
+            this.disposedToolStripMenuItem.Text = "2.6. Disposed";
+            this.disposedToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
+            // 
             // MasterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -710,6 +720,7 @@
         private System.Windows.Forms.ToolStripMenuItem quotationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem purchaseVoucherToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem capitalizedCostToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem disposedToolStripMenuItem;
     }
 }
 
