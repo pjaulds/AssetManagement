@@ -19,11 +19,11 @@ namespace Qtech.AssetManagement.Utilities
                 //clear contained controls
                 if (ctl.Controls.Count > 0) Controls(ctl);
 
-                if (ctl is TextBox)
-                    ((TextBox)ctl).CharacterCasing = CharacterCasing.Upper;
+                //if (ctl is TextBox)
+                //    ((TextBox)ctl).CharacterCasing = CharacterCasing.Upper;
 
-                if (ctl is UltraTextEditor)
-                    ((UltraTextEditor)ctl).CharacterCasing = CharacterCasing.Upper;
+                //if (ctl is UltraTextEditor)
+                //    ((UltraTextEditor)ctl).CharacterCasing = CharacterCasing.Upper;
 
                 if (ctl is Button)
                     ((Button)ctl).BackColor = Color.FromArgb(28, 97, 161);

@@ -42,6 +42,7 @@
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn22 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mProvince");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn23 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mCountry");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn24 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mZipCode");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn3 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mActive");
             Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance5 = new Infragistics.Win.Appearance();
@@ -106,6 +107,7 @@
             this.Cancelbutton = new System.Windows.Forms.Button();
             this.Savebutton = new System.Windows.Forms.Button();
             this.collapsePanelControl1 = new Qtech.AssetManagement.Controls.CollapsePanelControl();
+            this.ActivecheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -156,27 +158,74 @@
             ultraGridColumn15.CellAppearance = appearance2;
             ultraGridColumn15.Header.Caption = "Code";
             ultraGridColumn15.Header.VisiblePosition = 1;
+            ultraGridColumn15.RowLayoutColumnInfo.OriginX = 2;
+            ultraGridColumn15.RowLayoutColumnInfo.OriginY = 0;
             ultraGridColumn15.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(0, 23);
+            ultraGridColumn15.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn15.RowLayoutColumnInfo.SpanY = 2;
             ultraGridColumn16.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
             ultraGridColumn16.Header.Caption = "Name";
             ultraGridColumn16.Header.VisiblePosition = 2;
+            ultraGridColumn16.RowLayoutColumnInfo.OriginX = 4;
+            ultraGridColumn16.RowLayoutColumnInfo.OriginY = 0;
             ultraGridColumn16.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(350, 0);
+            ultraGridColumn16.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn16.RowLayoutColumnInfo.SpanY = 2;
             ultraGridColumn17.Header.Caption = "Parent";
             ultraGridColumn17.Header.VisiblePosition = 3;
+            ultraGridColumn17.RowLayoutColumnInfo.OriginX = 6;
+            ultraGridColumn17.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn17.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn17.RowLayoutColumnInfo.SpanY = 2;
             ultraGridColumn18.Header.Caption = "Status";
             ultraGridColumn18.Header.VisiblePosition = 4;
+            ultraGridColumn18.RowLayoutColumnInfo.OriginX = 8;
+            ultraGridColumn18.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn18.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn18.RowLayoutColumnInfo.SpanY = 2;
             ultraGridColumn19.Header.Caption = "Address";
             ultraGridColumn19.Header.VisiblePosition = 5;
+            ultraGridColumn19.RowLayoutColumnInfo.OriginX = 10;
+            ultraGridColumn19.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn19.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn19.RowLayoutColumnInfo.SpanY = 2;
             ultraGridColumn20.Header.Caption = "Street";
             ultraGridColumn20.Header.VisiblePosition = 6;
+            ultraGridColumn20.RowLayoutColumnInfo.OriginX = 12;
+            ultraGridColumn20.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn20.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn20.RowLayoutColumnInfo.SpanY = 2;
             ultraGridColumn21.Header.Caption = "City";
             ultraGridColumn21.Header.VisiblePosition = 7;
+            ultraGridColumn21.RowLayoutColumnInfo.OriginX = 14;
+            ultraGridColumn21.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn21.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn21.RowLayoutColumnInfo.SpanY = 2;
             ultraGridColumn22.Header.Caption = "Province";
             ultraGridColumn22.Header.VisiblePosition = 8;
+            ultraGridColumn22.RowLayoutColumnInfo.OriginX = 16;
+            ultraGridColumn22.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn22.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn22.RowLayoutColumnInfo.SpanY = 2;
             ultraGridColumn23.Header.Caption = "Country";
             ultraGridColumn23.Header.VisiblePosition = 9;
+            ultraGridColumn23.RowLayoutColumnInfo.OriginX = 18;
+            ultraGridColumn23.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn23.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn23.RowLayoutColumnInfo.SpanY = 2;
             ultraGridColumn24.Header.Caption = "Zip Code";
             ultraGridColumn24.Header.VisiblePosition = 10;
+            ultraGridColumn24.RowLayoutColumnInfo.OriginX = 20;
+            ultraGridColumn24.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn24.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn24.RowLayoutColumnInfo.SpanY = 2;
+            ultraGridColumn3.Header.Caption = "Active";
+            ultraGridColumn3.Header.VisiblePosition = 11;
+            ultraGridColumn3.RowLayoutColumnInfo.OriginX = 0;
+            ultraGridColumn3.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn3.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(65, 0);
+            ultraGridColumn3.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn3.RowLayoutColumnInfo.SpanY = 2;
             ultraGridBand1.Columns.AddRange(new object[] {
             ultraGridColumn14,
             ultraGridColumn15,
@@ -188,7 +237,8 @@
             ultraGridColumn21,
             ultraGridColumn22,
             ultraGridColumn23,
-            ultraGridColumn24});
+            ultraGridColumn24,
+            ultraGridColumn3});
             ultraGridBand1.RowLayoutStyle = Infragistics.Win.UltraWinGrid.RowLayoutStyle.ColumnLayout;
             this.ultraGrid1.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
             this.ultraGrid1.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
@@ -269,6 +319,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.ActivecheckBox);
             this.panel1.Controls.Add(this.FunctionalLocationultraCombo);
             this.panel1.Controls.Add(this.label16);
             this.panel1.Controls.Add(this.ZipCodetextBox);
@@ -739,6 +790,17 @@
             this.collapsePanelControl1.TabIndex = 178;
             this.collapsePanelControl1._HidePanel += new System.EventHandler(this.collapsePanelControl1__HidePanel);
             // 
+            // ActivecheckBox
+            // 
+            this.ActivecheckBox.AutoSize = true;
+            this.ActivecheckBox.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.ActivecheckBox.Location = new System.Drawing.Point(607, 56);
+            this.ActivecheckBox.Name = "ActivecheckBox";
+            this.ActivecheckBox.Size = new System.Drawing.Size(56, 17);
+            this.ActivecheckBox.TabIndex = 48;
+            this.ActivecheckBox.Text = "Active";
+            this.ActivecheckBox.UseVisualStyleBackColor = true;
+            // 
             // Default
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -803,5 +865,6 @@
         private System.Windows.Forms.TextBox StreettextBox;
         private System.Windows.Forms.TextBox AddressNametextBox;
         private Infragistics.Win.UltraWinGrid.UltraCombo FunctionalLocationultraCombo;
+        private System.Windows.Forms.CheckBox ActivecheckBox;
     }
 }

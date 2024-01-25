@@ -114,13 +114,26 @@
             ultraGridColumn2.CellAppearance = appearance2;
             ultraGridColumn2.Header.Caption = "Code";
             ultraGridColumn2.Header.VisiblePosition = 1;
+            ultraGridColumn2.RowLayoutColumnInfo.OriginX = 2;
+            ultraGridColumn2.RowLayoutColumnInfo.OriginY = 0;
             ultraGridColumn2.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(0, 23);
+            ultraGridColumn2.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn2.RowLayoutColumnInfo.SpanY = 2;
             ultraGridColumn3.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
-            ultraGridColumn3.Header.Caption = "Title";
+            ultraGridColumn3.Header.Caption = "Name";
             ultraGridColumn3.Header.VisiblePosition = 2;
+            ultraGridColumn3.RowLayoutColumnInfo.OriginX = 4;
+            ultraGridColumn3.RowLayoutColumnInfo.OriginY = 0;
             ultraGridColumn3.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(350, 0);
-            ultraGridColumn4.Header.Caption = "Post";
+            ultraGridColumn3.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn3.RowLayoutColumnInfo.SpanY = 2;
+            ultraGridColumn4.Header.Caption = "Active";
             ultraGridColumn4.Header.VisiblePosition = 3;
+            ultraGridColumn4.RowLayoutColumnInfo.OriginX = 0;
+            ultraGridColumn4.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn4.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(65, 0);
+            ultraGridColumn4.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn4.RowLayoutColumnInfo.SpanY = 2;
             ultraGridBand1.Columns.AddRange(new object[] {
             ultraGridColumn1,
             ultraGridColumn2,
@@ -222,9 +235,9 @@
             this.PostcheckBox.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.PostcheckBox.Location = new System.Drawing.Point(119, 61);
             this.PostcheckBox.Name = "PostcheckBox";
-            this.PostcheckBox.Size = new System.Drawing.Size(47, 17);
+            this.PostcheckBox.Size = new System.Drawing.Size(56, 17);
             this.PostcheckBox.TabIndex = 12;
-            this.PostcheckBox.Text = "Post";
+            this.PostcheckBox.Text = "Active";
             this.PostcheckBox.UseVisualStyleBackColor = true;
             // 
             // NametextBox
@@ -262,9 +275,9 @@
             this.label1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(7, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 13);
+            this.label1.Size = new System.Drawing.Size(34, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Title";
+            this.label1.Text = "Name";
             // 
             // label4
             // 

@@ -50,6 +50,8 @@ namespace Qtech.AssetManagement.BusinessEntities
         [Display(Name = "Zip Code")]
         public String mZipCode { get; set; }
 
+        [Display(Name = "Active")]
+        public bool mActive { get; set; }
         #endregion
     }
 }

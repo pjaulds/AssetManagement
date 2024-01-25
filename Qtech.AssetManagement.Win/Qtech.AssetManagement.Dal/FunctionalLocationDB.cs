@@ -126,6 +126,7 @@ namespace Qtech.AssetManagement.Dal
                 Helpers.CreateParameter(myCommand, DbType.String, "@province", myFunctionalLocation.mProvince);
                 Helpers.CreateParameter(myCommand, DbType.String, "@country", myFunctionalLocation.mCountry);
                 Helpers.CreateParameter(myCommand, DbType.String, "@zip_code", myFunctionalLocation.mZipCode);
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@active", myFunctionalLocation.mActive);
 
                 Helpers.SetSaveParameters(myCommand, myFunctionalLocation);
 
@@ -182,6 +183,7 @@ namespace Qtech.AssetManagement.Dal
             functionallocation.mProvince = myDataRecord.GetString(myDataRecord.GetOrdinal("province"));
             functionallocation.mCountry = myDataRecord.GetString(myDataRecord.GetOrdinal("country"));
             functionallocation.mZipCode = myDataRecord.GetString(myDataRecord.GetOrdinal("zip_code"));
+            functionallocation.mActive = myDataRecord.GetBoolean(myDataRecord.GetOrdinal("active"));
             return functionallocation;
         }
     }

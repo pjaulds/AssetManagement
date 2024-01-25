@@ -79,6 +79,7 @@ namespace Qtech.AssetManagement.Maintenance.Currency
             myCurrency.mId = int.Parse(Idlabel.Text);
             myCurrency.mCode = CodetextBox.Text;
             myCurrency.mName = NametextBox.Text;
+            myCurrency.mActive = ActivecheckBox.Checked;
             myCurrency.mUserId = SessionUtil.mUser.mId;
         }
 
@@ -87,6 +88,7 @@ namespace Qtech.AssetManagement.Maintenance.Currency
             Idlabel.Text = myCurrency.mId.ToString();
             CodetextBox.Text = myCurrency.mCode;
             NametextBox.Text = myCurrency.mName;
+            ActivecheckBox.Checked = myCurrency.mActive;
         }
 
         private void EndEditing()

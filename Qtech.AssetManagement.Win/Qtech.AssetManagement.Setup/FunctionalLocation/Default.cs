@@ -88,6 +88,7 @@ namespace Qtech.AssetManagement.Setup.FunctionalLocation
             myFunctionalLocation.mProvince = ProvincetextBox.Text;
             myFunctionalLocation.mCountry = CountrytextBox.Text;
             myFunctionalLocation.mZipCode = ZipCodetextBox.Text;
+            myFunctionalLocation.mActive = ActivecheckBox.Checked;
             myFunctionalLocation.mUserId = SessionUtil.mUser.mId;
         }
 
@@ -104,6 +105,7 @@ namespace Qtech.AssetManagement.Setup.FunctionalLocation
             ProvincetextBox.Text = myFunctionalLocation.mProvince;
             CountrytextBox.Text = myFunctionalLocation.mCountry;
             ZipCodetextBox.Text = myFunctionalLocation.mZipCode;
+            ActivecheckBox.Checked = myFunctionalLocation.mActive;
         }
 
         private void EndEditing()

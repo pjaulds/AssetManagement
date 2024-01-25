@@ -81,7 +81,7 @@ namespace Qtech.AssetManagement.Utilities
             myUltraCombo.ValueMember = "mId";
             myUltraCombo.DisplayMember = "mName";
 
-            myUltraCombo.SetDataBinding(FunctionalLocationManager.GetList(), null, true);
+            myUltraCombo.SetDataBinding(FunctionalLocationManager.GetList().Where(x => x.mActive).ToList(), null, true);
             myUltraCombo.Refresh();
         }
         
@@ -235,7 +235,7 @@ namespace Qtech.AssetManagement.Utilities
             myUltraCombo.ValueMember = "mId";
             myUltraCombo.DisplayMember = "mName";
 
-            myUltraCombo.SetDataBinding(CurrencyManager.GetList(), null, true);
+            myUltraCombo.SetDataBinding(CurrencyManager.GetList().Where(x => x.mActive).ToList(), null, true);
             myUltraCombo.Refresh();
         }
     }

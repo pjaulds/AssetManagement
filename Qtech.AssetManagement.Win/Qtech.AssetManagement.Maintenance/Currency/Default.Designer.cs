@@ -34,6 +34,7 @@
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn2 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mCode");
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn3 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mName");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn4 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mActive");
             Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance5 = new Infragistics.Win.Appearance();
@@ -62,6 +63,7 @@
             this.Cancelbutton = new System.Windows.Forms.Button();
             this.Savebutton = new System.Windows.Forms.Button();
             this.collapsePanelControl1 = new Qtech.AssetManagement.Controls.CollapsePanelControl();
+            this.ActivecheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -100,6 +102,7 @@
             // 
             // ultraGrid1
             // 
+            this.ultraGrid1.DataMember = null;
             appearance1.BackColor = System.Drawing.SystemColors.Window;
             appearance1.BorderColor = System.Drawing.SystemColors.InactiveCaption;
             this.ultraGrid1.DisplayLayout.Appearance = appearance1;
@@ -112,15 +115,31 @@
             ultraGridColumn2.CellAppearance = appearance2;
             ultraGridColumn2.Header.Caption = "Code";
             ultraGridColumn2.Header.VisiblePosition = 1;
+            ultraGridColumn2.RowLayoutColumnInfo.OriginX = 2;
+            ultraGridColumn2.RowLayoutColumnInfo.OriginY = 0;
             ultraGridColumn2.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(0, 23);
+            ultraGridColumn2.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn2.RowLayoutColumnInfo.SpanY = 2;
             ultraGridColumn3.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
-            ultraGridColumn3.Header.Caption = "Title";
+            ultraGridColumn3.Header.Caption = "Name";
             ultraGridColumn3.Header.VisiblePosition = 2;
+            ultraGridColumn3.RowLayoutColumnInfo.OriginX = 4;
+            ultraGridColumn3.RowLayoutColumnInfo.OriginY = 0;
             ultraGridColumn3.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(350, 0);
+            ultraGridColumn3.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn3.RowLayoutColumnInfo.SpanY = 2;
+            ultraGridColumn4.Header.Caption = "Active";
+            ultraGridColumn4.Header.VisiblePosition = 3;
+            ultraGridColumn4.RowLayoutColumnInfo.OriginX = 0;
+            ultraGridColumn4.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn4.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(65, 0);
+            ultraGridColumn4.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn4.RowLayoutColumnInfo.SpanY = 2;
             ultraGridBand1.Columns.AddRange(new object[] {
             ultraGridColumn1,
             ultraGridColumn2,
-            ultraGridColumn3});
+            ultraGridColumn3,
+            ultraGridColumn4});
             ultraGridBand1.RowLayoutStyle = Infragistics.Win.UltraWinGrid.RowLayoutStyle.ColumnLayout;
             this.ultraGrid1.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
             this.ultraGrid1.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
@@ -201,6 +220,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.ActivecheckBox);
             this.panel1.Controls.Add(this.NametextBox);
             this.panel1.Controls.Add(this.CodetextBox);
             this.panel1.Controls.Add(this.panel2);
@@ -245,9 +265,9 @@
             this.label1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(7, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 13);
+            this.label1.Size = new System.Drawing.Size(34, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Title";
+            this.label1.Text = "Name";
             // 
             // label4
             // 
@@ -359,6 +379,17 @@
             this.collapsePanelControl1.TabIndex = 178;
             this.collapsePanelControl1._HidePanel += new System.EventHandler(this.collapsePanelControl1__HidePanel);
             // 
+            // ActivecheckBox
+            // 
+            this.ActivecheckBox.AutoSize = true;
+            this.ActivecheckBox.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.ActivecheckBox.Location = new System.Drawing.Point(119, 61);
+            this.ActivecheckBox.Name = "ActivecheckBox";
+            this.ActivecheckBox.Size = new System.Drawing.Size(56, 17);
+            this.ActivecheckBox.TabIndex = 49;
+            this.ActivecheckBox.Text = "Active";
+            this.ActivecheckBox.UseVisualStyleBackColor = true;
+            // 
             // Default
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -403,5 +434,6 @@
         private System.Windows.Forms.Button Cancelbutton;
         private System.Windows.Forms.TextBox NametextBox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox ActivecheckBox;
     }
 }

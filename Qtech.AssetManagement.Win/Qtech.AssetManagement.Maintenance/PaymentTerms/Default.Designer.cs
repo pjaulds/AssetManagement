@@ -109,7 +109,7 @@
             ultraGridColumn1.Header.VisiblePosition = 0;
             ultraGridColumn1.Hidden = true;
             ultraGridColumn3.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
-            ultraGridColumn3.Header.Caption = "Title";
+            ultraGridColumn3.Header.Caption = "Name";
             ultraGridColumn3.Header.VisiblePosition = 1;
             ultraGridColumn3.RowLayoutColumnInfo.OriginX = 2;
             ultraGridColumn3.RowLayoutColumnInfo.OriginY = 0;

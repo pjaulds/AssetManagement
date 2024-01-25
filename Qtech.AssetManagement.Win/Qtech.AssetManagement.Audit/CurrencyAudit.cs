@@ -30,6 +30,16 @@ namespace Qtech.AssetManagement.Audit
                 audit_collection.Add(audit);
             }
 
+            if (currency.mActive != currencyOld.mActive)
+            {
+                audit = new BusinessEntities.Audit();
+                LoadCommonData(ref audit, currency);
+                audit.mField = "active";
+                audit.mOldValue = currencyOld.mActive.ToString();
+                audit.mNewValue = currency.mActive.ToString();
+                audit_collection.Add(audit);
+            }
+
             return audit_collection;
         }
 

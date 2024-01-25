@@ -110,6 +110,16 @@ namespace Qtech.AssetManagement.Audit
                 audit_collection.Add(audit);
             }
 
+            if (functionallocation.mActive != functionallocationOld.mActive)
+            {
+                audit = new BusinessEntities.Audit();
+                LoadCommonData(ref audit, functionallocation);
+                audit.mField = "Active";
+                audit.mOldValue = functionallocationOld.mActive.ToString();
+                audit.mNewValue = functionallocation.mActive.ToString();
+                audit_collection.Add(audit);
+            }
+
             return audit_collection;
         }
 

@@ -117,6 +117,7 @@ namespace Qtech.AssetManagement.Dal
 
                 Helpers.CreateParameter(myCommand, DbType.String, "@code", myCurrency.mCode);
                 Helpers.CreateParameter(myCommand, DbType.String, "@name", myCurrency.mName);
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@active", myCurrency.mActive);
 
                 Helpers.SetSaveParameters(myCommand, myCurrency);
 
@@ -164,6 +165,7 @@ namespace Qtech.AssetManagement.Dal
             currency.mId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("id"));
             currency.mCode = myDataRecord.GetString(myDataRecord.GetOrdinal("code"));
             currency.mName = myDataRecord.GetString(myDataRecord.GetOrdinal("name"));
+            currency.mActive = myDataRecord.GetBoolean(myDataRecord.GetOrdinal("active"));
             return currency;
         }
     }
