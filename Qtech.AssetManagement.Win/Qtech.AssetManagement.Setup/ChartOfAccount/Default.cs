@@ -74,24 +74,25 @@ namespace Qtech.AssetManagement.Setup.ChartOfAccount
             }
         }
 
-        private void LoadChartOfAccountFromFormControls(BusinessEntities.ChartOfAccount myUser)
+        private void LoadChartOfAccountFromFormControls(BusinessEntities.ChartOfAccount myChartOfAccount)
         {
-            myUser.mId = int.Parse(Idlabel.Text);
-            myUser.mAccountTypeId = ControlUtil.UltraComboReturnValue(AccountTypeutraCombo);
-            myUser.mAccountTypeName = AccountTypeutraCombo.Text;
-            myUser.mAccountGroupId = ControlUtil.UltraComboReturnValue(AccountGroupultraCombo);
-            myUser.mAccountGroupName = AccountGroupultraCombo.Text;
-            myUser.mAccountClassificationId = ControlUtil.UltraComboReturnValue(AccountClassificationultraCombo);
-            myUser.mAccountClassificationName = AccountClassificationultraCombo.Text;
-            myUser.mCode = CodetextBox.Text;
-            myUser.mName = NametextBox.Text;
-            myUser.mChartOfAccountMainId = ControlUtil.UltraComboReturnValue(MainAccountultraCombo);
-            myUser.mChartOfAccountMainName = MainAccountultraCombo.Text;
-            myUser.mChartOfAccountCloseId = ControlUtil.UltraComboReturnValue(ClosingAccountultraCombo);
-            myUser.mChartOfAccountCloseName = ClosingAccountultraCombo.Text;
-            myUser.mPayableSales = PayableradioButton.Checked;
-            myUser.mDebitCredit = DebitradioButton.Checked;
-            myUser.mUserId = SessionUtil.mUser.mId;
+            myChartOfAccount.mId = int.Parse(Idlabel.Text);
+            myChartOfAccount.mAccountTypeId = ControlUtil.UltraComboReturnValue(AccountTypeutraCombo);
+            myChartOfAccount.mAccountTypeName = AccountTypeutraCombo.Text;
+            myChartOfAccount.mAccountGroupId = ControlUtil.UltraComboReturnValue(AccountGroupultraCombo);
+            myChartOfAccount.mAccountGroupName = AccountGroupultraCombo.Text;
+            myChartOfAccount.mAccountClassificationId = ControlUtil.UltraComboReturnValue(AccountClassificationultraCombo);
+            myChartOfAccount.mAccountClassificationName = AccountClassificationultraCombo.Text;
+            myChartOfAccount.mCode = CodetextBox.Text;
+            myChartOfAccount.mName = NametextBox.Text;
+            myChartOfAccount.mChartOfAccountMainId = ControlUtil.UltraComboReturnValue(MainAccountultraCombo);
+            myChartOfAccount.mChartOfAccountMainName = MainAccountultraCombo.Text;
+            myChartOfAccount.mChartOfAccountCloseId = ControlUtil.UltraComboReturnValue(ClosingAccountultraCombo);
+            myChartOfAccount.mChartOfAccountCloseName = ClosingAccountultraCombo.Text;
+            myChartOfAccount.mPayableSales = PayableradioButton.Checked;
+            myChartOfAccount.mDebitCredit = DebitradioButton.Checked;
+            myChartOfAccount.mActive = ActivecheckBox.Checked;
+            myChartOfAccount.mUserId = SessionUtil.mUser.mId;
         }
 
         private void LoadFormControlsFromUser(BusinessEntities.ChartOfAccount myChartOfAccount)
@@ -108,6 +109,7 @@ namespace Qtech.AssetManagement.Setup.ChartOfAccount
             SalesradioButton.Checked = !myChartOfAccount.mPayableSales;
             DebitradioButton.Checked = myChartOfAccount.mDebitCredit;
             CreditradioButton.Checked = !myChartOfAccount.mDebitCredit;
+            ActivecheckBox.Checked = myChartOfAccount.mActive;
         }
 
         private void EndEditing()

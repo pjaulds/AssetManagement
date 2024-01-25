@@ -22,6 +22,8 @@ namespace Qtech.AssetManagement.BusinessEntities
         [NotNullOrEmpty(Message = "Please enter valid asset account name/title.")]
         public String mName { get; set; }
 
+        [Display(Name = "Active")]
+        public bool mActive { get; set; }
         #endregion
     }
 }

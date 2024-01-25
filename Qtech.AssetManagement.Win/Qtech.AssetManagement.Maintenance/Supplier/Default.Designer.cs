@@ -51,6 +51,7 @@
             Infragistics.Win.Appearance appearance9 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn12 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mBusinessStyle");
             Infragistics.Win.Appearance appearance10 = new Infragistics.Win.Appearance();
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn13 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mActive");
             Infragistics.Win.Appearance appearance11 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance12 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance13 = new Infragistics.Win.Appearance();
@@ -66,9 +67,26 @@
             this.ultraGrid1 = new Infragistics.Win.UltraWinGrid.UltraGrid();
             this.expandPanelControl1 = new Qtech.AssetManagement.Controls.ExpandPanelControl();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BusinessStyletextBox = new System.Windows.Forms.TextBox();
+            this.WitholdingTaxtextBox = new System.Windows.Forms.TextBox();
+            this.VatRatetextBox = new System.Windows.Forms.TextBox();
+            this.VatRegisteredcheckBox = new System.Windows.Forms.CheckBox();
+            this.SalesPersontextBox = new System.Windows.Forms.TextBox();
+            this.EmailtextBox = new System.Windows.Forms.TextBox();
+            this.ContactNotextBox = new System.Windows.Forms.TextBox();
+            this.TintextBox = new System.Windows.Forms.TextBox();
+            this.AddresstextBox = new System.Windows.Forms.TextBox();
             this.NametextBox = new System.Windows.Forms.TextBox();
             this.CodetextBox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -79,23 +97,7 @@
             this.Cancelbutton = new System.Windows.Forms.Button();
             this.Savebutton = new System.Windows.Forms.Button();
             this.collapsePanelControl1 = new Qtech.AssetManagement.Controls.CollapsePanelControl();
-            this.TintextBox = new System.Windows.Forms.TextBox();
-            this.AddresstextBox = new System.Windows.Forms.TextBox();
-            this.EmailtextBox = new System.Windows.Forms.TextBox();
-            this.ContactNotextBox = new System.Windows.Forms.TextBox();
-            this.SalesPersontextBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.VatRegisteredcheckBox = new System.Windows.Forms.CheckBox();
-            this.BusinessStyletextBox = new System.Windows.Forms.TextBox();
-            this.WitholdingTaxtextBox = new System.Windows.Forms.TextBox();
-            this.VatRatetextBox = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.ActivecheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -147,54 +149,105 @@
             ultraGridColumn2.CellAppearance = appearance2;
             ultraGridColumn2.Header.Caption = "Code";
             ultraGridColumn2.Header.VisiblePosition = 1;
+            ultraGridColumn2.RowLayoutColumnInfo.OriginX = 2;
+            ultraGridColumn2.RowLayoutColumnInfo.OriginY = 0;
             ultraGridColumn2.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(0, 23);
+            ultraGridColumn2.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn2.RowLayoutColumnInfo.SpanY = 2;
             ultraGridColumn3.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
-            ultraGridColumn3.Header.Caption = "Title";
+            ultraGridColumn3.Header.Caption = "Name";
             ultraGridColumn3.Header.VisiblePosition = 2;
+            ultraGridColumn3.RowLayoutColumnInfo.OriginX = 4;
+            ultraGridColumn3.RowLayoutColumnInfo.OriginY = 0;
             ultraGridColumn3.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(350, 0);
+            ultraGridColumn3.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn3.RowLayoutColumnInfo.SpanY = 2;
             ultraGridColumn4.Header.Caption = "Address";
             ultraGridColumn4.Header.VisiblePosition = 3;
+            ultraGridColumn4.RowLayoutColumnInfo.OriginX = 6;
+            ultraGridColumn4.RowLayoutColumnInfo.OriginY = 0;
             ultraGridColumn4.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 0);
+            ultraGridColumn4.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn4.RowLayoutColumnInfo.SpanY = 2;
             appearance3.TextHAlignAsString = "Center";
             ultraGridColumn5.CellAppearance = appearance3;
             ultraGridColumn5.Header.Caption = "TIN";
             ultraGridColumn5.Header.VisiblePosition = 4;
+            ultraGridColumn5.RowLayoutColumnInfo.OriginX = 8;
+            ultraGridColumn5.RowLayoutColumnInfo.OriginY = 0;
             ultraGridColumn5.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(150, 0);
+            ultraGridColumn5.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn5.RowLayoutColumnInfo.SpanY = 2;
             appearance4.TextHAlignAsString = "Center";
             ultraGridColumn6.CellAppearance = appearance4;
             ultraGridColumn6.Header.Caption = "Contact No";
             ultraGridColumn6.Header.VisiblePosition = 5;
+            ultraGridColumn6.RowLayoutColumnInfo.OriginX = 10;
+            ultraGridColumn6.RowLayoutColumnInfo.OriginY = 0;
             ultraGridColumn6.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(150, 0);
+            ultraGridColumn6.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn6.RowLayoutColumnInfo.SpanY = 2;
             appearance5.TextHAlignAsString = "Center";
             ultraGridColumn7.CellAppearance = appearance5;
             ultraGridColumn7.Header.Caption = "Email";
             ultraGridColumn7.Header.VisiblePosition = 6;
+            ultraGridColumn7.RowLayoutColumnInfo.OriginX = 12;
+            ultraGridColumn7.RowLayoutColumnInfo.OriginY = 0;
             ultraGridColumn7.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(150, 0);
+            ultraGridColumn7.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn7.RowLayoutColumnInfo.SpanY = 2;
             appearance6.TextHAlignAsString = "Center";
             ultraGridColumn8.CellAppearance = appearance6;
             ultraGridColumn8.Header.Caption = "Sales Person";
             ultraGridColumn8.Header.VisiblePosition = 7;
+            ultraGridColumn8.RowLayoutColumnInfo.OriginX = 14;
+            ultraGridColumn8.RowLayoutColumnInfo.OriginY = 0;
             ultraGridColumn8.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(150, 0);
+            ultraGridColumn8.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn8.RowLayoutColumnInfo.SpanY = 2;
             appearance7.TextHAlignAsString = "Center";
             ultraGridColumn9.CellAppearance = appearance7;
             ultraGridColumn9.Header.Caption = "VAT Registered";
             ultraGridColumn9.Header.VisiblePosition = 8;
+            ultraGridColumn9.RowLayoutColumnInfo.OriginX = 16;
+            ultraGridColumn9.RowLayoutColumnInfo.OriginY = 0;
             ultraGridColumn9.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(150, 0);
+            ultraGridColumn9.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn9.RowLayoutColumnInfo.SpanY = 2;
             appearance8.TextHAlignAsString = "Center";
             ultraGridColumn10.CellAppearance = appearance8;
             ultraGridColumn10.Header.Caption = "VAT Rate";
             ultraGridColumn10.Header.VisiblePosition = 9;
+            ultraGridColumn10.RowLayoutColumnInfo.OriginX = 18;
+            ultraGridColumn10.RowLayoutColumnInfo.OriginY = 0;
             ultraGridColumn10.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(150, 0);
+            ultraGridColumn10.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn10.RowLayoutColumnInfo.SpanY = 2;
             appearance9.TextHAlignAsString = "Center";
             ultraGridColumn11.CellAppearance = appearance9;
             ultraGridColumn11.Header.Caption = "Witholding Tax";
             ultraGridColumn11.Header.VisiblePosition = 10;
+            ultraGridColumn11.RowLayoutColumnInfo.OriginX = 20;
+            ultraGridColumn11.RowLayoutColumnInfo.OriginY = 0;
             ultraGridColumn11.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(150, 0);
+            ultraGridColumn11.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn11.RowLayoutColumnInfo.SpanY = 2;
             appearance10.TextHAlignAsString = "Center";
             ultraGridColumn12.CellAppearance = appearance10;
             ultraGridColumn12.Header.Caption = "Business Style";
             ultraGridColumn12.Header.VisiblePosition = 11;
+            ultraGridColumn12.RowLayoutColumnInfo.OriginX = 22;
+            ultraGridColumn12.RowLayoutColumnInfo.OriginY = 0;
             ultraGridColumn12.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(150, 0);
+            ultraGridColumn12.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn12.RowLayoutColumnInfo.SpanY = 2;
+            ultraGridColumn13.Header.Caption = "Active";
+            ultraGridColumn13.Header.VisiblePosition = 12;
+            ultraGridColumn13.RowLayoutColumnInfo.OriginX = 0;
+            ultraGridColumn13.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn13.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(65, 0);
+            ultraGridColumn13.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn13.RowLayoutColumnInfo.SpanY = 2;
             ultraGridBand1.Columns.AddRange(new object[] {
             ultraGridColumn1,
             ultraGridColumn2,
@@ -207,7 +260,8 @@
             ultraGridColumn9,
             ultraGridColumn10,
             ultraGridColumn11,
-            ultraGridColumn12});
+            ultraGridColumn12,
+            ultraGridColumn13});
             ultraGridBand1.RowLayoutStyle = Infragistics.Win.UltraWinGrid.RowLayoutStyle.ColumnLayout;
             this.ultraGrid1.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
             this.ultraGrid1.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
@@ -288,6 +342,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.ActivecheckBox);
             this.panel1.Controls.Add(this.BusinessStyletextBox);
             this.panel1.Controls.Add(this.WitholdingTaxtextBox);
             this.panel1.Controls.Add(this.VatRatetextBox);
@@ -305,6 +360,90 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(377, 439);
             this.panel1.TabIndex = 177;
+            // 
+            // BusinessStyletextBox
+            // 
+            this.BusinessStyletextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BusinessStyletextBox.Location = new System.Drawing.Point(119, 327);
+            this.BusinessStyletextBox.MaxLength = 150;
+            this.BusinessStyletextBox.Name = "BusinessStyletextBox";
+            this.BusinessStyletextBox.Size = new System.Drawing.Size(250, 21);
+            this.BusinessStyletextBox.TabIndex = 19;
+            // 
+            // WitholdingTaxtextBox
+            // 
+            this.WitholdingTaxtextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WitholdingTaxtextBox.Location = new System.Drawing.Point(119, 300);
+            this.WitholdingTaxtextBox.MaxLength = 150;
+            this.WitholdingTaxtextBox.Name = "WitholdingTaxtextBox";
+            this.WitholdingTaxtextBox.Size = new System.Drawing.Size(250, 21);
+            this.WitholdingTaxtextBox.TabIndex = 18;
+            // 
+            // VatRatetextBox
+            // 
+            this.VatRatetextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VatRatetextBox.Location = new System.Drawing.Point(119, 273);
+            this.VatRatetextBox.MaxLength = 50;
+            this.VatRatetextBox.Name = "VatRatetextBox";
+            this.VatRatetextBox.Size = new System.Drawing.Size(250, 21);
+            this.VatRatetextBox.TabIndex = 17;
+            // 
+            // VatRegisteredcheckBox
+            // 
+            this.VatRegisteredcheckBox.AutoSize = true;
+            this.VatRegisteredcheckBox.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.VatRegisteredcheckBox.Location = new System.Drawing.Point(119, 250);
+            this.VatRegisteredcheckBox.Name = "VatRegisteredcheckBox";
+            this.VatRegisteredcheckBox.Size = new System.Drawing.Size(100, 17);
+            this.VatRegisteredcheckBox.TabIndex = 16;
+            this.VatRegisteredcheckBox.Text = "VAT Registered";
+            this.VatRegisteredcheckBox.UseVisualStyleBackColor = true;
+            // 
+            // SalesPersontextBox
+            // 
+            this.SalesPersontextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SalesPersontextBox.Location = new System.Drawing.Point(119, 223);
+            this.SalesPersontextBox.MaxLength = 150;
+            this.SalesPersontextBox.Name = "SalesPersontextBox";
+            this.SalesPersontextBox.Size = new System.Drawing.Size(250, 21);
+            this.SalesPersontextBox.TabIndex = 15;
+            // 
+            // EmailtextBox
+            // 
+            this.EmailtextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EmailtextBox.Location = new System.Drawing.Point(119, 196);
+            this.EmailtextBox.MaxLength = 150;
+            this.EmailtextBox.Name = "EmailtextBox";
+            this.EmailtextBox.Size = new System.Drawing.Size(250, 21);
+            this.EmailtextBox.TabIndex = 14;
+            // 
+            // ContactNotextBox
+            // 
+            this.ContactNotextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ContactNotextBox.Location = new System.Drawing.Point(119, 169);
+            this.ContactNotextBox.MaxLength = 50;
+            this.ContactNotextBox.Name = "ContactNotextBox";
+            this.ContactNotextBox.Size = new System.Drawing.Size(250, 21);
+            this.ContactNotextBox.TabIndex = 13;
+            // 
+            // TintextBox
+            // 
+            this.TintextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TintextBox.Location = new System.Drawing.Point(119, 142);
+            this.TintextBox.MaxLength = 150;
+            this.TintextBox.Name = "TintextBox";
+            this.TintextBox.Size = new System.Drawing.Size(250, 21);
+            this.TintextBox.TabIndex = 12;
+            // 
+            // AddresstextBox
+            // 
+            this.AddresstextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddresstextBox.Location = new System.Drawing.Point(119, 61);
+            this.AddresstextBox.MaxLength = 50;
+            this.AddresstextBox.Multiline = true;
+            this.AddresstextBox.Name = "AddresstextBox";
+            this.AddresstextBox.Size = new System.Drawing.Size(250, 75);
+            this.AddresstextBox.TabIndex = 11;
             // 
             // NametextBox
             // 
@@ -343,15 +482,95 @@
             this.panel2.Size = new System.Drawing.Size(113, 439);
             this.panel2.TabIndex = 0;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(7, 330);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(75, 13);
+            this.label11.TabIndex = 11;
+            this.label11.Text = "Business Style";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(7, 303);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(78, 13);
+            this.label10.TabIndex = 10;
+            this.label10.Text = "Witholding Tax";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(7, 276);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(52, 13);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "VAT Rate";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(7, 226);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(68, 13);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Sales Person";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(7, 199);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(31, 13);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Email";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(7, 172);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(65, 13);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Contact No.";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(7, 145);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(24, 13);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "TIN";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(7, 64);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(46, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Address";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(7, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 13);
+            this.label1.Size = new System.Drawing.Size(34, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Title";
+            this.label1.Text = "Name";
             // 
             // label4
             // 
@@ -375,6 +594,7 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(845, 20);
             this.panel11.TabIndex = 176;
+            this.panel11.Tag = "headerpanel";
             // 
             // label18
             // 
@@ -462,169 +682,16 @@
             this.collapsePanelControl1.TabIndex = 178;
             this.collapsePanelControl1._HidePanel += new System.EventHandler(this.collapsePanelControl1__HidePanel);
             // 
-            // TintextBox
+            // ActivecheckBox
             // 
-            this.TintextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TintextBox.Location = new System.Drawing.Point(119, 142);
-            this.TintextBox.MaxLength = 150;
-            this.TintextBox.Name = "TintextBox";
-            this.TintextBox.Size = new System.Drawing.Size(250, 21);
-            this.TintextBox.TabIndex = 12;
-            // 
-            // AddresstextBox
-            // 
-            this.AddresstextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddresstextBox.Location = new System.Drawing.Point(119, 61);
-            this.AddresstextBox.MaxLength = 50;
-            this.AddresstextBox.Multiline = true;
-            this.AddresstextBox.Name = "AddresstextBox";
-            this.AddresstextBox.Size = new System.Drawing.Size(250, 75);
-            this.AddresstextBox.TabIndex = 11;
-            // 
-            // EmailtextBox
-            // 
-            this.EmailtextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EmailtextBox.Location = new System.Drawing.Point(119, 196);
-            this.EmailtextBox.MaxLength = 150;
-            this.EmailtextBox.Name = "EmailtextBox";
-            this.EmailtextBox.Size = new System.Drawing.Size(250, 21);
-            this.EmailtextBox.TabIndex = 14;
-            // 
-            // ContactNotextBox
-            // 
-            this.ContactNotextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ContactNotextBox.Location = new System.Drawing.Point(119, 169);
-            this.ContactNotextBox.MaxLength = 50;
-            this.ContactNotextBox.Name = "ContactNotextBox";
-            this.ContactNotextBox.Size = new System.Drawing.Size(250, 21);
-            this.ContactNotextBox.TabIndex = 13;
-            // 
-            // SalesPersontextBox
-            // 
-            this.SalesPersontextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SalesPersontextBox.Location = new System.Drawing.Point(119, 223);
-            this.SalesPersontextBox.MaxLength = 150;
-            this.SalesPersontextBox.Name = "SalesPersontextBox";
-            this.SalesPersontextBox.Size = new System.Drawing.Size(250, 21);
-            this.SalesPersontextBox.TabIndex = 15;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(7, 64);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Address";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(7, 145);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(24, 13);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "TIN";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(7, 172);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(65, 13);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Contact No.";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(7, 199);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(31, 13);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Email";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(7, 226);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 13);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "Sales Person";
-            // 
-            // VatRegisteredcheckBox
-            // 
-            this.VatRegisteredcheckBox.AutoSize = true;
-            this.VatRegisteredcheckBox.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.VatRegisteredcheckBox.Location = new System.Drawing.Point(119, 250);
-            this.VatRegisteredcheckBox.Name = "VatRegisteredcheckBox";
-            this.VatRegisteredcheckBox.Size = new System.Drawing.Size(100, 17);
-            this.VatRegisteredcheckBox.TabIndex = 16;
-            this.VatRegisteredcheckBox.Text = "VAT Registered";
-            this.VatRegisteredcheckBox.UseVisualStyleBackColor = true;
-            // 
-            // BusinessStyletextBox
-            // 
-            this.BusinessStyletextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BusinessStyletextBox.Location = new System.Drawing.Point(119, 327);
-            this.BusinessStyletextBox.MaxLength = 150;
-            this.BusinessStyletextBox.Name = "BusinessStyletextBox";
-            this.BusinessStyletextBox.Size = new System.Drawing.Size(250, 21);
-            this.BusinessStyletextBox.TabIndex = 19;
-            // 
-            // WitholdingTaxtextBox
-            // 
-            this.WitholdingTaxtextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.WitholdingTaxtextBox.Location = new System.Drawing.Point(119, 300);
-            this.WitholdingTaxtextBox.MaxLength = 150;
-            this.WitholdingTaxtextBox.Name = "WitholdingTaxtextBox";
-            this.WitholdingTaxtextBox.Size = new System.Drawing.Size(250, 21);
-            this.WitholdingTaxtextBox.TabIndex = 18;
-            // 
-            // VatRatetextBox
-            // 
-            this.VatRatetextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VatRatetextBox.Location = new System.Drawing.Point(119, 273);
-            this.VatRatetextBox.MaxLength = 50;
-            this.VatRatetextBox.Name = "VatRatetextBox";
-            this.VatRatetextBox.Size = new System.Drawing.Size(250, 21);
-            this.VatRatetextBox.TabIndex = 17;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(7, 276);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(52, 13);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "VAT Rate";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(7, 303);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(78, 13);
-            this.label10.TabIndex = 10;
-            this.label10.Text = "Witholding Tax";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(7, 330);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(75, 13);
-            this.label11.TabIndex = 11;
-            this.label11.Text = "Business Style";
+            this.ActivecheckBox.AutoSize = true;
+            this.ActivecheckBox.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.ActivecheckBox.Location = new System.Drawing.Point(119, 354);
+            this.ActivecheckBox.Name = "ActivecheckBox";
+            this.ActivecheckBox.Size = new System.Drawing.Size(56, 17);
+            this.ActivecheckBox.TabIndex = 20;
+            this.ActivecheckBox.Text = "Active";
+            this.ActivecheckBox.UseVisualStyleBackColor = true;
             // 
             // Default
             // 
@@ -687,5 +754,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.CheckBox ActivecheckBox;
     }
 }

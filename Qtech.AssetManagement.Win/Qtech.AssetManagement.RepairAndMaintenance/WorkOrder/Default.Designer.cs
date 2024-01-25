@@ -129,6 +129,25 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.expandPanelControl1 = new Qtech.AssetManagement.Controls.ExpandPanelControl();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.hoursUserControl1 = new Qtech.AssetManagement.RepairAndMaintenance.WorkOrder.HoursUserControl();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.DescriptiontextBox = new System.Windows.Forms.TextBox();
+            this.FunctionalLocationtextBox = new System.Windows.Forms.TextBox();
+            this.AssetNotextBox = new System.Windows.Forms.TextBox();
+            this.MRNotextBox = new System.Windows.Forms.TextBox();
+            this.DatetextBox = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.MaintenanceRequestIdlabel = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.ExpectedEnddateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.ExpectedStartdateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -147,20 +166,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.DescriptiontextBox = new System.Windows.Forms.TextBox();
-            this.FunctionalLocationtextBox = new System.Windows.Forms.TextBox();
-            this.AssetNotextBox = new System.Windows.Forms.TextBox();
-            this.MRNotextBox = new System.Windows.Forms.TextBox();
-            this.DatetextBox = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.MaintenanceRequestIdlabel = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -169,11 +174,6 @@
             this.Cancelbutton = new System.Windows.Forms.Button();
             this.Savebutton = new System.Windows.Forms.Button();
             this.collapsePanelControl1 = new Qtech.AssetManagement.Controls.CollapsePanelControl();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.hoursUserControl1 = new Qtech.AssetManagement.RepairAndMaintenance.WorkOrder.HoursUserControl();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -181,19 +181,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.ultraGrid1)).BeginInit();
             this.panel13.SuspendLayout();
             this.panel14.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TradeultraCombo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MaintenanceJobTypeVariantultraCombo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MaintenanceJobTypeultraCombo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.WorkOrderTypeutraCombo)).BeginInit();
             this.panel4.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel8.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.tabControl1.SuspendLayout();
-            this.tabPage1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -495,6 +495,218 @@
             this.expandPanelControl1.Size = new System.Drawing.Size(15, 482);
             this.expandPanelControl1.TabIndex = 126;
             this.expandPanelControl1._ExpandPanel += new System.EventHandler(this.expandPanelControl1__ExpandPanel);
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl1.Location = new System.Drawing.Point(15, 296);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(845, 163);
+            this.tabControl1.TabIndex = 180;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.hoursUserControl1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(837, 137);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "Hours";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // hoursUserControl1
+            // 
+            this.hoursUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.hoursUserControl1.Location = new System.Drawing.Point(3, 3);
+            this.hoursUserControl1.mWorkOrderId = 0;
+            this.hoursUserControl1.Name = "hoursUserControl1";
+            this.hoursUserControl1.Size = new System.Drawing.Size(831, 131);
+            this.hoursUserControl1.TabIndex = 0;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(837, 137);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "Items";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.panel1);
+            this.panel5.Controls.Add(this.panel3);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(15, 20);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(845, 276);
+            this.panel5.TabIndex = 179;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.linkLabel1);
+            this.panel1.Controls.Add(this.DescriptiontextBox);
+            this.panel1.Controls.Add(this.FunctionalLocationtextBox);
+            this.panel1.Controls.Add(this.AssetNotextBox);
+            this.panel1.Controls.Add(this.MRNotextBox);
+            this.panel1.Controls.Add(this.DatetextBox);
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Location = new System.Drawing.Point(0, 6);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(377, 262);
+            this.panel1.TabIndex = 177;
+            this.panel1.TabStop = true;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.linkLabel1.Location = new System.Drawing.Point(301, 18);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(68, 13);
+            this.linkLabel1.TabIndex = 14;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Browse M.R.";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // DescriptiontextBox
+            // 
+            this.DescriptiontextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DescriptiontextBox.Location = new System.Drawing.Point(119, 142);
+            this.DescriptiontextBox.MaxLength = 150;
+            this.DescriptiontextBox.Multiline = true;
+            this.DescriptiontextBox.Name = "DescriptiontextBox";
+            this.DescriptiontextBox.ReadOnly = true;
+            this.DescriptiontextBox.Size = new System.Drawing.Size(250, 75);
+            this.DescriptiontextBox.TabIndex = 13;
+            this.DescriptiontextBox.TabStop = false;
+            // 
+            // FunctionalLocationtextBox
+            // 
+            this.FunctionalLocationtextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FunctionalLocationtextBox.Location = new System.Drawing.Point(119, 115);
+            this.FunctionalLocationtextBox.MaxLength = 150;
+            this.FunctionalLocationtextBox.Name = "FunctionalLocationtextBox";
+            this.FunctionalLocationtextBox.ReadOnly = true;
+            this.FunctionalLocationtextBox.Size = new System.Drawing.Size(250, 21);
+            this.FunctionalLocationtextBox.TabIndex = 12;
+            this.FunctionalLocationtextBox.TabStop = false;
+            // 
+            // AssetNotextBox
+            // 
+            this.AssetNotextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AssetNotextBox.Location = new System.Drawing.Point(119, 88);
+            this.AssetNotextBox.MaxLength = 150;
+            this.AssetNotextBox.Name = "AssetNotextBox";
+            this.AssetNotextBox.ReadOnly = true;
+            this.AssetNotextBox.Size = new System.Drawing.Size(250, 21);
+            this.AssetNotextBox.TabIndex = 11;
+            this.AssetNotextBox.TabStop = false;
+            // 
+            // MRNotextBox
+            // 
+            this.MRNotextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MRNotextBox.Location = new System.Drawing.Point(119, 61);
+            this.MRNotextBox.MaxLength = 150;
+            this.MRNotextBox.Name = "MRNotextBox";
+            this.MRNotextBox.ReadOnly = true;
+            this.MRNotextBox.Size = new System.Drawing.Size(250, 21);
+            this.MRNotextBox.TabIndex = 10;
+            this.MRNotextBox.TabStop = false;
+            // 
+            // DatetextBox
+            // 
+            this.DatetextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DatetextBox.Location = new System.Drawing.Point(119, 34);
+            this.DatetextBox.MaxLength = 50;
+            this.DatetextBox.Name = "DatetextBox";
+            this.DatetextBox.ReadOnly = true;
+            this.DatetextBox.Size = new System.Drawing.Size(250, 21);
+            this.DatetextBox.TabIndex = 9;
+            this.DatetextBox.TabStop = false;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel2.Controls.Add(this.MaintenanceRequestIdlabel);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label2);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Controls.Add(this.label4);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(113, 262);
+            this.panel2.TabIndex = 0;
+            // 
+            // MaintenanceRequestIdlabel
+            // 
+            this.MaintenanceRequestIdlabel.AutoSize = true;
+            this.MaintenanceRequestIdlabel.BackColor = System.Drawing.Color.Transparent;
+            this.MaintenanceRequestIdlabel.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MaintenanceRequestIdlabel.Location = new System.Drawing.Point(73, 69);
+            this.MaintenanceRequestIdlabel.Name = "MaintenanceRequestIdlabel";
+            this.MaintenanceRequestIdlabel.Size = new System.Drawing.Size(15, 13);
+            this.MaintenanceRequestIdlabel.TabIndex = 25;
+            this.MaintenanceRequestIdlabel.Tag = "id";
+            this.MaintenanceRequestIdlabel.Text = "0";
+            this.MaintenanceRequestIdlabel.Visible = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(6, 145);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(60, 13);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Description";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(6, 118);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(99, 13);
+            this.label5.TabIndex = 5;
+            this.label5.Text = "Functional Location";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 91);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Asset No.";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(6, 64);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(50, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "M.R. No.";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(6, 37);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(30, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Date";
             // 
             // panel3
             // 
@@ -965,167 +1177,6 @@
             this.label11.TabIndex = 2;
             this.label11.Text = "W.O. No.";
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.linkLabel1);
-            this.panel1.Controls.Add(this.DescriptiontextBox);
-            this.panel1.Controls.Add(this.FunctionalLocationtextBox);
-            this.panel1.Controls.Add(this.AssetNotextBox);
-            this.panel1.Controls.Add(this.MRNotextBox);
-            this.panel1.Controls.Add(this.DatetextBox);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(0, 6);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(377, 262);
-            this.panel1.TabIndex = 177;
-            this.panel1.TabStop = true;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.linkLabel1.Location = new System.Drawing.Point(301, 18);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(68, 13);
-            this.linkLabel1.TabIndex = 14;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Browse M.R.";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // DescriptiontextBox
-            // 
-            this.DescriptiontextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DescriptiontextBox.Location = new System.Drawing.Point(119, 142);
-            this.DescriptiontextBox.MaxLength = 150;
-            this.DescriptiontextBox.Multiline = true;
-            this.DescriptiontextBox.Name = "DescriptiontextBox";
-            this.DescriptiontextBox.ReadOnly = true;
-            this.DescriptiontextBox.Size = new System.Drawing.Size(250, 75);
-            this.DescriptiontextBox.TabIndex = 13;
-            this.DescriptiontextBox.TabStop = false;
-            // 
-            // FunctionalLocationtextBox
-            // 
-            this.FunctionalLocationtextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FunctionalLocationtextBox.Location = new System.Drawing.Point(119, 115);
-            this.FunctionalLocationtextBox.MaxLength = 150;
-            this.FunctionalLocationtextBox.Name = "FunctionalLocationtextBox";
-            this.FunctionalLocationtextBox.ReadOnly = true;
-            this.FunctionalLocationtextBox.Size = new System.Drawing.Size(250, 21);
-            this.FunctionalLocationtextBox.TabIndex = 12;
-            this.FunctionalLocationtextBox.TabStop = false;
-            // 
-            // AssetNotextBox
-            // 
-            this.AssetNotextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AssetNotextBox.Location = new System.Drawing.Point(119, 88);
-            this.AssetNotextBox.MaxLength = 150;
-            this.AssetNotextBox.Name = "AssetNotextBox";
-            this.AssetNotextBox.ReadOnly = true;
-            this.AssetNotextBox.Size = new System.Drawing.Size(250, 21);
-            this.AssetNotextBox.TabIndex = 11;
-            this.AssetNotextBox.TabStop = false;
-            // 
-            // MRNotextBox
-            // 
-            this.MRNotextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MRNotextBox.Location = new System.Drawing.Point(119, 61);
-            this.MRNotextBox.MaxLength = 150;
-            this.MRNotextBox.Name = "MRNotextBox";
-            this.MRNotextBox.ReadOnly = true;
-            this.MRNotextBox.Size = new System.Drawing.Size(250, 21);
-            this.MRNotextBox.TabIndex = 10;
-            this.MRNotextBox.TabStop = false;
-            // 
-            // DatetextBox
-            // 
-            this.DatetextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DatetextBox.Location = new System.Drawing.Point(119, 34);
-            this.DatetextBox.MaxLength = 50;
-            this.DatetextBox.Name = "DatetextBox";
-            this.DatetextBox.ReadOnly = true;
-            this.DatetextBox.Size = new System.Drawing.Size(250, 21);
-            this.DatetextBox.TabIndex = 9;
-            this.DatetextBox.TabStop = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel2.Controls.Add(this.MaintenanceRequestIdlabel);
-            this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(113, 262);
-            this.panel2.TabIndex = 0;
-            // 
-            // MaintenanceRequestIdlabel
-            // 
-            this.MaintenanceRequestIdlabel.AutoSize = true;
-            this.MaintenanceRequestIdlabel.BackColor = System.Drawing.Color.Transparent;
-            this.MaintenanceRequestIdlabel.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MaintenanceRequestIdlabel.Location = new System.Drawing.Point(73, 69);
-            this.MaintenanceRequestIdlabel.Name = "MaintenanceRequestIdlabel";
-            this.MaintenanceRequestIdlabel.Size = new System.Drawing.Size(15, 13);
-            this.MaintenanceRequestIdlabel.TabIndex = 25;
-            this.MaintenanceRequestIdlabel.Tag = "id";
-            this.MaintenanceRequestIdlabel.Text = "0";
-            this.MaintenanceRequestIdlabel.Visible = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 145);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(60, 13);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Description";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 118);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(99, 13);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "Functional Location";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, 91);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Asset No.";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 64);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(50, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "M.R. No.";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 37);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(30, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Date";
-            // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
@@ -1138,6 +1189,7 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(845, 20);
             this.panel11.TabIndex = 176;
+            this.panel11.Tag = "headerpanel";
             // 
             // label18
             // 
@@ -1225,57 +1277,6 @@
             this.collapsePanelControl1.TabIndex = 178;
             this.collapsePanelControl1._HidePanel += new System.EventHandler(this.collapsePanelControl1__HidePanel);
             // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.panel1);
-            this.panel5.Controls.Add(this.panel3);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(15, 20);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(845, 276);
-            this.panel5.TabIndex = 179;
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tabControl1.Location = new System.Drawing.Point(15, 296);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(845, 163);
-            this.tabControl1.TabIndex = 180;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.hoursUserControl1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(837, 137);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Hours";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(837, 137);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Items";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // hoursUserControl1
-            // 
-            this.hoursUserControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.hoursUserControl1.Location = new System.Drawing.Point(3, 3);
-            this.hoursUserControl1.mWorkOrderId = 0;
-            this.hoursUserControl1.Name = "hoursUserControl1";
-            this.hoursUserControl1.Size = new System.Drawing.Size(831, 131);
-            this.hoursUserControl1.TabIndex = 0;
-            // 
             // Default
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1293,6 +1294,13 @@
             this.panel13.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TradeultraCombo)).EndInit();
@@ -1301,16 +1309,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.WorkOrderTypeutraCombo)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.panel8.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.tabControl1.ResumeLayout(false);
-            this.tabPage1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

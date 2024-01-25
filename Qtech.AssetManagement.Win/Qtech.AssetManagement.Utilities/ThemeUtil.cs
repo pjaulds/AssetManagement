@@ -26,13 +26,27 @@ namespace Qtech.AssetManagement.Utilities
                     ((UltraTextEditor)ctl).CharacterCasing = CharacterCasing.Upper;
 
                 if (ctl is Button)
-                    ((Button)ctl).BackColor = Color.FromArgb(51, 63, 79);
+                    ((Button)ctl).BackColor = Color.FromArgb(28, 97, 161);
 
                 if (ctl is DataGridView)
                 {
                     DataGridViewColorTheme(((DataGridView)ctl));
                 }
 
+                ctl.Font = new Font("Arial", float.Parse("8.25"));
+                if (ctl.Tag != null)
+                {
+                    switch (ctl.Tag.ToString())
+                    {
+                        case "headerlabel":
+                            ctl.Font = new Font("Arial", float.Parse("8.25"), FontStyle.Bold);
+                            ctl.ForeColor = Color.WhiteSmoke;
+                            break;
+                        case "headerpanel"://51, 63, 79
+                            ctl.BackColor = Color.FromArgb(28, 97, 161);
+                            break;
+                    }
+                }
             }
         }
 
@@ -56,11 +70,11 @@ namespace Qtech.AssetManagement.Utilities
             grid.BackgroundColor = Color.White;
             grid.BorderStyle = BorderStyle.None;
             grid.GridColor = SystemColors.Control;
-            grid.Font = new Font("Tahoma", float.Parse("8.25"));
+            grid.Font = new Font("Arial", float.Parse("8.25"));
 
             //column header
-            grid.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(51, 63, 79);
-            grid.ColumnHeadersDefaultCellStyle.Font = new Font("Tahoma", float.Parse("8.25"));
+            grid.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(28, 97, 161);
+            grid.ColumnHeadersDefaultCellStyle.Font = new Font("Arial", 9);
             grid.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             grid.ColumnHeadersDefaultCellStyle.SelectionBackColor = grid.ColumnHeadersDefaultCellStyle.BackColor;
             grid.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
@@ -73,7 +87,7 @@ namespace Qtech.AssetManagement.Utilities
             grid.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
 
             //row
-            grid.RowsDefaultCellStyle.Font = new Font("Tahoma", float.Parse("8.25"));
+            grid.RowsDefaultCellStyle.Font = new Font("Arial", float.Parse("8.25"));
             grid.RowsDefaultCellStyle.BackColor = Color.White;
             grid.RowsDefaultCellStyle.SelectionBackColor = grid.ColumnHeadersDefaultCellStyle.SelectionBackColor;
         }
@@ -96,19 +110,20 @@ namespace Qtech.AssetManagement.Utilities
 
             //row
             e.Layout.Override.RowAppearance.TextVAlign = Infragistics.Win.VAlign.Middle;
-            e.Layout.Override.RowAppearance.FontData.Name = "Tahoma";
+            e.Layout.Override.RowAppearance.FontData.Name = "Arial";
             e.Layout.Override.RowAppearance.FontData.SizeInPoints = float.Parse("8.25");
 
             //seleted row
-            e.Layout.Override.ActiveRowAppearance.BackColor = Color.FromArgb(51, 63, 79);
+            e.Layout.Override.ActiveRowAppearance.BackColor = Color.FromArgb(28, 97, 161);
 
             //header backcolor
-            e.Layout.Override.HeaderAppearance.BackColor2 = Color.FromArgb(51, 63, 79);
-            e.Layout.Override.HeaderAppearance.BackColor = Color.FromArgb(51, 63, 79);
+            e.Layout.Override.HeaderAppearance.BackColor2 = Color.FromArgb(28, 97, 161);
+            e.Layout.Override.HeaderAppearance.BackColor = Color.FromArgb(28, 97, 161);
             e.Layout.Override.HeaderAppearance.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
-            e.Layout.Override.HeaderAppearance.FontData.Name = "Segoe UI Semibold";
+            e.Layout.Override.HeaderAppearance.FontData.Name = "Arial";
             e.Layout.Override.HeaderAppearance.FontData.SizeInPoints = float.Parse("9");
             e.Layout.Override.HeaderAppearance.ForeColor = Color.White;
+            e.Layout.Override.HeaderAppearance.TextHAlign = Infragistics.Win.HAlign.Center;
 
             //Remove expansion indicators and connectors
             e.Layout.Bands[0].Indentation = 0;

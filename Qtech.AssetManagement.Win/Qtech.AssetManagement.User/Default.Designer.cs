@@ -546,6 +546,7 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(845, 20);
             this.panel11.TabIndex = 176;
+            this.panel11.Tag = "headerpanel";
             // 
             // label18
             // 

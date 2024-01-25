@@ -88,6 +88,7 @@ namespace Qtech.AssetManagement.Maintenance.Supplier
             mySupplier.mVatRate = ControlUtil.TextBoxDecimal(VatRatetextBox);
             mySupplier.mWitholdingTax = ControlUtil.TextBoxDecimal(WitholdingTaxtextBox);
             mySupplier.mBusinessStyle = BusinessStyletextBox.Text;
+            mySupplier.mActive = ActivecheckBox.Checked;
             mySupplier.mUserId = SessionUtil.mUser.mId;
         }
 
@@ -105,6 +106,7 @@ namespace Qtech.AssetManagement.Maintenance.Supplier
             VatRatetextBox.Text = mySupplier.mVatRate.ToString();
             WitholdingTaxtextBox.Text = mySupplier.mWitholdingTax.ToString();
             BusinessStyletextBox.Text = mySupplier.mBusinessStyle;
+            ActivecheckBox.Checked = mySupplier.mActive;
         }
 
         private void EndEditing()

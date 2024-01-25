@@ -74,12 +74,13 @@ namespace Qtech.AssetManagement.Setup.AveragingMethod
             }
         }
 
-        private void LoadAveragingMethodFromFormControls(BusinessEntities.AveragingMethod myUser)
+        private void LoadAveragingMethodFromFormControls(BusinessEntities.AveragingMethod myAveragingMethod)
         {
-            myUser.mId = int.Parse(Idlabel.Text);
-            myUser.mCode = CodetextBox.Text;
-            myUser.mName = NametextBox.Text;
-            myUser.mUserId = SessionUtil.mUser.mId;
+            myAveragingMethod.mId = int.Parse(Idlabel.Text);
+            myAveragingMethod.mCode = CodetextBox.Text;
+            myAveragingMethod.mName = NametextBox.Text;
+            myAveragingMethod.mActive = ActivecheckBox.Checked;
+            myAveragingMethod.mUserId = SessionUtil.mUser.mId;
         }
 
         private void LoadFormControlsFromUser(BusinessEntities.AveragingMethod myAveragingMethod)
@@ -87,6 +88,7 @@ namespace Qtech.AssetManagement.Setup.AveragingMethod
             Idlabel.Text = myAveragingMethod.mId.ToString();
             CodetextBox.Text = myAveragingMethod.mCode;
             NametextBox.Text = myAveragingMethod.mName;
+            ActivecheckBox.Checked = myAveragingMethod.mActive;
         }
 
         private void EndEditing()

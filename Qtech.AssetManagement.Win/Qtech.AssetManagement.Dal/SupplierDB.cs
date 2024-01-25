@@ -126,6 +126,7 @@ namespace Qtech.AssetManagement.Dal
                 Helpers.CreateParameter(myCommand, DbType.Decimal, "@vat_rate", mySupplier.mVatRate);
                 Helpers.CreateParameter(myCommand, DbType.Decimal, "@witholding_tax", mySupplier.mWitholdingTax);
                 Helpers.CreateParameter(myCommand, DbType.String, "@business_style", string.IsNullOrEmpty(mySupplier.mBusinessStyle) ? "" : mySupplier.mBusinessStyle);
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@active", mySupplier.mActive);
 
                 Helpers.SetSaveParameters(myCommand, mySupplier);
 
@@ -182,6 +183,7 @@ namespace Qtech.AssetManagement.Dal
             supplier.mVatRate = myDataRecord.GetDecimal(myDataRecord.GetOrdinal("vat_rate"));
             supplier.mWitholdingTax = myDataRecord.GetDecimal(myDataRecord.GetOrdinal("witholding_tax"));
             supplier.mBusinessStyle = myDataRecord.GetString(myDataRecord.GetOrdinal("business_style"));
+            supplier.mActive = myDataRecord.GetBoolean(myDataRecord.GetOrdinal("active"));
             return supplier;
         }
     }

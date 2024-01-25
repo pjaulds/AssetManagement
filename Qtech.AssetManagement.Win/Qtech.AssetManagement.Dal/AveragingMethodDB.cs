@@ -117,6 +117,7 @@ namespace Qtech.AssetManagement.Dal
 
                 Helpers.CreateParameter(myCommand, DbType.String, "@code", myAveragingMethod.mCode);
                 Helpers.CreateParameter(myCommand, DbType.String, "@name", myAveragingMethod.mName);
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@active", myAveragingMethod.mActive);
 
                 Helpers.SetSaveParameters(myCommand, myAveragingMethod);
 
@@ -164,6 +165,7 @@ namespace Qtech.AssetManagement.Dal
             averagingmethod.mId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("id"));
             averagingmethod.mCode = myDataRecord.GetString(myDataRecord.GetOrdinal("code"));
             averagingmethod.mName = myDataRecord.GetString(myDataRecord.GetOrdinal("name"));
+            averagingmethod.mActive = myDataRecord.GetBoolean(myDataRecord.GetOrdinal("active"));
             return averagingmethod;
         }
     }

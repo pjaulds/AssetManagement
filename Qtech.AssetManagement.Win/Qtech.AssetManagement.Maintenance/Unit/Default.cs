@@ -74,12 +74,13 @@ namespace Qtech.AssetManagement.Maintenance.Unit
             }
         }
 
-        private void LoadUnitFromFormControls(BusinessEntities.Unit myUser)
+        private void LoadUnitFromFormControls(BusinessEntities.Unit myUnit)
         {
-            myUser.mId = int.Parse(Idlabel.Text);
-            myUser.mCode = CodetextBox.Text;
-            myUser.mName = NametextBox.Text;
-            myUser.mUserId = SessionUtil.mUser.mId;
+            myUnit.mId = int.Parse(Idlabel.Text);
+            myUnit.mCode = CodetextBox.Text;
+            myUnit.mName = NametextBox.Text;
+            myUnit.mActive = ActivecheckBox.Checked;
+            myUnit.mUserId = SessionUtil.mUser.mId;
         }
 
         private void LoadFormControlsFromUser(BusinessEntities.Unit myUnit)
@@ -87,6 +88,7 @@ namespace Qtech.AssetManagement.Maintenance.Unit
             Idlabel.Text = myUnit.mId.ToString();
             CodetextBox.Text = myUnit.mCode;
             NametextBox.Text = myUnit.mName;
+            ActivecheckBox.Checked = myUnit.mActive;
         }
 
         private void EndEditing()

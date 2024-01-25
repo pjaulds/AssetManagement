@@ -98,6 +98,7 @@
             this.ultraGrid1 = new Infragistics.Win.UltraWinGrid.UltraGrid();
             this.expandPanelControl1 = new Qtech.AssetManagement.Controls.ExpandPanelControl();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.PostcheckBox = new System.Windows.Forms.CheckBox();
             this.AssetClassultraCombo = new Infragistics.Win.UltraWinGrid.UltraCombo();
             this.AssetTypeultraCombo = new Infragistics.Win.UltraWinGrid.UltraCombo();
             this.UnitutraCombo = new Infragistics.Win.UltraWinGrid.UltraCombo();
@@ -117,7 +118,6 @@
             this.Cancelbutton = new System.Windows.Forms.Button();
             this.Savebutton = new System.Windows.Forms.Button();
             this.collapsePanelControl1 = new Qtech.AssetManagement.Controls.CollapsePanelControl();
-            this.PostcheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -159,7 +159,6 @@
             // 
             // ultraGrid1
             // 
-            this.ultraGrid1.DataMember = null;
             appearance1.BackColor = System.Drawing.SystemColors.Window;
             appearance1.BorderColor = System.Drawing.SystemColors.InactiveCaption;
             this.ultraGrid1.DisplayLayout.Appearance = appearance1;
@@ -311,6 +310,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(377, 439);
             this.panel1.TabIndex = 177;
+            // 
+            // PostcheckBox
+            // 
+            this.PostcheckBox.AutoSize = true;
+            this.PostcheckBox.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.PostcheckBox.Location = new System.Drawing.Point(119, 147);
+            this.PostcheckBox.Name = "PostcheckBox";
+            this.PostcheckBox.Size = new System.Drawing.Size(47, 17);
+            this.PostcheckBox.TabIndex = 13;
+            this.PostcheckBox.Text = "Post";
+            this.PostcheckBox.UseVisualStyleBackColor = true;
             // 
             // AssetClassultraCombo
             // 
@@ -643,6 +653,7 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(845, 20);
             this.panel11.TabIndex = 176;
+            this.panel11.Tag = "headerpanel";
             // 
             // label18
             // 
@@ -729,17 +740,6 @@
             this.collapsePanelControl1.Size = new System.Drawing.Size(15, 482);
             this.collapsePanelControl1.TabIndex = 178;
             this.collapsePanelControl1._HidePanel += new System.EventHandler(this.collapsePanelControl1__HidePanel);
-            // 
-            // PostcheckBox
-            // 
-            this.PostcheckBox.AutoSize = true;
-            this.PostcheckBox.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.PostcheckBox.Location = new System.Drawing.Point(119, 147);
-            this.PostcheckBox.Name = "PostcheckBox";
-            this.PostcheckBox.Size = new System.Drawing.Size(47, 17);
-            this.PostcheckBox.TabIndex = 13;
-            this.PostcheckBox.Text = "Post";
-            this.PostcheckBox.UseVisualStyleBackColor = true;
             // 
             // Default
             // 

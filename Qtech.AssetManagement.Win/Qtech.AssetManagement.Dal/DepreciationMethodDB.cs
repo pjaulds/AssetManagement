@@ -117,6 +117,7 @@ namespace Qtech.AssetManagement.Dal
 
                 Helpers.CreateParameter(myCommand, DbType.String, "@code", myDepreciationMethod.mCode);
                 Helpers.CreateParameter(myCommand, DbType.String, "@name", myDepreciationMethod.mName);
+                Helpers.CreateParameter(myCommand, DbType.String, "@active", myDepreciationMethod.mActive);
 
                 Helpers.SetSaveParameters(myCommand, myDepreciationMethod);
 
@@ -164,6 +165,7 @@ namespace Qtech.AssetManagement.Dal
             depreciationmethod.mId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("id"));
             depreciationmethod.mCode = myDataRecord.GetString(myDataRecord.GetOrdinal("code"));
             depreciationmethod.mName = myDataRecord.GetString(myDataRecord.GetOrdinal("name"));
+            depreciationmethod.mActive = myDataRecord.GetBoolean(myDataRecord.GetOrdinal("active"));
             return depreciationmethod;
         }
     }

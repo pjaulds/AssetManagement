@@ -70,7 +70,32 @@
             Infragistics.Win.Appearance appearance25 = new Infragistics.Win.Appearance();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.ultraGrid1 = new Infragistics.Win.UltraWinGrid.UltraGrid();
+            this.expandPanelControl1 = new Qtech.AssetManagement.Controls.ExpandPanelControl();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.FunctionalLocationultraCombo = new Infragistics.Win.UltraWinGrid.UltraCombo();
+            this.label16 = new System.Windows.Forms.Label();
+            this.ZipCodetextBox = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.CountrytextBox = new System.Windows.Forms.TextBox();
+            this.ProvincetextBox = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.CitytextBox = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.StreettextBox = new System.Windows.Forms.TextBox();
+            this.AddressNametextBox = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.StatuscomboBox = new System.Windows.Forms.ComboBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.ParentNametextBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.NametextBox = new System.Windows.Forms.TextBox();
             this.CodetextBox = new System.Windows.Forms.TextBox();
             this.panel11 = new System.Windows.Forms.Panel();
@@ -80,31 +105,6 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.Cancelbutton = new System.Windows.Forms.Button();
             this.Savebutton = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.ParentNametextBox = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.StatuscomboBox = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.StreettextBox = new System.Windows.Forms.TextBox();
-            this.AddressNametextBox = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.CitytextBox = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.CountrytextBox = new System.Windows.Forms.TextBox();
-            this.ProvincetextBox = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.ZipCodetextBox = new System.Windows.Forms.TextBox();
-            this.FunctionalLocationultraCombo = new Infragistics.Win.UltraWinGrid.UltraCombo();
-            this.expandPanelControl1 = new Qtech.AssetManagement.Controls.ExpandPanelControl();
             this.collapsePanelControl1 = new Qtech.AssetManagement.Controls.CollapsePanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -112,9 +112,9 @@
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ultraGrid1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FunctionalLocationultraCombo)).BeginInit();
             this.panel11.SuspendLayout();
             this.panel8.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.FunctionalLocationultraCombo)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -258,6 +258,15 @@
             this.ultraGrid1.BeforeRowsDeleted += new Infragistics.Win.UltraWinGrid.BeforeRowsDeletedEventHandler(this.ultraGrid1_BeforeRowsDeleted);
             this.ultraGrid1.DoubleClickRow += new Infragistics.Win.UltraWinGrid.DoubleClickRowEventHandler(this.ultraGrid1_DoubleClickRow);
             // 
+            // expandPanelControl1
+            // 
+            this.expandPanelControl1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.expandPanelControl1.Location = new System.Drawing.Point(192, 0);
+            this.expandPanelControl1.Name = "expandPanelControl1";
+            this.expandPanelControl1.Size = new System.Drawing.Size(15, 482);
+            this.expandPanelControl1.TabIndex = 126;
+            this.expandPanelControl1._ExpandPanel += new System.EventHandler(this.expandPanelControl1__ExpandPanel);
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.FunctionalLocationultraCombo);
@@ -291,354 +300,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1002, 214);
             this.panel1.TabIndex = 177;
-            // 
-            // NametextBox
-            // 
-            this.NametextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NametextBox.Location = new System.Drawing.Point(56, 54);
-            this.NametextBox.MaxLength = 150;
-            this.NametextBox.Name = "NametextBox";
-            this.NametextBox.Size = new System.Drawing.Size(200, 21);
-            this.NametextBox.TabIndex = 1;
-            // 
-            // CodetextBox
-            // 
-            this.CodetextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CodetextBox.Location = new System.Drawing.Point(56, 27);
-            this.CodetextBox.MaxLength = 50;
-            this.CodetextBox.Name = "CodetextBox";
-            this.CodetextBox.Size = new System.Drawing.Size(200, 21);
-            this.CodetextBox.TabIndex = 0;
-            // 
-            // panel11
-            // 
-            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
-            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel11.Controls.Add(this.label18);
-            this.panel11.Controls.Add(this.label3);
-            this.panel11.Controls.Add(this.Idlabel);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel11.Location = new System.Drawing.Point(15, 0);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1002, 20);
-            this.panel11.TabIndex = 176;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.BackColor = System.Drawing.Color.Transparent;
-            this.label18.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label18.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(0, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(165, 13);
-            this.label18.TabIndex = 24;
-            this.label18.Tag = "";
-            this.label18.Text = "Functional Location Info";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(140, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(26, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "ID:";
-            this.label3.Visible = false;
-            // 
-            // Idlabel
-            // 
-            this.Idlabel.AutoSize = true;
-            this.Idlabel.BackColor = System.Drawing.Color.Transparent;
-            this.Idlabel.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Idlabel.Location = new System.Drawing.Point(172, 0);
-            this.Idlabel.Name = "Idlabel";
-            this.Idlabel.Size = new System.Drawing.Size(15, 13);
-            this.Idlabel.TabIndex = 5;
-            this.Idlabel.Tag = "id";
-            this.Idlabel.Text = "0";
-            this.Idlabel.Visible = false;
-            // 
-            // panel8
-            // 
-            this.panel8.Controls.Add(this.Cancelbutton);
-            this.panel8.Controls.Add(this.Savebutton);
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel8.Location = new System.Drawing.Point(15, 459);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1002, 23);
-            this.panel8.TabIndex = 174;
-            // 
-            // Cancelbutton
-            // 
-            this.Cancelbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(43)))), ((int)(((byte)(137)))));
-            this.Cancelbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Cancelbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Cancelbutton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.Cancelbutton.Location = new System.Drawing.Point(76, 0);
-            this.Cancelbutton.Name = "Cancelbutton";
-            this.Cancelbutton.Size = new System.Drawing.Size(77, 23);
-            this.Cancelbutton.TabIndex = 16;
-            this.Cancelbutton.Text = "&Cancel";
-            this.Cancelbutton.UseVisualStyleBackColor = false;
-            this.Cancelbutton.Click += new System.EventHandler(this.Cancelbutton_Click);
-            // 
-            // Savebutton
-            // 
-            this.Savebutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(43)))), ((int)(((byte)(137)))));
-            this.Savebutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Savebutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Savebutton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.Savebutton.Location = new System.Drawing.Point(0, 0);
-            this.Savebutton.Name = "Savebutton";
-            this.Savebutton.Size = new System.Drawing.Size(77, 23);
-            this.Savebutton.TabIndex = 15;
-            this.Savebutton.Text = "&Save";
-            this.Savebutton.UseVisualStyleBackColor = false;
-            this.Savebutton.Click += new System.EventHandler(this.Savebutton_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(10, 11);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 13);
-            this.label2.TabIndex = 25;
-            this.label2.Tag = "";
-            this.label2.Text = "IDENTIFICATION";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label5.Location = new System.Drawing.Point(262, 11);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(167, 13);
-            this.label5.TabIndex = 29;
-            this.label5.Tag = "";
-            this.label5.Text = "PARENT FUNCTION LOCATION";
-            // 
-            // ParentNametextBox
-            // 
-            this.ParentNametextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ParentNametextBox.Location = new System.Drawing.Point(343, 54);
-            this.ParentNametextBox.MaxLength = 150;
-            this.ParentNametextBox.Name = "ParentNametextBox";
-            this.ParentNametextBox.ReadOnly = true;
-            this.ParentNametextBox.Size = new System.Drawing.Size(200, 21);
-            this.ParentNametextBox.TabIndex = 3;
-            this.ParentNametextBox.TabStop = false;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(10, 57);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(34, 13);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Name";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(10, 30);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(40, 13);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "F.L. ID";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(262, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 13);
-            this.label1.TabIndex = 31;
-            this.label1.Text = "Name";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(262, 30);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 13);
-            this.label4.TabIndex = 30;
-            this.label4.Text = "Parent F.L. ID";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label8.Location = new System.Drawing.Point(549, 11);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(101, 13);
-            this.label8.TabIndex = 32;
-            this.label8.Tag = "";
-            this.label8.Text = "LIFECYCLE STATE";
-            // 
-            // StatuscomboBox
-            // 
-            this.StatuscomboBox.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.StatuscomboBox.FormattingEnabled = true;
-            this.StatuscomboBox.Items.AddRange(new object[] {
-            "New",
-            "Active",
-            "Ended"});
-            this.StatuscomboBox.Location = new System.Drawing.Point(607, 27);
-            this.StatuscomboBox.Name = "StatuscomboBox";
-            this.StatuscomboBox.Size = new System.Drawing.Size(200, 21);
-            this.StatuscomboBox.TabIndex = 4;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(549, 30);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(52, 13);
-            this.label9.TabIndex = 34;
-            this.label9.Text = "FL Status";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(10, 157);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(37, 13);
-            this.label10.TabIndex = 36;
-            this.label10.Text = "Street";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(10, 130);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(34, 13);
-            this.label11.TabIndex = 35;
-            this.label11.Text = "Name";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label12.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label12.Location = new System.Drawing.Point(10, 111);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(59, 13);
-            this.label12.TabIndex = 39;
-            this.label12.Tag = "";
-            this.label12.Text = "ADDRESS";
-            // 
-            // StreettextBox
-            // 
-            this.StreettextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StreettextBox.Location = new System.Drawing.Point(56, 154);
-            this.StreettextBox.MaxLength = 150;
-            this.StreettextBox.Name = "StreettextBox";
-            this.StreettextBox.Size = new System.Drawing.Size(200, 21);
-            this.StreettextBox.TabIndex = 6;
-            // 
-            // AddressNametextBox
-            // 
-            this.AddressNametextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddressNametextBox.Location = new System.Drawing.Point(56, 127);
-            this.AddressNametextBox.MaxLength = 50;
-            this.AddressNametextBox.Name = "AddressNametextBox";
-            this.AddressNametextBox.Size = new System.Drawing.Size(200, 21);
-            this.AddressNametextBox.TabIndex = 5;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(10, 184);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(26, 13);
-            this.label13.TabIndex = 40;
-            this.label13.Text = "City";
-            // 
-            // CitytextBox
-            // 
-            this.CitytextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CitytextBox.Location = new System.Drawing.Point(56, 181);
-            this.CitytextBox.MaxLength = 150;
-            this.CitytextBox.Name = "CitytextBox";
-            this.CitytextBox.Size = new System.Drawing.Size(200, 21);
-            this.CitytextBox.TabIndex = 7;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(262, 157);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(46, 13);
-            this.label14.TabIndex = 45;
-            this.label14.Text = "Country";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(262, 130);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(48, 13);
-            this.label15.TabIndex = 44;
-            this.label15.Text = "Province";
-            // 
-            // CountrytextBox
-            // 
-            this.CountrytextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CountrytextBox.Location = new System.Drawing.Point(343, 154);
-            this.CountrytextBox.MaxLength = 150;
-            this.CountrytextBox.Name = "CountrytextBox";
-            this.CountrytextBox.Size = new System.Drawing.Size(200, 21);
-            this.CountrytextBox.TabIndex = 9;
-            // 
-            // ProvincetextBox
-            // 
-            this.ProvincetextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProvincetextBox.Location = new System.Drawing.Point(343, 127);
-            this.ProvincetextBox.MaxLength = 50;
-            this.ProvincetextBox.Name = "ProvincetextBox";
-            this.ProvincetextBox.Size = new System.Drawing.Size(200, 21);
-            this.ProvincetextBox.TabIndex = 8;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(262, 184);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(49, 13);
-            this.label16.TabIndex = 47;
-            this.label16.Text = "Zip Code";
-            // 
-            // ZipCodetextBox
-            // 
-            this.ZipCodetextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ZipCodetextBox.Location = new System.Drawing.Point(343, 181);
-            this.ZipCodetextBox.MaxLength = 150;
-            this.ZipCodetextBox.Name = "ZipCodetextBox";
-            this.ZipCodetextBox.Size = new System.Drawing.Size(200, 21);
-            this.ZipCodetextBox.TabIndex = 10;
             // 
             // FunctionalLocationultraCombo
             // 
@@ -720,14 +381,354 @@
             this.FunctionalLocationultraCombo.TabIndex = 2;
             this.FunctionalLocationultraCombo.RowSelected += new Infragistics.Win.UltraWinGrid.RowSelectedEventHandler(this.FunctionalLocationultraCombo_RowSelected);
             // 
-            // expandPanelControl1
+            // label16
             // 
-            this.expandPanelControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.expandPanelControl1.Location = new System.Drawing.Point(192, 0);
-            this.expandPanelControl1.Name = "expandPanelControl1";
-            this.expandPanelControl1.Size = new System.Drawing.Size(15, 482);
-            this.expandPanelControl1.TabIndex = 126;
-            this.expandPanelControl1._ExpandPanel += new System.EventHandler(this.expandPanelControl1__ExpandPanel);
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(262, 184);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(49, 13);
+            this.label16.TabIndex = 47;
+            this.label16.Text = "Zip Code";
+            // 
+            // ZipCodetextBox
+            // 
+            this.ZipCodetextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ZipCodetextBox.Location = new System.Drawing.Point(343, 181);
+            this.ZipCodetextBox.MaxLength = 150;
+            this.ZipCodetextBox.Name = "ZipCodetextBox";
+            this.ZipCodetextBox.Size = new System.Drawing.Size(200, 21);
+            this.ZipCodetextBox.TabIndex = 10;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(262, 157);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(46, 13);
+            this.label14.TabIndex = 45;
+            this.label14.Text = "Country";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(262, 130);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(48, 13);
+            this.label15.TabIndex = 44;
+            this.label15.Text = "Province";
+            // 
+            // CountrytextBox
+            // 
+            this.CountrytextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CountrytextBox.Location = new System.Drawing.Point(343, 154);
+            this.CountrytextBox.MaxLength = 150;
+            this.CountrytextBox.Name = "CountrytextBox";
+            this.CountrytextBox.Size = new System.Drawing.Size(200, 21);
+            this.CountrytextBox.TabIndex = 9;
+            // 
+            // ProvincetextBox
+            // 
+            this.ProvincetextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProvincetextBox.Location = new System.Drawing.Point(343, 127);
+            this.ProvincetextBox.MaxLength = 50;
+            this.ProvincetextBox.Name = "ProvincetextBox";
+            this.ProvincetextBox.Size = new System.Drawing.Size(200, 21);
+            this.ProvincetextBox.TabIndex = 8;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(10, 184);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(26, 13);
+            this.label13.TabIndex = 40;
+            this.label13.Text = "City";
+            // 
+            // CitytextBox
+            // 
+            this.CitytextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CitytextBox.Location = new System.Drawing.Point(56, 181);
+            this.CitytextBox.MaxLength = 150;
+            this.CitytextBox.Name = "CitytextBox";
+            this.CitytextBox.Size = new System.Drawing.Size(200, 21);
+            this.CitytextBox.TabIndex = 7;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(10, 157);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(37, 13);
+            this.label10.TabIndex = 36;
+            this.label10.Text = "Street";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(10, 130);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(34, 13);
+            this.label11.TabIndex = 35;
+            this.label11.Text = "Name";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label12.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label12.Location = new System.Drawing.Point(10, 111);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(59, 13);
+            this.label12.TabIndex = 39;
+            this.label12.Tag = "";
+            this.label12.Text = "ADDRESS";
+            // 
+            // StreettextBox
+            // 
+            this.StreettextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StreettextBox.Location = new System.Drawing.Point(56, 154);
+            this.StreettextBox.MaxLength = 150;
+            this.StreettextBox.Name = "StreettextBox";
+            this.StreettextBox.Size = new System.Drawing.Size(200, 21);
+            this.StreettextBox.TabIndex = 6;
+            // 
+            // AddressNametextBox
+            // 
+            this.AddressNametextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddressNametextBox.Location = new System.Drawing.Point(56, 127);
+            this.AddressNametextBox.MaxLength = 50;
+            this.AddressNametextBox.Name = "AddressNametextBox";
+            this.AddressNametextBox.Size = new System.Drawing.Size(200, 21);
+            this.AddressNametextBox.TabIndex = 5;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(549, 30);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(52, 13);
+            this.label9.TabIndex = 34;
+            this.label9.Text = "FL Status";
+            // 
+            // StatuscomboBox
+            // 
+            this.StatuscomboBox.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.StatuscomboBox.FormattingEnabled = true;
+            this.StatuscomboBox.Items.AddRange(new object[] {
+            "New",
+            "Active",
+            "Ended"});
+            this.StatuscomboBox.Location = new System.Drawing.Point(607, 27);
+            this.StatuscomboBox.Name = "StatuscomboBox";
+            this.StatuscomboBox.Size = new System.Drawing.Size(200, 21);
+            this.StatuscomboBox.TabIndex = 4;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label8.Location = new System.Drawing.Point(549, 11);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(101, 13);
+            this.label8.TabIndex = 32;
+            this.label8.Tag = "";
+            this.label8.Text = "LIFECYCLE STATE";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(262, 57);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(34, 13);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "Name";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(262, 30);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(75, 13);
+            this.label4.TabIndex = 30;
+            this.label4.Text = "Parent F.L. ID";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(10, 57);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(34, 13);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Name";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label5.Location = new System.Drawing.Point(262, 11);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(167, 13);
+            this.label5.TabIndex = 29;
+            this.label5.Tag = "";
+            this.label5.Text = "PARENT FUNCTION LOCATION";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(10, 30);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(40, 13);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "F.L. ID";
+            // 
+            // ParentNametextBox
+            // 
+            this.ParentNametextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ParentNametextBox.Location = new System.Drawing.Point(343, 54);
+            this.ParentNametextBox.MaxLength = 150;
+            this.ParentNametextBox.Name = "ParentNametextBox";
+            this.ParentNametextBox.ReadOnly = true;
+            this.ParentNametextBox.Size = new System.Drawing.Size(200, 21);
+            this.ParentNametextBox.TabIndex = 3;
+            this.ParentNametextBox.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label2.Location = new System.Drawing.Point(10, 11);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(98, 13);
+            this.label2.TabIndex = 25;
+            this.label2.Tag = "";
+            this.label2.Text = "IDENTIFICATION";
+            // 
+            // NametextBox
+            // 
+            this.NametextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NametextBox.Location = new System.Drawing.Point(56, 54);
+            this.NametextBox.MaxLength = 150;
+            this.NametextBox.Name = "NametextBox";
+            this.NametextBox.Size = new System.Drawing.Size(200, 21);
+            this.NametextBox.TabIndex = 1;
+            // 
+            // CodetextBox
+            // 
+            this.CodetextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CodetextBox.Location = new System.Drawing.Point(56, 27);
+            this.CodetextBox.MaxLength = 50;
+            this.CodetextBox.Name = "CodetextBox";
+            this.CodetextBox.Size = new System.Drawing.Size(200, 21);
+            this.CodetextBox.TabIndex = 0;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.panel11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel11.Controls.Add(this.label18);
+            this.panel11.Controls.Add(this.label3);
+            this.panel11.Controls.Add(this.Idlabel);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel11.Location = new System.Drawing.Point(15, 0);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(1002, 20);
+            this.panel11.TabIndex = 176;
+            this.panel11.Tag = "headerpanel";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.BackColor = System.Drawing.Color.Transparent;
+            this.label18.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label18.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.White;
+            this.label18.Location = new System.Drawing.Point(0, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(165, 13);
+            this.label18.TabIndex = 24;
+            this.label18.Tag = "";
+            this.label18.Text = "Functional Location Info";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(140, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(26, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "ID:";
+            this.label3.Visible = false;
+            // 
+            // Idlabel
+            // 
+            this.Idlabel.AutoSize = true;
+            this.Idlabel.BackColor = System.Drawing.Color.Transparent;
+            this.Idlabel.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Idlabel.Location = new System.Drawing.Point(172, 0);
+            this.Idlabel.Name = "Idlabel";
+            this.Idlabel.Size = new System.Drawing.Size(15, 13);
+            this.Idlabel.TabIndex = 5;
+            this.Idlabel.Tag = "id";
+            this.Idlabel.Text = "0";
+            this.Idlabel.Visible = false;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.Cancelbutton);
+            this.panel8.Controls.Add(this.Savebutton);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel8.Location = new System.Drawing.Point(15, 459);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(1002, 23);
+            this.panel8.TabIndex = 174;
+            // 
+            // Cancelbutton
+            // 
+            this.Cancelbutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(43)))), ((int)(((byte)(137)))));
+            this.Cancelbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Cancelbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cancelbutton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.Cancelbutton.Location = new System.Drawing.Point(76, 0);
+            this.Cancelbutton.Name = "Cancelbutton";
+            this.Cancelbutton.Size = new System.Drawing.Size(77, 23);
+            this.Cancelbutton.TabIndex = 16;
+            this.Cancelbutton.Text = "&Cancel";
+            this.Cancelbutton.UseVisualStyleBackColor = false;
+            this.Cancelbutton.Click += new System.EventHandler(this.Cancelbutton_Click);
+            // 
+            // Savebutton
+            // 
+            this.Savebutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(43)))), ((int)(((byte)(137)))));
+            this.Savebutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Savebutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Savebutton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.Savebutton.Location = new System.Drawing.Point(0, 0);
+            this.Savebutton.Name = "Savebutton";
+            this.Savebutton.Size = new System.Drawing.Size(77, 23);
+            this.Savebutton.TabIndex = 15;
+            this.Savebutton.Text = "&Save";
+            this.Savebutton.UseVisualStyleBackColor = false;
+            this.Savebutton.Click += new System.EventHandler(this.Savebutton_Click);
             // 
             // collapsePanelControl1
             // 
@@ -754,10 +755,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.ultraGrid1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FunctionalLocationultraCombo)).EndInit();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.panel8.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.FunctionalLocationultraCombo)).EndInit();
             this.ResumeLayout(false);
 
         }

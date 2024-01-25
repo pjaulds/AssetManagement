@@ -74,12 +74,13 @@ namespace Qtech.AssetManagement.Maintenance.PaymentTerms
             }
         }
 
-        private void LoadPaymentTermsFromFormControls(BusinessEntities.PaymentTerms myUser)
+        private void LoadPaymentTermsFromFormControls(BusinessEntities.PaymentTerms myPaymentTerms)
         {
-            myUser.mId = int.Parse(Idlabel.Text);
-            myUser.mName = NametextBox.Text;
-            myUser.mRemarks = RemarkstextBox.Text;
-            myUser.mUserId = SessionUtil.mUser.mId;
+            myPaymentTerms.mId = int.Parse(Idlabel.Text);
+            myPaymentTerms.mName = NametextBox.Text;
+            myPaymentTerms.mRemarks = RemarkstextBox.Text;
+            myPaymentTerms.mActive = ActivecheckBox.Checked;
+            myPaymentTerms.mUserId = SessionUtil.mUser.mId;
         }
 
         private void LoadFormControlsFromUser(BusinessEntities.PaymentTerms myPaymentTerms)
@@ -87,6 +88,7 @@ namespace Qtech.AssetManagement.Maintenance.PaymentTerms
             Idlabel.Text = myPaymentTerms.mId.ToString();
             NametextBox.Text = myPaymentTerms.mName;
             RemarkstextBox.Text = myPaymentTerms.mRemarks;
+            ActivecheckBox.Checked = myPaymentTerms.mActive;
         }
 
         private void EndEditing()

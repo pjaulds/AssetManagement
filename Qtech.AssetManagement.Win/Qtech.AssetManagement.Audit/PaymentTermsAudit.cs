@@ -30,6 +30,16 @@ namespace Qtech.AssetManagement.Audit
                 audit_collection.Add(audit);
             }
 
+            if (paymentTerms.mActive != paymentTermsOld.mActive)
+            {
+                audit = new BusinessEntities.Audit();
+                LoadCommonData(ref audit, paymentTerms);
+                audit.mField = "active";
+                audit.mOldValue = paymentTermsOld.mActive.ToString();
+                audit.mNewValue = paymentTerms.mActive.ToString();
+                audit_collection.Add(audit);
+            }
+
             return audit_collection;
         }
 

@@ -74,12 +74,13 @@ namespace Qtech.AssetManagement.Setup.DepreciationMethod
             }
         }
 
-        private void LoadDepreciationMethodFromFormControls(BusinessEntities.DepreciationMethod myUser)
+        private void LoadDepreciationMethodFromFormControls(BusinessEntities.DepreciationMethod myDepreciationMethod)
         {
-            myUser.mId = int.Parse(Idlabel.Text);
-            myUser.mCode = CodetextBox.Text;
-            myUser.mName = NametextBox.Text;
-            myUser.mUserId = SessionUtil.mUser.mId;
+            myDepreciationMethod.mId = int.Parse(Idlabel.Text);
+            myDepreciationMethod.mCode = CodetextBox.Text;
+            myDepreciationMethod.mName = NametextBox.Text;
+            myDepreciationMethod.mActive = ActivecheckBox.Checked;
+            myDepreciationMethod.mUserId = SessionUtil.mUser.mId;
         }
 
         private void LoadFormControlsFromUser(BusinessEntities.DepreciationMethod myDepreciationMethod)
@@ -87,6 +88,7 @@ namespace Qtech.AssetManagement.Setup.DepreciationMethod
             Idlabel.Text = myDepreciationMethod.mId.ToString();
             CodetextBox.Text = myDepreciationMethod.mCode;
             NametextBox.Text = myDepreciationMethod.mName;
+            ActivecheckBox.Checked = myDepreciationMethod.mActive;
         }
 
         private void EndEditing()

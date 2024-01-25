@@ -120,6 +120,16 @@ namespace Qtech.AssetManagement.Audit
                 audit_collection.Add(audit);
             }
 
+            if (supplier.mActive != supplierOld.mActive)
+            {
+                audit = new BusinessEntities.Audit();
+                LoadCommonData(ref audit, supplier);
+                audit.mField = "Active";
+                audit.mOldValue = supplierOld.mActive.ToString();
+                audit.mNewValue = supplier.mActive.ToString();
+                audit_collection.Add(audit);
+            }
+
             return audit_collection;
         }
 

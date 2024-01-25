@@ -117,6 +117,7 @@ namespace Qtech.AssetManagement.Dal
 
                 Helpers.CreateParameter(myCommand, DbType.String, "@code", myUnit.mCode);
                 Helpers.CreateParameter(myCommand, DbType.String, "@name", myUnit.mName);
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@active", myUnit.mActive);
 
                 Helpers.SetSaveParameters(myCommand, myUnit);
 
@@ -164,6 +165,7 @@ namespace Qtech.AssetManagement.Dal
             unit.mId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("id"));
             unit.mCode = myDataRecord.GetString(myDataRecord.GetOrdinal("code"));
             unit.mName = myDataRecord.GetString(myDataRecord.GetOrdinal("name"));
+            unit.mActive = myDataRecord.GetBoolean(myDataRecord.GetOrdinal("active"));
             return unit;
         }
     }

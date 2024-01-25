@@ -30,6 +30,16 @@ namespace Qtech.AssetManagement.Audit
                 audit_collection.Add(audit);
             }
 
+            if (depreciationmethod.mActive != depreciationmethodOld.mActive)
+            {
+                audit = new BusinessEntities.Audit();
+                LoadCommonData(ref audit, depreciationmethod);
+                audit.mField = "active";
+                audit.mOldValue = depreciationmethodOld.mActive.ToString();
+                audit.mNewValue = depreciationmethod.mActive.ToString();
+                audit_collection.Add(audit);
+            }
+
             return audit_collection;
         }
 

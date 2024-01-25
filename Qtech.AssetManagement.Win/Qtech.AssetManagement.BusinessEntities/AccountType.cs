@@ -23,7 +23,7 @@ namespace Qtech.AssetManagement.BusinessEntities
         [NotNullOrEmpty(Message = "Please enter valid account type name/title.")]
         public String mName { get; set; }
 
-        [Display(Name = "Post")]
+        [Display(Name = "Active")]
         public bool mPost { get; set; }
         #endregion
     }

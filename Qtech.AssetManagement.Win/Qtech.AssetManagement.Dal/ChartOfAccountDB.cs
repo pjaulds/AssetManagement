@@ -124,6 +124,7 @@ namespace Qtech.AssetManagement.Dal
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@chart_of_account_close_id", myChartOfAccount.mChartOfAccountCloseId);
                 Helpers.CreateParameter(myCommand, DbType.Boolean, "@payable_sales", myChartOfAccount.mPayableSales);
                 Helpers.CreateParameter(myCommand, DbType.Boolean, "@debit_credit", myChartOfAccount.mDebitCredit);
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@active", myChartOfAccount.mActive);
 
                 Helpers.SetSaveParameters(myCommand, myChartOfAccount);
 
@@ -183,7 +184,8 @@ namespace Qtech.AssetManagement.Dal
             chartofaccount.mChartOfAccountCloseId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("chart_of_account_close_id"));
             chartofaccount.mPayableSales = myDataRecord.GetBoolean(myDataRecord.GetOrdinal("payable_sales"));
             chartofaccount.mDebitCredit = myDataRecord.GetBoolean(myDataRecord.GetOrdinal("debit_credit"));
-            
+            chartofaccount.mActive = myDataRecord.GetBoolean(myDataRecord.GetOrdinal("active"));
+
             return chartofaccount;
         }
     }

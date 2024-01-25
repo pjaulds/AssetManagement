@@ -314,6 +314,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(594, 29);
             this.panel2.TabIndex = 199;
+            this.panel2.Tag = "headerpanel";
             // 
             // label11
             // 

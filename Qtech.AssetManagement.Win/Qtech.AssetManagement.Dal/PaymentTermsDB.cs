@@ -111,6 +111,7 @@ namespace Qtech.AssetManagement.Dal
                 
                 Helpers.CreateParameter(myCommand, DbType.String, "@name", myPaymentTerms.mName);
                 Helpers.CreateParameter(myCommand, DbType.String, "@remarks", myPaymentTerms.mRemarks);
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@active", myPaymentTerms.mActive);
 
                 Helpers.SetSaveParameters(myCommand, myPaymentTerms);
 
@@ -158,6 +159,7 @@ namespace Qtech.AssetManagement.Dal
             paymentTerms.mId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("id"));
             paymentTerms.mName = myDataRecord.GetString(myDataRecord.GetOrdinal("name"));
             paymentTerms.mRemarks = myDataRecord.GetString(myDataRecord.GetOrdinal("remarks"));
+            paymentTerms.mActive = myDataRecord.GetBoolean(myDataRecord.GetOrdinal("active"));
             return paymentTerms;
         }
     }

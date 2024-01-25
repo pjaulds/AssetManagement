@@ -26,7 +26,7 @@ namespace Qtech.AssetManagement.Utilities
             myUltraCombo.ValueMember = "mId";
             myUltraCombo.DisplayMember = "mName";
 
-            myUltraCombo.SetDataBinding(ChartOfAccountManager.GetList(), null, true);
+            myUltraCombo.SetDataBinding(ChartOfAccountManager.GetList().Where(x => x.mActive).ToList(), null, true);
             myUltraCombo.Refresh();
         }
 
@@ -63,7 +63,7 @@ namespace Qtech.AssetManagement.Utilities
             myUltraCombo.ValueMember = "mId";
             myUltraCombo.DisplayMember = "mName";
 
-            myUltraCombo.SetDataBinding(DepreciationMethodManager.GetList(), null, true);
+            myUltraCombo.SetDataBinding(DepreciationMethodManager.GetList().Where(x => x.mActive).ToList(), null, true);
             myUltraCombo.Refresh();
         }
 
@@ -72,7 +72,7 @@ namespace Qtech.AssetManagement.Utilities
             myUltraCombo.ValueMember = "mId";
             myUltraCombo.DisplayMember = "mName";
 
-            myUltraCombo.SetDataBinding(AveragingMethodManager.GetList(), null, true);
+            myUltraCombo.SetDataBinding(AveragingMethodManager.GetList().Where(x => x.mActive).ToList(), null, true);
             myUltraCombo.Refresh();
         }
 
@@ -99,7 +99,7 @@ namespace Qtech.AssetManagement.Utilities
             myUltraCombo.ValueMember = "mId";
             myUltraCombo.DisplayMember = "mName";
 
-            myUltraCombo.SetDataBinding(SupplierManager.GetList(), null, true);
+            myUltraCombo.SetDataBinding(SupplierManager.GetList().Where(x => x.mActive).ToList(), null, true);
             myUltraCombo.Refresh();
         }
 
@@ -108,7 +108,7 @@ namespace Qtech.AssetManagement.Utilities
             myUltraCombo.ValueMember = "mId";
             myUltraCombo.DisplayMember = "mName";
 
-            myUltraCombo.SetDataBinding(UnitManager.GetList(), null, true);
+            myUltraCombo.SetDataBinding(UnitManager.GetList().Where(x => x.mActive).ToList(), null, true);
             myUltraCombo.Refresh();
         }
 
@@ -208,7 +208,7 @@ namespace Qtech.AssetManagement.Utilities
             myUltraCombo.ValueMember = "mId";
             myUltraCombo.DisplayMember = "mName";
 
-            myUltraCombo.SetDataBinding(AccountTypeManager.GetList(), null, true);
+            myUltraCombo.SetDataBinding(AccountTypeManager.GetList().Where(x => x.mPost).ToList(), null, true);
             myUltraCombo.Refresh();
         }
 
@@ -226,7 +226,7 @@ namespace Qtech.AssetManagement.Utilities
             myUltraCombo.ValueMember = "mId";
             myUltraCombo.DisplayMember = "mName";
 
-            myUltraCombo.SetDataBinding(AccountClassificationManager.GetList(), null, true);
+            myUltraCombo.SetDataBinding(AccountClassificationManager.GetList().Where(x => x.mPost).ToList(), null, true);
             myUltraCombo.Refresh();
         }
 
