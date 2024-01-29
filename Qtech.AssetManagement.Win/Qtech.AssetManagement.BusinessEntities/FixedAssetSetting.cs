@@ -16,8 +16,7 @@ namespace Qtech.AssetManagement.BusinessEntities
         public Int32 mAssetTypeId { get; set; }
         public String mAssetTypeName { get; set; }
 
-        [Display(Name = "Asset Class")]
-        [NotEqualTo(Message = "Please select asset class", mValue = "0")]
+        [Display(Name = "Asset Class")]        
         public Int32 mAssetClassId { get; set; }
         public String mAssetClassCode { get; set; }
         public String mAssetClassName { get; set; }

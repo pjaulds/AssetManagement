@@ -33,13 +33,19 @@ namespace Qtech.AssetManagement.Utilities
                     DataGridViewColorTheme(((DataGridView)ctl));
                 }
 
-                ctl.Font = new Font("Arial", float.Parse("8.25"));
+                //all font
+                ctl.Font = new Font("Arial", ctl.Font.Size);
+                
                 if (ctl.Tag != null)
                 {
                     switch (ctl.Tag.ToString())
                     {
                         case "headerlabel":
                             ctl.Font = new Font("Arial", float.Parse("8.25"), FontStyle.Bold);
+                            ctl.ForeColor = Color.WhiteSmoke;
+                            break;
+                        case "headerLabelPopUpForm":
+                            ctl.Font = new Font("Arial", float.Parse("10.25"), FontStyle.Bold);
                             ctl.ForeColor = Color.WhiteSmoke;
                             break;
                         case "headerpanel"://51, 63, 79

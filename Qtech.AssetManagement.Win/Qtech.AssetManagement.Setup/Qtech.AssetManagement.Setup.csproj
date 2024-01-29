@@ -109,6 +109,12 @@
     <Compile Include="FixedAssetSetting\Default.Designer.cs">
       <DependentUpon>Default.cs</DependentUpon>
     </Compile>
+    <Compile Include="FixedAssetSetting\StartDateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FixedAssetSetting\StartDateForm.Designer.cs">
+      <DependentUpon>StartDateForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FunctionalLocation\Default.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FixedAssetSetting\Default.resx">
       <DependentUpon>Default.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FixedAssetSetting\StartDateForm.resx">
+      <DependentUpon>StartDateForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FunctionalLocation\Default.resx">
       <DependentUpon>Default.cs</DependentUpon>

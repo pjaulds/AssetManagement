@@ -246,4 +246,9 @@ namespace Qtech.AssetManagement.Maintenance.PaymentTerms
         }
 
     }
+
+    public enum MyEnum : int
+    {
+        member1 = 0
+    }
 }

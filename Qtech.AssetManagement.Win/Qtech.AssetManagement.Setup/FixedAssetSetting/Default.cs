@@ -79,10 +79,7 @@ namespace Qtech.AssetManagement.Setup.FixedAssetSetting
             myUser.mId = int.Parse(Idlabel.Text);
             myUser.mAssetTypeId = ControlUtil.UltraComboReturnValue(AssetTypeutraCombo);
             myUser.mAssetTypeName = AssetTypeutraCombo.Text;
-
-            myUser.mAssetClassId = ControlUtil.UltraComboReturnValue(AssetClassultraCombo);
-            myUser.mAssetClassName = AssetClassultraCombo.Text;
-
+            
             myUser.mChartOfAccountId = ControlUtil.UltraComboReturnValue(AssetAccountultraCombo);
             myUser.mChartOfAccountName = AssetAccountultraCombo.Text;
 
@@ -106,7 +103,6 @@ namespace Qtech.AssetManagement.Setup.FixedAssetSetting
         {
             Idlabel.Text = myFixedAssetSetting.mId.ToString();
             AssetTypeutraCombo.Value = myFixedAssetSetting.mAssetTypeId;
-            AssetClassultraCombo.Value = myFixedAssetSetting.mAssetClassId;
             AssetAccountultraCombo.Value = myFixedAssetSetting.mChartOfAccountId;
             AccumulatedDepreciationAccountultraCombo.Value = myFixedAssetSetting.mAccumulatedDepreciationAccountId;
             DepreciationExpenseAccountultraCombo.Value = myFixedAssetSetting.mDepreciationExpenseAccountId;
@@ -261,7 +257,6 @@ namespace Qtech.AssetManagement.Setup.FixedAssetSetting
             UltraComboUtil.ChartOfAccount(DepreciationExpenseAccountultraCombo);
             UltraComboUtil.DepreciationMethod(DepreciationMethodultraCombo);
             UltraComboUtil.AveragingMethod(AveragingMethodultraCombo);
-            UltraComboUtil.AssetClass(AssetClassultraCombo);
         }
 
         private void FixedAssetSettingdateTimePicker_ValueChanged(object sender, EventArgs e)
@@ -273,6 +268,12 @@ namespace Qtech.AssetManagement.Setup.FixedAssetSetting
             date.mDate = FixedAssetSettingdateTimePicker.Value.Date;
             date.mUserId = SessionUtil.mUser.mId;
             FixedAssetSettingDateManager.Save(date);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            StartDateForm startDateForm = new StartDateForm();
+            startDateForm.ShowDialog();
         }
     }
 }

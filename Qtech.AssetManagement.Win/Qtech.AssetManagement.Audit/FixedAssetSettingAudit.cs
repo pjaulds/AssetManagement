@@ -20,15 +20,15 @@ namespace Qtech.AssetManagement.Audit
                 audit_collection.Add(audit);
             }
 
-            if (fixedassetsetting.mAssetClassId != fixedassetsettingOld.mAssetClassId)
-            {
-                audit = new BusinessEntities.Audit();
-                LoadCommonData(ref audit, fixedassetsetting);
-                audit.mField = "Asset Class ";
-                audit.mOldValue = fixedassetsettingOld.mAssetClassName.ToString();
-                audit.mNewValue = fixedassetsetting.mAssetClassName.ToString();
-                audit_collection.Add(audit);
-            }
+            //if (fixedassetsetting.mAssetClassId != fixedassetsettingOld.mAssetClassId)
+            //{
+            //    audit = new BusinessEntities.Audit();
+            //    LoadCommonData(ref audit, fixedassetsetting);
+            //    audit.mField = "Asset Class ";
+            //    audit.mOldValue = fixedassetsettingOld.mAssetClassName.ToString();
+            //    audit.mNewValue = fixedassetsetting.mAssetClassName.ToString();
+            //    audit_collection.Add(audit);
+            //}
 
             if (fixedassetsetting.mChartOfAccountId != fixedassetsettingOld.mChartOfAccountId)
             {
