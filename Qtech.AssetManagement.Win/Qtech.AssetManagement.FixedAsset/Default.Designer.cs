@@ -128,7 +128,6 @@
             Infragistics.Win.Appearance appearance75 = new Infragistics.Win.Appearance();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.ultraGrid1 = new Infragistics.Win.UltraWinGrid.UltraGrid();
-            this.expandPanelControl1 = new Qtech.AssetManagement.Controls.ExpandPanelControl();
             this.DisposedcheckBox = new System.Windows.Forms.CheckBox();
             this.RegisteredcheckBox = new System.Windows.Forms.CheckBox();
             this.DraftcheckBox = new System.Windows.Forms.CheckBox();
@@ -191,6 +190,10 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.Cancelbutton = new System.Windows.Forms.Button();
             this.Savebutton = new System.Windows.Forms.Button();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.Registeredbutton = new System.Windows.Forms.Button();
+            this.Totalbutton = new System.Windows.Forms.Button();
+            this.expandPanelControl1 = new Qtech.AssetManagement.Controls.ExpandPanelControl();
             this.collapsePanelControl1 = new Qtech.AssetManagement.Controls.CollapsePanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -214,6 +217,7 @@
             this.panel2.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel8.SuspendLayout();
+            this.panel13.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -227,6 +231,7 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.ultraGrid1);
+            this.splitContainer1.Panel1.Controls.Add(this.panel13);
             this.splitContainer1.Panel1.Controls.Add(this.expandPanelControl1);
             // 
             // splitContainer1.Panel2
@@ -241,7 +246,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.panel8);
             this.splitContainer1.Panel2.Controls.Add(this.collapsePanelControl1);
             this.splitContainer1.Size = new System.Drawing.Size(1008, 534);
-            this.splitContainer1.SplitterDistance = 172;
+            this.splitContainer1.SplitterDistance = 845;
             this.splitContainer1.SplitterWidth = 2;
             this.splitContainer1.TabIndex = 9;
             // 
@@ -268,9 +273,9 @@
             ultraGridColumn14.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 0);
             ultraGridColumn14.RowLayoutColumnInfo.SpanX = 2;
             ultraGridColumn14.RowLayoutColumnInfo.SpanY = 2;
-            appearance2.TextHAlignAsString = "Right";
+            appearance2.TextHAlignAsString = "Center";
             ultraGridColumn16.CellAppearance = appearance2;
-            ultraGridColumn16.Format = "D";
+            ultraGridColumn16.Format = "MM-dd-yyyy";
             ultraGridColumn16.Header.Caption = "Purchase Date";
             ultraGridColumn16.Header.VisiblePosition = 3;
             ultraGridColumn16.RowLayoutColumnInfo.OriginX = 8;
@@ -278,7 +283,7 @@
             ultraGridColumn16.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(200, 0);
             ultraGridColumn16.RowLayoutColumnInfo.SpanX = 2;
             ultraGridColumn16.RowLayoutColumnInfo.SpanY = 2;
-            appearance3.TextHAlignAsString = "Right";
+            appearance3.TextHAlignAsString = "Center";
             ultraGridColumn17.CellAppearance = appearance3;
             ultraGridColumn17.Format = "N";
             ultraGridColumn17.Header.Caption = "Purchase Cost";
@@ -371,24 +376,15 @@
             this.ultraGrid1.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy;
             this.ultraGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ultraGrid1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ultraGrid1.Location = new System.Drawing.Point(0, 0);
+            this.ultraGrid1.Location = new System.Drawing.Point(0, 79);
             this.ultraGrid1.Name = "ultraGrid1";
-            this.ultraGrid1.Size = new System.Drawing.Size(153, 530);
+            this.ultraGrid1.Size = new System.Drawing.Size(826, 451);
             this.ultraGrid1.TabIndex = 125;
             this.ultraGrid1.Text = "ultraGrid1";
             this.ultraGrid1.InitializeLayout += new Infragistics.Win.UltraWinGrid.InitializeLayoutEventHandler(this.ultraGrid1_InitializeLayout);
             this.ultraGrid1.BeforeRowsDeleted += new Infragistics.Win.UltraWinGrid.BeforeRowsDeletedEventHandler(this.ultraGrid1_BeforeRowsDeleted);
             this.ultraGrid1.DoubleClickRow += new Infragistics.Win.UltraWinGrid.DoubleClickRowEventHandler(this.ultraGrid1_DoubleClickRow);
             this.ultraGrid1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ultraGrid1_MouseDown);
-            // 
-            // expandPanelControl1
-            // 
-            this.expandPanelControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.expandPanelControl1.Location = new System.Drawing.Point(153, 0);
-            this.expandPanelControl1.Name = "expandPanelControl1";
-            this.expandPanelControl1.Size = new System.Drawing.Size(15, 530);
-            this.expandPanelControl1.TabIndex = 126;
-            this.expandPanelControl1._ExpandPanel += new System.EventHandler(this.expandPanelControl1__ExpandPanel);
             // 
             // DisposedcheckBox
             // 
@@ -438,7 +434,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(15, 258);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(815, 166);
+            this.panel6.Size = new System.Drawing.Size(142, 166);
             this.panel6.TabIndex = 179;
             // 
             // panel7
@@ -525,6 +521,7 @@
             // 
             // DepreciationStartdateTimePicker
             // 
+            this.DepreciationStartdateTimePicker.Enabled = false;
             this.DepreciationStartdateTimePicker.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DepreciationStartdateTimePicker.Location = new System.Drawing.Point(3, 40);
             this.DepreciationStartdateTimePicker.Name = "DepreciationStartdateTimePicker";
@@ -762,7 +759,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(15, 21);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(815, 237);
+            this.panel1.Size = new System.Drawing.Size(142, 237);
             this.panel1.TabIndex = 177;
             // 
             // panel4
@@ -1212,6 +1209,7 @@
             this.AssetTypeutraCombo.Name = "AssetTypeutraCombo";
             this.AssetTypeutraCombo.Size = new System.Drawing.Size(250, 23);
             this.AssetTypeutraCombo.TabIndex = 1;
+            this.AssetTypeutraCombo.RowSelected += new Infragistics.Win.UltraWinGrid.RowSelectedEventHandler(this.AssetTypeutraCombo_RowSelected);
             // 
             // ProductNametextBox
             // 
@@ -1335,7 +1333,7 @@
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel11.Location = new System.Drawing.Point(15, 0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(815, 21);
+            this.panel11.Size = new System.Drawing.Size(142, 21);
             this.panel11.TabIndex = 176;
             this.panel11.Tag = "headerpanel";
             // 
@@ -1385,7 +1383,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel8.Location = new System.Drawing.Point(15, 507);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(815, 23);
+            this.panel8.Size = new System.Drawing.Size(142, 23);
             this.panel8.TabIndex = 174;
             // 
             // Cancelbutton
@@ -1415,6 +1413,55 @@
             this.Savebutton.Text = "&Save";
             this.Savebutton.UseVisualStyleBackColor = false;
             this.Savebutton.Click += new System.EventHandler(this.Savebutton_Click);
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.Totalbutton);
+            this.panel13.Controls.Add(this.Registeredbutton);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel13.Location = new System.Drawing.Point(0, 0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(826, 79);
+            this.panel13.TabIndex = 127;
+            // 
+            // Registeredbutton
+            // 
+            this.Registeredbutton.BackColor = System.Drawing.Color.ForestGreen;
+            this.Registeredbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Registeredbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Registeredbutton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.Registeredbutton.Location = new System.Drawing.Point(10, 10);
+            this.Registeredbutton.Name = "Registeredbutton";
+            this.Registeredbutton.Size = new System.Drawing.Size(123, 55);
+            this.Registeredbutton.TabIndex = 16;
+            this.Registeredbutton.Tag = "N/A";
+            this.Registeredbutton.Text = "&Save";
+            this.Registeredbutton.UseVisualStyleBackColor = false;
+            this.Registeredbutton.Click += new System.EventHandler(this.Registeredbutton_Click);
+            // 
+            // Totalbutton
+            // 
+            this.Totalbutton.BackColor = System.Drawing.Color.DarkGray;
+            this.Totalbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Totalbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Totalbutton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.Totalbutton.Location = new System.Drawing.Point(139, 10);
+            this.Totalbutton.Name = "Totalbutton";
+            this.Totalbutton.Size = new System.Drawing.Size(123, 55);
+            this.Totalbutton.TabIndex = 17;
+            this.Totalbutton.Tag = "N/A";
+            this.Totalbutton.Text = "&Save";
+            this.Totalbutton.UseVisualStyleBackColor = false;
+            this.Totalbutton.Click += new System.EventHandler(this.Totalbutton_Click);
+            // 
+            // expandPanelControl1
+            // 
+            this.expandPanelControl1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.expandPanelControl1.Location = new System.Drawing.Point(826, 0);
+            this.expandPanelControl1.Name = "expandPanelControl1";
+            this.expandPanelControl1.Size = new System.Drawing.Size(15, 530);
+            this.expandPanelControl1.TabIndex = 126;
+            this.expandPanelControl1._ExpandPanel += new System.EventHandler(this.expandPanelControl1__ExpandPanel);
             // 
             // collapsePanelControl1
             // 
@@ -1468,6 +1515,7 @@
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.panel8.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1540,5 +1588,8 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox AccumulatedDepreciationtextBox;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Button Registeredbutton;
+        private System.Windows.Forms.Button Totalbutton;
     }
 }

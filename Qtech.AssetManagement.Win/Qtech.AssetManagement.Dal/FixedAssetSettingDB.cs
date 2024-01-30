@@ -46,6 +46,7 @@ namespace Qtech.AssetManagement.Dal
                 myCommand.CommandType = CommandType.StoredProcedure;
                 myCommand.CommandText = "amQt_spFixedAssetSettingSearchList";
 
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@asset_type_id", fixedassetsettingCriteria.mAssetTypeId);
 
                 myCommand.Connection.Open();
                 using (DbDataReader myReader = myCommand.ExecuteReader())
@@ -81,6 +82,7 @@ namespace Qtech.AssetManagement.Dal
                 idParam.Value = 0;
                 myCommand.Parameters.Add(idParam);
 
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@asset_type_id", fixedassetsettingCriteria.mAssetTypeId);
 
                 myCommand.Connection.Open();
                 myCommand.ExecuteNonQuery();

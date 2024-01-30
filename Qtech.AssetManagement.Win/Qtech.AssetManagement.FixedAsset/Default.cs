@@ -57,6 +57,11 @@ namespace Qtech.AssetManagement.FixedAsset
             criteria.mIsRegistered = mIsRegistered;
             ultraGrid1.SetDataBinding(FixedAssetManager.GetList(criteria), null, true);
             ultraGrid1.Refresh();
+
+            criteria = new FixedAssetCriteria();
+            criteria.mIsRegistered = true;
+            Registeredbutton.Text = "Registered" + Environment.NewLine + FixedAssetManager.SelectCountForGetList(criteria).ToString();
+            Totalbutton.Text = "Total" + Environment.NewLine + FixedAssetManager.SelectCountForGetList(new FixedAssetCriteria()).ToString();
         }
 
         private int SaveFixedAsset()
@@ -108,7 +113,7 @@ namespace Qtech.AssetManagement.FixedAsset
             myFixedAsset.mAveragingMethodName = AveragingMehodultraCombo.Text;
             myFixedAsset.mAccumulatedDepreciation = ControlUtil.TextBoxDecimal(AccumulatedDepreciationtextBox);
             myFixedAsset.mResidualValue = ControlUtil.TextBoxDecimal(ResidualValuetextBox);
-            myFixedAsset.mUsefulLifeYears = ControlUtil.TextBoxShort(UsefulLifetextBox);
+            myFixedAsset.mUsefulLifeYears = ControlUtil.TextBoxDecimal(UsefulLifetextBox);
             myFixedAsset.mIsDraft = DraftcheckBox.Checked;
             myFixedAsset.mIsRegistered = RegisteredcheckBox.Checked;
             myFixedAsset.mIsDisposed = DisposedcheckBox.Checked;
@@ -126,16 +131,16 @@ namespace Qtech.AssetManagement.FixedAsset
             PersonnelultraCombo.Value = myFixedAsset.mPersonnelId;
             DescriptiontextBox.Text = myFixedAsset.mDescription;
             PurchasedateTimePicker.Value = myFixedAsset.mPurchaseDate;
-            PurchasePricetextBox.Text = myFixedAsset.mPurchasePrice.ToString();
+            PurchasePricetextBox.Text = myFixedAsset.mPurchasePrice.ToString("N");
             WarrantydateTimePicker.Value = myFixedAsset.mWarrantyExpiry;
             SerialNotextBox.Text = myFixedAsset.mSerialNo;
             ModeltextBox.Text = myFixedAsset.mModel;
             DepreciationStartdateTimePicker.Value = myFixedAsset.mDepreciationStartDate;
             DepreciationMethodultraCombo.Value = myFixedAsset.mDepreciationMethodId;
             AveragingMehodultraCombo.Value = myFixedAsset.mAveragingMethodId;
-            AccumulatedDepreciationtextBox.Text = myFixedAsset.mAccumulatedDepreciation.ToString();
+            AccumulatedDepreciationtextBox.Text = myFixedAsset.mAccumulatedDepreciation.ToString("N");
             ResidualValuetextBox.Text = myFixedAsset.mResidualValue.ToString();
-            UsefulLifetextBox.Text = myFixedAsset.mUsefulLifeYears.ToString();
+            UsefulLifetextBox.Text = myFixedAsset.mUsefulLifeYears.ToString("N");
             DraftcheckBox.Checked = myFixedAsset.mIsDraft;
             RegisteredcheckBox.Checked = myFixedAsset.mIsRegistered;
             DisposedcheckBox.Checked = myFixedAsset.mIsDisposed;
@@ -184,6 +189,9 @@ namespace Qtech.AssetManagement.FixedAsset
 
             DraftcheckBox.Checked = !allow_delete;
             RegisteredcheckBox.Checked = allow_delete;
+
+            if (FixedAssetSettingDateManager.SelectCountForGetList(new FixedAssetSettingDateCriteria()) > 0)
+                DepreciationStartdateTimePicker.Value = FixedAssetSettingDateManager.GetList().First().mDate;
         }
 
         public int SaveRecords()
@@ -424,6 +432,36 @@ namespace Qtech.AssetManagement.FixedAsset
 
         }
 
-       
+        private void AssetTypeutraCombo_RowSelected(object sender, RowSelectedEventArgs e)
+        {
+            DepreciationMethodultraCombo.Value = 0;
+            AveragingMehodultraCombo.Value = 0;
+
+            if (e.Row == null) return;
+            if (e.Row.Index == -1) return;
+
+            FixedAssetSettingCriteria criteria = new FixedAssetSettingCriteria();
+            criteria.mAssetTypeId = ControlUtil.UltraComboReturnValue(AssetTypeutraCombo);
+
+            if (FixedAssetSettingManager.SelectCountForGetList(criteria) == 0) return;
+            FixedAssetSetting item = FixedAssetSettingManager.GetList(criteria).First();
+
+            DepreciationMethodultraCombo.Value = item.mDepreciationMethodId;
+            AveragingMehodultraCombo.Value = item.mAveragingMethodId;
+        }
+
+        private void Registeredbutton_Click(object sender, EventArgs e)
+        {
+            FixedAssetCriteria criteria = new FixedAssetCriteria();
+            criteria.mIsRegistered = true;
+            ultraGrid1.SetDataBinding(FixedAssetManager.GetList(criteria), null, true);
+            ultraGrid1.Refresh();
+        }
+
+        private void Totalbutton_Click(object sender, EventArgs e)
+        {
+            ultraGrid1.SetDataBinding(FixedAssetManager.GetList(), null, true);
+            ultraGrid1.Refresh();
+        }
     }
 }

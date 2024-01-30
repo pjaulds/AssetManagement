@@ -81,7 +81,7 @@ namespace Qtech.AssetManagement.BusinessEntities
         public Decimal mResidualValue { get; set; }
 
         [Display(Name = "Useful Life (Years)")]
-        public Int16 mUsefulLifeYears { get; set; }
+        public decimal mUsefulLifeYears { get; set; }
         public Boolean mIsDraft { get; set; }
         public Boolean mIsRegistered { get; set; }
         public Boolean mIsDisposed { get; set; }

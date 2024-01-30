@@ -108,7 +108,7 @@ namespace Qtech.AssetManagement.Setup.FixedAssetSetting
             DepreciationExpenseAccountultraCombo.Value = myFixedAssetSetting.mDepreciationExpenseAccountId;
             DepreciationMethodultraCombo.Value = myFixedAssetSetting.mDepreciationMethodId;
             AveragingMethodultraCombo.Value = myFixedAssetSetting.mAveragingMethodId;
-            UsefulLifeYearstextBox.Text = myFixedAssetSetting.mUsefulLifeYears.ToString();
+            UsefulLifeYearstextBox.Text = myFixedAssetSetting.mUsefulLifeYears.ToString("N");
         }
 
         private void EndEditing()

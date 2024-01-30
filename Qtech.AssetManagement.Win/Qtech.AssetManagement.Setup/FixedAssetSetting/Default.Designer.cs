@@ -59,21 +59,6 @@
             Infragistics.Win.Appearance appearance14 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance15 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance16 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance41 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand4 = new Infragistics.Win.UltraWinGrid.UltraGridBand("Band 0", -1);
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn5 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn17 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mName");
-            Infragistics.Win.Appearance appearance42 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance43 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance44 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance45 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance46 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance47 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance48 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance49 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance50 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance51 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance52 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance17 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand2 = new Infragistics.Win.UltraWinGrid.UltraGridBand("Band 0", -1);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn6 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
@@ -104,38 +89,21 @@
             Infragistics.Win.Appearance appearance38 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance39 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance40 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance77 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand7 = new Infragistics.Win.UltraWinGrid.UltraGridBand("Band 0", -1);
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn34 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn35 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mName");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn36 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mCode");
-            Infragistics.Win.Appearance appearance78 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance79 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance80 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance81 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance82 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance83 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance84 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance85 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance86 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance87 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance88 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance65 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand6 = new Infragistics.Win.UltraWinGrid.UltraGridBand("Band 0", -1);
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn28 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn30 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mName");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn31 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mCode");
-            Infragistics.Win.Appearance appearance66 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance67 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance68 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance69 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance70 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance71 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance72 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance73 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance74 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance75 = new Infragistics.Win.Appearance();
-            Infragistics.Win.Appearance appearance76 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance41 = new Infragistics.Win.Appearance();
+            Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand4 = new Infragistics.Win.UltraWinGrid.UltraGridBand("Band 0", -1);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn5 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn17 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mName");
+            Infragistics.Win.Appearance appearance42 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance43 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance44 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance45 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance46 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance47 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance48 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance49 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance50 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance51 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance52 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance53 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand5 = new Infragistics.Win.UltraWinGrid.UltraGridBand("Band 0", -1);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn18 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
@@ -152,23 +120,69 @@
             Infragistics.Win.Appearance appearance62 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance63 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance64 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance65 = new Infragistics.Win.Appearance();
+            Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand6 = new Infragistics.Win.UltraWinGrid.UltraGridBand("Band 0", -1);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn28 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn30 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mName");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn31 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mCode");
+            Infragistics.Win.Appearance appearance66 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance67 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance68 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance69 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance70 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance71 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance72 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance73 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance74 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance75 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance76 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance77 = new Infragistics.Win.Appearance();
+            Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand7 = new Infragistics.Win.UltraWinGrid.UltraGridBand("Band 0", -1);
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn34 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn35 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mName");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn36 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mCode");
+            Infragistics.Win.Appearance appearance78 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance79 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance80 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance81 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance82 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance83 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance84 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance85 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance86 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance87 = new Infragistics.Win.Appearance();
+            Infragistics.Win.Appearance appearance88 = new Infragistics.Win.Appearance();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.ultraGrid1 = new Infragistics.Win.UltraWinGrid.UltraGrid();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.FixedAssetSettingdateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.AssetTypeutraCombo = new Infragistics.Win.UltraWinGrid.UltraCombo();
+            this.expandPanelControl1 = new Qtech.AssetManagement.Controls.ExpandPanelControl();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.UsefulLifeYearstextBox = new System.Windows.Forms.TextBox();
             this.AveragingMethodultraCombo = new Infragistics.Win.UltraWinGrid.UltraCombo();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
             this.DepreciationMethodultraCombo = new Infragistics.Win.UltraWinGrid.UltraCombo();
-            this.DepreciationExpenseAccountultraCombo = new Infragistics.Win.UltraWinGrid.UltraCombo();
-            this.AccumulatedDepreciationAccountultraCombo = new Infragistics.Win.UltraWinGrid.UltraCombo();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.AssetTypeutraCombo = new Infragistics.Win.UltraWinGrid.UltraCombo();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
             this.AssetAccountultraCombo = new Infragistics.Win.UltraWinGrid.UltraCombo();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.AccumulatedDepreciationAccountultraCombo = new Infragistics.Win.UltraWinGrid.UltraCombo();
+            this.DepreciationExpenseAccountultraCombo = new Infragistics.Win.UltraWinGrid.UltraCombo();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -176,21 +190,7 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.Cancelbutton = new System.Windows.Forms.Button();
             this.Savebutton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.expandPanelControl1 = new Qtech.AssetManagement.Controls.ExpandPanelControl();
             this.collapsePanelControl1 = new Qtech.AssetManagement.Controls.CollapsePanelControl();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label11 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.panel12 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -198,20 +198,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.ultraGrid1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AssetTypeutraCombo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AveragingMethodultraCombo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DepreciationMethodultraCombo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DepreciationExpenseAccountultraCombo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AccumulatedDepreciationAccountultraCombo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AssetAccountultraCombo)).BeginInit();
-            this.panel11.SuspendLayout();
-            this.panel8.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AveragingMethodultraCombo)).BeginInit();
             this.panel12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DepreciationMethodultraCombo)).BeginInit();
+            this.panel5.SuspendLayout();
+            this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AssetTypeutraCombo)).BeginInit();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AssetAccountultraCombo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AccumulatedDepreciationAccountultraCombo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DepreciationExpenseAccountultraCombo)).BeginInit();
+            this.panel11.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -440,6 +440,21 @@
             this.ultraGrid1.BeforeRowsDeleted += new Infragistics.Win.UltraWinGrid.BeforeRowsDeletedEventHandler(this.ultraGrid1_BeforeRowsDeleted);
             this.ultraGrid1.DoubleClickRow += new Infragistics.Win.UltraWinGrid.DoubleClickRowEventHandler(this.ultraGrid1_DoubleClickRow);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(43)))), ((int)(((byte)(137)))));
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Tahoma", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.button1.Location = new System.Drawing.Point(0, 77);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(391, 25);
+            this.button1.TabIndex = 127;
+            this.button1.Text = "Set Start Date";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.label10);
@@ -491,79 +506,70 @@
             this.label9.TabIndex = 9;
             this.label9.Text = "Start Date";
             // 
-            // AssetTypeutraCombo
+            // expandPanelControl1
             // 
-            appearance41.BackColor = System.Drawing.SystemColors.Window;
-            appearance41.BorderColor = System.Drawing.SystemColors.InactiveCaption;
-            this.AssetTypeutraCombo.DisplayLayout.Appearance = appearance41;
-            ultraGridColumn5.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
-            ultraGridColumn5.Header.VisiblePosition = 0;
-            ultraGridColumn5.Hidden = true;
-            ultraGridColumn17.Header.Caption = "Name";
-            ultraGridColumn17.Header.VisiblePosition = 1;
-            ultraGridColumn17.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 23);
-            ultraGridBand4.Columns.AddRange(new object[] {
-            ultraGridColumn5,
-            ultraGridColumn17});
-            ultraGridBand4.RowLayoutStyle = Infragistics.Win.UltraWinGrid.RowLayoutStyle.ColumnLayout;
-            this.AssetTypeutraCombo.DisplayLayout.BandsSerializer.Add(ultraGridBand4);
-            this.AssetTypeutraCombo.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
-            this.AssetTypeutraCombo.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.False;
-            appearance42.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            appearance42.BackColor2 = System.Drawing.SystemColors.ControlDark;
-            appearance42.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
-            appearance42.BorderColor = System.Drawing.SystemColors.Window;
-            this.AssetTypeutraCombo.DisplayLayout.GroupByBox.Appearance = appearance42;
-            appearance43.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.AssetTypeutraCombo.DisplayLayout.GroupByBox.BandLabelAppearance = appearance43;
-            this.AssetTypeutraCombo.DisplayLayout.GroupByBox.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
-            appearance44.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            appearance44.BackColor2 = System.Drawing.SystemColors.Control;
-            appearance44.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
-            appearance44.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.AssetTypeutraCombo.DisplayLayout.GroupByBox.PromptAppearance = appearance44;
-            this.AssetTypeutraCombo.DisplayLayout.MaxColScrollRegions = 1;
-            this.AssetTypeutraCombo.DisplayLayout.MaxRowScrollRegions = 1;
-            appearance45.BackColor = System.Drawing.SystemColors.Window;
-            appearance45.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.AssetTypeutraCombo.DisplayLayout.Override.ActiveCellAppearance = appearance45;
-            appearance46.BackColor = System.Drawing.SystemColors.Highlight;
-            appearance46.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.AssetTypeutraCombo.DisplayLayout.Override.ActiveRowAppearance = appearance46;
-            this.AssetTypeutraCombo.DisplayLayout.Override.AllowRowFiltering = Infragistics.Win.DefaultableBoolean.True;
-            this.AssetTypeutraCombo.DisplayLayout.Override.BorderStyleCell = Infragistics.Win.UIElementBorderStyle.Dotted;
-            this.AssetTypeutraCombo.DisplayLayout.Override.BorderStyleRow = Infragistics.Win.UIElementBorderStyle.Dotted;
-            appearance47.BackColor = System.Drawing.SystemColors.Window;
-            this.AssetTypeutraCombo.DisplayLayout.Override.CardAreaAppearance = appearance47;
-            appearance48.BorderColor = System.Drawing.Color.Silver;
-            appearance48.TextTrimming = Infragistics.Win.TextTrimming.EllipsisCharacter;
-            this.AssetTypeutraCombo.DisplayLayout.Override.CellAppearance = appearance48;
-            this.AssetTypeutraCombo.DisplayLayout.Override.CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.EditAndSelectText;
-            this.AssetTypeutraCombo.DisplayLayout.Override.CellPadding = 0;
-            appearance49.BackColor = System.Drawing.SystemColors.Control;
-            appearance49.BackColor2 = System.Drawing.SystemColors.ControlDark;
-            appearance49.BackGradientAlignment = Infragistics.Win.GradientAlignment.Element;
-            appearance49.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
-            appearance49.BorderColor = System.Drawing.SystemColors.Window;
-            this.AssetTypeutraCombo.DisplayLayout.Override.GroupByRowAppearance = appearance49;
-            appearance50.TextHAlignAsString = "Left";
-            this.AssetTypeutraCombo.DisplayLayout.Override.HeaderAppearance = appearance50;
-            this.AssetTypeutraCombo.DisplayLayout.Override.HeaderClickAction = Infragistics.Win.UltraWinGrid.HeaderClickAction.SortMulti;
-            this.AssetTypeutraCombo.DisplayLayout.Override.HeaderStyle = Infragistics.Win.HeaderStyle.WindowsXPCommand;
-            appearance51.BackColor = System.Drawing.SystemColors.Window;
-            appearance51.BorderColor = System.Drawing.Color.Silver;
-            this.AssetTypeutraCombo.DisplayLayout.Override.RowAppearance = appearance51;
-            this.AssetTypeutraCombo.DisplayLayout.Override.RowSelectors = Infragistics.Win.DefaultableBoolean.False;
-            appearance52.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.AssetTypeutraCombo.DisplayLayout.Override.TemplateAddRowAppearance = appearance52;
-            this.AssetTypeutraCombo.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill;
-            this.AssetTypeutraCombo.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
-            this.AssetTypeutraCombo.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy;
-            this.AssetTypeutraCombo.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AssetTypeutraCombo.Location = new System.Drawing.Point(194, 25);
-            this.AssetTypeutraCombo.Name = "AssetTypeutraCombo";
-            this.AssetTypeutraCombo.Size = new System.Drawing.Size(250, 23);
-            this.AssetTypeutraCombo.TabIndex = 0;
+            this.expandPanelControl1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.expandPanelControl1.Location = new System.Drawing.Point(391, 0);
+            this.expandPanelControl1.Name = "expandPanelControl1";
+            this.expandPanelControl1.Size = new System.Drawing.Size(15, 482);
+            this.expandPanelControl1.TabIndex = 126;
+            this.expandPanelControl1._ExpandPanel += new System.EventHandler(this.expandPanelControl1__ExpandPanel);
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.panel10);
+            this.panel9.Controls.Add(this.UsefulLifeYearstextBox);
+            this.panel9.Controls.Add(this.AveragingMethodultraCombo);
+            this.panel9.Controls.Add(this.panel12);
+            this.panel9.Controls.Add(this.DepreciationMethodultraCombo);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel9.Location = new System.Drawing.Point(15, 163);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(614, 170);
+            this.panel9.TabIndex = 179;
+            this.panel9.TabStop = true;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel10.Controls.Add(this.label8);
+            this.panel10.Controls.Add(this.label6);
+            this.panel10.Controls.Add(this.label7);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel10.Location = new System.Drawing.Point(0, 20);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(188, 150);
+            this.panel10.TabIndex = 178;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(10, 70);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(87, 13);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Useful Life Years";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(10, 13);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(106, 13);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "Depreciation Method";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(10, 42);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(95, 13);
+            this.label7.TabIndex = 7;
+            this.label7.Text = "Averaging Method";
             // 
             // UsefulLifeYearstextBox
             // 
@@ -653,6 +659,32 @@
             this.AveragingMethodultraCombo.Size = new System.Drawing.Size(250, 23);
             this.AveragingMethodultraCombo.TabIndex = 5;
             // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel12.Controls.Add(this.label12);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel12.Location = new System.Drawing.Point(0, 0);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(614, 20);
+            this.panel12.TabIndex = 177;
+            this.panel12.Tag = "headerpanel";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label12.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(0, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(116, 13);
+            this.label12.TabIndex = 24;
+            this.label12.Tag = "headerlabel";
+            this.label12.Text = "Type && Accounts";
+            // 
             // DepreciationMethodultraCombo
             // 
             appearance29.BackColor = System.Drawing.SystemColors.Window;
@@ -732,177 +764,173 @@
             this.DepreciationMethodultraCombo.Size = new System.Drawing.Size(250, 23);
             this.DepreciationMethodultraCombo.TabIndex = 4;
             // 
-            // DepreciationExpenseAccountultraCombo
+            // panel5
             // 
-            appearance77.BackColor = System.Drawing.SystemColors.Window;
-            appearance77.BorderColor = System.Drawing.SystemColors.InactiveCaption;
-            this.DepreciationExpenseAccountultraCombo.DisplayLayout.Appearance = appearance77;
-            ultraGridColumn34.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
-            ultraGridColumn34.Header.VisiblePosition = 0;
-            ultraGridColumn34.Hidden = true;
-            ultraGridColumn35.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
-            ultraGridColumn35.Header.Caption = "Title";
-            ultraGridColumn35.Header.VisiblePosition = 1;
-            ultraGridColumn35.RowLayoutColumnInfo.OriginX = 2;
-            ultraGridColumn35.RowLayoutColumnInfo.OriginY = 0;
-            ultraGridColumn35.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 23);
-            ultraGridColumn35.RowLayoutColumnInfo.SpanX = 6;
-            ultraGridColumn35.RowLayoutColumnInfo.SpanY = 2;
-            ultraGridColumn36.Header.Caption = "Code";
-            ultraGridColumn36.Header.VisiblePosition = 2;
-            ultraGridColumn36.RowLayoutColumnInfo.OriginX = 0;
-            ultraGridColumn36.RowLayoutColumnInfo.OriginY = 0;
-            ultraGridColumn36.RowLayoutColumnInfo.SpanX = 2;
-            ultraGridColumn36.RowLayoutColumnInfo.SpanY = 2;
-            ultraGridBand7.Columns.AddRange(new object[] {
-            ultraGridColumn34,
-            ultraGridColumn35,
-            ultraGridColumn36});
-            ultraGridBand7.RowLayoutStyle = Infragistics.Win.UltraWinGrid.RowLayoutStyle.ColumnLayout;
-            this.DepreciationExpenseAccountultraCombo.DisplayLayout.BandsSerializer.Add(ultraGridBand7);
-            this.DepreciationExpenseAccountultraCombo.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
-            this.DepreciationExpenseAccountultraCombo.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.False;
-            appearance78.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            appearance78.BackColor2 = System.Drawing.SystemColors.ControlDark;
-            appearance78.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
-            appearance78.BorderColor = System.Drawing.SystemColors.Window;
-            this.DepreciationExpenseAccountultraCombo.DisplayLayout.GroupByBox.Appearance = appearance78;
-            appearance79.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.DepreciationExpenseAccountultraCombo.DisplayLayout.GroupByBox.BandLabelAppearance = appearance79;
-            this.DepreciationExpenseAccountultraCombo.DisplayLayout.GroupByBox.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
-            appearance80.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            appearance80.BackColor2 = System.Drawing.SystemColors.Control;
-            appearance80.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
-            appearance80.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.DepreciationExpenseAccountultraCombo.DisplayLayout.GroupByBox.PromptAppearance = appearance80;
-            this.DepreciationExpenseAccountultraCombo.DisplayLayout.MaxColScrollRegions = 1;
-            this.DepreciationExpenseAccountultraCombo.DisplayLayout.MaxRowScrollRegions = 1;
-            appearance81.BackColor = System.Drawing.SystemColors.Window;
-            appearance81.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.DepreciationExpenseAccountultraCombo.DisplayLayout.Override.ActiveCellAppearance = appearance81;
-            appearance82.BackColor = System.Drawing.SystemColors.Highlight;
-            appearance82.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.DepreciationExpenseAccountultraCombo.DisplayLayout.Override.ActiveRowAppearance = appearance82;
-            this.DepreciationExpenseAccountultraCombo.DisplayLayout.Override.AllowRowFiltering = Infragistics.Win.DefaultableBoolean.True;
-            this.DepreciationExpenseAccountultraCombo.DisplayLayout.Override.BorderStyleCell = Infragistics.Win.UIElementBorderStyle.Dotted;
-            this.DepreciationExpenseAccountultraCombo.DisplayLayout.Override.BorderStyleRow = Infragistics.Win.UIElementBorderStyle.Dotted;
-            appearance83.BackColor = System.Drawing.SystemColors.Window;
-            this.DepreciationExpenseAccountultraCombo.DisplayLayout.Override.CardAreaAppearance = appearance83;
-            appearance84.BorderColor = System.Drawing.Color.Silver;
-            appearance84.TextTrimming = Infragistics.Win.TextTrimming.EllipsisCharacter;
-            this.DepreciationExpenseAccountultraCombo.DisplayLayout.Override.CellAppearance = appearance84;
-            this.DepreciationExpenseAccountultraCombo.DisplayLayout.Override.CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.EditAndSelectText;
-            this.DepreciationExpenseAccountultraCombo.DisplayLayout.Override.CellPadding = 0;
-            appearance85.BackColor = System.Drawing.SystemColors.Control;
-            appearance85.BackColor2 = System.Drawing.SystemColors.ControlDark;
-            appearance85.BackGradientAlignment = Infragistics.Win.GradientAlignment.Element;
-            appearance85.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
-            appearance85.BorderColor = System.Drawing.SystemColors.Window;
-            this.DepreciationExpenseAccountultraCombo.DisplayLayout.Override.GroupByRowAppearance = appearance85;
-            appearance86.TextHAlignAsString = "Left";
-            this.DepreciationExpenseAccountultraCombo.DisplayLayout.Override.HeaderAppearance = appearance86;
-            this.DepreciationExpenseAccountultraCombo.DisplayLayout.Override.HeaderClickAction = Infragistics.Win.UltraWinGrid.HeaderClickAction.SortMulti;
-            this.DepreciationExpenseAccountultraCombo.DisplayLayout.Override.HeaderStyle = Infragistics.Win.HeaderStyle.WindowsXPCommand;
-            appearance87.BackColor = System.Drawing.SystemColors.Window;
-            appearance87.BorderColor = System.Drawing.Color.Silver;
-            this.DepreciationExpenseAccountultraCombo.DisplayLayout.Override.RowAppearance = appearance87;
-            this.DepreciationExpenseAccountultraCombo.DisplayLayout.Override.RowSelectors = Infragistics.Win.DefaultableBoolean.False;
-            appearance88.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.DepreciationExpenseAccountultraCombo.DisplayLayout.Override.TemplateAddRowAppearance = appearance88;
-            this.DepreciationExpenseAccountultraCombo.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill;
-            this.DepreciationExpenseAccountultraCombo.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
-            this.DepreciationExpenseAccountultraCombo.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy;
-            this.DepreciationExpenseAccountultraCombo.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DepreciationExpenseAccountultraCombo.Location = new System.Drawing.Point(194, 112);
-            this.DepreciationExpenseAccountultraCombo.Name = "DepreciationExpenseAccountultraCombo";
-            this.DepreciationExpenseAccountultraCombo.Size = new System.Drawing.Size(250, 23);
-            this.DepreciationExpenseAccountultraCombo.TabIndex = 3;
+            this.panel5.Controls.Add(this.panel7);
+            this.panel5.Controls.Add(this.AssetTypeutraCombo);
+            this.panel5.Controls.Add(this.panel6);
+            this.panel5.Controls.Add(this.AssetAccountultraCombo);
+            this.panel5.Controls.Add(this.AccumulatedDepreciationAccountultraCombo);
+            this.panel5.Controls.Add(this.DepreciationExpenseAccountultraCombo);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(15, 20);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(614, 143);
+            this.panel5.TabIndex = 7;
+            this.panel5.TabStop = true;
             // 
-            // AccumulatedDepreciationAccountultraCombo
+            // panel7
             // 
-            appearance65.BackColor = System.Drawing.SystemColors.Window;
-            appearance65.BorderColor = System.Drawing.SystemColors.InactiveCaption;
-            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.Appearance = appearance65;
-            ultraGridColumn28.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
-            ultraGridColumn28.Header.VisiblePosition = 0;
-            ultraGridColumn28.Hidden = true;
-            ultraGridColumn30.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
-            ultraGridColumn30.Header.Caption = "Title";
-            ultraGridColumn30.Header.VisiblePosition = 1;
-            ultraGridColumn30.RowLayoutColumnInfo.OriginX = 2;
-            ultraGridColumn30.RowLayoutColumnInfo.OriginY = 0;
-            ultraGridColumn30.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 23);
-            ultraGridColumn30.RowLayoutColumnInfo.SpanX = 6;
-            ultraGridColumn30.RowLayoutColumnInfo.SpanY = 2;
-            ultraGridColumn31.Header.Caption = "Code";
-            ultraGridColumn31.Header.VisiblePosition = 2;
-            ultraGridColumn31.RowLayoutColumnInfo.OriginX = 0;
-            ultraGridColumn31.RowLayoutColumnInfo.OriginY = 0;
-            ultraGridColumn31.RowLayoutColumnInfo.SpanX = 2;
-            ultraGridColumn31.RowLayoutColumnInfo.SpanY = 2;
-            ultraGridBand6.Columns.AddRange(new object[] {
-            ultraGridColumn28,
-            ultraGridColumn30,
-            ultraGridColumn31});
-            ultraGridBand6.RowLayoutStyle = Infragistics.Win.UltraWinGrid.RowLayoutStyle.ColumnLayout;
-            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.BandsSerializer.Add(ultraGridBand6);
-            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
-            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.False;
-            appearance66.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            appearance66.BackColor2 = System.Drawing.SystemColors.ControlDark;
-            appearance66.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
-            appearance66.BorderColor = System.Drawing.SystemColors.Window;
-            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.GroupByBox.Appearance = appearance66;
-            appearance67.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.GroupByBox.BandLabelAppearance = appearance67;
-            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.GroupByBox.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
-            appearance68.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            appearance68.BackColor2 = System.Drawing.SystemColors.Control;
-            appearance68.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
-            appearance68.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.GroupByBox.PromptAppearance = appearance68;
-            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.MaxColScrollRegions = 1;
-            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.MaxRowScrollRegions = 1;
-            appearance69.BackColor = System.Drawing.SystemColors.Window;
-            appearance69.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.Override.ActiveCellAppearance = appearance69;
-            appearance70.BackColor = System.Drawing.SystemColors.Highlight;
-            appearance70.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.Override.ActiveRowAppearance = appearance70;
-            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.Override.AllowRowFiltering = Infragistics.Win.DefaultableBoolean.True;
-            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.Override.BorderStyleCell = Infragistics.Win.UIElementBorderStyle.Dotted;
-            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.Override.BorderStyleRow = Infragistics.Win.UIElementBorderStyle.Dotted;
-            appearance71.BackColor = System.Drawing.SystemColors.Window;
-            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.Override.CardAreaAppearance = appearance71;
-            appearance72.BorderColor = System.Drawing.Color.Silver;
-            appearance72.TextTrimming = Infragistics.Win.TextTrimming.EllipsisCharacter;
-            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.Override.CellAppearance = appearance72;
-            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.Override.CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.EditAndSelectText;
-            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.Override.CellPadding = 0;
-            appearance73.BackColor = System.Drawing.SystemColors.Control;
-            appearance73.BackColor2 = System.Drawing.SystemColors.ControlDark;
-            appearance73.BackGradientAlignment = Infragistics.Win.GradientAlignment.Element;
-            appearance73.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
-            appearance73.BorderColor = System.Drawing.SystemColors.Window;
-            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.Override.GroupByRowAppearance = appearance73;
-            appearance74.TextHAlignAsString = "Left";
-            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.Override.HeaderAppearance = appearance74;
-            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.Override.HeaderClickAction = Infragistics.Win.UltraWinGrid.HeaderClickAction.SortMulti;
-            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.Override.HeaderStyle = Infragistics.Win.HeaderStyle.WindowsXPCommand;
-            appearance75.BackColor = System.Drawing.SystemColors.Window;
-            appearance75.BorderColor = System.Drawing.Color.Silver;
-            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.Override.RowAppearance = appearance75;
-            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.Override.RowSelectors = Infragistics.Win.DefaultableBoolean.False;
-            appearance76.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.Override.TemplateAddRowAppearance = appearance76;
-            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill;
-            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
-            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy;
-            this.AccumulatedDepreciationAccountultraCombo.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AccumulatedDepreciationAccountultraCombo.Location = new System.Drawing.Point(194, 83);
-            this.AccumulatedDepreciationAccountultraCombo.Name = "AccumulatedDepreciationAccountultraCombo";
-            this.AccumulatedDepreciationAccountultraCombo.Size = new System.Drawing.Size(250, 23);
-            this.AccumulatedDepreciationAccountultraCombo.TabIndex = 2;
+            this.panel7.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel7.Controls.Add(this.label15);
+            this.panel7.Controls.Add(this.label16);
+            this.panel7.Controls.Add(this.label17);
+            this.panel7.Controls.Add(this.label19);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel7.Location = new System.Drawing.Point(0, 20);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(188, 123);
+            this.panel7.TabIndex = 178;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(7, 95);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(153, 13);
+            this.label15.TabIndex = 5;
+            this.label15.Text = "Depreciation Expense Account";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(7, 66);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(173, 13);
+            this.label16.TabIndex = 4;
+            this.label16.Text = "Accumulated Depreciation Account";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(7, 37);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(76, 13);
+            this.label17.TabIndex = 3;
+            this.label17.Text = "Asset Account";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(7, 10);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(61, 13);
+            this.label19.TabIndex = 2;
+            this.label19.Text = "Asset Type";
+            // 
+            // AssetTypeutraCombo
+            // 
+            appearance41.BackColor = System.Drawing.SystemColors.Window;
+            appearance41.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            this.AssetTypeutraCombo.DisplayLayout.Appearance = appearance41;
+            ultraGridColumn5.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
+            ultraGridColumn5.Header.VisiblePosition = 0;
+            ultraGridColumn5.Hidden = true;
+            ultraGridColumn17.Header.Caption = "Name";
+            ultraGridColumn17.Header.VisiblePosition = 1;
+            ultraGridColumn17.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 23);
+            ultraGridBand4.Columns.AddRange(new object[] {
+            ultraGridColumn5,
+            ultraGridColumn17});
+            ultraGridBand4.RowLayoutStyle = Infragistics.Win.UltraWinGrid.RowLayoutStyle.ColumnLayout;
+            this.AssetTypeutraCombo.DisplayLayout.BandsSerializer.Add(ultraGridBand4);
+            this.AssetTypeutraCombo.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
+            this.AssetTypeutraCombo.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.False;
+            appearance42.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            appearance42.BackColor2 = System.Drawing.SystemColors.ControlDark;
+            appearance42.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
+            appearance42.BorderColor = System.Drawing.SystemColors.Window;
+            this.AssetTypeutraCombo.DisplayLayout.GroupByBox.Appearance = appearance42;
+            appearance43.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.AssetTypeutraCombo.DisplayLayout.GroupByBox.BandLabelAppearance = appearance43;
+            this.AssetTypeutraCombo.DisplayLayout.GroupByBox.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
+            appearance44.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            appearance44.BackColor2 = System.Drawing.SystemColors.Control;
+            appearance44.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
+            appearance44.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.AssetTypeutraCombo.DisplayLayout.GroupByBox.PromptAppearance = appearance44;
+            this.AssetTypeutraCombo.DisplayLayout.MaxColScrollRegions = 1;
+            this.AssetTypeutraCombo.DisplayLayout.MaxRowScrollRegions = 1;
+            appearance45.BackColor = System.Drawing.SystemColors.Window;
+            appearance45.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.AssetTypeutraCombo.DisplayLayout.Override.ActiveCellAppearance = appearance45;
+            appearance46.BackColor = System.Drawing.SystemColors.Highlight;
+            appearance46.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.AssetTypeutraCombo.DisplayLayout.Override.ActiveRowAppearance = appearance46;
+            this.AssetTypeutraCombo.DisplayLayout.Override.AllowRowFiltering = Infragistics.Win.DefaultableBoolean.True;
+            this.AssetTypeutraCombo.DisplayLayout.Override.BorderStyleCell = Infragistics.Win.UIElementBorderStyle.Dotted;
+            this.AssetTypeutraCombo.DisplayLayout.Override.BorderStyleRow = Infragistics.Win.UIElementBorderStyle.Dotted;
+            appearance47.BackColor = System.Drawing.SystemColors.Window;
+            this.AssetTypeutraCombo.DisplayLayout.Override.CardAreaAppearance = appearance47;
+            appearance48.BorderColor = System.Drawing.Color.Silver;
+            appearance48.TextTrimming = Infragistics.Win.TextTrimming.EllipsisCharacter;
+            this.AssetTypeutraCombo.DisplayLayout.Override.CellAppearance = appearance48;
+            this.AssetTypeutraCombo.DisplayLayout.Override.CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.EditAndSelectText;
+            this.AssetTypeutraCombo.DisplayLayout.Override.CellPadding = 0;
+            appearance49.BackColor = System.Drawing.SystemColors.Control;
+            appearance49.BackColor2 = System.Drawing.SystemColors.ControlDark;
+            appearance49.BackGradientAlignment = Infragistics.Win.GradientAlignment.Element;
+            appearance49.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
+            appearance49.BorderColor = System.Drawing.SystemColors.Window;
+            this.AssetTypeutraCombo.DisplayLayout.Override.GroupByRowAppearance = appearance49;
+            appearance50.TextHAlignAsString = "Left";
+            this.AssetTypeutraCombo.DisplayLayout.Override.HeaderAppearance = appearance50;
+            this.AssetTypeutraCombo.DisplayLayout.Override.HeaderClickAction = Infragistics.Win.UltraWinGrid.HeaderClickAction.SortMulti;
+            this.AssetTypeutraCombo.DisplayLayout.Override.HeaderStyle = Infragistics.Win.HeaderStyle.WindowsXPCommand;
+            appearance51.BackColor = System.Drawing.SystemColors.Window;
+            appearance51.BorderColor = System.Drawing.Color.Silver;
+            this.AssetTypeutraCombo.DisplayLayout.Override.RowAppearance = appearance51;
+            this.AssetTypeutraCombo.DisplayLayout.Override.RowSelectors = Infragistics.Win.DefaultableBoolean.False;
+            appearance52.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.AssetTypeutraCombo.DisplayLayout.Override.TemplateAddRowAppearance = appearance52;
+            this.AssetTypeutraCombo.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill;
+            this.AssetTypeutraCombo.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
+            this.AssetTypeutraCombo.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy;
+            this.AssetTypeutraCombo.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AssetTypeutraCombo.Location = new System.Drawing.Point(194, 25);
+            this.AssetTypeutraCombo.Name = "AssetTypeutraCombo";
+            this.AssetTypeutraCombo.Size = new System.Drawing.Size(250, 23);
+            this.AssetTypeutraCombo.TabIndex = 0;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel6.Controls.Add(this.label11);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(614, 20);
+            this.panel6.TabIndex = 177;
+            this.panel6.Tag = "headerpanel";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label11.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(0, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(116, 13);
+            this.label11.TabIndex = 24;
+            this.label11.Tag = "headerlabel";
+            this.label11.Text = "Type && Accounts";
             // 
             // AssetAccountultraCombo
             // 
@@ -990,35 +1018,177 @@
             this.AssetAccountultraCombo.Size = new System.Drawing.Size(250, 23);
             this.AssetAccountultraCombo.TabIndex = 1;
             // 
-            // label8
+            // AccumulatedDepreciationAccountultraCombo
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(10, 70);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(87, 13);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "Useful Life Years";
+            appearance65.BackColor = System.Drawing.SystemColors.Window;
+            appearance65.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.Appearance = appearance65;
+            ultraGridColumn28.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
+            ultraGridColumn28.Header.VisiblePosition = 0;
+            ultraGridColumn28.Hidden = true;
+            ultraGridColumn30.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
+            ultraGridColumn30.Header.Caption = "Title";
+            ultraGridColumn30.Header.VisiblePosition = 1;
+            ultraGridColumn30.RowLayoutColumnInfo.OriginX = 2;
+            ultraGridColumn30.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn30.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 23);
+            ultraGridColumn30.RowLayoutColumnInfo.SpanX = 6;
+            ultraGridColumn30.RowLayoutColumnInfo.SpanY = 2;
+            ultraGridColumn31.Header.Caption = "Code";
+            ultraGridColumn31.Header.VisiblePosition = 2;
+            ultraGridColumn31.RowLayoutColumnInfo.OriginX = 0;
+            ultraGridColumn31.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn31.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn31.RowLayoutColumnInfo.SpanY = 2;
+            ultraGridBand6.Columns.AddRange(new object[] {
+            ultraGridColumn28,
+            ultraGridColumn30,
+            ultraGridColumn31});
+            ultraGridBand6.RowLayoutStyle = Infragistics.Win.UltraWinGrid.RowLayoutStyle.ColumnLayout;
+            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.BandsSerializer.Add(ultraGridBand6);
+            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
+            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.False;
+            appearance66.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            appearance66.BackColor2 = System.Drawing.SystemColors.ControlDark;
+            appearance66.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
+            appearance66.BorderColor = System.Drawing.SystemColors.Window;
+            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.GroupByBox.Appearance = appearance66;
+            appearance67.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.GroupByBox.BandLabelAppearance = appearance67;
+            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.GroupByBox.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
+            appearance68.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            appearance68.BackColor2 = System.Drawing.SystemColors.Control;
+            appearance68.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
+            appearance68.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.GroupByBox.PromptAppearance = appearance68;
+            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.MaxColScrollRegions = 1;
+            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.MaxRowScrollRegions = 1;
+            appearance69.BackColor = System.Drawing.SystemColors.Window;
+            appearance69.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.Override.ActiveCellAppearance = appearance69;
+            appearance70.BackColor = System.Drawing.SystemColors.Highlight;
+            appearance70.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.Override.ActiveRowAppearance = appearance70;
+            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.Override.AllowRowFiltering = Infragistics.Win.DefaultableBoolean.True;
+            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.Override.BorderStyleCell = Infragistics.Win.UIElementBorderStyle.Dotted;
+            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.Override.BorderStyleRow = Infragistics.Win.UIElementBorderStyle.Dotted;
+            appearance71.BackColor = System.Drawing.SystemColors.Window;
+            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.Override.CardAreaAppearance = appearance71;
+            appearance72.BorderColor = System.Drawing.Color.Silver;
+            appearance72.TextTrimming = Infragistics.Win.TextTrimming.EllipsisCharacter;
+            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.Override.CellAppearance = appearance72;
+            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.Override.CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.EditAndSelectText;
+            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.Override.CellPadding = 0;
+            appearance73.BackColor = System.Drawing.SystemColors.Control;
+            appearance73.BackColor2 = System.Drawing.SystemColors.ControlDark;
+            appearance73.BackGradientAlignment = Infragistics.Win.GradientAlignment.Element;
+            appearance73.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
+            appearance73.BorderColor = System.Drawing.SystemColors.Window;
+            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.Override.GroupByRowAppearance = appearance73;
+            appearance74.TextHAlignAsString = "Left";
+            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.Override.HeaderAppearance = appearance74;
+            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.Override.HeaderClickAction = Infragistics.Win.UltraWinGrid.HeaderClickAction.SortMulti;
+            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.Override.HeaderStyle = Infragistics.Win.HeaderStyle.WindowsXPCommand;
+            appearance75.BackColor = System.Drawing.SystemColors.Window;
+            appearance75.BorderColor = System.Drawing.Color.Silver;
+            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.Override.RowAppearance = appearance75;
+            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.Override.RowSelectors = Infragistics.Win.DefaultableBoolean.False;
+            appearance76.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.Override.TemplateAddRowAppearance = appearance76;
+            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill;
+            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
+            this.AccumulatedDepreciationAccountultraCombo.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy;
+            this.AccumulatedDepreciationAccountultraCombo.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AccumulatedDepreciationAccountultraCombo.Location = new System.Drawing.Point(194, 83);
+            this.AccumulatedDepreciationAccountultraCombo.Name = "AccumulatedDepreciationAccountultraCombo";
+            this.AccumulatedDepreciationAccountultraCombo.Size = new System.Drawing.Size(250, 23);
+            this.AccumulatedDepreciationAccountultraCombo.TabIndex = 2;
             // 
-            // label7
+            // DepreciationExpenseAccountultraCombo
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(10, 42);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 13);
-            this.label7.TabIndex = 7;
-            this.label7.Text = "Averaging Method";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(10, 13);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(106, 13);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "Depreciation Method";
+            appearance77.BackColor = System.Drawing.SystemColors.Window;
+            appearance77.BorderColor = System.Drawing.SystemColors.InactiveCaption;
+            this.DepreciationExpenseAccountultraCombo.DisplayLayout.Appearance = appearance77;
+            ultraGridColumn34.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
+            ultraGridColumn34.Header.VisiblePosition = 0;
+            ultraGridColumn34.Hidden = true;
+            ultraGridColumn35.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
+            ultraGridColumn35.Header.Caption = "Title";
+            ultraGridColumn35.Header.VisiblePosition = 1;
+            ultraGridColumn35.RowLayoutColumnInfo.OriginX = 2;
+            ultraGridColumn35.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn35.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 23);
+            ultraGridColumn35.RowLayoutColumnInfo.SpanX = 6;
+            ultraGridColumn35.RowLayoutColumnInfo.SpanY = 2;
+            ultraGridColumn36.Header.Caption = "Code";
+            ultraGridColumn36.Header.VisiblePosition = 2;
+            ultraGridColumn36.RowLayoutColumnInfo.OriginX = 0;
+            ultraGridColumn36.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn36.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn36.RowLayoutColumnInfo.SpanY = 2;
+            ultraGridBand7.Columns.AddRange(new object[] {
+            ultraGridColumn34,
+            ultraGridColumn35,
+            ultraGridColumn36});
+            ultraGridBand7.RowLayoutStyle = Infragistics.Win.UltraWinGrid.RowLayoutStyle.ColumnLayout;
+            this.DepreciationExpenseAccountultraCombo.DisplayLayout.BandsSerializer.Add(ultraGridBand7);
+            this.DepreciationExpenseAccountultraCombo.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
+            this.DepreciationExpenseAccountultraCombo.DisplayLayout.CaptionVisible = Infragistics.Win.DefaultableBoolean.False;
+            appearance78.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            appearance78.BackColor2 = System.Drawing.SystemColors.ControlDark;
+            appearance78.BackGradientStyle = Infragistics.Win.GradientStyle.Vertical;
+            appearance78.BorderColor = System.Drawing.SystemColors.Window;
+            this.DepreciationExpenseAccountultraCombo.DisplayLayout.GroupByBox.Appearance = appearance78;
+            appearance79.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.DepreciationExpenseAccountultraCombo.DisplayLayout.GroupByBox.BandLabelAppearance = appearance79;
+            this.DepreciationExpenseAccountultraCombo.DisplayLayout.GroupByBox.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
+            appearance80.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            appearance80.BackColor2 = System.Drawing.SystemColors.Control;
+            appearance80.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
+            appearance80.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.DepreciationExpenseAccountultraCombo.DisplayLayout.GroupByBox.PromptAppearance = appearance80;
+            this.DepreciationExpenseAccountultraCombo.DisplayLayout.MaxColScrollRegions = 1;
+            this.DepreciationExpenseAccountultraCombo.DisplayLayout.MaxRowScrollRegions = 1;
+            appearance81.BackColor = System.Drawing.SystemColors.Window;
+            appearance81.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.DepreciationExpenseAccountultraCombo.DisplayLayout.Override.ActiveCellAppearance = appearance81;
+            appearance82.BackColor = System.Drawing.SystemColors.Highlight;
+            appearance82.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.DepreciationExpenseAccountultraCombo.DisplayLayout.Override.ActiveRowAppearance = appearance82;
+            this.DepreciationExpenseAccountultraCombo.DisplayLayout.Override.AllowRowFiltering = Infragistics.Win.DefaultableBoolean.True;
+            this.DepreciationExpenseAccountultraCombo.DisplayLayout.Override.BorderStyleCell = Infragistics.Win.UIElementBorderStyle.Dotted;
+            this.DepreciationExpenseAccountultraCombo.DisplayLayout.Override.BorderStyleRow = Infragistics.Win.UIElementBorderStyle.Dotted;
+            appearance83.BackColor = System.Drawing.SystemColors.Window;
+            this.DepreciationExpenseAccountultraCombo.DisplayLayout.Override.CardAreaAppearance = appearance83;
+            appearance84.BorderColor = System.Drawing.Color.Silver;
+            appearance84.TextTrimming = Infragistics.Win.TextTrimming.EllipsisCharacter;
+            this.DepreciationExpenseAccountultraCombo.DisplayLayout.Override.CellAppearance = appearance84;
+            this.DepreciationExpenseAccountultraCombo.DisplayLayout.Override.CellClickAction = Infragistics.Win.UltraWinGrid.CellClickAction.EditAndSelectText;
+            this.DepreciationExpenseAccountultraCombo.DisplayLayout.Override.CellPadding = 0;
+            appearance85.BackColor = System.Drawing.SystemColors.Control;
+            appearance85.BackColor2 = System.Drawing.SystemColors.ControlDark;
+            appearance85.BackGradientAlignment = Infragistics.Win.GradientAlignment.Element;
+            appearance85.BackGradientStyle = Infragistics.Win.GradientStyle.Horizontal;
+            appearance85.BorderColor = System.Drawing.SystemColors.Window;
+            this.DepreciationExpenseAccountultraCombo.DisplayLayout.Override.GroupByRowAppearance = appearance85;
+            appearance86.TextHAlignAsString = "Left";
+            this.DepreciationExpenseAccountultraCombo.DisplayLayout.Override.HeaderAppearance = appearance86;
+            this.DepreciationExpenseAccountultraCombo.DisplayLayout.Override.HeaderClickAction = Infragistics.Win.UltraWinGrid.HeaderClickAction.SortMulti;
+            this.DepreciationExpenseAccountultraCombo.DisplayLayout.Override.HeaderStyle = Infragistics.Win.HeaderStyle.WindowsXPCommand;
+            appearance87.BackColor = System.Drawing.SystemColors.Window;
+            appearance87.BorderColor = System.Drawing.Color.Silver;
+            this.DepreciationExpenseAccountultraCombo.DisplayLayout.Override.RowAppearance = appearance87;
+            this.DepreciationExpenseAccountultraCombo.DisplayLayout.Override.RowSelectors = Infragistics.Win.DefaultableBoolean.False;
+            appearance88.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.DepreciationExpenseAccountultraCombo.DisplayLayout.Override.TemplateAddRowAppearance = appearance88;
+            this.DepreciationExpenseAccountultraCombo.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill;
+            this.DepreciationExpenseAccountultraCombo.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
+            this.DepreciationExpenseAccountultraCombo.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy;
+            this.DepreciationExpenseAccountultraCombo.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DepreciationExpenseAccountultraCombo.Location = new System.Drawing.Point(194, 112);
+            this.DepreciationExpenseAccountultraCombo.Name = "DepreciationExpenseAccountultraCombo";
+            this.DepreciationExpenseAccountultraCombo.Size = new System.Drawing.Size(250, 23);
+            this.DepreciationExpenseAccountultraCombo.TabIndex = 3;
             // 
             // panel11
             // 
@@ -1111,30 +1281,6 @@
             this.Savebutton.UseVisualStyleBackColor = false;
             this.Savebutton.Click += new System.EventHandler(this.Savebutton_Click);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(43)))), ((int)(((byte)(137)))));
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Tahoma", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.Location = new System.Drawing.Point(0, 77);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(391, 25);
-            this.button1.TabIndex = 127;
-            this.button1.Text = "Set Start Date";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // expandPanelControl1
-            // 
-            this.expandPanelControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.expandPanelControl1.Location = new System.Drawing.Point(391, 0);
-            this.expandPanelControl1.Name = "expandPanelControl1";
-            this.expandPanelControl1.Size = new System.Drawing.Size(15, 482);
-            this.expandPanelControl1.TabIndex = 126;
-            this.expandPanelControl1._ExpandPanel += new System.EventHandler(this.expandPanelControl1__ExpandPanel);
-            // 
             // collapsePanelControl1
             // 
             this.collapsePanelControl1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -1143,152 +1289,6 @@
             this.collapsePanelControl1.Size = new System.Drawing.Size(15, 482);
             this.collapsePanelControl1.TabIndex = 178;
             this.collapsePanelControl1._HidePanel += new System.EventHandler(this.collapsePanelControl1__HidePanel);
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.panel7);
-            this.panel5.Controls.Add(this.AssetTypeutraCombo);
-            this.panel5.Controls.Add(this.panel6);
-            this.panel5.Controls.Add(this.AssetAccountultraCombo);
-            this.panel5.Controls.Add(this.AccumulatedDepreciationAccountultraCombo);
-            this.panel5.Controls.Add(this.DepreciationExpenseAccountultraCombo);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel5.Location = new System.Drawing.Point(15, 20);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(614, 143);
-            this.panel5.TabIndex = 7;
-            this.panel5.TabStop = true;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
-            this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel6.Controls.Add(this.label11);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(614, 20);
-            this.panel6.TabIndex = 177;
-            this.panel6.Tag = "headerpanel";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.Transparent;
-            this.label11.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label11.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(0, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(116, 13);
-            this.label11.TabIndex = 24;
-            this.label11.Tag = "headerlabel";
-            this.label11.Text = "Type && Accounts";
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel7.Controls.Add(this.label15);
-            this.panel7.Controls.Add(this.label16);
-            this.panel7.Controls.Add(this.label17);
-            this.panel7.Controls.Add(this.label19);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel7.Location = new System.Drawing.Point(0, 20);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(188, 123);
-            this.panel7.TabIndex = 178;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(7, 95);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(153, 13);
-            this.label15.TabIndex = 5;
-            this.label15.Text = "Depreciation Expense Account";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(7, 66);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(173, 13);
-            this.label16.TabIndex = 4;
-            this.label16.Text = "Accumulated Depreciation Account";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(7, 37);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(76, 13);
-            this.label17.TabIndex = 3;
-            this.label17.Text = "Asset Account";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(7, 10);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(61, 13);
-            this.label19.TabIndex = 2;
-            this.label19.Text = "Asset Type";
-            // 
-            // panel9
-            // 
-            this.panel9.Controls.Add(this.panel10);
-            this.panel9.Controls.Add(this.UsefulLifeYearstextBox);
-            this.panel9.Controls.Add(this.AveragingMethodultraCombo);
-            this.panel9.Controls.Add(this.panel12);
-            this.panel9.Controls.Add(this.DepreciationMethodultraCombo);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel9.Location = new System.Drawing.Point(15, 163);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(614, 170);
-            this.panel9.TabIndex = 179;
-            this.panel9.TabStop = true;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.Gainsboro;
-            this.panel10.Controls.Add(this.label8);
-            this.panel10.Controls.Add(this.label6);
-            this.panel10.Controls.Add(this.label7);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel10.Location = new System.Drawing.Point(0, 20);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(188, 150);
-            this.panel10.TabIndex = 178;
-            // 
-            // panel12
-            // 
-            this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
-            this.panel12.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel12.Controls.Add(this.label12);
-            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel12.Location = new System.Drawing.Point(0, 0);
-            this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(614, 20);
-            this.panel12.TabIndex = 177;
-            this.panel12.Tag = "headerpanel";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label12.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(0, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(116, 13);
-            this.label12.TabIndex = 24;
-            this.label12.Tag = "headerlabel";
-            this.label12.Text = "Type && Accounts";
             // 
             // Default
             // 
@@ -1308,27 +1308,27 @@
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.AssetTypeutraCombo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AveragingMethodultraCombo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DepreciationMethodultraCombo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DepreciationExpenseAccountultraCombo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AccumulatedDepreciationAccountultraCombo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AssetAccountultraCombo)).EndInit();
-            this.panel11.ResumeLayout(false);
-            this.panel11.PerformLayout();
-            this.panel8.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AveragingMethodultraCombo)).EndInit();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DepreciationMethodultraCombo)).EndInit();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AssetTypeutraCombo)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AssetAccountultraCombo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AccumulatedDepreciationAccountultraCombo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DepreciationExpenseAccountultraCombo)).EndInit();
+            this.panel11.ResumeLayout(false);
+            this.panel11.PerformLayout();
+            this.panel8.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

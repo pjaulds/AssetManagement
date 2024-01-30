@@ -25,7 +25,7 @@ namespace Qtech.AssetManagement.Utilities
                 //if (ctl is UltraTextEditor)
                 //    ((UltraTextEditor)ctl).CharacterCasing = CharacterCasing.Upper;
 
-                if (ctl is Button)
+                if (ctl is Button && ctl.Tag == null)
                     ((Button)ctl).BackColor = Color.FromArgb(28, 97, 161);
 
                 if (ctl is DataGridView)

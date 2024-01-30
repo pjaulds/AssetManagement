@@ -83,6 +83,9 @@ namespace Qtech.AssetManagement.Dal
                 idParam.Value = 0;
                 myCommand.Parameters.Add(idParam);
 
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@is_draft", fixedassetCriteria.mIsDraft);
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@is_registered", fixedassetCriteria.mIsRegistered);
+
                 myCommand.Connection.Open();
                 myCommand.ExecuteNonQuery();
                 myCommand.Connection.Close();
@@ -122,7 +125,7 @@ namespace Qtech.AssetManagement.Dal
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@averaging_method_id", myFixedAsset.mAveragingMethodId);
                 Helpers.CreateParameter(myCommand, DbType.Decimal, "@accumulated_depreciation", myFixedAsset.mAccumulatedDepreciation);
                 Helpers.CreateParameter(myCommand, DbType.Decimal, "@residual_value", myFixedAsset.mResidualValue);
-                Helpers.CreateParameter(myCommand, DbType.Int16, "@useful_life_years", myFixedAsset.mUsefulLifeYears);
+                Helpers.CreateParameter(myCommand, DbType.Decimal, "@useful_life_years", myFixedAsset.mUsefulLifeYears);
                 Helpers.CreateParameter(myCommand, DbType.Boolean, "@is_draft", myFixedAsset.mIsDraft);
                 Helpers.CreateParameter(myCommand, DbType.Boolean, "@is_registered", myFixedAsset.mIsRegistered);
                 Helpers.CreateParameter(myCommand, DbType.Boolean, "@is_disposed", myFixedAsset.mIsDisposed);
@@ -198,7 +201,7 @@ namespace Qtech.AssetManagement.Dal
             fixedasset.mAveragingMethodId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("averaging_method_id"));
             fixedasset.mAccumulatedDepreciation = myDataRecord.GetDecimal(myDataRecord.GetOrdinal("accumulated_depreciation"));
             fixedasset.mResidualValue = myDataRecord.GetDecimal(myDataRecord.GetOrdinal("residual_value"));
-            fixedasset.mUsefulLifeYears = myDataRecord.GetInt16(myDataRecord.GetOrdinal("useful_life_years"));
+            fixedasset.mUsefulLifeYears = myDataRecord.GetDecimal(myDataRecord.GetOrdinal("useful_life_years"));
             fixedasset.mIsDraft = myDataRecord.GetBoolean(myDataRecord.GetOrdinal("is_draft"));
             fixedasset.mIsRegistered = myDataRecord.GetBoolean(myDataRecord.GetOrdinal("is_registered"));
             fixedasset.mIsDisposed = myDataRecord.GetBoolean(myDataRecord.GetOrdinal("is_disposed"));

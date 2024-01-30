@@ -80,10 +80,10 @@ namespace Qtech.AssetManagement.FixedAsset
             NametextBox.Text = fa.mProductName;
             
             PurchaseDatetextBox.Text = fa.mPurchaseDate.ToString("D");
-            EndDepreciationDatetextBox.Text = fa.mPurchaseDate.AddYears(fa.mUsefulLifeYears).AddDays(-1).ToString("D");
+            EndDepreciationDatetextBox.Text = fa.mPurchaseDate.AddYears((int)fa.mUsefulLifeYears).AddDays(-1).ToString("D");
             PurchaseCosttextBox.Text = fa.mPurchasePrice.ToString("N");
             ResidualValuetextBox.Text = fa.mResidualValue.ToString("N");
-            UsefulLifetextBox.Text = fa.mUsefulLifeYears.ToString();
+            UsefulLifetextBox.Text = fa.mUsefulLifeYears.ToString("N");
             DepreciationMethodtextBox.Text = fa.mDepreciationMethodName;
             AveragingMethodtextBox.Text = fa.mAveragingMethodName;
 
