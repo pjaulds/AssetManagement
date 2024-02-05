@@ -115,8 +115,10 @@ namespace Qtech.AssetManagement.FixedAsset
             myFixedAsset.mResidualValue = ControlUtil.TextBoxDecimal(ResidualValuetextBox);
             myFixedAsset.mUsefulLifeYears = ControlUtil.TextBoxDecimal(UsefulLifetextBox);
             myFixedAsset.mIsDraft = DraftcheckBox.Checked;
-            myFixedAsset.mIsRegistered = RegisteredcheckBox.Checked;
+            myFixedAsset.mIsRegistered = RegisterBytextBox.Text != string.Empty;
             myFixedAsset.mIsDisposed = DisposedcheckBox.Checked;
+            myFixedAsset.mRegisterById = int.Parse(RegisterByIdlabel.Text);
+            myFixedAsset.mRegisterByName = RegisterBytextBox.Text;
             myFixedAsset.mUserId = SessionUtil.mUser.mId;
         }
 
@@ -144,6 +146,8 @@ namespace Qtech.AssetManagement.FixedAsset
             DraftcheckBox.Checked = myFixedAsset.mIsDraft;
             RegisteredcheckBox.Checked = myFixedAsset.mIsRegistered;
             DisposedcheckBox.Checked = myFixedAsset.mIsDisposed;
+            RegisterByIdlabel.Text = myFixedAsset.mRegisterById.ToString();
+            RegisterBytextBox.Text = myFixedAsset.mRegisterByName;
         }
 
         public void LoadFormControlsFromReceivingDetail(ReceivingDetail myReceivingDetail)
@@ -166,7 +170,6 @@ namespace Qtech.AssetManagement.FixedAsset
         {
             ControlUtil.ClearConent(splitContainer1.Panel2);
             ControlUtil.HidePanel(splitContainer1);
-            Idlabel.Text = "0";
         }
         #endregion
 
@@ -211,8 +214,8 @@ namespace Qtech.AssetManagement.FixedAsset
             if (!decimal.TryParse(PurchasePricetextBox.Text, out purchasePrice))
                 rules.Add(new BrokenRule("", "Invalid purchase price."));
 
-            short usefulLife = 0;
-            if (!short.TryParse(UsefulLifetextBox.Text, out usefulLife))
+            decimal usefulLife = 0;
+            if (!decimal.TryParse(UsefulLifetextBox.Text, out usefulLife))
                 rules.Add(new BrokenRule("", "Invalid useful life (years)."));
 
             if (rules.Count > 0)
@@ -323,16 +326,29 @@ namespace Qtech.AssetManagement.FixedAsset
 
             ThemeUtil.Controls(this);
             ControlUtil.TextBoxEnterLeaveEventHandler(splitContainer1.Panel2);
-            LoadFixedAsset();
-
-            Savebutton.Text = allow_delete ? "Register" : "Save As Draft";
-            
+            LoadFixedAsset();            
         }
 
         private void Savebutton_Click(object sender, EventArgs e)
         {
-            SaveFixedAsset();
+            SaveRecords();
         }
+
+        private void LogIn_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            User.LogInForm logIn = (User.LogInForm)sender;
+            if (logIn.mUser == null) return;
+
+            if (!SessionUtil.UserAllowApprove(logIn.mUser, (int)Modules.FixedAsset))
+            {
+                MessageBox.Show("You are not allowed to override transaction (register).", "Fixed Asset", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            
+            RegisterByIdlabel.Text = logIn.mUser.mId.ToString();
+            RegisterBytextBox.Text = PersonnelManager.GetItem(logIn.mUser.mPersonnelId).mName;
+        }
+
 
         private void Cancelbutton_Click(object sender, EventArgs e)
         {
@@ -462,6 +478,20 @@ namespace Qtech.AssetManagement.FixedAsset
         {
             ultraGrid1.SetDataBinding(FixedAssetManager.GetList(), null, true);
             ultraGrid1.Refresh();
+        }
+
+        private void AccumulatedDepreciationtextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //enter username password
+            User.LogInForm logIn = new User.LogInForm();
+            logIn.mForOverride = true;
+            logIn.FormClosing += LogIn_FormClosing;
+            logIn.ShowDialog();
         }
     }
 }

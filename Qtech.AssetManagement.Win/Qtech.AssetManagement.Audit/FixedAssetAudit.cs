@@ -200,6 +200,16 @@ namespace Qtech.AssetManagement.Audit
                 audit_collection.Add(audit);
             }
 
+            if (fixedasset.mRegisterById != fixedassetOld.mRegisterById)
+            {
+                audit = new BusinessEntities.Audit();
+                LoadCommonData(ref audit, fixedasset);
+                audit.mField = "Register By";
+                audit.mOldValue = fixedassetOld.mRegisterById.ToString();
+                audit.mNewValue = fixedasset.mRegisterById.ToString();
+                audit_collection.Add(audit);
+            }
+
             return audit_collection;
         }
 

@@ -249,7 +249,7 @@ namespace Qtech.AssetManagement.User
 
             EndEditing();
 
-            ThemeUtil.ControlsWithoutUpperCase(splitContainer1.Panel2);
+            ThemeUtil.Controls(splitContainer1.Panel2);
             ControlUtil.TextBoxEnterLeaveEventHandler(splitContainer1.Panel2);
             LoadUsers();
             UltraComboUtil.Personnel(PersonnelultraCombo);

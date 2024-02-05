@@ -128,6 +128,10 @@
             Infragistics.Win.Appearance appearance75 = new Infragistics.Win.Appearance();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.ultraGrid1 = new Infragistics.Win.UltraWinGrid.UltraGrid();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.Totalbutton = new System.Windows.Forms.Button();
+            this.Registeredbutton = new System.Windows.Forms.Button();
+            this.expandPanelControl1 = new Qtech.AssetManagement.Controls.ExpandPanelControl();
             this.DisposedcheckBox = new System.Windows.Forms.CheckBox();
             this.RegisteredcheckBox = new System.Windows.Forms.CheckBox();
             this.DraftcheckBox = new System.Windows.Forms.CheckBox();
@@ -190,16 +194,16 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.Cancelbutton = new System.Windows.Forms.Button();
             this.Savebutton = new System.Windows.Forms.Button();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.Registeredbutton = new System.Windows.Forms.Button();
-            this.Totalbutton = new System.Windows.Forms.Button();
-            this.expandPanelControl1 = new Qtech.AssetManagement.Controls.ExpandPanelControl();
             this.collapsePanelControl1 = new Qtech.AssetManagement.Controls.CollapsePanelControl();
+            this.RegisterByIdlabel = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.RegisterBytextBox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ultraGrid1)).BeginInit();
+            this.panel13.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -217,7 +221,6 @@
             this.panel2.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel8.SuspendLayout();
-            this.panel13.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -237,6 +240,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.AutoScroll = true;
+            this.splitContainer1.Panel2.Controls.Add(this.RegisterByIdlabel);
             this.splitContainer1.Panel2.Controls.Add(this.DisposedcheckBox);
             this.splitContainer1.Panel2.Controls.Add(this.RegisteredcheckBox);
             this.splitContainer1.Panel2.Controls.Add(this.DraftcheckBox);
@@ -246,7 +250,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.panel8);
             this.splitContainer1.Panel2.Controls.Add(this.collapsePanelControl1);
             this.splitContainer1.Size = new System.Drawing.Size(1008, 534);
-            this.splitContainer1.SplitterDistance = 845;
+            this.splitContainer1.SplitterDistance = 234;
             this.splitContainer1.SplitterWidth = 2;
             this.splitContainer1.TabIndex = 9;
             // 
@@ -378,13 +382,62 @@
             this.ultraGrid1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ultraGrid1.Location = new System.Drawing.Point(0, 79);
             this.ultraGrid1.Name = "ultraGrid1";
-            this.ultraGrid1.Size = new System.Drawing.Size(826, 451);
+            this.ultraGrid1.Size = new System.Drawing.Size(215, 451);
             this.ultraGrid1.TabIndex = 125;
             this.ultraGrid1.Text = "ultraGrid1";
             this.ultraGrid1.InitializeLayout += new Infragistics.Win.UltraWinGrid.InitializeLayoutEventHandler(this.ultraGrid1_InitializeLayout);
             this.ultraGrid1.BeforeRowsDeleted += new Infragistics.Win.UltraWinGrid.BeforeRowsDeletedEventHandler(this.ultraGrid1_BeforeRowsDeleted);
             this.ultraGrid1.DoubleClickRow += new Infragistics.Win.UltraWinGrid.DoubleClickRowEventHandler(this.ultraGrid1_DoubleClickRow);
             this.ultraGrid1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ultraGrid1_MouseDown);
+            // 
+            // panel13
+            // 
+            this.panel13.Controls.Add(this.Totalbutton);
+            this.panel13.Controls.Add(this.Registeredbutton);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel13.Location = new System.Drawing.Point(0, 0);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(215, 79);
+            this.panel13.TabIndex = 127;
+            // 
+            // Totalbutton
+            // 
+            this.Totalbutton.BackColor = System.Drawing.Color.DarkGray;
+            this.Totalbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Totalbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Totalbutton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.Totalbutton.Location = new System.Drawing.Point(139, 10);
+            this.Totalbutton.Name = "Totalbutton";
+            this.Totalbutton.Size = new System.Drawing.Size(123, 55);
+            this.Totalbutton.TabIndex = 17;
+            this.Totalbutton.Tag = "N/A";
+            this.Totalbutton.Text = "&Save";
+            this.Totalbutton.UseVisualStyleBackColor = false;
+            this.Totalbutton.Click += new System.EventHandler(this.Totalbutton_Click);
+            // 
+            // Registeredbutton
+            // 
+            this.Registeredbutton.BackColor = System.Drawing.Color.ForestGreen;
+            this.Registeredbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Registeredbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Registeredbutton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.Registeredbutton.Location = new System.Drawing.Point(10, 10);
+            this.Registeredbutton.Name = "Registeredbutton";
+            this.Registeredbutton.Size = new System.Drawing.Size(123, 55);
+            this.Registeredbutton.TabIndex = 16;
+            this.Registeredbutton.Tag = "N/A";
+            this.Registeredbutton.Text = "&Save";
+            this.Registeredbutton.UseVisualStyleBackColor = false;
+            this.Registeredbutton.Click += new System.EventHandler(this.Registeredbutton_Click);
+            // 
+            // expandPanelControl1
+            // 
+            this.expandPanelControl1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.expandPanelControl1.Location = new System.Drawing.Point(215, 0);
+            this.expandPanelControl1.Name = "expandPanelControl1";
+            this.expandPanelControl1.Size = new System.Drawing.Size(15, 530);
+            this.expandPanelControl1.TabIndex = 126;
+            this.expandPanelControl1._ExpandPanel += new System.EventHandler(this.expandPanelControl1__ExpandPanel);
             // 
             // DisposedcheckBox
             // 
@@ -434,7 +487,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(15, 258);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(142, 166);
+            this.panel6.Size = new System.Drawing.Size(753, 166);
             this.panel6.TabIndex = 179;
             // 
             // panel7
@@ -518,6 +571,7 @@
             this.AccumulatedDepreciationtextBox.Name = "AccumulatedDepreciationtextBox";
             this.AccumulatedDepreciationtextBox.Size = new System.Drawing.Size(250, 21);
             this.AccumulatedDepreciationtextBox.TabIndex = 2;
+            this.AccumulatedDepreciationtextBox.TextChanged += new System.EventHandler(this.AccumulatedDepreciationtextBox_TextChanged);
             // 
             // DepreciationStartdateTimePicker
             // 
@@ -759,7 +813,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(15, 21);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(142, 237);
+            this.panel1.Size = new System.Drawing.Size(753, 237);
             this.panel1.TabIndex = 177;
             // 
             // panel4
@@ -1333,7 +1387,7 @@
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel11.Location = new System.Drawing.Point(15, 0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(142, 21);
+            this.panel11.Size = new System.Drawing.Size(753, 21);
             this.panel11.TabIndex = 176;
             this.panel11.Tag = "headerpanel";
             // 
@@ -1378,12 +1432,14 @@
             // 
             // panel8
             // 
+            this.panel8.Controls.Add(this.RegisterBytextBox);
+            this.panel8.Controls.Add(this.button1);
             this.panel8.Controls.Add(this.Cancelbutton);
             this.panel8.Controls.Add(this.Savebutton);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel8.Location = new System.Drawing.Point(15, 507);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(142, 23);
+            this.panel8.Size = new System.Drawing.Size(753, 23);
             this.panel8.TabIndex = 174;
             // 
             // Cancelbutton
@@ -1392,7 +1448,7 @@
             this.Cancelbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cancelbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cancelbutton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.Cancelbutton.Location = new System.Drawing.Point(152, 0);
+            this.Cancelbutton.Location = new System.Drawing.Point(76, 0);
             this.Cancelbutton.Name = "Cancelbutton";
             this.Cancelbutton.Size = new System.Drawing.Size(77, 23);
             this.Cancelbutton.TabIndex = 16;
@@ -1408,60 +1464,11 @@
             this.Savebutton.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.Savebutton.Location = new System.Drawing.Point(0, 0);
             this.Savebutton.Name = "Savebutton";
-            this.Savebutton.Size = new System.Drawing.Size(153, 23);
+            this.Savebutton.Size = new System.Drawing.Size(77, 23);
             this.Savebutton.TabIndex = 15;
             this.Savebutton.Text = "&Save";
             this.Savebutton.UseVisualStyleBackColor = false;
             this.Savebutton.Click += new System.EventHandler(this.Savebutton_Click);
-            // 
-            // panel13
-            // 
-            this.panel13.Controls.Add(this.Totalbutton);
-            this.panel13.Controls.Add(this.Registeredbutton);
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel13.Location = new System.Drawing.Point(0, 0);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(826, 79);
-            this.panel13.TabIndex = 127;
-            // 
-            // Registeredbutton
-            // 
-            this.Registeredbutton.BackColor = System.Drawing.Color.ForestGreen;
-            this.Registeredbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Registeredbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Registeredbutton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.Registeredbutton.Location = new System.Drawing.Point(10, 10);
-            this.Registeredbutton.Name = "Registeredbutton";
-            this.Registeredbutton.Size = new System.Drawing.Size(123, 55);
-            this.Registeredbutton.TabIndex = 16;
-            this.Registeredbutton.Tag = "N/A";
-            this.Registeredbutton.Text = "&Save";
-            this.Registeredbutton.UseVisualStyleBackColor = false;
-            this.Registeredbutton.Click += new System.EventHandler(this.Registeredbutton_Click);
-            // 
-            // Totalbutton
-            // 
-            this.Totalbutton.BackColor = System.Drawing.Color.DarkGray;
-            this.Totalbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Totalbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Totalbutton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.Totalbutton.Location = new System.Drawing.Point(139, 10);
-            this.Totalbutton.Name = "Totalbutton";
-            this.Totalbutton.Size = new System.Drawing.Size(123, 55);
-            this.Totalbutton.TabIndex = 17;
-            this.Totalbutton.Tag = "N/A";
-            this.Totalbutton.Text = "&Save";
-            this.Totalbutton.UseVisualStyleBackColor = false;
-            this.Totalbutton.Click += new System.EventHandler(this.Totalbutton_Click);
-            // 
-            // expandPanelControl1
-            // 
-            this.expandPanelControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.expandPanelControl1.Location = new System.Drawing.Point(826, 0);
-            this.expandPanelControl1.Name = "expandPanelControl1";
-            this.expandPanelControl1.Size = new System.Drawing.Size(15, 530);
-            this.expandPanelControl1.TabIndex = 126;
-            this.expandPanelControl1._ExpandPanel += new System.EventHandler(this.expandPanelControl1__ExpandPanel);
             // 
             // collapsePanelControl1
             // 
@@ -1471,6 +1478,43 @@
             this.collapsePanelControl1.Size = new System.Drawing.Size(15, 530);
             this.collapsePanelControl1.TabIndex = 178;
             this.collapsePanelControl1._HidePanel += new System.EventHandler(this.collapsePanelControl1__HidePanel);
+            // 
+            // RegisterByIdlabel
+            // 
+            this.RegisterByIdlabel.AutoSize = true;
+            this.RegisterByIdlabel.BackColor = System.Drawing.Color.Transparent;
+            this.RegisterByIdlabel.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegisterByIdlabel.Location = new System.Drawing.Point(220, 491);
+            this.RegisterByIdlabel.Name = "RegisterByIdlabel";
+            this.RegisterByIdlabel.Size = new System.Drawing.Size(15, 13);
+            this.RegisterByIdlabel.TabIndex = 28;
+            this.RegisterByIdlabel.Tag = "id";
+            this.RegisterByIdlabel.Text = "0";
+            this.RegisterByIdlabel.Visible = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(43)))), ((int)(((byte)(137)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.button1.Location = new System.Drawing.Point(152, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(77, 23);
+            this.button1.TabIndex = 17;
+            this.button1.Text = "Register";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // RegisterBytextBox
+            // 
+            this.RegisterBytextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegisterBytextBox.Location = new System.Drawing.Point(229, 1);
+            this.RegisterBytextBox.MaxLength = 50;
+            this.RegisterBytextBox.Name = "RegisterBytextBox";
+            this.RegisterBytextBox.ReadOnly = true;
+            this.RegisterBytextBox.Size = new System.Drawing.Size(250, 21);
+            this.RegisterBytextBox.TabIndex = 3;
             // 
             // Default
             // 
@@ -1489,6 +1533,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ultraGrid1)).EndInit();
+            this.panel13.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
@@ -1515,7 +1560,7 @@
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.panel8.ResumeLayout(false);
-            this.panel13.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1591,5 +1636,8 @@
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Button Registeredbutton;
         private System.Windows.Forms.Button Totalbutton;
+        private System.Windows.Forms.Label RegisterByIdlabel;
+        private System.Windows.Forms.TextBox RegisterBytextBox;
+        private System.Windows.Forms.Button button1;
     }
 }
