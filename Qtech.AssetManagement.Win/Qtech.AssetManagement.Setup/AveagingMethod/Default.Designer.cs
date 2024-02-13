@@ -49,6 +49,7 @@
             this.ultraGrid1 = new Infragistics.Win.UltraWinGrid.UltraGrid();
             this.expandPanelControl1 = new Qtech.AssetManagement.Controls.ExpandPanelControl();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ActivecheckBox = new System.Windows.Forms.CheckBox();
             this.NametextBox = new System.Windows.Forms.TextBox();
             this.CodetextBox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -62,7 +63,8 @@
             this.Cancelbutton = new System.Windows.Forms.Button();
             this.Savebutton = new System.Windows.Forms.Button();
             this.collapsePanelControl1 = new Qtech.AssetManagement.Controls.CollapsePanelControl();
-            this.ActivecheckBox = new System.Windows.Forms.CheckBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -101,7 +103,6 @@
             // 
             // ultraGrid1
             // 
-            this.ultraGrid1.DataMember = null;
             appearance1.BackColor = System.Drawing.SystemColors.Window;
             appearance1.BorderColor = System.Drawing.SystemColors.InactiveCaption;
             this.ultraGrid1.DisplayLayout.Appearance = appearance1;
@@ -118,7 +119,7 @@
             ultraGridColumn2.RowLayoutColumnInfo.SpanX = 2;
             ultraGridColumn2.RowLayoutColumnInfo.SpanY = 2;
             ultraGridColumn3.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
-            ultraGridColumn3.Header.Caption = "Title";
+            ultraGridColumn3.Header.Caption = "Name";
             ultraGridColumn3.Header.VisiblePosition = 2;
             ultraGridColumn3.RowLayoutColumnInfo.OriginX = 4;
             ultraGridColumn3.RowLayoutColumnInfo.OriginY = 0;
@@ -227,6 +228,17 @@
             this.panel1.Size = new System.Drawing.Size(377, 439);
             this.panel1.TabIndex = 177;
             // 
+            // ActivecheckBox
+            // 
+            this.ActivecheckBox.AutoSize = true;
+            this.ActivecheckBox.Font = new System.Drawing.Font("Arial", 8.25F);
+            this.ActivecheckBox.Location = new System.Drawing.Point(119, 61);
+            this.ActivecheckBox.Name = "ActivecheckBox";
+            this.ActivecheckBox.Size = new System.Drawing.Size(57, 18);
+            this.ActivecheckBox.TabIndex = 12;
+            this.ActivecheckBox.Text = "Active";
+            this.ActivecheckBox.UseVisualStyleBackColor = true;
+            // 
             // NametextBox
             // 
             this.NametextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -248,6 +260,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel2.Controls.Add(this.label5);
+            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
@@ -262,9 +276,9 @@
             this.label1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(7, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(27, 13);
+            this.label1.Size = new System.Drawing.Size(34, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "Title";
+            this.label1.Text = "Name";
             // 
             // label4
             // 
@@ -376,16 +390,27 @@
             this.collapsePanelControl1.TabIndex = 178;
             this.collapsePanelControl1._HidePanel += new System.EventHandler(this.collapsePanelControl1__HidePanel);
             // 
-            // ActivecheckBox
+            // label2
             // 
-            this.ActivecheckBox.AutoSize = true;
-            this.ActivecheckBox.Font = new System.Drawing.Font("Arial", 8.25F);
-            this.ActivecheckBox.Location = new System.Drawing.Point(119, 61);
-            this.ActivecheckBox.Name = "ActivecheckBox";
-            this.ActivecheckBox.Size = new System.Drawing.Size(57, 18);
-            this.ActivecheckBox.TabIndex = 12;
-            this.ActivecheckBox.Text = "Active";
-            this.ActivecheckBox.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(97, 10);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(13, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "*";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Red;
+            this.label5.Location = new System.Drawing.Point(97, 37);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(13, 13);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "*";
             // 
             // Default
             // 
@@ -433,5 +458,7 @@
         private System.Windows.Forms.TextBox NametextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox ActivecheckBox;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label2;
     }
 }

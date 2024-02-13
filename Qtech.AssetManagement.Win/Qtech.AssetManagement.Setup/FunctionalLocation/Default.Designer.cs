@@ -73,6 +73,7 @@
             this.ultraGrid1 = new Infragistics.Win.UltraWinGrid.UltraGrid();
             this.expandPanelControl1 = new Qtech.AssetManagement.Controls.ExpandPanelControl();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ActivecheckBox = new System.Windows.Forms.CheckBox();
             this.FunctionalLocationultraCombo = new Infragistics.Win.UltraWinGrid.UltraCombo();
             this.label16 = new System.Windows.Forms.Label();
             this.ZipCodetextBox = new System.Windows.Forms.TextBox();
@@ -107,7 +108,6 @@
             this.Cancelbutton = new System.Windows.Forms.Button();
             this.Savebutton = new System.Windows.Forms.Button();
             this.collapsePanelControl1 = new Qtech.AssetManagement.Controls.CollapsePanelControl();
-            this.ActivecheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -179,6 +179,7 @@
             ultraGridColumn17.RowLayoutColumnInfo.SpanY = 2;
             ultraGridColumn18.Header.Caption = "Status";
             ultraGridColumn18.Header.VisiblePosition = 4;
+            ultraGridColumn18.Hidden = true;
             ultraGridColumn18.RowLayoutColumnInfo.OriginX = 8;
             ultraGridColumn18.RowLayoutColumnInfo.OriginY = 0;
             ultraGridColumn18.RowLayoutColumnInfo.SpanX = 2;
@@ -349,8 +350,19 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(15, 20);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1002, 214);
+            this.panel1.Size = new System.Drawing.Size(1002, 247);
             this.panel1.TabIndex = 177;
+            // 
+            // ActivecheckBox
+            // 
+            this.ActivecheckBox.AutoSize = true;
+            this.ActivecheckBox.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.ActivecheckBox.Location = new System.Drawing.Point(343, 208);
+            this.ActivecheckBox.Name = "ActivecheckBox";
+            this.ActivecheckBox.Size = new System.Drawing.Size(56, 17);
+            this.ActivecheckBox.TabIndex = 48;
+            this.ActivecheckBox.Text = "Active";
+            this.ActivecheckBox.UseVisualStyleBackColor = true;
             // 
             // FunctionalLocationultraCombo
             // 
@@ -568,6 +580,7 @@
             this.label9.Size = new System.Drawing.Size(52, 13);
             this.label9.TabIndex = 34;
             this.label9.Text = "FL Status";
+            this.label9.Visible = false;
             // 
             // StatuscomboBox
             // 
@@ -581,6 +594,7 @@
             this.StatuscomboBox.Name = "StatuscomboBox";
             this.StatuscomboBox.Size = new System.Drawing.Size(200, 21);
             this.StatuscomboBox.TabIndex = 4;
+            this.StatuscomboBox.Visible = false;
             // 
             // label8
             // 
@@ -594,6 +608,7 @@
             this.label8.TabIndex = 32;
             this.label8.Tag = "";
             this.label8.Text = "LIFECYCLE STATE";
+            this.label8.Visible = false;
             // 
             // label1
             // 
@@ -789,17 +804,6 @@
             this.collapsePanelControl1.Size = new System.Drawing.Size(15, 482);
             this.collapsePanelControl1.TabIndex = 178;
             this.collapsePanelControl1._HidePanel += new System.EventHandler(this.collapsePanelControl1__HidePanel);
-            // 
-            // ActivecheckBox
-            // 
-            this.ActivecheckBox.AutoSize = true;
-            this.ActivecheckBox.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.ActivecheckBox.Location = new System.Drawing.Point(607, 56);
-            this.ActivecheckBox.Name = "ActivecheckBox";
-            this.ActivecheckBox.Size = new System.Drawing.Size(56, 17);
-            this.ActivecheckBox.TabIndex = 48;
-            this.ActivecheckBox.Text = "Active";
-            this.ActivecheckBox.UseVisualStyleBackColor = true;
             // 
             // Default
             // 

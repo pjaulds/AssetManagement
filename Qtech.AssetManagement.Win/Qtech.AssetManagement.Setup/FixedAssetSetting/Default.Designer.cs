@@ -160,7 +160,6 @@
             this.FixedAssetSettingdateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
-            this.expandPanelControl1 = new Qtech.AssetManagement.Controls.ExpandPanelControl();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
@@ -190,6 +189,8 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.Cancelbutton = new System.Windows.Forms.Button();
             this.Savebutton = new System.Windows.Forms.Button();
+            this.StartDatelabel = new System.Windows.Forms.Label();
+            this.expandPanelControl1 = new Qtech.AssetManagement.Controls.ExpandPanelControl();
             this.collapsePanelControl1 = new Qtech.AssetManagement.Controls.CollapsePanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -225,6 +226,7 @@
             // splitContainer1.Panel1
             // 
             this.splitContainer1.Panel1.Controls.Add(this.ultraGrid1);
+            this.splitContainer1.Panel1.Controls.Add(this.StartDatelabel);
             this.splitContainer1.Panel1.Controls.Add(this.button1);
             this.splitContainer1.Panel1.Controls.Add(this.panel3);
             this.splitContainer1.Panel1.Controls.Add(this.expandPanelControl1);
@@ -431,9 +433,9 @@
             this.ultraGrid1.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy;
             this.ultraGrid1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ultraGrid1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ultraGrid1.Location = new System.Drawing.Point(0, 102);
+            this.ultraGrid1.Location = new System.Drawing.Point(0, 116);
             this.ultraGrid1.Name = "ultraGrid1";
-            this.ultraGrid1.Size = new System.Drawing.Size(391, 380);
+            this.ultraGrid1.Size = new System.Drawing.Size(391, 366);
             this.ultraGrid1.TabIndex = 125;
             this.ultraGrid1.Text = "ultraGrid1";
             this.ultraGrid1.InitializeLayout += new Infragistics.Win.UltraWinGrid.InitializeLayoutEventHandler(this.ultraGrid1_InitializeLayout);
@@ -505,15 +507,6 @@
             this.label9.Size = new System.Drawing.Size(55, 14);
             this.label9.TabIndex = 9;
             this.label9.Text = "Start Date";
-            // 
-            // expandPanelControl1
-            // 
-            this.expandPanelControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.expandPanelControl1.Location = new System.Drawing.Point(391, 0);
-            this.expandPanelControl1.Name = "expandPanelControl1";
-            this.expandPanelControl1.Size = new System.Drawing.Size(15, 482);
-            this.expandPanelControl1.TabIndex = 126;
-            this.expandPanelControl1._ExpandPanel += new System.EventHandler(this.expandPanelControl1__ExpandPanel);
             // 
             // panel9
             // 
@@ -1281,6 +1274,25 @@
             this.Savebutton.UseVisualStyleBackColor = false;
             this.Savebutton.Click += new System.EventHandler(this.Savebutton_Click);
             // 
+            // StartDatelabel
+            // 
+            this.StartDatelabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.StartDatelabel.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StartDatelabel.Location = new System.Drawing.Point(0, 102);
+            this.StartDatelabel.Name = "StartDatelabel";
+            this.StartDatelabel.Size = new System.Drawing.Size(391, 14);
+            this.StartDatelabel.TabIndex = 128;
+            this.StartDatelabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // expandPanelControl1
+            // 
+            this.expandPanelControl1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.expandPanelControl1.Location = new System.Drawing.Point(391, 0);
+            this.expandPanelControl1.Name = "expandPanelControl1";
+            this.expandPanelControl1.Size = new System.Drawing.Size(15, 482);
+            this.expandPanelControl1.TabIndex = 126;
+            this.expandPanelControl1._ExpandPanel += new System.EventHandler(this.expandPanelControl1__ExpandPanel);
+            // 
             // collapsePanelControl1
             // 
             this.collapsePanelControl1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -1374,5 +1386,6 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label StartDatelabel;
     }
 }

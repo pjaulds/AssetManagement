@@ -66,7 +66,10 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.ultraGrid1 = new Infragistics.Win.UltraWinGrid.UltraGrid();
             this.expandPanelControl1 = new Qtech.AssetManagement.Controls.ExpandPanelControl();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ActivecheckBox = new System.Windows.Forms.CheckBox();
             this.BusinessStyletextBox = new System.Windows.Forms.TextBox();
             this.WitholdingTaxtextBox = new System.Windows.Forms.TextBox();
             this.VatRatetextBox = new System.Windows.Forms.TextBox();
@@ -97,7 +100,6 @@
             this.Cancelbutton = new System.Windows.Forms.Button();
             this.Savebutton = new System.Windows.Forms.Button();
             this.collapsePanelControl1 = new Qtech.AssetManagement.Controls.CollapsePanelControl();
-            this.ActivecheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -125,6 +127,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.AutoScroll = true;
+            this.splitContainer1.Panel2.Controls.Add(this.button2);
+            this.splitContainer1.Panel2.Controls.Add(this.button1);
             this.splitContainer1.Panel2.Controls.Add(this.panel1);
             this.splitContainer1.Panel2.Controls.Add(this.panel11);
             this.splitContainer1.Panel2.Controls.Add(this.panel8);
@@ -136,7 +140,6 @@
             // 
             // ultraGrid1
             // 
-            this.ultraGrid1.DataMember = null;
             appearance1.BackColor = System.Drawing.SystemColors.Window;
             appearance1.BorderColor = System.Drawing.SystemColors.InactiveCaption;
             this.ultraGrid1.DisplayLayout.Appearance = appearance1;
@@ -340,6 +343,36 @@
             this.expandPanelControl1.TabIndex = 126;
             this.expandPanelControl1._ExpandPanel += new System.EventHandler(this.expandPanelControl1__ExpandPanel);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(43)))), ((int)(((byte)(137)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.button2.Location = new System.Drawing.Point(441, 243);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(77, 23);
+            this.button2.TabIndex = 180;
+            this.button2.Text = "Consume";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Visible = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(43)))), ((int)(((byte)(137)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.button1.Location = new System.Drawing.Point(441, 214);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(77, 23);
+            this.button1.TabIndex = 179;
+            this.button1.Text = "Produce";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Visible = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.ActivecheckBox);
@@ -360,6 +393,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(377, 439);
             this.panel1.TabIndex = 177;
+            // 
+            // ActivecheckBox
+            // 
+            this.ActivecheckBox.AutoSize = true;
+            this.ActivecheckBox.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.ActivecheckBox.Location = new System.Drawing.Point(119, 354);
+            this.ActivecheckBox.Name = "ActivecheckBox";
+            this.ActivecheckBox.Size = new System.Drawing.Size(56, 17);
+            this.ActivecheckBox.TabIndex = 20;
+            this.ActivecheckBox.Text = "Active";
+            this.ActivecheckBox.UseVisualStyleBackColor = true;
             // 
             // BusinessStyletextBox
             // 
@@ -682,17 +726,6 @@
             this.collapsePanelControl1.TabIndex = 178;
             this.collapsePanelControl1._HidePanel += new System.EventHandler(this.collapsePanelControl1__HidePanel);
             // 
-            // ActivecheckBox
-            // 
-            this.ActivecheckBox.AutoSize = true;
-            this.ActivecheckBox.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.ActivecheckBox.Location = new System.Drawing.Point(119, 354);
-            this.ActivecheckBox.Name = "ActivecheckBox";
-            this.ActivecheckBox.Size = new System.Drawing.Size(56, 17);
-            this.ActivecheckBox.TabIndex = 20;
-            this.ActivecheckBox.Text = "Active";
-            this.ActivecheckBox.UseVisualStyleBackColor = true;
-            // 
             // Default
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -755,5 +788,7 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.CheckBox ActivecheckBox;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

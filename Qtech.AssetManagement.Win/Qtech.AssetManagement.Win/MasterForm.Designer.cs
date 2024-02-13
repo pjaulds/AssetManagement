@@ -61,6 +61,9 @@
             this.currencyToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.capitalizedCostToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fixedAssetManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fixedAssetToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.draftToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.registeredToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.fixedAssetProcurementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.purchaseRequestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.quotationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -85,14 +88,7 @@
             this.expenseCategoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ultraTabbedMdiManager1 = new Infragistics.Win.UltraWinTabbedMdi.UltraTabbedMdiManager(this.components);
             this.BackgroundpictureBox = new System.Windows.Forms.PictureBox();
-            this.fixedAssetToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.fixedAssetItemsToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.fixedAssetClassesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.fixedAssetTypesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripSeparator();
-            this.draftToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.registeredToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.disposedToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.disposedFixedAssetsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ultraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BackgroundpictureBox)).BeginInit();
@@ -348,12 +344,40 @@
             // fixedAssetManagementToolStripMenuItem
             // 
             this.fixedAssetManagementToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fixedAssetToolStripMenuItem1,
             this.fixedAssetProcurementToolStripMenuItem,
-            this.purchaseVoucherToolStripMenuItem});
+            this.purchaseVoucherToolStripMenuItem,
+            this.fixedAssetToolStripMenuItem1,
+            this.disposedFixedAssetsToolStripMenuItem});
             this.fixedAssetManagementToolStripMenuItem.Name = "fixedAssetManagementToolStripMenuItem";
             this.fixedAssetManagementToolStripMenuItem.Size = new System.Drawing.Size(156, 20);
             this.fixedAssetManagementToolStripMenuItem.Text = "Fixed Asset Management";
+            // 
+            // fixedAssetToolStripMenuItem1
+            // 
+            this.fixedAssetToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.draftToolStripMenuItem1,
+            this.registeredToolStripMenuItem1});
+            this.fixedAssetToolStripMenuItem1.Name = "fixedAssetToolStripMenuItem1";
+            this.fixedAssetToolStripMenuItem1.Size = new System.Drawing.Size(223, 22);
+            this.fixedAssetToolStripMenuItem1.Tag = "Product";
+            this.fixedAssetToolStripMenuItem1.Text = "3. Fixed Asset";
+            this.fixedAssetToolStripMenuItem1.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
+            // 
+            // draftToolStripMenuItem1
+            // 
+            this.draftToolStripMenuItem1.Name = "draftToolStripMenuItem1";
+            this.draftToolStripMenuItem1.Size = new System.Drawing.Size(155, 22);
+            this.draftToolStripMenuItem1.Tag = "FixedAsset";
+            this.draftToolStripMenuItem1.Text = "3.1 Draft";
+            this.draftToolStripMenuItem1.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
+            // 
+            // registeredToolStripMenuItem1
+            // 
+            this.registeredToolStripMenuItem1.Name = "registeredToolStripMenuItem1";
+            this.registeredToolStripMenuItem1.Size = new System.Drawing.Size(155, 22);
+            this.registeredToolStripMenuItem1.Tag = "FixedAssetRegistered";
+            this.registeredToolStripMenuItem1.Text = "3.2 Registered";
+            this.registeredToolStripMenuItem1.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // fixedAssetProcurementToolStripMenuItem
             // 
@@ -364,38 +388,38 @@
             this.goodReceivedNoteReceivingToolStripMenuItem});
             this.fixedAssetProcurementToolStripMenuItem.Name = "fixedAssetProcurementToolStripMenuItem";
             this.fixedAssetProcurementToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
-            this.fixedAssetProcurementToolStripMenuItem.Text = "2. Fixed Asset Procurement";
+            this.fixedAssetProcurementToolStripMenuItem.Text = "1. Fixed Asset Procurement";
             // 
             // purchaseRequestToolStripMenuItem
             // 
             this.purchaseRequestToolStripMenuItem.Name = "purchaseRequestToolStripMenuItem";
-            this.purchaseRequestToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.purchaseRequestToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.purchaseRequestToolStripMenuItem.Tag = "PurchaseRequest";
-            this.purchaseRequestToolStripMenuItem.Text = "2.1. Purchase Request";
+            this.purchaseRequestToolStripMenuItem.Text = "1.1. Purchase Request";
             this.purchaseRequestToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // quotationToolStripMenuItem
             // 
             this.quotationToolStripMenuItem.Name = "quotationToolStripMenuItem";
-            this.quotationToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.quotationToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.quotationToolStripMenuItem.Tag = "Quotation";
-            this.quotationToolStripMenuItem.Text = "2.2. Quotation";
+            this.quotationToolStripMenuItem.Text = "1.2. Canvass";
             this.quotationToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // purchaseOrderToolStripMenuItem
             // 
             this.purchaseOrderToolStripMenuItem.Name = "purchaseOrderToolStripMenuItem";
-            this.purchaseOrderToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.purchaseOrderToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.purchaseOrderToolStripMenuItem.Tag = "PurchaseOrder";
-            this.purchaseOrderToolStripMenuItem.Text = "2.3. Purchase Order";
+            this.purchaseOrderToolStripMenuItem.Text = "1.3. Purchase Order";
             this.purchaseOrderToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // goodReceivedNoteReceivingToolStripMenuItem
             // 
             this.goodReceivedNoteReceivingToolStripMenuItem.Name = "goodReceivedNoteReceivingToolStripMenuItem";
-            this.goodReceivedNoteReceivingToolStripMenuItem.Size = new System.Drawing.Size(210, 22);
+            this.goodReceivedNoteReceivingToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
             this.goodReceivedNoteReceivingToolStripMenuItem.Tag = "Receiving";
-            this.goodReceivedNoteReceivingToolStripMenuItem.Text = "2.4. Good Received Note";
+            this.goodReceivedNoteReceivingToolStripMenuItem.Text = "1.4. Receiving Report";
             this.goodReceivedNoteReceivingToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // purchaseVoucherToolStripMenuItem
@@ -403,7 +427,7 @@
             this.purchaseVoucherToolStripMenuItem.Name = "purchaseVoucherToolStripMenuItem";
             this.purchaseVoucherToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
             this.purchaseVoucherToolStripMenuItem.Tag = "PurchaseVoucher";
-            this.purchaseVoucherToolStripMenuItem.Text = "3. Journal Voucher";
+            this.purchaseVoucherToolStripMenuItem.Text = "2. Journal Voucher";
             this.purchaseVoucherToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // depreciationScheduleToolStripMenuItem
@@ -568,72 +592,13 @@
             this.BackgroundpictureBox.TabStop = false;
             this.BackgroundpictureBox.Visible = false;
             // 
-            // fixedAssetToolStripMenuItem1
+            // disposedFixedAssetsToolStripMenuItem
             // 
-            this.fixedAssetToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fixedAssetItemsToolStripMenuItem1,
-            this.fixedAssetClassesToolStripMenuItem1,
-            this.fixedAssetTypesToolStripMenuItem1,
-            this.toolStripMenuItem7,
-            this.draftToolStripMenuItem1,
-            this.registeredToolStripMenuItem1,
-            this.disposedToolStripMenuItem1});
-            this.fixedAssetToolStripMenuItem1.Name = "fixedAssetToolStripMenuItem1";
-            this.fixedAssetToolStripMenuItem1.Size = new System.Drawing.Size(223, 22);
-            this.fixedAssetToolStripMenuItem1.Text = "1. Fixed Asset";
-            // 
-            // fixedAssetItemsToolStripMenuItem1
-            // 
-            this.fixedAssetItemsToolStripMenuItem1.Name = "fixedAssetItemsToolStripMenuItem1";
-            this.fixedAssetItemsToolStripMenuItem1.Size = new System.Drawing.Size(206, 22);
-            this.fixedAssetItemsToolStripMenuItem1.Tag = "Product";
-            this.fixedAssetItemsToolStripMenuItem1.Text = "1.1 Fixed Asset Items";
-            this.fixedAssetItemsToolStripMenuItem1.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
-            // 
-            // fixedAssetClassesToolStripMenuItem1
-            // 
-            this.fixedAssetClassesToolStripMenuItem1.Name = "fixedAssetClassesToolStripMenuItem1";
-            this.fixedAssetClassesToolStripMenuItem1.Size = new System.Drawing.Size(206, 22);
-            this.fixedAssetClassesToolStripMenuItem1.Tag = "AssetClass";
-            this.fixedAssetClassesToolStripMenuItem1.Text = "1.2 Fixed Asset Classes";
-            this.fixedAssetClassesToolStripMenuItem1.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
-            // 
-            // fixedAssetTypesToolStripMenuItem1
-            // 
-            this.fixedAssetTypesToolStripMenuItem1.Name = "fixedAssetTypesToolStripMenuItem1";
-            this.fixedAssetTypesToolStripMenuItem1.Size = new System.Drawing.Size(206, 22);
-            this.fixedAssetTypesToolStripMenuItem1.Tag = "AssetType";
-            this.fixedAssetTypesToolStripMenuItem1.Text = "1.3 Fixed Asset Types";
-            this.fixedAssetTypesToolStripMenuItem1.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
-            // 
-            // toolStripMenuItem7
-            // 
-            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(203, 6);
-            // 
-            // draftToolStripMenuItem1
-            // 
-            this.draftToolStripMenuItem1.Name = "draftToolStripMenuItem1";
-            this.draftToolStripMenuItem1.Size = new System.Drawing.Size(206, 22);
-            this.draftToolStripMenuItem1.Tag = "FixedAsset";
-            this.draftToolStripMenuItem1.Text = "1.4 Draft";
-            this.draftToolStripMenuItem1.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
-            // 
-            // registeredToolStripMenuItem1
-            // 
-            this.registeredToolStripMenuItem1.Name = "registeredToolStripMenuItem1";
-            this.registeredToolStripMenuItem1.Size = new System.Drawing.Size(206, 22);
-            this.registeredToolStripMenuItem1.Tag = "FixedAssetRegistered";
-            this.registeredToolStripMenuItem1.Text = "1.5 Registered";
-            this.registeredToolStripMenuItem1.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
-            // 
-            // disposedToolStripMenuItem1
-            // 
-            this.disposedToolStripMenuItem1.Name = "disposedToolStripMenuItem1";
-            this.disposedToolStripMenuItem1.Size = new System.Drawing.Size(206, 22);
-            this.disposedToolStripMenuItem1.Tag = "Disposed";
-            this.disposedToolStripMenuItem1.Text = "1.6 Disposed";
-            this.disposedToolStripMenuItem1.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
+            this.disposedFixedAssetsToolStripMenuItem.Name = "disposedFixedAssetsToolStripMenuItem";
+            this.disposedFixedAssetsToolStripMenuItem.Size = new System.Drawing.Size(223, 22);
+            this.disposedFixedAssetsToolStripMenuItem.Tag = "Disposed";
+            this.disposedFixedAssetsToolStripMenuItem.Text = "4. Disposed Fixed Assets";
+            this.disposedFixedAssetsToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // MasterForm
             // 
@@ -716,13 +681,9 @@
         private System.Windows.Forms.ToolStripMenuItem purchaseVoucherToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem capitalizedCostToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fixedAssetToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem fixedAssetItemsToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem fixedAssetClassesToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem fixedAssetTypesToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem7;
         private System.Windows.Forms.ToolStripMenuItem draftToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem registeredToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem disposedToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem disposedFixedAssetsToolStripMenuItem;
     }
 }
 

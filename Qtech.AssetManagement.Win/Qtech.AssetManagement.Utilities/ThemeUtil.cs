@@ -44,6 +44,10 @@ namespace Qtech.AssetManagement.Utilities
                             ctl.Font = new Font("Arial", float.Parse("8.25"), FontStyle.Bold);
                             ctl.ForeColor = Color.WhiteSmoke;
                             break;
+                        case "headerlabelblack":
+                            ctl.Font = new Font("Arial", float.Parse("8.25"), FontStyle.Bold);
+                            ctl.ForeColor = Color.Black;
+                            break;
                         case "headerLabelPopUpForm":
                             ctl.Font = new Font("Arial", float.Parse("10.25"), FontStyle.Bold);
                             ctl.ForeColor = Color.WhiteSmoke;

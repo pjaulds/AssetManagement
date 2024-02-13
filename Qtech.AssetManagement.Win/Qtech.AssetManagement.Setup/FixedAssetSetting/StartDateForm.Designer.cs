@@ -74,6 +74,7 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(110, 14);
             this.label11.TabIndex = 178;
+            this.label11.Tag = "headerlabelblack";
             this.label11.Text = "What is start date?";
             // 
             // label1
@@ -94,6 +95,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(60, 14);
             this.label2.TabIndex = 180;
+            this.label2.Tag = "headerlabelblack";
             this.label2.Text = "Start Date";
             // 
             // FixedAssetSettingdateTimePicker

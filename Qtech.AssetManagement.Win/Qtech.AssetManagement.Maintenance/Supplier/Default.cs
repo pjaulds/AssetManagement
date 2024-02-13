@@ -12,7 +12,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using RabbitMQ.Client;
+using RabbitMQ.Client.Events;
 namespace Qtech.AssetManagement.Maintenance.Supplier
 {
     public partial class Default : Form, ICRUD
@@ -269,5 +270,51 @@ namespace Qtech.AssetManagement.Maintenance.Supplier
             CancelTransaction();
         }
 
+        int cnt = 0;
+        private void button1_Click(object sender, EventArgs e)
+        {
+            var factory = new ConnectionFactory { HostName = "localhost" };
+            var connection = factory.CreateConnection();
+            var channel = connection.CreateModel();
+            channel.QueueDeclare(queue: "letterbox", durable: false, exclusive: false, autoDelete: false, arguments: null);
+
+            cnt += 1;
+
+            var encodedMessage = Encoding.UTF8.GetBytes(cnt.ToString());
+            channel.BasicPublish("", "letterbox", null, encodedMessage);
+            connection.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            var factory = new ConnectionFactory { HostName = "localhost" };
+            var connection = factory.CreateConnection();
+            var channel = connection.CreateModel();
+
+            var consumer = new EventingBasicConsumer(channel);
+            consumer.Received += Consumer_Received;
+            channel.BasicQos(prefetchSize: 0, prefetchCount: 1, global: false); //round robin style consumer much better to use this
+
+            channel.BasicConsume("letterbox", false, consumer);
+            //noAck was set to false originally it's set as true, we have to manually acknowledge the message so thatwe are sure that we processed the message correctly
+            //the code is found bellow the event of Consumer_Received
+            //EventingBasicConsumer channel = (EventingBasicConsumer)sender;
+            //channel.Model.BasicAck(deliveryTag: e.DeliveryTag, multiple: false);//manual acknowledment of receipt
+
+
+
+        }
+
+        private void Consumer_Received(object sender, BasicDeliverEventArgs e)
+        {
+            var body = e.Body.ToArray();
+            var message = Encoding.UTF8.GetString(body);
+            
+            Audit audit = new Audit();
+            audit.mUserId = SessionUtil.mUser.mId;
+            AuditManager.Save(audit);
+            EventingBasicConsumer channel = (EventingBasicConsumer)sender;
+            channel.Model.BasicAck(deliveryTag: e.DeliveryTag, multiple: false);
+        }
     }
 }

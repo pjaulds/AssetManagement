@@ -237,6 +237,9 @@ namespace Qtech.AssetManagement.Setup.FixedAssetSetting
             ThemeUtil.Controls(this);
             ControlUtil.TextBoxEnterLeaveEventHandler(splitContainer1.Panel2);
             LoadFixedAssetSetting();
+            
+            if (FixedAssetSettingDateManager.SelectCountForGetList(new FixedAssetSettingDateCriteria()) > 0)
+                StartDatelabel.Text = FixedAssetSettingDateManager.GetList().First().mDate.ToString("D");
         }
 
         private void Savebutton_Click(object sender, EventArgs e)

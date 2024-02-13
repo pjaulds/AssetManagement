@@ -126,6 +126,7 @@ namespace Qtech.AssetManagement.FixedAsset
         {
             Idlabel.Text = myFixedAsset.mId.ToString();
             AssetNotextBox.Text = myFixedAsset.mAssetNo;
+            ProductNametextBox.Text = myFixedAsset.mProductName;
             ProductIdlabel.Text = myFixedAsset.mProductId.ToString();
             ReceivingDetailIdlabel.Text = myFixedAsset.mReceivingDetailId.ToString();
             AssetTypeutraCombo.Value = myFixedAsset.mAssetTypeId;
