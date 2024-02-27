@@ -33,6 +33,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qtech.AssetManagement.Depre
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qtech.AssetManagement.RepairAndMaintenance", "Qtech.AssetManagement.RepairAndMaintenance\Qtech.AssetManagement.RepairAndMaintenance.csproj", "{9553A99F-EEF4-4B07-80F0-8F6C821E44C4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qtech.Qasa.PluginInterface", "..\..\..\Qasa_Qtech\Qtech.Qasa.Win\Qtech.Qasa.PluginInterface\Qtech.Qasa.PluginInterface.csproj", "{8B592BA0-81D4-4FB8-86CB-3077B2739EE3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qtech.Qasa.Validation", "..\..\..\Qasa_Qtech\Qtech.Qasa.Win\Qtech.Qasa.Validation\Qtech.Qasa.Validation.csproj", "{00592441-3262-400F-9B79-EA910AD15F78}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qtech.Qasa.BusinessEntities", "..\..\..\Qasa_Qtech\Qtech.Qasa.Win\Qtech.Qasa.BusinessEntities\Qtech.Qasa.BusinessEntities.csproj", "{07022334-BD51-4D6C-A1E5-FCA19A1AAC6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qtech.Qasa.Bll", "..\..\..\Qasa_Qtech\Qtech.Qasa.Win\Qtech.Qasa.Bll\Qtech.Qasa.Bll.csproj", "{7FD2A9E2-65A7-4407-9AB6-5338C030D074}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qtech.Qasa.Utilities", "..\..\..\Qasa_Qtech\Qtech.Qasa.Win\Qtech.Qasa.Utilities\Qtech.Qasa.Utilities.csproj", "{4A2E7B7B-362A-407F-A051-3A83F7F2DBDE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +109,21 @@ Global
 		{9553A99F-EEF4-4B07-80F0-8F6C821E44C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9553A99F-EEF4-4B07-80F0-8F6C821E44C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9553A99F-EEF4-4B07-80F0-8F6C821E44C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B592BA0-81D4-4FB8-86CB-3077B2739EE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B592BA0-81D4-4FB8-86CB-3077B2739EE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B592BA0-81D4-4FB8-86CB-3077B2739EE3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00592441-3262-400F-9B79-EA910AD15F78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00592441-3262-400F-9B79-EA910AD15F78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00592441-3262-400F-9B79-EA910AD15F78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07022334-BD51-4D6C-A1E5-FCA19A1AAC6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07022334-BD51-4D6C-A1E5-FCA19A1AAC6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07022334-BD51-4D6C-A1E5-FCA19A1AAC6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FD2A9E2-65A7-4407-9AB6-5338C030D074}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FD2A9E2-65A7-4407-9AB6-5338C030D074}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FD2A9E2-65A7-4407-9AB6-5338C030D074}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A2E7B7B-362A-407F-A051-3A83F7F2DBDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A2E7B7B-362A-407F-A051-3A83F7F2DBDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A2E7B7B-362A-407F-A051-3A83F7F2DBDE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

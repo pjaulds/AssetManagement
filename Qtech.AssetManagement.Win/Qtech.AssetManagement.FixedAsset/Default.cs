@@ -4,6 +4,7 @@ using Qtech.AssetManagement.Bll;
 using Qtech.AssetManagement.BusinessEntities;
 using Qtech.AssetManagement.Utilities;
 using Qtech.AssetManagement.Validation;
+using Qtech.Qasa.PluginInterface;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -35,6 +36,9 @@ namespace Qtech.AssetManagement.FixedAsset
         bool allow_delete;
         bool allow_print;
         #endregion
+
+        public IPluginHost PluginHost { get; set; }
+        public IPlugin Plugin { get; set; }
 
         #region Private Members
         private int _mId

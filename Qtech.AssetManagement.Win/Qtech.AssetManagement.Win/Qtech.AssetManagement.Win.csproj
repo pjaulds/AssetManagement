@@ -134,6 +134,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Qasa_Qtech\Qtech.Qasa.Win\Qtech.Qasa.PluginInterface\Qtech.Qasa.PluginInterface.csproj">
+      <Project>{8b592ba0-81d4-4fb8-86cb-3077b2739ee3}</Project>
+      <Name>Qtech.Qasa.PluginInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Qasa_Qtech\Qtech.Qasa.Win\Qtech.Qasa.Utilities\Qtech.Qasa.Utilities.csproj">
+      <Project>{4a2e7b7b-362a-407f-a051-3a83f7f2dbde}</Project>
+      <Name>Qtech.Qasa.Utilities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Qtech.AssetManagement.Audit\Qtech.AssetManagement.Audit.csproj">
       <Project>{fc11584d-5e40-4b02-941a-6976111c6c26}</Project>
       <Name>Qtech.AssetManagement.Audit</Name>

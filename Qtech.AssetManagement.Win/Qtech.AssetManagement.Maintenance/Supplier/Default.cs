@@ -276,12 +276,14 @@ namespace Qtech.AssetManagement.Maintenance.Supplier
             var factory = new ConnectionFactory { HostName = "localhost" };
             var connection = factory.CreateConnection();
             var channel = connection.CreateModel();
-            channel.QueueDeclare(queue: "letterbox", durable: false, exclusive: false, autoDelete: false, arguments: null);
-
+            //channel.QueueDeclare(queue: "letterbox", durable: false, exclusive: false, autoDelete: false, arguments: null);
+            channel.ExchangeDeclare(exchange: "pubsub", type: ExchangeType.Fanout);//pubsub pattern
+           
             cnt += 1;
 
             var encodedMessage = Encoding.UTF8.GetBytes(cnt.ToString());
-            channel.BasicPublish("", "letterbox", null, encodedMessage);
+            //channel.BasicPublish("", "letterbox", null, encodedMessage);
+            channel.BasicPublish("pubsub", "", null, encodedMessage);//pubsub pattern
             connection.Close();
         }
 
@@ -290,12 +292,17 @@ namespace Qtech.AssetManagement.Maintenance.Supplier
             var factory = new ConnectionFactory { HostName = "localhost" };
             var connection = factory.CreateConnection();
             var channel = connection.CreateModel();
+            channel.ExchangeDeclare(exchange: "pubsub", type: ExchangeType.Fanout);//pubsub pattern
+            var queueName = channel.QueueDeclare().QueueName;//pubsub pattern
+            channel.QueueBind(queue: queueName, exchange: "pubsub", routingKey: ""); //pubsub pattern
+
 
             var consumer = new EventingBasicConsumer(channel);
             consumer.Received += Consumer_Received;
             channel.BasicQos(prefetchSize: 0, prefetchCount: 1, global: false); //round robin style consumer much better to use this
 
-            channel.BasicConsume("letterbox", false, consumer);
+            //channel.BasicConsume("letterbox", false, consumer);
+            channel.BasicConsume(queueName, false, consumer); //pubsub pattern
             //noAck was set to false originally it's set as true, we have to manually acknowledge the message so thatwe are sure that we processed the message correctly
             //the code is found bellow the event of Consumer_Received
             //EventingBasicConsumer channel = (EventingBasicConsumer)sender;

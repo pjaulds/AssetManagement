@@ -97,6 +97,7 @@
     <Compile Include="DisposedForm.Designer.cs">
       <DependentUpon>DisposedForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FixedAsset.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -117,6 +118,16 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Qasa_Qtech\Qtech.Qasa.Win\Qtech.Qasa.PluginInterface\Qtech.Qasa.PluginInterface.csproj">
+      <Project>{8b592ba0-81d4-4fb8-86cb-3077b2739ee3}</Project>
+      <Name>Qtech.Qasa.PluginInterface</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Qasa_Qtech\Qtech.Qasa.Win\Qtech.Qasa.Utilities\Qtech.Qasa.Utilities.csproj">
+      <Project>{4a2e7b7b-362a-407f-a051-3a83f7f2dbde}</Project>
+      <Name>Qtech.Qasa.Utilities</Name>
+      <Private>False</Private>
+    </ProjectReference>
     <ProjectReference Include="..\Qtech.AssetManagement.Bll\Qtech.AssetManagement.Bll.csproj">
       <Project>{8455616d-52ab-4f20-b9a6-02af254065b3}</Project>
       <Name>Qtech.AssetManagement.Bll</Name>
