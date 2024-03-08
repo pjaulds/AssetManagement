@@ -77,6 +77,8 @@ namespace Qtech.AssetManagement.Setup.FixedAssetSetting
         private void LoadFixedAssetSettingFromFormControls(BusinessEntities.FixedAssetSetting myUser)
         {
             myUser.mId = int.Parse(Idlabel.Text);
+            myUser.mCode = CodetextBox.Text;
+
             myUser.mAssetTypeId = ControlUtil.UltraComboReturnValue(AssetTypeutraCombo);
             myUser.mAssetTypeName = AssetTypeutraCombo.Text;
             
@@ -102,6 +104,7 @@ namespace Qtech.AssetManagement.Setup.FixedAssetSetting
         private void LoadFormControlsFromUser(BusinessEntities.FixedAssetSetting myFixedAssetSetting)
         {
             Idlabel.Text = myFixedAssetSetting.mId.ToString();
+            CodetextBox.Text = myFixedAssetSetting.mCode;
             AssetTypeutraCombo.Value = myFixedAssetSetting.mAssetTypeId;
             AssetAccountultraCombo.Value = myFixedAssetSetting.mChartOfAccountId;
             AccumulatedDepreciationAccountultraCombo.Value = myFixedAssetSetting.mAccumulatedDepreciationAccountId;

@@ -10,6 +10,8 @@ namespace Qtech.AssetManagement.BusinessEntities
         #region Public Properties
 
         public override Int32 mId { get; set; }
+        [Display(Name = "Code")]
+        public string mCode { get; set; }
 
         [Display(Name = "Asset Type")]
         [NotEqualTo(Message = "Please select asset type", mValue = "0")]
