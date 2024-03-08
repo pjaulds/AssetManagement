@@ -48,6 +48,7 @@ namespace Qtech.AssetManagement.Dal
 
                 Helpers.CreateParameter(myCommand, DbType.String, "@username", usersCriteria.mUsername);
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@personnel_id", usersCriteria.mPersonnelId);
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@user_id_qasa", usersCriteria.mUserIdQasaDatabase);
 
                 myCommand.Connection.Open();
                 using (DbDataReader myReader = myCommand.ExecuteReader())

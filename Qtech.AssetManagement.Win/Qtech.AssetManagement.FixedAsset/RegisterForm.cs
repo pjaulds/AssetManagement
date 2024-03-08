@@ -62,13 +62,14 @@ namespace Qtech.AssetManagement.FixedAsset
             FunctionalLocationtextBox.Text = fa.mFunctionalLocationName;
 
             LoadFormControlsFromAssetType(fa);
-
+            
             WarrantyExpirytextBox.Text = fa.mWarrantyExpiry.ToString("D");
             SerialNotextBox.Text = fa.mSerialNo;
             ModeltextBox.Text = fa.mModel;
             PurchaseDatetextBox.Text = fa.mPurchaseDate.ToString("D");
             PurchaseCosttextBox.Text = fa.mPurchasePrice.ToString("N");
             ResidualValuetextBox.Text = fa.mResidualValue.ToString("N");
+            AccumulatedDepreciationtextBox.Text = fa.mAccumulatedDepreciation.ToString("N");
             UsefulLifetextBox.Text = fa.mUsefulLifeYears.ToString();
       //some comments
         }
@@ -81,6 +82,8 @@ namespace Qtech.AssetManagement.FixedAsset
             ItemsdataGridView.AutoGenerateColumns = false;
             ItemsdataGridView.DataSource = new SortableBindingList<FixedAssetCapitalizedCost>(FixedAssetCapitalizedCostManager.GetList(criteria));
             ItemsdataGridView.Refresh();
+
+            TotalCapitalizedCost();
         }
 
         private void LoadFormControlsFromAssetType(BusinessEntities.FixedAsset fa)
@@ -90,6 +93,19 @@ namespace Qtech.AssetManagement.FixedAsset
             AssetAccounttextBox.Text = item.mChartOfAccountCode + " - " + item.mChartOfAccountName;
             AccumulatedDepreciationAccounttextBox.Text = item.mAccumulatedDepreciationAccountCode + " - " + item.mAccumulatedDepreciationAccountName;
             DepreciationExpenseAccounttextBox.Text = item.mDepreciationExpenseAccountCode + " - " + item.mDepreciationExpenseAccountName;
+        }
+
+        private void TotalCapitalizedCost()
+        {
+            SortableBindingList<FixedAssetCapitalizedCost> costs = (SortableBindingList<FixedAssetCapitalizedCost>)ItemsdataGridView.DataSource;
+            TotalCostlabel.Text = costs.Sum(x => x.mAmount).ToString("N");
+            CapitalizedCosttextBox.Text = TotalCostlabel.Text;
+
+            decimal purchaseCost = Convert.ToDecimal(PurchaseCosttextBox.Text);
+            decimal accDep = Convert.ToDecimal(AccumulatedDepreciationtextBox.Text);
+            decimal capCost = Convert.ToDecimal(CapitalizedCosttextBox.Text);
+
+            TotalAmounttextBox.Text = (purchaseCost - accDep + capCost).ToString("N");
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -169,6 +185,11 @@ namespace Qtech.AssetManagement.FixedAsset
             dispose.mFixedAssetId = mId;
             dispose.mFixedAssetName = NametextBox.Text;
             dispose.ShowDialog();
+        }
+
+        private void ItemsdataGridView_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 2) TotalCapitalizedCost();
         }
     }
 }

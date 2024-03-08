@@ -13,6 +13,15 @@ namespace Qtech.AssetManagement.Utilities
         public static BusinessEntities.Users mUser = null;
         public static void UserValidate(ref bool allowSelect, ref bool allowInsert, ref bool allowUpdate, ref bool allowDelete, ref bool allowPrint, short moduleId)
         {
+            if(mUser == null)
+            {
+                //maybe linked to qasa.
+
+                UsersCriteria usersCriteria = new UsersCriteria();
+                usersCriteria.mUserIdQasaDatabase = Qasa.Utilities.SessionUtil.user_id;
+                UsersCollection users = UsersManager.GetList(usersCriteria);
+                if (users.Count > 0) mUser = users.First();
+            }
 
             UserAccessCriteria criteria = new UserAccessCriteria();
             criteria.mUserId = mUser.mId;

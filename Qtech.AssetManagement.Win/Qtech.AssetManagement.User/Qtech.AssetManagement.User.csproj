@@ -87,6 +87,11 @@
     <Compile Include="SaltHashManager.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Qasa_Qtech\Qtech.Qasa.Win\Qtech.Qasa.Utilities\Qtech.Qasa.Utilities.csproj">
+      <Project>{4a2e7b7b-362a-407f-a051-3a83f7f2dbde}</Project>
+      <Name>Qtech.Qasa.Utilities</Name>
+      <Private>False</Private>
+    </ProjectReference>
     <ProjectReference Include="..\Qtech.AssetManagement.Bll\Qtech.AssetManagement.Bll.csproj">
       <Project>{8455616d-52ab-4f20-b9a6-02af254065b3}</Project>
       <Name>Qtech.AssetManagement.Bll</Name>

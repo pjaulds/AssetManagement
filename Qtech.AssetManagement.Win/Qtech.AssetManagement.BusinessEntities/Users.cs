@@ -39,7 +39,7 @@ namespace Qtech.AssetManagement.BusinessEntities
         /// </summary>
         public int mBranchId { get; set; }
         public bool mDisable { get; set; }
-        
+                
         public UserAccessCollection mUserAccessCollection { get; set; }
         #endregion
     }

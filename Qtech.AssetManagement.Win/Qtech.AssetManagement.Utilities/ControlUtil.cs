@@ -49,10 +49,10 @@ namespace Qtech.AssetManagement.Utilities
 
         public static void ExpandPanel(SplitContainer mySplitContainer)
         {
-            mySplitContainer.Panel1MinSize = 150;
-            mySplitContainer.Panel2MinSize = 30;
+            mySplitContainer.Panel1MinSize = 0;
+            mySplitContainer.Panel2MinSize = 0;
             mySplitContainer.Panel2Collapsed = false;
-            mySplitContainer.SplitterDistance = 79;
+            mySplitContainer.SplitterDistance = 0;
         }
 
         public static void HidePanel(SplitContainer mySplitContainer)

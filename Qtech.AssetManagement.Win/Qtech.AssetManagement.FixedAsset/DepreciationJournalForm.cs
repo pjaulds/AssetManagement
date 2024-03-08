@@ -105,40 +105,36 @@ namespace Qtech.AssetManagement.FixedAsset
             ReportCriteria criteria = new ReportCriteria();
             criteria.mId = mId;
             criteria.mYear = mYear;
-            decimal amount = 0;
-            if (mDepreciationMethodId == (int)DepreciationMethodEnum.StraightLine)
-            {
-                if(mAveragingMethodId == (int)AveragingMethodEnum.FullMonth)
-                {                    
-                    DataTable dt = ReportManager.DepreciationScheduleStraightLineFullMonthMonthly(criteria);
-                    if (dt.Rows.Count > 0)
-                    {
-                        string monthName = new DateTime(2010, mMonth, 1).ToString("MMM", CultureInfo.InvariantCulture); //get month name base on number
-                        
-                        if (!dt.Rows[0].IsNull(monthName))
-                            amount = (decimal)dt.Rows[0][monthName];
-                        else
-                            MessageBox.Show("Depreciation journal with selected period does not exists.", "Depreciation Journal", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
+            criteria.mAssetTypeId = item.mAssetTypeId;
 
-                }
+            decimal amount = 0;
+            DataTable dt = new DataTable();
+            if (mDepreciationMethodId == (int)DepreciationMethodEnum.StraightLine)
+            {               
+                if (mAveragingMethodId == (int)AveragingMethodEnum.FullMonth)
+                    dt = ReportManager.DepreciationScheduleStraightLineFullMonthMonthly(criteria);
+                else if (mAveragingMethodId == (int)AveragingMethodEnum.ActualDays)
+                    dt = ReportManager.DepreciationScheduleStraightLineActualDaysMonthly(criteria);
+
             }
 
             if (mDepreciationMethodId == (int)DepreciationMethodEnum.SYD)
             {
                 if (mAveragingMethodId == (int)AveragingMethodEnum.FullMonth)
-                {
-                    DataTable dt = ReportManager.DepreciationScheduleSYDFullMonthMonthly(criteria);
-                    if (dt.Rows.Count > 0)
-                    {
-                        string monthName = new DateTime(2010, mMonth, 1).ToString("MMM", CultureInfo.InvariantCulture); //get month name base on number
+                    dt = ReportManager.DepreciationScheduleSYDFullMonthMonthly(criteria);
+                else if (mAveragingMethodId == (int)AveragingMethodEnum.ActualDays)
+                    dt = ReportManager.DepreciationScheduleSYDActualDaysMonthly(criteria);
+            }
 
-                        if (!dt.Rows[0].IsNull(monthName))
-                            amount = (decimal)(double)dt.Rows[0][monthName];
-                        else
-                            MessageBox.Show("Depreciation journal with selected period does not exists.", "Depreciation Journal", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                    }
-                }
+
+            if (dt.Rows.Count > 0)
+            {
+                string monthName = new DateTime(2010, mMonth, 1).ToString("MMM", CultureInfo.InvariantCulture); //get month name base on number
+
+                if (!dt.Rows[0].IsNull(monthName))
+                    amount = (decimal)dt.Rows[0][monthName];
+                else
+                    MessageBox.Show("Depreciation journal with selected period does not exists.", "Depreciation Journal", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
 
             DepreciationExpenseAmountlabel.Text = amount.ToString("N");

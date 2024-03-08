@@ -21,7 +21,7 @@ namespace Qtech.AssetManagement.FixedAsset
         string myGroupKey = "Fixed Asset";
         string myItemKey = "FixedAsset";
         string myImageName = @"images\purchase_request_50px.png";
-        int myModuleId = Convert.ToInt32(Modules.FixedAsset);
+        int myModuleId = 2000; // 2000 is for qasa integration Convert.ToInt32(Modules.FixedAsset);
         string myModulePart = "AssetManagement";
         Form myForm = new Default();
 

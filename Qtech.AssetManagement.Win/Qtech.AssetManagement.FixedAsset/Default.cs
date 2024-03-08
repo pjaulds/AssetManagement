@@ -63,8 +63,13 @@ namespace Qtech.AssetManagement.FixedAsset
             ultraGrid1.Refresh();
 
             criteria = new FixedAssetCriteria();
+            criteria.mIsDraft = true;
+            ForRegistrationbutton.Text = "For Registration" + Environment.NewLine + FixedAssetManager.SelectCountForGetList(criteria).ToString();
+            
+            criteria = new FixedAssetCriteria();
             criteria.mIsRegistered = true;
             Registeredbutton.Text = "Registered" + Environment.NewLine + FixedAssetManager.SelectCountForGetList(criteria).ToString();
+
             Totalbutton.Text = "Total" + Environment.NewLine + FixedAssetManager.SelectCountForGetList(new FixedAssetCriteria()).ToString();
         }
 

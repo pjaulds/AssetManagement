@@ -2,7 +2,7 @@
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <PublishUrlHistory>D:\AssetManagement\|publish\</PublishUrlHistory>
-    <InstallUrlHistory>\\localhost\AssetManagement\</InstallUrlHistory>
+    <InstallUrlHistory>\\lcbigmakserver\QTECH SYSTEMS\AssetManagement\|\\localhost\AssetManagement\</InstallUrlHistory>
     <SupportUrlHistory />
     <UpdateUrlHistory />
     <BootstrapperUrlHistory />

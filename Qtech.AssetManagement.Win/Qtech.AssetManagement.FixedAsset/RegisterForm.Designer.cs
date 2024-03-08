@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -77,6 +77,14 @@
             this.mAmount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mIsJournalized = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.TotalCostlabel = new System.Windows.Forms.Label();
+            this.CapitalizedCosttextBox = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.TotalAmounttextBox = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.AccumulatedDepreciationtextBox = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel8.SuspendLayout();
@@ -128,6 +136,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(70, 13);
             this.label2.TabIndex = 7;
+            this.label2.Tag = "headerlabelblack";
             this.label2.Text = "Asset Type";
             // 
             // label4
@@ -139,6 +148,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(74, 13);
             this.label4.TabIndex = 6;
+            this.label4.Tag = "headerlabelblack";
             this.label4.Text = "Asset Name";
             // 
             // label5
@@ -150,6 +160,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(86, 13);
             this.label5.TabIndex = 10;
+            this.label5.Tag = "headerlabelblack";
             this.label5.Text = "Asset Number";
             // 
             // NametextBox
@@ -249,6 +260,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(208, 13);
             this.label3.TabIndex = 21;
+            this.label3.Tag = "headerlabelblack";
             this.label3.Text = "Accumulated Depreciation Account ";
             // 
             // label8
@@ -260,6 +272,7 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(181, 13);
             this.label8.TabIndex = 20;
+            this.label8.Tag = "headerlabelblack";
             this.label8.Text = "Depreciation Expense Account ";
             // 
             // label9
@@ -271,6 +284,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(88, 13);
             this.label9.TabIndex = 19;
+            this.label9.Tag = "headerlabelblack";
             this.label9.Text = "Asset Account";
             // 
             // label6
@@ -282,6 +296,7 @@
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(99, 13);
             this.label6.TabIndex = 22;
+            this.label6.Tag = "headerlabelblack";
             this.label6.Text = "Warranty Expiry";
             // 
             // label10
@@ -293,6 +308,7 @@
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(56, 13);
             this.label10.TabIndex = 23;
+            this.label10.Tag = "headerlabelblack";
             this.label10.Text = "Serial No";
             // 
             // panel8
@@ -300,7 +316,7 @@
             this.panel8.Controls.Add(this.Cancelbutton);
             this.panel8.Controls.Add(this.Savebutton);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel8.Location = new System.Drawing.Point(0, 526);
+            this.panel8.Location = new System.Drawing.Point(0, 556);
             this.panel8.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(1116, 23);
@@ -356,6 +372,7 @@
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(116, 13);
             this.label11.TabIndex = 176;
+            this.label11.Tag = "headerlabelblack";
             this.label11.Text = "Functional Location";
             // 
             // label12
@@ -367,6 +384,7 @@
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(41, 13);
             this.label12.TabIndex = 179;
+            this.label12.Tag = "headerlabelblack";
             this.label12.Text = "Model";
             // 
             // ModeltextBox
@@ -384,17 +402,18 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(4, 443);
+            this.label7.Location = new System.Drawing.Point(4, 470);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(72, 13);
             this.label7.TabIndex = 187;
+            this.label7.Tag = "headerlabelblack";
             this.label7.Text = "Usefule Life";
             // 
             // UsefulLifetextBox
             // 
             this.UsefulLifetextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsefulLifetextBox.Location = new System.Drawing.Point(227, 440);
+            this.UsefulLifetextBox.Location = new System.Drawing.Point(227, 467);
             this.UsefulLifetextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.UsefulLifetextBox.MaxLength = 150;
             this.UsefulLifetextBox.Name = "UsefulLifetextBox";
@@ -411,6 +430,7 @@
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(89, 13);
             this.label13.TabIndex = 185;
+            this.label13.Tag = "headerlabelblack";
             this.label13.Text = "Residual Value";
             // 
             // label14
@@ -422,6 +442,7 @@
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(87, 13);
             this.label14.TabIndex = 184;
+            this.label14.Tag = "headerlabelblack";
             this.label14.Text = "Purchase Cost";
             // 
             // label15
@@ -433,6 +454,7 @@
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(89, 13);
             this.label15.TabIndex = 183;
+            this.label15.Tag = "headerlabelblack";
             this.label15.Text = "Purchase Date";
             // 
             // ResidualValuetextBox
@@ -503,7 +525,7 @@
             this.groupBox1.Controls.Add(this.ItemsdataGridView);
             this.groupBox1.Location = new System.Drawing.Point(493, 89);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(612, 372);
+            this.groupBox1.Size = new System.Drawing.Size(612, 156);
             this.groupBox1.TabIndex = 190;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Capitalized Cost";
@@ -511,19 +533,19 @@
             // ItemsdataGridView
             // 
             this.ItemsdataGridView.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(212)))), ((int)(((byte)(240)))));
-            this.ItemsdataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(212)))), ((int)(((byte)(240)))));
+            this.ItemsdataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.ItemsdataGridView.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.ItemsdataGridView.BackgroundColor = System.Drawing.Color.White;
             this.ItemsdataGridView.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(198)))), ((int)(((byte)(237)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ItemsdataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(198)))), ((int)(((byte)(237)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ItemsdataGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.ItemsdataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ItemsdataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.mDelete,
@@ -536,22 +558,23 @@
             this.ItemsdataGridView.Location = new System.Drawing.Point(3, 16);
             this.ItemsdataGridView.Name = "ItemsdataGridView";
             this.ItemsdataGridView.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(226)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ItemsdataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(226)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ItemsdataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.ItemsdataGridView.RowHeadersVisible = false;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(226)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ItemsdataGridView.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(200)))), ((int)(((byte)(226)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ItemsdataGridView.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.ItemsdataGridView.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ItemsdataGridView.Size = new System.Drawing.Size(606, 353);
+            this.ItemsdataGridView.Size = new System.Drawing.Size(606, 137);
             this.ItemsdataGridView.TabIndex = 182;
             this.ItemsdataGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ItemsdataGridView_CellClick);
+            this.ItemsdataGridView.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.ItemsdataGridView_CellEndEdit);
             this.ItemsdataGridView.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.ItemsdataGridView_DataError);
             // 
             // mDelete
@@ -571,9 +594,9 @@
             // mAmount
             // 
             this.mAmount.DataPropertyName = "mAmount";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle8.Format = "N2";
-            this.mAmount.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle3.Format = "N2";
+            this.mAmount.DefaultCellStyle = dataGridViewCellStyle3;
             this.mAmount.HeaderText = "Amount";
             this.mAmount.Name = "mAmount";
             // 
@@ -587,17 +610,118 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 549);
+            this.panel3.Location = new System.Drawing.Point(0, 579);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1116, 2);
             this.panel3.TabIndex = 256;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(493, 254);
+            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(64, 13);
+            this.label16.TabIndex = 257;
+            this.label16.Tag = "headerlabelblack";
+            this.label16.Text = "Total Cost";
+            // 
+            // TotalCostlabel
+            // 
+            this.TotalCostlabel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalCostlabel.Location = new System.Drawing.Point(784, 254);
+            this.TotalCostlabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.TotalCostlabel.Name = "TotalCostlabel";
+            this.TotalCostlabel.Size = new System.Drawing.Size(88, 13);
+            this.TotalCostlabel.TabIndex = 258;
+            this.TotalCostlabel.Tag = "headerlabelblack";
+            this.TotalCostlabel.Text = "Total Cost";
+            this.TotalCostlabel.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // CapitalizedCosttextBox
+            // 
+            this.CapitalizedCosttextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CapitalizedCosttextBox.Location = new System.Drawing.Point(227, 494);
+            this.CapitalizedCosttextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.CapitalizedCosttextBox.MaxLength = 150;
+            this.CapitalizedCosttextBox.Name = "CapitalizedCosttextBox";
+            this.CapitalizedCosttextBox.ReadOnly = true;
+            this.CapitalizedCosttextBox.Size = new System.Drawing.Size(250, 21);
+            this.CapitalizedCosttextBox.TabIndex = 259;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(3, 497);
+            this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(97, 13);
+            this.label17.TabIndex = 260;
+            this.label17.Tag = "headerlabelblack";
+            this.label17.Text = "Capitalized Cost";
+            // 
+            // TotalAmounttextBox
+            // 
+            this.TotalAmounttextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalAmounttextBox.Location = new System.Drawing.Point(227, 521);
+            this.TotalAmounttextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.TotalAmounttextBox.MaxLength = 150;
+            this.TotalAmounttextBox.Name = "TotalAmounttextBox";
+            this.TotalAmounttextBox.ReadOnly = true;
+            this.TotalAmounttextBox.Size = new System.Drawing.Size(250, 21);
+            this.TotalAmounttextBox.TabIndex = 261;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(3, 524);
+            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(84, 13);
+            this.label18.TabIndex = 262;
+            this.label18.Tag = "headerlabelblack";
+            this.label18.Text = "Total Amount";
+            // 
+            // AccumulatedDepreciationtextBox
+            // 
+            this.AccumulatedDepreciationtextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AccumulatedDepreciationtextBox.Location = new System.Drawing.Point(227, 440);
+            this.AccumulatedDepreciationtextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.AccumulatedDepreciationtextBox.MaxLength = 150;
+            this.AccumulatedDepreciationtextBox.Name = "AccumulatedDepreciationtextBox";
+            this.AccumulatedDepreciationtextBox.ReadOnly = true;
+            this.AccumulatedDepreciationtextBox.Size = new System.Drawing.Size(250, 21);
+            this.AccumulatedDepreciationtextBox.TabIndex = 263;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(4, 443);
+            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(156, 13);
+            this.label19.TabIndex = 264;
+            this.label19.Tag = "headerlabelblack";
+            this.label19.Text = "Accumulated Depreciation";
             // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1116, 551);
+            this.ClientSize = new System.Drawing.Size(1116, 581);
+            this.Controls.Add(this.label19);
+            this.Controls.Add(this.AccumulatedDepreciationtextBox);
+            this.Controls.Add(this.label18);
+            this.Controls.Add(this.TotalAmounttextBox);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.CapitalizedCosttextBox);
+            this.Controls.Add(this.TotalCostlabel);
+            this.Controls.Add(this.label16);
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.groupBox1);
@@ -696,5 +820,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn mAmount;
         private System.Windows.Forms.DataGridViewCheckBoxColumn mIsJournalized;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label TotalCostlabel;
+        private System.Windows.Forms.TextBox CapitalizedCosttextBox;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox TotalAmounttextBox;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox AccumulatedDepreciationtextBox;
+        private System.Windows.Forms.Label label19;
     }
 }

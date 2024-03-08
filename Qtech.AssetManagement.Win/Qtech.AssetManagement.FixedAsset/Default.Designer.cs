@@ -159,7 +159,6 @@
             this.DepreciationMethodultraCombo = new Infragistics.Win.UltraWinGrid.UltraCombo();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
@@ -192,7 +191,6 @@
             this.label13 = new System.Windows.Forms.Label();
             this.ReceivingDetailIdlabel = new System.Windows.Forms.Label();
             this.ProductIdlabel = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -207,6 +205,11 @@
             this.Cancelbutton = new System.Windows.Forms.Button();
             this.Savebutton = new System.Windows.Forms.Button();
             this.collapsePanelControl1 = new Qtech.AssetManagement.Controls.CollapsePanelControl();
+            this.ForRegistrationbutton = new System.Windows.Forms.Button();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -230,6 +233,8 @@
             this.panel2.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel8.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.panel15.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -259,7 +264,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.panel8);
             this.splitContainer1.Panel2.Controls.Add(this.collapsePanelControl1);
             this.splitContainer1.Size = new System.Drawing.Size(1008, 534);
-            this.splitContainer1.SplitterDistance = 234;
+            this.splitContainer1.SplitterDistance = 89;
             this.splitContainer1.SplitterWidth = 2;
             this.splitContainer1.TabIndex = 9;
             // 
@@ -445,7 +450,7 @@
             this.ultraGrid1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ultraGrid1.Location = new System.Drawing.Point(0, 79);
             this.ultraGrid1.Name = "ultraGrid1";
-            this.ultraGrid1.Size = new System.Drawing.Size(215, 451);
+            this.ultraGrid1.Size = new System.Drawing.Size(70, 451);
             this.ultraGrid1.TabIndex = 125;
             this.ultraGrid1.Text = "ultraGrid1";
             this.ultraGrid1.InitializeLayout += new Infragistics.Win.UltraWinGrid.InitializeLayoutEventHandler(this.ultraGrid1_InitializeLayout);
@@ -455,12 +460,13 @@
             // 
             // panel13
             // 
+            this.panel13.Controls.Add(this.ForRegistrationbutton);
             this.panel13.Controls.Add(this.Totalbutton);
             this.panel13.Controls.Add(this.Registeredbutton);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel13.Location = new System.Drawing.Point(0, 0);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(215, 79);
+            this.panel13.Size = new System.Drawing.Size(70, 79);
             this.panel13.TabIndex = 127;
             // 
             // Totalbutton
@@ -469,7 +475,7 @@
             this.Totalbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Totalbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Totalbutton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.Totalbutton.Location = new System.Drawing.Point(139, 10);
+            this.Totalbutton.Location = new System.Drawing.Point(268, 10);
             this.Totalbutton.Name = "Totalbutton";
             this.Totalbutton.Size = new System.Drawing.Size(123, 55);
             this.Totalbutton.TabIndex = 17;
@@ -484,7 +490,7 @@
             this.Registeredbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Registeredbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Registeredbutton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.Registeredbutton.Location = new System.Drawing.Point(10, 10);
+            this.Registeredbutton.Location = new System.Drawing.Point(139, 10);
             this.Registeredbutton.Name = "Registeredbutton";
             this.Registeredbutton.Size = new System.Drawing.Size(123, 55);
             this.Registeredbutton.TabIndex = 16;
@@ -496,7 +502,7 @@
             // expandPanelControl1
             // 
             this.expandPanelControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.expandPanelControl1.Location = new System.Drawing.Point(215, 0);
+            this.expandPanelControl1.Location = new System.Drawing.Point(70, 0);
             this.expandPanelControl1.Name = "expandPanelControl1";
             this.expandPanelControl1.Size = new System.Drawing.Size(15, 530);
             this.expandPanelControl1.TabIndex = 126;
@@ -560,10 +566,11 @@
             this.panel6.Controls.Add(this.panel9);
             this.panel6.Controls.Add(this.panel10);
             this.panel6.Controls.Add(this.panel12);
+            this.panel6.Controls.Add(this.panel15);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(15, 258);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(753, 166);
+            this.panel6.Size = new System.Drawing.Size(898, 166);
             this.panel6.TabIndex = 179;
             // 
             // panel7
@@ -571,16 +578,16 @@
             this.panel7.Controls.Add(this.UsefulLifetextBox);
             this.panel7.Controls.Add(this.ResidualValuetextBox);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel7.Location = new System.Drawing.Point(527, 0);
+            this.panel7.Location = new System.Drawing.Point(527, 21);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(278, 166);
+            this.panel7.Size = new System.Drawing.Size(278, 145);
             this.panel7.TabIndex = 1;
             this.panel7.TabStop = true;
             // 
             // UsefulLifetextBox
             // 
             this.UsefulLifetextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsefulLifetextBox.Location = new System.Drawing.Point(3, 67);
+            this.UsefulLifetextBox.Location = new System.Drawing.Point(6, 36);
             this.UsefulLifetextBox.MaxLength = 50;
             this.UsefulLifetextBox.Name = "UsefulLifetextBox";
             this.UsefulLifetextBox.Size = new System.Drawing.Size(250, 21);
@@ -589,7 +596,7 @@
             // ResidualValuetextBox
             // 
             this.ResidualValuetextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResidualValuetextBox.Location = new System.Drawing.Point(3, 40);
+            this.ResidualValuetextBox.Location = new System.Drawing.Point(6, 9);
             this.ResidualValuetextBox.MaxLength = 50;
             this.ResidualValuetextBox.Name = "ResidualValuetextBox";
             this.ResidualValuetextBox.Size = new System.Drawing.Size(250, 21);
@@ -601,16 +608,16 @@
             this.panel9.Controls.Add(this.label17);
             this.panel9.Controls.Add(this.label19);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel9.Location = new System.Drawing.Point(411, 0);
+            this.panel9.Location = new System.Drawing.Point(411, 21);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(116, 166);
+            this.panel9.Size = new System.Drawing.Size(116, 145);
             this.panel9.TabIndex = 12;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(3, 70);
+            this.label17.Location = new System.Drawing.Point(6, 39);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(95, 13);
             this.label17.TabIndex = 3;
@@ -620,7 +627,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(3, 43);
+            this.label19.Location = new System.Drawing.Point(6, 12);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(76, 13);
             this.label19.TabIndex = 2;
@@ -633,16 +640,16 @@
             this.panel10.Controls.Add(this.AveragingMehodultraCombo);
             this.panel10.Controls.Add(this.DepreciationMethodultraCombo);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel10.Location = new System.Drawing.Point(139, 0);
+            this.panel10.Location = new System.Drawing.Point(139, 21);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(272, 166);
+            this.panel10.Size = new System.Drawing.Size(272, 145);
             this.panel10.TabIndex = 0;
             this.panel10.TabStop = true;
             // 
             // AccumulatedDepreciationtextBox
             // 
             this.AccumulatedDepreciationtextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AccumulatedDepreciationtextBox.Location = new System.Drawing.Point(3, 125);
+            this.AccumulatedDepreciationtextBox.Location = new System.Drawing.Point(6, 91);
             this.AccumulatedDepreciationtextBox.MaxLength = 50;
             this.AccumulatedDepreciationtextBox.Name = "AccumulatedDepreciationtextBox";
             this.AccumulatedDepreciationtextBox.Size = new System.Drawing.Size(250, 21);
@@ -653,7 +660,7 @@
             // 
             this.DepreciationStartdateTimePicker.Enabled = false;
             this.DepreciationStartdateTimePicker.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DepreciationStartdateTimePicker.Location = new System.Drawing.Point(3, 40);
+            this.DepreciationStartdateTimePicker.Location = new System.Drawing.Point(6, 6);
             this.DepreciationStartdateTimePicker.Name = "DepreciationStartdateTimePicker";
             this.DepreciationStartdateTimePicker.Size = new System.Drawing.Size(250, 21);
             this.DepreciationStartdateTimePicker.TabIndex = 0;
@@ -732,7 +739,7 @@
             this.AveragingMehodultraCombo.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
             this.AveragingMehodultraCombo.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy;
             this.AveragingMehodultraCombo.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AveragingMehodultraCombo.Location = new System.Drawing.Point(3, 96);
+            this.AveragingMehodultraCombo.Location = new System.Drawing.Point(6, 62);
             this.AveragingMehodultraCombo.Name = "AveragingMehodultraCombo";
             this.AveragingMehodultraCombo.Size = new System.Drawing.Size(250, 23);
             this.AveragingMehodultraCombo.TabIndex = 2;
@@ -811,7 +818,7 @@
             this.DepreciationMethodultraCombo.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
             this.DepreciationMethodultraCombo.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy;
             this.DepreciationMethodultraCombo.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DepreciationMethodultraCombo.Location = new System.Drawing.Point(3, 67);
+            this.DepreciationMethodultraCombo.Location = new System.Drawing.Point(6, 33);
             this.DepreciationMethodultraCombo.Name = "DepreciationMethodultraCombo";
             this.DepreciationMethodultraCombo.Size = new System.Drawing.Size(250, 23);
             this.DepreciationMethodultraCombo.TabIndex = 1;
@@ -820,41 +827,30 @@
             // 
             this.panel12.BackColor = System.Drawing.Color.Gainsboro;
             this.panel12.Controls.Add(this.label14);
-            this.panel12.Controls.Add(this.label20);
             this.panel12.Controls.Add(this.label22);
             this.panel12.Controls.Add(this.label23);
             this.panel12.Controls.Add(this.label24);
             this.panel12.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel12.Location = new System.Drawing.Point(0, 0);
+            this.panel12.Location = new System.Drawing.Point(0, 21);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(139, 166);
+            this.panel12.Size = new System.Drawing.Size(139, 145);
             this.panel12.TabIndex = 0;
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.label14.Location = new System.Drawing.Point(6, 128);
+            this.label14.Location = new System.Drawing.Point(6, 94);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(128, 13);
             this.label14.TabIndex = 7;
             this.label14.Text = "AccumulatedDepreciation";
             // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Tahoma", 10.25F);
-            this.label20.Location = new System.Drawing.Point(6, 10);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(75, 17);
-            this.label20.TabIndex = 6;
-            this.label20.Text = "Book Value";
-            // 
             // label22
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.label22.Location = new System.Drawing.Point(6, 100);
+            this.label22.Location = new System.Drawing.Point(6, 66);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(95, 13);
             this.label22.TabIndex = 4;
@@ -864,7 +860,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.label23.Location = new System.Drawing.Point(6, 70);
+            this.label23.Location = new System.Drawing.Point(6, 36);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(106, 13);
             this.label23.TabIndex = 3;
@@ -874,7 +870,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.label24.Location = new System.Drawing.Point(6, 43);
+            this.label24.Location = new System.Drawing.Point(6, 9);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(120, 13);
             this.label24.TabIndex = 2;
@@ -886,10 +882,11 @@
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.panel14);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(15, 21);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(753, 237);
+            this.panel1.Size = new System.Drawing.Size(898, 237);
             this.panel1.TabIndex = 177;
             // 
             // panel4
@@ -901,9 +898,9 @@
             this.panel4.Controls.Add(this.PurchasedateTimePicker);
             this.panel4.Controls.Add(this.AssetNotextBox);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel4.Location = new System.Drawing.Point(527, 0);
+            this.panel4.Location = new System.Drawing.Point(527, 21);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(278, 237);
+            this.panel4.Size = new System.Drawing.Size(278, 216);
             this.panel4.TabIndex = 1;
             this.panel4.TabStop = true;
             // 
@@ -969,9 +966,9 @@
             this.panel5.Controls.Add(this.label2);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel5.Location = new System.Drawing.Point(411, 0);
+            this.panel5.Location = new System.Drawing.Point(411, 21);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(116, 237);
+            this.panel5.Size = new System.Drawing.Size(116, 216);
             this.panel5.TabIndex = 12;
             // 
             // label11
@@ -1010,9 +1007,9 @@
             this.label8.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(6, 100);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(76, 13);
+            this.label8.Size = new System.Drawing.Size(83, 13);
             this.label8.TabIndex = 4;
-            this.label8.Text = "Purchase Cost";
+            this.label8.Text = "Acquisition Cost";
             // 
             // label2
             // 
@@ -1022,7 +1019,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Purchase Date";
+            this.label2.Text = "Received Date";
             // 
             // label5
             // 
@@ -1046,9 +1043,9 @@
             this.panel3.Controls.Add(this.AssetTypeutraCombo);
             this.panel3.Controls.Add(this.ProductNametextBox);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(139, 0);
+            this.panel3.Location = new System.Drawing.Point(139, 21);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(272, 237);
+            this.panel3.Size = new System.Drawing.Size(272, 216);
             this.panel3.TabIndex = 0;
             this.panel3.TabStop = true;
             // 
@@ -1357,15 +1354,14 @@
             this.panel2.Controls.Add(this.label13);
             this.panel2.Controls.Add(this.ReceivingDetailIdlabel);
             this.panel2.Controls.Add(this.ProductIdlabel);
-            this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Location = new System.Drawing.Point(0, 21);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(139, 237);
+            this.panel2.Size = new System.Drawing.Size(139, 216);
             this.panel2.TabIndex = 0;
             // 
             // label13
@@ -1403,16 +1399,6 @@
             this.ProductIdlabel.Tag = "id";
             this.ProductIdlabel.Text = "0";
             this.ProductIdlabel.Visible = false;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Tahoma", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(6, 10);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(47, 17);
-            this.label12.TabIndex = 6;
-            this.label12.Text = "Details";
             // 
             // label7
             // 
@@ -1464,7 +1450,7 @@
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel11.Location = new System.Drawing.Point(15, 0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(753, 21);
+            this.panel11.Size = new System.Drawing.Size(898, 21);
             this.panel11.TabIndex = 176;
             this.panel11.Tag = "headerpanel";
             // 
@@ -1516,7 +1502,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel8.Location = new System.Drawing.Point(15, 507);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(753, 23);
+            this.panel8.Size = new System.Drawing.Size(898, 23);
             this.panel8.TabIndex = 174;
             // 
             // RegisterBytextBox
@@ -1580,6 +1566,72 @@
             this.collapsePanelControl1.TabIndex = 178;
             this.collapsePanelControl1._HidePanel += new System.EventHandler(this.collapsePanelControl1__HidePanel);
             // 
+            // ForRegistrationbutton
+            // 
+            this.ForRegistrationbutton.BackColor = System.Drawing.Color.White;
+            this.ForRegistrationbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ForRegistrationbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForRegistrationbutton.ForeColor = System.Drawing.Color.Black;
+            this.ForRegistrationbutton.Location = new System.Drawing.Point(10, 10);
+            this.ForRegistrationbutton.Name = "ForRegistrationbutton";
+            this.ForRegistrationbutton.Size = new System.Drawing.Size(123, 55);
+            this.ForRegistrationbutton.TabIndex = 18;
+            this.ForRegistrationbutton.Tag = "N/A";
+            this.ForRegistrationbutton.Text = "For Registration";
+            this.ForRegistrationbutton.UseVisualStyleBackColor = false;
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel14.Controls.Add(this.label15);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel14.Location = new System.Drawing.Point(0, 0);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(898, 21);
+            this.panel14.TabIndex = 184;
+            this.panel14.Tag = "headerpanel";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label15.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(0, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(61, 13);
+            this.label15.TabIndex = 24;
+            this.label15.Tag = "";
+            this.label15.Text = "     Details";
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel15.Controls.Add(this.label12);
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel15.Location = new System.Drawing.Point(0, 0);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(898, 21);
+            this.panel15.TabIndex = 185;
+            this.panel15.Tag = "headerpanel";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label12.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(0, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(84, 13);
+            this.label12.TabIndex = 24;
+            this.label12.Tag = "";
+            this.label12.Text = "     Book Value";
+            // 
             // Default
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1625,6 +1677,10 @@
             this.panel11.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
+            this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1665,7 +1721,6 @@
         private System.Windows.Forms.TextBox DescriptiontextBox;
         private Infragistics.Win.UltraWinGrid.UltraCombo FunctionalLocationultraCombo;
         private Infragistics.Win.UltraWinGrid.UltraCombo AssetTypeutraCombo;
-        private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel6;
@@ -1678,7 +1733,6 @@
         private Infragistics.Win.UltraWinGrid.UltraCombo AveragingMehodultraCombo;
         private Infragistics.Win.UltraWinGrid.UltraCombo DepreciationMethodultraCombo;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
@@ -1703,5 +1757,10 @@
         private System.Windows.Forms.TextBox RegisterBytextBox;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.Button ForRegistrationbutton;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Label label12;
     }
 }
