@@ -55,6 +55,8 @@ namespace Qtech.AssetManagement.BusinessEntities
         public String mAveragingMethodName { get; set; }
         public Decimal mUsefulLifeYears { get; set; }
 
+        public bool mDepreciable { get; set; }
+
 
         public string mAssetAccountHeaderText { get { return "Asset Account"; } }
         public string mAccumulatedDepreciationAccountHeaderText { get { return "Accumulated Depreciation Account"; } }

@@ -59,6 +59,16 @@ namespace Qtech.AssetManagement.Bll
         {
             return ReportDB.DepreciationScheduleSYDActualDaysAnnually(reportCriteria);
         }
+
+        public static DataTable BrowseReceivingFromOtherDB(ReportCriteria reportCriteria)
+        {
+            return ReportDB.BrowseReceivingFromOtherDB(reportCriteria);
+        }
+
+        public static DataTable BrowseReceivingDetailFromOtherDB(ReportCriteria reportCriteria)
+        {
+            return ReportDB.BrowseReceivingDetailFromOtherDB(reportCriteria);
+        }
         #endregion
     }
 }

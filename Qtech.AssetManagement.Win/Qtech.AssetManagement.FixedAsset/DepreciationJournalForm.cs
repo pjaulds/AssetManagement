@@ -30,15 +30,16 @@ namespace Qtech.AssetManagement.FixedAsset
         public int mDepreciationMethodId { get; set; }
         public int mAveragingMethodId { get; set; }
 
-        private int SaveDepreciationJournal()
+        private int SaveDepreciationJournal(int id)
         {
             BusinessEntities.DepreciationJournal item = new BusinessEntities.DepreciationJournal();
+            item.mId = id;
             LoadDepreciationJournalFromFormControls(item);
 
             //validate if all the rules of Status has been meet
             if (item.Validate())
             {
-                Int32 id = DepreciationJournalManager.Save(item);               
+                id = DepreciationJournalManager.Save(item);               
                 return id;
             }
             else
@@ -104,6 +105,7 @@ namespace Qtech.AssetManagement.FixedAsset
 
             ReportCriteria criteria = new ReportCriteria();
             criteria.mId = mId;
+            
             criteria.mYear = mYear;
             criteria.mAssetTypeId = item.mAssetTypeId;
 
@@ -132,7 +134,7 @@ namespace Qtech.AssetManagement.FixedAsset
                 string monthName = new DateTime(2010, mMonth, 1).ToString("MMM", CultureInfo.InvariantCulture); //get month name base on number
 
                 if (!dt.Rows[0].IsNull(monthName))
-                    amount = (decimal)dt.Rows[0][monthName];
+                    amount = Convert.ToDecimal(dt.Rows[0][monthName]);
                 else
                     MessageBox.Show("Depreciation journal with selected period does not exists.", "Depreciation Journal", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
@@ -155,14 +157,16 @@ namespace Qtech.AssetManagement.FixedAsset
             //AccumulatedDepreciationAmountlabel.Text = DepreciationExpenseAmountlabel.Text;
         }
 
-        private bool IsDepreciationJournalExists()
+        private int IsDepreciationJournalExists()
         {
             DepreciationJournalCriteria criteria = new DepreciationJournalCriteria();
             criteria.mFixedAssetId = mId;
             criteria.mYear = mYear;
             criteria.mMonth = mMonth;
 
-            return DepreciationJournalManager.SelectCountForGetList(criteria) > 0;
+            if (DepreciationJournalManager.SelectCountForGetList(criteria) > 0)
+                return DepreciationJournalManager.GetList(criteria).First().mId;
+            else return 0;
         }
 
         private void DepreciationJournalForm_KeyDown(object sender, KeyEventArgs e)
@@ -196,13 +200,16 @@ namespace Qtech.AssetManagement.FixedAsset
                 return;
             }
 
-            if (IsDepreciationJournalExists())
+            int id = IsDepreciationJournalExists();
+            if (id > 0)
             {
-                MessageBox.Show("Depreciation journal with same month and year was already exists.", "Depreciation Journal", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-                return;
+                if (MessageBox.Show("Depreciation journal with same month and year was already exists. Do you want to update existing record?", "Depreciation Journal", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation)
+                    == DialogResult.No)
+                    return;
+
             }
 
-            if (SaveDepreciationJournal() > 0)
+            if (SaveDepreciationJournal(id) > 0)
             {
                 MessageBox.Show("Depreciation journal save successfully.", "Depreciation Journal", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();

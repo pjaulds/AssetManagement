@@ -40,6 +40,9 @@ namespace Qtech.AssetManagement.Utilities
                 {
                     switch (ctl.Tag.ToString())
                     {
+                        case "RegularItalized":
+                            ctl.Font = new Font("Arial", float.Parse("8.25"), FontStyle.Italic);
+                            break;
                         case "headerlabel":
                             ctl.Font = new Font("Arial", float.Parse("8.25"), FontStyle.Bold);
                             ctl.ForeColor = Color.WhiteSmoke;

@@ -203,6 +203,40 @@ namespace Qtech.AssetManagement.Dal
             }
             return dt;
         }
+
+        public static DataTable BrowseReceivingFromOtherDB(ReportCriteria reportCriteria)
+        {
+            DataTable dt = new DataTable();
+            using (DbCommand myCommand = AppConfiguration.CreateCommand())
+            {
+                myCommand.CommandType = CommandType.StoredProcedure;
+                myCommand.CommandText = "amQt_spBrowseReceivingFromOtherDB";                
+
+                myCommand.Connection.Open();
+                dt.Load(myCommand.ExecuteReader());
+                myCommand.Connection.Close();
+
+            }
+            return dt;
+        }
+
+        public static DataTable BrowseReceivingDetailFromOtherDB(ReportCriteria reportCriteria)
+        {
+            DataTable dt = new DataTable();
+            using (DbCommand myCommand = AppConfiguration.CreateCommand())
+            {
+                myCommand.CommandType = CommandType.StoredProcedure;
+                myCommand.CommandText = "amQt_spBrowseReceivingDetailFromOtherDB";
+
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@id", reportCriteria.mId); //receiving id
+
+                myCommand.Connection.Open();
+                dt.Load(myCommand.ExecuteReader());
+                myCommand.Connection.Close();
+
+            }
+            return dt;
+        }
         #endregion
     }
 }

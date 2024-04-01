@@ -28,26 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             Infragistics.Win.Appearance appearance1 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand1 = new Infragistics.Win.UltraWinGrid.UltraGridBand("Band 0", -1);
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn10 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn11 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mProductName");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn14 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mAssetTypeName");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn16 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mPurchaseDate");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn7 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn8 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mProductName");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn9 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mAssetTypeName");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn10 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mPurchaseDate");
             Infragistics.Win.Appearance appearance2 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn17 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mPurchasePrice");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn11 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mPurchasePrice");
             Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn18 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mAssetNo");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn12 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mAssetNo");
             Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn19 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mPersonnelName");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn2 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mFunctionalLocationName");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn3 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mWarrantyExpiry");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn13 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mPersonnelName");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn14 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mFunctionalLocationName");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn15 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mWarrantyExpiry");
             Infragistics.Win.Appearance appearance5 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn4 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mSerialNo");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn5 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mModel");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn7 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mResidualValue");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn16 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mSerialNo");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn17 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mModel");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn18 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mResidualValue");
             Infragistics.Win.Appearance appearance6 = new Infragistics.Win.Appearance();
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn8 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mUsefulLifeYears");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn19 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mUsefulLifeYears");
             Infragistics.Win.Appearance appearance7 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance8 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance9 = new Infragistics.Win.Appearance();
@@ -62,8 +63,8 @@
             Infragistics.Win.Appearance appearance18 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance19 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand2 = new Infragistics.Win.UltraWinGrid.UltraGridBand("Band 0", -1);
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn13 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn15 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mName");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn3 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn4 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mName");
             Infragistics.Win.Appearance appearance20 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance21 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance22 = new Infragistics.Win.Appearance();
@@ -77,8 +78,8 @@
             Infragistics.Win.Appearance appearance30 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance31 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand3 = new Infragistics.Win.UltraWinGrid.UltraGridBand("Band 0", -1);
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn21 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn22 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mName");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn5 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn6 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mName");
             Infragistics.Win.Appearance appearance32 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance33 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance34 = new Infragistics.Win.Appearance();
@@ -92,8 +93,8 @@
             Infragistics.Win.Appearance appearance42 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance43 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand4 = new Infragistics.Win.UltraWinGrid.UltraGridBand("Band 0", -1);
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn23 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn24 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mName");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn20 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn21 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mName");
             Infragistics.Win.Appearance appearance44 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance45 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance46 = new Infragistics.Win.Appearance();
@@ -107,8 +108,8 @@
             Infragistics.Win.Appearance appearance54 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance55 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand5 = new Infragistics.Win.UltraWinGrid.UltraGridBand("Band 0", -1);
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn6 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn9 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mName");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn22 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn23 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mName");
             Infragistics.Win.Appearance appearance56 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance57 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance58 = new Infragistics.Win.Appearance();
@@ -122,8 +123,8 @@
             Infragistics.Win.Appearance appearance66 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance67 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand6 = new Infragistics.Win.UltraWinGrid.UltraGridBand("Band 0", -1);
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn25 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
-            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn1 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mName");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn1 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn2 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mName");
             Infragistics.Win.Appearance appearance68 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance69 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance70 = new Infragistics.Win.Appearance();
@@ -135,12 +136,14 @@
             Infragistics.Win.Appearance appearance76 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance77 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance78 = new Infragistics.Win.Appearance();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Default));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.ultraGrid1 = new Infragistics.Win.UltraWinGrid.UltraGrid();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.Depreciatebutton = new System.Windows.Forms.Button();
+            this.ForRegistrationbutton = new System.Windows.Forms.Button();
             this.Totalbutton = new System.Windows.Forms.Button();
             this.Registeredbutton = new System.Windows.Forms.Button();
-            this.expandPanelControl1 = new Qtech.AssetManagement.Controls.ExpandPanelControl();
             this.RegisterByIdlabel = new System.Windows.Forms.Label();
             this.DisposedcheckBox = new System.Windows.Forms.CheckBox();
             this.RegisteredcheckBox = new System.Windows.Forms.CheckBox();
@@ -162,8 +165,12 @@
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.AssetTypeCodetextBox = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.ModeltextBox = new System.Windows.Forms.TextBox();
             this.SerialNotextBox = new System.Windows.Forms.TextBox();
             this.WarrantydateTimePicker = new System.Windows.Forms.DateTimePicker();
@@ -179,7 +186,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.PersonnelultraCombo = new Infragistics.Win.UltraWinGrid.UltraCombo();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.BrowseProductlinkLabel = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.NewPurchaseradioButton = new System.Windows.Forms.RadioButton();
             this.BeginningBalanceradioButton = new System.Windows.Forms.RadioButton();
@@ -195,6 +202,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -204,12 +213,12 @@
             this.button1 = new System.Windows.Forms.Button();
             this.Cancelbutton = new System.Windows.Forms.Button();
             this.Savebutton = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.capitalizedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.expandPanelControl1 = new Qtech.AssetManagement.Controls.ExpandPanelControl();
             this.collapsePanelControl1 = new Qtech.AssetManagement.Controls.CollapsePanelControl();
-            this.ForRegistrationbutton = new System.Windows.Forms.Button();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.panel15 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -223,6 +232,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.AveragingMehodultraCombo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.DepreciationMethodultraCombo)).BeginInit();
             this.panel12.SuspendLayout();
+            this.panel15.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -231,10 +241,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.FunctionalLocationultraCombo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AssetTypeutraCombo)).BeginInit();
             this.panel2.SuspendLayout();
+            this.panel14.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel8.SuspendLayout();
-            this.panel14.SuspendLayout();
-            this.panel15.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -264,130 +274,131 @@
             this.splitContainer1.Panel2.Controls.Add(this.panel8);
             this.splitContainer1.Panel2.Controls.Add(this.collapsePanelControl1);
             this.splitContainer1.Size = new System.Drawing.Size(1008, 534);
-            this.splitContainer1.SplitterDistance = 89;
+            this.splitContainer1.SplitterDistance = 250;
             this.splitContainer1.SplitterWidth = 2;
             this.splitContainer1.TabIndex = 9;
             // 
             // ultraGrid1
             // 
+            this.ultraGrid1.ContextMenuStrip = this.contextMenuStrip1;
             appearance1.BackColor = System.Drawing.SystemColors.Window;
             appearance1.BorderColor = System.Drawing.SystemColors.InactiveCaption;
             this.ultraGrid1.DisplayLayout.Appearance = appearance1;
             this.ultraGrid1.DisplayLayout.AutoFitStyle = Infragistics.Win.UltraWinGrid.AutoFitStyle.ExtendLastColumn;
-            ultraGridColumn10.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
-            ultraGridColumn10.Header.VisiblePosition = 0;
-            ultraGridColumn10.Hidden = true;
-            ultraGridColumn11.Header.Caption = "Asset Name";
-            ultraGridColumn11.Header.VisiblePosition = 1;
-            ultraGridColumn11.RowLayoutColumnInfo.OriginX = 2;
+            ultraGridColumn7.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
+            ultraGridColumn7.Header.VisiblePosition = 0;
+            ultraGridColumn7.Hidden = true;
+            ultraGridColumn8.Header.Caption = "Asset Name";
+            ultraGridColumn8.Header.VisiblePosition = 1;
+            ultraGridColumn8.RowLayoutColumnInfo.OriginX = 2;
+            ultraGridColumn8.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn8.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 23);
+            ultraGridColumn8.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn8.RowLayoutColumnInfo.SpanY = 2;
+            ultraGridColumn9.Header.Caption = "Asset Type";
+            ultraGridColumn9.Header.VisiblePosition = 2;
+            ultraGridColumn9.RowLayoutColumnInfo.OriginX = 4;
+            ultraGridColumn9.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn9.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 0);
+            ultraGridColumn9.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn9.RowLayoutColumnInfo.SpanY = 2;
+            appearance2.TextHAlignAsString = "Center";
+            ultraGridColumn10.CellAppearance = appearance2;
+            ultraGridColumn10.Format = "MM-dd-yyyy";
+            ultraGridColumn10.Header.Caption = "Purchase Date";
+            ultraGridColumn10.Header.VisiblePosition = 3;
+            ultraGridColumn10.RowLayoutColumnInfo.OriginX = 16;
+            ultraGridColumn10.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn10.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(200, 0);
+            ultraGridColumn10.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn10.RowLayoutColumnInfo.SpanY = 2;
+            appearance3.TextHAlignAsString = "Center";
+            ultraGridColumn11.CellAppearance = appearance3;
+            ultraGridColumn11.Format = "N";
+            ultraGridColumn11.Header.Caption = "Purchase Cost";
+            ultraGridColumn11.Header.VisiblePosition = 4;
+            ultraGridColumn11.RowLayoutColumnInfo.OriginX = 18;
             ultraGridColumn11.RowLayoutColumnInfo.OriginY = 0;
-            ultraGridColumn11.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 23);
             ultraGridColumn11.RowLayoutColumnInfo.SpanX = 2;
             ultraGridColumn11.RowLayoutColumnInfo.SpanY = 2;
-            ultraGridColumn14.Header.Caption = "Asset Type";
-            ultraGridColumn14.Header.VisiblePosition = 2;
-            ultraGridColumn14.RowLayoutColumnInfo.OriginX = 4;
+            appearance4.TextHAlignAsString = "Center";
+            ultraGridColumn12.CellAppearance = appearance4;
+            ultraGridColumn12.Header.Caption = "Asset Code";
+            ultraGridColumn12.Header.VisiblePosition = 5;
+            ultraGridColumn12.RowLayoutColumnInfo.OriginX = 0;
+            ultraGridColumn12.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn12.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(150, 0);
+            ultraGridColumn12.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn12.RowLayoutColumnInfo.SpanY = 2;
+            ultraGridColumn13.Header.Caption = "Assigned Personnel";
+            ultraGridColumn13.Header.VisiblePosition = 6;
+            ultraGridColumn13.RowLayoutColumnInfo.OriginX = 8;
+            ultraGridColumn13.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn13.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(200, 0);
+            ultraGridColumn13.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn13.RowLayoutColumnInfo.SpanY = 2;
+            ultraGridColumn14.Header.Caption = "Functional Location";
+            ultraGridColumn14.Header.VisiblePosition = 7;
+            ultraGridColumn14.RowLayoutColumnInfo.OriginX = 6;
             ultraGridColumn14.RowLayoutColumnInfo.OriginY = 0;
             ultraGridColumn14.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 0);
             ultraGridColumn14.RowLayoutColumnInfo.SpanX = 2;
             ultraGridColumn14.RowLayoutColumnInfo.SpanY = 2;
-            appearance2.TextHAlignAsString = "Center";
-            ultraGridColumn16.CellAppearance = appearance2;
-            ultraGridColumn16.Format = "MM-dd-yyyy";
-            ultraGridColumn16.Header.Caption = "Purchase Date";
-            ultraGridColumn16.Header.VisiblePosition = 3;
-            ultraGridColumn16.RowLayoutColumnInfo.OriginX = 16;
+            appearance5.TextHAlignAsString = "Center";
+            ultraGridColumn15.CellAppearance = appearance5;
+            ultraGridColumn15.Format = "D";
+            ultraGridColumn15.Header.Caption = "Warranty Expiry";
+            ultraGridColumn15.Header.VisiblePosition = 8;
+            ultraGridColumn15.RowLayoutColumnInfo.OriginX = 10;
+            ultraGridColumn15.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn15.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(175, 0);
+            ultraGridColumn15.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn15.RowLayoutColumnInfo.SpanY = 2;
+            ultraGridColumn16.Header.Caption = "Serial No";
+            ultraGridColumn16.Header.VisiblePosition = 9;
+            ultraGridColumn16.RowLayoutColumnInfo.OriginX = 12;
             ultraGridColumn16.RowLayoutColumnInfo.OriginY = 0;
-            ultraGridColumn16.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(200, 0);
+            ultraGridColumn16.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(150, 0);
             ultraGridColumn16.RowLayoutColumnInfo.SpanX = 2;
             ultraGridColumn16.RowLayoutColumnInfo.SpanY = 2;
-            appearance3.TextHAlignAsString = "Center";
-            ultraGridColumn17.CellAppearance = appearance3;
-            ultraGridColumn17.Format = "N";
-            ultraGridColumn17.Header.Caption = "Purchase Cost";
-            ultraGridColumn17.Header.VisiblePosition = 4;
-            ultraGridColumn17.RowLayoutColumnInfo.OriginX = 18;
+            ultraGridColumn17.Header.Caption = "Model";
+            ultraGridColumn17.Header.VisiblePosition = 10;
+            ultraGridColumn17.RowLayoutColumnInfo.OriginX = 14;
             ultraGridColumn17.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn17.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(150, 0);
             ultraGridColumn17.RowLayoutColumnInfo.SpanX = 2;
             ultraGridColumn17.RowLayoutColumnInfo.SpanY = 2;
-            appearance4.TextHAlignAsString = "Center";
-            ultraGridColumn18.CellAppearance = appearance4;
-            ultraGridColumn18.Header.Caption = "Asset Code";
-            ultraGridColumn18.Header.VisiblePosition = 5;
-            ultraGridColumn18.RowLayoutColumnInfo.OriginX = 0;
+            appearance6.TextHAlignAsString = "Center";
+            ultraGridColumn18.CellAppearance = appearance6;
+            ultraGridColumn18.Format = "N";
+            ultraGridColumn18.Header.Caption = "Residual Value";
+            ultraGridColumn18.Header.VisiblePosition = 11;
+            ultraGridColumn18.RowLayoutColumnInfo.OriginX = 20;
             ultraGridColumn18.RowLayoutColumnInfo.OriginY = 0;
-            ultraGridColumn18.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(150, 0);
             ultraGridColumn18.RowLayoutColumnInfo.SpanX = 2;
             ultraGridColumn18.RowLayoutColumnInfo.SpanY = 2;
-            ultraGridColumn19.Header.Caption = "Assigned Personnel";
-            ultraGridColumn19.Header.VisiblePosition = 6;
-            ultraGridColumn19.RowLayoutColumnInfo.OriginX = 8;
+            appearance7.TextHAlignAsString = "Center";
+            ultraGridColumn19.CellAppearance = appearance7;
+            ultraGridColumn19.Header.Caption = "Usefu lLife Years";
+            ultraGridColumn19.Header.VisiblePosition = 12;
+            ultraGridColumn19.RowLayoutColumnInfo.OriginX = 22;
             ultraGridColumn19.RowLayoutColumnInfo.OriginY = 0;
-            ultraGridColumn19.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(200, 0);
             ultraGridColumn19.RowLayoutColumnInfo.SpanX = 2;
             ultraGridColumn19.RowLayoutColumnInfo.SpanY = 2;
-            ultraGridColumn2.Header.Caption = "Functional Location";
-            ultraGridColumn2.Header.VisiblePosition = 7;
-            ultraGridColumn2.RowLayoutColumnInfo.OriginX = 6;
-            ultraGridColumn2.RowLayoutColumnInfo.OriginY = 0;
-            ultraGridColumn2.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 0);
-            ultraGridColumn2.RowLayoutColumnInfo.SpanX = 2;
-            ultraGridColumn2.RowLayoutColumnInfo.SpanY = 2;
-            appearance5.TextHAlignAsString = "Center";
-            ultraGridColumn3.CellAppearance = appearance5;
-            ultraGridColumn3.Format = "D";
-            ultraGridColumn3.Header.Caption = "Warranty Expiry";
-            ultraGridColumn3.Header.VisiblePosition = 8;
-            ultraGridColumn3.RowLayoutColumnInfo.OriginX = 10;
-            ultraGridColumn3.RowLayoutColumnInfo.OriginY = 0;
-            ultraGridColumn3.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(175, 0);
-            ultraGridColumn3.RowLayoutColumnInfo.SpanX = 2;
-            ultraGridColumn3.RowLayoutColumnInfo.SpanY = 2;
-            ultraGridColumn4.Header.Caption = "Serial No";
-            ultraGridColumn4.Header.VisiblePosition = 9;
-            ultraGridColumn4.RowLayoutColumnInfo.OriginX = 12;
-            ultraGridColumn4.RowLayoutColumnInfo.OriginY = 0;
-            ultraGridColumn4.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(150, 0);
-            ultraGridColumn4.RowLayoutColumnInfo.SpanX = 2;
-            ultraGridColumn4.RowLayoutColumnInfo.SpanY = 2;
-            ultraGridColumn5.Header.Caption = "Model";
-            ultraGridColumn5.Header.VisiblePosition = 10;
-            ultraGridColumn5.RowLayoutColumnInfo.OriginX = 14;
-            ultraGridColumn5.RowLayoutColumnInfo.OriginY = 0;
-            ultraGridColumn5.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(150, 0);
-            ultraGridColumn5.RowLayoutColumnInfo.SpanX = 2;
-            ultraGridColumn5.RowLayoutColumnInfo.SpanY = 2;
-            appearance6.TextHAlignAsString = "Center";
-            ultraGridColumn7.CellAppearance = appearance6;
-            ultraGridColumn7.Format = "N";
-            ultraGridColumn7.Header.Caption = "Residual Value";
-            ultraGridColumn7.Header.VisiblePosition = 11;
-            ultraGridColumn7.RowLayoutColumnInfo.OriginX = 20;
-            ultraGridColumn7.RowLayoutColumnInfo.OriginY = 0;
-            ultraGridColumn7.RowLayoutColumnInfo.SpanX = 2;
-            ultraGridColumn7.RowLayoutColumnInfo.SpanY = 2;
-            appearance7.TextHAlignAsString = "Center";
-            ultraGridColumn8.CellAppearance = appearance7;
-            ultraGridColumn8.Header.Caption = "Usefu lLife Years";
-            ultraGridColumn8.Header.VisiblePosition = 12;
-            ultraGridColumn8.RowLayoutColumnInfo.OriginX = 22;
-            ultraGridColumn8.RowLayoutColumnInfo.OriginY = 0;
-            ultraGridColumn8.RowLayoutColumnInfo.SpanX = 2;
-            ultraGridColumn8.RowLayoutColumnInfo.SpanY = 2;
             ultraGridBand1.Columns.AddRange(new object[] {
+            ultraGridColumn7,
+            ultraGridColumn8,
+            ultraGridColumn9,
             ultraGridColumn10,
             ultraGridColumn11,
+            ultraGridColumn12,
+            ultraGridColumn13,
             ultraGridColumn14,
+            ultraGridColumn15,
             ultraGridColumn16,
             ultraGridColumn17,
             ultraGridColumn18,
-            ultraGridColumn19,
-            ultraGridColumn2,
-            ultraGridColumn3,
-            ultraGridColumn4,
-            ultraGridColumn5,
-            ultraGridColumn7,
-            ultraGridColumn8});
+            ultraGridColumn19});
             ultraGridBand1.RowLayoutStyle = Infragistics.Win.UltraWinGrid.RowLayoutStyle.ColumnLayout;
             this.ultraGrid1.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
             this.ultraGrid1.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
@@ -450,7 +461,7 @@
             this.ultraGrid1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ultraGrid1.Location = new System.Drawing.Point(0, 79);
             this.ultraGrid1.Name = "ultraGrid1";
-            this.ultraGrid1.Size = new System.Drawing.Size(70, 451);
+            this.ultraGrid1.Size = new System.Drawing.Size(231, 451);
             this.ultraGrid1.TabIndex = 125;
             this.ultraGrid1.Text = "ultraGrid1";
             this.ultraGrid1.InitializeLayout += new Infragistics.Win.UltraWinGrid.InitializeLayoutEventHandler(this.ultraGrid1_InitializeLayout);
@@ -460,14 +471,46 @@
             // 
             // panel13
             // 
+            this.panel13.Controls.Add(this.Depreciatebutton);
             this.panel13.Controls.Add(this.ForRegistrationbutton);
             this.panel13.Controls.Add(this.Totalbutton);
             this.panel13.Controls.Add(this.Registeredbutton);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel13.Location = new System.Drawing.Point(0, 0);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(70, 79);
+            this.panel13.Size = new System.Drawing.Size(231, 79);
             this.panel13.TabIndex = 127;
+            // 
+            // Depreciatebutton
+            // 
+            this.Depreciatebutton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.Depreciatebutton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(43)))), ((int)(((byte)(137)))));
+            this.Depreciatebutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Depreciatebutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Depreciatebutton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.Depreciatebutton.Location = new System.Drawing.Point(106, 42);
+            this.Depreciatebutton.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.Depreciatebutton.Name = "Depreciatebutton";
+            this.Depreciatebutton.Size = new System.Drawing.Size(120, 23);
+            this.Depreciatebutton.TabIndex = 189;
+            this.Depreciatebutton.Text = "Run Depreciation";
+            this.Depreciatebutton.UseVisualStyleBackColor = false;
+            this.Depreciatebutton.Click += new System.EventHandler(this.Depreciatebutton_Click);
+            // 
+            // ForRegistrationbutton
+            // 
+            this.ForRegistrationbutton.BackColor = System.Drawing.Color.White;
+            this.ForRegistrationbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ForRegistrationbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForRegistrationbutton.ForeColor = System.Drawing.Color.Black;
+            this.ForRegistrationbutton.Location = new System.Drawing.Point(10, 10);
+            this.ForRegistrationbutton.Name = "ForRegistrationbutton";
+            this.ForRegistrationbutton.Size = new System.Drawing.Size(123, 55);
+            this.ForRegistrationbutton.TabIndex = 18;
+            this.ForRegistrationbutton.Tag = "N/A";
+            this.ForRegistrationbutton.Text = "For Registration";
+            this.ForRegistrationbutton.UseVisualStyleBackColor = false;
+            this.ForRegistrationbutton.Click += new System.EventHandler(this.ForRegistrationbutton_Click);
             // 
             // Totalbutton
             // 
@@ -498,15 +541,6 @@
             this.Registeredbutton.Text = "&Save";
             this.Registeredbutton.UseVisualStyleBackColor = false;
             this.Registeredbutton.Click += new System.EventHandler(this.Registeredbutton_Click);
-            // 
-            // expandPanelControl1
-            // 
-            this.expandPanelControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.expandPanelControl1.Location = new System.Drawing.Point(70, 0);
-            this.expandPanelControl1.Name = "expandPanelControl1";
-            this.expandPanelControl1.Size = new System.Drawing.Size(15, 530);
-            this.expandPanelControl1.TabIndex = 126;
-            this.expandPanelControl1._ExpandPanel += new System.EventHandler(this.expandPanelControl1__ExpandPanel);
             // 
             // RegisterByIdlabel
             // 
@@ -570,7 +604,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(15, 258);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(898, 166);
+            this.panel6.Size = new System.Drawing.Size(737, 166);
             this.panel6.TabIndex = 179;
             // 
             // panel7
@@ -590,6 +624,7 @@
             this.UsefulLifetextBox.Location = new System.Drawing.Point(6, 36);
             this.UsefulLifetextBox.MaxLength = 50;
             this.UsefulLifetextBox.Name = "UsefulLifetextBox";
+            this.UsefulLifetextBox.ReadOnly = true;
             this.UsefulLifetextBox.Size = new System.Drawing.Size(250, 21);
             this.UsefulLifetextBox.TabIndex = 1;
             // 
@@ -670,20 +705,20 @@
             appearance19.BackColor = System.Drawing.SystemColors.Window;
             appearance19.BorderColor = System.Drawing.SystemColors.InactiveCaption;
             this.AveragingMehodultraCombo.DisplayLayout.Appearance = appearance19;
-            ultraGridColumn13.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
-            ultraGridColumn13.Header.VisiblePosition = 0;
-            ultraGridColumn13.Hidden = true;
-            ultraGridColumn15.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
-            ultraGridColumn15.Header.Caption = "Name";
-            ultraGridColumn15.Header.VisiblePosition = 1;
-            ultraGridColumn15.RowLayoutColumnInfo.OriginX = 2;
-            ultraGridColumn15.RowLayoutColumnInfo.OriginY = 0;
-            ultraGridColumn15.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 23);
-            ultraGridColumn15.RowLayoutColumnInfo.SpanX = 6;
-            ultraGridColumn15.RowLayoutColumnInfo.SpanY = 2;
+            ultraGridColumn3.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
+            ultraGridColumn3.Header.VisiblePosition = 0;
+            ultraGridColumn3.Hidden = true;
+            ultraGridColumn4.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
+            ultraGridColumn4.Header.Caption = "Name";
+            ultraGridColumn4.Header.VisiblePosition = 1;
+            ultraGridColumn4.RowLayoutColumnInfo.OriginX = 2;
+            ultraGridColumn4.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn4.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 23);
+            ultraGridColumn4.RowLayoutColumnInfo.SpanX = 6;
+            ultraGridColumn4.RowLayoutColumnInfo.SpanY = 2;
             ultraGridBand2.Columns.AddRange(new object[] {
-            ultraGridColumn13,
-            ultraGridColumn15});
+            ultraGridColumn3,
+            ultraGridColumn4});
             ultraGridBand2.RowLayoutStyle = Infragistics.Win.UltraWinGrid.RowLayoutStyle.ColumnLayout;
             this.AveragingMehodultraCombo.DisplayLayout.BandsSerializer.Add(ultraGridBand2);
             this.AveragingMehodultraCombo.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
@@ -749,20 +784,20 @@
             appearance31.BackColor = System.Drawing.SystemColors.Window;
             appearance31.BorderColor = System.Drawing.SystemColors.InactiveCaption;
             this.DepreciationMethodultraCombo.DisplayLayout.Appearance = appearance31;
-            ultraGridColumn21.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
-            ultraGridColumn21.Header.VisiblePosition = 0;
-            ultraGridColumn21.Hidden = true;
-            ultraGridColumn22.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
-            ultraGridColumn22.Header.Caption = "Name";
-            ultraGridColumn22.Header.VisiblePosition = 1;
-            ultraGridColumn22.RowLayoutColumnInfo.OriginX = 2;
-            ultraGridColumn22.RowLayoutColumnInfo.OriginY = 0;
-            ultraGridColumn22.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 23);
-            ultraGridColumn22.RowLayoutColumnInfo.SpanX = 6;
-            ultraGridColumn22.RowLayoutColumnInfo.SpanY = 2;
+            ultraGridColumn5.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
+            ultraGridColumn5.Header.VisiblePosition = 0;
+            ultraGridColumn5.Hidden = true;
+            ultraGridColumn6.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
+            ultraGridColumn6.Header.Caption = "Name";
+            ultraGridColumn6.Header.VisiblePosition = 1;
+            ultraGridColumn6.RowLayoutColumnInfo.OriginX = 2;
+            ultraGridColumn6.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn6.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 23);
+            ultraGridColumn6.RowLayoutColumnInfo.SpanX = 6;
+            ultraGridColumn6.RowLayoutColumnInfo.SpanY = 2;
             ultraGridBand3.Columns.AddRange(new object[] {
-            ultraGridColumn21,
-            ultraGridColumn22});
+            ultraGridColumn5,
+            ultraGridColumn6});
             ultraGridBand3.RowLayoutStyle = Infragistics.Win.UltraWinGrid.RowLayoutStyle.ColumnLayout;
             this.DepreciationMethodultraCombo.DisplayLayout.BandsSerializer.Add(ultraGridBand3);
             this.DepreciationMethodultraCombo.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
@@ -876,6 +911,32 @@
             this.label24.TabIndex = 2;
             this.label24.Text = "Depreciation Start Date";
             // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel15.Controls.Add(this.label12);
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel15.Location = new System.Drawing.Point(0, 0);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(737, 21);
+            this.panel15.TabIndex = 185;
+            this.panel15.Tag = "headerpanel";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label12.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(0, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(84, 13);
+            this.label12.TabIndex = 24;
+            this.label12.Tag = "";
+            this.label12.Text = "     Book Value";
+            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.panel4);
@@ -886,11 +947,13 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(15, 21);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(898, 237);
+            this.panel1.Size = new System.Drawing.Size(737, 237);
             this.panel1.TabIndex = 177;
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.AssetTypeCodetextBox);
+            this.panel4.Controls.Add(this.label16);
             this.panel4.Controls.Add(this.ModeltextBox);
             this.panel4.Controls.Add(this.SerialNotextBox);
             this.panel4.Controls.Add(this.WarrantydateTimePicker);
@@ -903,6 +966,25 @@
             this.panel4.Size = new System.Drawing.Size(278, 216);
             this.panel4.TabIndex = 1;
             this.panel4.TabStop = true;
+            // 
+            // AssetTypeCodetextBox
+            // 
+            this.AssetTypeCodetextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AssetTypeCodetextBox.Location = new System.Drawing.Point(6, 40);
+            this.AssetTypeCodetextBox.MaxLength = 50;
+            this.AssetTypeCodetextBox.Name = "AssetTypeCodetextBox";
+            this.AssetTypeCodetextBox.Size = new System.Drawing.Size(22, 21);
+            this.AssetTypeCodetextBox.TabIndex = 9;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(34, 43);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(11, 13);
+            this.label16.TabIndex = 8;
+            this.label16.Text = "-";
             // 
             // ModeltextBox
             // 
@@ -950,10 +1032,10 @@
             // AssetNotextBox
             // 
             this.AssetNotextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AssetNotextBox.Location = new System.Drawing.Point(6, 40);
+            this.AssetNotextBox.Location = new System.Drawing.Point(51, 40);
             this.AssetNotextBox.MaxLength = 50;
             this.AssetNotextBox.Name = "AssetNotextBox";
-            this.AssetNotextBox.Size = new System.Drawing.Size(250, 21);
+            this.AssetNotextBox.Size = new System.Drawing.Size(205, 21);
             this.AssetNotextBox.TabIndex = 0;
             // 
             // panel5
@@ -1034,7 +1116,7 @@
             // panel3
             // 
             this.panel3.Controls.Add(this.PersonnelultraCombo);
-            this.panel3.Controls.Add(this.linkLabel2);
+            this.panel3.Controls.Add(this.BrowseProductlinkLabel);
             this.panel3.Controls.Add(this.linkLabel1);
             this.panel3.Controls.Add(this.NewPurchaseradioButton);
             this.panel3.Controls.Add(this.BeginningBalanceradioButton);
@@ -1054,20 +1136,20 @@
             appearance43.BackColor = System.Drawing.SystemColors.Window;
             appearance43.BorderColor = System.Drawing.SystemColors.InactiveCaption;
             this.PersonnelultraCombo.DisplayLayout.Appearance = appearance43;
-            ultraGridColumn23.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
-            ultraGridColumn23.Header.VisiblePosition = 0;
-            ultraGridColumn23.Hidden = true;
-            ultraGridColumn24.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
-            ultraGridColumn24.Header.Caption = "Name";
-            ultraGridColumn24.Header.VisiblePosition = 1;
-            ultraGridColumn24.RowLayoutColumnInfo.OriginX = 2;
-            ultraGridColumn24.RowLayoutColumnInfo.OriginY = 0;
-            ultraGridColumn24.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 23);
-            ultraGridColumn24.RowLayoutColumnInfo.SpanX = 6;
-            ultraGridColumn24.RowLayoutColumnInfo.SpanY = 2;
+            ultraGridColumn20.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
+            ultraGridColumn20.Header.VisiblePosition = 0;
+            ultraGridColumn20.Hidden = true;
+            ultraGridColumn21.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
+            ultraGridColumn21.Header.Caption = "Name";
+            ultraGridColumn21.Header.VisiblePosition = 1;
+            ultraGridColumn21.RowLayoutColumnInfo.OriginX = 2;
+            ultraGridColumn21.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn21.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 23);
+            ultraGridColumn21.RowLayoutColumnInfo.SpanX = 6;
+            ultraGridColumn21.RowLayoutColumnInfo.SpanY = 2;
             ultraGridBand4.Columns.AddRange(new object[] {
-            ultraGridColumn23,
-            ultraGridColumn24});
+            ultraGridColumn20,
+            ultraGridColumn21});
             ultraGridBand4.RowLayoutStyle = Infragistics.Win.UltraWinGrid.RowLayoutStyle.ColumnLayout;
             this.PersonnelultraCombo.DisplayLayout.BandsSerializer.Add(ultraGridBand4);
             this.PersonnelultraCombo.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
@@ -1128,17 +1210,17 @@
             this.PersonnelultraCombo.Size = new System.Drawing.Size(250, 23);
             this.PersonnelultraCombo.TabIndex = 3;
             // 
-            // linkLabel2
+            // BrowseProductlinkLabel
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(87, 31);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(82, 13);
-            this.linkLabel2.TabIndex = 3;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Browse Product";
-            this.linkLabel2.Visible = false;
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            this.BrowseProductlinkLabel.AutoSize = true;
+            this.BrowseProductlinkLabel.Location = new System.Drawing.Point(87, 31);
+            this.BrowseProductlinkLabel.Name = "BrowseProductlinkLabel";
+            this.BrowseProductlinkLabel.Size = new System.Drawing.Size(82, 13);
+            this.BrowseProductlinkLabel.TabIndex = 3;
+            this.BrowseProductlinkLabel.TabStop = true;
+            this.BrowseProductlinkLabel.Text = "Browse Product";
+            this.BrowseProductlinkLabel.Visible = false;
+            this.BrowseProductlinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // linkLabel1
             // 
@@ -1190,20 +1272,20 @@
             appearance55.BackColor = System.Drawing.SystemColors.Window;
             appearance55.BorderColor = System.Drawing.SystemColors.InactiveCaption;
             this.FunctionalLocationultraCombo.DisplayLayout.Appearance = appearance55;
-            ultraGridColumn6.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
-            ultraGridColumn6.Header.VisiblePosition = 0;
-            ultraGridColumn6.Hidden = true;
-            ultraGridColumn9.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
-            ultraGridColumn9.Header.Caption = "Name";
-            ultraGridColumn9.Header.VisiblePosition = 1;
-            ultraGridColumn9.RowLayoutColumnInfo.OriginX = 2;
-            ultraGridColumn9.RowLayoutColumnInfo.OriginY = 0;
-            ultraGridColumn9.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 23);
-            ultraGridColumn9.RowLayoutColumnInfo.SpanX = 6;
-            ultraGridColumn9.RowLayoutColumnInfo.SpanY = 2;
+            ultraGridColumn22.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
+            ultraGridColumn22.Header.VisiblePosition = 0;
+            ultraGridColumn22.Hidden = true;
+            ultraGridColumn23.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
+            ultraGridColumn23.Header.Caption = "Name";
+            ultraGridColumn23.Header.VisiblePosition = 1;
+            ultraGridColumn23.RowLayoutColumnInfo.OriginX = 2;
+            ultraGridColumn23.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn23.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 23);
+            ultraGridColumn23.RowLayoutColumnInfo.SpanX = 6;
+            ultraGridColumn23.RowLayoutColumnInfo.SpanY = 2;
             ultraGridBand5.Columns.AddRange(new object[] {
-            ultraGridColumn6,
-            ultraGridColumn9});
+            ultraGridColumn22,
+            ultraGridColumn23});
             ultraGridBand5.RowLayoutStyle = Infragistics.Win.UltraWinGrid.RowLayoutStyle.ColumnLayout;
             this.FunctionalLocationultraCombo.DisplayLayout.BandsSerializer.Add(ultraGridBand5);
             this.FunctionalLocationultraCombo.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
@@ -1269,15 +1351,15 @@
             appearance67.BackColor = System.Drawing.SystemColors.Window;
             appearance67.BorderColor = System.Drawing.SystemColors.InactiveCaption;
             this.AssetTypeutraCombo.DisplayLayout.Appearance = appearance67;
-            ultraGridColumn25.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
-            ultraGridColumn25.Header.VisiblePosition = 0;
-            ultraGridColumn25.Hidden = true;
-            ultraGridColumn1.Header.Caption = "Name";
-            ultraGridColumn1.Header.VisiblePosition = 1;
-            ultraGridColumn1.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 23);
+            ultraGridColumn1.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
+            ultraGridColumn1.Header.VisiblePosition = 0;
+            ultraGridColumn1.Hidden = true;
+            ultraGridColumn2.Header.Caption = "Name";
+            ultraGridColumn2.Header.VisiblePosition = 1;
+            ultraGridColumn2.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 23);
             ultraGridBand6.Columns.AddRange(new object[] {
-            ultraGridColumn25,
-            ultraGridColumn1});
+            ultraGridColumn1,
+            ultraGridColumn2});
             ultraGridBand6.RowLayoutStyle = Infragistics.Win.UltraWinGrid.RowLayoutStyle.ColumnLayout;
             this.AssetTypeutraCombo.DisplayLayout.BandsSerializer.Add(ultraGridBand6);
             this.AssetTypeutraCombo.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
@@ -1440,6 +1522,32 @@
             this.label4.TabIndex = 2;
             this.label4.Text = "Asset Name";
             // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
+            this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel14.Controls.Add(this.label15);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel14.Location = new System.Drawing.Point(0, 0);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(737, 21);
+            this.panel14.TabIndex = 184;
+            this.panel14.Tag = "headerpanel";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label15.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(0, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(61, 13);
+            this.label15.TabIndex = 24;
+            this.label15.Tag = "";
+            this.label15.Text = "     Details";
+            // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
@@ -1450,7 +1558,7 @@
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel11.Location = new System.Drawing.Point(15, 0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(898, 21);
+            this.panel11.Size = new System.Drawing.Size(737, 21);
             this.panel11.TabIndex = 176;
             this.panel11.Tag = "headerpanel";
             // 
@@ -1502,7 +1610,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel8.Location = new System.Drawing.Point(15, 507);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(898, 23);
+            this.panel8.Size = new System.Drawing.Size(737, 23);
             this.panel8.TabIndex = 174;
             // 
             // RegisterBytextBox
@@ -1557,6 +1665,40 @@
             this.Savebutton.UseVisualStyleBackColor = false;
             this.Savebutton.Click += new System.EventHandler(this.Savebutton_Click);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editToolStripMenuItem,
+            this.capitalizedToolStripMenuItem,
+            this.deleteToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 92);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("editToolStripMenuItem.Image")));
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
+            // 
+            // capitalizedToolStripMenuItem
+            // 
+            this.capitalizedToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("capitalizedToolStripMenuItem.Image")));
+            this.capitalizedToolStripMenuItem.Name = "capitalizedToolStripMenuItem";
+            this.capitalizedToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.capitalizedToolStripMenuItem.Text = "Capitalized";
+            this.capitalizedToolStripMenuItem.Click += new System.EventHandler(this.capitalizedToolStripMenuItem_Click);
+            // 
+            // expandPanelControl1
+            // 
+            this.expandPanelControl1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.expandPanelControl1.Location = new System.Drawing.Point(231, 0);
+            this.expandPanelControl1.Name = "expandPanelControl1";
+            this.expandPanelControl1.Size = new System.Drawing.Size(15, 530);
+            this.expandPanelControl1.TabIndex = 126;
+            this.expandPanelControl1._ExpandPanel += new System.EventHandler(this.expandPanelControl1__ExpandPanel);
+            // 
             // collapsePanelControl1
             // 
             this.collapsePanelControl1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -1566,71 +1708,13 @@
             this.collapsePanelControl1.TabIndex = 178;
             this.collapsePanelControl1._HidePanel += new System.EventHandler(this.collapsePanelControl1__HidePanel);
             // 
-            // ForRegistrationbutton
+            // deleteToolStripMenuItem
             // 
-            this.ForRegistrationbutton.BackColor = System.Drawing.Color.White;
-            this.ForRegistrationbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ForRegistrationbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForRegistrationbutton.ForeColor = System.Drawing.Color.Black;
-            this.ForRegistrationbutton.Location = new System.Drawing.Point(10, 10);
-            this.ForRegistrationbutton.Name = "ForRegistrationbutton";
-            this.ForRegistrationbutton.Size = new System.Drawing.Size(123, 55);
-            this.ForRegistrationbutton.TabIndex = 18;
-            this.ForRegistrationbutton.Tag = "N/A";
-            this.ForRegistrationbutton.Text = "For Registration";
-            this.ForRegistrationbutton.UseVisualStyleBackColor = false;
-            // 
-            // panel14
-            // 
-            this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
-            this.panel14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel14.Controls.Add(this.label15);
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel14.Location = new System.Drawing.Point(0, 0);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(898, 21);
-            this.panel14.TabIndex = 184;
-            this.panel14.Tag = "headerpanel";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Transparent;
-            this.label15.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label15.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(0, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(61, 13);
-            this.label15.TabIndex = 24;
-            this.label15.Tag = "";
-            this.label15.Text = "     Details";
-            // 
-            // panel15
-            // 
-            this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
-            this.panel15.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel15.Controls.Add(this.label12);
-            this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel15.Location = new System.Drawing.Point(0, 0);
-            this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(898, 21);
-            this.panel15.TabIndex = 185;
-            this.panel15.Tag = "headerpanel";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.BackColor = System.Drawing.Color.Transparent;
-            this.label12.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label12.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(0, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(84, 13);
-            this.label12.TabIndex = 24;
-            this.label12.Tag = "";
-            this.label12.Text = "     Book Value";
+            this.deleteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deleteToolStripMenuItem.Image")));
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // Default
             // 
@@ -1661,6 +1745,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.DepreciationMethodultraCombo)).EndInit();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
+            this.panel15.ResumeLayout(false);
+            this.panel15.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -1673,14 +1759,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.AssetTypeutraCombo)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel14.ResumeLayout(false);
+            this.panel14.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            this.panel14.ResumeLayout(false);
-            this.panel14.PerformLayout();
-            this.panel15.ResumeLayout(false);
-            this.panel15.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1756,11 +1841,18 @@
         private System.Windows.Forms.Label RegisterByIdlabel;
         private System.Windows.Forms.TextBox RegisterBytextBox;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.LinkLabel BrowseProductlinkLabel;
         private System.Windows.Forms.Button ForRegistrationbutton;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox AssetTypeCodetextBox;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button Depreciatebutton;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem capitalizedToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
     }
 }

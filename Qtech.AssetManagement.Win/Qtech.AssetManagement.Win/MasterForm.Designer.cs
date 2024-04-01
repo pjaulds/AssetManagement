@@ -60,6 +60,7 @@
             this.functionalLocationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.currencyToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.capitalizedCostToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.productToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fixedAssetManagementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fixedAssetProcurementToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.purchaseRequestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -87,7 +88,6 @@
             this.expenseCategoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ultraTabbedMdiManager1 = new Infragistics.Win.UltraWinTabbedMdi.UltraTabbedMdiManager(this.components);
             this.BackgroundpictureBox = new System.Windows.Forms.PictureBox();
-            this.productToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ultraTabbedMdiManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BackgroundpictureBox)).BeginInit();
@@ -128,7 +128,7 @@
             this.newToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
             this.newToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N)));
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.newToolStripMenuItem.Text = "&New";
             this.newToolStripMenuItem.Click += new System.EventHandler(this.newToolStripMenuItem_Click);
             // 
@@ -137,33 +137,33 @@
             this.saveToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.saveToolStripMenuItem.Text = "&Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(139, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(149, 6);
             // 
             // printToolStripMenuItem
             // 
             this.printToolStripMenuItem.ImageTransparentColor = System.Drawing.Color.Black;
             this.printToolStripMenuItem.Name = "printToolStripMenuItem";
             this.printToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.P)));
-            this.printToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.printToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.printToolStripMenuItem.Text = "&Print";
             this.printToolStripMenuItem.Click += new System.EventHandler(this.printToolStripMenuItem_Click);
             // 
             // toolStripSeparator5
             // 
             this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(139, 6);
+            this.toolStripSeparator5.Size = new System.Drawing.Size(149, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -340,6 +340,14 @@
             this.capitalizedCostToolStripMenuItem.Tag = "CapitalizedCost";
             this.capitalizedCostToolStripMenuItem.Text = "10. Capitalized Cost";
             this.capitalizedCostToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
+            // 
+            // productToolStripMenuItem
+            // 
+            this.productToolStripMenuItem.Name = "productToolStripMenuItem";
+            this.productToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
+            this.productToolStripMenuItem.Tag = "Product";
+            this.productToolStripMenuItem.Text = "11. Product";
+            this.productToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // fixedAssetManagementToolStripMenuItem
             // 
@@ -580,14 +588,6 @@
             this.BackgroundpictureBox.TabIndex = 4;
             this.BackgroundpictureBox.TabStop = false;
             this.BackgroundpictureBox.Visible = false;
-            // 
-            // productToolStripMenuItem
-            // 
-            this.productToolStripMenuItem.Name = "productToolStripMenuItem";
-            this.productToolStripMenuItem.Size = new System.Drawing.Size(200, 22);
-            this.productToolStripMenuItem.Tag = "Product";
-            this.productToolStripMenuItem.Text = "11. Product";
-            this.productToolStripMenuItem.Click += new System.EventHandler(this.productToolStripMenuItem_Click);
             // 
             // MasterForm
             // 

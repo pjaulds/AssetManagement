@@ -65,7 +65,7 @@ namespace Qtech.AssetManagement.FixedAsset
             criteria = new FixedAssetCriteria();
             criteria.mIsDraft = true;
             ForRegistrationbutton.Text = "For Registration" + Environment.NewLine + FixedAssetManager.SelectCountForGetList(criteria).ToString();
-            
+
             criteria = new FixedAssetCriteria();
             criteria.mIsRegistered = true;
             Registeredbutton.Text = "Registered" + Environment.NewLine + FixedAssetManager.SelectCountForGetList(criteria).ToString();
@@ -123,7 +123,7 @@ namespace Qtech.AssetManagement.FixedAsset
             myFixedAsset.mAccumulatedDepreciation = ControlUtil.TextBoxDecimal(AccumulatedDepreciationtextBox);
             myFixedAsset.mResidualValue = ControlUtil.TextBoxDecimal(ResidualValuetextBox);
             myFixedAsset.mUsefulLifeYears = ControlUtil.TextBoxDecimal(UsefulLifetextBox);
-            myFixedAsset.mIsDraft = DraftcheckBox.Checked;
+            myFixedAsset.mIsDraft = RegisterBytextBox.Text == string.Empty;
             myFixedAsset.mIsRegistered = RegisterBytextBox.Text != string.Empty;
             myFixedAsset.mIsDisposed = DisposedcheckBox.Checked;
             myFixedAsset.mRegisterById = int.Parse(RegisterByIdlabel.Text);
@@ -197,11 +197,6 @@ namespace Qtech.AssetManagement.FixedAsset
             ControlUtil.ExpandPanel(splitContainer1);
 
             ProductNametextBox.Focus();
-            DraftcheckBox.Checked = !allow_delete;
-            RegisteredcheckBox.Checked = allow_delete;
-
-            DraftcheckBox.Checked = !allow_delete;
-            RegisteredcheckBox.Checked = allow_delete;
 
             if (FixedAssetSettingDateManager.SelectCountForGetList(new FixedAssetSettingDateCriteria()) > 0)
                 DepreciationStartdateTimePicker.Value = FixedAssetSettingDateManager.GetList().First().mDate;
@@ -219,7 +214,7 @@ namespace Qtech.AssetManagement.FixedAsset
             }
 
             BrokenRulesCollection rules = new BrokenRulesCollection();
-            
+
             decimal purchasePrice = 0;
             if (!decimal.TryParse(PurchasePricetextBox.Text, out purchasePrice))
                 rules.Add(new BrokenRule("", "Invalid purchase price."));
@@ -287,27 +282,23 @@ namespace Qtech.AssetManagement.FixedAsset
             if (e.Row.Index == -1)
                 return;
 
-          
+
             BusinessEntities.FixedAsset item = FixedAssetManager.GetItem(_mId);
 
-            if(mFromBrowse)
+            if (mFromBrowse)
             {
                 mFixedAsset = item;
                 Close();
                 return;
             }
-
-            LoadFormControlsFromUser(item);
-            ControlUtil.ExpandPanel(splitContainer1);
-            ProductNametextBox.Focus();
         }
 
         private void ultraGrid1_BeforeRowsDeleted(object sender, Infragistics.Win.UltraWinGrid.BeforeRowsDeletedEventArgs e)
         {
-            if (!allow_delete)
-                MessageUtil.NotAllowedDeleteAccess();
-            else
-                DeleteRecords();
+            //if (!allow_delete)
+            //    MessageUtil.NotAllowedDeleteAccess();
+            //else
+            //    DeleteRecords();
 
             e.Cancel = true;
         }
@@ -336,7 +327,8 @@ namespace Qtech.AssetManagement.FixedAsset
 
             ThemeUtil.Controls(this);
             ControlUtil.TextBoxEnterLeaveEventHandler(splitContainer1.Panel2);
-            LoadFixedAsset();            
+            LoadFixedAsset();
+            RefreshAllSelection();
         }
 
         private void Savebutton_Click(object sender, EventArgs e)
@@ -346,7 +338,7 @@ namespace Qtech.AssetManagement.FixedAsset
 
         private void LogIn_FormClosing(object sender, FormClosingEventArgs e)
         {
-            User.LogInForm logIn = (User.LogInForm)sender;
+            User.OverrideLogInForm logIn = (User.OverrideLogInForm)sender;
             if (logIn.mUser == null) return;
 
             if (!SessionUtil.UserAllowApprove(logIn.mUser, (int)Modules.FixedAsset))
@@ -354,7 +346,7 @@ namespace Qtech.AssetManagement.FixedAsset
                 MessageBox.Show("You are not allowed to override transaction (register).", "Fixed Asset", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-            
+
             RegisterByIdlabel.Text = logIn.mUser.mId.ToString();
             RegisterBytextBox.Text = PersonnelManager.GetItem(logIn.mUser.mPersonnelId).mName;
         }
@@ -400,11 +392,15 @@ namespace Qtech.AssetManagement.FixedAsset
         {
             if (Idlabel.Text == "0") DescriptiontextBox.Text = "Beginning Balance";
             AccumulatedDepreciationtextBox.Enabled = BeginningBalanceradioButton.Checked;
+
+            BrowseProductlinkLabel.Visible = BeginningBalanceradioButton.Checked;
         }
 
         private void NewPurchaseradioButton_CheckedChanged(object sender, EventArgs e)
         {
             if (Idlabel.Text == "0") DescriptiontextBox.Text = "New Purchase";
+            PurchasedateTimePicker.Enabled = !NewPurchaseradioButton.Checked;
+            PurchasePricetextBox.ReadOnly = NewPurchaseradioButton.Checked;
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -431,11 +427,37 @@ namespace Qtech.AssetManagement.FixedAsset
         {
             if (Idlabel.Text == "0")
             {
-                Purchasing.PurchaseVoucher.Default apvForm = new Purchasing.PurchaseVoucher.Default();
-                apvForm.mForFixedAsset = true;
-                apvForm.FormClosing += ApvForm_FormClosing;
-                apvForm.ShowDialog();
+                try
+                {
+                    BrowseReceivingFromOtherDBForm otherForm = new BrowseReceivingFromOtherDBForm();
+                    otherForm.FormClosing += OtherForm_FormClosing;
+                    otherForm.ShowDialog();
+                }
+                catch
+                {
+                    Purchasing.PurchaseVoucher.Default apvForm = new Purchasing.PurchaseVoucher.Default();
+                    apvForm.mForFixedAsset = true;
+                    apvForm.FormClosing += ApvForm_FormClosing;
+                    apvForm.ShowDialog();
+                }
+
             }
+        }
+
+        private void OtherForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            BrowseReceivingFromOtherDBForm otherForm = (BrowseReceivingFromOtherDBForm)sender;
+            if (otherForm.mRv == null) return;
+
+            DataRowView rv = otherForm.mRv;
+
+            ReceivingDetailIdlabel.Text = rv["receiving_detail_id"].ToString();
+            ProductIdlabel.Text = rv["ProductId"].ToString();
+            ProductNametextBox.Text = rv["Product"].ToString();
+
+            PurchasedateTimePicker.Value = Convert.ToDateTime(rv["PurchaseDate"]);
+            PurchasePricetextBox.Text = Convert.ToDecimal(rv["Amount"]).ToString("N");
+
         }
 
         private void ApvForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -474,6 +496,8 @@ namespace Qtech.AssetManagement.FixedAsset
 
             DepreciationMethodultraCombo.Value = item.mDepreciationMethodId;
             AveragingMehodultraCombo.Value = item.mAveragingMethodId;
+            AssetTypeCodetextBox.Text = item.mCode;
+            UsefulLifetextBox.Text = item.mUsefulLifeYears.ToString();
         }
 
         private void Registeredbutton_Click(object sender, EventArgs e)
@@ -498,10 +522,87 @@ namespace Qtech.AssetManagement.FixedAsset
         private void button1_Click(object sender, EventArgs e)
         {
             //enter username password
-            User.LogInForm logIn = new User.LogInForm();
+            User.OverrideLogInForm logIn = new User.OverrideLogInForm();
             logIn.mForOverride = true;
             logIn.FormClosing += LogIn_FormClosing;
             logIn.ShowDialog();
+        }
+
+        private void Depreciatebutton_Click(object sender, EventArgs e)
+        {
+            RunDepreciationAllForm runAll = new RunDepreciationAllForm();
+            runAll.ShowDialog();
+        }
+
+        private void ForRegistrationbutton_Click(object sender, EventArgs e)
+        {
+            FixedAssetCriteria criteria = new FixedAssetCriteria();
+            criteria.mIsDraft = true;
+            ultraGrid1.SetDataBinding(FixedAssetManager.GetList(criteria), null, true);
+            ultraGrid1.Refresh();
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //enter username password
+            User.OverrideLogInForm overrideEdit = new User.OverrideLogInForm();
+            overrideEdit.mForOverride = true;
+            overrideEdit.FormClosing += OverrideEdit_FormClosing;
+            overrideEdit.ShowDialog();
+        }
+
+        private void OverrideEdit_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            User.OverrideLogInForm logIn = (User.OverrideLogInForm)sender;
+            if (logIn.mUser == null) return;
+
+            if (!SessionUtil.UserAllowApprove(logIn.mUser, (int)Modules.FixedAsset))
+            {
+                MessageBox.Show("You are not allowed to edit transaction.", "Fixed Asset", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            LoadFormControlsFromUser(FixedAssetManager.GetItem(_mId));
+            ControlUtil.ExpandPanel(splitContainer1);
+            ProductNametextBox.Focus();
+        }
+
+        private void capitalizedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CapitalizedForm frm = new CapitalizedForm();
+            frm.mId = _mId;
+            frm.ShowDialog();
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //enter username password
+            User.OverrideLogInForm overrideDelete = new User.OverrideLogInForm();
+            overrideDelete.mForOverride = true;
+            overrideDelete.FormClosing += OverrideDelete_FormClosing;
+            overrideDelete.ShowDialog();
+        }
+
+        private void OverrideDelete_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            User.OverrideLogInForm logIn = (User.OverrideLogInForm)sender;
+            if (logIn.mUser == null) return;
+
+            if (!SessionUtil.UserAllowDelete(logIn.mUser, (int)Modules.FixedAsset))
+            {
+                MessageBox.Show("You are not allowed to delete transaction.", "Fixed Asset", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+            
+            DepreciationJournalCriteria criteria = new DepreciationJournalCriteria();
+            criteria.mFixedAssetId = _mId;
+
+            if (DepreciationJournalManager.SelectCountForGetList(criteria) > 0)
+            {
+                MessageBox.Show("Asset has already depreciation record, cannot be deleted.", "Fixed Asset", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);                
+                return;
+            }
+
+            DeleteRecords();
         }
     }
 }

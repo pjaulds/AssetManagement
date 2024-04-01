@@ -13,9 +13,9 @@ using System.Windows.Forms;
 
 namespace Qtech.AssetManagement.FixedAsset
 {
-    public partial class RegisterForm : Form
+    public partial class CapitalizedForm : Form
     {
-        public RegisterForm()
+        public CapitalizedForm()
         {
             InitializeComponent();
         }
@@ -27,16 +27,14 @@ namespace Qtech.AssetManagement.FixedAsset
         private void SaveFixedAsset()
         {
             BusinessEntities.FixedAsset fa = FixedAssetManager.GetItem(mId);
-
-            fa.mIsDraft = false;
-            fa.mIsRegistered = true;
+            
             fa.mUserId = SessionUtil.mUser.mId;
-            //LoadFixedAssetCapitalizedCostFromFormControls(fa);
-            //fa.mDeletedFixedAssetCapitalizedCostCollection = deleted_items;
+            LoadFixedAssetCapitalizedCostFromFormControls(fa);
+            fa.mDeletedFixedAssetCapitalizedCostCollection = deleted_items;
 
             FixedAssetManager.Save(fa);
 
-            MessageBox.Show("Asset save as registered successfully.", "Fixed Asset", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Caplitelization suggested journal entry has been successfully processed.", "Fixed Asset", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Close();
         }
 
@@ -69,9 +67,11 @@ namespace Qtech.AssetManagement.FixedAsset
             PurchaseDatetextBox.Text = fa.mPurchaseDate.ToString("D");
             PurchaseCosttextBox.Text = fa.mPurchasePrice.ToString("N");
             ResidualValuetextBox.Text = fa.mResidualValue.ToString("N");
-            AccumulatedDepreciationtextBox.Text = fa.mAccumulatedDepreciation.ToString("N");
-            UsefulLifetextBox.Text = fa.mUsefulLifeYears.ToString();
-      //some comments
+            DepreciationMethodtextBox.Text = fa.mDepreciationMethodName;
+            AveragingMethodtextBox.Text = fa.mAveragingMethodName;
+
+          
+
         }
 
         private void LoadFormControlsFromFixedAssetCapitalizedCost()
@@ -92,20 +92,62 @@ namespace Qtech.AssetManagement.FixedAsset
             
             AssetAccounttextBox.Text = item.mChartOfAccountCode + " - " + item.mChartOfAccountName;
             AccumulatedDepreciationAccounttextBox.Text = item.mAccumulatedDepreciationAccountCode + " - " + item.mAccumulatedDepreciationAccountName;
-            DepreciationExpenseAccounttextBox.Text = item.mDepreciationExpenseAccountCode + " - " + item.mDepreciationExpenseAccountName;
+            DepreciationExpenseAccounttextBox.Text = item.mDepreciationExpenseAccountCode + " - " + item.mDepreciationExpenseAccountName;            
         }
 
+        private void LoadFormControlsFromBookValue()
+        {
+            ReportCriteria criteria = new ReportCriteria();
+            criteria.mId = mId;
+            BusinessEntities.FixedAsset fa = FixedAssetManager.GetItem(mId);
+
+            criteria.mYear = (short)AuditManager.GetDateToday().Year;
+            criteria.mAssetTypeId = fa.mAssetTypeId;
+            
+            DataTable dt = new DataTable();
+            if (fa.mDepreciationMethodId == (int)DepreciationMethodEnum.StraightLine)
+            {
+                if (fa.mAveragingMethodId == (int)AveragingMethodEnum.FullMonth)
+                    dt = ReportManager.DepreciationScheduleStraightLineFullMonthMonthly(criteria);
+                else if (fa.mAveragingMethodId == (int)AveragingMethodEnum.ActualDays)
+                    dt = ReportManager.DepreciationScheduleStraightLineActualDaysMonthly(criteria);
+
+            }
+
+            if (fa.mDepreciationMethodId == (int)DepreciationMethodEnum.SYD)
+            {
+                if (fa.mAveragingMethodId == (int)AveragingMethodEnum.FullMonth)
+                    dt = ReportManager.DepreciationScheduleSYDFullMonthMonthly(criteria);
+                else if (fa.mAveragingMethodId == (int)AveragingMethodEnum.ActualDays)
+                    dt = ReportManager.DepreciationScheduleSYDActualDaysMonthly(criteria);
+            }
+
+
+            if (dt.Rows.Count > 0)
+                BookValuelabel.Text = Convert.ToDecimal(dt.Rows[0]["BookValueEnd"]).ToString("N");
+        }
+        
         private void TotalCapitalizedCost()
         {
             SortableBindingList<FixedAssetCapitalizedCost> costs = (SortableBindingList<FixedAssetCapitalizedCost>)ItemsdataGridView.DataSource;
             TotalCostlabel.Text = costs.Sum(x => x.mAmount).ToString("N");
-            CapitalizedCosttextBox.Text = TotalCostlabel.Text;
+            TotalUsefullabel.Text = costs.Sum(x => x.mUsefulLife * 12).ToString("N");
+            //CapitalizedCosttextBox.Text = TotalCostlabel.Text;
 
-            decimal purchaseCost = Convert.ToDecimal(PurchaseCosttextBox.Text);
-            decimal accDep = Convert.ToDecimal(AccumulatedDepreciationtextBox.Text);
-            decimal capCost = Convert.ToDecimal(CapitalizedCosttextBox.Text);
+            //decimal purchaseCost = Convert.ToDecimal(PurchaseCosttextBox.Text);
+            //decimal accDep = Convert.ToDecimal(AccumulatedDepreciationtextBox.Text);
+            //decimal capCost = Convert.ToDecimal(CapitalizedCosttextBox.Text);
 
-            TotalAmounttextBox.Text = (purchaseCost - accDep + capCost).ToString("N");
+            //TotalAmounttextBox.Text = (purchaseCost - accDep + capCost).ToString("N");
+
+            BusinessEntities.FixedAsset fa = FixedAssetManager.GetItem(mId);
+            DateTime date1 = fa.mPurchaseDate.AddYears((int)fa.mUsefulLifeYears);
+            date1 = date1.AddMonths((int)costs.Sum(x => x.mUsefulLife * 12));
+            DateTime date2 = AuditManager.GetDateToday();
+
+            double months = ((date1.Year - date2.Year) * 12) + date1.Month - date2.Month;
+            Monthslabel.Text = months.ToString("N0");
+            Yearslabel.Text = (months / 12).ToString("N");
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -123,11 +165,15 @@ namespace Qtech.AssetManagement.FixedAsset
             ThemeUtil.Controls(this);
             LoadFormControlsFromFixedAsset();
             LoadFormControlsFromFixedAssetCapitalizedCost();
+            LoadFormControlsFromBookValue();
 
             DataGridViewComboBoxColumn comboColumn = (DataGridViewComboBoxColumn)(ItemsdataGridView.Columns["mCapitalizedCost"]);
             comboColumn.DataSource = CapitalizedCostManager.GetList();
             comboColumn.DisplayMember = "mName";
             comboColumn.ValueMember = "mId";
+
+            BookValueAsOflabel.Text = "As of " + AuditManager.GetDateToday().ToString("MMM dd, yyyy");
+            AsOfLabel2label.Text = BookValueAsOflabel.Text;
         }
 
         private void Cancelbutton_Click(object sender, EventArgs e)
@@ -177,6 +223,38 @@ namespace Qtech.AssetManagement.FixedAsset
 
                 ItemsdataGridView.Rows.Remove(ItemsdataGridView.CurrentRow);
             }
+            else if(colName == "mUsefulLife")
+            {
+                ExtendUsefulLifeForm ext = new ExtendUsefulLifeForm();
+                ext.FormClosing += Ext_FormClosing;
+                ext.ShowDialog();
+            }
+            else if(colName == "mIsJournalized")
+            {
+                CapitalizeJournalizedForm journal = new CapitalizeJournalizedForm();
+                journal.mAssetAccountId = item.mAssetAccountId;
+                journal.mCashPayableAccountId = item.mCashPayableAccountId;
+                journal.FormClosing += Journal_FormClosing;
+                journal.ShowDialog();
+            }
+        }
+
+        private void Journal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            CapitalizeJournalizedForm journal = (CapitalizeJournalizedForm)sender;
+            if (!journal.mAcceptInput) return;
+            FixedAssetCapitalizedCost item = (FixedAssetCapitalizedCost)ItemsdataGridView.CurrentRow.DataBoundItem;
+            item.mAssetAccountId = journal.mAssetAccountId;
+            item.mCashPayableAccountId = journal.mCashPayableAccountId;
+        }
+
+        private void Ext_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            ExtendUsefulLifeForm ext = (ExtendUsefulLifeForm)sender;
+            if (!ext.mAcceptInput) return;
+
+            ItemsdataGridView.CurrentCell.Value = ext.mYears;
+            TotalCapitalizedCost();
         }
 
         private void Disposebutton_Click(object sender, EventArgs e)

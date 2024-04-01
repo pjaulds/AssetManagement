@@ -3,6 +3,7 @@ using Qtech.AssetManagement.Bll;
 using Qtech.AssetManagement.BusinessEntities;
 using Qtech.AssetManagement.Utilities;
 using Qtech.AssetManagement.Validation;
+using Qtech.Qasa.PluginInterface;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,6 +30,9 @@ namespace Qtech.AssetManagement.Setup.FixedAssetSetting
         bool allow_delete;
         bool allow_print;
         #endregion
+
+        public IPluginHost PluginHost { get; set; }
+        public IPlugin Plugin { get; set; }
 
         #region Private Members
         private int _mId
@@ -98,6 +102,7 @@ namespace Qtech.AssetManagement.Setup.FixedAssetSetting
             myUser.mAveragingMethodName = AveragingMethodultraCombo.Text;
 
             myUser.mUsefulLifeYears = ControlUtil.TextBoxDecimal(UsefulLifeYearstextBox);
+            myUser.mDepreciable = DepreciablecheckBox.Checked;
             myUser.mUserId = SessionUtil.mUser.mId;
         }
 
@@ -112,6 +117,7 @@ namespace Qtech.AssetManagement.Setup.FixedAssetSetting
             DepreciationMethodultraCombo.Value = myFixedAssetSetting.mDepreciationMethodId;
             AveragingMethodultraCombo.Value = myFixedAssetSetting.mAveragingMethodId;
             UsefulLifeYearstextBox.Text = myFixedAssetSetting.mUsefulLifeYears.ToString("N");
+            DepreciablecheckBox.Checked = myFixedAssetSetting.mDepreciable;
         }
 
         private void EndEditing()
@@ -243,6 +249,8 @@ namespace Qtech.AssetManagement.Setup.FixedAssetSetting
             
             if (FixedAssetSettingDateManager.SelectCountForGetList(new FixedAssetSettingDateCriteria()) > 0)
                 StartDatelabel.Text = FixedAssetSettingDateManager.GetList().First().mDate.ToString("D");
+
+            RefreshAllSelection();
         }
 
         private void Savebutton_Click(object sender, EventArgs e)
@@ -280,6 +288,13 @@ namespace Qtech.AssetManagement.Setup.FixedAssetSetting
         {
             StartDateForm startDateForm = new StartDateForm();
             startDateForm.ShowDialog();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            DepreciationMethodultraCombo.Enabled = DepreciablecheckBox.Checked;
+            AveragingMethodultraCombo.Enabled = DepreciablecheckBox.Checked;
+            UsefulLifeYearstextBox.Enabled = DepreciablecheckBox.Checked;
         }
     }
 }

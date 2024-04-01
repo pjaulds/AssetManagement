@@ -76,6 +76,19 @@ namespace Qtech.AssetManagement.Utilities
             UserAccess access = UserAccessManager.GetList(criteria).First();
             return access.mApprove;
         }
+
+        public static bool UserAllowDelete(Users user, short moduleId)
+        {
+
+            UserAccessCriteria criteria = new UserAccessCriteria();
+            criteria.mUserId = user.mId;
+            criteria.mModuleId = moduleId;
+
+            if (UserAccessManager.SelectCountForGetList(criteria) == 0) return false;
+
+            UserAccess access = UserAccessManager.GetList(criteria).First();
+            return access.mDelete;
+        }
     }
 
     public static class StringExtensions

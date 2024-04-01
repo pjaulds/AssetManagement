@@ -73,16 +73,17 @@
     <Compile Include="AccumulatedDepreciationAccount\Default.Designer.cs">
       <DependentUpon>Default.cs</DependentUpon>
     </Compile>
+    <Compile Include="AveragingMethod\AveragingMethod.cs" />
     <Compile Include="ChartOfAccount\Default.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ChartOfAccount\Default.Designer.cs">
       <DependentUpon>Default.cs</DependentUpon>
     </Compile>
-    <Compile Include="AveagingMethod\Default.cs">
+    <Compile Include="AveragingMethod\Default.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AveagingMethod\Default.Designer.cs">
+    <Compile Include="AveragingMethod\Default.Designer.cs">
       <DependentUpon>Default.cs</DependentUpon>
     </Compile>
     <Compile Include="DepreciationMethod\Default.cs">
@@ -103,18 +104,21 @@
     <Compile Include="AssetAccount\Default.Designer.cs">
       <DependentUpon>Default.cs</DependentUpon>
     </Compile>
+    <Compile Include="DepreciationMethod\DepreciationMethod.cs" />
     <Compile Include="FixedAssetSetting\Default.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FixedAssetSetting\Default.Designer.cs">
       <DependentUpon>Default.cs</DependentUpon>
     </Compile>
+    <Compile Include="FixedAssetSetting\FixedAssetSetting.cs" />
     <Compile Include="FixedAssetSetting\StartDateForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FixedAssetSetting\StartDateForm.Designer.cs">
       <DependentUpon>StartDateForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FunctionalLocation\FunctionalLocation.cs" />
     <Compile Include="FunctionalLocation\Default.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -173,7 +177,7 @@
     <EmbeddedResource Include="ChartOfAccount\Default.resx">
       <DependentUpon>Default.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AveagingMethod\Default.resx">
+    <EmbeddedResource Include="AveragingMethod\Default.resx">
       <DependentUpon>Default.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DepreciationMethod\Default.resx">

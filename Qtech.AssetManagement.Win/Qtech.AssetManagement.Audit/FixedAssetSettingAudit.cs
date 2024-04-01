@@ -100,6 +100,16 @@ namespace Qtech.AssetManagement.Audit
                 audit_collection.Add(audit);
             }
 
+            if (fixedassetsetting.mDepreciable != fixedassetsettingOld.mDepreciable)
+            {
+                audit = new BusinessEntities.Audit();
+                LoadCommonData(ref audit, fixedassetsetting);
+                audit.mField = "Depreciable";
+                audit.mOldValue = fixedassetsettingOld.mDepreciable.ToString();
+                audit.mNewValue = fixedassetsetting.mDepreciable.ToString();
+                audit_collection.Add(audit);
+            }
+
             return audit_collection;
         }
 

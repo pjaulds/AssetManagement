@@ -112,6 +112,7 @@ namespace Qtech.AssetManagement.Dal
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@depreciation_method_id", myFixedAssetSetting.mDepreciationMethodId);
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@averaging_method_id", myFixedAssetSetting.mAveragingMethodId);
                 Helpers.CreateParameter(myCommand, DbType.Decimal, "@useful_life_years", myFixedAssetSetting.mUsefulLifeYears);
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@depreciable", myFixedAssetSetting.mDepreciable);
 
                 Helpers.SetSaveParameters(myCommand, myFixedAssetSetting);
 
@@ -187,7 +188,8 @@ namespace Qtech.AssetManagement.Dal
             fixedassetsetting.mAveragingMethodId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("averaging_method_id"));
 
             fixedassetsetting.mUsefulLifeYears = myDataRecord.GetDecimal(myDataRecord.GetOrdinal("useful_life_years"));
-            
+            fixedassetsetting.mDepreciable = myDataRecord.GetBoolean(myDataRecord.GetOrdinal("depreciable"));
+
             return fixedassetsetting;
         }
     }

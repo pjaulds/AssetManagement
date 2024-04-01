@@ -67,6 +67,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BrowseReceivingDetailFromOtherDBForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrowseReceivingDetailFromOtherDBForm.Designer.cs">
+      <DependentUpon>BrowseReceivingDetailFromOtherDBForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BrowseReceivingFromOtherDBForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BrowseReceivingFromOtherDBForm.Designer.cs">
+      <DependentUpon>BrowseReceivingFromOtherDBForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapitalizeJournalizedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapitalizeJournalizedForm.Designer.cs">
+      <DependentUpon>CapitalizeJournalizedForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Default.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +96,18 @@
     </Compile>
     <Compile Include="DepreciationJournalForm.Designer.cs">
       <DependentUpon>DepreciationJournalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DepreciationJournalTempForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DepreciationJournalTempForm.Designer.cs">
+      <DependentUpon>DepreciationJournalTempForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DepreciationUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DepreciationUserControl.Designer.cs">
+      <DependentUpon>DepreciationUserControl.cs</DependentUpon>
     </Compile>
     <Compile Include="DisposalForm.cs">
       <SubType>Form</SubType>
@@ -97,6 +127,12 @@
     <Compile Include="DisposedForm.Designer.cs">
       <DependentUpon>DisposedForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExtendUsefulLifeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExtendUsefulLifeForm.Designer.cs">
+      <DependentUpon>ExtendUsefulLifeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FixedAsset.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -104,11 +140,23 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="CapitalizedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapitalizedForm.Designer.cs">
+      <DependentUpon>CapitalizedForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RunDepreciationAllForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RunDepreciationAllForm.Designer.cs">
+      <DependentUpon>RunDepreciationAllForm.cs</DependentUpon>
     </Compile>
     <Compile Include="RunDepreciationForm.cs">
       <SubType>Form</SubType>
@@ -165,11 +213,26 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="BrowseReceivingDetailFromOtherDBForm.resx">
+      <DependentUpon>BrowseReceivingDetailFromOtherDBForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BrowseReceivingFromOtherDBForm.resx">
+      <DependentUpon>BrowseReceivingFromOtherDBForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapitalizeJournalizedForm.resx">
+      <DependentUpon>CapitalizeJournalizedForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Default.resx">
       <DependentUpon>Default.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DepreciationJournalForm.resx">
       <DependentUpon>DepreciationJournalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepreciationJournalTempForm.resx">
+      <DependentUpon>DepreciationJournalTempForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepreciationUserControl.resx">
+      <DependentUpon>DepreciationUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DisposalForm.resx">
       <DependentUpon>DisposalForm.cs</DependentUpon>
@@ -180,13 +243,22 @@
     <EmbeddedResource Include="DisposedForm.resx">
       <DependentUpon>DisposedForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ExtendUsefulLifeForm.resx">
+      <DependentUpon>ExtendUsefulLifeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="CapitalizedForm.resx">
+      <DependentUpon>CapitalizedForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RegisterForm.resx">
       <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RunDepreciationAllForm.resx">
+      <DependentUpon>RunDepreciationAllForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RunDepreciationForm.resx">
       <DependentUpon>RunDepreciationForm.cs</DependentUpon>

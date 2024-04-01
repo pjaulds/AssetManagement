@@ -103,10 +103,17 @@ namespace Qtech.AssetManagement.Dal
                 myCommand.CommandType = CommandType.StoredProcedure;
                 myCommand.CommandText = "amQt_spFixedAssetCapitalizedCostInsertUpdateSingleItem";
 
+
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@fixed_asset_id", myFixedAssetCapitalizedCost.mFixedAssetId);
+                if (myFixedAssetCapitalizedCost.mDate != DateTime.MinValue)
+                    Helpers.CreateParameter(myCommand, DbType.DateTime, "@date", myFixedAssetCapitalizedCost.mDate);
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@capitalized_cost_id", myFixedAssetCapitalizedCost.mCapitalizedCostId);
+                Helpers.CreateParameter(myCommand, DbType.String, "@description", string.IsNullOrEmpty(myFixedAssetCapitalizedCost.mDescription) ? "" : myFixedAssetCapitalizedCost.mDescription);
                 Helpers.CreateParameter(myCommand, DbType.Decimal, "@amount", myFixedAssetCapitalizedCost.mAmount);
+                Helpers.CreateParameter(myCommand, DbType.Decimal, "@useful_life", myFixedAssetCapitalizedCost.mUsefulLife);
                 Helpers.CreateParameter(myCommand, DbType.Boolean, "@is_journalized", myFixedAssetCapitalizedCost.mIsJournalized);
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@asset_account_id", myFixedAssetCapitalizedCost.mAssetAccountId);
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@cash_payable_account_id", myFixedAssetCapitalizedCost.mCashPayableAccountId);
 
                 Helpers.SetSaveParameters(myCommand, myFixedAssetCapitalizedCost);
 
@@ -154,10 +161,20 @@ namespace Qtech.AssetManagement.Dal
             fixedassetcapitalizedcost.mId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("id"));
             fixedassetcapitalizedcost.mFixedAssetName = myDataRecord.GetString(myDataRecord.GetOrdinal("fixed_asset_name"));
             fixedassetcapitalizedcost.mFixedAssetId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("fixed_asset_id"));
+            if (myDataRecord["date"] != DBNull.Value)
+                fixedassetcapitalizedcost.mDate = myDataRecord.GetDateTime(myDataRecord.GetOrdinal("date"));
+            fixedassetcapitalizedcost.mNumber = myDataRecord.GetInt32(myDataRecord.GetOrdinal("number"));
             fixedassetcapitalizedcost.mCapitalizedCostName = myDataRecord.GetString(myDataRecord.GetOrdinal("capitalized_cost_name"));
             fixedassetcapitalizedcost.mCapitalizedCostId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("capitalized_cost_id"));
+            fixedassetcapitalizedcost.mDescription = myDataRecord.GetString(myDataRecord.GetOrdinal("description"));
             fixedassetcapitalizedcost.mAmount = myDataRecord.GetDecimal(myDataRecord.GetOrdinal("amount"));
+            fixedassetcapitalizedcost.mUsefulLife = myDataRecord.GetDecimal(myDataRecord.GetOrdinal("useful_life"));
             fixedassetcapitalizedcost.mIsJournalized = myDataRecord.GetBoolean(myDataRecord.GetOrdinal("is_journalized"));
+            fixedassetcapitalizedcost.mAssetAccountName = myDataRecord.GetString(myDataRecord.GetOrdinal("asset_account_name"));
+            fixedassetcapitalizedcost.mAssetAccountId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("asset_account_id"));
+            fixedassetcapitalizedcost.mCashPayableAccountName = myDataRecord.GetString(myDataRecord.GetOrdinal("cash_payable_account_name"));
+            fixedassetcapitalizedcost.mCashPayableAccountId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("cash_payable_account_id"));
+            fixedassetcapitalizedcost.mTransactionNo = myDataRecord.GetString(myDataRecord.GetOrdinal("transaction_no"));
             return fixedassetcapitalizedcost;
         }
     }

@@ -150,7 +150,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.BrowseProductlinkLabel = new System.Windows.Forms.LinkLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.NewPurchaseradioButton = new System.Windows.Forms.RadioButton();
             this.BeginningBalanceradioButton = new System.Windows.Forms.RadioButton();
@@ -883,7 +883,7 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.linkLabel2);
+            this.panel3.Controls.Add(this.BrowseProductlinkLabel);
             this.panel3.Controls.Add(this.linkLabel1);
             this.panel3.Controls.Add(this.NewPurchaseradioButton);
             this.panel3.Controls.Add(this.BeginningBalanceradioButton);
@@ -898,16 +898,16 @@
             this.panel3.TabIndex = 0;
             this.panel3.TabStop = true;
             // 
-            // linkLabel2
+            // BrowseProductlinkLabel
             // 
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(87, 31);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(82, 13);
-            this.linkLabel2.TabIndex = 7;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Browse Product";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            this.BrowseProductlinkLabel.AutoSize = true;
+            this.BrowseProductlinkLabel.Location = new System.Drawing.Point(87, 31);
+            this.BrowseProductlinkLabel.Name = "BrowseProductlinkLabel";
+            this.BrowseProductlinkLabel.Size = new System.Drawing.Size(82, 13);
+            this.BrowseProductlinkLabel.TabIndex = 7;
+            this.BrowseProductlinkLabel.TabStop = true;
+            this.BrowseProductlinkLabel.Text = "Browse Product";
+            this.BrowseProductlinkLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // linkLabel1
             // 
@@ -923,6 +923,7 @@
             // NewPurchaseradioButton
             // 
             this.NewPurchaseradioButton.AutoSize = true;
+            this.NewPurchaseradioButton.Checked = true;
             this.NewPurchaseradioButton.Location = new System.Drawing.Point(123, 10);
             this.NewPurchaseradioButton.Name = "NewPurchaseradioButton";
             this.NewPurchaseradioButton.Size = new System.Drawing.Size(93, 17);
@@ -1416,7 +1417,7 @@
         private System.Windows.Forms.RadioButton BeginningBalanceradioButton;
         private System.Windows.Forms.Label ReceivingDetailIdlabel;
         private System.Windows.Forms.Label ProductIdlabel;
-        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.LinkLabel BrowseProductlinkLabel;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Button button1;

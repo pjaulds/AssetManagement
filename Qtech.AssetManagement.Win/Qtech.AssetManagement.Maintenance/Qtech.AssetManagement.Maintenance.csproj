@@ -89,6 +89,7 @@
     <Compile Include="AccountGroup\Default.Designer.cs">
       <DependentUpon>Default.cs</DependentUpon>
     </Compile>
+    <Compile Include="AssetType\AssetType.cs" />
     <Compile Include="AssetClass\Default.cs">
       <SubType>Form</SubType>
     </Compile>

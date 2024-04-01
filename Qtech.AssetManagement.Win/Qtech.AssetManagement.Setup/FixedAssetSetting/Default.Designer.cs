@@ -175,7 +175,9 @@
             this.label12 = new System.Windows.Forms.Label();
             this.DepreciationMethodultraCombo = new Infragistics.Win.UltraWinGrid.UltraCombo();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.CodetextBox = new System.Windows.Forms.TextBox();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -194,8 +196,7 @@
             this.Cancelbutton = new System.Windows.Forms.Button();
             this.Savebutton = new System.Windows.Forms.Button();
             this.collapsePanelControl1 = new Qtech.AssetManagement.Controls.CollapsePanelControl();
-            this.CodetextBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.DepreciablecheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -549,7 +550,7 @@
             this.panel9.Controls.Add(this.panel12);
             this.panel9.Controls.Add(this.DepreciationMethodultraCombo);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel9.Location = new System.Drawing.Point(15, 193);
+            this.panel9.Location = new System.Drawing.Point(15, 207);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(614, 114);
             this.panel9.TabIndex = 179;
@@ -792,6 +793,7 @@
             // 
             // panel5
             // 
+            this.panel5.Controls.Add(this.DepreciablecheckBox);
             this.panel5.Controls.Add(this.CodetextBox);
             this.panel5.Controls.Add(this.panel7);
             this.panel5.Controls.Add(this.AssetTypeutraCombo);
@@ -802,9 +804,18 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(15, 20);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(614, 173);
+            this.panel5.Size = new System.Drawing.Size(614, 187);
             this.panel5.TabIndex = 7;
             this.panel5.TabStop = true;
+            // 
+            // CodetextBox
+            // 
+            this.CodetextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CodetextBox.Location = new System.Drawing.Point(194, 23);
+            this.CodetextBox.MaxLength = 50;
+            this.CodetextBox.Name = "CodetextBox";
+            this.CodetextBox.Size = new System.Drawing.Size(250, 21);
+            this.CodetextBox.TabIndex = 179;
             // 
             // panel7
             // 
@@ -817,16 +828,26 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel7.Location = new System.Drawing.Point(0, 20);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(188, 153);
+            this.panel7.Size = new System.Drawing.Size(188, 167);
             this.panel7.TabIndex = 178;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(10, 6);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(32, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Code";
             // 
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(10, 120);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(153, 13);
+            this.label15.Size = new System.Drawing.Size(155, 14);
             this.label15.TabIndex = 5;
             this.label15.Text = "Depreciation Expense Account";
             // 
@@ -1318,24 +1339,16 @@
             this.collapsePanelControl1.TabIndex = 178;
             this.collapsePanelControl1._HidePanel += new System.EventHandler(this.collapsePanelControl1__HidePanel);
             // 
-            // CodetextBox
+            // DepreciablecheckBox
             // 
-            this.CodetextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CodetextBox.Location = new System.Drawing.Point(194, 23);
-            this.CodetextBox.MaxLength = 50;
-            this.CodetextBox.Name = "CodetextBox";
-            this.CodetextBox.Size = new System.Drawing.Size(250, 21);
-            this.CodetextBox.TabIndex = 179;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(10, 6);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Code";
+            this.DepreciablecheckBox.AutoSize = true;
+            this.DepreciablecheckBox.Location = new System.Drawing.Point(361, 164);
+            this.DepreciablecheckBox.Name = "DepreciablecheckBox";
+            this.DepreciablecheckBox.Size = new System.Drawing.Size(83, 17);
+            this.DepreciablecheckBox.TabIndex = 180;
+            this.DepreciablecheckBox.Text = "Depreciable";
+            this.DepreciablecheckBox.UseVisualStyleBackColor = true;
+            this.DepreciablecheckBox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // Default
             // 
@@ -1424,5 +1437,6 @@
         private System.Windows.Forms.Label StartDatelabel;
         private System.Windows.Forms.TextBox CodetextBox;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox DepreciablecheckBox;
     }
 }

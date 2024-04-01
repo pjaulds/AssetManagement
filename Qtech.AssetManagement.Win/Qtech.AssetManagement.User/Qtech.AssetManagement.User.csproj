@@ -72,6 +72,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="OverrideLogInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OverrideLogInForm.Designer.cs">
+      <DependentUpon>OverrideLogInForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LogInForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OverrideLogInForm.resx">
+      <DependentUpon>OverrideLogInForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogInForm.resx">
       <DependentUpon>LogInForm.cs</DependentUpon>

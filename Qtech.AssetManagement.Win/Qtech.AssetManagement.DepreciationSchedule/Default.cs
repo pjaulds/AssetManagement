@@ -342,6 +342,7 @@ namespace Qtech.AssetManagement.DepreciationSchedule
         private void BeginningBalanceradioButton_CheckedChanged(object sender, EventArgs e)
         {
             if (Idlabel.Text == "0") DescriptiontextBox.Text = "Beginning Balance";
+            BrowseProductlinkLabel.Visible = BeginningBalanceradioButton.Checked;
         }
 
         private void NewPurchaseradioButton_CheckedChanged(object sender, EventArgs e)

@@ -117,36 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="editToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAALxJREFUOE+VkiEOAjEUBSuQHINDIJFIjsBR8AgEAolcieAACAQCwQEQCASHQMDM
-        kiaEtKV9ySTd7v7pb7chkxW8CuwgG4ufsOif0lGSjMVHWEKzIK5s8QGaBU5aFJlALllBbZoFMxh+hn2a
-        BJ7NAzzcKKkWxPswhTUoMVWC+EsttoMzdGD+CjYQWxaLtzAAUxSMwbGCEZzAbr5TFLhXV7uBF+u32BQF
-        V7iD+507kUhRUJPkt3vwRQ0XICG8AVb3TIZxhPNcAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="capitalizedToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAJNJREFUOE+V0q0Ng1AYheErKyoQHQFZiUR2CCQjILtJJSMwSkUHqOgIlYj2Pf1J
-        4OYk9+NNnoQQTsIlpEI7VN/L7dW44o5GN7bU4YnXz4wBxfa44D/MTTjAdsQNbrj0QItVPZavXKIjnfHp
-        hDHjRpI/p29lc2MJ58YSzo0lnBtLODeWcG4s4dxYwrmxhNOf6WSl9AYKn2KjQfHiAwAAAABJRU5ErkJg
-        gg==
-</value>
-  </data>
-  <data name="deleteToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wwAADsMBx2+oZAAAAOBJREFUOE+FkyEOAjEUBfcASAQSgeAICAQCiUQiOACSA5AgkUgER0AgkAgEEolE
-        IBBIBAIBb/K3ye72d5lkkpdmX9u03ayGhfzkbhj4B4WiL7mSS/nNx4pG7ORFVj+sesyNGMm9xVrWcmax
-        zECGmb2VEbZyarFMR94sumUEFhlaLNOSD4tuGeEsexZjOG3wygjssm0x5imb0isjcL0NizFhdq+MEHbp
-        cpLchldGJr/LJAfJe/DK2JVXmSTcsVfG4ltx4e3PJR96jiVPPklYKQW7Y5dJ+vItOWlPfu2JzMmyH26h
-        ThM6VVYMAAAAAElFTkSuQmCC
-</value>
-  </data>
 </root>
