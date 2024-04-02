@@ -56,9 +56,13 @@
     <Compile Include="Collection\CapitalizedCostCollection.cs" />
     <Compile Include="Collection\DisposalCollection.cs" />
     <Compile Include="Collection\FixedAssetCapitalizedCostCollection.cs" />
+    <Compile Include="Collection\JournalVoucherCollection.cs" />
+    <Compile Include="Collection\JournalVoucherDetailCollection.cs" />
     <Compile Include="Collection\PaymentTermsCollection.cs" />
     <Compile Include="Disposal.cs" />
     <Compile Include="FixedAssetCapitalizedCost.cs" />
+    <Compile Include="JournalVoucher.cs" />
+    <Compile Include="JournalVoucherDetail.cs" />
     <Compile Include="PaymentTerms.cs" />
     <Compile Include="Collection\CurrencyCollection.cs" />
     <Compile Include="Currency.cs" />
@@ -75,6 +79,8 @@
     <Compile Include="SearchCriteria\CapitalizedCostCriteria.cs" />
     <Compile Include="SearchCriteria\DisposalCriteria.cs" />
     <Compile Include="SearchCriteria\FixedAssetCapitalizedCostCriteria.cs" />
+    <Compile Include="SearchCriteria\JournalVoucherCriteria.cs" />
+    <Compile Include="SearchCriteria\JournalVoucherDetailCriteria.cs" />
     <Compile Include="SearchCriteria\PaymentTermsCriteria.cs" />
     <Compile Include="SearchCriteria\CurrencyCriteria.cs" />
     <Compile Include="SearchCriteria\ExpenseCategory.cs" />

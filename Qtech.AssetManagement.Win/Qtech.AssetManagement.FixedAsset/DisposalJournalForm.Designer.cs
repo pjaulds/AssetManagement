@@ -39,7 +39,7 @@
             this.SalesProceedstextBox = new System.Windows.Forms.TextBox();
             this.CashAccounttextBox = new System.Windows.Forms.TextBox();
             this.GainLossAccounttextBox = new System.Windows.Forms.TextBox();
-            this.Titlelabel = new System.Windows.Forms.Label();
+            this.Datelabel = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.GainLossDisposaltextBox = new System.Windows.Forms.TextBox();
             this.SalesProceeds2textBox = new System.Windows.Forms.TextBox();
@@ -85,6 +85,7 @@
             this.AssetcheckBox = new System.Windows.Forms.CheckBox();
             this.AssetAmountlabel = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.Titlelabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -92,6 +93,7 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.Titlelabel);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -200,16 +202,16 @@
             this.GainLossAccounttextBox.Size = new System.Drawing.Size(250, 21);
             this.GainLossAccounttextBox.TabIndex = 19;
             // 
-            // Titlelabel
+            // Datelabel
             // 
-            this.Titlelabel.AutoSize = true;
-            this.Titlelabel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Titlelabel.Location = new System.Drawing.Point(3, 52);
-            this.Titlelabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.Titlelabel.Name = "Titlelabel";
-            this.Titlelabel.Size = new System.Drawing.Size(88, 13);
-            this.Titlelabel.TabIndex = 20;
-            this.Titlelabel.Text = "Date Disposed";
+            this.Datelabel.AutoSize = true;
+            this.Datelabel.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Datelabel.Location = new System.Drawing.Point(3, 52);
+            this.Datelabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.Datelabel.Name = "Datelabel";
+            this.Datelabel.Size = new System.Drawing.Size(88, 13);
+            this.Datelabel.TabIndex = 20;
+            this.Datelabel.Text = "Date Disposed";
             // 
             // label6
             // 
@@ -721,6 +723,18 @@
             this.panel3.Size = new System.Drawing.Size(1107, 2);
             this.panel3.TabIndex = 255;
             // 
+            // Titlelabel
+            // 
+            this.Titlelabel.AutoSize = true;
+            this.Titlelabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(97)))), ((int)(((byte)(161)))));
+            this.Titlelabel.Font = new System.Drawing.Font("Arial", 10.25F);
+            this.Titlelabel.ForeColor = System.Drawing.Color.White;
+            this.Titlelabel.Location = new System.Drawing.Point(12, 10);
+            this.Titlelabel.Name = "Titlelabel";
+            this.Titlelabel.Size = new System.Drawing.Size(155, 16);
+            this.Titlelabel.TabIndex = 2;
+            this.Titlelabel.Text = "FIXED ASSET DETAILS";
+            // 
             // DisposalJournalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -768,7 +782,7 @@
             this.Controls.Add(this.AccumulatedDepreciationAccounttextBox);
             this.Controls.Add(this.CosttextBox);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.Titlelabel);
+            this.Controls.Add(this.Datelabel);
             this.Controls.Add(this.GainLossAccounttextBox);
             this.Controls.Add(this.CashAccounttextBox);
             this.Controls.Add(this.SalesProceedstextBox);
@@ -808,7 +822,7 @@
         private System.Windows.Forms.TextBox SalesProceedstextBox;
         private System.Windows.Forms.TextBox CashAccounttextBox;
         private System.Windows.Forms.TextBox GainLossAccounttextBox;
-        private System.Windows.Forms.Label Titlelabel;
+        private System.Windows.Forms.Label Datelabel;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox GainLossDisposaltextBox;
         private System.Windows.Forms.TextBox SalesProceeds2textBox;
@@ -854,5 +868,6 @@
         private System.Windows.Forms.CheckBox AssetcheckBox;
         private System.Windows.Forms.Label AssetAmountlabel;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label Titlelabel;
     }
 }

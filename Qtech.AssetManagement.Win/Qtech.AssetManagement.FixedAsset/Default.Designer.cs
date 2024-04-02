@@ -61,6 +61,7 @@
             Infragistics.Win.Appearance appearance16 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance17 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance18 = new Infragistics.Win.Appearance();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Default));
             Infragistics.Win.Appearance appearance19 = new Infragistics.Win.Appearance();
             Infragistics.Win.UltraWinGrid.UltraGridBand ultraGridBand2 = new Infragistics.Win.UltraWinGrid.UltraGridBand("Band 0", -1);
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn3 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mId");
@@ -136,14 +137,20 @@
             Infragistics.Win.Appearance appearance76 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance77 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance78 = new Infragistics.Win.Appearance();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Default));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.ultraGrid1 = new Infragistics.Win.UltraWinGrid.UltraGrid();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.capitalizedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.disposeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.returnToSupplierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel13 = new System.Windows.Forms.Panel();
             this.Depreciatebutton = new System.Windows.Forms.Button();
             this.ForRegistrationbutton = new System.Windows.Forms.Button();
             this.Totalbutton = new System.Windows.Forms.Button();
             this.Registeredbutton = new System.Windows.Forms.Button();
+            this.expandPanelControl1 = new Qtech.AssetManagement.Controls.ExpandPanelControl();
             this.RegisterByIdlabel = new System.Windows.Forms.Label();
             this.DisposedcheckBox = new System.Windows.Forms.CheckBox();
             this.RegisteredcheckBox = new System.Windows.Forms.CheckBox();
@@ -213,17 +220,13 @@
             this.button1 = new System.Windows.Forms.Button();
             this.Cancelbutton = new System.Windows.Forms.Button();
             this.Savebutton = new System.Windows.Forms.Button();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.capitalizedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.expandPanelControl1 = new Qtech.AssetManagement.Controls.ExpandPanelControl();
             this.collapsePanelControl1 = new Qtech.AssetManagement.Controls.CollapsePanelControl();
-            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ultraGrid1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -244,7 +247,6 @@
             this.panel14.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel8.SuspendLayout();
-            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -469,6 +471,57 @@
             this.ultraGrid1.DoubleClickRow += new Infragistics.Win.UltraWinGrid.DoubleClickRowEventHandler(this.ultraGrid1_DoubleClickRow);
             this.ultraGrid1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ultraGrid1_MouseDown);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editToolStripMenuItem,
+            this.capitalizedToolStripMenuItem,
+            this.disposeToolStripMenuItem,
+            this.deleteToolStripMenuItem,
+            this.returnToSupplierToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(171, 136);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("editToolStripMenuItem.Image")));
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
+            // 
+            // capitalizedToolStripMenuItem
+            // 
+            this.capitalizedToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("capitalizedToolStripMenuItem.Image")));
+            this.capitalizedToolStripMenuItem.Name = "capitalizedToolStripMenuItem";
+            this.capitalizedToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.capitalizedToolStripMenuItem.Text = "Capitalized";
+            this.capitalizedToolStripMenuItem.Click += new System.EventHandler(this.capitalizedToolStripMenuItem_Click);
+            // 
+            // disposeToolStripMenuItem
+            // 
+            this.disposeToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("disposeToolStripMenuItem.Image")));
+            this.disposeToolStripMenuItem.Name = "disposeToolStripMenuItem";
+            this.disposeToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.disposeToolStripMenuItem.Text = "Dispose";
+            this.disposeToolStripMenuItem.Click += new System.EventHandler(this.disposeToolStripMenuItem_Click);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deleteToolStripMenuItem.Image")));
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
+            // 
+            // returnToSupplierToolStripMenuItem
+            // 
+            this.returnToSupplierToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("returnToSupplierToolStripMenuItem.Image")));
+            this.returnToSupplierToolStripMenuItem.Name = "returnToSupplierToolStripMenuItem";
+            this.returnToSupplierToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.returnToSupplierToolStripMenuItem.Text = "Return To Supplier";
+            this.returnToSupplierToolStripMenuItem.Click += new System.EventHandler(this.returnToSupplierToolStripMenuItem_Click);
+            // 
             // panel13
             // 
             this.panel13.Controls.Add(this.Depreciatebutton);
@@ -541,6 +594,15 @@
             this.Registeredbutton.Text = "&Save";
             this.Registeredbutton.UseVisualStyleBackColor = false;
             this.Registeredbutton.Click += new System.EventHandler(this.Registeredbutton_Click);
+            // 
+            // expandPanelControl1
+            // 
+            this.expandPanelControl1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.expandPanelControl1.Location = new System.Drawing.Point(231, 0);
+            this.expandPanelControl1.Name = "expandPanelControl1";
+            this.expandPanelControl1.Size = new System.Drawing.Size(15, 530);
+            this.expandPanelControl1.TabIndex = 126;
+            this.expandPanelControl1._ExpandPanel += new System.EventHandler(this.expandPanelControl1__ExpandPanel);
             // 
             // RegisterByIdlabel
             // 
@@ -1665,40 +1727,6 @@
             this.Savebutton.UseVisualStyleBackColor = false;
             this.Savebutton.Click += new System.EventHandler(this.Savebutton_Click);
             // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editToolStripMenuItem,
-            this.capitalizedToolStripMenuItem,
-            this.deleteToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(153, 92);
-            // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("editToolStripMenuItem.Image")));
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.editToolStripMenuItem.Text = "Edit";
-            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
-            // 
-            // capitalizedToolStripMenuItem
-            // 
-            this.capitalizedToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("capitalizedToolStripMenuItem.Image")));
-            this.capitalizedToolStripMenuItem.Name = "capitalizedToolStripMenuItem";
-            this.capitalizedToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.capitalizedToolStripMenuItem.Text = "Capitalized";
-            this.capitalizedToolStripMenuItem.Click += new System.EventHandler(this.capitalizedToolStripMenuItem_Click);
-            // 
-            // expandPanelControl1
-            // 
-            this.expandPanelControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.expandPanelControl1.Location = new System.Drawing.Point(231, 0);
-            this.expandPanelControl1.Name = "expandPanelControl1";
-            this.expandPanelControl1.Size = new System.Drawing.Size(15, 530);
-            this.expandPanelControl1.TabIndex = 126;
-            this.expandPanelControl1._ExpandPanel += new System.EventHandler(this.expandPanelControl1__ExpandPanel);
-            // 
             // collapsePanelControl1
             // 
             this.collapsePanelControl1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -1707,14 +1735,6 @@
             this.collapsePanelControl1.Size = new System.Drawing.Size(15, 530);
             this.collapsePanelControl1.TabIndex = 178;
             this.collapsePanelControl1._HidePanel += new System.EventHandler(this.collapsePanelControl1__HidePanel);
-            // 
-            // deleteToolStripMenuItem
-            // 
-            this.deleteToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("deleteToolStripMenuItem.Image")));
-            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
-            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.deleteToolStripMenuItem.Text = "Delete";
-            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.deleteToolStripMenuItem_Click);
             // 
             // Default
             // 
@@ -1733,6 +1753,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ultraGrid1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
@@ -1765,7 +1786,6 @@
             this.panel11.PerformLayout();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1854,5 +1874,7 @@
         private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem capitalizedToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem returnToSupplierToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem disposeToolStripMenuItem;
     }
 }

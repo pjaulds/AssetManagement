@@ -170,6 +170,10 @@
       <Project>{11c73cf8-55b5-4c47-8c88-1cda60928769}</Project>
       <Name>Qtech.AssetManagement.FixedAsset</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Qtech.AssetManagement.JournalVoucher\Qtech.AssetManagement.JournalVoucher.csproj">
+      <Project>{e3e08bd3-3ec1-4cee-b259-eb76b5633efb}</Project>
+      <Name>Qtech.AssetManagement.JournalVoucher</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Qtech.AssetManagement.Maintenance\Qtech.AssetManagement.Maintenance.csproj">
       <Project>{d2667a4c-044f-44cc-9369-a24eb9e845f7}</Project>
       <Name>Qtech.AssetManagement.Maintenance</Name>

@@ -175,6 +175,7 @@
             this.label12 = new System.Windows.Forms.Label();
             this.DepreciationMethodultraCombo = new Infragistics.Win.UltraWinGrid.UltraCombo();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.DepreciablecheckBox = new System.Windows.Forms.CheckBox();
             this.CodetextBox = new System.Windows.Forms.TextBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -196,7 +197,6 @@
             this.Cancelbutton = new System.Windows.Forms.Button();
             this.Savebutton = new System.Windows.Forms.Button();
             this.collapsePanelControl1 = new Qtech.AssetManagement.Controls.CollapsePanelControl();
-            this.DepreciablecheckBox = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -808,6 +808,17 @@
             this.panel5.TabIndex = 7;
             this.panel5.TabStop = true;
             // 
+            // DepreciablecheckBox
+            // 
+            this.DepreciablecheckBox.AutoSize = true;
+            this.DepreciablecheckBox.Location = new System.Drawing.Point(361, 164);
+            this.DepreciablecheckBox.Name = "DepreciablecheckBox";
+            this.DepreciablecheckBox.Size = new System.Drawing.Size(83, 17);
+            this.DepreciablecheckBox.TabIndex = 180;
+            this.DepreciablecheckBox.Text = "Depreciable";
+            this.DepreciablecheckBox.UseVisualStyleBackColor = true;
+            this.DepreciablecheckBox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // CodetextBox
             // 
             this.CodetextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1338,17 +1349,6 @@
             this.collapsePanelControl1.Size = new System.Drawing.Size(15, 482);
             this.collapsePanelControl1.TabIndex = 178;
             this.collapsePanelControl1._HidePanel += new System.EventHandler(this.collapsePanelControl1__HidePanel);
-            // 
-            // DepreciablecheckBox
-            // 
-            this.DepreciablecheckBox.AutoSize = true;
-            this.DepreciablecheckBox.Location = new System.Drawing.Point(361, 164);
-            this.DepreciablecheckBox.Name = "DepreciablecheckBox";
-            this.DepreciablecheckBox.Size = new System.Drawing.Size(83, 17);
-            this.DepreciablecheckBox.TabIndex = 180;
-            this.DepreciablecheckBox.Text = "Depreciable";
-            this.DepreciablecheckBox.UseVisualStyleBackColor = true;
-            this.DepreciablecheckBox.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // Default
             // 

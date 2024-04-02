@@ -199,7 +199,7 @@ namespace Qtech.AssetManagement.Audit
                 audit.mNewValue = fixedasset.mIsDisposed.ToString();
                 audit_collection.Add(audit);
             }
-
+            
             if (fixedasset.mRegisterById != fixedassetOld.mRegisterById)
             {
                 audit = new BusinessEntities.Audit();
@@ -207,6 +207,16 @@ namespace Qtech.AssetManagement.Audit
                 audit.mField = "Register By";
                 audit.mOldValue = fixedassetOld.mRegisterById.ToString();
                 audit.mNewValue = fixedasset.mRegisterById.ToString();
+                audit_collection.Add(audit);
+            }
+
+            if (fixedasset.mReturedToSupplier != fixedassetOld.mReturedToSupplier)
+            {
+                audit = new BusinessEntities.Audit();
+                LoadCommonData(ref audit, fixedasset);
+                audit.mField = "Returned To Supplier";
+                audit.mOldValue = fixedassetOld.mReturedToSupplier.ToString();
+                audit.mNewValue = fixedasset.mReturedToSupplier.ToString();
                 audit_collection.Add(audit);
             }
 

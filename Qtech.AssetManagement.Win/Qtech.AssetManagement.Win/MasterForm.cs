@@ -261,15 +261,15 @@ namespace Qtech.AssetManagement.Win
                     else receivingForm.Select();
                     break;
                 case "PurchaseVoucher":
-                    if (!AllowToAccess((Int32)Modules.PurchaseVoucher)) return;
-                    Purchasing.PurchaseVoucher.Default purchaseVoucherForm = null;
-                    if ((purchaseVoucherForm = (Purchasing.PurchaseVoucher.Default)IsFormAlreadyOpen(typeof(Purchasing.PurchaseVoucher.Default))) == null)
+                    if (!AllowToAccess((Int32)Modules.JournalVoucher)) return;
+                    JournalVoucher.Default journalVoucherForm = null;
+                    if ((journalVoucherForm = (JournalVoucher.Default)IsFormAlreadyOpen(typeof(JournalVoucher.Default))) == null)
                     {
-                        Purchasing.PurchaseVoucher.Default purchaseVoucherFormChild = new Purchasing.PurchaseVoucher.Default();
-                        purchaseVoucherFormChild.MdiParent = this;
-                        purchaseVoucherFormChild.Show();
+                        JournalVoucher.Default journalVoucherFormChild = new JournalVoucher.Default();
+                        journalVoucherFormChild.MdiParent = this;
+                        journalVoucherFormChild.Show();
                     }
-                    else purchaseVoucherForm.Select();
+                    else journalVoucherForm.Select();
                     break;
                 case "Unit":
                     if (!AllowToAccess((Int32)Modules.Unit)) return;

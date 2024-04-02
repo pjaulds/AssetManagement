@@ -49,6 +49,8 @@
     <Compile Include="CapitalizedCostAudit.cs" />
     <Compile Include="DisposalAudit.cs" />
     <Compile Include="FixedAssetCapitalizedCostAudit.cs" />
+    <Compile Include="JournalVoucherAudit.cs" />
+    <Compile Include="JournalVoucherDetailAudit.cs" />
     <Compile Include="PaymentTermsAudit.cs" />
     <Compile Include="CurrencyAudit.cs" />
     <Compile Include="ExpenseCategoryAudit.cs" />

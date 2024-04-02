@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{475363C4-856B-45D5-8518-E2C5941E32E1}</ProjectGuid>
+    <ProjectGuid>{E3E08BD3-3EC1-4CEE-B259-EB76B5633EFB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Qtech.AssetManagement.Controls</RootNamespace>
-    <AssemblyName>Qtech.AssetManagement.Controls</AssemblyName>
+    <RootNamespace>Qtech.AssetManagement.JournalVoucher</RootNamespace>
+    <AssemblyName>Qtech.AssetManagement.JournalVoucher</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -67,33 +67,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CollapsePanelControl.cs">
-      <SubType>UserControl</SubType>
+    <Compile Include="Default.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CollapsePanelControl.Designer.cs">
-      <DependentUpon>CollapsePanelControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ExpandPanelControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ExpandPanelControl.Designer.cs">
-      <DependentUpon>ExpandPanelControl.cs</DependentUpon>
+    <Compile Include="Default.Designer.cs">
+      <DependentUpon>Default.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SearchChartOfAccountUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="SearchChartOfAccountUserControl.Designer.cs">
-      <DependentUpon>SearchChartOfAccountUserControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SearchProductUserControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="SearchProductUserControl.Designer.cs">
-      <DependentUpon>SearchProductUserControl.cs</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Qasa_Qtech\Qtech.Qasa.Win\Qtech.Qasa.PluginInterface\Qtech.Qasa.PluginInterface.csproj">
+      <Project>{8b592ba0-81d4-4fb8-86cb-3077b2739ee3}</Project>
+      <Name>Qtech.Qasa.PluginInterface</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Qasa_Qtech\Qtech.Qasa.Win\Qtech.Qasa.Utilities\Qtech.Qasa.Utilities.csproj">
+      <Project>{4a2e7b7b-362a-407f-a051-3a83f7f2dbde}</Project>
+      <Name>Qtech.Qasa.Utilities</Name>
+      <Private>False</Private>
+    </ProjectReference>
     <ProjectReference Include="..\Qtech.AssetManagement.Bll\Qtech.AssetManagement.Bll.csproj">
       <Project>{8455616d-52ab-4f20-b9a6-02af254065b3}</Project>
       <Name>Qtech.AssetManagement.Bll</Name>
@@ -102,6 +94,16 @@
     <ProjectReference Include="..\Qtech.AssetManagement.BusinessEntities\Qtech.AssetManagement.BusinessEntities.csproj">
       <Project>{d70419b5-b394-420b-b919-c6b3d287ec17}</Project>
       <Name>Qtech.AssetManagement.BusinessEntities</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Qtech.AssetManagement.Controls\Qtech.AssetManagement.Controls.csproj">
+      <Project>{475363c4-856b-45d5-8518-e2c5941e32e1}</Project>
+      <Name>Qtech.AssetManagement.Controls</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\Qtech.AssetManagement.User\Qtech.AssetManagement.User.csproj">
+      <Project>{e843fc49-336b-4f98-9501-9ef7eb6fff83}</Project>
+      <Name>Qtech.AssetManagement.User</Name>
       <Private>False</Private>
     </ProjectReference>
     <ProjectReference Include="..\Qtech.AssetManagement.Utilities\Qtech.AssetManagement.Utilities.csproj">
@@ -116,19 +118,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="CollapsePanelControl.resx">
-      <DependentUpon>CollapsePanelControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ExpandPanelControl.resx">
-      <DependentUpon>ExpandPanelControl.cs</DependentUpon>
+    <EmbeddedResource Include="Default.resx">
+      <DependentUpon>Default.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
-    <EmbeddedResource Include="SearchChartOfAccountUserControl.resx">
-      <DependentUpon>SearchChartOfAccountUserControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SearchProductUserControl.resx">
-      <DependentUpon>SearchProductUserControl.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

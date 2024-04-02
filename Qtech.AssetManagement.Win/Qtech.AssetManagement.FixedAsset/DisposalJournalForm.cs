@@ -51,6 +51,7 @@ namespace Qtech.AssetManagement.FixedAsset
         private void LoadFormControlsFromFixedAsset()
         {
             BusinessEntities.FixedAsset fa = FixedAssetManager.GetItem(mFixedAssetId);
+            
             CosttextBox.Text = fa.mPurchasePrice.ToString("N");
             AssetAmountlabel.Text = CosttextBox.Text;
 
@@ -75,6 +76,8 @@ namespace Qtech.AssetManagement.FixedAsset
             
             AccumulatedDepreciationAccountCodelabel.Text = item.mAccumulatedDepreciationAccountCode; 
             AccumulatedDepreciationAccountTitlelabel.Text = item.mAccumulatedDepreciationAccountName;
+
+            Titlelabel.Text = "Dispose " + item.mCode + " " + fa.mAssetNo + " " + fa.mProductName;
         }
 
         private void LoadDepreciationFromFormControls(BusinessEntities.FixedAsset fa)

@@ -87,6 +87,7 @@ namespace Qtech.AssetManagement.BusinessEntities
         public Boolean mIsDisposed { get; set; }
         public int mRegisterById { get; set; }
         public string mRegisterByName { get; set; }
+        public bool mReturedToSupplier { get; set; }
 
         public FixedAssetCapitalizedCostCollection mFixedAssetCapitalizedCostCollection { get; set; }
         public FixedAssetCapitalizedCostCollection mDeletedFixedAssetCapitalizedCostCollection { get; set; }

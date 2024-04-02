@@ -604,5 +604,53 @@ namespace Qtech.AssetManagement.FixedAsset
 
             DeleteRecords();
         }
+
+        private void returnToSupplierToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            User.OverrideLogInForm overrideReturnToSupplier = new User.OverrideLogInForm();
+            overrideReturnToSupplier.mForOverride = true;
+            overrideReturnToSupplier.FormClosing += OverrideReturnToSupplier_FormClosing;
+            overrideReturnToSupplier.ShowDialog();
+        }
+
+        private void OverrideReturnToSupplier_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            User.OverrideLogInForm logIn = (User.OverrideLogInForm)sender;
+            if (logIn.mUser == null) return;
+
+            if (!SessionUtil.UserAllowDelete(logIn.mUser, (int)Modules.FixedAsset))
+            {
+                MessageBox.Show("You are not allowed to override transaction.", "Fixed Asset", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            DepreciationJournalCriteria criteria = new DepreciationJournalCriteria();
+            criteria.mFixedAssetId = _mId;
+
+            if (DepreciationJournalManager.SelectCountForGetList(criteria) > 0)
+            {
+                MessageBox.Show("Asset has already depreciation record, cannot be deleted.", "Fixed Asset", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+
+            //update returned to supplier column
+            BusinessEntities.FixedAsset fa = FixedAssetManager.GetItem(_mId);
+            fa.mReturedToSupplier = true;
+            fa.mUserId = SessionUtil.mUser.mId;
+            FixedAssetManager.Save(fa);
+
+            //delete item
+            FixedAssetManager.Delete(fa);
+            LoadFixedAsset();
+        }
+
+        private void disposeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BusinessEntities.FixedAsset fa = FixedAssetManager.GetItem(_mId);
+            DisposalForm dispose = new DisposalForm();
+            dispose.mFixedAssetId = _mId;
+            dispose.mFixedAssetName = fa.mProductName;
+            dispose.ShowDialog();
+        }
     }
 }

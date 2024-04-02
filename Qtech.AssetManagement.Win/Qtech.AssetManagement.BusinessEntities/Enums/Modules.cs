@@ -43,6 +43,7 @@
         AccountClassification= 39,
         AccountGroup = 40,
         CapitalizedCost = 41,
-        Disposal = 42
+        Disposal = 42,
+        JournalVoucher = 43
     }
 }

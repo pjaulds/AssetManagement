@@ -130,6 +130,7 @@ namespace Qtech.AssetManagement.Dal
                 Helpers.CreateParameter(myCommand, DbType.Boolean, "@is_registered", myFixedAsset.mIsRegistered);
                 Helpers.CreateParameter(myCommand, DbType.Boolean, "@is_disposed", myFixedAsset.mIsDisposed);
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@register_by_id", myFixedAsset.mRegisterById);
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@returned_to_supplier", myFixedAsset.mReturedToSupplier);
 
                 Helpers.SetSaveParameters(myCommand, myFixedAsset);
 
@@ -208,6 +209,7 @@ namespace Qtech.AssetManagement.Dal
             fixedasset.mIsDisposed = myDataRecord.GetBoolean(myDataRecord.GetOrdinal("is_disposed"));
             fixedasset.mRegisterById = myDataRecord.GetInt32(myDataRecord.GetOrdinal("register_by_id"));
             fixedasset.mRegisterByName = myDataRecord.GetString(myDataRecord.GetOrdinal("register_by_name"));
+            fixedasset.mReturedToSupplier = myDataRecord.GetBoolean(myDataRecord.GetOrdinal("returned_to_supplier"));
             return fixedasset;
         }
     }

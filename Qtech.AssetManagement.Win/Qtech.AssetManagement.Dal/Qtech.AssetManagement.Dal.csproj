@@ -51,6 +51,8 @@
     <Compile Include="CapitalizedCostDB.cs" />
     <Compile Include="DisposalDB.cs" />
     <Compile Include="FixedAssetCapitalizedCostDB.cs" />
+    <Compile Include="JournalVoucherDB.cs" />
+    <Compile Include="JournalVoucherDetailDB.cs" />
     <Compile Include="PaymentTermsDB.cs" />
     <Compile Include="CurrencyDB.cs" />
     <Compile Include="ExpenseCategoryDB.cs" />
