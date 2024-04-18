@@ -85,6 +85,8 @@
             this.label18 = new System.Windows.Forms.Label();
             this.AccumulatedDepreciationtextBox = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.BookValuetextBox = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel8.SuspendLayout();
@@ -316,7 +318,7 @@
             this.panel8.Controls.Add(this.Cancelbutton);
             this.panel8.Controls.Add(this.Savebutton);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel8.Location = new System.Drawing.Point(0, 556);
+            this.panel8.Location = new System.Drawing.Point(0, 596);
             this.panel8.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(485, 23);
@@ -402,7 +404,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(4, 470);
+            this.label7.Location = new System.Drawing.Point(4, 497);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(72, 13);
@@ -413,7 +415,7 @@
             // UsefulLifetextBox
             // 
             this.UsefulLifetextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UsefulLifetextBox.Location = new System.Drawing.Point(227, 467);
+            this.UsefulLifetextBox.Location = new System.Drawing.Point(227, 494);
             this.UsefulLifetextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.UsefulLifetextBox.MaxLength = 150;
             this.UsefulLifetextBox.Name = "UsefulLifetextBox";
@@ -613,7 +615,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(0, 579);
+            this.panel3.Location = new System.Drawing.Point(0, 619);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(485, 2);
             this.panel3.TabIndex = 256;
@@ -647,7 +649,7 @@
             // CapitalizedCosttextBox
             // 
             this.CapitalizedCosttextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CapitalizedCosttextBox.Location = new System.Drawing.Point(227, 494);
+            this.CapitalizedCosttextBox.Location = new System.Drawing.Point(227, 521);
             this.CapitalizedCosttextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.CapitalizedCosttextBox.MaxLength = 150;
             this.CapitalizedCosttextBox.Name = "CapitalizedCosttextBox";
@@ -659,7 +661,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(3, 497);
+            this.label17.Location = new System.Drawing.Point(3, 524);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(97, 13);
@@ -670,7 +672,7 @@
             // TotalAmounttextBox
             // 
             this.TotalAmounttextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalAmounttextBox.Location = new System.Drawing.Point(227, 521);
+            this.TotalAmounttextBox.Location = new System.Drawing.Point(227, 548);
             this.TotalAmounttextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.TotalAmounttextBox.MaxLength = 150;
             this.TotalAmounttextBox.Name = "TotalAmounttextBox";
@@ -682,7 +684,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(3, 524);
+            this.label18.Location = new System.Drawing.Point(3, 551);
             this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(84, 13);
@@ -713,12 +715,37 @@
             this.label19.Tag = "headerlabelblack";
             this.label19.Text = "Accumulated Depreciation";
             // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(4, 470);
+            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(69, 13);
+            this.label20.TabIndex = 266;
+            this.label20.Tag = "headerlabelblack";
+            this.label20.Text = "Book Value";
+            // 
+            // BookValuetextBox
+            // 
+            this.BookValuetextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BookValuetextBox.Location = new System.Drawing.Point(227, 467);
+            this.BookValuetextBox.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
+            this.BookValuetextBox.MaxLength = 150;
+            this.BookValuetextBox.Name = "BookValuetextBox";
+            this.BookValuetextBox.ReadOnly = true;
+            this.BookValuetextBox.Size = new System.Drawing.Size(250, 21);
+            this.BookValuetextBox.TabIndex = 265;
+            // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(485, 581);
+            this.ClientSize = new System.Drawing.Size(485, 621);
+            this.Controls.Add(this.label20);
+            this.Controls.Add(this.BookValuetextBox);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.AccumulatedDepreciationtextBox);
             this.Controls.Add(this.label18);
@@ -833,5 +860,7 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox AccumulatedDepreciationtextBox;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox BookValuetextBox;
     }
 }

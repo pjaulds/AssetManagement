@@ -224,7 +224,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.panel8);
             this.splitContainer1.Panel2.Controls.Add(this.collapsePanelControl1);
             this.splitContainer1.Size = new System.Drawing.Size(1008, 534);
-            this.splitContainer1.SplitterDistance = 172;
+            this.splitContainer1.SplitterDistance = 765;
             this.splitContainer1.SplitterWidth = 2;
             this.splitContainer1.TabIndex = 9;
             // 
@@ -348,7 +348,7 @@
             this.ultraGrid1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ultraGrid1.Location = new System.Drawing.Point(0, 48);
             this.ultraGrid1.Name = "ultraGrid1";
-            this.ultraGrid1.Size = new System.Drawing.Size(153, 482);
+            this.ultraGrid1.Size = new System.Drawing.Size(746, 482);
             this.ultraGrid1.TabIndex = 125;
             this.ultraGrid1.Text = "ultraGrid1";
             this.ultraGrid1.InitializeLayout += new Infragistics.Win.UltraWinGrid.InitializeLayoutEventHandler(this.ultraGrid1_InitializeLayout);
@@ -362,7 +362,7 @@
             this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel13.Location = new System.Drawing.Point(0, 0);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(153, 48);
+            this.panel13.Size = new System.Drawing.Size(746, 48);
             this.panel13.TabIndex = 127;
             // 
             // button1
@@ -382,7 +382,7 @@
             // expandPanelControl1
             // 
             this.expandPanelControl1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.expandPanelControl1.Location = new System.Drawing.Point(153, 0);
+            this.expandPanelControl1.Location = new System.Drawing.Point(746, 0);
             this.expandPanelControl1.Name = "expandPanelControl1";
             this.expandPanelControl1.Size = new System.Drawing.Size(15, 530);
             this.expandPanelControl1.TabIndex = 126;
@@ -433,7 +433,7 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(15, 231);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(815, 134);
+            this.panel6.Size = new System.Drawing.Size(222, 134);
             this.panel6.TabIndex = 179;
             // 
             // panel7
@@ -736,7 +736,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(15, 21);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(815, 210);
+            this.panel1.Size = new System.Drawing.Size(222, 210);
             this.panel1.TabIndex = 177;
             // 
             // panel4
@@ -1219,7 +1219,7 @@
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel11.Location = new System.Drawing.Point(15, 0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(815, 21);
+            this.panel11.Size = new System.Drawing.Size(222, 21);
             this.panel11.TabIndex = 176;
             this.panel11.Tag = "headerpanel";
             // 
@@ -1269,7 +1269,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel8.Location = new System.Drawing.Point(15, 507);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(815, 23);
+            this.panel8.Size = new System.Drawing.Size(222, 23);
             this.panel8.TabIndex = 174;
             // 
             // Cancelbutton

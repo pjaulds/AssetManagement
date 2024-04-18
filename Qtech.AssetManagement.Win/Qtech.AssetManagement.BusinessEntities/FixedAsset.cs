@@ -77,6 +77,11 @@ namespace Qtech.AssetManagement.BusinessEntities
         [Display(Name = "Accumulaged Depreciation")]
         public decimal mAccumulatedDepreciation { get; set; }
 
+        #region Fixed Asset Report
+        public decimal mBookValue { get; set; }
+        public decimal mMonthlyDepreciation { get; set; }
+        #endregion
+
         [Display(Name = "Residual Value")]
         public Decimal mResidualValue { get; set; }
 

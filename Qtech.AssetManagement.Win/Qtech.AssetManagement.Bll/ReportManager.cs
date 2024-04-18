@@ -69,6 +69,32 @@ namespace Qtech.AssetManagement.Bll
         {
             return ReportDB.BrowseReceivingDetailFromOtherDB(reportCriteria);
         }
+
+        public static DataRow Depreciation(ReportCriteria reportCriteria)
+        {
+            FixedAssetSetting item = FixedAssetSettingManager.GetList().Where(x => x.mAssetTypeId == reportCriteria.mAssetTypeId).First();
+            
+            DataTable dt = new DataTable();
+            if (item.mDepreciationMethodId == (int)DepreciationMethodEnum.StraightLine)
+            {
+                if (item.mAveragingMethodId == (int)AveragingMethodEnum.FullMonth)
+                    dt = DepreciationScheduleStraightLineFullMonthMonthly(reportCriteria);
+                else if (item.mAveragingMethodId == (int)AveragingMethodEnum.ActualDays)
+                    dt = DepreciationScheduleStraightLineActualDaysMonthly(reportCriteria);
+
+            }
+
+            if (item.mDepreciationMethodId == (int)DepreciationMethodEnum.SYD)
+            {
+                if (item.mAveragingMethodId == (int)AveragingMethodEnum.FullMonth)
+                    dt = DepreciationScheduleSYDFullMonthMonthly(reportCriteria);
+                else if (item.mAveragingMethodId == (int)AveragingMethodEnum.ActualDays)
+                    dt = DepreciationScheduleSYDActualDaysMonthly(reportCriteria);
+            }
+
+            if (dt.Rows.Count > 0) return dt.Rows[0];
+            else return null;
+        }
         #endregion
     }
 }

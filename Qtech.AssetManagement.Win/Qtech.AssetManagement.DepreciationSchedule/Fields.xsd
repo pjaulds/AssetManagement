@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Fields" targetNamespace="http://tempuri.org/Fields.xsd" xmlns:mstns="http://tempuri.org/Fields.xsd" xmlns="http://tempuri.org/Fields.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Fields" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Fields" msprop:Generator_UserDSName="Fields">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Fields" msprop:Generator_TableClassName="FieldsDataTable" msprop:Generator_TableVarName="tableFields" msprop:Generator_RowChangedName="FieldsRowChanged" msprop:Generator_TablePropName="_Fields" msprop:Generator_RowDeletingName="FieldsRowDeleting" msprop:Generator_RowChangingName="FieldsRowChanging" msprop:Generator_RowEvHandlerName="FieldsRowChangeEventHandler" msprop:Generator_RowDeletedName="FieldsRowDeleted" msprop:Generator_RowClassName="FieldsRow" msprop:Generator_UserTableName="Fields" msprop:Generator_RowEvArgName="FieldsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="mAssetTypeName" msprop:Generator_ColumnVarNameInTable="columnmAssetTypeName" msprop:Generator_ColumnPropNameInRow="mAssetTypeName" msprop:Generator_ColumnPropNameInTable="mAssetTypeNameColumn" msprop:Generator_UserColumnName="mAssetTypeName" type="xs:string" minOccurs="0" />
+              <xs:element name="mAssetNo" msprop:Generator_ColumnVarNameInTable="columnmAssetNo" msprop:Generator_ColumnPropNameInRow="mAssetNo" msprop:Generator_ColumnPropNameInTable="mAssetNoColumn" msprop:Generator_UserColumnName="mAssetNo" type="xs:string" minOccurs="0" />
+              <xs:element name="mProductName" msprop:Generator_ColumnVarNameInTable="columnmProductName" msprop:Generator_ColumnPropNameInRow="mProductName" msprop:Generator_ColumnPropNameInTable="mProductNameColumn" msprop:Generator_UserColumnName="mProductName" type="xs:string" minOccurs="0" />
+              <xs:element name="mDepreciationMethodName" msprop:Generator_ColumnVarNameInTable="columnmDepreciationMethodName" msprop:Generator_ColumnPropNameInRow="mDepreciationMethodName" msprop:Generator_ColumnPropNameInTable="mDepreciationMethodNameColumn" msprop:Generator_UserColumnName="mDepreciationMethodName" type="xs:string" minOccurs="0" />
+              <xs:element name="mPurchaseDate" msprop:Generator_ColumnVarNameInTable="columnmPurchaseDate" msprop:Generator_ColumnPropNameInRow="mPurchaseDate" msprop:Generator_ColumnPropNameInTable="mPurchaseDateColumn" msprop:Generator_UserColumnName="mPurchaseDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="mUsefulLifeYears" msprop:Generator_ColumnVarNameInTable="columnmUsefulLifeYears" msprop:Generator_ColumnPropNameInRow="mUsefulLifeYears" msprop:Generator_ColumnPropNameInTable="mUsefulLifeYearsColumn" msprop:Generator_UserColumnName="mUsefulLifeYears" type="xs:decimal" minOccurs="0" />
+              <xs:element name="mPurchasePrice" msprop:Generator_ColumnVarNameInTable="columnmPurchasePrice" msprop:Generator_ColumnPropNameInRow="mPurchasePrice" msprop:Generator_ColumnPropNameInTable="mPurchasePriceColumn" msprop:Generator_UserColumnName="mPurchasePrice" type="xs:decimal" minOccurs="0" />
+              <xs:element name="mAccumulatedDepreciation" msprop:Generator_ColumnVarNameInTable="columnmAccumulatedDepreciation" msprop:Generator_ColumnPropNameInRow="mAccumulatedDepreciation" msprop:Generator_ColumnPropNameInTable="mAccumulatedDepreciationColumn" msprop:Generator_UserColumnName="mAccumulatedDepreciation" type="xs:decimal" minOccurs="0" />
+              <xs:element name="mBookValue" msprop:Generator_ColumnVarNameInTable="columnmBookValue" msprop:Generator_ColumnPropNameInRow="mBookValue" msprop:Generator_ColumnPropNameInTable="mBookValueColumn" msprop:Generator_UserColumnName="mBookValue" type="xs:decimal" minOccurs="0" />
+              <xs:element name="mMonthlyDepreciation" msprop:Generator_ColumnVarNameInTable="columnmMonthlyDepreciation" msprop:Generator_ColumnPropNameInRow="mMonthlyDepreciation" msprop:Generator_ColumnPropNameInTable="mMonthlyDepreciationColumn" msprop:Generator_UserColumnName="mMonthlyDepreciation" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

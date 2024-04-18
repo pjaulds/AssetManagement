@@ -90,6 +90,9 @@ namespace Qtech.AssetManagement.Bll
             if (PurchaseOrderDB.Delete(myPurchaseOrder.mId))
             {
                 AuditDelete(myPurchaseOrder);
+
+
+
                 return myPurchaseOrder.mId;
             }
 

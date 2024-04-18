@@ -76,7 +76,31 @@
     <Compile Include="Default.Designer.cs">
       <DependentUpon>Default.cs</DependentUpon>
     </Compile>
+    <Compile Include="Default2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Default2.Designer.cs">
+      <DependentUpon>Default2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DepreciationSchedule.cs" />
+    <Compile Include="Fields.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Fields.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FixedAssetReportViewer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FixedAssetReportViewer.Designer.cs">
+      <DependentUpon>FixedAssetReportViewer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Release\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Release\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
     <Compile Include="SYDFullMonthAnnually\Fields.Designer.cs">
       <DependentUpon>Fields.xsd</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -179,6 +203,16 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Qasa_Qtech\Qtech.Qasa.Win\Qtech.Qasa.PluginInterface\Qtech.Qasa.PluginInterface.csproj">
+      <Project>{8b592ba0-81d4-4fb8-86cb-3077b2739ee3}</Project>
+      <Name>Qtech.Qasa.PluginInterface</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Qasa_Qtech\Qtech.Qasa.Win\Qtech.Qasa.Utilities\Qtech.Qasa.Utilities.csproj">
+      <Project>{4a2e7b7b-362a-407f-a051-3a83f7f2dbde}</Project>
+      <Name>Qtech.Qasa.Utilities</Name>
+      <Private>False</Private>
+    </ProjectReference>
     <ProjectReference Include="..\Qtech.AssetManagement.Bll\Qtech.AssetManagement.Bll.csproj">
       <Project>{8455616d-52ab-4f20-b9a6-02af254065b3}</Project>
       <Name>Qtech.AssetManagement.Bll</Name>
@@ -208,6 +242,13 @@
   <ItemGroup>
     <EmbeddedResource Include="Default.resx">
       <DependentUpon>Default.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Default2.resx">
+      <DependentUpon>Default2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FixedAssetReportRpt.rdlc" />
+    <EmbeddedResource Include="FixedAssetReportViewer.resx">
+      <DependentUpon>FixedAssetReportViewer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="SYDFullMonthAnnually\SYDFullMonthAnnuallyRpt.rdlc" />
@@ -250,6 +291,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Fields.xsc">
+      <DependentUpon>Fields.xsd</DependentUpon>
+    </None>
+    <None Include="Fields.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Fields.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Fields.xss">
+      <DependentUpon>Fields.xsd</DependentUpon>
+    </None>
     <None Include="SYDFullMonthAnnually\Fields.xsc">
       <DependentUpon>Fields.xsd</DependentUpon>
     </None>

@@ -27,9 +27,9 @@ namespace Qtech.AssetManagement.BusinessEntities
         [Display(Name = "Parent FL")]
         public String mParentFlName { get; set; }
 
-        [Required]
+        //[Required]
         [Display(Name = "Status")]
-        [NotNullOrEmpty(Message = "Please select status.")]
+        //[NotNullOrEmpty(Message = "Please select status.")]
         public String mFlStatus { get; set; }
 
         [Display(Name = "Address Name")]

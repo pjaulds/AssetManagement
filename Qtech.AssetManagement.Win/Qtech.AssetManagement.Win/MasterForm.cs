@@ -317,10 +317,10 @@ namespace Qtech.AssetManagement.Win
                     break;
                 case "DepreciationSchedule":
                     if (!AllowToAccess((Int32)Modules.DepreciationSchedule)) return;
-                    DepreciationSchedule.Default depreciationScheduleForm = null;
-                    if ((depreciationScheduleForm = (DepreciationSchedule.Default)IsFormAlreadyOpen(typeof(DepreciationSchedule.Default))) == null)
+                    DepreciationSchedule.Default2 depreciationScheduleForm = null;
+                    if ((depreciationScheduleForm = (DepreciationSchedule.Default2)IsFormAlreadyOpen(typeof(DepreciationSchedule.Default2))) == null)
                     {
-                        DepreciationSchedule.Default depreciationScheduleFormChild = new DepreciationSchedule.Default();
+                        DepreciationSchedule.Default2 depreciationScheduleFormChild = new DepreciationSchedule.Default2();
                         depreciationScheduleFormChild.MdiParent = this;
                         depreciationScheduleFormChild.Show();
                     }

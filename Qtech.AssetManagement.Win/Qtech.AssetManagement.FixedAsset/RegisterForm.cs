@@ -69,7 +69,6 @@ namespace Qtech.AssetManagement.FixedAsset
             PurchaseDatetextBox.Text = fa.mPurchaseDate.ToString("D");
             PurchaseCosttextBox.Text = fa.mPurchasePrice.ToString("N");
             ResidualValuetextBox.Text = fa.mResidualValue.ToString("N");
-            AccumulatedDepreciationtextBox.Text = fa.mAccumulatedDepreciation.ToString("N");
             UsefulLifetextBox.Text = fa.mUsefulLifeYears.ToString();
       //some comments
         }
@@ -88,11 +87,27 @@ namespace Qtech.AssetManagement.FixedAsset
 
         private void LoadFormControlsFromAssetType(BusinessEntities.FixedAsset fa)
         {
+
             FixedAssetSetting item = FixedAssetSettingManager.GetList().Where(x => x.mAssetTypeId == fa.mAssetTypeId).First();
-            
             AssetAccounttextBox.Text = item.mChartOfAccountCode + " - " + item.mChartOfAccountName;
-            AccumulatedDepreciationAccounttextBox.Text = item.mAccumulatedDepreciationAccountCode + " - " + item.mAccumulatedDepreciationAccountName;
             DepreciationExpenseAccounttextBox.Text = item.mDepreciationExpenseAccountCode + " - " + item.mDepreciationExpenseAccountName;
+            
+            ReportCriteria criteria = new ReportCriteria();
+            criteria.mId = fa.mId;
+            criteria.mYear = (short)AuditManager.GetDateToday().Year;
+            criteria.mAssetTypeId = fa.mAssetTypeId;
+
+            decimal accumulatedDepreciationAmount = 0;
+            decimal bookValueEnd = 0;
+
+            DataRow dr = ReportManager.Depreciation(criteria);
+            if (dr == null) return;
+            
+            accumulatedDepreciationAmount = Convert.ToDecimal(dr["Ending"]);
+            bookValueEnd = Convert.ToDecimal(dr["BookValueEnd"]);
+            
+            AccumulatedDepreciationtextBox.Text = accumulatedDepreciationAmount.ToString("N");
+            BookValuetextBox.Text = bookValueEnd.ToString("N");
         }
 
         private void TotalCapitalizedCost()
