@@ -23,7 +23,7 @@ namespace Qtech.AssetManagement.DepreciationSchedule
         string myImageName = @"images\purchase_request_50px.png";
         int myModuleId = 2006;
         string myModulePart = "AssetManagement";
-        Form myForm = new Default();
+        Form myForm = new Default2();
 
         public IPluginHost Host
         {
@@ -80,8 +80,8 @@ namespace Qtech.AssetManagement.DepreciationSchedule
 
         public void Initialize()
         {
-            myForm = new Default();
-            Default f = (Default)myForm;
+            myForm = new Default2();
+            Default2 f = (Default2)myForm;
             f.PluginHost = this.Host;
             f.Plugin = this;
         }

@@ -1,6 +1,7 @@
 ﻿using Qtech.AssetManagement.Bll;
 using Qtech.AssetManagement.BusinessEntities;
 using Qtech.AssetManagement.Utilities;
+using Qtech.Qasa.PluginInterface;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,6 +21,8 @@ namespace Qtech.AssetManagement.DepreciationSchedule
             InitializeComponent();
         }
 
+        public IPluginHost PluginHost { get; set; }
+        public IPlugin Plugin { get; set; }
         private void LoadDates()
         {
             if (MonthcomboBox.SelectedIndex == -1) return;

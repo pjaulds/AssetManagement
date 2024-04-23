@@ -46,7 +46,7 @@ namespace Qtech.AssetManagement.DepreciationSchedule
             CreateParameter(1, "Year", mYear);         
 
             reportViewer1.LocalReport.SetParameters(myReportParameter);
-            reportViewer1.SetDisplayMode(DisplayMode.Normal);
+            reportViewer1.SetDisplayMode(DisplayMode.PrintLayout);
             reportViewer1.RefreshReport();
         }
     }
