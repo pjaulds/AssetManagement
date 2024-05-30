@@ -102,6 +102,7 @@ namespace Qtech.AssetManagement.FixedAsset
             myFixedAsset.mId = int.Parse(Idlabel.Text);
             myFixedAsset.mAssetNo = AssetNotextBox.Text;
             myFixedAsset.mProductId = int.Parse(ProductIdlabel.Text);
+            myFixedAsset.mProductId = myFixedAsset.mProductId == 0 ? SaveProduct() : myFixedAsset.mProductId;
             myFixedAsset.mReceivingDetailId = int.Parse(ReceivingDetailIdlabel.Text);
             myFixedAsset.mAssetTypeId = ControlUtil.UltraComboReturnValue(AssetTypeutraCombo);
             myFixedAsset.mAssetTypeName = AssetTypeutraCombo.Text;
@@ -158,6 +159,27 @@ namespace Qtech.AssetManagement.FixedAsset
             DisposedcheckBox.Checked = myFixedAsset.mIsDisposed;
             RegisterByIdlabel.Text = myFixedAsset.mRegisterById.ToString();
             RegisterBytextBox.Text = myFixedAsset.mRegisterByName;
+        }
+
+        //save product as new
+        private int SaveProduct()
+        {
+            BusinessEntities.Product product = new Product();
+            LoadProductFromFormControls(product);
+            return ProductManager.Save(product);
+        }
+
+        private void LoadProductFromFormControls(BusinessEntities.Product product)
+        {
+            product.mAssetTypeId = ControlUtil.UltraComboReturnValue(AssetTypeutraCombo);
+            
+            if(FixedAssetSettingManager.GetList().Where(x => x.mAssetTypeId == product.mAssetTypeId).Count()>0)
+            {
+                product.mAssetClassId = FixedAssetSettingManager.GetList().Where(x => x.mAssetTypeId == product.mAssetTypeId).First().mAssetClassId;
+            }
+
+            product.mName = ProductNametextBox.Text;
+            product.mUserId = SessionUtil.mUser.mId;
         }
 
         public void LoadFormControlsFromReceivingDetail(ReceivingDetail myReceivingDetail)
@@ -291,6 +313,12 @@ namespace Qtech.AssetManagement.FixedAsset
                 Close();
                 return;
             }
+            else
+            {
+                EndEditing();
+                LoadFormControlsFromUser(item);
+                ControlUtil.ExpandPanel(splitContainer1);
+            }
         }
 
         private void ultraGrid1_BeforeRowsDeleted(object sender, Infragistics.Win.UltraWinGrid.BeforeRowsDeletedEventArgs e)
@@ -393,7 +421,7 @@ namespace Qtech.AssetManagement.FixedAsset
             if (Idlabel.Text == "0") DescriptiontextBox.Text = "Beginning Balance";
             AccumulatedDepreciationtextBox.Enabled = BeginningBalanceradioButton.Checked;
 
-            BrowseProductlinkLabel.Visible = BeginningBalanceradioButton.Checked;
+            //BrowseProductlinkLabel.Visible = BeginningBalanceradioButton.Checked;
         }
 
         private void NewPurchaseradioButton_CheckedChanged(object sender, EventArgs e)

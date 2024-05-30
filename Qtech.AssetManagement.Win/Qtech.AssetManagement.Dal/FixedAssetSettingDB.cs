@@ -113,6 +113,10 @@ namespace Qtech.AssetManagement.Dal
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@averaging_method_id", myFixedAssetSetting.mAveragingMethodId);
                 Helpers.CreateParameter(myCommand, DbType.Decimal, "@useful_life_years", myFixedAssetSetting.mUsefulLifeYears);
                 Helpers.CreateParameter(myCommand, DbType.Boolean, "@depreciable", myFixedAssetSetting.mDepreciable);
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@active", myFixedAssetSetting.mActive);
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@depreciation_expense_account_admin_id", myFixedAssetSetting.mDepreciationExpenseAccountAdminId);
+                Helpers.CreateParameter(myCommand, DbType.Decimal, "@depreciation_expense_account_production_value", myFixedAssetSetting.mDepreciationExpenseAccountProductionValue);
+                Helpers.CreateParameter(myCommand, DbType.Decimal, "@depreciation_expense_account_admin_value", myFixedAssetSetting.mDepreciationExpenseAccountAdminValue);
 
                 Helpers.SetSaveParameters(myCommand, myFixedAssetSetting);
 
@@ -189,6 +193,13 @@ namespace Qtech.AssetManagement.Dal
 
             fixedassetsetting.mUsefulLifeYears = myDataRecord.GetDecimal(myDataRecord.GetOrdinal("useful_life_years"));
             fixedassetsetting.mDepreciable = myDataRecord.GetBoolean(myDataRecord.GetOrdinal("depreciable"));
+            fixedassetsetting.mActive = myDataRecord.GetBoolean(myDataRecord.GetOrdinal("active"));
+
+            fixedassetsetting.mDepreciationExpenseAccountAdminAccountCode = myDataRecord.GetString(myDataRecord.GetOrdinal("depreciation_expense_admin_account_code"));
+            fixedassetsetting.mDepreciationExpenseAccountAdminAccountName = myDataRecord.GetString(myDataRecord.GetOrdinal("depreciation_expense_admin_account_name"));
+            fixedassetsetting.mDepreciationExpenseAccountAdminId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("depreciation_expense_account_admin_id"));
+            fixedassetsetting.mDepreciationExpenseAccountProductionValue = myDataRecord.GetDecimal(myDataRecord.GetOrdinal("depreciation_expense_account_production_value"));
+            fixedassetsetting.mDepreciationExpenseAccountAdminValue = myDataRecord.GetDecimal(myDataRecord.GetOrdinal("depreciation_expense_account_admin_value"));
 
             return fixedassetsetting;
         }

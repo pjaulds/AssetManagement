@@ -17,14 +17,14 @@ namespace Qtech.AssetManagement.BusinessEntities
         public String mAssetTypeName { get; set; }
 
         [Display(Name = "Asset Class")]
-        [NotEqualTo(Message = "Please select asset class", mValue = "0")]
+        //[NotEqualTo(Message = "Please select asset class", mValue = "0")]
         public Int32 mAssetClassId { get; set; }
         public String mAssetClassName { get; set; }
 
-        [Required]
-        [StringLength(50, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 3)]
-        [Display(Name = "Code")]
-        [NotNullOrEmpty(Message = "Please enter valid product code.")]
+        //[Required]
+        //[StringLength(50, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 3)]
+        //[Display(Name = "Code")]
+        //[NotNullOrEmpty(Message = "Please enter valid product code.")]
         public String mCode { get; set; }
 
         [Required]

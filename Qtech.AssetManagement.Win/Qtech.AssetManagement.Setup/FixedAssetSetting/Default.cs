@@ -94,6 +94,11 @@ namespace Qtech.AssetManagement.Setup.FixedAssetSetting
 
             myUser.mDepreciationExpenseAccountId = ControlUtil.UltraComboReturnValue(DepreciationExpenseAccountultraCombo);
             myUser.mDepreciationExpenseAccountName = DepreciationExpenseAccountultraCombo.Text;
+            myUser.mDepreciationExpenseAccountProductionValue = ControlUtil.TextBoxDecimal(DepAccountProductionValuetextBox);
+
+            myUser.mDepreciationExpenseAccountAdminId = ControlUtil.UltraComboReturnValue(DepreciationExpenseAccountAdminultraCombo);
+            myUser.mDepreciationExpenseAccountAdminAccountName = DepreciationExpenseAccountAdminultraCombo.Text;
+            myUser.mDepreciationExpenseAccountAdminValue = ControlUtil.TextBoxDecimal(DepAccountAdminValuetextBox);
 
             myUser.mDepreciationMethodId = ControlUtil.UltraComboReturnValue(DepreciationMethodultraCombo);
             myUser.mDepreciationMethodName = DepreciationMethodultraCombo.Text;
@@ -103,6 +108,7 @@ namespace Qtech.AssetManagement.Setup.FixedAssetSetting
 
             myUser.mUsefulLifeYears = ControlUtil.TextBoxDecimal(UsefulLifeYearstextBox);
             myUser.mDepreciable = DepreciablecheckBox.Checked;
+            myUser.mActive = ActivecheckBox.Checked;
             myUser.mUserId = SessionUtil.mUser.mId;
         }
 
@@ -114,10 +120,14 @@ namespace Qtech.AssetManagement.Setup.FixedAssetSetting
             AssetAccountultraCombo.Value = myFixedAssetSetting.mChartOfAccountId;
             AccumulatedDepreciationAccountultraCombo.Value = myFixedAssetSetting.mAccumulatedDepreciationAccountId;
             DepreciationExpenseAccountultraCombo.Value = myFixedAssetSetting.mDepreciationExpenseAccountId;
+            DepAccountProductionValuetextBox.Text = myFixedAssetSetting.mDepreciationExpenseAccountProductionValue.ToString();
+            DepreciationExpenseAccountAdminultraCombo.Value = myFixedAssetSetting.mDepreciationExpenseAccountAdminId;
+            DepAccountAdminValuetextBox.Text = myFixedAssetSetting.mDepreciationExpenseAccountAdminValue.ToString();
             DepreciationMethodultraCombo.Value = myFixedAssetSetting.mDepreciationMethodId;
             AveragingMethodultraCombo.Value = myFixedAssetSetting.mAveragingMethodId;
             UsefulLifeYearstextBox.Text = myFixedAssetSetting.mUsefulLifeYears.ToString("N");
             DepreciablecheckBox.Checked = myFixedAssetSetting.mDepreciable;
+            ActivecheckBox.Checked = myFixedAssetSetting.mActive;
         }
 
         private void EndEditing()
@@ -142,7 +152,7 @@ namespace Qtech.AssetManagement.Setup.FixedAssetSetting
             ControlUtil.ExpandPanel(splitContainer1);
 
             AssetTypeutraCombo.Focus();
-
+            
         }
 
         public int SaveRecords()
@@ -269,6 +279,7 @@ namespace Qtech.AssetManagement.Setup.FixedAssetSetting
             UltraComboUtil.ChartOfAccount(AssetAccountultraCombo);
             UltraComboUtil.ChartOfAccount(AccumulatedDepreciationAccountultraCombo);
             UltraComboUtil.ChartOfAccount(DepreciationExpenseAccountultraCombo);
+            UltraComboUtil.ChartOfAccount(DepreciationExpenseAccountAdminultraCombo);
             UltraComboUtil.DepreciationMethod(DepreciationMethodultraCombo);
             UltraComboUtil.AveragingMethod(AveragingMethodultraCombo);
         }
@@ -295,6 +306,8 @@ namespace Qtech.AssetManagement.Setup.FixedAssetSetting
             DepreciationMethodultraCombo.Enabled = DepreciablecheckBox.Checked;
             AveragingMethodultraCombo.Enabled = DepreciablecheckBox.Checked;
             UsefulLifeYearstextBox.Enabled = DepreciablecheckBox.Checked;
+            AccumulatedDepreciationAccountultraCombo.Enabled = DepreciablecheckBox.Checked;
+            DepreciationExpenseAccountultraCombo.Enabled = DepreciablecheckBox.Checked;
         }
     }
 }

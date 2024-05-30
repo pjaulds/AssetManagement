@@ -210,6 +210,7 @@ namespace Qtech.AssetManagement.Dal
             fixedasset.mRegisterById = myDataRecord.GetInt32(myDataRecord.GetOrdinal("register_by_id"));
             fixedasset.mRegisterByName = myDataRecord.GetString(myDataRecord.GetOrdinal("register_by_name"));
             fixedasset.mReturedToSupplier = myDataRecord.GetBoolean(myDataRecord.GetOrdinal("returned_to_supplier"));
+            fixedasset.mAssetTransactionNo = myDataRecord.GetString(myDataRecord.GetOrdinal("asset_transaction_no"));
             return fixedasset;
         }
     }

@@ -91,6 +91,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Qasa_Qtech\Qtech.Qasa.Win\Banner.Systems.Utilities\Banner.Systems.Utilities.csproj">
+      <Project>{64bf4df0-9cfc-4608-aaf9-59a2ae2da740}</Project>
+      <Name>Banner.Systems.Utilities</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\..\..\Qasa_Qtech\Qtech.Qasa.Win\Qtech.Qasa.Utilities\Qtech.Qasa.Utilities.csproj">
       <Project>{4a2e7b7b-362a-407f-a051-3a83f7f2dbde}</Project>
       <Name>Qtech.Qasa.Utilities</Name>

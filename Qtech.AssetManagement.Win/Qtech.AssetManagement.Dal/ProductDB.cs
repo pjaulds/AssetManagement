@@ -117,7 +117,7 @@ namespace Qtech.AssetManagement.Dal
 
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@asset_type_id", myProduct.mAssetTypeId);
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@asset_class_id", myProduct.mAssetClassId);
-                Helpers.CreateParameter(myCommand, DbType.String, "@code", myProduct.mCode);
+                Helpers.CreateParameter(myCommand, DbType.String, "@code", string.IsNullOrEmpty(myProduct.mCode) ? string.Empty : myProduct.mCode);
                 Helpers.CreateParameter(myCommand, DbType.String, "@name", myProduct.mName);
                 Helpers.CreateParameter(myCommand, DbType.Int32, "@unit_id", myProduct.mUnitId);
                 Helpers.CreateParameter(myCommand, DbType.Boolean, "@post", myProduct.mPost);

@@ -110,6 +110,47 @@ namespace Qtech.AssetManagement.Audit
                 audit_collection.Add(audit);
             }
 
+            if (fixedassetsetting.mActive != fixedassetsettingOld.mActive)
+            {
+                audit = new BusinessEntities.Audit();
+                LoadCommonData(ref audit, fixedassetsetting);
+                audit.mField = "Active";
+                audit.mOldValue = fixedassetsettingOld.mActive.ToString();
+                audit.mNewValue = fixedassetsetting.mActive.ToString();
+                audit_collection.Add(audit);
+            }
+
+            if (fixedassetsetting.mDepreciationExpenseAccountAdminId != fixedassetsettingOld.mDepreciationExpenseAccountAdminId)
+            {
+                audit = new BusinessEntities.Audit();
+                LoadCommonData(ref audit, fixedassetsetting);
+                audit.mField = "Depreciation Expense Account Admin ";
+                audit.mOldValue = fixedassetsettingOld.mDepreciationExpenseAccountAdminAccountName.ToString();
+                audit.mNewValue = fixedassetsetting.mDepreciationExpenseAccountAdminAccountName.ToString();
+                audit_collection.Add(audit);
+            }
+
+            if (fixedassetsetting.mDepreciationExpenseAccountProductionValue != fixedassetsettingOld.mDepreciationExpenseAccountProductionValue)
+            {
+                audit = new BusinessEntities.Audit();
+                LoadCommonData(ref audit, fixedassetsetting);
+                audit.mField = "Depreciation Expense Account Production Value";
+                audit.mOldValue = fixedassetsettingOld.mDepreciationExpenseAccountProductionValue.ToString();
+                audit.mNewValue = fixedassetsetting.mDepreciationExpenseAccountProductionValue.ToString();
+                audit_collection.Add(audit);
+            }
+
+            if (fixedassetsetting.mDepreciationExpenseAccountAdminValue != fixedassetsettingOld.mDepreciationExpenseAccountAdminValue)
+            {
+                audit = new BusinessEntities.Audit();
+                LoadCommonData(ref audit, fixedassetsetting);
+                audit.mField = "Depreciation Expense Account Admin Value";
+                audit.mOldValue = fixedassetsettingOld.mDepreciationExpenseAccountAdminValue.ToString();
+                audit.mNewValue = fixedassetsetting.mDepreciationExpenseAccountAdminValue.ToString();
+                audit_collection.Add(audit);
+            }
+
+
             return audit_collection;
         }
 

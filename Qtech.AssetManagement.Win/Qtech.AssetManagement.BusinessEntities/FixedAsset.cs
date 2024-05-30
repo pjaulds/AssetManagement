@@ -15,10 +15,10 @@ namespace Qtech.AssetManagement.BusinessEntities
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:D}")]
         public DateTime mDateFiled { get; set; }
 
-        [Required]
+        //[Required]
         [StringLength(50, ErrorMessage = "The {0} must be at least {2} characters long.", MinimumLength = 3)]
         [Display(Name = "Code/Number")]
-        [NotNullOrEmpty(Message = "Please enter asset code/number.")]
+        //[NotNullOrEmpty(Message = "Please enter asset code/number.")]
         public String mAssetNo { get; set; }
         
         [NotEqualTo(Message = "Please select item", mValue = "0")]
@@ -93,7 +93,7 @@ namespace Qtech.AssetManagement.BusinessEntities
         public int mRegisterById { get; set; }
         public string mRegisterByName { get; set; }
         public bool mReturedToSupplier { get; set; }
-
+        public string mAssetTransactionNo { get; set; }
         public FixedAssetCapitalizedCostCollection mFixedAssetCapitalizedCostCollection { get; set; }
         public FixedAssetCapitalizedCostCollection mDeletedFixedAssetCapitalizedCostCollection { get; set; }
         #endregion

@@ -64,7 +64,8 @@ namespace Qtech.AssetManagement.Utilities
 
         public static Boolean AskDelete()
         {
-            return MessageBox.Show("Are you sure you want to delete record(s)?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
+            //return MessageBox.Show("Are you sure you want to delete record(s)?", "Delete", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
+            return Banner.Systems.Utilities.MessageUtil.AskDelete();
         }
 
         public static Boolean AskCancelEdit()

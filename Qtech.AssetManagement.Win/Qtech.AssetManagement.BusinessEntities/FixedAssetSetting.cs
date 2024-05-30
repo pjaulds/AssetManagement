@@ -11,6 +11,7 @@ namespace Qtech.AssetManagement.BusinessEntities
 
         public override Int32 mId { get; set; }
         [Display(Name = "Code")]
+        [NotNullOrEmpty(Message = "Please enter asset code/number.")]
         public string mCode { get; set; }
 
         [Display(Name = "Asset Type")]
@@ -31,25 +32,25 @@ namespace Qtech.AssetManagement.BusinessEntities
 
 
         [Display(Name = "Accumulated Depreciation Account")]
-        [NotEqualTo(Message = "Please select accumulated depreciation account", mValue = "0")]
+        //[NotEqualTo(Message = "Please select accumulated depreciation account", mValue = "0")]
         public Int32 mAccumulatedDepreciationAccountId { get; set; }
         public String mAccumulatedDepreciationAccountCode { get; set; }
         public String mAccumulatedDepreciationAccountName { get; set; }
 
         [Display(Name = "Depreciation Expense Account")]
-        [NotEqualTo(Message = "Please select depreciation expense account", mValue = "0")]
+        //[NotEqualTo(Message = "Please select depreciation expense account", mValue = "0")]
         public Int32 mDepreciationExpenseAccountId { get; set; }
         public String mDepreciationExpenseAccountCode { get; set; }
         public String mDepreciationExpenseAccountName { get; set; }
 
         [Display(Name = "Depreciation Method")]
-        [NotEqualTo(Message = "Please select depreciation method", mValue = "0")]
+        //[NotEqualTo(Message = "Please select depreciation method", mValue = "0")]
         public Int32 mDepreciationMethodId { get; set; }
         public String mDepreciationMethodCode { get; set; }
         public String mDepreciationMethodName { get; set; }
 
         [Display(Name = "Averaging Method")]
-        [NotEqualTo(Message = "Please select averaging method", mValue = "0")]
+        //[NotEqualTo(Message = "Please select averaging method", mValue = "0")]
         public Int32 mAveragingMethodId { get; set; }
         public String mAveragingMethodCode { get; set; }
         public String mAveragingMethodName { get; set; }
@@ -57,10 +58,20 @@ namespace Qtech.AssetManagement.BusinessEntities
 
         public bool mDepreciable { get; set; }
 
+        [Display(Name = "Active")]
+        public bool mActive { get; set; }
+
+        public Int32 mDepreciationExpenseAccountAdminId { get; set; }
+        public String mDepreciationExpenseAccountAdminAccountCode { get; set; }
+        public String mDepreciationExpenseAccountAdminAccountName { get; set; }
+        public Decimal mDepreciationExpenseAccountProductionValue { get; set; }
+        public Decimal mDepreciationExpenseAccountAdminValue { get; set; }
+
 
         public string mAssetAccountHeaderText { get { return "Asset Account"; } }
         public string mAccumulatedDepreciationAccountHeaderText { get { return "Accumulated Depreciation Account"; } }
-        public string mDepreciationExpenseAccountHeaderText { get { return "Depreciation Expense Account"; } }
+        public string mDepreciationExpenseAccountHeaderText { get { return "Depreciation Expense Account Production"; } }
+        public string mDepreciationExpenseAccountAdminHeaderText { get { return "Depreciation Expense Account Admin"; } }
         public string mDepreciationMethodText { get { return "Depreciation Method"; } }
         public string mAveragingMethodText { get { return "Averaging Method"; } }
         #endregion
