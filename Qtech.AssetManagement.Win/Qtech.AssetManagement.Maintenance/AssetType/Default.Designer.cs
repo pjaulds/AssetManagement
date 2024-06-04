@@ -119,7 +119,7 @@
             ultraGridColumn3.Header.Caption = "Title";
             ultraGridColumn3.Header.VisiblePosition = 2;
             ultraGridColumn3.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(350, 0);
-            ultraGridColumn4.Header.Caption = "Post";
+            ultraGridColumn4.Header.Caption = "Active";
             ultraGridColumn4.Header.VisiblePosition = 3;
             ultraGridBand1.Columns.AddRange(new object[] {
             ultraGridColumn1,
@@ -222,9 +222,9 @@
             this.PostcheckBox.Font = new System.Drawing.Font("Tahoma", 8.25F);
             this.PostcheckBox.Location = new System.Drawing.Point(119, 61);
             this.PostcheckBox.Name = "PostcheckBox";
-            this.PostcheckBox.Size = new System.Drawing.Size(47, 17);
+            this.PostcheckBox.Size = new System.Drawing.Size(56, 17);
             this.PostcheckBox.TabIndex = 12;
-            this.PostcheckBox.Text = "Post";
+            this.PostcheckBox.Text = "Active";
             this.PostcheckBox.UseVisualStyleBackColor = true;
             // 
             // NametextBox
