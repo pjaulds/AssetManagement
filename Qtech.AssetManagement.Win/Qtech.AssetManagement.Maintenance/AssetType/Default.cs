@@ -16,7 +16,7 @@ using System.Windows.Forms;
 
 namespace Qtech.AssetManagement.Maintenance.AssetType
 {
-    public partial class Default : Form, ICRUD
+    public partial class Default : Form, ICRUD, IComboSelection
     {
         public Default()
         {
@@ -50,30 +50,50 @@ namespace Qtech.AssetManagement.Maintenance.AssetType
         #region Private Methods
         private void LoadAssetType()
         {
-            ultraGrid1.SetDataBinding(AssetTypeManager.GetList(), null, true);
-            ultraGrid1.Refresh();
+            try
+            {
+                ultraGrid1.SetDataBinding(AssetTypeManager.GetList(), null, true);
+                ultraGrid1.Refresh();
+            }
+            catch {
+            }
         }
 
         private int SaveAssetType()
         {
-            BusinessEntities.AssetType item = new BusinessEntities.AssetType();
-            LoadAssetTypeFromFormControls(item);
-
-            //validate if all the rules of Status has been meet
-            if (item.Validate())
+            try
             {
-                Int32 id = AssetTypeManager.Save(item);
-                EndEditing();
-                LoadAssetType();
+                BusinessEntities.AssetType item = new BusinessEntities.AssetType();
+                LoadAssetTypeFromFormControls(item);
 
-                return id;
+                //validate if all the rules of Status has been meet
+                if (item.Validate())
+                {
+                    Int32 id = AssetTypeManager.Save(item);
 
+                    if (Idlabel.Text == "0") MessageUtil.Created(item.mCode);
+                    else MessageUtil.Updated(item.mCode);
+
+                    EndEditing();
+                    LoadAssetType();
+
+                    return id;
+
+                }
+                else
+                {
+                    ValidationListForm validationForm = new ValidationListForm();
+                    validationForm.mBrokenRules = item.BrokenRules;
+                    validationForm.ShowDialog();
+                    return 0;
+                }
             }
-            else
+            catch (Exception ex)
             {
-                ValidationListForm validationForm = new ValidationListForm();
-                validationForm.mBrokenRules = item.BrokenRules;
-                validationForm.ShowDialog();
+                if (SessionUtil.mUser.mUsername.ToUpper() == "ADMIN")
+                    MessageUtil.Error(ex.Message);
+                else
+                    MessageUtil.Error();
                 return 0;
             }
         }
@@ -83,7 +103,32 @@ namespace Qtech.AssetManagement.Maintenance.AssetType
             myAssetType.mId = int.Parse(Idlabel.Text);
             myAssetType.mCode = CodetextBox.Text;
             myAssetType.mName = NametextBox.Text;
-            myAssetType.mPost = PostcheckBox.Checked;
+            myAssetType.mPost = ActivecheckBox.Checked;
+            myAssetType.mAssetAccountId = ControlUtil.UltraComboReturnValue(AssetAccountultraCombo);
+            myAssetType.mAssetAccountName = AssetAccountultraCombo.Text;
+
+            myAssetType.mAccumulatedDepreciationAccountId = ControlUtil.UltraComboReturnValue(AccumulatedDepreciationAccountultraCombo);
+            myAssetType.mAccumulatedDepreciationAccountName = AccumulatedDepreciationAccountultraCombo.Text;
+
+            myAssetType.mProductionDepreciationExpenseAccountId = ControlUtil.UltraComboReturnValue(ProductionDepreciationExpenseAccountultraCombo);
+            myAssetType.mProductionDepreciationExpenseAccountName = ProductionDepreciationExpenseAccountultraCombo.Text;
+            myAssetType.mProductionDepreciationExpenseAccountValue = ControlUtil.TextBoxDecimal(DepAccountProductionValuetextBox);
+
+            myAssetType.mAdminDepreciationExpenseAccountId = ControlUtil.UltraComboReturnValue(AdminDepreciationExpenseAccountultraCombo);
+            myAssetType.mAdminDepreciationExpenseAccountName = AdminDepreciationExpenseAccountultraCombo.Text;
+            myAssetType.mAdminDepreciationExpenseAccountValue = ControlUtil.TextBoxDecimal(DepAccountAdminValuetextBox);
+
+            myAssetType.mDepreciationMethodId = ControlUtil.UltraComboReturnValue(DepreciationMethodultraCombo);
+            myAssetType.mDepreciationMethodName = DepreciationMethodultraCombo.Text;
+
+            myAssetType.mAveragingMethodId = ControlUtil.UltraComboReturnValue(AveragingMethodultraCombo);
+            myAssetType.mAveragingMethodName = AveragingMethodultraCombo.Text;
+
+            myAssetType.mMonths = ControlUtil.TextBoxDecimal(MonthstextBox);
+            myAssetType.mUsefulLifeYears = ControlUtil.TextBoxDecimal(UsefulLifeYearstextBox);
+            myAssetType.mDepreciable = DepreciablecheckBox.Checked;
+            myAssetType.mActive = ActivecheckBox.Checked;
+
             myAssetType.mUserId = SessionUtil.mUser.mId;
         }
 
@@ -92,7 +137,19 @@ namespace Qtech.AssetManagement.Maintenance.AssetType
             Idlabel.Text = myAssetType.mId.ToString();
             CodetextBox.Text = myAssetType.mCode;
             NametextBox.Text = myAssetType.mName;
-            PostcheckBox.Checked = myAssetType.mPost;
+
+            AssetAccountultraCombo.Value = myAssetType.mAssetAccountId;
+            AccumulatedDepreciationAccountultraCombo.Value = myAssetType.mAccumulatedDepreciationAccountId;
+            ProductionDepreciationExpenseAccountultraCombo.Value = myAssetType.mProductionDepreciationExpenseAccountId;
+            DepAccountProductionValuetextBox.Text = myAssetType.mProductionDepreciationExpenseAccountValue.ToString();
+            AdminDepreciationExpenseAccountultraCombo.Value = myAssetType.mAdminDepreciationExpenseAccountId;
+            DepAccountAdminValuetextBox.Text = myAssetType.mAdminDepreciationExpenseAccountValue.ToString();
+            DepreciationMethodultraCombo.Value = myAssetType.mDepreciationMethodId;
+            AveragingMethodultraCombo.Value = myAssetType.mAveragingMethodId;
+            MonthstextBox.Text = myAssetType.mMonths.ToString("N");
+            UsefulLifeYearstextBox.Text = myAssetType.mUsefulLifeYears.ToString("N");
+            DepreciablecheckBox.Checked = myAssetType.mDepreciable;
+            ActivecheckBox.Checked = myAssetType.mActive;
         }
 
         private void EndEditing()
@@ -109,7 +166,7 @@ namespace Qtech.AssetManagement.Maintenance.AssetType
         {
             if (!allow_insert)
             {
-                MessageUtil.NotAllowedInsertAccess();
+                MessageUtil.NotAllowedInsertAccess(" asset type");
                 return;
             }
 
@@ -126,15 +183,21 @@ namespace Qtech.AssetManagement.Maintenance.AssetType
 
             AssetTypeCriteria criteria = new AssetTypeCriteria();
             criteria.mId = int.Parse(Idlabel.Text);
-            criteria.mName = NametextBox.Text;
+            criteria.mCode = CodetextBox.Text;
             if (AssetTypeManager.SelectCountForGetList(criteria) > 0)
-                rules.Add(new BrokenRule("", "Account title already exists."));
+            {
+                MessageUtil.Message(criteria.mCode + " already exists. Please use a different, unique code.");
+                return 0;
+            }
 
             criteria = new AssetTypeCriteria();
             criteria.mId = int.Parse(Idlabel.Text);
-            criteria.mCode = CodetextBox.Text;
+            criteria.mName = NametextBox.Text;
             if (AssetTypeManager.SelectCountForGetList(criteria) > 0)
-                rules.Add(new BrokenRule("", "Account code already exists."));
+            {
+                MessageUtil.Message(criteria.mName + " already exists. Please use a different, unique name.");
+                return 0;
+            }
 
             if (rules.Count > 0)
             {
@@ -144,32 +207,34 @@ namespace Qtech.AssetManagement.Maintenance.AssetType
 
                 return 0;
             }
+
+            if (!MessageUtil.SaveConfirm("asset type")) return 0;
+
             return SaveAssetType();
         }
 
         public void CancelTransaction()
         {
-            if (MessageUtil.AskCancelEdit())
+            if (MessageUtil.CancelUpdateConfirm())
                 EndEditing();
         }
 
         public void DeleteRecords()
         {
+            BusinessEntities.AssetType item = AssetTypeManager.GetItem(_mId);
+
             if (!allow_delete)
             {
-                MessageUtil.NotAllowedDeleteAccess();
+                MessageUtil.NotAllowedDeleteAccess(" asset type " + item.mCode);
                 return;
             }
-
-            if (MessageUtil.AskDelete())
+            
+            if (MessageUtil.DeleteConfirm(item.mCode))
             {
-                BusinessEntities.AssetType item = AssetTypeManager.GetItem(_mId);
                 item.mUserId = SessionUtil.mUser.mId;
-
                 AssetTypeManager.Delete(item);
-
+                MessageUtil.DeletedSuccessfully(item.mCode);
                 LoadAssetType();
-
             }
         }
 
@@ -195,13 +260,14 @@ namespace Qtech.AssetManagement.Maintenance.AssetType
             if (e.Row.Index == -1)
                 return;
 
+            BusinessEntities.AssetType item = AssetTypeManager.GetItem(_mId);
+
             if (!allow_update)
             {
-                MessageUtil.NotAllowedUpdateAccess();
+                MessageUtil.NotAllowedUpdateAccess(" asset type " + item.mCode);
                 return;
             }
-
-            BusinessEntities.AssetType item = AssetTypeManager.GetItem(_mId);
+            
             LoadFormControlsFromUser(item);
 
             ControlUtil.ExpandPanel(splitContainer1);
@@ -243,11 +309,15 @@ namespace Qtech.AssetManagement.Maintenance.AssetType
             ThemeUtil.Controls(this);
             ControlUtil.TextBoxEnterLeaveEventHandler(splitContainer1.Panel2);
             LoadAssetType();
+            RefreshAllSelection();
+
+            if (FixedAssetSettingDateManager.SelectCountForGetList(new FixedAssetSettingDateCriteria()) > 0)
+                StartDatetextBox.Text = FixedAssetSettingDateManager.GetList().First().mDate.ToString("D");
         }
 
         private void Savebutton_Click(object sender, EventArgs e)
         {
-            SaveAssetType();
+            SaveRecords();
         }
 
         private void Cancelbutton_Click(object sender, EventArgs e)
@@ -255,5 +325,59 @@ namespace Qtech.AssetManagement.Maintenance.AssetType
             CancelTransaction();
         }
 
+        public void RefreshAllSelection()
+        {
+            UltraComboUtil.ChartOfAccountFixedAsset(AssetAccountultraCombo);
+            UltraComboUtil.ChartOfAccountAccumulatedDepreciation(AccumulatedDepreciationAccountultraCombo);
+            UltraComboUtil.ChartOfAccountDepreciationExpenseAccount(ProductionDepreciationExpenseAccountultraCombo);
+            UltraComboUtil.ChartOfAccountDepreciationExpenseAccount(AdminDepreciationExpenseAccountultraCombo);
+            UltraComboUtil.DepreciationMethod(DepreciationMethodultraCombo);
+            UltraComboUtil.AveragingMethod(AveragingMethodultraCombo);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (SaveRecords() > 0) NewRecord();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string id = Idlabel.Text;
+            if (MessageUtil.ResetConfirm()) ControlUtil.ClearConent(splitContainer1.Panel2);
+
+            Idlabel.Text = id;//reassigned
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            StartDateForm startDateForm = new StartDateForm();
+            startDateForm.ShowDialog();
+
+            if (FixedAssetSettingDateManager.SelectCountForGetList(new FixedAssetSettingDateCriteria()) > 0)
+                StartDatetextBox.Text = FixedAssetSettingDateManager.GetList().First().mDate.ToString("D");
+        }
+
+        private void DepreciablecheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            AccumulatedDepreciationAccountultraCombo.Enabled = DepreciablecheckBox.Checked;
+            ProductionDepreciationExpenseAccountultraCombo.Enabled = DepreciablecheckBox.Checked;
+            AdminDepreciationExpenseAccountultraCombo.Enabled = DepreciablecheckBox.Checked;
+            DepAccountAdminValuetextBox.Enabled = DepreciablecheckBox.Checked;
+            DepAccountProductionValuetextBox.Enabled = DepreciablecheckBox.Checked;
+
+            DepreciationMethodultraCombo.Enabled = DepreciablecheckBox.Checked;
+            AveragingMethodultraCombo.Enabled = DepreciablecheckBox.Checked;
+
+            MonthstextBox.Enabled = DepreciablecheckBox.Checked;
+            UsefulLifeYearstextBox.Enabled = DepreciablecheckBox.Checked;
+        }
+
+        private void UsefulLifeYearstextBox_TextChanged(object sender, EventArgs e)
+        {
+            int months = 0;
+            int.TryParse(MonthstextBox.Text, out months);
+
+            UsefulLifeYearstextBox.Text = (months / 12.0).ToString();
+        }
     }
 }

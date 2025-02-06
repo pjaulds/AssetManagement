@@ -46,8 +46,10 @@
     <Compile Include="AccountTypeDB.cs" />
     <Compile Include="AccountClassificationDB.cs" />
     <Compile Include="AccountGroupDB.cs" />
+    <Compile Include="AssetCapitalizeDB.cs" />
     <Compile Include="AssetClassDB.cs" />
     <Compile Include="AssetCategoryDB.cs" />
+    <Compile Include="AssetDB.cs" />
     <Compile Include="CapitalizedCostDB.cs" />
     <Compile Include="DisposalDB.cs" />
     <Compile Include="FixedAssetCapitalizedCostDB.cs" />
@@ -56,6 +58,7 @@
     <Compile Include="PaymentTermsDB.cs" />
     <Compile Include="CurrencyDB.cs" />
     <Compile Include="ExpenseCategoryDB.cs" />
+    <Compile Include="ProjectDB.cs" />
     <Compile Include="TradeDB.cs" />
     <Compile Include="MaintenanceJobTypeVariantDB.cs" />
     <Compile Include="MaintenanceJobTypeDB.cs" />

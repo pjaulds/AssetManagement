@@ -54,6 +54,10 @@ namespace Qtech.AssetManagement.Dal
                 if (!string.IsNullOrEmpty(chartOfAccountCriteria.mName))
                     Helpers.CreateParameter(myCommand, DbType.String, "@name", chartOfAccountCriteria.mName);
 
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@for_accumulated_depreciation_account", chartOfAccountCriteria.mForAccumulatedDepreciationAccount);
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@for_depreciation_expense_account", chartOfAccountCriteria.mForDepreciationExpenseAccount);
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@for_fixed_asset_account", chartOfAccountCriteria.mForFixedAssetAccount);
+
                 myCommand.Connection.Open();
                 using (DbDataReader myReader = myCommand.ExecuteReader())
                 {

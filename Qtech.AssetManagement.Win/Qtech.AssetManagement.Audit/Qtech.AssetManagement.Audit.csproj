@@ -44,6 +44,8 @@
     <Compile Include="AccountCategoryAudit.cs" />
     <Compile Include="AccountClassificationAudit.cs" />
     <Compile Include="AccountGroupAudit.cs" />
+    <Compile Include="AssetAudit.cs" />
+    <Compile Include="AssetCapitalizeAudit.cs" />
     <Compile Include="AssetClassAudit.cs" />
     <Compile Include="AssetCategoryAudit.cs" />
     <Compile Include="CapitalizedCostAudit.cs" />
@@ -54,6 +56,7 @@
     <Compile Include="PaymentTermsAudit.cs" />
     <Compile Include="CurrencyAudit.cs" />
     <Compile Include="ExpenseCategoryAudit.cs" />
+    <Compile Include="ProjectAudit.cs" />
     <Compile Include="TradeAudit.cs" />
     <Compile Include="MaintenanceJobTypeVariantAudit.cs" />
     <Compile Include="MaintenanceJobTypeAudit.cs" />

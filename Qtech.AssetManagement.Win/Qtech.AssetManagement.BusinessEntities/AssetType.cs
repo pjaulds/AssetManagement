@@ -25,6 +25,29 @@ namespace Qtech.AssetManagement.BusinessEntities
 
         [Display(Name = "Post")]
         public bool mPost { get; set; }
+
+        public Int32 mAssetAccountId { get; set; }
+        public String mAssetAccountName { get; set; }
+        public Int32 mAccumulatedDepreciationAccountId { get; set; }
+        public String mAccumulatedDepreciationAccountName { get; set; }
+        public Int32 mProductionDepreciationExpenseAccountId { get; set; }
+        public String mProductionDepreciationExpenseAccountName { get; set; }
+        public Decimal mProductionDepreciationExpenseAccountValue { get; set; }
+        public Int32 mAdminDepreciationExpenseAccountId { get; set; }
+        public String mAdminDepreciationExpenseAccountName { get; set; }
+        public Decimal mAdminDepreciationExpenseAccountValue { get; set; }
+        public Int32 mDepreciationMethodId { get; set; }
+        public String mDepreciationMethodName { get; set; }
+        public Int32 mAveragingMethodId { get; set; }
+        public String mAveragingMethodName { get; set; }
+
+        public decimal mMonths { get; set; }
+        public Decimal mUsefulLifeYears { get; set; }
+        public Boolean mActive { get; set; }
+        public Boolean mDepreciable { get; set; }
+
+        public string mProductionDepreciationExpenseAccountHeaderText { get { return "Depreciation Expense (Production)"; } }
+        public string mAdminDepreciationExpenseAccountHeaderText { get { return "Depreciation Expense (Admin)"; } }
         #endregion
     }
 }

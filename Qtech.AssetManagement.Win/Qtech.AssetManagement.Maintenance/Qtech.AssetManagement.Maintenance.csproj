@@ -102,6 +102,19 @@
     <Compile Include="AssetCategory\Default.Designer.cs">
       <DependentUpon>Default.cs</DependentUpon>
     </Compile>
+    <Compile Include="AssetType\StartDateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AssetType\StartDateForm.Designer.cs">
+      <DependentUpon>StartDateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asset\Default.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Asset\Default.Designer.cs">
+      <DependentUpon>Default.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Asset\Asset.cs" />
     <Compile Include="CapitalizedCost\Default.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,6 +224,12 @@
     <EmbeddedResource Include="AssetCategory\Default.resx">
       <DependentUpon>Default.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AssetType\StartDateForm.resx">
+      <DependentUpon>StartDateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Asset\Default.resx">
+      <DependentUpon>Default.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CapitalizedCost\Default.resx">
       <DependentUpon>Default.cs</DependentUpon>
     </EmbeddedResource>
@@ -243,6 +262,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

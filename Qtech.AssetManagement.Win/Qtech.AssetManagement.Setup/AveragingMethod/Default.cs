@@ -34,6 +34,7 @@ namespace Qtech.AssetManagement.Setup.AveragingMethod
         public IPluginHost PluginHost { get; set; }
         public IPlugin Plugin { get; set; }
 
+
         #region Private Members
         private int _mId
         {
@@ -84,6 +85,7 @@ namespace Qtech.AssetManagement.Setup.AveragingMethod
             myAveragingMethod.mCode = CodetextBox.Text;
             myAveragingMethod.mName = NametextBox.Text;
             myAveragingMethod.mActive = ActivecheckBox.Checked;
+            myAveragingMethod.mRemarks = RemarkstextBox.Text;
             myAveragingMethod.mUserId = SessionUtil.mUser.mId;
         }
 
@@ -93,6 +95,7 @@ namespace Qtech.AssetManagement.Setup.AveragingMethod
             CodetextBox.Text = myAveragingMethod.mCode;
             NametextBox.Text = myAveragingMethod.mName;
             ActivecheckBox.Checked = myAveragingMethod.mActive;
+            RemarkstextBox.Text = myAveragingMethod.mRemarks;
         }
 
         private void EndEditing()
@@ -109,7 +112,7 @@ namespace Qtech.AssetManagement.Setup.AveragingMethod
         {
             if (!allow_insert)
             {
-                MessageUtil.NotAllowedInsertAccess();
+                MessageUtil.NotAllowedInsertAccess("Averaging Method");
                 return;
             }
 
@@ -128,13 +131,19 @@ namespace Qtech.AssetManagement.Setup.AveragingMethod
             criteria.mId = int.Parse(Idlabel.Text);
             criteria.mName = NametextBox.Text;
             if (AveragingMethodManager.SelectCountForGetList(criteria) > 0)
-                rules.Add(new BrokenRule("", "Account title already exists."));
+            {
+                MessageUtil.Message(criteria.mName + " already exists. Please use a different, unique name.");
+                return 0;
+            }
 
             criteria = new AveragingMethodCriteria();
             criteria.mId = int.Parse(Idlabel.Text);
             criteria.mCode = CodetextBox.Text;
             if (AveragingMethodManager.SelectCountForGetList(criteria) > 0)
-                rules.Add(new BrokenRule("", "Account code already exists."));
+            {
+                MessageUtil.Message(criteria.mCode + " already exists. Please use a different, unique code.");
+                return 0;
+            }
 
             if (rules.Count > 0)
             {
@@ -144,12 +153,15 @@ namespace Qtech.AssetManagement.Setup.AveragingMethod
 
                 return 0;
             }
+
+            if (!MessageUtil.SaveConfirm("averaging method")) return 0;
+
             return SaveAveragingMethod();
         }
 
         public void CancelTransaction()
         {
-            if (MessageUtil.AskCancelEdit())
+            if (MessageUtil.CancelUpdateConfirm())
                 EndEditing();
         }
 
@@ -157,19 +169,16 @@ namespace Qtech.AssetManagement.Setup.AveragingMethod
         {
             if (!allow_delete)
             {
-                MessageUtil.NotAllowedDeleteAccess();
+                MessageUtil.NotAllowedDeleteAccess("averaging method");
                 return;
             }
 
-            if (MessageUtil.AskDelete())
+            BusinessEntities.AveragingMethod item = AveragingMethodManager.GetItem(_mId);
+            if (MessageUtil.DeleteConfirm(item.mCode))
             {
-                BusinessEntities.AveragingMethod item = AveragingMethodManager.GetItem(_mId);
                 item.mUserId = SessionUtil.mUser.mId;
-
                 AveragingMethodManager.Delete(item);
-
                 LoadAveragingMethod();
-
             }
         }
 
@@ -197,7 +206,7 @@ namespace Qtech.AssetManagement.Setup.AveragingMethod
 
             if (!allow_update)
             {
-                MessageUtil.NotAllowedUpdateAccess();
+                MessageUtil.NotAllowedUpdateAccess(" averaging method");
                 return;
             }
 
@@ -247,7 +256,7 @@ namespace Qtech.AssetManagement.Setup.AveragingMethod
 
         private void Savebutton_Click(object sender, EventArgs e)
         {
-            SaveAveragingMethod();
+            SaveRecords();
         }
 
         private void Cancelbutton_Click(object sender, EventArgs e)
@@ -255,5 +264,17 @@ namespace Qtech.AssetManagement.Setup.AveragingMethod
             CancelTransaction();
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (SaveRecords() > 0) NewRecord();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string id = Idlabel.Text;
+            if (MessageUtil.ResetConfirm()) ControlUtil.ClearConent(splitContainer1.Panel2);
+
+            Idlabel.Text = id;//reassigned
+        }
     }
 }

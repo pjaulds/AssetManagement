@@ -61,6 +61,23 @@
     <Compile Include="ImageBrowserForm.Designer.cs">
       <DependentUpon>ImageBrowserForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ImagesResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ImagesResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Message.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Message.designer.cs">
+      <DependentUpon>Message.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageQuestion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageQuestion.designer.cs">
+      <DependentUpon>MessageQuestion.cs</DependentUpon>
+    </Compile>
     <Compile Include="MessageUtil.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -120,6 +137,16 @@
     <EmbeddedResource Include="ImageBrowserForm.resx">
       <DependentUpon>ImageBrowserForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ImagesResource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ImagesResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Message.resx">
+      <DependentUpon>Message.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageQuestion.resx">
+      <DependentUpon>MessageQuestion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -128,9 +155,24 @@
     <EmbeddedResource Include="SearchProductForm.resx">
       <DependentUpon>SearchProductForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ValidationListForm.resx">
+      <DependentUpon>ValidationListForm.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Check-02-WF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Help - 01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Information-WF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Warning -WF.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

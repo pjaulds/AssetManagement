@@ -40,6 +40,16 @@ namespace Qtech.AssetManagement.Audit
                 audit_collection.Add(audit);
             }
 
+            if (averagingmethod.mRemarks != averagingmethodOld.mRemarks)
+            {
+                audit = new BusinessEntities.Audit();
+                LoadCommonData(ref audit, averagingmethod);
+                audit.mField = "remarks";
+                audit.mOldValue = averagingmethodOld.mRemarks.ToString();
+                audit.mNewValue = averagingmethod.mRemarks.ToString();
+                audit_collection.Add(audit);
+            }
+
             return audit_collection;
         }
 

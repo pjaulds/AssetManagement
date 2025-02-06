@@ -118,6 +118,18 @@ namespace Qtech.AssetManagement.Dal
                 Helpers.CreateParameter(myCommand, DbType.String, "@code", myAssetType.mCode);
                 Helpers.CreateParameter(myCommand, DbType.String, "@name", myAssetType.mName);
                 Helpers.CreateParameter(myCommand, DbType.Boolean, "@post", myAssetType.mPost);
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@asset_account_id", myAssetType.mAssetAccountId);
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@accumulated_depreciation_account_id", myAssetType.mAccumulatedDepreciationAccountId);
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@production_depreciation_expense_account_id", myAssetType.mProductionDepreciationExpenseAccountId);
+                Helpers.CreateParameter(myCommand, DbType.Decimal, "@production_depreciation_expense_account_value", myAssetType.mProductionDepreciationExpenseAccountValue);
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@admin_depreciation_expense_account_id", myAssetType.mAdminDepreciationExpenseAccountId);
+                Helpers.CreateParameter(myCommand, DbType.Decimal, "@admin_depreciation_expense_account_value", myAssetType.mAdminDepreciationExpenseAccountValue);
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@depreciation_method_id", myAssetType.mDepreciationMethodId);
+                Helpers.CreateParameter(myCommand, DbType.Int32, "@averaging_method_id", myAssetType.mAveragingMethodId);
+                Helpers.CreateParameter(myCommand, DbType.Decimal, "@months", myAssetType.mMonths);
+                Helpers.CreateParameter(myCommand, DbType.Decimal, "@useful_life_years", myAssetType.mUsefulLifeYears);
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@active", myAssetType.mActive);
+                Helpers.CreateParameter(myCommand, DbType.Boolean, "@depreciable", myAssetType.mDepreciable);
 
                 Helpers.SetSaveParameters(myCommand, myAssetType);
 
@@ -166,6 +178,25 @@ namespace Qtech.AssetManagement.Dal
             assetType.mCode = myDataRecord.GetString(myDataRecord.GetOrdinal("code"));
             assetType.mName = myDataRecord.GetString(myDataRecord.GetOrdinal("name"));
             assetType.mPost = myDataRecord.GetBoolean(myDataRecord.GetOrdinal("post"));
+            assetType.mAssetAccountName = myDataRecord.GetString(myDataRecord.GetOrdinal("asset_account_name"));
+            assetType.mAssetAccountId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("asset_account_id"));
+            assetType.mAccumulatedDepreciationAccountName = myDataRecord.GetString(myDataRecord.GetOrdinal("accumulated_depreciation_account_name"));
+            assetType.mAccumulatedDepreciationAccountId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("accumulated_depreciation_account_id"));
+            assetType.mProductionDepreciationExpenseAccountName = myDataRecord.GetString(myDataRecord.GetOrdinal("production_depreciation_expense_account_name"));
+            assetType.mProductionDepreciationExpenseAccountId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("production_depreciation_expense_account_id"));
+            assetType.mProductionDepreciationExpenseAccountValue = myDataRecord.GetDecimal(myDataRecord.GetOrdinal("production_depreciation_expense_account_value"));
+            assetType.mAdminDepreciationExpenseAccountName = myDataRecord.GetString(myDataRecord.GetOrdinal("admin_depreciation_expense_account_name"));
+            assetType.mAdminDepreciationExpenseAccountId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("admin_depreciation_expense_account_id"));
+            assetType.mAdminDepreciationExpenseAccountValue = myDataRecord.GetDecimal(myDataRecord.GetOrdinal("admin_depreciation_expense_account_value"));
+            assetType.mDepreciationMethodName = myDataRecord.GetString(myDataRecord.GetOrdinal("depreciation_method_name"));
+            assetType.mDepreciationMethodId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("depreciation_method_id"));
+            assetType.mAveragingMethodName = myDataRecord.GetString(myDataRecord.GetOrdinal("averaging_method_name"));
+            assetType.mAveragingMethodId = myDataRecord.GetInt32(myDataRecord.GetOrdinal("averaging_method_id"));
+            assetType.mMonths = myDataRecord.GetDecimal(myDataRecord.GetOrdinal("months"));
+            assetType.mUsefulLifeYears = myDataRecord.GetDecimal(myDataRecord.GetOrdinal("useful_life_years"));
+            assetType.mActive = myDataRecord.GetBoolean(myDataRecord.GetOrdinal("active"));
+            assetType.mDepreciable = myDataRecord.GetBoolean(myDataRecord.GetOrdinal("depreciable"));
+
             return assetType;
         }
     }

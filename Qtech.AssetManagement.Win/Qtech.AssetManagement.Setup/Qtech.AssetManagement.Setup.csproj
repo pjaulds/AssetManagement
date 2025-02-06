@@ -50,14 +50,22 @@
       <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2012.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.UltraWinGrid.v12.1.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Infragistics4.Win.UltraWinTabControl.v12.1, Version=12.1.20121.1001, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
     <Reference Include="Infragistics4.Win.v12.1, Version=12.1.20121.1001, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files (x86)\Infragistics\NetAdvantage 2012.1\Windows Forms\CLR4.0\Bin\Infragistics4.Win.v12.1.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="Qtech.AssetManagement.Purchasing">
+      <HintPath>..\Qtech.AssetManagement.Purchasing\bin\Debug\Qtech.AssetManagement.Purchasing.dll</HintPath>
+    </Reference>
+    <Reference Include="Qtech.AssetManagement.User">
+      <HintPath>..\Qtech.AssetManagement.User\bin\Debug\Qtech.AssetManagement.User.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -74,16 +82,28 @@
       <DependentUpon>Default.cs</DependentUpon>
     </Compile>
     <Compile Include="AveragingMethod\AveragingMethod.cs" />
+    <Compile Include="AveragingMethod\Default.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AveragingMethod\Default.Designer.cs">
+      <DependentUpon>Default.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AveragingMethod\AveragingMethodUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AveragingMethod\AveragingMethodUserControl.Designer.cs">
+      <DependentUpon>AveragingMethodUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="ChartOfAccount\Default.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ChartOfAccount\Default.Designer.cs">
       <DependentUpon>Default.cs</DependentUpon>
     </Compile>
-    <Compile Include="AveragingMethod\Default.cs">
+    <Compile Include="DepreciationAndAveraging\Default.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AveragingMethod\Default.Designer.cs">
+    <Compile Include="DepreciationAndAveraging\Default.Designer.cs">
       <DependentUpon>Default.cs</DependentUpon>
     </Compile>
     <Compile Include="DepreciationMethod\Default.cs">
@@ -105,6 +125,12 @@
       <DependentUpon>Default.cs</DependentUpon>
     </Compile>
     <Compile Include="DepreciationMethod\DepreciationMethod.cs" />
+    <Compile Include="DepreciationMethod\DepreciationMethodUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DepreciationMethod\DepreciationMethodUserControl.Designer.cs">
+      <DependentUpon>DepreciationMethodUserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="FixedAssetSetting\Default.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +185,10 @@
       <Name>Qtech.AssetManagement.Controls</Name>
       <Private>False</Private>
     </ProjectReference>
+    <ProjectReference Include="..\Qtech.AssetManagement.FixedAsset\Qtech.AssetManagement.FixedAsset.csproj">
+      <Project>{11C73CF8-55B5-4C47-8C88-1CDA60928769}</Project>
+      <Name>Qtech.AssetManagement.FixedAsset</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Qtech.AssetManagement.Utilities\Qtech.AssetManagement.Utilities.csproj">
       <Project>{e8939081-4037-4578-8c1f-fdc6d8561751}</Project>
       <Name>Qtech.AssetManagement.Utilities</Name>
@@ -174,10 +204,16 @@
     <EmbeddedResource Include="AccumulatedDepreciationAccount\Default.resx">
       <DependentUpon>Default.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AveragingMethod\Default.resx">
+      <DependentUpon>Default.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AveragingMethod\AveragingMethodUserControl.resx">
+      <DependentUpon>AveragingMethodUserControl.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ChartOfAccount\Default.resx">
       <DependentUpon>Default.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AveragingMethod\Default.resx">
+    <EmbeddedResource Include="DepreciationAndAveraging\Default.resx">
       <DependentUpon>Default.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DepreciationMethod\Default.resx">
@@ -188,6 +224,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AssetAccount\Default.resx">
       <DependentUpon>Default.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepreciationMethod\DepreciationMethodUserControl.resx">
+      <DependentUpon>DepreciationMethodUserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FixedAssetSetting\Default.resx">
       <DependentUpon>Default.cs</DependentUpon>

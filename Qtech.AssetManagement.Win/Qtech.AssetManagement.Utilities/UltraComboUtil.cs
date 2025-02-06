@@ -30,6 +30,41 @@ namespace Qtech.AssetManagement.Utilities
             myUltraCombo.Refresh();
         }
 
+        public static void ChartOfAccountFixedAsset(UltraCombo myUltraCombo)
+        {
+            myUltraCombo.ValueMember = "mId";
+            myUltraCombo.DisplayMember = "mName";
+
+            ChartOfAccountCriteria criteria = new ChartOfAccountCriteria();
+            criteria.mForFixedAssetAccount = true;
+
+            myUltraCombo.SetDataBinding(ChartOfAccountManager.GetList(criteria).Where(x => x.mActive).ToList(), null, true);
+            myUltraCombo.Refresh();
+        }
+
+        public static void ChartOfAccountAccumulatedDepreciation(UltraCombo myUltraCombo)
+        {
+            myUltraCombo.ValueMember = "mId";
+            myUltraCombo.DisplayMember = "mName";
+
+            ChartOfAccountCriteria criteria = new ChartOfAccountCriteria();
+            criteria.mForAccumulatedDepreciationAccount = true;
+
+            myUltraCombo.SetDataBinding(ChartOfAccountManager.GetList(criteria).Where(x => x.mActive).ToList(), null, true);
+            myUltraCombo.Refresh();
+        }
+
+        public static void ChartOfAccountDepreciationExpenseAccount(UltraCombo myUltraCombo)
+        {
+            myUltraCombo.ValueMember = "mId";
+            myUltraCombo.DisplayMember = "mName";
+
+            ChartOfAccountCriteria criteria = new ChartOfAccountCriteria();
+            criteria.mForDepreciationExpenseAccount = true;
+
+            myUltraCombo.SetDataBinding(ChartOfAccountManager.GetList(criteria).Where(x => x.mActive).ToList(), null, true);
+            myUltraCombo.Refresh();
+        }
 
         public static void AssetAccount(UltraCombo myUltraCombo)
         {
@@ -236,6 +271,15 @@ namespace Qtech.AssetManagement.Utilities
             myUltraCombo.DisplayMember = "mName";
 
             myUltraCombo.SetDataBinding(CurrencyManager.GetList().Where(x => x.mActive).ToList(), null, true);
+            myUltraCombo.Refresh();
+        }
+
+        public static void Project(UltraCombo myUltraCombo)
+        {
+            myUltraCombo.ValueMember = "mId";
+            myUltraCombo.DisplayMember = "mName";
+
+            myUltraCombo.SetDataBinding(ProjectManager.GetList().Where(x => x.mActive).ToList(), null, true);
             myUltraCombo.Refresh();
         }
     }

@@ -85,6 +85,7 @@ namespace Qtech.AssetManagement.Setup.DepreciationMethod
             myDepreciationMethod.mCode = CodetextBox.Text;
             myDepreciationMethod.mName = NametextBox.Text;
             myDepreciationMethod.mActive = ActivecheckBox.Checked;
+            myDepreciationMethod.mRemarks = RemarkstextBox.Text;
             myDepreciationMethod.mUserId = SessionUtil.mUser.mId;
         }
 
@@ -94,6 +95,7 @@ namespace Qtech.AssetManagement.Setup.DepreciationMethod
             CodetextBox.Text = myDepreciationMethod.mCode;
             NametextBox.Text = myDepreciationMethod.mName;
             ActivecheckBox.Checked = myDepreciationMethod.mActive;
+            RemarkstextBox.Text = myDepreciationMethod.mRemarks;
         }
 
         private void EndEditing()
@@ -110,7 +112,7 @@ namespace Qtech.AssetManagement.Setup.DepreciationMethod
         {
             if (!allow_insert)
             {
-                MessageUtil.NotAllowedInsertAccess();
+                MessageUtil.NotAllowedInsertAccess("Depreciation Method");
                 return;
             }
 
@@ -129,13 +131,19 @@ namespace Qtech.AssetManagement.Setup.DepreciationMethod
             criteria.mId = int.Parse(Idlabel.Text);
             criteria.mName = NametextBox.Text;
             if (DepreciationMethodManager.SelectCountForGetList(criteria) > 0)
-                rules.Add(new BrokenRule("", "Account title already exists."));
+            {
+                MessageUtil.Message(criteria.mName + " already exists. Please use a different, unique name.");
+                return 0;
+            }
 
             criteria = new DepreciationMethodCriteria();
             criteria.mId = int.Parse(Idlabel.Text);
             criteria.mCode = CodetextBox.Text;
             if (DepreciationMethodManager.SelectCountForGetList(criteria) > 0)
-                rules.Add(new BrokenRule("", "Account code already exists."));
+            {
+                MessageUtil.Message(criteria.mCode + " already exists. Please use a different, unique code.");
+                return 0;
+            }
 
             if (rules.Count > 0)
             {
@@ -145,12 +153,15 @@ namespace Qtech.AssetManagement.Setup.DepreciationMethod
 
                 return 0;
             }
+
+            if (!MessageUtil.SaveConfirm("depreciation method")) return 0;
+
             return SaveDepreciationMethod();
         }
 
         public void CancelTransaction()
         {
-            if (MessageUtil.AskCancelEdit())
+            if (MessageUtil.CancelUpdateConfirm())
                 EndEditing();
         }
 
@@ -158,19 +169,16 @@ namespace Qtech.AssetManagement.Setup.DepreciationMethod
         {
             if (!allow_delete)
             {
-                MessageUtil.NotAllowedDeleteAccess();
+                MessageUtil.NotAllowedDeleteAccess("depreciation method");
                 return;
             }
 
-            if (MessageUtil.AskDelete())
+            BusinessEntities.DepreciationMethod item = DepreciationMethodManager.GetItem(_mId);
+            if (MessageUtil.DeleteConfirm(item.mCode))
             {
-                BusinessEntities.DepreciationMethod item = DepreciationMethodManager.GetItem(_mId);
                 item.mUserId = SessionUtil.mUser.mId;
-
                 DepreciationMethodManager.Delete(item);
-
                 LoadDepreciationMethod();
-
             }
         }
 
@@ -198,7 +206,7 @@ namespace Qtech.AssetManagement.Setup.DepreciationMethod
 
             if (!allow_update)
             {
-                MessageUtil.NotAllowedUpdateAccess();
+                MessageUtil.NotAllowedUpdateAccess(" depreciation method");
                 return;
             }
 
@@ -248,7 +256,7 @@ namespace Qtech.AssetManagement.Setup.DepreciationMethod
 
         private void Savebutton_Click(object sender, EventArgs e)
         {
-            SaveDepreciationMethod();
+            SaveRecords();
         }
 
         private void Cancelbutton_Click(object sender, EventArgs e)
@@ -256,5 +264,17 @@ namespace Qtech.AssetManagement.Setup.DepreciationMethod
             CancelTransaction();
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (SaveRecords() > 0) NewRecord();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string id = Idlabel.Text;
+            if (MessageUtil.ResetConfirm()) ControlUtil.ClearConent(splitContainer1.Panel2);
+
+            Idlabel.Text = id;//reassigned
+        }
     }
 }

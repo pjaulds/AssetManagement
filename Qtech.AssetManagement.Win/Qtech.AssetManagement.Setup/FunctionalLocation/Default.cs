@@ -93,6 +93,7 @@ namespace Qtech.AssetManagement.Setup.FunctionalLocation
             myFunctionalLocation.mCountry = CountrytextBox.Text;
             myFunctionalLocation.mZipCode = ZipCodetextBox.Text;
             myFunctionalLocation.mActive = ActivecheckBox.Checked;
+            myFunctionalLocation.mRemarks = RemarkstextBox.Text;
             myFunctionalLocation.mUserId = SessionUtil.mUser.mId;
         }
 
@@ -109,6 +110,7 @@ namespace Qtech.AssetManagement.Setup.FunctionalLocation
             ProvincetextBox.Text = myFunctionalLocation.mProvince;
             CountrytextBox.Text = myFunctionalLocation.mCountry;
             ZipCodetextBox.Text = myFunctionalLocation.mZipCode;
+            RemarkstextBox.Text = myFunctionalLocation.mRemarks;
             ActivecheckBox.Checked = myFunctionalLocation.mActive;
         }
 
@@ -126,7 +128,7 @@ namespace Qtech.AssetManagement.Setup.FunctionalLocation
         {
             if (!allow_insert)
             {
-                MessageUtil.NotAllowedInsertAccess();
+                MessageUtil.NotAllowedInsertAccess(" functional location");
                 return;
             }
 
@@ -143,15 +145,21 @@ namespace Qtech.AssetManagement.Setup.FunctionalLocation
 
             FunctionalLocationCriteria criteria = new FunctionalLocationCriteria();
             criteria.mId = int.Parse(Idlabel.Text);
-            criteria.mName = NametextBox.Text;
-            if (FunctionalLocationManager.SelectCountForGetList(criteria) > 0)
-                rules.Add(new BrokenRule("", "Account title already exists."));
-
-            criteria = new FunctionalLocationCriteria();
-            criteria.mId = int.Parse(Idlabel.Text);
             criteria.mCode = CodetextBox.Text;
             if (FunctionalLocationManager.SelectCountForGetList(criteria) > 0)
-                rules.Add(new BrokenRule("", "Account code already exists."));
+            {
+                MessageUtil.Message(criteria.mCode + " already exists. Please use a different, unique code.");
+                return 0;
+            }
+            
+            criteria = new FunctionalLocationCriteria();
+            criteria.mId = int.Parse(Idlabel.Text);
+            criteria.mName = NametextBox.Text;
+            if (FunctionalLocationManager.SelectCountForGetList(criteria) > 0)
+            {
+                MessageUtil.Message(criteria.mName + " already exists. Please use a different, unique name.");
+                return 0;
+            }
 
             if (rules.Count > 0)
             {
@@ -161,32 +169,48 @@ namespace Qtech.AssetManagement.Setup.FunctionalLocation
 
                 return 0;
             }
-            return SaveFunctionalLocation();
+
+            if (!MessageUtil.SaveConfirm(" functional location")) return 0;
+
+            bool isNew = Idlabel.Text == "0";
+
+            int id = SaveFunctionalLocation();
+
+            if (id > 0)
+            {
+                BusinessEntities.FunctionalLocation item = FunctionalLocationManager.GetItem(id);
+
+                if (isNew)
+                    MessageUtil.SaveSuccessfully(item.mCode);
+                else
+                    MessageUtil.UpdatedSuccessfully(item.mCode);
+            }
+
+            return id;
         }
 
         public void CancelTransaction()
         {
-            if (MessageUtil.AskCancelEdit())
+            if (MessageUtil.CancelUpdateConfirm())
                 EndEditing();
         }
 
         public void DeleteRecords()
         {
+            BusinessEntities.FunctionalLocation item = FunctionalLocationManager.GetItem(_mId);
+
             if (!allow_delete)
             {
-                MessageUtil.NotAllowedDeleteAccess();
+                MessageUtil.NotAllowedDeleteAccess(" functional location " + item.mCode);
                 return;
             }
-
-            if (MessageUtil.AskDelete())
-            {
-                BusinessEntities.FunctionalLocation item = FunctionalLocationManager.GetItem(_mId);
+            
+            if (MessageUtil.DeleteConfirm(item.mCode))
+            {   
                 item.mUserId = SessionUtil.mUser.mId;
-
                 FunctionalLocationManager.Delete(item);
-
+                MessageUtil.DeletedSuccessfully(item.mCode);
                 LoadFunctionalLocation();
-
             }
         }
 
@@ -214,7 +238,7 @@ namespace Qtech.AssetManagement.Setup.FunctionalLocation
 
             if (!allow_update)
             {
-                MessageUtil.NotAllowedUpdateAccess();
+                MessageUtil.NotAllowedUpdateAccess(" functional location");
                 return;
             }
 
@@ -265,7 +289,7 @@ namespace Qtech.AssetManagement.Setup.FunctionalLocation
 
         private void Savebutton_Click(object sender, EventArgs e)
         {
-            SaveFunctionalLocation();
+            SaveRecords();
         }
 
         private void Cancelbutton_Click(object sender, EventArgs e)
@@ -285,6 +309,19 @@ namespace Qtech.AssetManagement.Setup.FunctionalLocation
 
             BusinessEntities.FunctionalLocation fl = (BusinessEntities.FunctionalLocation)e.Row.ListObject;
             ParentNametextBox.Text = fl.mName;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (SaveRecords() > 0) NewRecord();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string id = Idlabel.Text;
+            if (MessageUtil.ResetConfirm()) ControlUtil.ClearConent(splitContainer1.Panel2);
+
+            Idlabel.Text = id;//reassigned
         }
     }
 }

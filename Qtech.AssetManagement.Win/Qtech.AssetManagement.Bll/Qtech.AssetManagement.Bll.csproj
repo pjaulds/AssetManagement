@@ -45,8 +45,10 @@
     <Compile Include="AccountTypeManager.cs" />
     <Compile Include="AccountClassificationManager.cs" />
     <Compile Include="AccountGroupManager.cs" />
+    <Compile Include="AssetCapitalizeManager.cs" />
     <Compile Include="AssetClassManager.cs" />
     <Compile Include="AssetCategoryManager.cs" />
+    <Compile Include="AssetManager.cs" />
     <Compile Include="CapitalizedCostManager.cs" />
     <Compile Include="DisposalManager.cs" />
     <Compile Include="FixedAssetCapitalizedCostManager.cs" />
@@ -55,6 +57,7 @@
     <Compile Include="PaymentTermsManager.cs" />
     <Compile Include="CurrencyManager.cs" />
     <Compile Include="ExpenseCategoryManager.cs" />
+    <Compile Include="ProjectManager.cs" />
     <Compile Include="TradeManager.cs" />
     <Compile Include="MaintenanceJobTypeVariantManager.cs" />
     <Compile Include="MaintenanceJobTypeManager.cs" />

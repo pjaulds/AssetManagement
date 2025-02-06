@@ -43,6 +43,7 @@
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn23 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mCountry");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn24 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mZipCode");
             Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn3 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mActive");
+            Infragistics.Win.UltraWinGrid.UltraGridColumn ultraGridColumn4 = new Infragistics.Win.UltraWinGrid.UltraGridColumn("mRemarks");
             Infragistics.Win.Appearance appearance3 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance4 = new Infragistics.Win.Appearance();
             Infragistics.Win.Appearance appearance5 = new Infragistics.Win.Appearance();
@@ -72,49 +73,59 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.ultraGrid1 = new Infragistics.Win.UltraWinGrid.UltraGrid();
             this.expandPanelControl1 = new Qtech.AssetManagement.Controls.ExpandPanelControl();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.ActivecheckBox = new System.Windows.Forms.CheckBox();
-            this.FunctionalLocationultraCombo = new Infragistics.Win.UltraWinGrid.UltraCombo();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label16 = new System.Windows.Forms.Label();
+            this.StreettextBox = new System.Windows.Forms.TextBox();
             this.ZipCodetextBox = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
+            this.AddressNametextBox = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.CountrytextBox = new System.Windows.Forms.TextBox();
+            this.CitytextBox = new System.Windows.Forms.TextBox();
             this.ProvincetextBox = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.CitytextBox = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.ActivecheckBox = new System.Windows.Forms.CheckBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.RemarkstextBox = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.FunctionalLocationultraCombo = new Infragistics.Win.UltraWinGrid.UltraCombo();
+            this.CodetextBox = new System.Windows.Forms.TextBox();
+            this.NametextBox = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.ParentNametextBox = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
-            this.StreettextBox = new System.Windows.Forms.TextBox();
-            this.AddressNametextBox = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.StatuscomboBox = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.ParentNametextBox = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.NametextBox = new System.Windows.Forms.TextBox();
-            this.CodetextBox = new System.Windows.Forms.TextBox();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label18 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Idlabel = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.Cancelbutton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.Savebutton = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.collapsePanelControl1 = new Qtech.AssetManagement.Controls.CollapsePanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ultraGrid1)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.FunctionalLocationultraCombo)).BeginInit();
+            this.panel1.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel8.SuspendLayout();
             this.SuspendLayout();
@@ -135,6 +146,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.AutoScroll = true;
+            this.splitContainer1.Panel2.Controls.Add(this.groupBox2);
+            this.splitContainer1.Panel2.Controls.Add(this.groupBox1);
             this.splitContainer1.Panel2.Controls.Add(this.panel1);
             this.splitContainer1.Panel2.Controls.Add(this.panel11);
             this.splitContainer1.Panel2.Controls.Add(this.panel8);
@@ -164,17 +177,18 @@
             ultraGridColumn15.RowLayoutColumnInfo.SpanX = 2;
             ultraGridColumn15.RowLayoutColumnInfo.SpanY = 2;
             ultraGridColumn16.AutoCompleteMode = Infragistics.Win.AutoCompleteMode.None;
-            ultraGridColumn16.Header.Caption = "Name";
+            ultraGridColumn16.Header.Caption = "Functional Location";
             ultraGridColumn16.Header.VisiblePosition = 2;
             ultraGridColumn16.RowLayoutColumnInfo.OriginX = 4;
             ultraGridColumn16.RowLayoutColumnInfo.OriginY = 0;
-            ultraGridColumn16.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(350, 0);
+            ultraGridColumn16.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 0);
             ultraGridColumn16.RowLayoutColumnInfo.SpanX = 2;
             ultraGridColumn16.RowLayoutColumnInfo.SpanY = 2;
-            ultraGridColumn17.Header.Caption = "Parent";
+            ultraGridColumn17.Header.Caption = "Parent F.L.";
             ultraGridColumn17.Header.VisiblePosition = 3;
             ultraGridColumn17.RowLayoutColumnInfo.OriginX = 6;
             ultraGridColumn17.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn17.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 0);
             ultraGridColumn17.RowLayoutColumnInfo.SpanX = 2;
             ultraGridColumn17.RowLayoutColumnInfo.SpanY = 2;
             ultraGridColumn18.Header.Caption = "Status";
@@ -184,40 +198,46 @@
             ultraGridColumn18.RowLayoutColumnInfo.OriginY = 0;
             ultraGridColumn18.RowLayoutColumnInfo.SpanX = 2;
             ultraGridColumn18.RowLayoutColumnInfo.SpanY = 2;
-            ultraGridColumn19.Header.Caption = "Address";
+            ultraGridColumn19.Header.Caption = "Barangay";
             ultraGridColumn19.Header.VisiblePosition = 5;
             ultraGridColumn19.RowLayoutColumnInfo.OriginX = 10;
             ultraGridColumn19.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn19.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 0);
             ultraGridColumn19.RowLayoutColumnInfo.SpanX = 2;
             ultraGridColumn19.RowLayoutColumnInfo.SpanY = 2;
             ultraGridColumn20.Header.Caption = "Street";
             ultraGridColumn20.Header.VisiblePosition = 6;
-            ultraGridColumn20.RowLayoutColumnInfo.OriginX = 12;
+            ultraGridColumn20.RowLayoutColumnInfo.OriginX = 8;
             ultraGridColumn20.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn20.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 0);
             ultraGridColumn20.RowLayoutColumnInfo.SpanX = 2;
             ultraGridColumn20.RowLayoutColumnInfo.SpanY = 2;
             ultraGridColumn21.Header.Caption = "City";
             ultraGridColumn21.Header.VisiblePosition = 7;
-            ultraGridColumn21.RowLayoutColumnInfo.OriginX = 14;
+            ultraGridColumn21.RowLayoutColumnInfo.OriginX = 12;
             ultraGridColumn21.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn21.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 0);
             ultraGridColumn21.RowLayoutColumnInfo.SpanX = 2;
             ultraGridColumn21.RowLayoutColumnInfo.SpanY = 2;
             ultraGridColumn22.Header.Caption = "Province";
             ultraGridColumn22.Header.VisiblePosition = 8;
-            ultraGridColumn22.RowLayoutColumnInfo.OriginX = 16;
+            ultraGridColumn22.RowLayoutColumnInfo.OriginX = 14;
             ultraGridColumn22.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn22.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 0);
             ultraGridColumn22.RowLayoutColumnInfo.SpanX = 2;
             ultraGridColumn22.RowLayoutColumnInfo.SpanY = 2;
             ultraGridColumn23.Header.Caption = "Country";
             ultraGridColumn23.Header.VisiblePosition = 9;
-            ultraGridColumn23.RowLayoutColumnInfo.OriginX = 18;
+            ultraGridColumn23.RowLayoutColumnInfo.OriginX = 16;
             ultraGridColumn23.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn23.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 0);
             ultraGridColumn23.RowLayoutColumnInfo.SpanX = 2;
             ultraGridColumn23.RowLayoutColumnInfo.SpanY = 2;
             ultraGridColumn24.Header.Caption = "Zip Code";
             ultraGridColumn24.Header.VisiblePosition = 10;
-            ultraGridColumn24.RowLayoutColumnInfo.OriginX = 20;
+            ultraGridColumn24.RowLayoutColumnInfo.OriginX = 18;
             ultraGridColumn24.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn24.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(250, 0);
             ultraGridColumn24.RowLayoutColumnInfo.SpanX = 2;
             ultraGridColumn24.RowLayoutColumnInfo.SpanY = 2;
             ultraGridColumn3.Header.Caption = "Active";
@@ -227,6 +247,12 @@
             ultraGridColumn3.RowLayoutColumnInfo.PreferredCellSize = new System.Drawing.Size(65, 0);
             ultraGridColumn3.RowLayoutColumnInfo.SpanX = 2;
             ultraGridColumn3.RowLayoutColumnInfo.SpanY = 2;
+            ultraGridColumn4.Header.Caption = "Remarks";
+            ultraGridColumn4.Header.VisiblePosition = 12;
+            ultraGridColumn4.RowLayoutColumnInfo.OriginX = 20;
+            ultraGridColumn4.RowLayoutColumnInfo.OriginY = 0;
+            ultraGridColumn4.RowLayoutColumnInfo.SpanX = 2;
+            ultraGridColumn4.RowLayoutColumnInfo.SpanY = 2;
             ultraGridBand1.Columns.AddRange(new object[] {
             ultraGridColumn14,
             ultraGridColumn15,
@@ -239,7 +265,8 @@
             ultraGridColumn22,
             ultraGridColumn23,
             ultraGridColumn24,
-            ultraGridColumn3});
+            ultraGridColumn3,
+            ultraGridColumn4});
             ultraGridBand1.RowLayoutStyle = Infragistics.Win.UltraWinGrid.RowLayoutStyle.ColumnLayout;
             this.ultraGrid1.DisplayLayout.BandsSerializer.Add(ultraGridBand1);
             this.ultraGrid1.DisplayLayout.BorderStyle = Infragistics.Win.UIElementBorderStyle.Solid;
@@ -318,51 +345,229 @@
             this.expandPanelControl1.TabIndex = 126;
             this.expandPanelControl1._ExpandPanel += new System.EventHandler(this.expandPanelControl1__ExpandPanel);
             // 
-            // panel1
+            // groupBox2
             // 
-            this.panel1.Controls.Add(this.ActivecheckBox);
-            this.panel1.Controls.Add(this.FunctionalLocationultraCombo);
-            this.panel1.Controls.Add(this.label16);
-            this.panel1.Controls.Add(this.ZipCodetextBox);
-            this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.label15);
-            this.panel1.Controls.Add(this.CountrytextBox);
-            this.panel1.Controls.Add(this.ProvincetextBox);
-            this.panel1.Controls.Add(this.label13);
-            this.panel1.Controls.Add(this.CitytextBox);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.label11);
-            this.panel1.Controls.Add(this.label12);
-            this.panel1.Controls.Add(this.StreettextBox);
-            this.panel1.Controls.Add(this.AddressNametextBox);
-            this.panel1.Controls.Add(this.label9);
-            this.panel1.Controls.Add(this.StatuscomboBox);
-            this.panel1.Controls.Add(this.label8);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.ParentNametextBox);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.NametextBox);
-            this.panel1.Controls.Add(this.CodetextBox);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(15, 20);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1002, 247);
-            this.panel1.TabIndex = 177;
+            this.groupBox2.Controls.Add(this.label16);
+            this.groupBox2.Controls.Add(this.StreettextBox);
+            this.groupBox2.Controls.Add(this.ZipCodetextBox);
+            this.groupBox2.Controls.Add(this.label10);
+            this.groupBox2.Controls.Add(this.label14);
+            this.groupBox2.Controls.Add(this.AddressNametextBox);
+            this.groupBox2.Controls.Add(this.label15);
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.CountrytextBox);
+            this.groupBox2.Controls.Add(this.CitytextBox);
+            this.groupBox2.Controls.Add(this.ProvincetextBox);
+            this.groupBox2.Controls.Add(this.label13);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox2.Font = new System.Drawing.Font("Arial", 8.25F);
+            this.groupBox2.Location = new System.Drawing.Point(376, 20);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(318, 456);
+            this.groupBox2.TabIndex = 180;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Functional Location Address";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(13, 164);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(49, 13);
+            this.label16.TabIndex = 47;
+            this.label16.Text = "Zip Code";
+            // 
+            // StreettextBox
+            // 
+            this.StreettextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StreettextBox.Location = new System.Drawing.Point(68, 26);
+            this.StreettextBox.MaxLength = 150;
+            this.StreettextBox.Name = "StreettextBox";
+            this.StreettextBox.Size = new System.Drawing.Size(200, 21);
+            this.StreettextBox.TabIndex = 6;
+            // 
+            // ZipCodetextBox
+            // 
+            this.ZipCodetextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ZipCodetextBox.Location = new System.Drawing.Point(68, 161);
+            this.ZipCodetextBox.MaxLength = 150;
+            this.ZipCodetextBox.Name = "ZipCodetextBox";
+            this.ZipCodetextBox.Size = new System.Drawing.Size(200, 21);
+            this.ZipCodetextBox.TabIndex = 10;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(25, 29);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(37, 13);
+            this.label10.TabIndex = 36;
+            this.label10.Text = "Street";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(16, 137);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(46, 13);
+            this.label14.TabIndex = 45;
+            this.label14.Text = "Country";
+            // 
+            // AddressNametextBox
+            // 
+            this.AddressNametextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddressNametextBox.Location = new System.Drawing.Point(68, 53);
+            this.AddressNametextBox.MaxLength = 50;
+            this.AddressNametextBox.Name = "AddressNametextBox";
+            this.AddressNametextBox.Size = new System.Drawing.Size(200, 21);
+            this.AddressNametextBox.TabIndex = 5;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(14, 111);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(48, 13);
+            this.label15.TabIndex = 44;
+            this.label15.Text = "Province";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(9, 56);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(53, 13);
+            this.label11.TabIndex = 35;
+            this.label11.Text = "Barangay";
+            // 
+            // CountrytextBox
+            // 
+            this.CountrytextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CountrytextBox.Location = new System.Drawing.Point(68, 134);
+            this.CountrytextBox.MaxLength = 150;
+            this.CountrytextBox.Name = "CountrytextBox";
+            this.CountrytextBox.Size = new System.Drawing.Size(200, 21);
+            this.CountrytextBox.TabIndex = 9;
+            // 
+            // CitytextBox
+            // 
+            this.CitytextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CitytextBox.Location = new System.Drawing.Point(68, 80);
+            this.CitytextBox.MaxLength = 150;
+            this.CitytextBox.Name = "CitytextBox";
+            this.CitytextBox.Size = new System.Drawing.Size(200, 21);
+            this.CitytextBox.TabIndex = 7;
+            // 
+            // ProvincetextBox
+            // 
+            this.ProvincetextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProvincetextBox.Location = new System.Drawing.Point(68, 107);
+            this.ProvincetextBox.MaxLength = 50;
+            this.ProvincetextBox.Name = "ProvincetextBox";
+            this.ProvincetextBox.Size = new System.Drawing.Size(200, 21);
+            this.ProvincetextBox.TabIndex = 8;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(36, 84);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(26, 13);
+            this.label13.TabIndex = 40;
+            this.label13.Text = "City";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.ActivecheckBox);
+            this.groupBox1.Controls.Add(this.label20);
+            this.groupBox1.Controls.Add(this.label17);
+            this.groupBox1.Controls.Add(this.RemarkstextBox);
+            this.groupBox1.Controls.Add(this.label19);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.FunctionalLocationultraCombo);
+            this.groupBox1.Controls.Add(this.CodetextBox);
+            this.groupBox1.Controls.Add(this.NametextBox);
+            this.groupBox1.Controls.Add(this.label6);
+            this.groupBox1.Controls.Add(this.ParentNametextBox);
+            this.groupBox1.Controls.Add(this.label4);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox1.Font = new System.Drawing.Font("Arial", 8.25F);
+            this.groupBox1.Location = new System.Drawing.Point(15, 20);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(361, 456);
+            this.groupBox1.TabIndex = 179;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Functional Location Info";
             // 
             // ActivecheckBox
             // 
             this.ActivecheckBox.AutoSize = true;
             this.ActivecheckBox.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            this.ActivecheckBox.Location = new System.Drawing.Point(343, 208);
+            this.ActivecheckBox.Location = new System.Drawing.Point(145, 186);
             this.ActivecheckBox.Name = "ActivecheckBox";
             this.ActivecheckBox.Size = new System.Drawing.Size(56, 17);
             this.ActivecheckBox.TabIndex = 48;
             this.ActivecheckBox.Text = "Active";
             this.ActivecheckBox.UseVisualStyleBackColor = true;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(72, 133);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(49, 14);
+            this.label20.TabIndex = 35;
+            this.label20.Text = "Remarks";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Arial", 8.25F);
+            this.label17.ForeColor = System.Drawing.Color.Red;
+            this.label17.Location = new System.Drawing.Point(127, 52);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(11, 14);
+            this.label17.TabIndex = 33;
+            this.label17.Text = "*";
+            // 
+            // RemarkstextBox
+            // 
+            this.RemarkstextBox.Font = new System.Drawing.Font("Arial", 8.25F);
+            this.RemarkstextBox.Location = new System.Drawing.Point(145, 130);
+            this.RemarkstextBox.MaxLength = 50;
+            this.RemarkstextBox.Multiline = true;
+            this.RemarkstextBox.Name = "RemarkstextBox";
+            this.RemarkstextBox.Size = new System.Drawing.Size(200, 50);
+            this.RemarkstextBox.TabIndex = 34;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Arial", 8.25F);
+            this.label19.ForeColor = System.Drawing.Color.Red;
+            this.label19.Location = new System.Drawing.Point(127, 25);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(11, 14);
+            this.label19.TabIndex = 32;
+            this.label19.Text = "*";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(85, 25);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(36, 14);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "F.L. ID";
             // 
             // FunctionalLocationultraCombo
             // 
@@ -437,108 +642,85 @@
             this.FunctionalLocationultraCombo.DisplayLayout.ScrollBounds = Infragistics.Win.UltraWinGrid.ScrollBounds.ScrollToFill;
             this.FunctionalLocationultraCombo.DisplayLayout.ScrollStyle = Infragistics.Win.UltraWinGrid.ScrollStyle.Immediate;
             this.FunctionalLocationultraCombo.DisplayLayout.ViewStyleBand = Infragistics.Win.UltraWinGrid.ViewStyleBand.OutlookGroupBy;
-            this.FunctionalLocationultraCombo.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FunctionalLocationultraCombo.Location = new System.Drawing.Point(343, 25);
+            this.FunctionalLocationultraCombo.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FunctionalLocationultraCombo.Location = new System.Drawing.Point(145, 75);
             this.FunctionalLocationultraCombo.Name = "FunctionalLocationultraCombo";
-            this.FunctionalLocationultraCombo.Size = new System.Drawing.Size(200, 23);
+            this.FunctionalLocationultraCombo.Size = new System.Drawing.Size(200, 22);
             this.FunctionalLocationultraCombo.TabIndex = 2;
             this.FunctionalLocationultraCombo.RowSelected += new Infragistics.Win.UltraWinGrid.RowSelectedEventHandler(this.FunctionalLocationultraCombo_RowSelected);
             // 
-            // label16
+            // CodetextBox
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(262, 184);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(49, 13);
-            this.label16.TabIndex = 47;
-            this.label16.Text = "Zip Code";
+            this.CodetextBox.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CodetextBox.Location = new System.Drawing.Point(145, 22);
+            this.CodetextBox.MaxLength = 50;
+            this.CodetextBox.Name = "CodetextBox";
+            this.CodetextBox.Size = new System.Drawing.Size(200, 20);
+            this.CodetextBox.TabIndex = 0;
             // 
-            // ZipCodetextBox
+            // NametextBox
             // 
-            this.ZipCodetextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ZipCodetextBox.Location = new System.Drawing.Point(343, 181);
-            this.ZipCodetextBox.MaxLength = 150;
-            this.ZipCodetextBox.Name = "ZipCodetextBox";
-            this.ZipCodetextBox.Size = new System.Drawing.Size(200, 21);
-            this.ZipCodetextBox.TabIndex = 10;
+            this.NametextBox.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NametextBox.Location = new System.Drawing.Point(145, 49);
+            this.NametextBox.MaxLength = 150;
+            this.NametextBox.Name = "NametextBox";
+            this.NametextBox.Size = new System.Drawing.Size(200, 20);
+            this.NametextBox.TabIndex = 1;
             // 
-            // label14
+            // label6
             // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(262, 157);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(46, 13);
-            this.label14.TabIndex = 45;
-            this.label14.Text = "Country";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(21, 52);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(100, 14);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Functional Location";
             // 
-            // label15
+            // ParentNametextBox
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(262, 130);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(48, 13);
-            this.label15.TabIndex = 44;
-            this.label15.Text = "Province";
+            this.ParentNametextBox.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ParentNametextBox.Location = new System.Drawing.Point(145, 104);
+            this.ParentNametextBox.MaxLength = 150;
+            this.ParentNametextBox.Name = "ParentNametextBox";
+            this.ParentNametextBox.ReadOnly = true;
+            this.ParentNametextBox.Size = new System.Drawing.Size(200, 20);
+            this.ParentNametextBox.TabIndex = 3;
+            this.ParentNametextBox.TabStop = false;
             // 
-            // CountrytextBox
+            // label4
             // 
-            this.CountrytextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CountrytextBox.Location = new System.Drawing.Point(343, 154);
-            this.CountrytextBox.MaxLength = 150;
-            this.CountrytextBox.Name = "CountrytextBox";
-            this.CountrytextBox.Size = new System.Drawing.Size(200, 21);
-            this.CountrytextBox.TabIndex = 9;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(51, 78);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(70, 14);
+            this.label4.TabIndex = 30;
+            this.label4.Text = "Parent F.L. ID";
             // 
-            // ProvincetextBox
+            // label1
             // 
-            this.ProvincetextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProvincetextBox.Location = new System.Drawing.Point(343, 127);
-            this.ProvincetextBox.MaxLength = 50;
-            this.ProvincetextBox.Name = "ProvincetextBox";
-            this.ProvincetextBox.Size = new System.Drawing.Size(200, 21);
-            this.ProvincetextBox.TabIndex = 8;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(60, 107);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 14);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "Parent F. L.";
             // 
-            // label13
+            // panel1
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(10, 184);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(26, 13);
-            this.label13.TabIndex = 40;
-            this.label13.Text = "City";
-            // 
-            // CitytextBox
-            // 
-            this.CitytextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CitytextBox.Location = new System.Drawing.Point(56, 181);
-            this.CitytextBox.MaxLength = 150;
-            this.CitytextBox.Name = "CitytextBox";
-            this.CitytextBox.Size = new System.Drawing.Size(200, 21);
-            this.CitytextBox.TabIndex = 7;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(10, 157);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(37, 13);
-            this.label10.TabIndex = 36;
-            this.label10.Text = "Street";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(10, 130);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(34, 13);
-            this.label11.TabIndex = 35;
-            this.label11.Text = "Name";
+            this.panel1.Controls.Add(this.label12);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.StatuscomboBox);
+            this.panel1.Controls.Add(this.label8);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(807, 229);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(798, 247);
+            this.panel1.TabIndex = 177;
+            this.panel1.Visible = false;
             // 
             // label12
             // 
@@ -552,24 +734,6 @@
             this.label12.TabIndex = 39;
             this.label12.Tag = "";
             this.label12.Text = "ADDRESS";
-            // 
-            // StreettextBox
-            // 
-            this.StreettextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StreettextBox.Location = new System.Drawing.Point(56, 154);
-            this.StreettextBox.MaxLength = 150;
-            this.StreettextBox.Name = "StreettextBox";
-            this.StreettextBox.Size = new System.Drawing.Size(200, 21);
-            this.StreettextBox.TabIndex = 6;
-            // 
-            // AddressNametextBox
-            // 
-            this.AddressNametextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddressNametextBox.Location = new System.Drawing.Point(56, 127);
-            this.AddressNametextBox.MaxLength = 50;
-            this.AddressNametextBox.Name = "AddressNametextBox";
-            this.AddressNametextBox.Size = new System.Drawing.Size(200, 21);
-            this.AddressNametextBox.TabIndex = 5;
             // 
             // label9
             // 
@@ -610,36 +774,6 @@
             this.label8.Text = "LIFECYCLE STATE";
             this.label8.Visible = false;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(262, 57);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(34, 13);
-            this.label1.TabIndex = 31;
-            this.label1.Text = "Name";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(262, 30);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 13);
-            this.label4.TabIndex = 30;
-            this.label4.Text = "Parent F.L. ID";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(10, 57);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(34, 13);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Name";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
@@ -652,27 +786,6 @@
             this.label5.TabIndex = 29;
             this.label5.Tag = "";
             this.label5.Text = "PARENT FUNCTION LOCATION";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(10, 30);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(40, 13);
-            this.label7.TabIndex = 2;
-            this.label7.Text = "F.L. ID";
-            // 
-            // ParentNametextBox
-            // 
-            this.ParentNametextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ParentNametextBox.Location = new System.Drawing.Point(343, 54);
-            this.ParentNametextBox.MaxLength = 150;
-            this.ParentNametextBox.Name = "ParentNametextBox";
-            this.ParentNametextBox.ReadOnly = true;
-            this.ParentNametextBox.Size = new System.Drawing.Size(200, 21);
-            this.ParentNametextBox.TabIndex = 3;
-            this.ParentNametextBox.TabStop = false;
             // 
             // label2
             // 
@@ -687,24 +800,6 @@
             this.label2.Tag = "";
             this.label2.Text = "IDENTIFICATION";
             // 
-            // NametextBox
-            // 
-            this.NametextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NametextBox.Location = new System.Drawing.Point(56, 54);
-            this.NametextBox.MaxLength = 150;
-            this.NametextBox.Name = "NametextBox";
-            this.NametextBox.Size = new System.Drawing.Size(200, 21);
-            this.NametextBox.TabIndex = 1;
-            // 
-            // CodetextBox
-            // 
-            this.CodetextBox.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CodetextBox.Location = new System.Drawing.Point(56, 27);
-            this.CodetextBox.MaxLength = 50;
-            this.CodetextBox.Name = "CodetextBox";
-            this.CodetextBox.Size = new System.Drawing.Size(200, 21);
-            this.CodetextBox.TabIndex = 0;
-            // 
             // panel11
             // 
             this.panel11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(63)))), ((int)(((byte)(79)))));
@@ -715,9 +810,10 @@
             this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel11.Location = new System.Drawing.Point(15, 0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1002, 20);
+            this.panel11.Size = new System.Drawing.Size(1590, 20);
             this.panel11.TabIndex = 176;
             this.panel11.Tag = "headerpanel";
+            this.panel11.Visible = false;
             // 
             // label18
             // 
@@ -761,11 +857,13 @@
             // panel8
             // 
             this.panel8.Controls.Add(this.Cancelbutton);
+            this.panel8.Controls.Add(this.button1);
             this.panel8.Controls.Add(this.Savebutton);
+            this.panel8.Controls.Add(this.button2);
             this.panel8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel8.Location = new System.Drawing.Point(15, 459);
+            this.panel8.Location = new System.Drawing.Point(15, 476);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(1002, 23);
+            this.panel8.Size = new System.Drawing.Size(1590, 23);
             this.panel8.TabIndex = 174;
             // 
             // Cancelbutton
@@ -774,13 +872,29 @@
             this.Cancelbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cancelbutton.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cancelbutton.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.Cancelbutton.Location = new System.Drawing.Point(76, 0);
+            this.Cancelbutton.Location = new System.Drawing.Point(228, 0);
             this.Cancelbutton.Name = "Cancelbutton";
             this.Cancelbutton.Size = new System.Drawing.Size(77, 23);
             this.Cancelbutton.TabIndex = 16;
+            this.Cancelbutton.Tag = "cancel";
             this.Cancelbutton.Text = "&Cancel";
             this.Cancelbutton.UseVisualStyleBackColor = false;
             this.Cancelbutton.Click += new System.EventHandler(this.Cancelbutton_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(43)))), ((int)(((byte)(137)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.button1.Location = new System.Drawing.Point(152, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(77, 23);
+            this.button1.TabIndex = 180;
+            this.button1.Tag = "cancel";
+            this.button1.Text = "Reset";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Savebutton
             // 
@@ -796,12 +910,26 @@
             this.Savebutton.UseVisualStyleBackColor = false;
             this.Savebutton.Click += new System.EventHandler(this.Savebutton_Click);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(43)))), ((int)(((byte)(137)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.button2.Location = new System.Drawing.Point(76, 0);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(77, 23);
+            this.button2.TabIndex = 179;
+            this.button2.Text = "Add New";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // collapsePanelControl1
             // 
             this.collapsePanelControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.collapsePanelControl1.Location = new System.Drawing.Point(0, 0);
             this.collapsePanelControl1.Name = "collapsePanelControl1";
-            this.collapsePanelControl1.Size = new System.Drawing.Size(15, 482);
+            this.collapsePanelControl1.Size = new System.Drawing.Size(15, 499);
             this.collapsePanelControl1.TabIndex = 178;
             this.collapsePanelControl1._HidePanel += new System.EventHandler(this.collapsePanelControl1__HidePanel);
             // 
@@ -819,9 +947,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ultraGrid1)).EndInit();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FunctionalLocationultraCombo)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.FunctionalLocationultraCombo)).EndInit();
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.panel8.ResumeLayout(false);
@@ -870,5 +1002,13 @@
         private System.Windows.Forms.TextBox AddressNametextBox;
         private Infragistics.Win.UltraWinGrid.UltraCombo FunctionalLocationultraCombo;
         private System.Windows.Forms.CheckBox ActivecheckBox;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TextBox RemarkstextBox;
     }
 }

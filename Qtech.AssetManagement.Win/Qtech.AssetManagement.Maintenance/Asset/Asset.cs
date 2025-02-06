@@ -7,14 +7,14 @@ using Qtech.Qasa.PluginInterface;
 using System.Windows.Forms;
 using Qtech.AssetManagement.BusinessEntities;
 
-namespace Qtech.AssetManagement.FixedAsset
+namespace Qtech.AssetManagement.Maintenance
 {
     public class FixedAsset : IPlugin
     {
         #region IPlugin Members
 
         IPluginHost myPluginHost = null;
-        string myPluginName = "Fixed Asset";
+        string myPluginName = "Asset Registration";
         string myPluginAuthor = "Paul";
         string myPluginDescription = "This module is the fixed asset form";
         string myPluginVersion = "1.0.0";
@@ -22,8 +22,8 @@ namespace Qtech.AssetManagement.FixedAsset
         string myItemKey = "FixedAsset";
         string myImageName = @"images\purchase_request_50px.png";
         int myModuleId = 2000; // 2000 is for qasa integration Convert.ToInt32(Modules.FixedAsset);
-        string myModulePart = "AssetManagement";
-        Form myForm = new Default();
+        string myModulePart = "Asset";
+        Form myForm = new Asset.Default();
 
         public IPluginHost Host
         {
@@ -80,8 +80,8 @@ namespace Qtech.AssetManagement.FixedAsset
 
         public void Initialize()
         {
-            myForm = new Default();
-            Default f = (Default)myForm;
+            myForm = new Asset.Default();
+            Asset.Default f = (Asset.Default)myForm;
             f.PluginHost = this.Host;
             f.Plugin = this;
         }

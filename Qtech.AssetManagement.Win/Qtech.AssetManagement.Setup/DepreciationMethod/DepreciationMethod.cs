@@ -23,7 +23,7 @@ namespace Qtech.AssetManagement.Setup.DepreciationMethod
         string myImageName = @"images\purchase_request_50px.png";
         int myModuleId = 2002; 
         string myModulePart = "AssetManagement";
-        Form myForm = new Default();
+        Form myForm = new DepreciationAndAveraging.Default();
 
         public IPluginHost Host
         {
@@ -80,8 +80,8 @@ namespace Qtech.AssetManagement.Setup.DepreciationMethod
 
         public void Initialize()
         {
-            myForm = new Default();
-            Default f = (Default)myForm;
+            myForm = new DepreciationAndAveraging.Default();
+            DepreciationAndAveraging.Default f = (DepreciationAndAveraging.Default)myForm;
             f.PluginHost = this.Host;
             f.Plugin = this;
         }

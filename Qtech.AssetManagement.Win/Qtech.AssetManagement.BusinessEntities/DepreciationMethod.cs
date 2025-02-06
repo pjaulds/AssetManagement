@@ -24,6 +24,8 @@ namespace Qtech.AssetManagement.BusinessEntities
 
         [Display(Name = "Active")]
         public bool mActive { get; set; }
+
+        public string mRemarks { get; set; }
         #endregion
     }
 }

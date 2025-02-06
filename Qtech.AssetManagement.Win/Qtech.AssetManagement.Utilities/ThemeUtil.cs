@@ -26,7 +26,13 @@ namespace Qtech.AssetManagement.Utilities
                 //    ((UltraTextEditor)ctl).CharacterCasing = CharacterCasing.Upper;
 
                 if (ctl is Button && ctl.Tag == null)
-                    ((Button)ctl).BackColor = Color.FromArgb(28, 97, 161);
+                    ((Button)ctl).BackColor = Color.FromArgb(54, 64, 245);
+
+                if (ctl is Button && ctl.Tag != null)
+                {
+                    if (ctl.Tag.ToString() == "cancel")
+                        ((Button)ctl).BackColor = Color.Red;
+                }
 
                 if (ctl is DataGridView)
                 {
@@ -128,6 +134,7 @@ namespace Qtech.AssetManagement.Utilities
 
             //seleted row
             e.Layout.Override.ActiveRowAppearance.BackColor = Color.FromArgb(28, 97, 161);
+            e.Layout.Override.RowAlternateAppearance.BackColor = Color.FromArgb(242, 248, 252);
 
             //header backcolor
             e.Layout.Override.HeaderAppearance.BackColor2 = Color.FromArgb(28, 97, 161);

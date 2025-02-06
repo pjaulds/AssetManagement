@@ -8,5 +8,8 @@ namespace Qtech.AssetManagement.BusinessEntities
 {
     public class ChartOfAccountCriteria : ChartOfAccount
     {
+        public bool mForAccumulatedDepreciationAccount { get; set; }
+        public bool mForDepreciationExpenseAccount { get; set; }
+        public bool mForFixedAssetAccount { get; set; }
     }
 }
